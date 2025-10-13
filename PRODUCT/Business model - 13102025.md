@@ -54,7 +54,7 @@ Từ 10000 Hours App => 10000 Hours Coaching App (App Coaching sự nghiệp và
 Nếu đã làm App 10000 Hours thì em muốn về sau App sẽ trở thành 1 Career Coaching App.
 
 3. Deal, share và bài toán chia. 
-Em muốn deal 15% share với role: Product Engineer Co-founder (thay cho role: founding engineer). Chia là: 60 - 25 - 15 hoặc 60 - 26 - 14 (nếu anh CTO so sánh)
+Em muốn deal 15% share với role: Product Engineer Co-founder (thay cho role: founding engineer). Chia là: 60 - 25 - 15 hoặc 60 - 26 - 14 (để tránh anh CTO so sánh)
 
 Với 5%, anh sẽ có thêm 1 cái não của em về
 - Product (sản phẩm hiệu quả thực sự không chỉ đến từ tool mà đến cả từ việc huấn luyện, coaching mindset của người dùng, ...), 
