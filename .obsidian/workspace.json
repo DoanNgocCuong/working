@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Test/Giấy tờ.md",
+                "file": "PRODUCT/Business model.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Giấy tờ"
+              "title": "Business model"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Test/Giấy tờ.md",
+                "file": "PRODUCT/Business model.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Giấy tờ"
+              "title": "Outline of Business model"
             }
           }
         ],
@@ -171,7 +171,12 @@
   },
   "active": "9f4f87bc404614f0",
   "lastOpenFiles": [
+    "PRODUCT/image/Pasted image 20251013210137.png",
     "PRODUCT/Holdings, ESOP, Build to Sell và Shortcut to IPO.md",
+    "FINTECH/5. Đánh giá 1 số Job - DNSE - MSB - Domain Tài chính DNSE vs Giáo dục Step Up Education Chiến lược 40-50 năm.md",
+    "PRODUCT/image/Pasted image 20251013204653.png",
+    "PRODUCT/Business model.md",
+    "PRODUCT/image",
     "Test/Giấy tờ.md",
     "Test",
     "FINTECH/1_SaoTatCaMoiNguoiKhongCungLamNong.md",
@@ -192,7 +197,6 @@
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/NLP LLMs RAG",
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/4_MLOPs và Full Stack Docker/Untitled 2",
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/4_MLOPs và Full Stack Docker/Untitled 1",
-    "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/4_MLOPs và Full Stack Docker/Untitled",
     "learning/DATA_SCIENCE_AND_AI/Domain 5 Data Engineering & Processing/Note/Cuong.md",
     "learning/DATA_SCIENCE_AND_AI/Domain 5 Data Engineering & Processing/note.md",
     "learning/DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/5_GitLFS_large_file_storage.md",
@@ -213,10 +217,6 @@
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/5. Software E/attachments/Pasted image 20241218022507.png",
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/4_Deploy Docker Web - Code localhost - code server trực tiếp luôn với Crusor Compose/attachments/Pasted image 20250321121006.png",
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/4_Deploy Docker Web - Code localhost - code server trực tiếp luôn với Crusor Compose/attachments/Pasted image 20250220170805.png",
-    "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/4_Deploy Docker Web - Code localhost - code server trực tiếp luôn với Crusor Compose/attachments/Pasted image 20250220170737.png",
-    "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/Other Domain/Tester QC.md",
-    "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/Moxie/Moxie.md",
-    "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/Excel/Time.md",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
