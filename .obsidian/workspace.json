@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FINTECH/Deep Research Profile Đạt Nguyễn.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Các lệnh cơ bản PostGress.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deep Research Profile Đạt Nguyễn"
+              "title": "Các lệnh cơ bản PostGress"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: port",
+                "query": "file: DB",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FINTECH/Deep Research Profile Đạt Nguyễn.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Các lệnh cơ bản PostGress.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Deep Research Profile Đạt Nguyễn"
+              "title": "Outline of Các lệnh cơ bản PostGress"
             }
           }
         ],
@@ -171,12 +171,14 @@
   },
   "active": "9f4f87bc404614f0",
   "lastOpenFiles": [
-    "FINTECH/Tài liệu.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/2. Filtering DB.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Các lệnh cơ bản PostGress.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "FINTECH/Deep Research Profile Đạt Nguyễn.md",
+    "FINTECH/Tài liệu.md",
     "PRODUCT/Business model - 13102025.md",
     "PRODUCT/Untitled.md",
     "2025-10-13.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "PRODUCT/image/Pasted image 20251013210137.png",
     "PRODUCT/Holdings, ESOP, Build to Sell và Shortcut to IPO.md",
     "FINTECH/5. Đánh giá 1 số Job - DNSE - MSB - Domain Tài chính DNSE vs Giáo dục Step Up Education Chiến lược 40-50 năm.md",
@@ -210,8 +212,6 @@
     "learning/PRODUCT/UI, UX/1. Tính năng Perlexity khá thích.md",
     "learning/PRODUCT/__.md",
     "learning/PRODUCT/Untitled.md",
-    "learning/PRODUCT/Holdings, ESOP, Build to Sell và Shortcut to IPO.md",
-    "learning/FINTECH/Data/2. Danh sách chỉ số.md",
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/Moxie/attachments/Pasted image 20250107182234.png",
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/BigData/attachments/Pasted image 20250807204329.png",
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/BigData/attachments/Pasted image 20250807201813.png",
