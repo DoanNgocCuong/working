@@ -17,7 +17,13 @@ DCF là công cụ phân tích tài chính dùng để ước tính giá trị d
 https://www.prudential.com.vn/vi/blog-nhip-song-khoe/cach-doc-bao-cao-tai-chinh-de-quan-ly-dau-tu-hieu-qua/
 
 Doanh thu, chi phí, hàng tồn kho, khấu hao, dòng tiền thuần từ kết quả kinh doanh, khoản nợ ngắn hạn, nợ dài hạn. 
+- **Báo cáo lưu chuyển tiền tệ** (Cash Flow Statement) - không phải báo cáo kết quả kinh doanh như bạn đang có
 
+- Dự báo dòng tiền tự do (Free Cash Flow) cho 5-10 năm tới
+
+- Xác định tỷ lệ chiết khấu (WACC - Weighted Average Cost of Capital)
+
+- Tính giá trị cuối kỳ (Terminal Value)
 
 ---
 
@@ -82,3 +88,83 @@ Doanh thu, chi phí, hàng tồn kho, khấu hao, dòng tiền thuần từ kế
 ||Terminal Value|Giá trị cuối kỳ|Perpetuity growth method|
 ||Enterprise Value (EV)|Giá trị doanh nghiệp|NPV của FCFF + Terminal Value|
 ||Equity Value|Giá trị vốn cổ phần|EV trừ nợ ròng|
+
+---
+# 1. Giải thích công thức DCF đơn giản
+
+**Công thức DCF** giúp chúng ta biết một công ty đáng giá bao nhiêu tiền nếu ta biết nó sẽ kiếm được bao nhiêu tiền trong tương lai.
+
+## Công thức DCF là gì?
+
+DCF là viết tắt của "Discounted Cash Flow". Nó giống như việc bạn tính xem số tiền bạn sẽ nhận được trong tương lai thì hôm nay có giá trị bao nhiêu.
+
+## Ví dụ dễ hiểu
+
+Giả sử bạn sẽ nhận được 100.000 đồng từ bố mẹ sau 1 năm. Nhưng nếu bạn muốn biết số tiền đó hôm nay có giá trị bao nhiêu, bạn phải trừ đi một chút vì phải chờ đợi (giống như "chiết khấu").
+
+## Công thức đơn giản:
+
+![[image/Pasted image 20251014233806.png]]
+
+- **Tiền năm 1, năm 2...** là số tiền công ty sẽ kiếm được mỗi năm.
+    
+- **Tỉ lệ chiết khấu** là phần trăm bạn trừ đi vì phải chờ đợi (giống như "lãi suất ngân hàng").
+    
+
+## Ý nghĩa
+
+- Nếu bạn nhận tiền sớm thì giá trị lớn hơn.
+    
+- Nếu phải chờ lâu, giá trị hôm nay sẽ nhỏ hơn.
+    
+
+**Tóm lại:**
+
+- DCF giúp bạn biết số tiền trong tương lai hôm nay có giá trị bao nhiêu.
+    
+- Càng phải chờ lâu, giá trị càng nhỏ.
+    
+
+Nếu em muốn thử tính với số tiền cụ thể, hãy nói cho thầy biết nhé!
+
+---
+### **Tỉ lệ chiết khấu** (thường là WACC - Weighted Average Cost of Capital) được tính để phản ánh rủi ro và chi phí sử dụng vốn của doanh nghiệp. Nó dùng làm “lãi suất chiết khấu” để quy đổi giá trị dòng tiền tương lai về hiện tại.
+
+Công thức phổ biến nhất để tính WACC là:
+
+$\mathrm{WACC} = \frac{E}{V} r_e + \frac{D}{V} r_d (1 - T)$
+
+
+Trong đó:
+
+- EEE: Giá trị vốn cổ phần (Equity)
+    
+- DDD: Giá trị nợ (Debt)
+    
+- V=E+DV = E + DV=E+D: Tổng giá trị vốn
+    
+- rer_ere: Chi phí vốn cổ phần (thường dựa trên kỳ vọng lợi suất cổ đông, ví dụ bằng mô hình CAPM)
+    
+- rdr_drd: Chi phí nợ (lãi suất vay ngân hàng)
+    
+- TTT: Thuế suất doanh nghiệp
+    
+
+**Các bước tổng quát:**
+
+1. Xác định cấu trúc vốn (tỷ lệ nợ/vốn chủ sở hữu).
+    
+2. Tính chi phí cho từng loại vốn:
+    
+    - Chi phí nợ: lãi suất thực trả cho ngân hàng/trái phiếu, đã trừ thuế.
+        
+    - Chi phí vốn cổ phần: thường dùng mô hình CAPM.
+        
+3. Ghép tỷ lệ từng loại vốn và cộng lại theo trọng số.
+    
+
+**Ý nghĩa:** Tỉ lệ chiết khấu càng cao thì kỳ vọng lợi nhuận/rủi ro của nhà đầu tư càng lớn, giá trị hiện tại của dòng tiền tương lai sẽ càng thấp.
+
+Tóm lại: **WACC** là chỉ số tổng hợp chi phí vốn, dùng để chiết khấu các dòng tiền dự báo trong mô hình DCF về hiện tại. Bạn sẽ cần số liệu về vốn cổ phần, nợ, lãi suất vay, lãi suất kỳ vọng cổ đông, thuế...[perplexity](https://www.perplexity.ai/search/mece-cac-nhom-chi-so-can-tinh-HUgedURhQiq0gNW_lh_ygw)​
+
+1. [https://www.perplexity.ai/search/mece-cac-nhom-chi-so-can-tinh-HUgedURhQiq0gNW_lh_ygw](https://www.perplexity.ai/search/mece-cac-nhom-chi-so-can-tinh-HUgedURhQiq0gNW_lh_ygw)
