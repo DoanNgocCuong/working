@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Các lệnh cơ bản PostGress.md",
+                "file": "PRODUCT/Business.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Các lệnh cơ bản PostGress"
+              "title": "Business"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Các lệnh cơ bản PostGress.md",
+                "file": "PRODUCT/Business.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Các lệnh cơ bản PostGress"
+              "title": "Outline of Business"
             }
           }
         ],
@@ -171,8 +171,9 @@
   },
   "active": "9f4f87bc404614f0",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/2. Filtering DB.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Các lệnh cơ bản PostGress.md",
+    "PRODUCT/Business.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/2. Filtering DB.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "FINTECH/Deep Research Profile Đạt Nguyễn.md",
     "FINTECH/Tài liệu.md",
@@ -211,7 +212,6 @@
     "learning/PRODUCT/UI, UX/image/Pasted image 20251006180436.png",
     "learning/PRODUCT/UI, UX/1. Tính năng Perlexity khá thích.md",
     "learning/PRODUCT/__.md",
-    "learning/PRODUCT/Untitled.md",
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/Moxie/attachments/Pasted image 20250107182234.png",
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/BigData/attachments/Pasted image 20250807204329.png",
     "learning/DATA_SCIENCE_AND_AI/New folder/3_Learning/BigData/attachments/Pasted image 20250807201813.png",
