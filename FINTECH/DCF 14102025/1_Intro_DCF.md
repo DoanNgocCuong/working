@@ -40,54 +40,54 @@ Doanh thu, chi phí, hàng tồn kho, khấu hao, dòng tiền thuần từ kế
 
 # 3. Các chỉ số nhỏ ảnh hưởng đến DCF 
 
-|Nhóm chỉ số|Chỉ số con|Ảnh hưởng đến DCF|Nguồn trích xuất|
-|---|---|---|---|
-|1. Tăng trưởng Doanh thu|Revenue growth rate|Tăng dòng tiền tương lai|Mở nhà máy, sản phẩm mới, mở rộng thị trường|
-||Market expansion|Tăng quy mô kinh doanh|Khai trương chi nhánh, xuất khẩu|
-||M&A (Acquire)|Tăng doanh thu hợp nhất|Thông báo mua lại công ty|
-||Product Launch|Đóng góp từ sản phẩm mới|Ra mắt sản phẩm/dịch vụ|
-||Price adjustment|Ảnh hưởng giá bán|Thay đổi chính sách giá|
-||Capacity increase|Tăng công suất sản xuất|Mở rộng nhà máy, thiết bị mới|
-|2. Biên lợi nhuận & Chi phí|EBITDA margin delta|Ảnh hưởng lợi nhuận hoạt động|Tái cấu trúc, tối ưu chi phí|
-||Operating margin change|Thay đổi hiệu quả hoạt động|Tự động hóa, nâng cấp công nghệ|
-||OPEX ratio delta|Thay đổi chi phí vận hành|Cắt giảm nhân sự, tối ưu quy trình|
-||Raw material cost impact|Ảnh hưởng giá nguyên liệu|Biến động giá thép, sữa, dầu|
-||Energy & logistics cost|Chi phí năng lượng/vận chuyển|Giá xăng dầu, điện, logistics|
-|3. Đầu tư vốn (CAPEX)|CAPEX delta|Ảnh hưởng dòng tiền đầu tư|Xây nhà máy, mua thiết bị|
-||Asset disposal|Thu tiền từ thanh lý tài sản|Bán nhà máy, thiết bị cũ|
-||Maintenance CAPEX|Vốn duy trì hoạt động|Bảo trì định kỳ|
-||Growth CAPEX|Vốn mở rộng|Dự án mới, mở rộng công suất|
-||Depreciation|Khấu hao tài sản|Hạch toán kế toán|
-|4. Vốn lưu động|Working capital ratio delta|Hiệu quả quản lý vốn|Thay đổi chính sách thu hồi nợ|
-||Days Sales Outstanding (DSO)|Kỳ thu tiền|Quản lý công nợ khách hàng|
-||Days Inventory Outstanding (DIO)|Kỳ tồn kho|Quản lý hàng tồn kho|
-||Days Payable Outstanding (DPO)|Kỳ trả tiền nhà cung cấp|Điều khoản thanh toán|
-|5. Chi phí vốn (WACC)|WACC delta|Ảnh hưởng tỷ lệ chiết khấu|Thay đổi cấu trúc vốn|
-||Risk premium delta (bps)|Thay đổi phần bù rủi ro|Kiện tụng, scandal, thay CEO|
-||Debt-to-Equity ratio|Cơ cấu nợ/vốn|Phát hành trái phiếu/cổ phiếu|
-||Interest expense delta|Chi phí lãi vay|Vay mới, tái cơ cấu nợ|
-||Credit rating change|Xếp hạng tín dụng|Nâng/hạ hạng tín nhiệm|
-|6. Thuế & Chính sách|Effective tax rate delta|Suất thuế hiệu dụng|Thay đổi luật thuế, ưu đãi|
-||Tax incentive benefit|Lợi ích ưu đãi thuế|Chính sách hỗ trợ doanh nghiệp|
-||Regulatory compliance cost|Chi phí tuân thủ|Quy định mới về môi trường|
-||Tariff impact|Ảnh hưởng thuế quan|Chính sách thuế nhập khẩu|
-|7. Rủi ro & Phi hoạt động|Litigation exposure|Kiện tụng, phạt|Thông báo kiện tụng, vi phạm|
-||Non-operating cash outflow|Dòng tiền ngoài hoạt động|Chi phí phạt, bồi thường|
-||One-time charges/gains|Chi phí/lợi ích một lần|Thanh lý tài sản, tái cơ cấu|
-||Probability-weighted scenarios|Kịch bản có xác suất|Phân tích Monte Carlo|
-|8. Quản trị & ESG|Leadership change|Thay đổi ban lãnh đạo|Thay CEO/CFO/Chủ tịch|
-||ESG rating change|Xếp hạng ESG|Đầu tư bền vững, môi trường|
-||Governance quality|Chất lượng quản trị|Scandal, gian lận, minh bạch|
-||Strategic shift|Thay đổi chiến lược|Chuyển đổi mô hình kinh doanh|
-|9. Đổi mới & Tài sản vô hình|R&D investment|Đầu tư nghiên cứu phát triển|Chi tiêu R&D, đổi mới công nghệ|
-||Patent/IP acquisition|Mua bản quyền/sáng chế|Thương vụ mua IP, cấp phép|
-||Brand investment|Đầu tư thương hiệu|Chi phí marketing, PR|
-||Technology adoption|Áp dụng công nghệ mới|AI, tự động hóa, chuyển đổi số|
-|10. Dòng tiền tự do (Output)|Free Cash Flow to Firm (FCFF)|Dòng tiền tự do công ty|Tổng hợp từ các nhóm trên|
-||Free Cash Flow to Equity (FCFE)|Dòng tiền tự do cổ đông|FCFF trừ đi nghĩa vụ nợ|
-||Terminal Value|Giá trị cuối kỳ|Perpetuity growth method|
-||Enterprise Value (EV)|Giá trị doanh nghiệp|NPV của FCFF + Terminal Value|
-||Equity Value|Giá trị vốn cổ phần|EV trừ nợ ròng|
+| Nhóm chỉ số                  | Chỉ số con                       | Ảnh hưởng đến DCF             | Nguồn trích xuất                             |
+| ---------------------------- | -------------------------------- | ----------------------------- | -------------------------------------------- |
+| 1. Tăng trưởng Doanh thu     | Revenue growth rate              | Tăng dòng tiền tương lai      | Mở nhà máy, sản phẩm mới, mở rộng thị trường |
+|                              | Market expansion                 | Tăng quy mô kinh doanh        | Khai trương chi nhánh, xuất khẩu             |
+|                              | M&A (Acquire)                    | Tăng doanh thu hợp nhất       | Thông báo mua lại công ty                    |
+|                              | Product Launch                   | Đóng góp từ sản phẩm mới      | Ra mắt sản phẩm/dịch vụ                      |
+|                              | Price adjustment                 | Ảnh hưởng giá bán             | Thay đổi chính sách giá                      |
+|                              | Capacity increase                | Tăng công suất sản xuất       | Mở rộng nhà máy, thiết bị mới                |
+| 2. Biên lợi nhuận & Chi phí  | EBITDA margin delta              | Ảnh hưởng lợi nhuận hoạt động | Tái cấu trúc, tối ưu chi phí                 |
+|                              | Operating margin change          | Thay đổi hiệu quả hoạt động   | Tự động hóa, nâng cấp công nghệ              |
+|                              | OPEX ratio delta                 | Thay đổi chi phí vận hành     | Cắt giảm nhân sự, tối ưu quy trình           |
+|                              | Raw material cost impact         | Ảnh hưởng giá nguyên liệu     | Biến động giá thép, sữa, dầu                 |
+|                              | Energy & logistics cost          | Chi phí năng lượng/vận chuyển | Giá xăng dầu, điện, logistics                |
+| 3. Đầu tư vốn (CAPEX)        | CAPEX delta                      | Ảnh hưởng dòng tiền đầu tư    | Xây nhà máy, mua thiết bị                    |
+|                              | Asset disposal                   | Thu tiền từ thanh lý tài sản  | Bán nhà máy, thiết bị cũ                     |
+|                              | Maintenance CAPEX                | Vốn duy trì hoạt động         | Bảo trì định kỳ                              |
+|                              | Growth CAPEX                     | Vốn mở rộng                   | Dự án mới, mở rộng công suất                 |
+|                              | Depreciation                     | Khấu hao tài sản              | Hạch toán kế toán                            |
+| 4. Vốn lưu động              | Working capital ratio delta      | Hiệu quả quản lý vốn          | Thay đổi chính sách thu hồi nợ               |
+|                              | Days Sales Outstanding (DSO)     | Kỳ thu tiền                   | Quản lý công nợ khách hàng                   |
+|                              | Days Inventory Outstanding (DIO) | Kỳ tồn kho                    | Quản lý hàng tồn kho                         |
+|                              | Days Payable Outstanding (DPO)   | Kỳ trả tiền nhà cung cấp      | Điều khoản thanh toán                        |
+| 5. Chi phí vốn (WACC)        | WACC delta                       | Ảnh hưởng tỷ lệ chiết khấu    | Thay đổi cấu trúc vốn                        |
+|                              | Risk premium delta (bps)         | Thay đổi phần bù rủi ro       | Kiện tụng, scandal, thay CEO                 |
+|                              | Debt-to-Equity ratio             | Cơ cấu nợ/vốn                 | Phát hành trái phiếu/cổ phiếu                |
+|                              | Interest expense delta           | Chi phí lãi vay               | Vay mới, tái cơ cấu nợ                       |
+|                              | Credit rating change             | Xếp hạng tín dụng             | Nâng/hạ hạng tín nhiệm                       |
+| 6. Thuế & Chính sách         | Effective tax rate delta         | Suất thuế hiệu dụng           | Thay đổi luật thuế, ưu đãi                   |
+|                              | Tax incentive benefit            | Lợi ích ưu đãi thuế           | Chính sách hỗ trợ doanh nghiệp               |
+|                              | Regulatory compliance cost       | Chi phí tuân thủ              | Quy định mới về môi trường                   |
+|                              | Tariff impact                    | Ảnh hưởng thuế quan           | Chính sách thuế nhập khẩu                    |
+| 7. Rủi ro & Phi hoạt động    | Litigation exposure              | Kiện tụng, phạt               | Thông báo kiện tụng, vi phạm                 |
+|                              | Non-operating cash outflow       | Dòng tiền ngoài hoạt động     | Chi phí phạt, bồi thường                     |
+|                              | One-time charges/gains           | Chi phí/lợi ích một lần       | Thanh lý tài sản, tái cơ cấu                 |
+|                              | Probability-weighted scenarios   | Kịch bản có xác suất          | Phân tích Monte Carlo                        |
+| 8. Quản trị & ESG            | Leadership change                | Thay đổi ban lãnh đạo         | Thay CEO/CFO/Chủ tịch                        |
+|                              | ESG rating change                | Xếp hạng ESG                  | Đầu tư bền vững, môi trường                  |
+|                              | Governance quality               | Chất lượng quản trị           | Scandal, gian lận, minh bạch                 |
+|                              | Strategic shift                  | Thay đổi chiến lược           | Chuyển đổi mô hình kinh doanh                |
+| 9. Đổi mới & Tài sản vô hình | R&D investment                   | Đầu tư nghiên cứu phát triển  | Chi tiêu R&D, đổi mới công nghệ              |
+|                              | Patent/IP acquisition            | Mua bản quyền/sáng chế        | Thương vụ mua IP, cấp phép                   |
+|                              | Brand investment                 | Đầu tư thương hiệu            | Chi phí marketing, PR                        |
+|                              | Technology adoption              | Áp dụng công nghệ mới         | AI, tự động hóa, chuyển đổi số               |
+| 10. Dòng tiền tự do (Output) | Free Cash Flow to Firm (FCFF)    | Dòng tiền tự do công ty       | Tổng hợp từ các nhóm trên                    |
+|                              | Free Cash Flow to Equity (FCFE)  | Dòng tiền tự do cổ đông       | FCFF trừ đi nghĩa vụ nợ                      |
+|                              | Terminal Value                   | Giá trị cuối kỳ               | Perpetuity growth method                     |
+|                              | Enterprise Value (EV)            | Giá trị doanh nghiệp          | NPV của FCFF + Terminal Value                |
+|                              | Equity Value                     | Giá trị vốn cổ phần           | EV trừ nợ ròng                               |
 
 ---
 # 1. Giải thích công thức DCF đơn giản
@@ -861,6 +861,42 @@ có lẽ nên là dạng JSON này để mô hình có thể hiểu được ý 
 Đã suy nghĩ trong 20s
 
 Chuẩn bài. Ta thiết kế **một schema JSON “event-centric”** để LLM xuất ra **ý nghĩa tài chính có cấu trúc**, sẵn sàng đổ thẳng vào Tầng 2 (Quantification) và cuối cùng là DCF. Mục tiêu: rõ ràng, kiểm chứng được, dễ map sang biến số tài chính, và truy vết (provenance).
+
+---
+
+
+# 2. DCF khác gì FCFF (Mô tả 1 các thức nhỏ ví dụ như cậu bé bán kem để giải thích các khái niệm DCF, FCFF, dòng tiền, ,...)
+
+## Ví dụ: Cậu bé bán kem và các khái niệm tài chính
+
+Hãy tưởng tượng **cậu bé tên Nam** bán kem mỗi ngày. Chúng ta sẽ dùng câu chuyện này để giải thích các khái niệm tài chính:
+
+
+| Dòng tiền (Cash Flow)             | **- Dòng tiền vào:** Mỗi lần Nam bán được một que kem, Nam nhận được tiền từ khách hàng. Đó là **dòng tiền vào**.<br>    <br>- **Dòng tiền ra:** Nam phải mua nguyên liệu (sữa, đường), trả tiền thuê xe đẩy, và trả tiền cho em gái phụ giúp. Đó là **dòng tiền ra**.<br>    <br>- **Dòng tiền thực tế:** Số tiền Nam còn lại sau khi bán kem và trả hết các chi phí trong ngày.                                                                                                                                                            |     |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| **FCFF (Free Cash Flow to Firm)** | - Sau khi Nam **bán kem, trả mọi chi phí, mua thêm xe đẩy mới (đầu tư), trả lãi vay nếu có**, số tiền còn lại là **FCFF**.<br>    <br>- **FCFF** là số tiền Nam có thể dùng để trả cho bố mẹ (nếu vay tiền mua xe đẩy) hoặc để dành, hoặc chia cho các bạn góp vốn.<br><br>- Trong định giá doanh nghiệp bằng phương pháp DCF (Discounted Cash Flow), FCFF là "nguyên liệu" đầu vào, thể hiện sức khỏe tài chính thực tế của doanh nghiệp mỗi năm.[](https://www.perplexity.ai/search/dcf-fcff-pipeline-checklist-ch-ucBUxm1gSbiEFRt2VLDt9g) |     |
+| **DCF (Discounted Cash Flow)**    | - Nam muốn biết **giá trị quán kem của mình** là bao nhiêu.<br>    <br>- Nam dự đoán: năm nay còn 1 triệu, năm sau còn 1,2 triệu, năm sau nữa còn 1,5 triệu...<br>    <br>- Nhưng **tiền năm sau không quý bằng tiền năm nay** (vì phải chờ lâu), nên Nam phải "giảm giá trị" các khoản tiền tương lai này một chút.<br>    <br>- **DCF** là cách cộng tất cả các FCFF của các năm tới, nhưng mỗi năm càng xa thì càng giảm giá trị đi một chút.<br>                                                                                         |     |
+
+## Ưng dụng được gì từ những điều này vào tư duy định giá mọi việc, để ra những quyết định dài hạn hơn
+    
+
+## 4. **Tóm tắt bằng câu chuyện**
+
+- Nam bán kem, thu tiền, trả chi phí, mua thêm xe đẩy → còn lại bao nhiêu tiền? Đó là **FCFF**.
+    
+- Nam muốn biết quán kem của mình đáng giá bao nhiêu, nên cộng tất cả số tiền còn lại của các năm tới (FCFF), nhưng phải giảm giá trị các năm xa hơn → đó là **DCF**.
+    
+
+---
+
+**Bạn có thể thử nghĩ xem:**
+
+- Nếu Nam năm nào cũng mua thêm xe đẩy mới, số tiền còn lại (FCFF) sẽ tăng hay giảm?
+    
+- Nếu Nam bán được nhiều kem hơn, dòng tiền vào sẽ thế nào?
+    
+
+Nếu bạn muốn, mình có thể đặt câu hỏi nhỏ để bạn thử trả lời nhé!
 
 ---
 
