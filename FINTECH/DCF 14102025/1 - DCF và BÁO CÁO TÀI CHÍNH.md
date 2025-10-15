@@ -129,6 +129,41 @@ Giả sử bạn sẽ nhận được 100.000 đồng từ bố mẹ sau 1 năm.
 
 
 ---
+
+# ...
+
+## Mục đích trừ đi rồi lại cộng lại khấu hao
+
+- **Trừ khấu hao khi tính lợi nhuận (kế toán):**
+    
+    - Để phản ánh tài sản dùng lâu sẽ cũ, mất giá trị dần (kế toán gọi là chi phí hao mòn).
+        
+    - Lợi nhuận trên sổ sách vì thế sẽ “thực tế hơn”, phòng trường hợp sau này phải mua mới tài sản thay thế.
+        
+- **Cộng lại khấu hao khi tính dòng tiền (FCFF):**
+    
+    - Vì khấu hao là chi phí ghi trên giấy, không phải tiền thật xuất ra mỗi ngày, nên phải cộng lại để biết được số tiền “thật sự” còn lại trong tay sau mọi chi phí và thuế.
+        
+    - FCFF là dòng tiền thật doanh nghiệp còn giữ, không bị giảm ảo vì khoản khấu hao này.
+        
+
+**Tóm lại:**
+
+- Trừ khấu hao giúp tính toán lợi nhuận chính xác và phản ánh mức độ “hao tổn” tài sản.
+    
+- Cộng lại khấu hao khi tính dòng tiền để xác định đúng số tiền thật còn lại, phục vụ định giá doanh nghiệp, đầu tư, trả cho chủ nợ và cổ đông.
+    
+
+**Nói đơn giản:**
+
+- Trừ khấu hao để quản lý tài sản cho tốt về lâu dài (sổ sách).
+    
+- Cộng lại khấu hao để biết tiền thật còn bao nhiêu (dòng tiền “tươi”, giúp đầu tư/kinh doanh).
+    
+
+1. [https://www.perplexity.ai/search/fcff-free-cash-flow-to-firm-Mems7LyVQn6gD.qWDNHzOA](https://www.perplexity.ai/search/fcff-free-cash-flow-to-firm-Mems7LyVQn6gD.qWDNHzOA)
+
+---
 ### **Tỉ lệ chiết khấu** (thường là WACC - Weighted Average Cost of Capital) được tính để phản ánh rủi ro và chi phí sử dụng vốn của doanh nghiệp. Nó dùng làm “lãi suất chiết khấu” để quy đổi giá trị dòng tiền tương lai về hiện tại.
 
 Công thức phổ biến nhất để tính WACC là:
