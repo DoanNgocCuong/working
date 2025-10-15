@@ -1,44 +1,32 @@
-DCF (Discounted Cash Flow - Dòng tiền chiết khấu) là một **phương pháp định giá doanh nghiệp**, không phải là một chỉ tiêu cụ thể trong báo cáo kết quả kinh doanh mà bạn đang xem.[](https://vneconomy.vn/toan-canh-buc-tranh-kinh-doanh-quy-2-2024.htm)​
 
-## 1. Giải thích về DCF
+# 1. DCF
 
-DCF là công cụ phân tích tài chính dùng để ước tính giá trị doanh nghiệp dựa trên dòng tiền tự do trong tương lai được chiết khấu về giá trị hiện tại. Để tính DCF, nhà đầu tư cần:[](https://vneconomy.vn/toan-canh-buc-tranh-kinh-doanh-quy-2-2024.htm)​
 
-- **Báo cáo lưu chuyển tiền tệ** (Cash Flow Statement) - không phải báo cáo kết quả kinh doanh như bạn đang có
+## 1.1 MECE các yếu tố ảnh hưởng 
+
+
+## 1.1 DCF khác gì FCFF (Mô tả 1 các thức nhỏ ví dụ như cậu bé bán kem để giải thích các khái niệm DCF, FCFF, dòng tiền, ,...)
+
+### Ví dụ: Cậu bé bán kem và các khái niệm tài chính
+
+Hãy tưởng tượng **cậu bé tên Nam** bán kem mỗi ngày. Chúng ta sẽ dùng câu chuyện này để giải thích các khái niệm tài chính:
+
+
+| Dòng tiền (Cash Flow)             | **- Dòng tiền vào:** Mỗi lần Nam bán được một que kem, Nam nhận được tiền từ khách hàng. Đó là **dòng tiền vào**.<br>    <br>- **Dòng tiền ra:** Nam phải mua nguyên liệu (sữa, đường), trả tiền thuê xe đẩy, và trả tiền cho em gái phụ giúp. Đó là **dòng tiền ra**.<br>    <br>- **Dòng tiền thực tế:** Số tiền Nam còn lại sau khi bán kem và trả hết các chi phí trong ngày.                                                                                                                                                            |     |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| **FCFF (Free Cash Flow to Firm)** | - Sau khi Nam **bán kem, trả mọi chi phí, mua thêm xe đẩy mới (đầu tư), trả lãi vay nếu có**, số tiền còn lại là **FCFF**.<br>    <br>- **FCFF** là số tiền Nam có thể dùng để trả cho bố mẹ (nếu vay tiền mua xe đẩy) hoặc để dành, hoặc chia cho các bạn góp vốn.<br><br>- Trong định giá doanh nghiệp bằng phương pháp DCF (Discounted Cash Flow), FCFF là "nguyên liệu" đầu vào, thể hiện sức khỏe tài chính thực tế của doanh nghiệp mỗi năm.[](https://www.perplexity.ai/search/dcf-fcff-pipeline-checklist-ch-ucBUxm1gSbiEFRt2VLDt9g) |     |
+| **DCF (Discounted Cash Flow)**    | - Nam muốn biết **giá trị quán kem của mình** là bao nhiêu.<br>    <br>- Nam dự đoán: năm nay còn 1 triệu, năm sau còn 1,2 triệu, năm sau nữa còn 1,5 triệu...<br>    <br>- Nhưng **tiền năm sau không quý bằng tiền năm nay** (vì phải chờ lâu), nên Nam phải "giảm giá trị" các khoản tiền tương lai này một chút.<br>    <br>- **DCF** là cách cộng tất cả các FCFF của các năm tới, nhưng mỗi năm càng xa thì càng giảm giá trị đi một chút.<br>                                                                                         |     |
+
+## 1.2 Ưng dụng được gì từ những điều này vào tư duy định giá mọi việc, để ra những quyết định dài hạn hơn
     
-- Dự báo dòng tiền tự do (Free Cash Flow) cho 5-10 năm tới
-    
-- Xác định tỷ lệ chiết khấu (WACC - Weighted Average Cost of Capital)
-    
-- Tính giá trị cuối kỳ (Terminal Value)
 
+| Ý Quan Trọng                                                                       | Nội Dung Chính                                                                                                                                      | Ứng Dụng Thực Tiễn                                                                                                                                        |
+| ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Luôn tính “dòng tiền thật” dài hạn, không chỉ nhìn lợi ích trước mắt**        | Đánh giá bất kỳ việc gì hoặc đầu tư nào đều nên cộng tất cả lợi ích và chi phí cả nhiều năm, sau khi đã trừ mọi khoản phải trả.                     | Giúp chọn việc/công việc/học tập/nghề ổn định, không bị “lóa mắt” bởi lợi nhuận tức thì nhưng rủi ro dài hạn.                                             |
+| **2. Tiền hôm nay luôn giá trị hơn tiền mai**                                      | Giá trị tiền trong tương lai luôn nên được “chiết khấu” về hiện tại; hãy ưu tiên nhận/gây dựng dòng tiền về càng sớm càng tốt.                      | Khi đầu tư, kinh doanh, hoặc mua tài sản… hãy ưu tiên các dòng tiền nhận sớm, không dồn hết hy vọng vào tương lai xa không chắc chắn.                     |
+| **3. Luôn kiểm thử lại các giả định, so sánh nhiều cách tính và nghiêm túc audit** | Mọi quyết định lớn nên được kiểm tra, so sánh qua nhiều góc nhìn/cách tính (giống FCFF 2 đường, DCF), nếu thấy bất thường phải tra cứu nguyên nhân. | Tránh sai lầm lớn trong đầu tư, kinh doanh, cả trong chi tiêu cá nhân: không vội vàng ra quyết định khi số liệu chưa rõ ràng hoặc có dấu hiệu bất thường. |
 
----
-https://www.prudential.com.vn/vi/blog-nhip-song-khoe/cach-doc-bao-cao-tai-chinh-de-quan-ly-dau-tu-hieu-qua/
-
-Doanh thu, chi phí, hàng tồn kho, khấu hao, dòng tiền thuần từ kết quả kinh doanh, khoản nợ ngắn hạn, nợ dài hạn. 
-- **Báo cáo lưu chuyển tiền tệ** (Cash Flow Statement) - không phải báo cáo kết quả kinh doanh như bạn đang có
-
-- Dự báo dòng tiền tự do (Free Cash Flow) cho 5-10 năm tới
-
-- Xác định tỷ lệ chiết khấu (WACC - Weighted Average Cost of Capital)
-
-- Tính giá trị cuối kỳ (Terminal Value)
-
----
-
-## 🏦 1. Các trang tài chính Việt Nam phổ biến & đáng tin cậy
-
-|Trang|Loại dữ liệu|Cấu trúc HTML / API|Ưu điểm|Nhược điểm|
-|---|---|---|---|---|
-|**Cafef.vn** (thuộc VCCorp)|Báo cáo tài chính, lịch sử giá, chỉ số PE, EPS, dòng tiền|HTML có cấu trúc tương đối ổn (`div#divTableData`)|Có hầu hết công ty VN|Không có API, cần xử lý AJAX + rate limit|
-|**Vietstock.vn**|Báo cáo tài chính chi tiết, phân tích, chỉ số, DCF|HTML và JS dynamic|Dữ liệu đầy đủ, cập nhật nhanh|JS render (phải dùng Selenium/Playwright)|
-|**SSI iBoard / FiinTrade / FiinPro**|Real-time quotes, phân tích cơ bản|Có API riêng (cần key hoặc mua gói)|Ổn định, chuyên nghiệp|Trả phí, hạn chế request|
-|**HNX / HOSE / UPCoM websites**|Báo cáo gốc (PDF, Excel)|File link cố định theo năm|Chính thức, nguồn xác thực|Khó parse, PDF thường là scan|
-|**Company IR websites** (ví dụ: QTP.com.vn, POW.vn)|Báo cáo gốc (PDF)|Tên file có pattern|Đảm bảo chính xác|Cần crawl từng công ty riêng|
-|**Investing.com / TradingView / Yahoo Finance (VN)**|Giá cổ phiếu, chỉ số, lịch sử|Có API ẩn / JSON endpoint|Dễ crawl, nhẹ|Không có dữ liệu dòng tiền chi tiết|
-
-# 3. Các chỉ số nhỏ ảnh hưởng đến DCF 
+## 1.3. MECE các chỉ số ảnh hưởng đến dòng tiền: 
 
 | Nhóm chỉ số                  | Chỉ số con                       | Ảnh hưởng đến DCF             | Nguồn trích xuất                             |
 | ---------------------------- | -------------------------------- | ----------------------------- | -------------------------------------------- |
@@ -90,42 +78,55 @@ Doanh thu, chi phí, hàng tồn kho, khấu hao, dòng tiền thuần từ kế
 |                              | Equity Value                     | Giá trị vốn cổ phần           | EV trừ nợ ròng                               |
 
 ---
-# 1. Giải thích công thức DCF đơn giản
 
-**Công thức DCF** giúp chúng ta biết một công ty đáng giá bao nhiêu tiền nếu ta biết nó sẽ kiếm được bao nhiêu tiền trong tương lai.
 
-## Công thức DCF là gì?
+
+
+
+
+---
+https://www.prudential.com.vn/vi/blog-nhip-song-khoe/cach-doc-bao-cao-tai-chinh-de-quan-ly-dau-tu-hieu-qua/
+
+Doanh thu, chi phí, hàng tồn kho, khấu hao, dòng tiền thuần từ kết quả kinh doanh, khoản nợ ngắn hạn, nợ dài hạn. 
+- **Báo cáo lưu chuyển tiền tệ** (Cash Flow Statement) - không phải báo cáo kết quả kinh doanh như bạn đang có
+
+- Dự báo dòng tiền tự do (Free Cash Flow) cho 5-10 năm tới
+
+- Xác định tỷ lệ chiết khấu (WACC - Weighted Average Cost of Capital)
+
+- Tính giá trị cuối kỳ (Terminal Value)
+
+---
+
+## 1.4 Công thức DCF là gì?
 
 DCF là viết tắt của "Discounted Cash Flow". Nó giống như việc bạn tính xem số tiền bạn sẽ nhận được trong tương lai thì hôm nay có giá trị bao nhiêu.
 
-## Ví dụ dễ hiểu
-
 Giả sử bạn sẽ nhận được 100.000 đồng từ bố mẹ sau 1 năm. Nhưng nếu bạn muốn biết số tiền đó hôm nay có giá trị bao nhiêu, bạn phải trừ đi một chút vì phải chờ đợi (giống như "chiết khấu").
 
-## Công thức đơn giản:
+### 1.4.1 Công thức đơn giản:
 
 ![[image/Pasted image 20251014233806.png]]
 
 - **Tiền năm 1, năm 2...** là số tiền công ty sẽ kiếm được mỗi năm.
     
 - **Tỉ lệ chiết khấu** là phần trăm bạn trừ đi vì phải chờ đợi (giống như "lãi suất ngân hàng").
-    
-
-## Ý nghĩa
 
 - Nếu bạn nhận tiền sớm thì giá trị lớn hơn.
-    
 - Nếu phải chờ lâu, giá trị hôm nay sẽ nhỏ hơn.
-    
-
-**Tóm lại:**
-
 - DCF giúp bạn biết số tiền trong tương lai hôm nay có giá trị bao nhiêu.
-    
 - Càng phải chờ lâu, giá trị càng nhỏ.
-    
 
-Nếu em muốn thử tính với số tiền cụ thể, hãy nói cho thầy biết nhé!
+
+### 1.4.2 Công thức chi tiết: 
+
+| Tiêu chí            | FCF/FCFE (Free Cash Flow to Equity)                                         | FCFF (Free Cash Flow to Firm)                                                                                    |
+| ------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Đối tượng hưởng lợi | Cổ đông (Equity holders)                                                    | Toàn bộ doanh nghiệp (bao gồm cả chủ nợ và cổ đông)                                                              |
+| Công thức cơ bản    | Lợi nhuận ròng + Khấu hao - CAPEX - Thay đổi vốn lưu động - Nợ vay trả ròng | EBIT (1-T) + Khấu hao - CAPEX - Thay đổi vốn lưu động                                                            |
+| Dùng để định giá    | Giá trị vốn chủ sở hữu (Equity Value)                                       | Giá trị doanh nghiệp (Enterprise Value)                                                                          |
+| Ứng dụng            | Định giá cho cổ đông, tập trung vào dòng tiền còn lại sau khi trả nợ        | Được dùng phổ biến trong mô hình DCF (Discounted Cash Flow) vì biểu hiện sức khỏe tài chính toàn bộ doanh nghiệp |
+
 
 ---
 ### **Tỉ lệ chiết khấu** (thường là WACC - Weighted Average Cost of Capital) được tính để phản ánh rủi ro và chi phí sử dụng vốn của doanh nghiệp. Nó dùng làm “lãi suất chiết khấu” để quy đổi giá trị dòng tiền tương lai về hiện tại.
@@ -864,41 +865,6 @@ Chuẩn bài. Ta thiết kế **một schema JSON “event-centric”** để 
 
 ---
 
-
-# 2. DCF khác gì FCFF (Mô tả 1 các thức nhỏ ví dụ như cậu bé bán kem để giải thích các khái niệm DCF, FCFF, dòng tiền, ,...)
-
-## Ví dụ: Cậu bé bán kem và các khái niệm tài chính
-
-Hãy tưởng tượng **cậu bé tên Nam** bán kem mỗi ngày. Chúng ta sẽ dùng câu chuyện này để giải thích các khái niệm tài chính:
-
-
-| Dòng tiền (Cash Flow)             | **- Dòng tiền vào:** Mỗi lần Nam bán được một que kem, Nam nhận được tiền từ khách hàng. Đó là **dòng tiền vào**.<br>    <br>- **Dòng tiền ra:** Nam phải mua nguyên liệu (sữa, đường), trả tiền thuê xe đẩy, và trả tiền cho em gái phụ giúp. Đó là **dòng tiền ra**.<br>    <br>- **Dòng tiền thực tế:** Số tiền Nam còn lại sau khi bán kem và trả hết các chi phí trong ngày.                                                                                                                                                            |     |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| **FCFF (Free Cash Flow to Firm)** | - Sau khi Nam **bán kem, trả mọi chi phí, mua thêm xe đẩy mới (đầu tư), trả lãi vay nếu có**, số tiền còn lại là **FCFF**.<br>    <br>- **FCFF** là số tiền Nam có thể dùng để trả cho bố mẹ (nếu vay tiền mua xe đẩy) hoặc để dành, hoặc chia cho các bạn góp vốn.<br><br>- Trong định giá doanh nghiệp bằng phương pháp DCF (Discounted Cash Flow), FCFF là "nguyên liệu" đầu vào, thể hiện sức khỏe tài chính thực tế của doanh nghiệp mỗi năm.[](https://www.perplexity.ai/search/dcf-fcff-pipeline-checklist-ch-ucBUxm1gSbiEFRt2VLDt9g) |     |
-| **DCF (Discounted Cash Flow)**    | - Nam muốn biết **giá trị quán kem của mình** là bao nhiêu.<br>    <br>- Nam dự đoán: năm nay còn 1 triệu, năm sau còn 1,2 triệu, năm sau nữa còn 1,5 triệu...<br>    <br>- Nhưng **tiền năm sau không quý bằng tiền năm nay** (vì phải chờ lâu), nên Nam phải "giảm giá trị" các khoản tiền tương lai này một chút.<br>    <br>- **DCF** là cách cộng tất cả các FCFF của các năm tới, nhưng mỗi năm càng xa thì càng giảm giá trị đi một chút.<br>                                                                                         |     |
-
-## Ưng dụng được gì từ những điều này vào tư duy định giá mọi việc, để ra những quyết định dài hạn hơn
-    
-
-## 4. **Tóm tắt bằng câu chuyện**
-
-- Nam bán kem, thu tiền, trả chi phí, mua thêm xe đẩy → còn lại bao nhiêu tiền? Đó là **FCFF**.
-    
-- Nam muốn biết quán kem của mình đáng giá bao nhiêu, nên cộng tất cả số tiền còn lại của các năm tới (FCFF), nhưng phải giảm giá trị các năm xa hơn → đó là **DCF**.
-    
-
----
-
-**Bạn có thể thử nghĩ xem:**
-
-- Nếu Nam năm nào cũng mua thêm xe đẩy mới, số tiền còn lại (FCFF) sẽ tăng hay giảm?
-    
-- Nếu Nam bán được nhiều kem hơn, dòng tiền vào sẽ thế nào?
-    
-
-Nếu bạn muốn, mình có thể đặt câu hỏi nhỏ để bạn thử trả lời nhé!
-
----
 
 # 1) JSON schema đề xuất (rút gọn mà đủ xài)
 
@@ -2309,3 +2275,10 @@ Quiz me on this topic
 
 ---
 # https://www.perplexity.ai/search/mece-cac-nhom-chi-so-can-tinh-HUgedURhQiq0gNW_lh_ygw#14
+
+
+
+---
+
+
+

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.4 Dọn docker - kill process - port server 1.md",
+                "file": "FINTECH/DCF 14102025/1 - DCF và BÁO CÁO TÀI CHÍNH.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.1.4 Dọn docker - kill process - port server 1"
+              "title": "1 - DCF và BÁO CÁO TÀI CHÍNH"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: port",
+                "query": "FCFF",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,8 +89,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -157,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.4 Dọn docker - kill process - port server 1.md",
+                "file": "FINTECH/DCF 14102025/1 - DCF và BÁO CÁO TÀI CHÍNH.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.1.4 Dọn docker - kill process - port server 1"
+              "title": "Outline of 1 - DCF và BÁO CÁO TÀI CHÍNH"
             }
           }
         ],
@@ -187,14 +186,20 @@
   },
   "active": "f9b1fc12d38b0c32",
   "lastOpenFiles": [
+    "FINTECH/DCF 14102025/2 - QC_DCF - FCFF Pipeline Checklist (Chuẩn hoá & Kiểm soát chất lượng).md",
+    "FINTECH/DCF 14102025/3 - Các trang tài chính Việt Nam phổ biến & đáng tin cậy.md",
+    "FINTECH/Data/2. Danh sách chỉ số.md",
+    "FINTECH/Paper.md",
+    "FINTECH/1_StockAndBusinessValuation.md",
+    "FINTECH/DCF 14102025/1 - DCF và BÁO CÁO TÀI CHÍNH.md",
+    "FINTECH/0_FinTech_Overview_Oct12_2025.md",
+    "FINTECH/1_SaoTatCaMoiNguoiKhongCungLamNong.md",
+    "2025-10-15.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.4 Dọn docker - kill process - port server 1.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
-    "FINTECH/DCF 14102025/1_Intro_DCF.md",
-    "FINTECH/DCF 14102025/2_QC_DCF - FCFF Pipeline Checklist (Chuẩn hoá & Kiểm soát chất lượng).md",
     "FINTECH/Tài liệu.md",
     "FINTECH/5. Đánh giá 1 số Job - DNSE - MSB - Domain Tài chính DNSE vs Giáo dục Step Up Education Chiến lược 40-50 năm.md",
     "FINTECH/2_.md",
-    "FINTECH/1_StockAndBusinessValuation.md",
-    "FINTECH/0_FinTech_Overview_Oct12_2025.md",
     "BUSINESS/CON NGƯỜI/Untitled 1.md",
     "BUSINESS/CON NGƯỜI/Untitled.md",
     "BUSINESS/100 M $ Money Model/1_.md",
@@ -204,7 +209,6 @@
     "BUSINESS/image/Untitled",
     "BUSINESS/Business model - 13102025.md",
     "FINTECH/Deep Research Profile Đạt Nguyễn.md",
-    "2025-10-15.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/3. Strategic Approaches to Understanding GitHub Repositories - Genspark 20250626.md",
     "BUSINESS/Holdings, ESOP, Build to Sell và Shortcut to IPO.md",
@@ -214,18 +218,13 @@
     "FINTECH/DCF 14102025/image",
     "FINTECH/DCF 14102025",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Các lệnh cơ bản PostGress.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/2. Filtering DB.md",
-    "2025-10-13.md",
     "BUSINESS/image/Pasted image 20251013210137.png",
     "BUSINESS/image/Pasted image 20251013204653.png",
     "BUSINESS/image",
-    "Test/Giấy tờ.md",
     "Test",
-    "FINTECH/1_SaoTatCaMoiNguoiKhongCungLamNong.md",
     "Pasted image 20251012222539.png",
     "FINTECH/image/Pasted image 20251012222714.png",
     "FINTECH/image",
-    "DATA_SCIENCE_AND_AI/Cấu trúc Career Sustainability cho AI_ML Engineering.md",
     "learning/DATA_SCIENCE_AND_AI/Untitled",
     "learning/DATA_SCIENCE_AND_AI/New folder/portfolio",
     "learning/PRODUCT/UI, UX/image/Pasted image 20251006180436.png",
