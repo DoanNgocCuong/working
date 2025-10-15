@@ -44,4 +44,7 @@ Cá nhân: Top 3 được share nhiều nhất.
    => Phần hoàn tiền là tính theo team hay tính theo cá nhân 
 3. Chủ đề chia sẻ hàng ngày có bắt buộc thuộc bài tập đang học không hay lệch chủ đề tí cũng được ạ? 
 4. 
-5. 
+
+
+
+---
