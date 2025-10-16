@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
+                "file": "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.1.2 Docker Compose"
+              "title": "Day 2 Bí Mật của Alex Hormozi"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: docker",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,12 +89,12 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
+                "file": "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.1.2 Docker Compose"
+              "title": "Outline of Day 2 Bí Mật của Alex Hormozi"
             }
           }
         ],
@@ -187,6 +187,7 @@
   },
   "active": "f9b1fc12d38b0c32",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
     "FINTECH/Data/1. Data.md",
     "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
     "BUSINESS/100 M $ Money Model/1_.md",
@@ -220,7 +221,6 @@
     "BUSINESS/Business.md",
     "BUSINESS/image/Untitled",
     "BUSINESS/Business model - 13102025.md",
-    "FINTECH/Deep Research Profile Đạt Nguyễn.md",
     "BUSINESS/CON NGƯỜI",
     "FINTECH/DCF 14102025/image/Pasted image 20251014233806.png",
     "FINTECH/DCF 14102025/image",
