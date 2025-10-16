@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FINTECH/Data/1. Data.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Data"
+              "title": "2.1.2 Docker Compose"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: IP",
+                "query": "file: docker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FINTECH/Data/1. Data.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1. Data"
+              "title": "Outline of 2.1.2 Docker Compose"
             }
           }
         ],
@@ -185,8 +185,9 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "db02c5a91e7f8e1e",
+  "active": "f9b1fc12d38b0c32",
   "lastOpenFiles": [
+    "FINTECH/Data/1. Data.md",
     "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
     "BUSINESS/100 M $ Money Model/1_.md",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251016205651.png",
