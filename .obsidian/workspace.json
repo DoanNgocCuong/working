@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -187,6 +186,7 @@
   },
   "active": "f9b1fc12d38b0c32",
   "lastOpenFiles": [
+    "BUSINESS/100 M $ Money Model/image/Pasted image 20251017000212.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
     "FINTECH/Data/1. Data.md",
     "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
@@ -220,7 +220,6 @@
     "BUSINESS/100 M $ Money Model",
     "BUSINESS/Business.md",
     "BUSINESS/image/Untitled",
-    "BUSINESS/Business model - 13102025.md",
     "BUSINESS/CON NGƯỜI",
     "FINTECH/DCF 14102025/image/Pasted image 20251014233806.png",
     "FINTECH/DCF 14102025/image",

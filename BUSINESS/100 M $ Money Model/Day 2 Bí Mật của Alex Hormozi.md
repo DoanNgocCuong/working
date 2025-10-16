@@ -84,3 +84,6 @@
 ## 🎯 **Kết Luận**
 
 **"The same person, with the same skills, can become 100x more valuable by simply changing the opportunity." - Alex Hormozi**
+
+
+![[image/Pasted image 20251017000212.png]]
