@@ -2,20 +2,21 @@
 
  **(10 X 7) “Level Skill” & “Level Opportunity” - Cấp Độ Kỹ. Năng vs Cấp Độ Cơ Hội**: https://bimathocvienso1.sg.larksuite.com/docx/LjptdJ0RHoxxE3xTcf2lflYsgUe
 
-![[image/Pasted image 20251016204325.png]]
+![](image/Pasted%20image%2020251017001504.png)
 
-![[image/Pasted image 20251016204414.png]]
 
----
-![[image/Pasted image 20251016204535.png]]
 
 
 ---
+![](image/Pasted%20image%2020251016204535.png)
 
-![[image/Pasted image 20251016205639.png]]
+
+---
+
+![](image/Pasted%20image%2020251016205639.png)
 
 
-![[image/Pasted image 20251016205651.png]]
+![](image/Pasted%20image%2020251017001512.png)
 
 ---
 
@@ -88,5 +89,3 @@
 
 
 
-
-![](image/Pasted%20image%2020251017000731.png)

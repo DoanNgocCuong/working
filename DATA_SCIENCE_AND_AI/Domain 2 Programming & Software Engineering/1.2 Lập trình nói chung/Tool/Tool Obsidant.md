@@ -85,3 +85,47 @@ Dành cho người dùng muốn một giải pháp đơn giản và tối ưu ch
    ```
 
 Mỗi plugin có những điểm mạnh riêng, vì vậy tôi khuyên bạn nên thử nghiệm các plugin khác nhau để tìm ra phương pháp phù hợp nhất với nhu cầu tìm kiếm của mình. Smart Connections là sự lựa chọn tuyệt vời để bắt đầu vì nó cung cấp khả năng tìm kiếm ngữ nghĩa mạnh mẽ và có thể hoạt động hoàn toàn offline.
+
+
+
+---
+# Cách config ảnh - 17/10/2025 
+
+Dựa trên ảnh cấu hình Obsidian bạn gửi, đây là các bước config từng bước để ảnh hiển thị khi paste (Ctrl+V) vào markdown:
+
+## Cấu hình Files & Links
+
+1. **Confirm file deletion** - BẬT (toggle màu tím)[obsidian+1](https://forum.obsidian.md/t/set-obsidian-to-embed-image-with-markdown-syntax-instead-of/30527)​
+    
+2. **Deleted files** - Chọn **"Move to system trash"**[obsidian](https://forum.obsidian.md/t/how-can-i-paste-image-in-a-note/96334)​
+    
+3. **Automatically update internal links** - TẮT (toggle màu xám)[obsidian](https://forum.obsidian.md/t/set-obsidian-to-embed-image-with-markdown-syntax-instead-of/30527)​
+    
+4. **Default location for new notes** - Chọn **"Vault folder"**[obsidian](https://forum.obsidian.md/t/set-obsidian-to-embed-image-with-markdown-syntax-instead-of/30527)​
+    
+5. **New link format** - Chọn **"Relative path to file"**[obsidian](https://forum.obsidian.md/t/set-obsidian-to-embed-image-with-markdown-syntax-instead-of/30527)​
+    
+6. **Use [[Wikilinks]]** - **BẬT** (toggle màu tím) - **Quan trọng nhất**[obsidian+1](https://forum.obsidian.md/t/how-can-i-paste-image-in-a-note/96334)​
+    
+7. **Detect all file extensions** - TẮT (toggle màu xám)[obsidian](https://forum.obsidian.md/t/set-obsidian-to-embed-image-with-markdown-syntax-instead-of/30527)​
+    
+8. **Default location for new attachments** - Chọn **"In subfolder under current folder"**youtube​[obsidian+1](https://forum.obsidian.md/t/how-to-hide-attachment-folders-from-the-file-explorer-pane/18581)​
+    
+9. **Subfolder name** - Đặt tên **"image"**youtube+1​
+    
+10. **Excluded files** - Giữ mặc định hoặc config theo nhu cầu[obsidian](https://forum.obsidian.md/t/how-to-hide-attachment-folders-from-the-file-explorer-pane/18581)​
+    
+11. **Override config folder** - Giữ **".obsidian"**[obsidian](https://forum.obsidian.md/t/set-obsidian-to-embed-image-with-markdown-syntax-instead-of/30527)​
+    
+12. **Allow URI callbacks** - TẮT (toggle màu xám)[obsidian](https://forum.obsidian.md/t/set-obsidian-to-embed-image-with-markdown-syntax-instead-of/30527)​
+    
+
+## Kết quả
+
+Với config trên, khi bạn nhấn **Ctrl+V** để paste ảnh, Obsidian sẽ tự động tạo syntax `![[tên_ảnh.png]]` và ảnh sẽ được lưu vào thư mục `image/` bên trong folder chứa file markdown đang mở.youtube+1​[obsidian](https://forum.obsidian.md/t/how-can-i-paste-image-in-a-note/96334)​
+
+1. [https://forum.obsidian.md/t/set-obsidian-to-embed-image-with-markdown-syntax-instead-of/30527](https://forum.obsidian.md/t/set-obsidian-to-embed-image-with-markdown-syntax-instead-of/30527)
+2. [https://forum.obsidian.md/t/how-can-i-paste-image-in-a-note/96334](https://forum.obsidian.md/t/how-can-i-paste-image-in-a-note/96334)
+3. [https://www.youtube.com/watch?v=dwMqai6qy3c](https://www.youtube.com/watch?v=dwMqai6qy3c)
+4. [https://forum.obsidian.md/t/how-to-hide-attachment-folders-from-the-file-explorer-pane/18581](https://forum.obsidian.md/t/how-to-hide-attachment-folders-from-the-file-explorer-pane/18581)
+5. [https://www.youtube.com/watch?v=36UgzC3uEcU](https://www.youtube.com/watch?v=36UgzC3uEcU)

@@ -25,14 +25,12 @@
             "id": "f9b1fc12d38b0c32",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
-                "mode": "source",
-                "source": false
+                "file": "BUSINESS/100 M $ Money Model/image/Pasted image 20251017001504.png"
               },
-              "icon": "lucide-file",
-              "title": "Day 2 Bí Mật của Alex Hormozi"
+              "icon": "lucide-image",
+              "title": "Pasted image 20251017001504"
             }
           }
         ],
@@ -156,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
+                "file": "BUSINESS/100 M $ Money Model/image/Pasted image 20251017001340.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Day 2 Bí Mật của Alex Hormozi"
+              "title": "Outline of Pasted image 20251017001340"
             }
           }
         ],
@@ -184,19 +182,27 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "f9b1fc12d38b0c32",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
+    "BUSINESS/100 M $ Money Model/image/Pasted image 20251017001504.png",
+    "BUSINESS/100 M $ Money Model/image/Pasted image 20251017001512.png",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251017000731.png",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251017000212.png",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
-    "FINTECH/Data/1. Data.md",
-    "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
-    "BUSINESS/100 M $ Money Model/1_.md",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251016205651.png",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251016205639.png",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251016204535.png",
-    "BUSINESS/100 M $ Money Model/image/Pasted image 20251016204414.png",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251016204325.png",
+    "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
+    "BUSINESS/100 M $ Money Model/image/Pasted image 20251017001340.png",
+    "image/Pasted.md",
+    "image",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Tool/Tool Obsidant.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Tool/Tool Code ....md",
+    "DATA_SCIENCE_AND_AI/Domain 3 Machine Learning Fundamentals/13. note tool.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
+    "FINTECH/Data/1. Data.md",
+    "BUSINESS/100 M $ Money Model/1_.md",
+    "BUSINESS/100 M $ Money Model/image/Pasted image 20251016204414.png",
     "BUSINESS/100 M $ Money Model/image",
     "2025-10-15.md",
     "BUSINESS/Pitching.md",
@@ -215,23 +221,14 @@
     "FINTECH/Tài liệu.md",
     "FINTECH/5. Đánh giá 1 số Job - DNSE - MSB - Domain Tài chính DNSE vs Giáo dục Step Up Education Chiến lược 40-50 năm.md",
     "FINTECH/2_.md",
-    "BUSINESS/CON NGƯỜI/Untitled 1.md",
-    "BUSINESS/CON NGƯỜI/Untitled.md",
-    "BUSINESS/100 M $ Money Model.md",
     "BUSINESS/100 M $ Money Model",
-    "BUSINESS/Business.md",
     "BUSINESS/image/Untitled",
     "BUSINESS/CON NGƯỜI",
-    "FINTECH/DCF 14102025/image/Pasted image 20251014233806.png",
     "FINTECH/DCF 14102025/image",
     "FINTECH/DCF 14102025",
-    "BUSINESS/image/Pasted image 20251013210137.png",
-    "BUSINESS/image/Pasted image 20251013204653.png",
     "BUSINESS/image",
     "Test",
-    "Pasted image 20251012222539.png",
     "FINTECH/image",
-    "learning/DATA_SCIENCE_AND_AI/Untitled",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
