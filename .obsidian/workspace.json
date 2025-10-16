@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: dọn",
+                "query": "file: IP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +89,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -184,7 +185,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "f9b1fc12d38b0c32",
+  "active": "db02c5a91e7f8e1e",
   "lastOpenFiles": [
     "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
     "BUSINESS/100 M $ Money Model/1_.md",
