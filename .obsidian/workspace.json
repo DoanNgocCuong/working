@@ -25,12 +25,14 @@
             "id": "f9b1fc12d38b0c32",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "BUSINESS/100 M $ Money Model/image/Pasted image 20251017001504.png"
+                "file": "BUSINESS/CON NGƯỜI/Vấn đề nhóm.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20251017001504"
+              "icon": "lucide-file",
+              "title": "Vấn đề nhóm"
             }
           }
         ],
@@ -154,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/100 M $ Money Model/image/Pasted image 20251017001340.png",
+                "file": "BUSINESS/CON NGƯỜI/Vấn đề nhóm.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Pasted image 20251017001340"
+              "title": "Outline of Vấn đề nhóm"
             }
           }
         ],
@@ -182,8 +184,10 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "7bbd2100f0471588",
+  "active": "f9b1fc12d38b0c32",
   "lastOpenFiles": [
+    "BUSINESS/CON NGƯỜI/Untitled 1.md",
+    "BUSINESS/CON NGƯỜI/Vấn đề nhóm.md",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251017001504.png",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251017001512.png",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251017000731.png",
@@ -220,7 +224,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.4 Dọn docker - kill process - port server 1.md",
     "FINTECH/Tài liệu.md",
     "FINTECH/5. Đánh giá 1 số Job - DNSE - MSB - Domain Tài chính DNSE vs Giáo dục Step Up Education Chiến lược 40-50 năm.md",
-    "FINTECH/2_.md",
     "BUSINESS/100 M $ Money Model",
     "BUSINESS/image/Untitled",
     "BUSINESS/CON NGƯỜI",
