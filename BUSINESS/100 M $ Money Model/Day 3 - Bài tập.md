@@ -47,7 +47,15 @@
 
 
 
-# **NHIỆM VỤ 2:** Xem Video Sau: https://www.youtube.com/watch?v=qxQIcDrre1E và Hãy Viết 1 bài Tổng Kết Về Phương Pháp Luận Về Mô Hình Kinh Doanh của Alex - Từ Đó Đúc Rút ra những điểm ứng dụng cho mô hình hiện tại của mình.
+# **NHIỆM VỤ 2:** Xem Video Sau: https://www.youtube.com/watch?v=qxQIcDrre1E và Hãy Viết 1 bài Tổng Kết Về Phương Pháp Luận Về Mô Hình Kinh Doanh của Alex - Từ Đó Đúc Rút ra những điểm ứng dụng cho mô hình hiện tại của mình. TỔNG KẾT PHƯƠNG PHÁP LUẬN MÔ HÌNH KINH DOANH CỦA ALEX HORMOZI (VIDEO: "Watch these 55 minutes if you want to be a millionaire in 2022")
+
+
+| Cốt lõi tư duy                                                                                                                                 | Ý nghĩa cốt lõi                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **“It’s not about how hard you row, but what boat you are in”** — “Quan trọng là chiếc thuyền bạn chọn, không phải bạn chèo mạnh tới mức nào.” | - Tập trung chọn cơ hội có sức lưu trữ (leverage) và quy mô thị trường lớn thay vì chỉ chăm chăm làm việc chăm chỉ.<br>        <br>    - Một cơ hội lớn sẽ biến một người năng lực vừa đủ thành giàu có, còn một cơ hội nhỏ dù bạn siêu giỏi cũng khó tạo khác biệt.<br>        <br>    - _Ứng dụng:_ Luôn mở rộng tư duy tìm kiếm “hot market”, giải quyết vấn đề thực sự của số đông, tránh bám dính vào ngách nhỏ không scale được.                                                      |                                                                                                                                             |
+| **Build skill stack — Compound năng lực theo chiều sâu**                                                                                       | - Đi từ học một kỹ năng riêng lẻ → tích hợp thành chuỗi kỹ năng nền tảng bổ trợ nhau (T-shaped skillset).<br>    <br>- Ví dụ: Từ kỹ năng PT GYM, nghiệm thu (closing), marketing, quản trị vận hành → hợp nhất thành mô hình nhượng quyền/consulting IP.<br>    <br>- _Ứng dụng:_ Trong bất kể lĩnh vực nào (AI, Fintech), hãy nghĩ cách hệ thống hóa, stacking kỹ năng để tạo playbook, productized consulting, SaaS, dịch vụ chuyên sâu.<br><br><br>                                      | Cày nát video tư duy dài hạn của sếp Huy. + Tìm câu trả lời cho việc làm fintech để làm gì <br>=> Mình quyết định theo Fintech SIÊU DÀI HẠN |
+
+
 | Framework / Chủ đề        | Ý nghĩa cốt lõi                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1. Scale The Entrepreneur | Người sáng lập là điểm nghẽn lớn nhất: <br>- Doanh nghiệp không thể lớn hơn tầm vóc của founder. Ba nút thắt: -Kỹ năngchưa đủ (skill gap: sales, ops, product, marketing…) -Phẩm chất: tính kiên trì, cởi mở, trách nhiệm… <br>-Niềm tin: tự giới hạn, lo lắng, ngại rủi ro. Phát triển bản thân nên stacking (xếp chồng kỹ năng/phẩm chất/niềm tin), tập trung thứ đột phá – tránh dàn trải (niche slapping fallacy).                                                                      |
@@ -63,6 +71,76 @@
 - Tập trung tối ưu điểm nghẽn từng giai đoạn
     
 - Liên tục phát triển stacking skill, hệ thống, talent
+
+## 
+
+---
+
+## **I. Cốt lõi tư duy của Alex Hormozi về kinh doanh và giàu có**
+
+1
+    
+
+        
+2. **Build skill stack — Compound năng lực theo chiều sâu**
+    
+    - Đi từ học một kỹ năng riêng lẻ → tích hợp thành chuỗi kỹ năng nền tảng bổ trợ nhau (T-shaped skillset).
+        
+    - Ví dụ: Từ kỹ năng PT GYM, nghiệm thu (closing), marketing, quản trị vận hành → hợp nhất thành mô hình nhượng quyền/consulting IP.
+        
+    - _Ứng dụng:_ Trong bất kể lĩnh vực nào (AI, Fintech), hãy nghĩ cách hệ thống hóa, stacking kỹ năng để tạo playbook, productized consulting, SaaS, dịch vụ chuyên sâu.
+        
+3. **4 Framework chủ chốt khi scale up mô hình kinh doanh**
+    
+    - **Scale the ENTREPRENEUR:** Doanh nghiệp mạnh lên nhanh nhất khi founder liên tục nâng cấp (skill, trait, belief, khả năng nhận lỗi, bỏ bịch tư duy “niche slapping” và kiên trì lộ trình dài hạn).
+        
+    - **Scale the MARKET:** Thay vì “cày chết thị trường nhỏ”, hãy scale lên các thị trường thực sự lớn, dễ compound long-term. Test avatar nào mình giúp được nhiều nhất, chọn ngách có thể nhân rộng thường xuyên.
+        
+    - **Skill the DELIVERABLE:** Coi trọng đòn bẩy model (labor, capital, code, content/media). Chuyển đổi từ “làm tay” sang scaled product, dịch vụ có leverage càng cao càng tốt (ex: online course, SaaS, digital asset).
+        
+    - **Scale the BUSINESS:** Mỗi giai đoạn vận động của doanh nghiệp đi kèm một bottleneck. Founder cần học cách chuyển đổi mindset từ tactician → strategist, biết chơi cuộc chơi chiến lược (gọi vốn, M&A, hệ sinh thái, technology transfer…).
+        
+4. **Tối ưu hóa quy trình “Skill up — Market up — Leverage up — Business up”**
+    
+    - Không chase mọi xu hướng, phải liên tục auditing (review bottleneck, điểm mạnh, điểm hạn chế) để tập trung tuyệt đối vào mỏ neo tạo ra leverage lớn nhất.
+        
+    - Chạy theo quan hệ đối tác lâu dài, tuyển A-player, xây hệ sinh thái talent bền vững (“Compound people like you compound money”).
+        
+
+---
+
+## **II. Điểm ứng dụng cho mô hình hiện tại (AI/Fintech)**
+
+- **Đặt bài toán lớn, thị trường lớn ngay từ đầu:** Đừng quá say mê “feature nhỏ”, hãy nhìn các vấn đề khó mà nhiều công ty lớn đang gặp phải (tối ưu vận hành, dự báo tài chính, rủi ro…), luôn nghĩ global scale.
+    
+- **Xây skill stack cá nhân và cả team:** Chủ động lên học phần thiếu, mentor, coaching, multiply skill, biến thành product/process/team, tích hợp dần chuyên môn với team đồng đội.
+    
+- **Build product có leverage:** Ưu tiên các hướng đi: SaaS (nền tảng AI, workflow), giải pháp công nghệ hóa cho B2B, service + training + API/data layer. Tạo asset số dễ scale ngang (horizontal scaling).
+    
+- **Kiên trì “do the boring work” + compound**: Lặp lại, không ngại khó, tập trung khai thác các insight nhỏ giúp tăng productivity hoặc giá trị lớn (tối ưu trải nghiệm sản phẩm, repeat cycle với khách hàng…).
+    
+- **Tuyển đúng người, đúng hệ giá trị:** Ưu tiên “long-term game with long-term people”, chọn partner có thể đồng hành 10-20 năm, triết lý như Buffett & Hormozi.
+    
+- **Ứng dụng Praise-driven culture – không punish-driven:** Xây dựng văn hóa làm việc động lực nội tại, reward team theo hiệu quả dài hạn, lan tỏa hệ thống khen thưởng thành ritual giúp team grow bền.
+    
+
+---
+
+## **III. Mindmap hóa lộ trình học hỏi & triển khai**
+
+- Đặt bài toán thị trường lớn → Building skill stack + mentor → Productize + leverage sản phẩm → Scale team, thành lập HoldCo/Platform, Academy
+    
+- Song song: Tích lũy tri thức, tài sản, quan hệ, mindset vững mạnh.
+    
+- Định kỳ audit – tối ưu mỏ neo/asset leverage, không ngại reset khi gặp bottleneck mới
+    
+
+---
+
+**Kết:**  
+Phương pháp luận của Alex Hormozi giúp nhìn thấu “chiếc thuyền” đúng, nâng cấp kỹ năng, chọn đúng thị trường, leverage sản phẩm, xây dựng mô hình kinh doanh compound trên hành trình 10-20 năm. Đừng chỉ chăm chăm “chạy thật nhanh” – hãy liên tục chọn cuộc chơi lớn, thiết kế mô hình đúng từ đầu, kiên định compound, và tuyệt đối không ngại lặp lại + scale để thành công bền vững.
+
+1. [https://www.youtube.com/watch?v=qxQIcDrre1E](https://www.youtube.com/watch?v=qxQIcDrre1E)
 
 ---
 

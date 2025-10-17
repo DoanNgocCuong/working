@@ -1,4 +1,56 @@
 # 1. Góc Học Tập 
+
+LINK TÀI LIỆU: 
+https://bimathocvienso1.sg.larksuite.com/docx/BQx6dg2WMoSVPuxaAonlbWfnggh
+**PHA 1:**
+
+- **NHIỆM VỤ 1:** Đọc File Sau Kế Hoạch Lên 1 Tỷ USD của Alex Hormozi https://shp.zone/dYYG và Đúc rút lại:
+    
+
+- Lý Do tại sao Alex Bán Gym Launch Thay vì tiếp tục phát triển theo ngành Gym ?
+    
+
+- Đâu Là Lý Do Anh Ấy rời ngành Gym
+    
+
+- Theo bạn Đánh giá thì Nước đi chiến lược của Alex: Chuyển Từ Ngành Dọc ( Chỉ Coach ngành Gym ) Sang Đa Ngành ( Coach cho mọi Business ) Ưu và Nhược điểm là gì?
+    
+
+- **NHIỆM VỤ 2:** Xem Video Sau: https://www.youtube.com/watch?v=qxQIcDrre1E và Hãy Viết 1 bài Tổng Kết Về Phương Pháp Luận Về Mô Hình Kinh Doanh của Alex - Từ Đó Đúc Rút ra những điểm ứng dụng cho mô hình hiện tại của mình.
+    
+
+- **NHIỆM VỤ 3:** Đưa ra 3 Ví Dụ ở VN và 3 Ví Dụ ở Nước Ngoài Về Hành trình chuyển dịch các mô hình kinh doanh tương tự như vậy**.**
+    
+
+- **NHIỆM VỤ 4:** Xem Video Tuyên Ngôn Sau và Cho biết DAS đang phục vụ ai? Mục tiêu là gì ? Và DAS học Hỏi mô hình kinh doanh của Alex Như thế nào ?
+    
+
+- [](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FTmAa%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEeny9FA7jh5PwBLxAPaQMoG0aW5Nl21rVZhJeSOBBrK1XyRRo32pgWUQ_dvkg_aem_oFv45HCpQZmXI59jdWAfPA&h=AT22lpN5QA2KdGJ8fEHd9vWf-C4_LhRNCLaB1WkMrVn9h3AfcoPpl-5HcGoHQzpwkA8RwypitPFRxzMJg_wgx5bTuU8dd08xyDZ26_2gKAe1RbISiaCennZAdXfBafDUT-5m&__tn__=-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FTmAa%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe7GWv_ffxDz3ryu4uyjwTzOG2zxui6jj0-ijxG6Y8Fq0fpb0CCdH7BsrBd_w_aem_CtLYeXVkd5FXq2AKmYRg9g&h=AT22lpN5QA2KdGJ8fEHd9vWf-C4_LhRNCLaB1WkMrVn9h3AfcoPpl-5HcGoHQzpwkA8RwypitPFRxzMJg_wgx5bTuU8dd08xyDZ26_2gKAe1RbISiaCennZAdXfBafDUT-5m&__tn__=-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FTmAa%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe3WPUBVW9MPg_2aM7IMDsI7c_Sy-jwsj0aI6uYA2q3sDRYA2_kzbwKLZw6GE_aem_8oc01kQ6aZUnEWdgWIHVOQ&h=AT22lpN5QA2KdGJ8fEHd9vWf-C4_LhRNCLaB1WkMrVn9h3AfcoPpl-5HcGoHQzpwkA8RwypitPFRxzMJg_wgx5bTuU8dd08xyDZ26_2gKAe1RbISiaCennZAdXfBafDUT-5m&__tn__=-U-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FTmAa%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe61D95X6aZb0zYIWNpNrcsk8P0_7IoFSKFOGcc5wNk8vI4sew7zeWG-fI8MA_aem_lKEg9EWuKE_mrbFw6Gxmsg&h=AT22lpN5QA2KdGJ8fEHd9vWf-C4_LhRNCLaB1WkMrVn9h3AfcoPpl-5HcGoHQzpwkA8RwypitPFRxzMJg_wgx5bTuU8dd08xyDZ26_2gKAe1RbISiaCennZAdXfBafDUT-5m&__tn__=-U-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FTmAa%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEek2FHBzLIZ3Ud8gYHrwVcpEvJ745uwkPhtQ0gYHwDmOoLradJJjM7vhNsSPs_aem_o-X0MFUlWA2oFojJiiTvpQ&h=AT22lpN5QA2KdGJ8fEHd9vWf-C4_LhRNCLaB1WkMrVn9h3AfcoPpl-5HcGoHQzpwkA8RwypitPFRxzMJg_wgx5bTuU8dd08xyDZ26_2gKAe1RbISiaCennZAdXfBafDUT-5m&__tn__=-U-U-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FTmAa%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe3WPUBVW9MPg_2aM7IMDsI7c_Sy-jwsj0aI6uYA2q3sDRYA2_kzbwKLZw6GE_aem_8oc01kQ6aZUnEWdgWIHVOQ&h=AT22lpN5QA2KdGJ8fEHd9vWf-C4_LhRNCLaB1WkMrVn9h3AfcoPpl-5HcGoHQzpwkA8RwypitPFRxzMJg_wgx5bTuU8dd08xyDZ26_2gKAe1RbISiaCennZAdXfBafDUT-5m&__tn__=-U-U-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FTmAa%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEeSgIrwVcMVCXwHSVTF8bEk-110WLJWtjUK6Yl1QLFqQjV3adcLy1UI17ttM4_aem_Ihf1IP8RYmqUHQPu_50RCQ&h=AT22lpN5QA2KdGJ8fEHd9vWf-C4_LhRNCLaB1WkMrVn9h3AfcoPpl-5HcGoHQzpwkA8RwypitPFRxzMJg_wgx5bTuU8dd08xyDZ26_2gKAe1RbISiaCennZAdXfBafDUT-5m&__tn__=-U-U-U-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[https://shp.zone/TmAa](https://shp.zone/TmAa?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEemHRmrKRVjFCPNFh7wK4ze9_TRl_WZWJ95Uyr5l40SkkO0wXgI1HcI9_Xx04_aem_uHXp8EGn2gcDXJOHZxXDdA)
+    
+
+- [](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FLNpE%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe7GWv_ffxDz3ryu4uyjwTzOG2zxui6jj0-ijxG6Y8Fq0fpb0CCdH7BsrBd_w_aem_CtLYeXVkd5FXq2AKmYRg9g&h=AT2iMASb8HeeuzpXuV_9QBPekih0cEUxOXcmXwZNES7wUzVtJRm8wKbVbIh4q7Jo4jkZxZMlo82Pqw9u3x9GyhRbLLTLauyCsefLQ-Q6zmhBFtvQVBBvUIVD9T23UBrh9XIH&__tn__=-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FLNpE%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe61D95X6aZb0zYIWNpNrcsk8P0_7IoFSKFOGcc5wNk8vI4sew7zeWG-fI8MA_aem_lKEg9EWuKE_mrbFw6Gxmsg&h=AT2iMASb8HeeuzpXuV_9QBPekih0cEUxOXcmXwZNES7wUzVtJRm8wKbVbIh4q7Jo4jkZxZMlo82Pqw9u3x9GyhRbLLTLauyCsefLQ-Q6zmhBFtvQVBBvUIVD9T23UBrh9XIH&__tn__=-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FLNpE%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe61D95X6aZb0zYIWNpNrcsk8P0_7IoFSKFOGcc5wNk8vI4sew7zeWG-fI8MA_aem_lKEg9EWuKE_mrbFw6Gxmsg&h=AT2iMASb8HeeuzpXuV_9QBPekih0cEUxOXcmXwZNES7wUzVtJRm8wKbVbIh4q7Jo4jkZxZMlo82Pqw9u3x9GyhRbLLTLauyCsefLQ-Q6zmhBFtvQVBBvUIVD9T23UBrh9XIH&__tn__=-U-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FLNpE%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe3WPUBVW9MPg_2aM7IMDsI7c_Sy-jwsj0aI6uYA2q3sDRYA2_kzbwKLZw6GE_aem_8oc01kQ6aZUnEWdgWIHVOQ&h=AT2iMASb8HeeuzpXuV_9QBPekih0cEUxOXcmXwZNES7wUzVtJRm8wKbVbIh4q7Jo4jkZxZMlo82Pqw9u3x9GyhRbLLTLauyCsefLQ-Q6zmhBFtvQVBBvUIVD9T23UBrh9XIH&__tn__=-U-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FLNpE%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe3WPUBVW9MPg_2aM7IMDsI7c_Sy-jwsj0aI6uYA2q3sDRYA2_kzbwKLZw6GE_aem_8oc01kQ6aZUnEWdgWIHVOQ&h=AT2iMASb8HeeuzpXuV_9QBPekih0cEUxOXcmXwZNES7wUzVtJRm8wKbVbIh4q7Jo4jkZxZMlo82Pqw9u3x9GyhRbLLTLauyCsefLQ-Q6zmhBFtvQVBBvUIVD9T23UBrh9XIH&__tn__=-U-U-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FLNpE%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe3WPUBVW9MPg_2aM7IMDsI7c_Sy-jwsj0aI6uYA2q3sDRYA2_kzbwKLZw6GE_aem_8oc01kQ6aZUnEWdgWIHVOQ&h=AT2iMASb8HeeuzpXuV_9QBPekih0cEUxOXcmXwZNES7wUzVtJRm8wKbVbIh4q7Jo4jkZxZMlo82Pqw9u3x9GyhRbLLTLauyCsefLQ-Q6zmhBFtvQVBBvUIVD9T23UBrh9XIH&__tn__=-U-U-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[](https://l.facebook.com/l.php?u=https%3A%2F%2Fshp.zone%2FLNpE%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEemHRmrKRVjFCPNFh7wK4ze9_TRl_WZWJ95Uyr5l40SkkO0wXgI1HcI9_Xx04_aem_uHXp8EGn2gcDXJOHZxXDdA&h=AT2iMASb8HeeuzpXuV_9QBPekih0cEUxOXcmXwZNES7wUzVtJRm8wKbVbIh4q7Jo4jkZxZMlo82Pqw9u3x9GyhRbLLTLauyCsefLQ-Q6zmhBFtvQVBBvUIVD9T23UBrh9XIH&__tn__=-U-U-U-UK-R&c[0]=AT1fGm-mDUX25mox1tzl0jXk781gNIKMeuYm5CaTBq_9wAbdbUT5Or80w-IcVDW9VaRFx6FCnUA9oxskY4_xjuLEYm0ToFqGu09tsa7BVhNFOpQwcHdQ-PCrH3fsKkP_H4fb9dluF2Xe0PnXFXTlViGLfIE9PVf1xAZb5AGarLBR6gszZ00Akr7u5tQgROc)[https://shp.zone/LNpE](https://shp.zone/LNpE?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExZHlINFRwRU5GZm5UeGp5NAEe3WPUBVW9MPg_2aM7IMDsI7c_Sy-jwsj0aI6uYA2q3sDRYA2_kzbwKLZw6GE_aem_8oc01kQ6aZUnEWdgWIHVOQ)
+    
+
+- **NHIỆM VỤ 5:**  
+    **Viết 1 Bài Tổng Kết với chủ đề:** Nếu như bạn có mọi nguồn lực cần thiết không giới hạn - Thì Lộ Trình để bạn tạo ra 1 Công Tỷ USD của mình trong 10-20 năm tới sẽ qua những mô hình như thế nào ? Bao nhiêu bước ? mỗi bước bao nhiêu năm ? Phân tích chi tiết từng giai đoạn - Mỗi Giai đoạn có 1 hình mẫu để bạn học hỏi.  
+    Và Con người Vĩ Đại nhất mà bạn sẽ trở thành sẽ có đặc điểm như thế nào ? Tối thiểu 2000 chữ.
+    
+
+- Plugin Dịch Song Ngữ cho Youtube: https://chromewebstore.google.com/detail/immersive-translate-trans/bpoadfkcbjbfhfodiogcnhhhpibjhbnh
+    
+
+**PHA 2:**
+
+Hỗ Trợ Đồng Đội:
+
+- Bằng Mọi thủ đoạn Giục Thành Viên trong nhóm Nhỏ của bạn nộp bài.
+    
+
+- Comment Phản hồi tối thiểu cho Bài của 3 Thành Viên Cộng Đồng bên dưới để Góp Ý cho bài của Họ. ( Comment có Não - Tức là Có góp ý sâu sắc để đồng đội tốt lên).
+
+---
+
+
 ## 1. thương vụ bán chuỗi gym và giữ lại 40% cổ phần. tại sao lại bán nhỉ ? và lúc đó đã dịch chưa ?
 ## 2. gym lunch lúc đó chỉ tư vấn thui mà, đâu phải vận hành hàng ngày đâu nhỉ
 
