@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/100 M $ Money Model/3.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3"
+              "title": "2.1.3 Dọn docker - kill process - port server"
             }
           }
         ],
@@ -89,7 +89,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -156,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/100 M $ Money Model/3.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 3"
+              "title": "Outline of 2.1.3 Dọn docker - kill process - port server"
             }
           }
         ],
@@ -186,10 +187,10 @@
   },
   "active": "f9b1fc12d38b0c32",
   "lastOpenFiles": [
+    "BUSINESS/100 M $ Money Model/3.md",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251017124250.png",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251017123838.png",
     "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
-    "BUSINESS/100 M $ Money Model/3.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "BUSINESS/CON NGƯỜI/Vấn đề nhóm.md",
     "BUSINESS/CON NGƯỜI/Untitled 1.md",
@@ -201,7 +202,6 @@
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251016205639.png",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251016204535.png",
     "BUSINESS/100 M $ Money Model/image/Pasted image 20251016204325.png",
-    "BUSINESS/100 M $ Money Model/image/Pasted image 20251017001340.png",
     "image/Pasted.md",
     "image",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Tool/Tool Obsidant.md",
