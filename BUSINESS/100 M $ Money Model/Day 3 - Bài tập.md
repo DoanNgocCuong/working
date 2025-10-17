@@ -48,19 +48,21 @@
 
 
 # **NHIỆM VỤ 2:** Xem Video Sau: https://www.youtube.com/watch?v=qxQIcDrre1E và Hãy Viết 1 bài Tổng Kết Về Phương Pháp Luận Về Mô Hình Kinh Doanh của Alex - Từ Đó Đúc Rút ra những điểm ứng dụng cho mô hình hiện tại của mình.
-    
-| **Framework / Ý chính**       | **Nội dung cốt lõi**                                                                                                                                                                                                                       | **Điểm ứng dụng/nguyên tắc hành động**                                                                                                                                   |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **1. Scale The Entrepreneur** | Founder là “nút thắt cổ chai” của doanh nghiệp. Ba giới hạn: kỹ năng, phẩm chất, niềm tin. Phát triển nên tập trung compounding (xếp chồng/thêm dần). Tránh làm dàn trải, chọn One Thing.                                                  | - Tự audit lại skill, trait, belief.  <br>- Tập trung phát triển bản thân (skill stack, tháo gỡ rào cản niềm tin).                                                       |
-| **2. Scale The Market**       | Tìm đúng “chiếc thuyền” – chọn thị trường lớn, đang khát (starving crowd), tăng trưởng, có tiền, dễ tiếp cận. Nếu nhỏ thì mở rộng. 5 hướng scale: lên/xuống phân khúc, ngành liền kề, mở rộng dọc hoặc đào sâu thị trường.                 | - Ưu tiên chọn thị trường lớn, có nhu cầu, chi trả tốt.  <br>- Linh hoạt broaden/đào sâu để unlock tăng trưởng.                                                          |
-| **3. Skill The Deliverable**  | Tối ưu đòn bẩy mô hình: lao động, vốn, tech (code), media. Đòn bẩy càng nhiều, scale càng dễ (permissionless leverage). Dùng delivery cube (sản phẩm 1-1 → 1-many, dịch vụ số, bổ sung trải nghiệm…).                                      | - Đẩy mạnh chuyển đổi sang sản phẩm số, digital media.  <br>- Tối ưu “giỏ hàng” sản phẩm–dịch vụ, trải nghiệm khách hàng.                                                |
-| **4. Scale The Business**     | Mỗi giai đoạn doanh nghiệp có điểm nghẽn riêng. Ban đầu: tập trung 1 sản phẩm/1 kênh/1 chân dung khách. Tăng scale cần professionalize, tracking, đội nhóm mạnh.  <br>Muốn lên level mới phải “thêm 1 talent xuất sắc” unlock tăng trưởng. | - Audit điểm nghẽn từng giai đoạn: team, kênh, vận hành, CRM, delivery…  <br>- Thu hút & phát triển talent hàng đầu từng phòng. Xem phát triển đội ngũ là runway mở rộng |
-
+| Framework / Chủ đề        | Ý nghĩa cốt lõi                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Scale The Entrepreneur | Người sáng lập là điểm nghẽn lớn nhất: <br>- Doanh nghiệp không thể lớn hơn tầm vóc của founder. Ba nút thắt: -Kỹ năngchưa đủ (skill gap: sales, ops, product, marketing…) -Phẩm chất: tính kiên trì, cởi mở, trách nhiệm… <br>-Niềm tin: tự giới hạn, lo lắng, ngại rủi ro. Phát triển bản thân nên stacking (xếp chồng kỹ năng/phẩm chất/niềm tin), tập trung thứ đột phá – tránh dàn trải (niche slapping fallacy).                                                                      |
+| 2. Scale The Market       | Thị trường quyết định tiềm năng scale: Không quan trọng bạn chèo chăm chỉ ra sao mà phải chọn đúng “chiếc thuyền”. <br>- “Starving crowd”: tập khách đang khát, có tiền, dễ tiếp cận, tăng trưởng <br>- Nếu thị trường nhỏ, broaden sang thị trường lớn (chuyển đổi avatar, sản phẩm hóa dịch vụ…) <br>- 5 cách mở rộng: lên phân khúc cao/thấp, sang ngành liên quan, mở rộng sản phẩm dọc/vào sâu vào một phân khúc.                                                                      |
+| 3. Skill The Deliverable  | Đòn bẩy mô hình là chìa khoá scale: Bốn dạng leverage: - Lao động (labor) - Vốn (capital) <br>- Code, công nghệ (technology) <br>- Media, content (truyền thông) Đòn bẩy “permissionless” (không bị giới hạn bởi cơ chế, ví dụ code/media) sẽ scale cực mạnh. <br>– Dùng “delivery cube” để mở rộng: chuyển dịch vụ 1-1 (tư vấn/đào tạo) thành sản phẩm số, gói dịch vụ; bổ sung trải nghiệm, dịch vụ số, access… <br>– Ghép “base units” (sản phẩm, dịch vụ, media, access, risk, money…). |
+| 4. Scale The Business     | Tối ưu bottleneck từng giai đoạn phát triển: -0-1 triệu USD:Tập trung 1 sản phẩm, 1 chân dung KH, 1 kênh marketing chủ lực. -1-10 triệu:Tăng giá trị trên mỗi khách, tối ưu gross profit, bắt đầu mở rộng đội nhóm. -10-50 triệu:Chuyên nghiệp hoá vận hành, tracking, xây PMF team tự động hoá vận hành, biến các phòng ban thành “mini CEO” chủ động scale unit riêng. Giai đoạn kế tiếp unlock bằng cách tìm kiếm và tích hợp thêm một nhân tài xuất sắc (“talent stacking”).            |
 **Tóm tắt triết lý:**
     
 - Đặt cược lớn vào cơ hội có leverage cao nhất  
     → Là “xương sống” cho mọi mô hình kinh doanh muốn scale đột phá.
-
+- Luôn chọn ngành/chiếc thuyền có đòn bẩy, thị trường lớn
+    
+- Tập trung tối ưu điểm nghẽn từng giai đoạn
+    
+- Liên tục phát triển stacking skill, hệ thống, talent
 
 ---
 
@@ -80,9 +82,9 @@
 | DAS học hỏi mô hình kinh doanh của Alex Hormozi như thế nào? | - DAS lấy cảm hứng từ mô hình “Chọn chiếc thuyền lớn” của Alex: Nhắm đến thị trường rộng (nhiều đối tượng doanh nghiệp, ngành nghề khác nhau), không bị giới hạn ở một ngành dọc nhỏ lẻ.  <br>- Tập trung productize (chuẩn hóa quy trình, xây dựng sản phẩm trí tuệ, playbook, giải pháp mô hình canvas, khóa học online/offline) – giúp dễ scale, nhân rộng, không phụ thuộc founder.  <br>- Ứng dụng media và digital (YouTube, mạng xã hội, nội dung số…) làm leverage để xây dựng thương hiệu cộng đồng, tăng khả năng lan tỏa và thu hút inbound khách hàng.  <br>- Xây dựng hệ sinh thái coach/chuyên gia độc lập – tạo môi trường phát triển chia sẻ tri thức như mô hình portfolio của Alex, tăng tốc độ phát triển nhờ nhiều “mini CEO” (giống các business unit cấu trúc tại Acquisition.com).  <br>- Rà soát, tiêu chuẩn hoá playbook vận hành (kiến thức, quy trình, KPI, Flashcard…) để chuyển giao và training đội nhóm/đối tác dễ dàng, mở rộng mô hình không giới hạn.  <br>- DAS cũng hướng tới việc liên tục tối ưu, chỉ số hóa vận hành và xây dựng cộng đồng doanh nghiệp “compound” tăng trưởng lâu dài với tri thức chất lượng cao, lấy thực tiễn làm gốc. |
 
 
-# NHIỆM VỤ 5:  
-Viết 1 Bài Tổng Kết với chủ đề: Nếu như bạn có mọi nguồn lực cần thiết không giới hạn - Thì Lộ Trình để bạn tạo ra 1 Công Tỷ USD của mình trong 10-20 năm tới sẽ qua những mô hình như thế nào ? Bao nhiêu bước ? mỗi bước bao nhiêu năm ? Phân tích chi tiết từng giai đoạn - Mỗi Giai đoạn có 1 hình mẫu để bạn học hỏi.  
-Và Con người Vĩ Đại nhất mà bạn sẽ trở thành sẽ có đặc điểm như thế nào ? Tối thiểu 2000 chữ.
+# NHIỆM VỤ 5:  Viết 1 Bài Tổng Kết với chủ đề: Nếu như bạn có mọi nguồn lực cần thiết không giới hạn - Thì Lộ Trình để bạn tạo ra 1 Công Tỷ USD của mình trong 10-20 năm tới sẽ qua những mô hình như thế nào ? Bao nhiêu bước ? mỗi bước bao nhiêu năm ? Phân tích chi tiết từng giai đoạn - Mỗi Giai đoạn có 1 hình mẫu để bạn học hỏi.  Và Con người Vĩ Đại nhất mà bạn sẽ trở thành sẽ có đặc điểm như thế nào ? Tối thiểu 2000 chữ. Mình nhận ra, ngay cả khi cho mình đủ mọi nguồn lực cần thiết ko giới hạn, mình vẫn chưa hình dung rõ con đường tạo ra công ty 1 tỷ USD , thế thì khi chưa có nguồn lực đủ thì đến bao giờ => Hãy tập hình dung mọi thứ, mọi mốc trong đầu và làm quyết liệt 
+
+
 
 
 
