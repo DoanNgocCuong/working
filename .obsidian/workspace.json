@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/100 M $ Money Model.md",
+                "file": "BUSINESS/100 M $ Money Model/Day 3 - Learning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "100 M $ Money Model"
+              "title": "Day 3 - Learning"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/100 M $ Money Model.md",
+                "file": "BUSINESS/100 M $ Money Model/Day 3 - Learning.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 100 M $ Money Model"
+              "title": "Outline of Day 3 - Learning"
             }
           }
         ],
@@ -169,11 +169,16 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "9f4f87bc404614f0",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
+    "BUSINESS/100 M $ Money Model/TaiLieuGoc",
+    "BUSINESS/100 M $ Money Model/Untitled.md",
+    "BUSINESS/100 M $ Money Model/Day 3 - Learning.md",
+    "BUSINESS/100 M $ Money Model/1_.md",
+    "BUSINESS/100 M $ Money Model.md",
+    "FINTECH/hệ thống module hóa valuation cho multiagent.md",
     "FINTECH/Note 17-10-2025.md",
     "FINTECH/Paper.md",
-    "BUSINESS/100 M $ Money Model/3.md",
     "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
     "FINTECH/Quy trình 8 Bước Xây Dựng Mô Hình Định Giá DCF - FCFF.md",
     "FINTECH/DCF - FCFF Pipeline Checklist (Chuẩn hoá & Kiểm soát chất lượng).md",
@@ -198,17 +203,12 @@
     "DATA_SCIENCE_AND_AI/Domain 3 Machine Learning Fundamentals/13. note tool.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
     "FINTECH/Data/1. Data.md",
-    "BUSINESS/100 M $ Money Model/1_.md",
     "BUSINESS/100 M $ Money Model/image",
     "2025-10-15.md",
     "BUSINESS/Pitching.md",
     "2025-10-16.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/17 Tools/10_aLaptop/1. Dọn file.md",
     "FINTECH/DCF 14102025/1 - DCF và BÁO CÁO TÀI CHÍNH.md",
-    "FINTECH/DCF 14102025/2 - QC_DCF - FCFF Pipeline Checklist (Chuẩn hoá & Kiểm soát chất lượng).md",
-    "FINTECH/DCF 14102025/3 - Các trang tài chính Việt Nam phổ biến & đáng tin cậy.md",
-    "FINTECH/Data/2. Danh sách chỉ số.md",
-    "FINTECH/1_StockAndBusinessValuation.md",
     "BUSINESS/100 M $ Money Model",
     "BUSINESS/image/Untitled",
     "BUSINESS/CON NGƯỜI",
