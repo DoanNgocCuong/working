@@ -83,3 +83,48 @@
 # NHIỆM VỤ 5:  
 Viết 1 Bài Tổng Kết với chủ đề: Nếu như bạn có mọi nguồn lực cần thiết không giới hạn - Thì Lộ Trình để bạn tạo ra 1 Công Tỷ USD của mình trong 10-20 năm tới sẽ qua những mô hình như thế nào ? Bao nhiêu bước ? mỗi bước bao nhiêu năm ? Phân tích chi tiết từng giai đoạn - Mỗi Giai đoạn có 1 hình mẫu để bạn học hỏi.  
 Và Con người Vĩ Đại nhất mà bạn sẽ trở thành sẽ có đặc điểm như thế nào ? Tối thiểu 2000 chữ.
+
+
+
+```
+HSG Quốc Gia - chuyên Toán chuyên Thái Bình + Data Science and AI - Hanoi University of Science and Technology + AI Engineer 1 năm kinh nghiệm  
+Có cộng đồng nhỏ và networking trong ngành Technical anh Trần Quốc Huy, AI Việt Nam Academy Community và Full Stack Data Science Academy Community  
+Có team nhỏ offline tối 4, 7, 8 để triển dự án Fintech
+
+1. Mục đích cuối cùng Begin with the end X10 in Mind and The end with the number: Tự do Tâm Trí - X3+GOSINGA. Bonus: Tài chính, Mối quan hệ, Sức khỏe
+    
+2. Điểm giao mình chọn cho sự nghiệp với Chiến lược đại dương xanh, Tích lũy có system, nhất quán, dài hạn; Tái sử dụng siêu cao :
+    
+
++, Giai đoạn 1:
+
+- AI Engineering (NLP, LLM, MLOps, System Desgin, ... = 10 % Research Model (NLP, LLMs, RAG) + 70% Engineering (MLOps, System Design) + 10 % AI Application (Prompting, AI Workflow, Tools, ...) + 10% Product. )
+    
+- Creator - KOL Leader Community
+    
+
++, Giai đoạn 2:
+
+- FinTech - Investor trường phái đầu tư cơ bản (đầu tư giá trị)
+    
+- Product - Business Model - Consulting AI, Finance.
+    
+
++, Giai đoạn 3:
+
+- Global
+    
+- Academy: Kết hợp với AI Việt Nam Academy, Full Stack Data Science Academy
+    
+
+3. Trên con đường sự nghiệp, em chọn 1 thứ mà mình có thể đi dài hạn với nó 20, 30, 50 năm. Để lãi kép làm việc của nó.
+    
+
+Và thứ em chọn là: AI Engineer trong Finance hướng tới Global
+
+- Khi 1 doanh nghiệp phát triển mạnh => Đóng thuế nhiều cho nhà nước => Sẽ giúp nước mình phát triển rất nhiều
+    
+- Tạo được công ăn việc làm cho nhiều người hơn.
+    
+- Và không phải mình giàu hơn là người khác nghèo đi. Mà là cùng nhau giàu có lên. (Positive Sum Game, không phải Zero Sum Game).
+```
