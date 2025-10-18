@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -173,10 +174,10 @@
   "lastOpenFiles": [
     "BUSINESS/100 M $ Money Model/Day 3 - Learning.md",
     "BUSINESS/100 M $ Money Model/Day 2 Bí Mật của Alex Hormozi.md",
+    "BUSINESS/100 M $ Money Model/1_.md",
     "BUSINESS/100 M $ Money Model/Day 3 - Bài tập.md",
     "BUSINESS/100 M $ Money Model/TaiLieuGoc",
     "BUSINESS/100 M $ Money Model/Untitled.md",
-    "BUSINESS/100 M $ Money Model/1_.md",
     "BUSINESS/100 M $ Money Model.md",
     "FINTECH/hệ thống module hóa valuation cho multiagent.md",
     "FINTECH/Note 17-10-2025.md",

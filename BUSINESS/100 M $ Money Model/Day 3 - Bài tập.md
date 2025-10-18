@@ -209,7 +209,12 @@ Và thứ em chọn là: AI Engineer trong Finance hướng tới Global
 - Và không phải mình giàu hơn là người khác nghèo đi. Mà là cùng nhau giàu có lên. (Positive Sum Game, không phải Zero Sum Game).
 ```
 
-Đặt các câu hỏi:
+| Framework / Chủ đề        | Ý nghĩa cốt lõi                                                                                                                                                                                                                                                                                                            | Alex Hormozi điển hình                                                                                                                                                              |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Scale The Entrepreneur | Người sáng lập là điểm nghẽn lớn nhất của doanh nghiệp: - Doanh nghiệp không thể lớn hơn tầm vóc của founder. - Ba nút thắt: Kỹ năng chưa đủ (sales, ops, product…), phẩm chất/tính cách, niềm tin giới hạn. - Phát triển bản thân cần stacking (xếp chồng kỹ năng/phẩm chất), tập trung sâu điểm đột phá, tránh dàn trải. | Alex tự nhận từng mất sạch ở tuổi 26, liên tục “lên level” bản thân qua thất bại, tự xây playbook vận hành, đổi mindset từ “làm tự cày” sang “system tư duy – bán tri thức”.        |
+| 2. Scale The Market       | Thị trường quyết định tiềm năng scale: - Phải chọn đúng thị trường, sản phẩm phục vụ nhóm “starving crowd”. - Nếu thị trường nhỏ phải broaden. - Scale bằng việc mở rộng phân khúc, sản phẩm, hoặc sang ngành liên quan.                                                                                                   | Alex chuyển từ vận hành phòng gym sang mô hình licensing/coaching + supplements, chính là broaden vertical, mở rộng sang nhiều thị trường – từ Mỹ ra 22 quốc gia.                   |
+| 3. Skill The Deliverable  | Đòn bẩy mô hình là chìa khoá scale: - Leverage qua labor, capital, technology/code, media. - Code/media càng scale mạnh vì ít bị hạn chế. - Dịch vụ/gói tri thức chuyển thành product, documentation, online case, automation, API…                                                                                        | Alex từ làm dịch vụ 1–1 chuyển sang bán playbook/e-course, gói bundle, hệ thống hóa cả sản phẩm, bán quyền sử dụng (licensing), tạo public content/media để kéo deal flow.          |
+| 4. Scale The Business     | Tối ưu bottleneck từng chặng phát triển, từ 1 sản phẩm–1 khách hàng–1 kênh, đến dựng team, tối ưu vận hành, “mini CEO”, stacking nhân tài để unlock tiếp. - Mỗi cấp độ lại phải tối ưu bottleneck khác: vận hành, đội ngũ, marketing, tài chính…                                                                           | Alex scale từ founder đơn độc → team Gym Lords → bán doanh nghiệp → xây Acquisition.com, tối ưu từng nút thắt vận hành và mở rộng nhờ “talent stacking” (mỗi key role là mini CEO). |
 
 ### Các bước chiến lược đi nên như nào, có nên học 3 cái 1 lúc như vậy ko hay chia ra học cái nào dứt cái đấy. Có nên vừa rèn AI Engineer vừa học Business và vừa làm Finance bài Stock and Business Valuation không?
 
@@ -270,130 +275,29 @@ Cách làm đúng là:
 
 ---
 
-### 🚀 3. Lộ trình 3 tầng học hợp lý (3–5 năm)
 
-#### **Pha 1 (2025–2026): BUILD THE CORE — AI Engineer Deep Focus**
-
-🎯 Mục tiêu: trở thành **AI Engineer thực chiến hàng đầu trong FinTech/EduTech**.
-
-- 70% thời gian: AI Engineering (MLOps, LLMs, RAG, System Design).
-    
-- 20% thời gian: Finance cơ bản (valuation, DCF, PE, PB, cashflow).
-    
-- 10% thời gian: Business mindset (Value creation, Product Thinking).
-    
-
-👉 **Làm một project thực chiến:**  
-“Stock & Business Valuation AI Agent”  
-→ Đây chính là **điểm giao 3 lĩnh vực**, bạn không học rời mà học bằng hành động.
-
-> Ví dụ: bạn không “học finance”, mà **dùng AI model để làm ra 1 valuation engine**.  
-> Học Business không phải đọc sách, mà là **productize project này và hỏi: ai trả tiền cho nó?**
-
-🧩 Kết quả pha 1:
-
-- Có sản phẩm demo thật (AI Valuation Agent).
-    
-- Có user / phản hồi thực tế.
-    
-- Có case study để đi dạy / share community.
     
 
 ---
 
-#### **Pha 2 (2026–2028): BUILD THE SYSTEM — Product & Business**
-
-🎯 Mục tiêu: từ Engineer → Product Owner / Co-founder
-
-- 50%: build & scale sản phẩm AI (Valuation API / Dashboard).
-    
-- 30%: học Business sâu (Product Market Fit, Pricing, GTM).
-    
-- 20%: học Finance thực chiến (Portfolio, Fund Structure, Revenue Model).
-    
-
-Lúc này, **Business học sẽ cực kỳ hiệu quả** vì bạn có:
-
-- Dữ liệu thật, khách hàng thật, revenue thật.
-    
-- Hiểu chi phí, biên lợi nhuận, dòng tiền.
-    
-
-🧩 Kết quả pha 2:
-
-- Có sản phẩm thương mại hóa (SaaS/API).
-    
-- Có mô hình kinh doanh rõ ràng.
-    
-- Bắt đầu có lợi nhuận hoặc seed investment.
-    
 
 ---
 
-#### **Pha 3 (2028–2032): BUILD THE MACHINE — Money Models**
+| 1. Scale The Entrepreneur | Người sáng lập là điểm nghẽn lớn nhất của doanh nghiệp: - Doanh nghiệp không thể lớn hơn tầm vóc của founder. - Ba nút thắt: Kỹ năng chưa đủ (sales, ops, product…), phẩm chất/tính cách, niềm tin giới hạn. - Phát triển bản thân cần stacking (xếp chồng kỹ năng/phẩm chất), tập trung sâu điểm đột phá, tránh dàn trải. |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2. Scale The Market       | Thị trường quyết định tiềm năng scale: - Phải chọn đúng thị trường, sản phẩm phục vụ nhóm “starving crowd”. - Nếu thị trường nhỏ phải broaden. - Scale bằng việc mở rộng phân khúc, sản phẩm, hoặc sang ngành liên quan.                                                                                                   |
+| 3. Skill The Deliverable  | Đòn bẩy mô hình là chìa khoá scale: - Leverage qua labor, capital, technology/code, media. - Code/media càng scale mạnh vì ít bị hạn chế. - Dịch vụ/gói tri thức chuyển thành product, documentation, online case, automation, API…                                                                                        |
+| 4. Scale The Business     | Tối ưu bottleneck từng chặng phát triển, từ 1 sản phẩm–1 khách hàng–1 kênh, đến dựng team, tối ưu vận hành, “mini CEO”, stacking nhân tài để unlock tiếp. - Mỗi cấp độ lại phải tối ưu bottleneck khác: vận hành, đội ngũ, marketing, tài chính…                                                                           |
 
-🎯 Mục tiêu: từ Product → Capital.
-
-- 40%: mở rộng sản phẩm sang nhiều thị trường / ngách.
-    
-- 30%: xây hệ thống quản trị, team, automation.
-    
-- 30%: nghiên cứu **100M$ Money Models** (funding, equity, cashflow engine, holding).
-    
-
-Lúc này học “Global Money Models” **mới có giá trị thật**, vì bạn đang _vận hành một cỗ máy tiền thật_, không phải học trên lý thuyết.
-
-🧩 Kết quả pha 3:
-
-- Hiểu sâu về dòng tiền doanh nghiệp.
-    
-- Biết dùng vốn – kêu vốn – tái đầu tư.
-    
-- Chuẩn bị bước sang vai trò Investor/Founder.
-    
-
----
-
-## 🧱 4. Tóm tắt chiến lược “3 Tầng – 3 Pha”
-
-|Pha|Mục tiêu chính|Ưu tiên học|Tỷ lệ năng lượng|
-|---|---|---|---|
-|**1. 2025–2026**|Build Core (AI Engineer)|AI 70% – Finance 20% – Business 10%|**Kỹ thuật**|
-|**2. 2026–2028**|Build System (Product & Business)|Product 50% – Business 30% – Finance 20%|**Ứng dụng & mô hình hóa**|
-|**3. 2028–2032**|Build Machine (Money Model & Scale)|Business 40% – Finance 30% – AI 30%|**Vận hành & đầu tư**|
-
-> ⚡ Khi bạn học đúng pha, “học 1 – lời 3”.  
-> Học sai pha, “học 3 – lời 0”.
-
----
-
-## 🧩 5. Checklist ra quyết định hôm nay
-
-**Chỉ học Business khi bạn có project thật.**  
-→ Nếu bạn chưa có sản phẩm kiếm tiền từ AI, Business chỉ là lý thuyết.  
-**Chỉ học Finance khi bạn đang áp dụng dữ liệu tài chính thật.**  
-→ Không đọc báo cáo tài chính, Finance sẽ trôi.  
-**Chỉ nghiên cứu Money Models khi bạn có dòng tiền thật.**  
-→ Không có real cashflow, Money Models chỉ là “đọc truyện tỷ phú”.
-
----
-
-## ✅ Kết luận
-
-> ❌ Không nên học 3 cái 1 lúc với cùng độ sâu.  
-> ✅ Nên **xếp tầng – học nối tiếp – gắn vào 1 project duy nhất.**
-
-Trục đúng của bạn là:  
-**AI Engineer → FinTech Product → Money System.**  
-Mỗi pha kéo dài 2–3 năm, học chồng kỹ năng như _stack module_, không học song song.
-
----
-
-Nếu bạn muốn, tôi có thể giúp bạn:
-
-- Lập **“FinAI Skill Stack Roadmap”** 36 tháng — liệt kê cụ thể từng quý học gì, làm project gì, milestone kỹ năng nào đạt.
-    
-- Mẫu chia năng lượng 70/20/10 để bạn không bị loãng.
-    
-
-👉 Bạn muốn tôi viết bản đó theo **timeline (tháng–quý)** hay **mindmap (cấu trúc kỹ năng + project)?**
+| Giai đoạn                      | Sự kiện, Câu chuyện                                                                                                                                                                                                                                                                                                             | Tuổi    | AI Engineer - FinTech - Global                                                                                                                                                                                                                                                                                                                                                                              | Ứng với năm hiện tại (2003+tuổi) | Tỷ lệ tập trung (ước tính)                          | Nhân vật theo đuổi                                                                            |     |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------- | --- |
+| Trước giai đoạn 2011           | **Alex Hormozi:**  <br>- Học phổ thông xuất sắc, đỗ vào Vanderbilt University.  <br>- Chuyên ngành Khoa học, tốt nghiệp Magna Cum Laude trong 3 năm.  <br>- Làm tư vấn 2 năm sau đại học.                                                                                                                                       | 22 tuổi | HSG Quốc Gia - chuyên Toán chuyên Thái Bình  <br>+ Data Science and AI - HUST  <br>+ AI Engineer 1 năm kinh nghiệm  <br>- Có cộng đồng nhỏ và networking ngành Technical: Trần Quốc Huy, AI Vietnam Academy, Full Stack Data Science Academy<br>- Có cộng đồng X3 năng suất: Mindset Tâm trí, tài chính, sức khoẻ, MQH                                                                                      | 2024-2025                        | AI 20%, Growth Mindset Tâm Trí 60%, Phí 20%         | Trần Quốc Huy (AI Vietnam Academy)<br><br>Minh X3 <br><br>Quân Đặng - Full Stack Data Science |     |
+| **Giai đoạn 0**  <br>2011–2015 | **Mở phòng gym United Fitness**  <br>— Tốt nghiệp Vanderbilt Magna Cum Laude trong 3 năm, làm tư vấn 2 năm, rẽ sang mở gym.  <br>— Mở nhanh nhiều cơ sở trước khi “cháy túi” ở tuổi 26 (mô hình CAPEX nặng, dòng tiền yếu).  <br>— Tự chuẩn hoá playbook vận hành, có “đơn vị mẫu” để bán tri thức, đặt tiền đề cho Gym Launch. | 22–26   | - Tập trung AI Engineering, kết nối mạnh 3 cộng đồng Tech đang join, thân với ace và chủ cộng đồng, phụng sự cộng đồng. Cả X3 năng suất và hệ sinh thái nữa. <br>- AI Engineering là kỹ năng lõi: System Design, MLOps, AI Engineer, <br>- Chuyển từ EduTech sang FinTech để chuyển dịch sang Fintech, Finance là con đường dài hạn.<br>- Làm product MVP FinTech AI đầu tiên: Stock and Business Valuation | 2025–2029                        | AI 70% – Finance 20% – Business 10%                 |                                                                                               |     |
+| **Giai đoạn 1**  <br>2015–2016 | **Bắt đầu Gym Agency – Gym Rescue**  <br>— Alex “cầm tay chỉ việc” tại từng phòng gym, triển khai tăng trưởng kiểu đặc nhiệm, thu phí theo kết quả.  <br>— Nhận ra tăng trưởng bị giới hạn bởi “giờ công” của founder, chi phí cao, khó nhân rộng.  <br>— Áp dụng tư duy productize IP, đóng gói SOP và coaching từ xa.         | 26–27   | Làm product MVP FinTech AI đầu tiên, nhận user feedback trực tiếp, nâng cấp kỹ năng ứng dụng AI vào thực tế tài chính.                                                                                                                                                                                                                                                                                      | 2029–2030                        | Product 60% – AI 30% – Business 10%                 |                                                                                               |     |
+| **Giai đoạn 2**  <br>2016–2018 | **Bùng nổ Gym Launch – Licensing & Coaching**  <br>— Chuyển sang bán quyền dùng "hệ điều hành tăng trưởng" cho chủ gym; chủ gym tự triển khai theo playbook.  <br>— Scalability: tăng doanh thu mà không tăng giờ founder.  <br>— Năm đầu đạt $6.8M, năm thứ hai $25.9M lợi nhuận $15.9M.                                       | 27–29   | Productize & SaaS hóa giải pháp FinTech, xây model vận hành, scale cho hàng loạt users, chuẩn hoá manual & pipeline (API, dashboard...).                                                                                                                                                                                                                                                                    | 2030–2032                        | Product 50% – Business 30% – Finance 20%            |                                                                                               |     |
+| **Giai đoạn 3**  <br>2018–2020 | **Xây cộng đồng Gym Lord – Chuẩn hoá case, Enablement**  <br>— Xây hệ coaching & education + cộng đồng + thư viện case để enable khách hàng theo chuẩn hóa.  <br>— Đưa KPI, funnel, accountability thành tiêu chuẩn; mở rộng quốc tế.  <br>— 6,000+ gym tại 22 quốc gia, $1.5 tỷ doanh thu, 100+ gym đạt $1M/năm.               | 29–31   | Phát triển cộng đồng AI/FinTech, documentation open source, enable đối tác toàn cầu, partnership academy.                                                                                                                                                                                                                                                                                                   | 2032–2034                        | Community 50% – Product 30% – Global 20%            |                                                                                               |     |
+| **Giai đoạn 4**  <br>2018–>    | **Vào supplements – Prestige Labs**  <br>— Dùng mạng lưới Gym Launch để ra sản phẩm thực phẩm chức năng, thiết kế commission cho chủ gym.  <br>— Ra mắt Prestige Labs, hợp tác chuyên gia dinh dưỡng.  <br>— Tháng đầu $1.7M recurring, năm đầu ~ $17M và hoa hồng ~40%.                                                        | 29+     | Mở rộng AI/FinTech vào vertical mới: Insurtech, Wealthtech, Healthtech, tạo dòng doanh thu recurring đa lớp.                                                                                                                                                                                                                                                                                                | 2032+                            | Vertical 40% – AI/Product 40% – Global 20%          |                                                                                               |     |
+| **Giai đoạn 5**  <br>2019–>    | **Xây SaaS Tool – ALAN AI Automation**  <br>— Phát triển ALAN để tự động nhắn tin, đặt lịch, nuôi dưỡng lead.  <br>— Fix leak mid-funnel cho gym: tối ưu book–show–close.  <br>— 2021 bán ALAN bằng deal all-stock.                                                                                                             | 30+     | Xây AI Automation cho FinTech, nâng cấp sản phẩm, exit/M&A, hợp tác với bigtech/global fintech.                                                                                                                                                                                                                                                                                                             | 2033+                            | Automation 50% – Product 30% – Exit/Global 20%      |                                                                                               |     |
+| **Giai đoạn 6**  <br>2021      | **Exit – Bán Gym Launch & Prestige Labs**  <br>— Bán phần lớn GL & PL, chuyển từ operator sang nhà đầu tư/cố vấn.  <br>— PE sponsor mua $46.2M, ALAN all-stock.  <br>— Có “đạn dược” để xây Acquisition.com.                                                                                                                    | 32      | Exit startup đầu tiên, chuyển hóa thành investor/venture builder FinTech/AI, chuẩn bị fund/danh mục đầu tư cá nhân.                                                                                                                                                                                                                                                                                         | 2035                             | Investment 50% – Advisory 30% – Legacy 20%          |                                                                                               |     |
+| **Giai đoạn 7**  <br>2021–>    | **Build Quỹ – Acquisition.com**  <br>— Lập Acquisition.com: workshop/courses/cố vấn/đầu tư thiểu số.  <br>— Vận hành "content → deal → value creation" thành hệ thống.  <br>— 4 năm sau, danh mục > $250M/năm.                                                                                                                  | 32+     | Dựng quỹ đầu tư AI/FinTech toàn cầu; phát triển hệ sinh thái, mentoring, accelerator, nội dung tri thức quốc tế.                                                                                                                                                                                                                                                                                            | 2035+                            | Fund/Investment 40% – Ecosystem 40% – Community 20% |                                                                                               |     |
+| **Giai đoạn 8**  <br>2021–>    | **Viết sách $100M Offers & $100M Leads**  <br>— Xuất bản bestseller, phát hành miễn phí playbook/courses để mở rộng reach và trust.  <br>— >1 triệu bản, audience >12 triệu.                                                                                                                                                    | 32+     | Xuất bản tri thức AI/FinTech, lead ngành bằng content & brand cá nhân, ảnh hưởng rộng, tạo legacy dài hạn cho cộng đồng startup.                                                                                                                                                                                                                                                                            | 2035+                            | Legacy 40% – Content 40% – Brand/Influence 20%      |                                                                                               |     |

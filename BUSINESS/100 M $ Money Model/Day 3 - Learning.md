@@ -1791,3 +1791,160 @@ Hỗ Trợ Đồng Đội:
 Bình Luận Hashtag [#MissionCompleted](https://www.facebook.com/watch/hashtag/missioncompleted?__eep__=6%2F&__cft__[0]=AZVRrouQp7gn9HsCEUrghadidSMyAVZOAFAUn0g2-5CXnXzjiIrgX14fCv1pFJOrw_5FLLw6rx9rh-516PlNYAq-LiT57HR3VlJCkqLi0FeIQI5Nqkq0R1jsXyssjr7L2jvNfZg_EFNQXfgXW7dTyy0Gi5JbZZXNKAIRcB5shgG0QQ&__tn__=*NK-R) vào Dưới Comment để Xác Nhận đã hoàn Thành Nhiệm Vụ Ngày 3.
 
 [#Globalmoneymodels](https://www.facebook.com/watch/hashtag/globalmoneymodels?__eep__=6%2F&__cft__[0]=AZVRrouQp7gn9HsCEUrghadidSMyAVZOAFAUn0g2-5CXnXzjiIrgX14fCv1pFJOrw_5FLLw6rx9rh-516PlNYAq-LiT57HR3VlJCkqLi0FeIQI5Nqkq0R1jsXyssjr7L2jvNfZg_EFNQXfgXW7dTyy0Gi5JbZZXNKAIRcB5shgG0QQ&__tn__=*NK-R) #Day3
+
+
+
+---
+
+# LỘ TRÌNH XÂY DỰNG CÔNG TY TỶ USD: TỪ VIỄN CẢNH ĐẾN HÀNH ĐỘNG
+
+Xây dựng một công ty tỷ USD không chỉ là giấc mơ xa vời mà là một hành trình cụ thể với từng mốc rõ ràng, từng giai đoạn xác định. Ngay cả khi có đủ mọi nguồn lực không giới hạn, việc hình dung rõ ràng lộ trình này mới là yếu tố quyết định thành công. Bởi lẽ, nguồn lực không tạo nên tầm nhìn - chính tầm nhìn mới biến nguồn lực thành giá trị.[amis.misa+4](https://amis.misa.vn/53635/nguon-luc-la-gi/)​
+
+## Giai Đoạn 1: Khởi Nguồn - Từ Ý Tưởng Đến MVP (Năm 0-2)
+
+## Nhiệm Vụ Cốt Lõi
+
+Giai đoạn đầu tiên tập trung vào việc phát triển sản phẩm khả thi tối thiểu (MVP) và xác định thị trường mục tiêu. Đây là thời điểm bạn phải giải quyết một vấn đề thực sự của người dùng, xác định được "nỗi đau" cụ thể mà họ sẵn sàng trả tiền để giải quyết. Công ty trị giá tỷ USD không được xây từ những ý tưởng bình thường - chúng sinh ra từ những giải pháp cho những vấn đề lớn, có thị trường đồng nhất và rộng lớn.[embroker+2](https://www.embroker.com/blog/unicorn-startup-checklist/)​
+
+Trong giai đoạn này, bạn cần tạo ra một sản phẩm dễ tiếp cận, thân thiện với người dùng và tiết kiệm chi phí, chỉ bao gồm những tính năng thiết yếu nhất. Sau đó tiến hành thử nghiệm với người dùng thực, thu thập phản hồi và điều chỉnh liên tục. Mục tiêu không phải là hoàn hảo, mà là học hỏi nhanh nhất có thể.[linkedin+2](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Hình Mẫu Học Hỏi: Mark Zuckerberg
+
+Mark Zuckerberg đã tạo ra Facebook khi mới 20 tuổi trong ký túc xá Harvard năm 2004. Điều đặc biệt là Facebook ban đầu chỉ là một sản phẩm đơn giản, nhưng giải quyết một nhu cầu thực sự: kết nối sinh viên đại học. Zuckerberg không chờ đợi sản phẩm hoàn hảo - ông liên tục thử nghiệm, lắng nghe phản hồi và cải tiến với tốc độ chóng mặt. Chỉ trong tháng đầu tiên, Facebook đã tiếp cận sinh viên ở nhiều trường khác nhau, chứng minh khả năng mở rộng của ý tưởng.[vnexpress+2](https://e.vnexpress.net/news/tech/personalities/how-old-tech-titans-were-when-they-became-billionaires-4932712.html)​
+
+## Đầu Ra Kỳ Vọng
+
+Cuối giai đoạn 2 năm này, bạn cần có sản phẩm đã được thị trường chấp nhận (product-market fit), cơ sở khách hàng ban đầu đang tăng trưởng, và kế hoạch kinh doanh rõ ràng với mô hình kiếm tiền cụ thể. Giá trị công ty ước tính từ vài triệu đến 20-50 triệu USD sau vòng gọi vốn hạt giống.[dugainadvisors+2](https://www.dugainadvisors.com/post/unicorn-valuation-how-firms-cross-the-1b-mark)​
+
+## Giai Đoạn 2: Tăng Trưởng Bùng Nổ - Mở Rộng Quy Mô (Năm 3-5)
+
+## Nhiệm Vụ Cốt Lõi
+
+Đây là giai đoạn chuyển đổi từ tiềm năng sang hiệu suất thực tế. Sau khi hoàn thành vòng Series A (thường từ vài chục triệu USD), công ty phải tập trung vào việc mở rộng hoạt động, thuê thêm nhân sự và thiết lập bộ phận bán hàng để tăng trưởng. Thách thức lớn nhất là duy trì tốc độ thực thi nhanh trong khi xây dựng quy trình có thể lặp lại.[svb+2](https://www.svb.com/startup-insights/startup-growth/what-are-the-three-stages-of-a-startup/)​
+
+Trong giai đoạn này, các công ty unicorn trung bình huy động khoảng 275 triệu USD qua 5 vòng gọi vốn. Bạn cần tập trung vào việc tối ưu hóa chi phí thu hút khách hàng (CAC), tăng giá trị vòng đời khách hàng (LTV), và xây dựng lợi thế cạnh tranh bền vững như hiệu ứng mạng lưới hoặc công nghệ độc quyền.[dugainadvisors](https://www.dugainadvisors.com/post/unicorn-valuation-how-firms-cross-the-1b-mark)​
+
+## Hình Mẫu Học Hỏi: Jeff Bezos
+
+Jeff Bezos thành lập Amazon năm 1994 khi 30 tuổi, bắt đầu từ garage ở Seattle. Điều khiến Bezos xuất sắc là sự **tập trung** tuyệt đối vào khách hàng và tầm nhìn dài hạn. Chỉ trong tháng đầu tiên hoạt động, Amazon đã bán sách cho khách hàng ở cả 50 tiểu bang Mỹ và 45 quốc gia khác nhau. Bezos duy trì tốc độ thực thi nhanh, liên tục mở rộng danh mục sản phẩm trong khi vẫn giữ vững nguyên tắc cốt lõi: đặt khách hàng làm trung tâm. Amazon IPO năm 1997, chỉ sau 3 năm thành lập.[businessinsider+1](https://www.businessinsider.com/before-and-after-photos-ceo-zuckerberg-bezos-jobs-musk-dorsey-2019-2)​
+
+## Đầu Ra Kỳ Vọng
+
+Sau 3-5 năm hoạt động, công ty cần đạt doanh thu hàng chục đến hàng trăm triệu USD, có đội ngũ vài trăm nhân viên, và định giá từ 200-500 triệu USD. Đây là nền tảng để bứt phá lên tỷ USD ở giai đoạn tiếp theo.[baselarea+2](https://baselarea.swiss/knowledge-hub/6-startup-stages/)​
+
+## Giai Đoạn 3: Bứt Phá Unicorn - Đạt Mốc Tỷ USD (Năm 6-10)
+
+## Nhiệm Vụ Cốt Lõi
+
+Giai đoạn này là cuộc chạy đua để đạt định giá 1 tỷ USD. Các yếu tố quyết định bao gồm: hệ số định giá theo ngành (AI/ML, fintech, enterprise software thường có hệ số cao hơn), quy mô hoạt động với cơ sở người dùng lớn, thương hiệu mạnh và thâm nhập thị trường đáng kể. Công ty cần hoàn thành các vòng gọi vốn Series B, C, D để thúc đẩy mở rộng thu hút khách hàng, nâng cấp công nghệ và mở rộng địa lý.[thinslices+1](https://www.thinslices.com/insights/why-its-harder-for-tech-startups-to-secure-1b-valuations)​
+
+Trong giai đoạn này, mô hình kinh doanh là then chốt. Các mô hình có khả năng tạo hiệu ứng mạng lưới như SaaS nền tảng, marketplace hai chiều, hoặc Networked SaaS (kết hợp sâu của SaaS dọc với tính năng marketplace) đang chiếm ưu thế. Những mô hình này không chỉ phục vụ một người dùng mà kích hoạt cả chuỗi giá trị, tạo ra tăng trưởng gộp (compounding growth).[signalfire+1](https://www.signalfire.com/blog/networked-saas-business-model)​
+
+## Hình Mẫu Học Hỏi: Elon Musk
+
+Elon Musk thể hiện đặc điểm quan trọng nhất của những người xây dựng công ty tỷ USD: **nỗi ám ảnh** (obsession). Musk không chỉ xây dựng một công ty mà đồng thời điều hành nhiều doanh nghiệp tỷ USD như SpaceX và Tesla. Điều khiến Musk khác biệt là ông sống và thở cùng sứ mệnh của mình - du hành vũ trụ và năng lượng bền vững. Musk cũng nổi tiếng với tốc độ thực thi cực nhanh và khả năng kiên trì qua vô số thất bại. Tesla và SpaceX đều phải đối mặt với nguy cơ phá sản nhiều lần, nhưng Musk không bao giờ từ bỏ.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Đầu Ra Kỳ Vọng
+
+Cuối năm thứ 10, công ty đạt định giá 1 tỷ USD trở lên, doanh thu hàng trăm triệu đến vài tỷ USD, đội ngũ vài nghìn nhân viên, và đã thiết lập vị thế dẫn đầu trong ngành. Mark Zuckerberg trở thành tỷ phú năm 23 tuổi vào năm 2008, chỉ 4 năm sau khi thành lập Facebook.[thinslices+2](https://www.thinslices.com/insights/why-its-harder-for-tech-startups-to-secure-1b-valuations)​
+
+## Giai Đoạn 4: Đế Chế - Từ 1 Tỷ Đến 10-100 Tỷ USD (Năm 11-20)
+
+## Nhiệm Vụ Cốt Lõi
+
+Giai đoạn cuối cùng là chuyển từ unicorn đến doanh nghiệp có giá trị hàng chục tỷ USD. Đây là lúc công ty tập trung vào tài chính ổn định, hiệu suất vận hành, mở rộng dòng sản phẩm, thâm nhập thị trường mới, hoặc thực hiện mua bán sáp nhập. Nhiều công ty trong giai đoạn này chuẩn bị cho chiến lược thoát vốn như IPO hoặc bán công ty.[svb+1](https://www.svb.com/startup-insights/startup-growth/what-are-the-three-stages-of-a-startup/)​
+
+Trong giai đoạn này, **trí thông minh** và **khả năng sáng tạo** trở nên quan trọng hơn bao giờ hết. Người sáng lập phải liên tục tạo ra ý tưởng mới, nhìn vấn đề từ nhiều góc độ khác nhau, và thích ứng với hoàn cảnh thay đổi. Họ cần thách thức những quy ước thông thường và tạo ra những đột phá khác biệt trong thị trường đông đúc.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Hình Mẫu Học Hỏi: Steve Jobs
+
+Steve Jobs là biểu tượng của **sự sáng tạo** và tầm nhìn dài hạn. Jobs đã biến Apple từ một công ty công nghệ bình thường thành đế chế có giá trị vượt 2 nghìn tỷ USD. Điều đặc biệt ở Jobs là khả năng thấy được những gì người khác không thấy - ông không tạo ra sản phẩm khách hàng yêu cầu, mà tạo ra sản phẩm khách hàng chưa biết là họ cần. iPhone và iPad đã cách mạng hóa cả ngành công nghiệp. Jobs cũng xuất sắc trong việc truyền đạt tầm nhìn, khiến cả thế giới tin vào những gì ông làm.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Đầu Ra Kỳ Vọng
+
+Sau 15-20 năm, công ty đạt định giá hàng chục tỷ USD, doanh thu hàng tỷ đến hàng chục tỷ USD, vị thế thống trị trong ngành, và có khả năng ảnh hưởng đến hàng tỷ người trên toàn cầu. Larry Ellison mất 37 năm làm CEO Oracle để xây dựng đế chế trị giá 251 tỷ USD. Mark Zuckerberg hiện có giá trị tài sản 257,8 tỷ USD, đứng thứ 3 thế giới.[vnexpress+1](https://e.vnexpress.net/news/tech/personalities/how-old-tech-titans-were-when-they-became-billionaires-4932712.html)​
+
+## 9 Đặc Điểm Của Con Người Vĩ Đại
+
+Để xây dựng công ty 10 tỷ USD, Sam Altman từ Y Combinator và các chuyên gia đã xác định 9 đặc điểm thiết yếu:[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Nỗi Ám Ảnh (Obsession)
+
+Những nhà sáng lập vĩ đại thể hiện nỗi ám ảnh không lay chuyển với ý tưởng của họ. Họ sống và thở cùng sứ mệnh, liên tục vượt ranh giới và không ngừng phấn đấu để cải tiến. Nỗi ám ảnh này nuôi dưỡng sự kiên trì không mệt mỏi trong việc theo đuổi thành công, khiến họ có khả năng phục hồi trước mọi thách thức.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Tập Trung (Focus)
+
+Sự tập trung sắc bén như dao là dấu hiệu của những nhà sáng lập thành công. Họ có tầm nhìn rõ ràng và kỷ luật để giữ đúng lộ trình, tránh những phiền nhiễu có thể làm trật bánh tiến độ. Sự tập trung này cho phép họ phân bổ nguồn lực hiệu quả và duy trì quỹ đạo ổn định hướng đến mục tiêu.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Tiết Kiệm (Frugality)
+
+Tiết kiệm không phải về việc keo kiệt, mà về việc khéo léo và hiệu quả. Những nhà sáng lập thành công tận dụng tối đa những gì họ có, kéo dài giá trị mỗi đồng đến tiềm năng tối đa. Sự tiết kiệm này đảm bảo họ có thể duy trì hoạt động lâu hơn và tái đầu tư vào tăng trưởng một cách chiến lược. Brian Chesky và Joe Gebbia của Airbnb từng bán hộp ngũ cốc để giữ công ty tồn tại - giờ Airbnb trị giá hơn 75 tỷ USD.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Tốc Độ Thực Thi (Execution Speed)
+
+Tốc độ thực thi là yếu tố dự báo đáng kể về thành công. Những nhà sáng lập xuất sắc nhanh chóng biến ý tưởng thành hành động, không ngừng thực thi, kiểm tra giả thuyết, và điều chỉnh dựa trên phản hồi. Khả năng triển khai nhanh và xoay hướng khi cần thiết phân biệt những nhà sáng lập đặc biệt.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Trí Thông Minh (Intelligence)
+
+Trí thông minh là yếu tố quan trọng phân biệt những nhà sáng lập vĩ đại. Họ sở hữu loại trí thông minh độc đáo cho phép nhìn vấn đề từ nhiều góc độ và đưa ra giải pháp sáng tạo. Larry Page và Sergey Brin của Google với trí thông minh và tư duy đổi mới đã tạo ra công cụ tìm kiếm cách mạng hóa internet - Google giờ trị giá hơn 1,5 nghìn tỷ USD.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Sáng Tạo (Creativity)
+
+Sự sáng tạo đi đôi với trí thông minh. Những nhà sáng lập suy nghĩ vượt khuôn khổ và thách thức những kiến thức thông thường thường đưa ra những ý tưởng đột phá. Sự sáng tạo này cho phép họ phân biệt sản phẩm và dịch vụ trong thị trường đông đúc.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Kỹ Năng Giao Tiếp (Communication Skills)
+
+Giao tiếp hiệu quả là sống còn với nhà sáng lập. Họ phải truyền đạt tầm nhìn rõ ràng để thu hút tài năng, đảm bảo vốn, và bán sản phẩm. Kỹ năng giao tiếp mạnh mẽ cũng giúp đặt hướng cho công ty và tập hợp đội ngũ hướng đến mục tiêu chung. Oprah Winfrey với kỹ năng giao tiếp và khả năng kết nối với mọi người đã xây dựng đế chế truyền thông, trở thành một trong những doanh nhân thành công và có ảnh hưởng nhất thế giới.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Tốc Độ Cải Thiện (Rate of Improvement)
+
+Khả năng học hỏi và cải thiện nhanh chóng phân biệt những người xuất sắc. Họ không chỉ học từ thành công mà còn từ thất bại, liên tục điều chỉnh và phát triển. Tốc độ cải thiện này đảm bảo họ luôn đi trước đối thủ cạnh tranh.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Sứ Mệnh Sâu Sắc (Deep Sense of Mission)
+
+Cuối cùng, những nhà sáng lập vĩ đại nhất được thúc đẩy bởi sứ mệnh sâu sắc vượt xa lợi nhuận tài chính. Họ muốn tạo ra tác động có ý nghĩa đến thế giới, giải quyết những vấn đề quan trọng và cải thiện cuộc sống. Sứ mệnh này truyền cảm hứng cho đội ngũ, thu hút nhà đầu tư, và tạo sự trung thành của khách hàng.[linkedin](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)​
+
+## Tổng Kết: Từ Tầm Nhìn Đến Hành Động
+
+Lộ trình xây dựng công ty tỷ USD trong 10-20 năm không phải là giấc mơ xa vời khi bạn có nguồn lực không giới hạn - đó là một kế hoạch cụ thể, rõ ràng với từng bước đi. Nhưng điều quan trọng nhất không phải là nguồn lực, mà là khả năng **hình dung** rõ ràng con đường phía trước.[nssc+4](https://nssc.gov.vn/articles/6-steps-to-becoming-a-unicorn-startup/)​
+
+Như đã phân tích, hành trình gồm 4 giai đoạn chính: (1) Khởi nguồn với MVP trong 0-2 năm, (2) Tăng trưởng bùng nổ mở rộng quy mô trong 3-5 năm, (3) Bứt phá Unicorn đạt 1 tỷ USD trong 6-10 năm, và (4) Xây dựng đế chế 10-100 tỷ USD trong 11-20 năm. Mỗi giai đoạn đều có mục tiêu rõ ràng, thách thức riêng, và yêu cầu những kỹ năng khác nhau.[notion+2](https://www.notion.vc/resources/start-build-scale-three-stages-of-the-1-to-100m-revenue-journey)​
+
+Từ những hình mẫu như Mark Zuckerberg, Jeff Bezos, Elon Musk, và Steve Jobs, chúng ta thấy rằng con người vĩ đại không phải sinh ra đã hoàn hảo. Họ được rèn giũa qua nỗi ám ảnh với sứ mệnh, sự tập trung tuyệt đối, tốc độ thực thi chóng mặt, và khả năng cải thiện không ngừng. Họ kết hợp trí thông minh với sáng tạo, giao tiếp xuất sắc, và quan trọng nhất - một sứ mệnh sâu sắc vượt xa lợi nhuận cá nhân.[businessinsider+2](https://www.businessinsider.com/before-and-after-photos-ceo-zuckerberg-bezos-jobs-musk-dorsey-2019-2)​
+
+Điều mà nhiều người chưa nhận ra là: ngay cả khi chưa có đủ nguồn lực, việc hình dung rõ ràng lộ trình này vẫn là bước đầu tiên và quan trọng nhất. Bởi vì **tầm nhìn tạo ra nguồn lực, chứ không phải ngược lại**. Khi bạn thấy rõ đích đến, bạn sẽ tìm ra cách để đến đó. Khi bạn hiểu từng mốc, từng giai đoạn, bạn sẽ biết mình đang ở đâu và cần làm gì tiếp theo.[hubspot+4](https://www.hubspot.com/startups/reports/hypergrowth-startups/build-unicorn-company)​
+
+Thách thức lớn nhất không phải là thiếu tiền hay thiếu tài năng - đó là thiếu sự rõ ràng về con đường phía trước. Hãy bắt đầu bằng việc vẽ ra bản đồ chi tiết trong đầu bạn, với từng cột mốc cụ thể. Sau đó, hành động quyết liệt từng ngày để biến tầm nhìn đó thành hiện thực. Đó chính là điều phân biệt những người mơ mộng và những người xây dựng đế chế tỷ USD.[embroker+4](https://www.embroker.com/blog/unicorn-startup-checklist/)​
+
+1. [https://amis.misa.vn/53635/nguon-luc-la-gi/](https://amis.misa.vn/53635/nguon-luc-la-gi/)
+2. [https://www.embroker.com/blog/unicorn-startup-checklist/](https://www.embroker.com/blog/unicorn-startup-checklist/)
+3. [https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic](https://www.linkedin.com/pulse/secret-sauce-9-traits-founders-who-build-10-billion-companies-gupta-rjeic)
+4. [https://nssc.gov.vn/articles/6-steps-to-becoming-a-unicorn-startup/](https://nssc.gov.vn/articles/6-steps-to-becoming-a-unicorn-startup/)
+5. [https://koorandassociates.org/creating-business-value/billion-dollar-startup-characteristics/](https://koorandassociates.org/creating-business-value/billion-dollar-startup-characteristics/)
+6. [https://e.vnexpress.net/news/tech/personalities/how-old-tech-titans-were-when-they-became-billionaires-4932712.html](https://e.vnexpress.net/news/tech/personalities/how-old-tech-titans-were-when-they-became-billionaires-4932712.html)
+7. [https://www.businessinsider.com/before-and-after-photos-ceo-zuckerberg-bezos-jobs-musk-dorsey-2019-2](https://www.businessinsider.com/before-and-after-photos-ceo-zuckerberg-bezos-jobs-musk-dorsey-2019-2)
+8. [https://www.dugainadvisors.com/post/unicorn-valuation-how-firms-cross-the-1b-mark](https://www.dugainadvisors.com/post/unicorn-valuation-how-firms-cross-the-1b-mark)
+9. [https://www.hubspot.com/startups/reports/hypergrowth-startups/build-unicorn-company](https://www.hubspot.com/startups/reports/hypergrowth-startups/build-unicorn-company)
+10. [https://www.svb.com/startup-insights/startup-growth/what-are-the-three-stages-of-a-startup/](https://www.svb.com/startup-insights/startup-growth/what-are-the-three-stages-of-a-startup/)
+11. [https://baselarea.swiss/knowledge-hub/6-startup-stages/](https://baselarea.swiss/knowledge-hub/6-startup-stages/)
+12. [https://www.notion.vc/resources/start-build-scale-three-stages-of-the-1-to-100m-revenue-journey](https://www.notion.vc/resources/start-build-scale-three-stages-of-the-1-to-100m-revenue-journey)
+13. [https://www.thinslices.com/insights/why-its-harder-for-tech-startups-to-secure-1b-valuations](https://www.thinslices.com/insights/why-its-harder-for-tech-startups-to-secure-1b-valuations)
+14. [https://www.signalfire.com/blog/networked-saas-business-model](https://www.signalfire.com/blog/networked-saas-business-model)
+15. [https://www.thesoftwarereport.com/saas-industry-evolution-will-see-more-platform-strategies/](https://www.thesoftwarereport.com/saas-industry-evolution-will-see-more-platform-strategies/)
+16. [https://download.vn/nghi-luan-xa-hoi-ve-su-thanh-cong-trong-cuoc-song-39781](https://download.vn/nghi-luan-xa-hoi-ve-su-thanh-cong-trong-cuoc-song-39781)
+17. [https://vietjack.com/van-mau-lop-12/viet-doan-van-ngan-ban-ve-duong-den-thanh-cong-hay-nhat.jsp](https://vietjack.com/van-mau-lop-12/viet-doan-van-ngan-ban-ve-duong-den-thanh-cong-hay-nhat.jsp)
+18. [https://loigiaihay.com/nghi-luan-ve-su-thanh-cong-trong-cuoc-song-lop-11-a165447.html](https://loigiaihay.com/nghi-luan-ve-su-thanh-cong-trong-cuoc-song-lop-11-a165447.html)
+19. [https://vietjack.com/van-mau-lop-9/thanh-cong-chi-den-khi-chung-ta-co-gang-het-suc-va-khong-ngung-hoan-thien.jsp](https://vietjack.com/van-mau-lop-9/thanh-cong-chi-den-khi-chung-ta-co-gang-het-suc-va-khong-ngung-hoan-thien.jsp)
+20. [https://vndoc.com/nghi-luan-van-de-thanh-cong-chi-den-khi-ban-lam-viec-tan-tam-va-luon-nghi-nhung-dieu-tot-dep-161571](https://vndoc.com/nghi-luan-van-de-thanh-cong-chi-den-khi-ban-lam-viec-tan-tam-va-luon-nghi-nhung-dieu-tot-dep-161571)
+21. [https://www.forbes.com/sites/amyfeldman/2025/08/12/next-billion-dollar-startups-2025/](https://www.forbes.com/sites/amyfeldman/2025/08/12/next-billion-dollar-startups-2025/)
+22. [https://loigiaihay.com/em-hay-viet-bai-van-khoang-600-chu-trinh-bay-quan-diem-cua-em-ve-van-de-nhung-kho-khan-trong-cuoc-song-la-co-hoi-de-nguoi-tre-truong-thanh-lop-9-a184121.html](https://loigiaihay.com/em-hay-viet-bai-van-khoang-600-chu-trinh-bay-quan-diem-cua-em-ve-van-de-nhung-kho-khan-trong-cuoc-song-la-co-hoi-de-nguoi-tre-truong-thanh-lop-9-a184121.html)
+23. [https://www.antler.co/academy/what-is-a-unicorn-company](https://www.antler.co/academy/what-is-a-unicorn-company)
+24. [https://en.wikipedia.org/wiki/Unicorn_(finance)](https://en.wikipedia.org/wiki/Unicorn_\(finance\))
+25. [https://ff.co/startup-statistics-guide/](https://ff.co/startup-statistics-guide/)
+26. [https://download.vn/nghi-luan-ve-cau-thanh-cong-chi-den-khi-chung-ta-co-gang-het-suc-45672](https://download.vn/nghi-luan-ve-cau-thanh-cong-chi-den-khi-chung-ta-co-gang-het-suc-45672)
+27. [https://news.crunchbase.com/unicorn-company-list/](https://news.crunchbase.com/unicorn-company-list/)
+28. [https://callin.io/white-label-saas-unicorn-company-what-it-is-and-how-to-launch-yours/](https://callin.io/white-label-saas-unicorn-company-what-it-is-and-how-to-launch-yours/)
+29. [https://www.aol.com/news/then-now-elon-musk-mark-093101895.html](https://www.aol.com/news/then-now-elon-musk-mark-093101895.html)
+30. [https://www.forbes.com/sites/robertreiss/2021/04/29/the-4-phases-to-becoming-a-billion-dollar-business/](https://www.forbes.com/sites/robertreiss/2021/04/29/the-4-phases-to-becoming-a-billion-dollar-business/)
+31. [https://www.scribd.com/document/863488548/Tech-Billionaires-Timeline](https://www.scribd.com/document/863488548/Tech-Billionaires-Timeline)
+32. [https://www.code-brew.com/saas-business-model/](https://www.code-brew.com/saas-business-model/)
