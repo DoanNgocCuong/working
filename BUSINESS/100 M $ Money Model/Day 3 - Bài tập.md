@@ -309,6 +309,10 @@ Về sau tiền sẽ từ Job chính, từ Business và từ đầu tư.
 ```
 
 
+## 5.3 Với vấn đề PHÁP LÝ - mọi thứ không thể nhanh như vậy được => Khả năng rất cao a Hoàng An lo được vụ này. Và mình cần nhờ đến Mentor giấu mặt
+
+
+
 
 ---
 
