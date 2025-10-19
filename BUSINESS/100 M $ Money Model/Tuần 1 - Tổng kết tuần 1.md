@@ -12,3 +12,6 @@ Tổng kết tuần 1.
 | 3. Kết nối với các nhóm khác và sếp Khôi |                                                                                                                                                             |                                                                                                                                                                                                                                                                                         | Tuần 5: Rủ các nhóm khác ở HN offline chung và rủ cả sếp Khôi |
 
 ![](image/Pasted%20image%2020251019231104.png)
+
+
+---
