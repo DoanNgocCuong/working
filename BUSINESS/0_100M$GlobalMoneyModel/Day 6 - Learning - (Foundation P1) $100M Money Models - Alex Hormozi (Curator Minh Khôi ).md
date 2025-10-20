@@ -1,17 +1,18 @@
 (Foundation P1) $100M Money Models - Alex Hormozi (Curator: Minh Khôi ): https://bimathocvienso1.sg.larksuite.com/wiki/TzTtwKKBOi1ceBkzhFNlqZ8fgBb
 
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NzNlNTYxMmY5Y2UzMDRhZjY0ZDViYWNjOWQyODllMWNfUzlwcFV1ZDd2MWRNeG1Dd2hvY1BzcUNtb2cwYXUxNWZfVG9rZW46U3F3WGJGWHVMb0NXNW14ald3Mmx2UGd5Z0NkXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+---
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MDAxMDA0N2ZjZGY1YjEwNDdiNGI2NTk2ZWUwM2UzYTlfTmQ5M3Q0czRBTnJ1RTRVYjVGdlNTU09USUU1YUZOaFpfVG9rZW46U3F3WGJGWHVMb0NXNW14ald3Mmx2UGd5Z0NkXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZmQ0OGM5ZDVhYWRkNmQ5OThiODRiYjU1YzU3MzJkOGNfQnJ1dVJadjFKZXlQeDAxNnQxcTFQeEp3ZXlMQmw2SGNfVG9rZW46R0I0aGJZd2xDb1d6cm14ZHJnM2x2V3BBZzJnXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MDRhZjk3YjcwMWExNTJlNzE5ZDg2N2EwMDIzMGEyYWRfekR6Q1pGNm00eWZOM3RBUkNjZnkxcVF4N0VDbWtDb1FfVG9rZW46R0I0aGJZd2xDb1d6cm14ZHJnM2x2V3BBZzJnXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NzExM2M3YTYwMWU4YzczNTU2ZmJjYWU0NTVkZTRhZWFfSkY3VFJIbklEcHZ4UEdON2lDd2pHQ3U3czVNdWticG5fVG9rZW46TkpmZ2JLZkgzbzMxSEl4M3dXZGxRdWt2Z1pTXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MzE5YTU0YWEwZTgyMzJkZmJiODRmZTBlYTcxMDhlOGRfc0xlR1JYZ1BiZW9qOG9ySnhGNVpuSnlsb3RBUXYwWW5fVG9rZW46TkpmZ2JLZkgzbzMxSEl4M3dXZGxRdWt2Z1pTXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NWQ5NWJjMWVlNzY4MWIyYTRmZDZhNTcwYWZlZTgyZmNfeWxhbGdWRHNpQ3VTSG1KYTVEeldOdlY1YjdSMG16Vm1fVG9rZW46RzFOQWJXeDBtb0ZHTEl4WEFWVWxHMjYzZ1BiXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZWJlYzkzMGE2NzcwN2YyYmE2ZDRlYjI4MzI4NGEzNjNfZFRmMzlFTms3b1FPVkczSWgyQkloZXNWUDUwUmUxZTlfVG9rZW46RzFOQWJXeDBtb0ZHTEl4WEFWVWxHMjYzZ1BiXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MTg4MmM5MDJlNDEwNTQxOWQwMDlkYTI0OWJmNjc5YTZfTXdNYmw5b0FuSjZHUkp6VkhBM25hV2F1TkxUUmJEVHNfVG9rZW46SnhzemJiRmVpb3NiWWl4VTY3eGxHZzBZZ3ZkXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZmQ4MzcxZWRkY2FlOGEzMDgxZGZhYTY1YTM5NmVhOTRfallnMk5BS0Y0U1VJYU9yZGtPakk0T053Z3V4QVoweGRfVG9rZW46SnhzemJiRmVpb3NiWWl4VTY3eGxHZzBZZ3ZkXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZTM1ODhjMTg3MjhlNDYwMTg4ZmYxYTE4N2RkZmQ2ZDRfOW1admh6SDJWUjN4Q1dlalhQQ2tCNTRWUEJnZWxVVjdfVG9rZW46SXFvamJPR2Eyb1Q3eHl4RVNLZGxmYVJGZ1liXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=M2Q3MzMzMjJjZThjMGVjNjU5YjEyMzE4ZjdlYmIzODBfMDNHQmlyclVxNTlhUnM3VkFWR1NFbnFVeWNjak1sbDNfVG9rZW46SXFvamJPR2Eyb1Q3eHl4RVNLZGxmYVJGZ1liXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 https://claude.ai/public/artifacts/047a3853-9834-4c1b-a49e-a5e1d5929a3b
 
@@ -19,7 +20,7 @@ https://claude.ai/public/artifacts/047a3853-9834-4c1b-a49e-a5e1d5929a3b
 
 ## [1. Context](https://www.skool.com/skoolers/classroom/c4b8d595?md=86ca3282abf4421687df974a7cac98db)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YTgzYjZmMWFiNmU3NWM0Nzk4ZTU0MGM4YjgxZTNhYzVfckpjaGhIWlFERHhZcFUySHZBZUw1Mk9qUVpiNVFRbW5fVG9rZW46VlJKMGJIMVFDb05RcXF4enN5U2xPNENRZ0loXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZDNlNDUwYzQ5MTBmYjFiYWVmNDc2ZDQwNGZiNmQ4NDNfQkdOazRTdVRzMU9OeEF3VE9DbTNDdlZrVlAwUVJCWVlfVG9rZW46VlJKMGJIMVFDb05RcXF4enN5U2xPNENRZ0loXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 This content is only supported in a Lark Docs
 
@@ -29,17 +30,17 @@ Video Gốc: https://www.skool.com/skoolers/classroom/c4b8d595?md=86ca3282abf442
 
 Cần có Account Skool để xem - chưa có account Có thể đăng ký tại đây: [https://qrcd.org/9BG7](https://qrcd.org/9BG7?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExcXNTYmt2R0x2MXo3VEJ2ZwEeJz5lUzz-_R6hkSo9BZ77R9Apm0bZKpKBqw7n6TumX7bcvnO0n3SRc7NmmXo_aem_GrcWCGDXFFz5w3D6vqCrFg)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NTA5NjcyYzg0ODFmOGEwOTQ0NDNhZDE2NDBlMTUzNDJfRWxvaUtGSktReTdKb1JLT3Z0QlVpQmdObng3Ymc3WlNfVG9rZW46TjQxWGI2Nkk1b2pSUzl4YjR0U2xHWlBVZ1doXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZmRlZTAyY2MzODA0NDA0MTljMmFkYjFjOWZkYTE4ZmRfRWNjdjdpUnY3emFjTnJOcFd1OWJKNnpTcmFPMVFIM0NfVG9rZW46TjQxWGI2Nkk1b2pSUzl4YjR0U2xHWlBVZ1doXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
   
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MGYwZGMxYWZjNjRhNWQ3YjM1YmI0Y2E2ZjNkNDM0NTRfY2dwMmxYRmlkQXhVdllEempHRGQwRG44TXBrc0ZUSWdfVG9rZW46TzZqRmJDaE9Wb2dqR3F4M00xWmxiQUhkZzlmXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZTlmNDUwZGEzZTBiZDA5ZDJiYTRiZGJkMzkwMTM5MDFfaDNNYXdxVFBSajVYU2xBZXU5d1NBVXNjandvVzl6ZTNfVG9rZW46Rmw1QmJQZjBZb0lPdkd4cFBwbGxzRU1IZ2RjXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MTNkYjI0Y2U4MzQyODU1NTllODk3OTg5ZTY3MDVkNmNfc2tvT1JmYVhJbTRZMWNzSkFhQ2REZUttM2pmaWdYdUFfVG9rZW46TzZqRmJDaE9Wb2dqR3F4M00xWmxiQUhkZzlmXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZWIxMTAxZjdkZTEwZjVmYmI1ODU2NDVhYmZiMDhiNDVfZWlyVjczN3p0dUwwVVUzbG5zcERlb3ZVcm1LM3VFdUJfVG9rZW46Rmw1QmJQZjBZb0lPdkd4cFBwbGxzRU1IZ2RjXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
   
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OWUxMTYxYWNmNTc0Yjg4YzFkZjgyOWI0MjU2ZDhiODNfZElFQ1lDb092N0RabmdPakVBaWs5b3hpelMwWHFoZlBfVG9rZW46TTFkcmJqUHlNb2tjUVR4OXdncGx6OW1hZ2RoXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZWU1YTIyMzljZTAyY2Q2MDBkYmFkYTczOWVhNTc3ZTdfMFBReUNYTDdQdXdHMmhsRVhWMEJoenJlTUFkamM1R2pfVG9rZW46VW55cWJPNzdEb2c4MmN4Y2dTWmxLYmZpZ3BoXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NzZiMzI1ZGJkMzIwOGNmYjVkNDVmNzBmZjNmOWE5NmVfU2xPT1Z4R281S2tra0owNElrakwwdTJkTml6RXF3YjVfVG9rZW46TTFkcmJqUHlNb2tjUVR4OXdncGx6OW1hZ2RoXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YTUwODNkYjNiZjcxODRjMjIyOWE4NjZkZDAwYzJjOWVfVzBPM2V4WlNHUkZEMWdPZEJJWXJiSG1udGRDcHNINmdfVG9rZW46VW55cWJPNzdEb2c4MmN4Y2dTWmxLYmZpZ3BoXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YWUyYmIyMzZmODQwZjdmZWFiMmY3NjQxZDUxZWEwMTRfNzJJYTdueEdISTdlcWR5bFQ3TURRWEtRcHFtU3laWUpfVG9rZW46TUZWQ2JiMFhqb0M1Vkh4Q29VRGx3cjRiZ3RlXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZGRiODlhZDI2NTAxNmVmYzZkMTBkYmEwYzIwMzQxOWRfMHAxaHgxdHlyVFNyU1EwSWRzUHBsRGpyZHVCMUhmTkhfVG9rZW46UmNRMWJLUzdUb2J3VER4M0RrS2xUZ2V6ZzFiXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NGE0OTEwNTU5ZWZkNTMyMDViYjY4MWYzMmNhNmEwNjhfM2FYWUFIUXNVNDZXMUp3WEhxYklrOXhNSjNDdGI4ZHZfVG9rZW46TUZWQ2JiMFhqb0M1Vkh4Q29VRGx3cjRiZ3RlXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ODVhY2Y1M2VkNDUyNWIyNTMwYTIzOGViNDMzOTZjMTVfV2p0TVUxTTJzaGFhQW1PN0d0TWVGaUpkS2k4NzR5dHZfVG9rZW46UmNRMWJLUzdUb2J3VER4M0RrS2xUZ2V6ZzFiXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
   
 
@@ -69,7 +70,7 @@ Cần có Account Skool để xem - chưa có account Có thể đăng ký tại
 - 💸 _Mục tiêu_: Không dùng tiền túi để kiếm khách hàng nữa – dùng CHÍNH TIỀN CỦA KHÁCH để tài trợ cho tăng trưởng 🚀. ( Client Financed Acquisition )
     
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NDY5Nzk4OGQyNThmNTRiYzJhMGJlOTk3MDMxMDM1ZGZfekZiY0V4eUhaV2JvcHpkcUR1T09xZmdHYUZzdzVCR0hfVG9rZW46WnRNeGJjb0pzbzZtdW54Q0VLVWxlejBiZ05iXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NDYwODE4NDZlYjAxMDM0M2JhOTEyNjczNjBjODc1MmZfRTRXWUtpNmtwQ0JJbzZvVzlyaXdJa2JndlVXWmRMcXpfVG9rZW46WnRNeGJjb0pzbzZtdW54Q0VLVWxlejBiZ05iXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
   
 
@@ -77,9 +78,9 @@ Cần có Account Skool để xem - chưa có account Có thể đăng ký tại
 
 ### 📉 VẤN ĐỀ TIỀN MẶT VÀ DÒNG TIỀN
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZmMwZTg3ZGNhMGU2MDc4NDE3MDA2ZjkzYzY5OTE0MWNfUjJMVE9QR0RQNFprcldaVjZDejNkWDRvWTFGSUtZclNfVG9rZW46RWJTSmJQbmlCb0Jsek14TVhPNmw3SkdjZ0poXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NjVkN2E2MmRkNGQ1ZDlmZTFjZjAxOTQwYzJiM2MzMDFfbnBRbWxIdHRVeHBjUElrVFJTdTR4aG5QdldZTHRhY2VfVG9rZW46RHZyY2J6dWpHb1h6bmR4NldWamx3MWQ2Z2NoXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZGQ3MDc1NDBhM2RlOWQyMWUzOTZmODE0ODE3ZTUzZWJfSEhTM3lKVUhsNDNYcjJYdkxSaEVBT1U1VUM5Wk5jYzBfVG9rZW46RWJTSmJQbmlCb0Jsek14TVhPNmw3SkdjZ0poXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=N2NmY2ViYjIxM2E1NmU5ZjZhZWEwNDc4MTRkYTdlNzZfeXJjVnlSQlhmc3JQSlVoVDJPVEUzOVRmckFodHpzQXpfVG9rZW46RHZyY2J6dWpHb1h6bmR4NldWamx3MWQ2Z2NoXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YTQwYTk5YTUxYzNlMmU1ZWE2YWQxNzY1ZWZiNzExMWRfaWRtclhVZmVnMm9tV2p0eGQ1eDFzemxxbnZ3MU05akZfVG9rZW46WmxDeWJYZHVob3JOclZ4bUFkTWxUejR4Z3dmXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NWU5NjUxNWYyNDU2ZjQ3MmRjN2NkMWRhY2UwODIzZTdfTk5jdFVVT3hEV3NNWWdnYWpEUkNoclExODNMS2dGb2FfVG9rZW46WmxDeWJYZHVob3JOclZ4bUFkTWxUejR4Z3dmXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 - 💰 Ví dụ:
     
@@ -93,7 +94,7 @@ Cần có Account Skool để xem - chưa có account Có thể đăng ký tại
         
 - 3 lựa chọn tệ nếu chậm thu hồi tiền:
     
-    ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZTc0ZGJhYThjZjQzMDQ4NmEwMThiYTA2MDBmNjkxZThfaUZRUG1FMkNGWlcxdlBLYlRYVWhEQ0tCQzNPdTF4QmtfVG9rZW46Sk9oVGJDVWl5b1E0Z3l4WVVXWGwzYUZwZ3ZoXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+    ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZWYzNjBjYjdhM2VhZDlhYjc0ZjJlYjQzODg2NzcxMjNfVVkyeDgyaUkwUnRFZGVtNDdnZ05nU3U5Y0J4SFVNSHdfVG9rZW46Sk9oVGJDVWl5b1E0Z3l4WVVXWGwzYUZwZ3ZoXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
     
     - 🔥 Đốt tiền cá nhân
         
@@ -112,9 +113,9 @@ Cần có Account Skool để xem - chưa có account Có thể đăng ký tại
 
   
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OTFkOWJjMzFlMDYwMGVhMWYxODk2Mjg5OTczZGJjMzdfTXpTZ3J2WHZMeGRNRU5uM3ZpVkFVVHBDS0ZHTU80UFRfVG9rZW46VjNEZ2IxRHhpb3B3dlp4eFJPWGwyRUI3Z2xnXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NzI4NTA4ZDA0ZTJiZjFmOTZiMTcxMDhiZjg3ZWUwNjdfS3dNakU4d25ZeGZUQXYxS3BSdnA5MWZrNjN1MDJlaXBfVG9rZW46VFI5aGJZc2Nob2VDZ0p4azBkVGw1ck12Z2NkXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NGY4YjlmYTlkYjhjNTVhOGVmZDQ5OGI1OTBiODBjYmFfSUJKa2QzSzAzQ3RGZUdPV0hSVlNITDcxV1drNjV0WlFfVG9rZW46VjNEZ2IxRHhpb3B3dlp4eFJPWGwyRUI3Z2xnXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MGM2ZDFhYTRmMWZhOWNlMmZkYjllODhhYzJlY2I1OTBfbmk2R1JIalR4ZHFzUVZjS2xycjVBYk1mZVp6eXp2anVfVG9rZW46VFI5aGJZc2Nob2VDZ0p4azBkVGw1ck12Z2NkXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OTM1ZGJmNWIyOTMwNWZhYTMxYzM3Y2UyNWM2YTQ5NWFfMmN5eTA2NjIzVWM0emg0YnQwRVNnNGlEdWs0NmtLeHhfVG9rZW46WXJGdGJDSVBibzFyMUt4VmhEQmxWQ0RvZ0VkXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZTVmZDE4ZjBlYTRmZDViMGY3NWRiMzZmMTU0MDExNjBfWGZlek45bUpIRUJ0dFpQc25lM2hmTlM1dGxkUWtCUjBfVG9rZW46UFJDVWJJdGQ3bzBhb3R4akhZYmxqaTlxZ2doXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZmE4MmRiYTQ2NWNiNDg5OWU2MmYxMzFkZmJiYzIyNTdfRlY1eFVnN25MbVZpbFhlYlN5WkJBR3ZOdTYxbE1jN2dfVG9rZW46WXJGdGJDSVBibzFyMUt4VmhEQmxWQ0RvZ0VkXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MTRiMWZlNTc4YzAzNGNmMWMyODkzODE5YWIwMmExZDRfck8ya1h4TUlSTEx3N0M4RGVyWEcydTMzOHh6cmxIUWNfVG9rZW46UFJDVWJJdGQ3bzBhb3R4akhZYmxqaTlxZ2doXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 Câu Chuyện của Alex:
 
@@ -127,7 +128,7 @@ Câu Chuyện của Alex:
 - ✈️ Trong chuyến bay, gặp bạn cũ - bạn ấy có 2 điểm Gym, đều bán kèm supplement và có lời mỗi điểm $80K/tháng + $130K/tháng → Alex học hỏi.
     
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OGZiOWE2MzlkZTAwYWNhNzkwY2RkZGNlNDM3YmFjMDBfc3UyTHVuaGhWYUY4WkNybFd5NFlwNzBnOUtEaU1pcExfVG9rZW46UlRWbWJsR2VUb1RxT014dFZMZmw3dXBBZ2piXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=Y2IwNWNkMjc0MzlhY2M1NmU4NTJiMTllYjZhZjY5OGJfeDFZNG9rTkdNQWZwRFh6WG03MURCcmZiMXVYZThqZmNfVG9rZW46THR4NGIwTmU4b2gzR1J4WWtVdmw1RnlWZ1plXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MWFhY2QyODc5YzI3ZDcxY2E3MmI5NGM0ODczZmQxYWNfcTZ4UTlPMmg3R3BzSDlIbWREd24zOEtycHpDa093TUNfVG9rZW46UlRWbWJsR2VUb1RxT014dFZMZmw3dXBBZ2piXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MjUxZTM5MzcyNWIxZTg2NGNmMzJmMDE0YzllZjkyMWJfdFhBMm5jekN0MzU2QmM1VHd1UXEwd2ZsS05nZTRiWGZfVG9rZW46THR4NGIwTmU4b2gzR1J4WWtVdmw1RnlWZ1plXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 #### 💊 Chiến thuật đột phá:
 
@@ -144,7 +145,7 @@ Câu Chuyện của Alex:
 
 ### 📈 MÔ HÌNH ĐA TẦNG: TỪ 5:1 ➝ 30:1
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MmZhZDM3NDI2NWFhZWRjYzFjODM3ZjRkZjAzYTk0MjFfclFwd3E0Q3RRR0tkZUdpUklqVTJOdUx1YjJxVVB1TmtfVG9rZW46RENzR2JzRWRlbzFWd2t4b0pHZWxnVHZQZ2RiXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YWUxOTg2ODIxZjk3NmE5ODI5MGMwYzZkYWI5ODdkMGRfc2p5bE9RZHZOeUhHNXk2QmlsWE96djVVdkVpanBjS1lfVG9rZW46Q2tBcmJzNXU4b3JtWW54cUI5aWxnaU9TZ3ZoXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MDBmZGJkOTFjNDZmZjI3YWI5ZjlhZGZhNTQxYTg4ODRfWEpaeEFOSHBFcnpBVzlacGlmTzdhYU5YSERVRWxzNlFfVG9rZW46RENzR2JzRWRlbzFWd2t4b0pHZWxnVHZQZ2RiXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YjM2MzFkOTk1ODZjOTkxZjEyOGJhNDFmYmFlMzg4MDJfaGw4azZLdG1hWGhOd0kwWVAyQ05mYzVCQU50aGpzZHFfVG9rZW46Q2tBcmJzNXU4b3JtWW54cUI5aWxnaU9TZ3ZoXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 Alex nhận ra sức mạnh của việc bán thêm các sản phẩm phù hợp trong hành trình khách hàng:
 
@@ -161,7 +162,7 @@ Alex nhận ra sức mạnh của việc bán thêm các sản phẩm phù hợp
 
 ### 🏗️ GYM LAUNCH: MÔ HÌNH SCALE TOÀN CẦU
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZmRjMjQyY2E1YjYyNGE2NzZhNjU2MzE5MzVjY2JkMjdfTGI1aHNnWTJ2dVZUZWx6aGdCWm12MmY0RTl2enNrNTVfVG9rZW46WG9IdWI5dEVLb2Vrd1N4enJYUmxkRHF3Z0JoXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OGVjM2FmN2FmM2NlMDA2NGJmODdmNzZiMTBkZTI2MjJfOElvM281TExKQ09KQWtZSFNKa0twYUxtbkdDMmMwVlNfVG9rZW46WDhKYmJxeDAyb1RqV3l4SkVLbGw5aXF6Z3JjXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YzI2ZDg1MzI1OTI5OWQzZTRhM2RkOTY4OWVhYzA4MjNfZmdhaXZKM3k5cHllNXpwaTBOV2RkVDc2bXE1Nkp5cGZfVG9rZW46WG9IdWI5dEVLb2Vrd1N4enJYUmxkRHF3Z0JoXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MGMxYmI0YTk5NTZhM2Q2MWZkNDY3NzJhMzE2NGZhODBfRVJ1d1Z1dkt0Sk9CdGZMUU0ydjRLWVFFQWVhcXhTVVpfVG9rZW46WDhKYmJxeDAyb1RqV3l4SkVLbGw5aXF6Z3JjXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 - 💡 Từ kinh nghiệm thực chiến, Alex tạo multi-step money model: Cách thức tạo ra mô hình Đa Dòng Tiền ( Khôi: Hay còn gọi là Mô Hình Đa Tầng > Vượt hẳn hiệu quả so với các mô hình đơn tầng ).
     
@@ -172,9 +173,9 @@ Alex nhận ra sức mạnh của việc bán thêm các sản phẩm phù hợp
 - 🎯 Cốt lõi: Nếu có được tiền để có khách hàng mới → tăng trưởng không giới hạn, ko cần gọi vốn bên ngoài, thậm chí có thể sử dụng thẻ tín dụng để cắm vào chạy ads và trả lại tiền trước khi đến hạn ( nội trong 30 ngày)
     
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=M2UwY2ZhZjg0YmMwOGNmNDAxNzIyYmZiYWY5MzVlNDVfTDlMRHZJdHpHSVVLbWVKTEVlc05MdURXU0taQXVucXlfVG9rZW46Q0hpYmJQZnBab1pEaEh4UkF6dGxSZ0pYZ0JlXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=Mzk4YjQzYWE1MTIzNmI4MmU1ZjAzZjBhOWNjYTBkZDNfUEN5UzYwYkVqQ1djY3R1SDZGYVBtMXhzTFVpVVJLNjVfVG9rZW46Q0hpYmJQZnBab1pEaEh4UkF6dGxSZ0pYZ0JlXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NDkyMjYyM2IxMWQyNGI3MDgyNGRiNWE2MzdjYjVmOTVfMnJGdWhMb2cwUmJhYWdITGpJOWJkM2VFRDRjbk5zM3VfVG9rZW46Q1QzYmJnU29Wb2c3V3p4NDRyVWw0Y1gzZ3FjXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ODg1NWU3NmY3YmU1YzU5YjJhODJkM2U4ZTFmMGU1ODhfaXlta25sbzJkdkZBbUYyM3E1MURxNTZqbFIzNkxpb3JfVG9rZW46Q1QzYmJnU29Wb2c3V3p4NDRyVWw0Y1gzZ3FjXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 ---
 
@@ -247,7 +248,7 @@ Alex nhận ra sức mạnh của việc bán thêm các sản phẩm phù hợp
 
 ## [2. How Businesses Make Money](https://www.skool.com/skoolers/classroom/c4b8d595?md=f8ddad97b7db4170abadd330700a33db)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YTdhZWVlYmM0YThjMWI4ZGJiOTIxYTAzYzFiZmI1NDFfbWtzTVZiTjZ3alBBNW44R2prT1ZkeTMzSTlkT1JpWXJfVG9rZW46R0FraWJFcElCb3hRZkp4VmVCYmx4N3ZwZ2tjXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MzUwN2NhMTkzYjAxNmI0YzA1ZjRhMzllYTk5YWVmZDNfZmlsSWFnbzRVZFJSdEIzTkNNRG11Z2lEVDZMV2tSbVRfVG9rZW46R0FraWJFcElCb3hRZkp4VmVCYmx4N3ZwZ2tjXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 This content is only supported in a Lark Docs
 
@@ -273,9 +274,9 @@ Nếu chi phí để thu hút khách hàng (CAC) **cao hơn lợi nhuận suốt
 
 ### 🍱 **02. CASE STUDY THẤT BẠI: MÔ HÌNH BÁN BỮA ĂN**
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MjQxMGRjZjQzZjBjODJmNDY1YjAxNWM1YWFmM2NlYWFfT1pJWDl6Tjh1ZzVwQjNuT24zN1FFeWlLVWhWaHZMZmdfVG9rZW46UXBVZGJSNWpnb1lZeDN4dVFyWGxHRG9sZzBkXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZDE3Y2E2ZTUxZTU1MTVjYWIyOTNjMTEzMmQ0ZTcxNWNfWkNKTWZxWXgxaHo3SHVxblQ0UU5iMW02V1JzTTdGU3BfVG9rZW46UXBVZGJSNWpnb1lZeDN4dVFyWGxHRG9sZzBkXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NjdlMDgxNWViZjZlZjc4ZjVmM2Q5Njg3OTYyODZmZjhfdlJ5WkV0Wk81U2Y4dGpqTUdQbGxFdVphV0Jpc1RaRnBfVG9rZW46Vm96amIyeHhEbzFpc3N4U25HWWx3elJZZ0JnXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=Njg5NThmNDJmZWUwNGY5NjBkMzNjZDI2MWFkNWJhNjRfNmppWjNxR0dJdnBtQWhJaFFKY0J2VFZ4YjV2QkJENXBfVG9rZW46Vm96amIyeHhEbzFpc3N4U25HWWx3elJZZ0JnXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 📦 _Hormozi từng vận hành công ty bán bữa ăn (meals company) và bán cả Suppliment cho các thành viên tham gia Gym của mình – và đã bỏ nó. Vì sao?_
 
@@ -314,9 +315,9 @@ Nếu chi phí để thu hút khách hàng (CAC) **cao hơn lợi nhuận suốt
 
 ### 📐 **03. TỶ LỆ VÀNG: LTV: CAC PHẢI ≥ 3:1**
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZDQ2YjNkODE4YTFjMDhmNDFiYjdkMDMyMzU3MTNkNmVfWTZLTzAwQnJJNGdPeEJWejRPajh0NXJMRHFqcFI0VW9fVG9rZW46Q2pmZGJFeTVhb3N1WnZ4OTdhaWxzakRCZ3pnXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=M2FiMTAxNThjMmZiMWYzZjk2ODA0ZjhkZjRhN2E3YzZfWFliVWZ2cU0wUnlyWEdDS280Q1VLUjNFWVNJYlg2NTdfVG9rZW46Q2pmZGJFeTVhb3N1WnZ4OTdhaWxzakRCZ3pnXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MmQ4ZjhkNDNiZjgzMjZkODdjYTc3YjVhYWMwNDA4MGZfZmM4UE1vbGt2eldGQmVQaDZ6MkhZOHQxVE8ycGw4ajNfVG9rZW46UW1pUWI3T3phb0tDZm54NXAyZmxBMUtVZzV6XzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YjdiYmFiNzQwMzFkODE4NjdiNzNkOWNiMzE1MTc3NGZfYkg0dkkybm1qOGhGUE1CT2VjTHRQZlBaNlJacEF0Y0xfVG9rZW46UW1pUWI3T3phb0tDZm54NXAyZmxBMUtVZzV6XzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 ⚖️ Công thức lợi nhuận bền vững:
 
@@ -343,9 +344,9 @@ Bỏ 1 đồng ra để hút khách - thì tiền thu về ít nhất phải 4 �
 
 ### 📊 **04. 3 YẾU TỐ QUYẾT ĐỊNH DOANH NGHIỆP CÓ LÃI HAY KHÔNG?**
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZGQ4NDIzYmMxNzA3MTBmZmE3ZWIxMDY3ZTA2NjZlYjBfWU1rOGlPRjRLWE40allqM1RuMU9SVFZjbTJSUDRaQ2NfVG9rZW46WTcxdmJrc0ozb0U5VWJ4UzNQc2wzd2IyZ1lmXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OGEyZTgzMTgxZjNiZTlkMDE4YjNiZWVmMTNmMjkwNDRfekxWN29BdTU4MjVxU29SVHhOYXM4ZXhpaTdhcnJtRzZfVG9rZW46WTcxdmJrc0ozb0U5VWJ4UzNQc2wzd2IyZ1lmXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OWJhMDJmMzQwMTBiNzM3OTU4Y2Y3ZWNmMDAyMDE2MDFfelNGWWY1cjQ2OHB3ZVhDM1FFanoyVDhRb2RQdUxlSU9fVG9rZW46UWY2d2JJcVNhb2FDZ3l4UkxYS2w0S2gzZzVjXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OWQ3NTE3Zjg3YzhmYmQxMjJkOGU1MmU2YjljOGIxMjFfZXJmbnBvYzkzOGpGdG9Hb2VYRUhsSlRoa2hOZFNGaHJfVG9rZW46UWY2d2JJcVNhb2FDZ3l4UkxYS2w0S2gzZzVjXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 #### 🔺 **1. CAC – Customer Acquisition Cost**
 
@@ -379,7 +380,7 @@ Bỏ 1 đồng ra để hút khách - thì tiền thu về ít nhất phải 4 �
 
 “**Low CAC + High GP + Short Payback Period** = Make more money, faster”
 
-> ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YzJhYzU3MWQ4NTEyZmUyNTQ2YjA1MjllNjgzZTM4NmVfZnppSWNxZG5GblJZRFlQM04yNHRQWDJFSlpCNkpDZG1fVG9rZW46WE03Z2JuUEJRb2dYaEJ4b3RkNWw2QlNXZzZmXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+> ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MWExZmRlNzcxNTAzM2RhMWFlMmViZTZkNTI2MGNlNzlfT0l3ZER2bzYwWWJzQlhHVjd3c1lMTk1Sb2JGdTFjMEJfVG9rZW46WE03Z2JuUEJRb2dYaEJ4b3RkNWw2QlNXZzZmXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 > 
 >   
 
@@ -429,7 +430,7 @@ Bỏ 1 đồng ra để hút khách - thì tiền thu về ít nhất phải 4 �
 
 ## [3. Customer Acquisition Cost (CAC)](https://www.skool.com/skoolers/classroom/c4b8d595?md=d4f02cc7828449b2afdfa9aec11a52d1)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=M2YzM2VkMmZlOTY0ODIzNjgxMjEyYTUyMzIwNThhZmNfTElKRjdyOE9yZ0NBQXZkdXJpQ0p4amFIbGtVdEdFU3lfVG9rZW46Tm1GMmJVWDZob1NrcXd4YWRPN2xtVVZRZ25nXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NzI3YTk5ZTM4ZTg4YWMxZDc2YWEzNjdiODVmMDU2OGVfM0lVN2lnamJKcno0T0M1OXRJNWVKdU1Qc0tKUDRIcjNfVG9rZW46Tm1GMmJVWDZob1NrcXd4YWRPN2xtVVZRZ25nXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 This content is only supported in a Lark Docs
 
@@ -437,7 +438,7 @@ Video Gốc: https://www.skool.com/skoolers/classroom/c4b8d595?md=d4f02cc7828449
 
 Cần có Account Skool để xem - chưa có account Có thể đăng ký tại đây: [https://qrcd.org/9BG7](https://qrcd.org/9BG7?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExcXNTYmt2R0x2MXo3VEJ2ZwEeJz5lUzz-_R6hkSo9BZ77R9Apm0bZKpKBqw7n6TumX7bcvnO0n3SRc7NmmXo_aem_GrcWCGDXFFz5w3D6vqCrFg)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MTk0NzAyNDBmNzU5M2U4NWNkNTYxOTUwNjMxYmU0MDJfZVFJZlB0MXVnanN1a3BCRFRQU1RCNGY2Y2d1TVIxNTNfVG9rZW46Um56RGJCTFU2bzlYc294MjJqcWx5cFRHZ0pkXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YmYyMjdiMjc5NTA1ODVkNjRlYzY1YTM3YTg1MGRhMTFfRTJMd3hWa2trRlhSR0ZzWFBid2VFSGZBTHM0SzlRNFhfVG9rZW46Um56RGJCTFU2bzlYc294MjJqcWx5cFRHZ0pkXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
   
 
@@ -519,7 +520,7 @@ Cần có Account Skool để xem - chưa có account Có thể đăng ký tại
 
 ### 🚀 _"Want better CAC? Measure it first." - Muốn Cải thiện - Phải ĐO LƯỜNG:_
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MWNhY2JjMjFhNDllYjI4MGY1Y2U2MjQxNjhlMDg2MDFfb2NqSDZrcHhHd1pXc3hWQ3hUdWlwa0VEYk0xZFNON0hfVG9rZW46Qm5EZmI4cldjb1dFODd4WjZOS2x6QUFQZ3dkXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZTNjZWRkZjVhZDc0MTE2ZmNhZTgxOTU2NTg5YmY0NmJfWlBFSVlsTTRKb0N3NlA2bE5BU1dtdnV2bGJDVFZzN1JfVG9rZW46Qm5EZmI4cldjb1dFODd4WjZOS2x6QUFQZ3dkXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 ### 3 ĐÒN BẨY CHÍNH:
 
@@ -545,13 +546,13 @@ Hai cái này là quan trọng nhất.
 
 Câu hỏi: Tôi nên tạo ra Các thông điệp Free, Bán các Gói giải pháp Free để thu hút Khách hàng tiềm năng ko ?
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MDk3Y2MxODlhOTVlNTUyNjBlYWFhODIzNmYyNTgwNzVfUE5mS0JXV0NVWVlhYXlzQ2FOTHJzSVIxWUZjWWRyMGVfVG9rZW46VkJaWWI5ZFpXb2Rpeml4eGhwdWxXcnVjZ0xmXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MzE4YzZhMWQyZDU4NDEwZmFkMjNmNzdiMjhjMmZkMzBfd0RxNjFUOEVjWGVlN290RFJ4WjB3dHFzcFlrWXkyWHhfVG9rZW46RWFwOGJ0Ymt5b2M2cEp4bERhdWxtUGhhZ01nXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NTYxNmIyNGEyMjRmOTI2OTBiZjQxMGU2OTc2M2QwYjFfd0gyY3JCcTBXR0xYcmVDSFZONmR1YlB0VmhiWktuYWdfVG9rZW46VkJaWWI5ZFpXb2Rpeml4eGhwdWxXcnVjZ0xmXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NmU0YmRjOGUyMThmZTYzMDhkOWMzOTlmMTM2YjQ2MzdfS3BNUjJvYW03MDdWczZtaWFpckNaNUhLdzdFVFJ3YVpfVG9rZW46RWFwOGJ0Ymt5b2M2cEp4bERhdWxtUGhhZ01nXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
   
 
 > “If I had only one offer to make or my family would be killed… it would be a FREE offer.” – _Alex Hormozi_
 > 
-> ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MDM2MjI0MDgxNmYwMTExOWJhMjNiM2YwYTExNWFiYmNfa2kwUEtJOHRaS1FqZHFWRElQUDB3dlAzdDQ4VzdlbWFfVG9rZW46UDVzbWJ6NEFGbzYwZFB4UkM1Y2w4RzZ1Z0VnXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+> ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MDAxYjY1N2FjN2Y3OWZjNzU0NWU0MjBlMWE0NjViZGVfU3ZLRTRvWnJvWm9rU3VhUEtUVGFZUk45ZVZDVWlDNXFfVG9rZW46UDVzbWJ6NEFGbzYwZFB4UkM1Y2w4RzZ1Z0VnXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 > 
 >   
 
@@ -571,7 +572,7 @@ Câu hỏi: Tôi nên tạo ra Các thông điệp Free, Bán các Gói giải p
 - Đòi hỏi **tăng friction (ma sát)**: form dài, quiz, video bắt buộc, targeting kỹ hơn
     
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MWEwMDhlMzk2ZDcxM2QzYzRlOTI3ODYyMWFiMjEwNDRfZVhzVkFvZkd5bFVUN0lDS09QMGFHZ2l6a2s1RjVTMDNfVG9rZW46S3hQaWJaQzU1b3VTdGF4VjlWZWxZUU9CZ3QyXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NmVlZmRjMzZmZDM0ZWViNWE0NzAxMWUxOThhM2Y5ZDVfeWtDemVwSkpMcXZWUzJoaXNTV2xWMzA4WFdpSzY0Q3dfVG9rZW46S3hQaWJaQzU1b3VTdGF4VjlWZWxZUU9CZ3QyXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 ### 💡 **Mô hình 3 bước:**
 
@@ -609,7 +610,7 @@ Alex test trên 20 phòng gym:
 
 🧠 Kết luận: “Người giàu cũng thích miễn phí – nếu cái đó đúng cái họ muốn.”
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MmFlMDZmZDE2Yjc5MjUyYTBjZWZlNjBhNTQ0ZDhjN2JfdTh6Wmo5ZE5yVWtNSllYSE1VcTU5WVl0ZDNWOTc2WTJfVG9rZW46STUzaWJsbkNSbzdIdmh4VkdzT2x1Y2FwZ1JNXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YTI4Nzc0Y2NiNDJiYTkzMGViZGZhMWE5ZjMxNjcwNjVfMlNTbk0wVTdUekl2MzM2ZEMxSFFlSlpEOGZKaUtsTFdfVG9rZW46STUzaWJsbkNSbzdIdmh4VkdzT2x1Y2FwZ1JNXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
   
 
@@ -617,7 +618,7 @@ Alex test trên 20 phòng gym:
 
 ### 💳 **CHIẾN LƯỢC "DISCOUNT" – GIẢM GIÁ KHÔNG TẦM THƯỜNG**
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NDI2NzFhZDlmMmIwYWI4MWZjMTliMDdkNjhhMmQzMThfMXRFZEtGbmRRNElQUEJiYnlydDhPbTNINUIxNUFtTlZfVG9rZW46UkI0dGJkSmpsbzBqZjV4YzRsb2xVMnpSZzRjXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OTE5MTI1YzM4MjBlODc4YTIzZTJiODM3ZDZiNDcyN2RfWW9mU3pNdWFGOWNzMXkzUTl4YjRxTURNcXZicHlTaUhfVG9rZW46UkI0dGJkSmpsbzBqZjV4YzRsb2xVMnpSZzRjXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 Nếu ở các dịch vụ mất thời gian để cung ứng ( chuyên gia, Coaching, Luật Sư ... ) đằng nào cũng mất thời gian và chi phí - ko thể free được thì thay vì Free có thể Để Discount.
 
@@ -643,13 +644,13 @@ Nếu ở các dịch vụ mất thời gian để cung ứng ( chuyên gia, Coa
 
 > "Discount chỉ có ý nghĩa khi nó thay đổi hành vi người tiêu dùng." – _Alex_
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=Nzc5ZDkwNTIyYTdhMGRlMmUxYTZkNTBiZGUzMzRlMTJfQnFxYTZrZzhQTjJ2OEp0TENYcldSZ3ZCN2tlSXZjU1lfVG9rZW46RERyT2JqWHhkb2dZd0h4OFFnc2x0azVsZ0ZiXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MThlMmUwYjhmM2MyNDk4ZjllM2U4MzhiMjIyOWU3ZDNfa2JRWERrNUFCMWJJTlFnbnN6Y1NsZGtndHJhYzByd0xfVG9rZW46RERyT2JqWHhkb2dZd0h4OFFnc2x0azVsZ0ZiXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 ---
 
 ### 🎯 **CÁCH TRIỂN KHAI DISCOUNT KHÔN NGOAN**
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NGMyMDBmMjVjMGQwNWRiNWFjNTg5NWFkNmI1OTUwYTdfb1ZCZWN4QmhBV21PV2JXTVpJTDhpWjU2aTBiMFZ0V2VfVG9rZW46RXdXOWJ3YmVob2xKNXd4dUpSNmw5MmlCZ1dlXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZmZjMGNlMmYxYTI3OWJjZTUxOTQyZTI3ZDk0M2E2YTNfYVBuek4zSHFXQjJyOEpNV2xRUXpVakowY1FwTHpVa1BfVG9rZW46RXdXOWJ3YmVob2xKNXd4dUpSNmw5MmlCZ1dlXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 ### 4 CÁCH HIỂN THỊ DISCOUNT:
 
@@ -670,9 +671,9 @@ Nếu ở các dịch vụ mất thời gian để cung ứng ( chuyên gia, Coa
     
 - Với sản phẩm số hoặc mới, hãy dùng % giảm thay vì số tiền cụ thể
     
-    ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NGRlNGIzYzNjZDkwN2Y0M2Y1ZWFiOTJhMmE5MmY2NTRfcXRzRnVEWWFSYW1NcjkyM2dlVGJqSmtBUkRGVU5mQzRfVG9rZW46Rnp2cGJ1R3pub3VuTVN4Vm90Z2xyRzFuZ29jXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+    ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZDZlZDUyYjYzODhmOWQ0Mzg0NmJjMzU0MDJhZDNkODZfd3BsNElMbExROGhUWFMxU2J5VWlGSk4wZWpHa0dSNUxfVG9rZW46Rnp2cGJ1R3pub3VuTVN4Vm90Z2xyRzFuZ29jXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
     
-    ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZjA3MDZmYjQ1NTRkMWFhMWE2MDVhNzgzN2E1Yjk1YmFfVlc2RUZvYVVQRzZkbUlSNHVMSDliOEtNQVd2eEhjcFdfVG9rZW46VUcySWJGc2pkb0REckp4UEhhTWxKelJwZ2JnXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+    ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OTY4ZGM3ZmQ3ODUyMTI1Yzg4M2NhNTk5NjMwNWFhMDZfdGtHNlNTS0JzV0xuWHNLa1FDMjJpRkJYdFo2cm1USUFfVG9rZW46VUcySWJGc2pkb0REckp4UEhhTWxKelJwZ2JnXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
     
       
     
@@ -681,7 +682,7 @@ Nếu ở các dịch vụ mất thời gian để cung ứng ( chuyên gia, Coa
 
 ### 🧩 **QUY TẮC "SPLINTER OFFER" - "Bóc Nhỏ Offer" để dành CHO DISCOUNT**
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MWE4YjJlZWRjYWYwZjAxMTRiY2I4ZTI2MTkxMjkyYzRfd0dZb2RmRDE4UmY2Mzg2SGFaRFI0OGNQdWIyUERXZ1JfVG9rZW46T3RDemJzSnRtb0xZZEh4TDNnbWw2MlFCZ21nXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZjdhOWY1MzcwMmUxYjlhODM2NjFjY2U2MjA1MmQzNTZfMGZ3NzNlb0Q3eWNOUUE0bmJRejFGNktVd0RzUXpBQXZfVG9rZW46T3RDemJzSnRtb0xZZEh4TDNnbWw2MlFCZ21nXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 Nhưng mà anh ơi, sản phẩm chính của em cao cấp và chi phí lớn lắm, ko thể discount được, cũng sợ mất thương hiệu nữa anh ạ.
 
@@ -689,13 +690,13 @@ Nhưng mà anh ơi, sản phẩm chính của em cao cấp và chi phí lớn l�
 
 ➡️ Tách 1 phần nhỏ từ sản phẩm chính ra một mẩu nhỏ ( 1 module, 1 gói mini, 1 gói chỉ 10% thời gian của gói chính) → giảm module này 99% → dẫn khách vào Sản phẩm chính
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NTRmZmYzOTdjOTQyZjRjMDVjZGQyOTI0MzE0ZDYwODZfN3VKYWlaMEtkNGlMNjVuWG1ocmFRTEJ1TkhDMkdQNmRfVG9rZW46UHdaSGJHeXdEb0Q5ZXJ4TzBMZGxuOHFOZ2dmXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OTU4MDJjOWY2N2M4N2Q2ZDY0MWY3YzdmOTY5NmEwNmRfZlBVZjFsMWlGM1JIS255M2p3RTJXUWdNMnQwZkpZd0xfVG9rZW46UHdaSGJHeXdEb0Q5ZXJ4TzBMZGxuOHFOZ2dmXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 ---
 
 ### 🔄 **FREE vs DISCOUNT: DÙNG THẾ NÀO?**
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MmZkYTJkNmU2ZjQxMDNiNzRhMTEzOTNkODU2MGJkZWFfNGJueHRmSEwycHl4Z0ZHbFJNdEl2cjhsUTc4bHlnYjFfVG9rZW46WkZwVGJqYTNkb1RicUZ4VDBkRWwxd3laZ05iXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NDY3M2EyMmU1ZWMwODM2MmZmZDUxMWJjZjI1YWU4MDBfTmpkcTd5RUFPdFprUmdlRjlPYXZxOGgxQmpFQlFVeXdfVG9rZW46WkZwVGJqYTNkb1RicUZ4VDBkRWwxd3laZ05iXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 - Cả hai đều có hiệu quả nếu dùng đúng cách 🎯
     
@@ -745,7 +746,7 @@ Nhưng mà anh ơi, sản phẩm chính của em cao cấp và chi phí lớn l�
 
 ## [4. Gross Profit (GP)](https://www.skool.com/skoolers/classroom/c4b8d595?md=6ad908b59ce64080b0269ecfdde62056)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NDY3NGU0NTkyN2NhYTZkMGNmYWFhODYxYTc5Y2IxMmJfS3FTd3hmZlRGazNsc21OUTdpMjJVdjhDNUxZZGIwcFZfVG9rZW46VmsyMWJoUnphb1VucVB4MDI0R2wyMUtXZ0VlXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=Zjg0ZTEyZmM2NGU2MjZmNjI4YzY5NWQ2YTk1NDlmZmNfM0xhMkJ5NUE3Rmg2dmRiYW0yNWtQVnQxRGdETjBuSXlfVG9rZW46VmsyMWJoUnphb1VucVB4MDI0R2wyMUtXZ0VlXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 This content is only supported in a Lark Docs
 
@@ -779,7 +780,7 @@ Gross Profit (Lợi nhuận gộp) = _Giá bán sản phẩm_ – _Chi phí tr�
 
 ### 📈 CÂU CHUYỆN THỰC TẾ: 56 LẦN LỢI NHUẬN TỪ CÙNG MỘT SỐ LƯỢNG ĐƠN HÀNG 😲
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MzhkZGUxMmY2ZjkyZjQzYmZhMjllNTFkMzU2OWViZjlfZGhYcFViUWJwMUx2WWR2WThhTE9uOWhpbDlBS016RmFfVG9rZW46UFM3SGI5eGE2b0tjMUp4ZGZLdWxueEpZZ0loXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=N2Y1NzdhNzU0MDlhM2RhMDFlN2E5MmFlYjEyNzBlZjFfOFJCNGR5ZmJCYWZTYzFWQ2I0ckNDbElVWFVqVVlkSVFfVG9rZW46UFM3SGI5eGE2b0tjMUp4ZGZLdWxueEpZZ0loXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 Một người kinh doanh cùng ngành Gym với Alex bán số lượng khách tương đương, nhưng chỉ thu $300K/năm lợi nhuận. Trong khi Alex thu về $17 triệu/năm 🏆
 
@@ -808,9 +809,9 @@ Nếu bạn có biên lợi nhuận cao, bạn có thể chi tiêu mạnh mẽ h
 
 ### 🍔 CÂU CHUYỆN BURGER $50.000 🤑
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YWU0MWU3MmI1NTViMDkxZmRiNjdlNWFmMzRhNzc5YzFfV3Z5SDl2czE0RXhQS1hCbVFOR0x5YnZsTFpmY2gxdUlfVG9rZW46QWZYQmJ1ejlmb3ZpNVR4dVk0TWxQTzNPZzJmXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NWM0OGQzZjUxNDE0YTM0MDQ0NTY4NGY2MjBhYjk1YTlfSDd1eUJIeTdvRXJ2S3N4YXJEbEFsODIwOTIzQ0s2TnRfVG9rZW46QWZYQmJ1ejlmb3ZpNVR4dVk0TWxQTzNPZzJmXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MDBmOGM2YzJkNTNhNGVjMTY3ODZhNzhlY2U2NDczNDdfT0dBaFNjTXQ1U29mbldPWXYxQUdla3poak54MHN4a3pfVG9rZW46TkpBUWJQb2NCb2VES2h4QWhad2x0S1VjZ3FjXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ODBmZjUwZTNiY2ZjZGYwY2VkOWIzODljMDU1MzgzNDZfcGhBeWNUTlcyWHpFWkpkaEtEcWg3dHhSblE5ZTJ2bzJfVG9rZW46TkpBUWJQb2NCb2VES2h4QWhad2x0S1VjZ3FjXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 Một người ở Wall Street mua chiếc burger $50.000. Alex mua burger $13.
 
@@ -822,7 +823,7 @@ Một người ở Wall Street mua chiếc burger $50.000. Alex mua burger $13.
 
 ### 📊 CÁCH TÍNH GROSS PROFIT: SẢN PHẨM VS DỊCH VỤ
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YWU2ZTM4NzAwNTAxMmUxMGExNTA1ZWNmZDg5Yjg5YmFfdlFET1NuNFRyakZlcFdJVEdQdkU5ZGt3T0hOeWRUU0JfVG9rZW46RUQzQmJHSXN2b3FvbTl4c1Y1ZWxUMjk1Z2hjXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NDc0Y2QyZDAwZmFiYTM0MTJiZmZkNjU4YWNmZDYxZWNfd2ZFSnI1clZTNXBQY0NWb2pCSmkzSjFCbDNwMEpGVXpfVG9rZW46RUQzQmJHSXN2b3FvbTl4c1Y1ZWxUMjk1Z2hjXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 ### 🧱 **Với sản phẩm vật lý:**
 
@@ -835,7 +836,7 @@ Một người ở Wall Street mua chiếc burger $50.000. Alex mua burger $13.
 - ➡️ Gross Margin: 80%
     
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZjQ3YTRiMTIwYTEyMWUyNDNkYjIwNWE0ODNjZWE1YzJfcUNLSzkxZzRnSVROSFpXZDRBOUFSWHh0Z1pUV1VTVEFfVG9rZW46SWpUQ2I0VE41b0pjN1R4aHFuQmx4M1FYZ0tmXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YzcwOWNiOWNmOWMxMDQ3OWE5MGYwMWU2ZTk5NjUwN2ZfbWpsNWZXVWc3ZW5UWHFCT1N0dTdvbnR5cTI3cGFoYk5fVG9rZW46TkpKQmJZZVZUb2h4cFN4am5VQWw3WVRTZ21kXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OTljZGEzYzljNTYxMjY4YWYzOWUyOGQzMGM2MGEwN2FfZ3NTZVdqM3BPa0VlTmdaY0hPTEZKa2pMSkV3a1RJVHBfVG9rZW46SWpUQ2I0VE41b0pjN1R4aHFuQmx4M1FYZ0tmXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZDAxZmNjYzEzZWNkM2M5ZTc4OWYxNDA4ZWRiMDM2NjNfcXdVbFRxeXgzSGpiNXg4ZWdhMERjNTJBNGNHUlhQOTBfVG9rZW46TkpKQmJZZVZUb2h4cFN4am5VQWw3WVRTZ21kXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 ### 🛠️ VÍ DỤ **Với dịch vụ:**
 
@@ -856,9 +857,9 @@ Một người ở Wall Street mua chiếc burger $50.000. Alex mua burger $13.
 
 ---
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZmM3NmFiMjVlN2VhMTQ4NmFmMDg5YWJlYTZlMDNiZTFfZWVYZVpoSHNUOFprcmlzRXJKdFN4N0FmQnFPOHJDd05fVG9rZW46Rjc0YmJyWkw2bzNwdXl4U0E5QWx0ekxwZ2xlXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZDJmODRhYjYyNTdkYmYzY2RmMGM2MDYyZmU3ZDU3MjVfa3g4ZVdNZ3l2TlV1bGd3ZnpwSEZQU2s5QzBUcndYcWFfVG9rZW46Rjc0YmJyWkw2bzNwdXl4U0E5QWx0ekxwZ2xlXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MjBiMWMyYjY2ZWQxNGQ4ODA5YWMxMWM3MDA4OGIxMGNfU3JQallYZ2JOcGtVbno4SmJHaVRzYWFOMXQzYU9HOG1fVG9rZW46WmdzVmJEQ3pOb3N3Y2h4ejEzeGxMTExyZ0JlXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MjIyYjgwMzk0MGUyMjc3YTAzMzNkYjBjMjgyNTRhZDZfMU90VXF1aGFMWHltVXBUS2ZSNmdqRVpDNmlnWjQwVWtfVG9rZW46WmdzVmJEQ3pOb3N3Y2h4ejEzeGxMTExyZ0JlXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 ### 🧾 PHÂN BIỆT **GROSS PROFIT** VS **NET PROFIT**
 
@@ -873,7 +874,7 @@ Một người ở Wall Street mua chiếc burger $50.000. Alex mua burger $13.
 
 ### 🛠️ 3 CÁCH CẢI THIỆN GROSS PROFIT KHÔNG CẦN TĂNG GIÁ 📦
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MjkzM2VlNDZiOTE0YTM1NDY4ZjdlOWEyZDg2NWI1YmFfMW1Ja2hhTHJDcDJkanFsQ3FNOTZxbjFMYnFVWUsyUHhfVG9rZW46REZVeGJHNkYwb1gzTUt4VlJXN2w4Y2VHZzBlXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YmU4Yjk5N2MzZjIxZjRkNDMzZmM3NjcyYjNiODFmYmRfaElNaVpHeFZOallUNmpEcUdSc3MweHg1V1I2Y21RblFfVG9rZW46REZVeGJHNkYwb1gzTUt4VlJXN2w4Y2VHZzBlXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 1. 📦 **MORE** – BÁN NHIỀU HƠN
     
@@ -925,13 +926,13 @@ Bạn chỉ có thể giảm chi phí một mức nào đó, nhưng có thể gi
 
 ## [5. Payback Period (PPD)](https://www.skool.com/skoolers/classroom/c4b8d595?md=6227b2ce3ae84ac9bfb97a69ce05b5b4)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MmFkYzgzZGZjMDUwODg1Yjc4MGYwZjA1M2ZmNTUwNDBfZTRHZDZqeU5KZlZIUlUxaDA0T2YwZ2R2VFUyNDBCVjFfVG9rZW46WGhDMGJXS1pDb1RXbjh4ZkxncmxHVExUZ1dnXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OWI0MDk4ZDA5ZDgwZmMxOGZiZTM2YTM3ZTEwMGE0MGNfSnoxa2Nhdk5zR2hkTTV6NXhlY0lmZW0waEZBOHl3UkpfVG9rZW46WGhDMGJXS1pDb1RXbjh4ZkxncmxHVExUZ1dnXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 This content is only supported in a Lark Docs
 
   
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OTI2Yzk1NTM0N2YzYTc5NTJhYTdkY2M3NDdmYjBlOTBfUXFmWDVqYkZYRmcwMWljeDdrN0trT1VCT3pnaFl4d1FfVG9rZW46Qno2VmJQR1p5b3VBSEF4ODhzUmxsVHQwZ1FUXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MTIyYjI0ODBlMTk4YThjYjNkYTEyYmM5ODJmNGZkMTJfb3ZQMWE3ZUd4Z25WSFNUZHV3enlEeENZOE1ITWJ3T0lfVG9rZW46Qno2VmJQR1p5b3VBSEF4ODhzUmxsVHQwZ1FUXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 Video Gốc: https://www.skool.com/skoolers/classroom/c4b8d595?md=6227b2ce3ae84ac9bfb97a69ce05b5b4
 
@@ -970,7 +971,7 @@ Cần có Account Skool để xem - chưa có account Có thể đăng ký tại
 - Khách hàng ra quyết định theo chu kỳ ngắn, mua nhiều trong vài ngày rồi im bặt.
     
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZDQ5YmQzYmI4ZTFiMTdkMTZkNjNiNWIwNzM1YzAyZmZfdnM0aUtzV1IxOUluWnBYaEwzNnd4RlFUektPYm53MEJfVG9rZW46SU96dWI2bE1ib3BkUG14TGxqOWx5UjZ6Z2VjXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZTJiZDVjMjgyYTNmYTIxYTBlZjUzOTRmZmFjMGU1MWJfU1JNcng2TzJ4b0tmUllBU001eFkyY3RHdjdYblc3WXdfVG9rZW46SU96dWI2bE1ib3BkUG14TGxqOWx5UjZ6Z2VjXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 Cô bạn của Alex muốn giảm cân, chọn môn đạp xe. Nên lên mua Xe đạp online.
 
@@ -983,7 +984,7 @@ Cô bạn của Alex muốn giảm cân, chọn môn đạp xe. Nên lên mua Xe
 > 
 > MUA Cũng Tốt, Ko mua cũng chẳng sao.
 > 
-> ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NWZhMmRlMzA2NjczMTM3MTI3OTE4MjA2NGRmZjdiNmNfY3lBdUw5blRzcWlVWldiU2tGSHJiWHZJMmdmM3dQbXhfVG9rZW46WnJTWWJMRkoyb1ZxdWp4SzhNWWwzcUI1Z2ViXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+> ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MjYxNmU5YjYzMGJhMDdkNjQxZjcxNWJlNDAxN2Q3OThfNmZMR0FFTXBucXNIT1hpUGtWQTZvSmtNZWNoazBzbFNfVG9rZW46WnJTWWJMRkoyb1ZxdWp4SzhNWWwzcUI1Z2ViXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 > 
 >   
 
@@ -993,9 +994,9 @@ Cô bạn của Alex muốn giảm cân, chọn môn đạp xe. Nên lên mua Xe
 
 #### 🧮 Case Study: Chúng ta làm 1 Ví dụ để Tính Thời gian hoàn vốn nào:
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NGJlZWI4YmZjOWQ2YzNjNjRiNmVmMWI1YjcyZGVhMGFfNVpYUkRCdjVTb3ZaY1c3N0ZsMHRvbHZTblY0Q1gzV2ZfVG9rZW46SUoxWGJJY0lkb1NzNHR4MWJtWWxYTWtLZzZiXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OTg2MGYzZTA3YWIzNDI0ZTZkZGQyM2FkNDU0OWQwNmRfVEx1TUY3dnAzMU5lQ0V1Nmc5VzNzNWpFS0RSMVh1VlBfVG9rZW46SUoxWGJJY0lkb1NzNHR4MWJtWWxYTWtLZzZiXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZDc1MzgzZmQ0ODg2YzQ3MTE5N2I5NjRmMmU1M2M2ZTNfTzIwN3N6aVVRUWd0VG9BWnYyZnhmSmFKR1JtYjF4eldfVG9rZW46U09OSGJ4dTZUb3dEelJ4NG04V2xucFMwZ3BUXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NjM5YmNiZTZkOWYwZDBmZWNlNzlmNDc2MDNhYzUyNzFfRXYxcWljYXNVYTRSbTNiRTBuSE9nQVlkWEpxTGp4NTFfVG9rZW46U09OSGJ4dTZUb3dEelJ4NG04V2xucFMwZ3BUXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 - CAC = $160
     
@@ -1018,7 +1019,7 @@ Cô bạn của Alex muốn giảm cân, chọn môn đạp xe. Nên lên mua Xe
 
 ### 🎯 **4. CÁCH RÚT NGẮN PAYBACK PERIOD HIỆU QUẢ**
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MDdmNmI3OWNhMzllNzFmZWI5ZTgwNGRhMGY5NjYzODFfSVpJSkFmWGVnendCZ2lNOEV6czJDNm94VHVMWmRuSlRfVG9rZW46VGpIZ2JGaHhYb1ZBakV4eXFIUWx3bDdDZ1djXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NDQzZjFkYWJlMDU1NTAwNGRjNWZlM2Q3YWZhN2U3YTZfSFlHczJPZDh1TTZrWGxLdkcyQWVhTzFQUUczMldsMFhfVG9rZW46VGpIZ2JGaHhYb1ZBakV4eXFIUWx3bDdDZ1djXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 #### 🪄 Tăng lợi nhuận NGAY TRONG 30 NGÀY ĐẦU:
 
@@ -1033,9 +1034,9 @@ Cô bạn của Alex muốn giảm cân, chọn môn đạp xe. Nên lên mua Xe
 
 #### 🕰️ 5 thời điểm vàng để _Upsell / Cross-sell ( Ngay trong 30 ngày đầu của Khách )_:
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NTViYTA3NDM0N2FkYjNhMjAyMDE4OTExYTkyM2FhMDhfRTFJVDFwbnhKWDFVNzNTdG5yc3daUGt1YWJjM1A1c2FfVG9rZW46T1o0VWJDa0NhbzBIQjR4Mnc3cGxoNnZmZzlCXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=Yzk4OGM5OTk3YjRhOGNiYTBhYjU3MDU2OTE1NGRiYmNfSGtCQXhMd2VZWnNhNWd6V0c2encwQm9BZFY3bmpVZU5fVG9rZW46T1o0VWJDa0NhbzBIQjR4Mnc3cGxoNnZmZzlCXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=OTUwZTczN2ZjOTFlNzg5YmY5YTZhNDFjNzlmZmVkNmVfSDJIZzZhQ1hoQXFjZFpRVDhPZWxCWHh1VWhpcXpVc3pfVG9rZW46S1ZjYWJwYzFPb1hrVnl4Y2pDZmxTUXRUZzlmXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YjNiYWQ3MmVkMDg2ZjEzNTFlNmU5MTdhYTRjODY4ZTVfb1k1U3pBS0VESTZvRVB3U3lMQ2pteE1XdUdLYXVvckZfVG9rZW46S1ZjYWJwYzFPb1hrVnl4Y2pDZmxTUXRUZzlmXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 1. Ngay sau lần bán đầu tiên (trong cùng cuộc hội thoại).
     
@@ -1054,7 +1055,7 @@ Cô bạn của Alex muốn giảm cân, chọn môn đạp xe. Nên lên mua Xe
 
 ### 💼 **5. MẸO TĂNG THU NHẬP & GIẢM PAYBACK PERIOD**
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=ZGQ4ZjY3OWMzNjRmYWIzMjRlY2JkYTcwYjI3MmY5NDJfcXBPZTh5a0V1cGtpN09mVXAyWVB5Vk9yQ2pxNEdpYmhfVG9rZW46RXVKbmJrQ29Lb2xJbjN4RXdXVWx4Sm5vZ2ljXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=NDIwMTc3MWMxYjE2ZmExNjg0MjM0N2UyYzgxMjk5ODJfNm5lRFRBMWtPZmJOOHBESkp1ckxicVA0dGE5V2tSRDFfVG9rZW46RXVKbmJrQ29Lb2xJbjN4RXdXVWx4Sm5vZ2ljXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
 #### 💡 Áp dụng “Thu phí khởi đầu”:
 
@@ -1085,7 +1086,7 @@ Hoặc Bán thêm cùng một thứ nhưng nhiều hơn.
 - Mỗi 2 khách mới → tài trợ chi phí thu hút cho khách thứ 3, không cần đợi đến recurring.
     
 
-![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=YWI0ZGRhNmQzMTI4Y2U5NzRhOTdmMmZkYWQ0ZjgzZWZfZWtPbUU1Z0psTWZJMEhFTExmMmxqeVc2dDI0Z0pwNUNfVG9rZW46S2tlOGJjTlZIb2VCdmN4UWJwR2xpRHpJZ21mXzE3NjA5NzAwNDc6MTc2MDk3MzY0N19WNA)
+![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=N2JlZDBkZmM0MjBiYTgyZGZiMzU1ZTQyZWZiYzg1YTdfUG1tYVVvUXJkWldZb3ZDcElBUlFtT1NNYldUanRPTU9fVG9rZW46S2tlOGJjTlZIb2VCdmN4UWJwR2xpRHpJZ21mXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
   
 
