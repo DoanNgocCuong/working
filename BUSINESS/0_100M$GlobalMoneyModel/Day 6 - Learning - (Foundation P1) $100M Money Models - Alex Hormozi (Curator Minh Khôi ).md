@@ -126,7 +126,12 @@ Câu Chuyện của Alex:
 - 😱 Một ngày Facebook tăng chi phí lead lên 5 lần → _bế tắc dòng tiền_.
     
 - ✈️ Trong chuyến bay, gặp bạn cũ - bạn ấy có 2 điểm Gym, đều bán kèm supplement và có lời mỗi điểm $80K/tháng + $130K/tháng → Alex học hỏi.
-    
+
+**“Bán kèm supplement”** (nghĩa là bán thêm sản phẩm bổ sung – ở đây là thực phẩm chức năng/supplement) là chiến lược kinh doanh trong đó doanh nghiệp không chỉ bán sản phẩm/dịch vụ chính (ví dụ: gói tập gym, membership, khóa học…) mà còn **bán kèm theo sản phẩm phụ trợ như supplement, vitamin, thực phẩm chức năng, thiết bị hỗ trợ, v.v.** ngay trong quy trình bán hàng hoặc lúc khách đăng ký sản phẩm chính.
+
+Lợi nhuận từ supplement (bổ sung này) có thể đem lại ngay lập tức – bù đắp phí quảng cáo, chi phí thu hút khách hàng (Customer Acquisition Cost – CAC).
+
+Nếu không bán kèm supplement, sẽ rất khó để doanh nghiệp lời/có lãi ngay khi khách đăng ký lần đầu, vì CAC thường khá cao.
 
 ![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MWFhY2QyODc5YzI3ZDcxY2E3MmI5NGM0ODczZmQxYWNfcTZ4UTlPMmg3R3BzSDlIbWREd24zOEtycHpDa093TUNfVG9rZW46UlRWbWJsR2VUb1RxT014dFZMZmw3dXBBZ2piXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)![](https://bimathocvienso1.sg.larksuite.com/space/api/box/stream/download/asynccode/?code=MjUxZTM5MzcyNWIxZTg2NGNmMzJmMDE0YzllZjkyMWJfdFhBMm5jekN0MzU2QmM1VHd1UXEwd2ZsS05nZTRiWGZfVG9rZW46THR4NGIwTmU4b2gzR1J4WWtVdmw1RnlWZ1plXzE3NjA5OTIwMzQ6MTc2MDk5NTYzNF9WNA)
 
