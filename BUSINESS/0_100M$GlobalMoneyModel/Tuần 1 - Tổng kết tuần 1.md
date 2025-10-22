@@ -15,3 +15,17 @@ Tổng kết tuần 1.
 
 
 ---
+
+Ôn bài cuối tuần 2: Chia sẻ bài tâm đắc - Cùng mổ xẻ 1 số bài - Cùng xử lý cases thực tế của đồng đội đang gặp - Đưa ra quan điểm góc nhìn cá nhân và đón nhận góc nhìn khác từ đồng đội
+
+
+1. Tình hình nhóm: 
+2. Kaizen: 
+   - Đầu ra để làm gì, output cuối cùng của mình làm gì ? 
+- gọi điện nhắc nhở. 
+
+
+---
+1. Tình hình nhóm: 
+- Nhóm em thường là 5/6 thành viên nộp, còn 1 ae hơi bận. 
+- Thường thời gian check bài và nộp bài của em khá muộn vào tầm sau 20h, nên là 
