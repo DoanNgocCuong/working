@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/0 - NGUYÊN TẮC VÀ MINDSET CODE GIÁC NGỘ LÝ TƯỞNG VÀ TỪ BỎ AI CODE.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Cú pháp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0 - NGUYÊN TẮC VÀ MINDSET CODE GIÁC NGỘ LÝ TƯỞNG VÀ TỪ BỎ AI CODE"
+              "title": "Cú pháp"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/0 - NGUYÊN TẮC VÀ MINDSET CODE GIÁC NGỘ LÝ TƯỞNG VÀ TỪ BỎ AI CODE.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Cú pháp.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 0 - NGUYÊN TẮC VÀ MINDSET CODE GIÁC NGỘ LÝ TƯỞNG VÀ TỪ BỎ AI CODE"
+              "title": "Outline of Cú pháp"
             }
           }
         ],
@@ -171,12 +171,14 @@
   },
   "active": "9f4f87bc404614f0",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Optional - in Python.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Cú pháp.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/0 - NGUYÊN TẮC VÀ MINDSET CODE GIÁC NGỘ LÝ TƯỞNG VÀ TỪ BỎ AI CODE.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/image/Pasted image 20251022162728.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/image",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/Pasted image 20251022162658.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/0 - NGUYÊN TẮC VÀ MINDSET CODE GIÁC NGỘ LÝ TƯỞNG VÀ TỪ BỎ AI CODE.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Untitled 1.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/3. Python cơ bản.md",
     "BUSINESS/0_100M$GlobalMoneyModel/Tuần 1 - Tổng kết tuần 1.md",
@@ -197,7 +199,6 @@
     "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01/clip_image125.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01/clip_image124.gif",
     "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01/clip_image123.png",
-    "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01/clip_image122.gif",
     "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01/clip_colorschememapping.xml",
     "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01",
     "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1",
@@ -216,7 +217,6 @@
     "BUSINESS/1_PRODUCT/50 cuốn về Product.md",
     "2025-10-20.md",
     "BUSINESS/0_100M$GlobalMoneyModel/Day 5 - Bài tập.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Untitled 1.md",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
