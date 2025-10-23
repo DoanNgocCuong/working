@@ -200,3 +200,51 @@ Check sources
 18. [https://docs.langchain.com/oss/python/langgraph/durable-execution](https://docs.langchain.com/oss/python/langgraph/durable-execution)
 19. [https://github.com/langchain-ai/langgraph/discussions/433](https://github.com/langchain-ai/langgraph/discussions/433)
 20. [https://www.langchain.com/langgraph](https://www.langchain.com/langgraph)
+
+
+```
+**vv Tổng thời gian của 1 luồng Langchain thường >= tổng thời gian các steps con bên trong.**  
+  
+Em vẫn bị cái bug này, anh @Hung Pham Thanh ạ. Em đọc tài liệu thấy nó bảo:  
+  
+Dẫn chứng trong tài liệu chính thức cho thấy tổng thời gian thực thi workflow có thể lớn hơn hoặc khác tổng thời gian các node/thành phần con vì có overhead như chờ, khởi động, checkpoint, persistence, hoặc các thao tác hệ thống ngoài các node hiển thị.langchain+1​  
+  
+Tài liệu **LangGraph Durable Execution** ghi: “A higher durability mode adds more overhead to the workflow execution” – nghĩa là khi dùng chế độ durability, hệ thống phát sinh thêm thời gian ngoài xử lý node  
+  
+
+- [https://docs.langchain.com/oss/python/langgraph/durable-execution](https://docs.langchain.com/oss/python/langgraph/durable-execution)  
+    
+- [https://docs.langchain.com/oss/python/langgraph/workflows-agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents)
+
+  
+
+  
+
+You
+
+,
+
+Tue 4:12 PM
+
+  
+
+  
+vv **Hiệu năng giữa việc implement 5 hàm tuần tự trong 1 node (node lớn) so với việc chia thành 5 node nhỏ tuần tự trong LangGraph**  
+  
+Each step consists of preparing, executing and checkpointing. More nodes = more state updates, checkpoints, and scheduling overhead per step
+```
+
+
+```
+vv Luôn có overhead giữa các nodes tuần tự. (Link dẫn chứng tài liệu bên trên + Qua em với a Hưng có check thực nghiệm)  
+--  
+Chẳng hạn: Tổng các nodes con trong `workflow.run` là 1.6/1.8 (cả luồng `workflow.run`)  
+Tương tự: cũng có overhead giữa tổng các nodes trong `api.workflow.platform` so với cả luồng `api.workflow.platform` (lệch 0.2s)  
+  
+Phán đoán:  
+=> Code cũ: em đang chia quá nhiều nodes nhỏ (12 nodes) nên overhead bị dôi lên nhiều.  
+Update: => Em gom lại thành 1-2 nodes (bên trong 1-2 nodes là sự kết hợp của nhiều hàm (vẫn tracing được như bình thường mà tốc độ luồng lại có thể giảm 0.5s )) ạ.
+```
+
+![](image/image%20(4).png)
+

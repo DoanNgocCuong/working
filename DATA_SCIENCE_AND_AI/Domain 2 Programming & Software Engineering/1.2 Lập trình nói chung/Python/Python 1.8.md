@@ -4,6 +4,17 @@ ValueError: [TypeError("'coroutine' object is not iterable"), TypeError('vars() 
 
 Tôi sẽ giải thích chi tiết **khi nào dùng `await`** và **nguyên nhân gây bug** của bạn! 🔍
 
+
+
+>> ---
+>> **`await` những gì có `async def` hoặc I/O operations (DB, Redis, HTTP, File)**
+>> ---
+>> def process_data() => async def main(): data = process_data()   
+>> async def process_data() => async def main(): data = await process_data()
+
+---
+
+
 ## 🚨 **Nguyên nhân chính của bug:**
 
 Lỗi `'coroutine' object is not iterable` xảy ra khi bạn **quên `await`** một hàm async, khiến FastAPI nhận được **coroutine object** thay vì **giá trị thực**.
@@ -192,7 +203,7 @@ total = sum([1, 2, 3])
 
 ## 💡 **Quy tắc đơn giản:**
 
-> **Chỉ `await` những gì có `async def` hoặc I/O operations (DB, Redis, HTTP, File)**
+> **`await` những gì có `async def` hoặc I/O operations (DB, Redis, HTTP, File)**
 
 Đoạn code của bạn chỉ là **xử lý data trong memory** → **KHÔNG CẦN `await`**!
 

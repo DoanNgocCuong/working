@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Python 1.8.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Python 1.8"
+              "title": "1. git, SOLID, Code chuẩn"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: PYTHON",
+                "query": "destination",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -141,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Python 1.8.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Python 1.8"
+              "title": "Outline of 1. git, SOLID, Code chuẩn"
             }
           }
         ],
@@ -171,8 +172,10 @@
   },
   "active": "9f4f87bc404614f0",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Dùng _ cho help_function hay private method in Python.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/LangChain 1.5 - 5 hàm tuần tự trong 1 node hay 5 nodes tuần tự - Response time - Overhead.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/image/image (4).png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Python 1.8.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Dùng _ cho help_function hay private method in Python.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/SOLID và chuyện tách nhỏ các hàm.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/3. Python cơ bản.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
@@ -203,7 +206,6 @@
     "BUSINESS/0_100M$GlobalMoneyModel/Day 8 - Bài Tập.md",
     "BUSINESS/0_100M$GlobalMoneyModel/Day 7 - Bài Tập.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Cú pháp.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Optional - in Python.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/image/Pasted image 20251022162728.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/image",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/Pasted image 20251022162658.png",
@@ -216,7 +218,6 @@
     "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01/clip_image129.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01/clip_image128.gif",
     "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01/clip_image127.png",
-    "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01/clip_image126.gif",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
