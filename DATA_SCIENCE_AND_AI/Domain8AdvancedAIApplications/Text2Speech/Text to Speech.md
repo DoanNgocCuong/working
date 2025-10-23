@@ -8,3 +8,22 @@ Problem:
   
 ---  
 Công ty đang tìm 1 bên ngoài làm, (ví dụ: https://showcase.magicvoice.vn/)
+
+
+---
+Em chào các sếp. Đợt này trên thị trường xuất hiện:
+
+- Audio to Audio
+
+- và Audio to Text, Text to Biểu cảm + Audio
+
+----
+
+  
+
+Em muốn hỏi mn về model: Audio
+
+
+---
+
+
