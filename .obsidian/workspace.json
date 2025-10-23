@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Other/Cận - khám quân sự.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.7_CV/OCR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cận - khám quân sự"
+              "title": "OCR"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: ",
+                "query": "file: ocr",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -141,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Other/Cận - khám quân sự.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.7_CV/OCR.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Cận - khám quân sự"
+              "title": "Outline of OCR"
             }
           }
         ],
@@ -171,10 +172,11 @@
   },
   "active": "9f4f87bc404614f0",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/image/image (4).png",
+    "Other/Cận - khám quân sự.md",
     "2025-10-23.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/LangChain 1.5 - 5 hàm tuần tự trong 1 node hay 5 nodes tuần tự - Response time - Overhead.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/image/image (4).png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Python 1.8.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Dùng _ cho help_function hay private method in Python.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/SOLID và chuyện tách nhỏ các hàm.md",
@@ -197,14 +199,12 @@
     "DATA_SCIENCE_AND_AI/Domain 9 Business/14. StepUpEnglish/8_Project/1_dify/Module2_Database/Oracle.md",
     "DATA_SCIENCE_AND_AI/Domain 9 Business/14. StepUpEnglish/8_Project/1_dify/Module2_Database/3. SSH là gì.md",
     "DATA_SCIENCE_AND_AI/Domain 9 Business/14. StepUpEnglish/8_Project/1_dify/Module2_Database/1.5 Config link host + docker compose Trên server không cần ssh.md",
-    "Other/Cận - khám quân sự.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Text2Speech",
     "Other/image/Pasted image 20251023094405.png",
     "Other/image",
     "BUSINESS/0_100M$GlobalMoneyModel/Day 7 - Learning - (Foundation P2).md",
     "Other",
     "BUSINESS/0_100M$GlobalMoneyModel/Day 8 - Bài Tập.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Day 7 - Bài Tập.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/image/Pasted image 20251022162728.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/image",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/Pasted image 20251022162658.png",
