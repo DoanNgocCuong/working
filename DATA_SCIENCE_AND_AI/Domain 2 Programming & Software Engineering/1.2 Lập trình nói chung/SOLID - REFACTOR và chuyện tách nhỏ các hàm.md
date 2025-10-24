@@ -1,3 +1,38 @@
+# MỤC TIÊU CỦA REFACTOR 
+
+```bash
+Mục tiêu refactor:  
+
+- Giữ toàn bộ chức năng hiện tại của hệ thống  
+    
+- Dễ dàng mở rộng, theo chuẩn làm ai agent production: scale  
+    
+- An toàn, bảo mật  
+    
+- AI Guardrail  
+    
+- Monitoring  
+    
+- 1 session cost  
+    
+- Response time theo p-90 p-95 p-99  
+    
+- Tỉ lệ lỗi request  
+    
+- Agent consistency: Điểm benchmark qua các  
+    
+- User feedback loop  
+    
+
+  
+
+- Evaluation: performance, quality, cost  
+    
+- For each prompt  
+    
+- For agent overall, compare I/O
+```
+
 
 ```python 
 
@@ -211,3 +246,6 @@ async def process_webhook(self, payload: Dict[str, Any]) -> Dict[str, Any]:
 - ✅ **Maintainable**: Dễ maintain
 
 **→ Recommendation: Giữ nguyên!** 🎯
+
+
+
