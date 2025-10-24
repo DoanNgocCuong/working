@@ -1,3 +1,5 @@
+Dự án: robot -workflow refactor
+
 # 1. Vấn đề: tại sao mất tới 0.7s chỉ để load cái conversation - get session 0.4s ???? thế 0.3 s còn lại ở đâu ?
 
 ```
