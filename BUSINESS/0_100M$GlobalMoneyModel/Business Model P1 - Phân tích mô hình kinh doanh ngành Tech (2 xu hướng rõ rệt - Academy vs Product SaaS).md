@@ -1,3 +1,4 @@
+# FinAI: 28/10/2025 - Câu chuyện bắt đầu từ SaaS thì đi CABIS như nào? (Sau hơn 8h research) S-A-C-B-I nhiều công ty họ làm cách này >< AIO AI Việt Nam, Anh Trần Quốc Huy Wecommit100x, a Quân Đặng FSDS đều di theo A-C đào tạo 1 ngành. Nếu đã có Business thì đi theo dạng B-A-I (Mentor Investing khá chuẩn)
 # 1. Các chiến lược mô hình kinh doanh thành công với Academy mình đang join (MÌNH TOÀN JOIN CÁI CÓ CỘNG ĐỒNG VÀ CHƠI DÀI HẠN)
 
 1. sếp Trần Quốc Huy - Wecommit100x: A (Done For U: Các dịch vụ tối ưu DB, Done With U đồng hành 1 năm) Backend of System Carrer - Community (Cộng đồng = Frontend of System Carrer = Dòng chảy kết nối) 
