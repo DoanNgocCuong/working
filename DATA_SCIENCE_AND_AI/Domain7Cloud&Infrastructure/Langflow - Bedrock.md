@@ -1,0 +1,64 @@
+
+
+![](image/Pasted%20image%2020251027210712.png)
+
+
+| Bước                                       | Nội dung chi tiết                                                                                                                                                                                                                               |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Chuẩn bị môi trường                     | - Đã có tài khoản AWS, bật dịch vụ Bedrock - Có API Key/credentials AWS - Đã cài Langflow trên server/local hoặc cloud Docker/K8s                                                                                                               |
+| 2. Tạo Project/Flow mới trong Langflow     | - Đăng nhập Langflow, tạo New Project → Blank Flow hoặc chọn template (ví dụ: Chatbot, RAG, Agent,...)                                                                                                                                          |
+| 3. Thêm component “Amazon Bedrock Adapter” | - Tìm và kéo thả khối “Amazon Bedrock” vào flow - Kết nối với block Input (hoặc Prompt/DB nếu dùng multi-agent/RAG)                                                                                                                             |
+| 4. Thiết lập thông số Bedrock Adapter      | Điền các thông số: - aws_access_key_id - aws_secret_access_key - aws_session_token (nếu dùng) - region_name - model_id (chọn model phù hợp: Claude, Titan, AI21...) - endpoint_url (nếu cần) - input, system_message, model_kwargs, stream, ... |
+| 5. Kết nối các component                   | - Kết nối Input → Bedrock Adapter → Output (hoặc nối tiếp DB Store, Prompt, Multi Agent tùy workflow) - Có thể tích hợp AstraDB cho vector/RAG                                                                                                  |
+| 6. Run/Test flow                           | - Bấm Run để kiểm tra, nhận kết quả từ model Bedrock - Nếu dùng multi-agent: test response, luồng truyền dữ liệu, xử lý output giữa các agent                                                                                                   |
+| 7. Xử lý lỗi và kiểm tra output            | - Xem log, debug lỗi xác thực, thiếu credential hoặc thông số không đúng - Đảm bảo output đúng format                                                                                                                                           |
+| 8. Optimize, mở rộng MVP                   | - Tối ưu prompt, logic agent, cấu hình workflow - Có thể scale lên K8s/Docker nếu cần - Thêm agent/tool khác (ví dụ: MCP/Doc Extractor, trigger API ngoài...) theo kiến trúc mong muốn                                                          |
+| 9. Demo/migrate production                 | - Demo direct trên cloud, quay video hoặc live - Có thể so sánh input/output, giải thích workflow, kiến trúc luồng - Xuất flow dưới dạng API hoặc chuyển đổi pipeline dễ dàng (publish flow/trigger API)                                        |
+
+
+---
+```bash
+Thử tạo một con Agent sử dụng Bedrock xem thế nào nhé
+Anh có tạo 1 cái flow sẵn, em có thể tự tạo cái khác hoặc test trên cái này cũng được http://103.253.20.30:30001/flow/a42ff498-6deb-4f9e-aa2c-4bc57b40c789/folder/7d0a0db5-3822-4fff-aaf6-c23a01e4e887
+[Hình ảnh] 
+Để add mode không có sẵn trong thì tạo một cái Agent với Bedrock làm LLM
+Sau đó nhấn vào Code. Nó sẽ hiện chỗ cho em edit code của component
+Thêm đoạn 
+
+AWS_MODEL_IDs = AWS_MODEL_IDs + ["openai.gpt-oss-20b-1:0", "openai.gpt-oss-120b-1:0", "anthropic.claude-haiku-4-5-20251001-v1:0", "anthropic.claude-sonnet-4-5-20250929-v1:0"] 
+
+vào sau phần Import và trước phần khai báo class
+Ở đây là add thêm mấy cái GPT-OSS 20b, 120B và Haiku 4.5, Sonet 4.5 vào
+Sau đó thì em sẽ chọn được mode này trong list
+Add thêm mấy tham số cần thiết vào là được
+Có mấy con MCP Server mình cần build, tuy nhiên có thể build bằng Langflow luôn cũng được. 
+1. MCP Server để trích dẫn một điều khoản cụ thể từ UCP 600 hoặc ISBP 821.
+2. MCP Server để access Business Handbook.
+Mình sẽ implement bằng file. Cắm 1 con Agent đọc file, dùng LLM xử lý nội dung file để lấy nội dung cần lấy. Sau đó con Agent này được expose ra thành 1 MPC Server ngay trên Langflow là có một con MCP Server
+Sau đó add MCP Server này vào Langflow với SSE. Tên với Description của Flow sẽ chính là tool và description
+Rồi gọi tool này từ một flow khác là được
+Em thử promt một vài thư hoặc thử chat hỏi đáp với UPC 600 và ISBP nhé
+nếu thử với model khác của bedrock thì lấy thông tin model ở đây rồi đưa vào code https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html?trk=ac97e39c-d115-4d4a-b3fe-c695e0c9a7ee&sc_channel=el
+Trong Console của AWS nó cũng có con Q Developer. Chat với nó mà hỏi cho nhanh
+Click vào góc trên bên phải ấy
+```
+
+
+| Trường trong Langflow | Cách lấy/Giải thích nguồn                                                                                                                                                                                                                                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AWS Access Key ID     | - Vào AWS Console → phần “IAM” (Identity & Access Management) - Chọn “Users” → chọn user muốn lấy key (nên là user Admin hoặc user đã cấp quyền Bedrock) - Vào tab “Security credentials” → mục “Access keys” - Bấm “Create access key” nếu chưa có - Copy dòng “Access key ID” hiển thị ra | 1. **Đi tới phần IAM (Identity & Access Management)**<br>    <br>    - Trên thanh menu (góc trên bên trái), gõ **IAM** vào ô tìm kiếm và chọn dịch vụ "IAM".<br>        <br>2. **Chọn mục “Users”**<br>    <br>    - Trong menu bên trái, bấm **Users**.<br>        <br>3. **Chọn user cần lấy key**<br>    <br>    - Click tên user tài khoản bạn muốn cấp key (nên dùng user quyền riêng, không phải root).<br>        <br>4. **Mở tab “Security credentials”**<br>    <br>    - Sau khi vào profile của user, chọn **Security credentials** ở phía trên.<br>        <br>5. **Tạo Access Key mới** |
+| AWS Secret Access Key | - Khi tạo “Access key” ở bước trên, AWS sẽ hiển thị cả “Secret access key” và “Access key ID” - Lưu ý: Secret Access Key chỉ hiện 1 lần khi tạo; nếu quên phải tạo lại key mới - Copy dòng “Secret access key” hiển thị ra                                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| AWS Session Token     | - Chỉ cần nếu bạn dùng temp credentials hoặc role được STS cấp (ví dụ: đăng nhập qua SSO, Assume Role) - Lấy token khi Get session hoặc Assume Role qua dòng lệnh hoặc bằng “Security credentials” (có thể bỏ trống nếu dùng Access Key chuẩn cho user)                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Region Name           | - Điền region AWS mà bạn đã cấu hình Bedrock, ví dụ: “us-east-1”, “ap-southeast-2”,... - Tìm trong AWS Console phần góc phải (Region) hoặc xem trong hướng dẫn dịch vụ đã dùng                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+![](image/Pasted%20image%2020251027221012.png)
+
+![](image/Pasted%20image%2020251027221142.png)
+![](image/Pasted%20image%2020251027212223.png)
+
+
+
+| Loại Key                                   | Mục đích, phạm vi, cách dùng                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AWS Access Key ID & Secret Access Key(IAM) | - Cấp từ dịch vụ IAM (Identity & Access Management) của AWS. - Là loại key mặc định dùng để xác thực truy cập tất cả API dịch vụ AWS: EC2, S3, Bedrock, DynamoDB, v.v. - Dùng cho mã nguồn, SDK, các ứng dụng server, các workflow automation. - Gắn liền với quyền user/role và policy bạn cấu hình. - Nạp vào Langflow hoặc bất kỳ client/service gọi API của AWS. - Phạm vi rộng, quản lý tập trung qua IAM. - Nếu bị lộ thì có thể truy cập nhiều dịch vụ AWS, tiềm ẩn nguy cơ bảo mật.                                               |
+| Bedrock API Key                            | - Tạo trực tiếp trong dịch vụ Amazon Bedrock Console (ảnh bạn gửi: mục API keys). - Chỉ dùng để xác thực với Amazon Bedrock API, không dùng cho các dịch vụ AWS khác. - Tùy cấu hình: dùng được cho short-term (12h) hoặc long-term (1 năm), thích hợp cho thử nghiệm, dev, gọi trực tiếp Bedrock API. - Được tích hợp trong một số framework mới, hoặc các công cụ hỗ trợ nhận diện Bedrock API Key riêng. - Không truy cập được dịch vụ AWS ngoài Bedrock. - Khả năng thay thế IAM Key với phạm vi sử dụng giới hạn (bedrock-specific). |
+
