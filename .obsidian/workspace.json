@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d626c384fcdf4162",
+        "id": "878011cd0d0b7e79",
         "type": "tabs",
         "children": [
           {
-            "id": "a8cce7cfd222217a",
+            "id": "4664a47d8c11209f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/0_100M$GlobalMoneyModel/Day 12 - Decoy Offer (Hiệu ứng chim mồi) - Bài Tập.md",
+                "file": "BUSINESS/0_100M$GlobalMoneyModel/Day 14 Pay Less Now or Pay More Later.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Day 12 - Decoy Offer (Hiệu ứng chim mồi) - Bài Tập"
+              "title": "Day 14 Pay Less Now or Pay More Later"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: port",
+                "query": "business",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/0_100M$GlobalMoneyModel/Day 12 - Decoy Offer (Hiệu ứng chim mồi) - Bài Tập.md",
+                "file": "BUSINESS/0_100M$GlobalMoneyModel/Day 14 Pay Less Now or Pay More Later.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Day 12 - Decoy Offer (Hiệu ứng chim mồi) - Bài Tập"
+              "title": "Outline of Day 14 Pay Less Now or Pay More Later"
             }
           }
         ],
@@ -169,45 +169,46 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "a8cce7cfd222217a",
+  "active": "4664a47d8c11209f",
   "lastOpenFiles": [
+    "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002835.png",
+    "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002431.png",
+    "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029001941.png",
+    "BUSINESS/0_100M$GlobalMoneyModel/Business Model - P2 - Từ AI Architect in Finance - Business Model Stategy - Ecosystem Investor - sang Finance Business Model Strategy- Mentor Investing - Business Models and Money Models.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/Day 14 Pay Less Now or Pay More Later.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/Business Model - P3 - FinAI hay Finance thuần.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/Business Model P1 - Phân tích mô hình kinh doanh ngành Tech (2 xu hướng rõ rệt - Academy vs Product SaaS).md",
+    "Phân tích mô hình kinh doanh ngành Tech (2 xu hướng rõ rệt - Academy vs Product SaaS).md",
+    "BUSINESS/0_100M$GlobalMoneyModel/1_.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/change image.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/Untitled 1.md",
+    "2025-10-28.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251028142101.png",
+    "BUSINESS/__.md",
+    "DATA_SCIENCE_AND_AI/Domain7Cloud&Infrastructure/AWS.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/Day 10 Thực Hành Thiết Kế Timeline Win Your Money Back của Riêng bạn.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/Tuần 1 - Tổng kết tuần 1.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/Day 13 Buy X Get Y Free - Mua nhiều được thưởng..md",
+    "DATA_SCIENCE_AND_AI/Domain7Cloud&Infrastructure/Langflow - Bedrock.md",
+    "DATA_SCIENCE_AND_AI/Domain7Cloud&Infrastructure/image/Pasted image 20251027221142.png",
+    "DATA_SCIENCE_AND_AI/Domain7Cloud&Infrastructure/image/Pasted image 20251027221012.png",
+    "DATA_SCIENCE_AND_AI/Domain7Cloud&Infrastructure/image/Pasted image 20251027212223.png",
+    "DATA_SCIENCE_AND_AI/Domain7Cloud&Infrastructure/image/Pasted image 20251027210712.png",
+    "DATA_SCIENCE_AND_AI/Domain7Cloud&Infrastructure/image",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/3_LangChain/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/3_LangChain/Langflow.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Deploy - Docker Logs.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/1. venv_Docker/3. venv - Docker - k8s.md",
+    "DATA_SCIENCE_AND_AI/2. Cấu trúc Thư Mục Các Phần Cần Học.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/1. venv_Docker/cloud.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Docker.md",
+    "2025-10-27.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/Day 12 - Decoy Offer (Hiệu ứng chim mồi) - Bài Tập.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251027001354.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251026235654.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251026235644.png",
-    "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251026235615.png",
-    "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251026234520.png",
     "BUSINESS/0_100M$GlobalMoneyModel/Day 11 - GIVE AWAY Offer.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Day 12 - Decoy Offer (Hiệu ứng chim mồi) - Bài Tập.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Day 9.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251025075318.png",
-    "BUSINESS/0_100M$GlobalMoneyModel/Day 10 Thực Hành Thiết Kế Timeline Win Your Money Back của Riêng bạn.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/image/whiteboard_exported_image.png",
-    "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251024235524.png",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/1. Long term Memory Architechture/0.2 Đồ án tiếp CƠ CHẾ QUẢN LÝ BỘ NHỚ - report 3_12032025 -.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Python 1.8 Python - json và orjson trong việc PARSING LARGE JSON - 24102025 -.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Python 1.10 - Fix vấn đề import - a Hưng chỉ bảo Giảm ngay 0.3s - 0.6s + và tư duy đo time.time() để fix bug - Dự án robot -workflow refactor - 24102025.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Python 1.9 - orjson.dumps(data) - ENSURE_ASCII - Dự án robot -workflow refactor - 24102025.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/Pasted image 20251024145150.png",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/Pasted image 20251024145141.png",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/docs_1.1_OptimizeRedis/1761292001418.png",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/docs_1.1_OptimizeRedis/1761291701333.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/docs_1.1_OptimizeRedis",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/3. Python cơ bản.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Day 3 - Bài Tập.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Day 5 - Bài tập.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Day 4 - Bài Tập.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Day 6 - Learning - (Foundation P1) $100M Money Models - Alex Hormozi (Curator Minh Khôi ).md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Day 7 - Learning - (Foundation P2).md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/SOLID - REFACTOR và chuyện tách nhỏ các hàm.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/12. Cách thức lưu trữ CKP của code.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/3. Strategic Approaches to Understanding GitHub Repositories - Genspark 20250626.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/6. Server Deploy - mật khẩu vào Server - Github.md",
-    "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.7_CV/OCR.md",
-    "DATA_SCIENCE_AND_AI/New folder/3_Learning/4_MLOPs và Full Stack Docker/GITHUB CƠ BẢN.md",
-    "Other/Cận - khám quân sự.md",
-    "2025-10-23.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/LangChain 1.5 - 5 hàm tuần tự trong 1 node hay 5 nodes tuần tự - Response time - Overhead.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/CV/image",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Text2Speech",
     "Other/image",
@@ -216,7 +217,6 @@
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image",
     "FINTECH/Data/SysthesisData",
     "FINTECH/Untitled",
-    "BUSINESS/0_100M$GlobalMoneyModel/image/msohtmlclip1/01/clip_themedata.thmx",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
