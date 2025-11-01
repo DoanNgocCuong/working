@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/Lập trình song song/Batch size và Max workers.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/3_LangChain/Langflow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Batch size và Max workers"
+              "title": "Langflow"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: max",
+                "query": "file: langflow",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/Lập trình song song/Batch size và Max workers.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/3_LangChain/Langflow.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Batch size và Max workers"
+              "title": "Outline of Langflow"
             }
           }
         ],
@@ -172,9 +172,11 @@
   },
   "active": "4664a47d8c11209f",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/LangChain 1.1 Langfuse rồi thì có dùng các tools OpenTelemetry khác nữa không + LangFuse (free) - LangSmith (fee) - LangGraph Studio (free local, log in with LangSmith free Account) ..md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/Langchain 1.6 - Observe - Langfuse.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/Lập trình song song/Batch size và Max workers.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/BA/1. Note.md",
     "DATA_SCIENCE_AND_AI/Full DataScience.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/Lập trình song song/Batch size và Max workers.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/Note 28 10 2024.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Chạy ngầm server.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/9. CÁCH CHẠY NGẦM TRONG WINDOW, LINUX.md",
@@ -196,8 +198,6 @@
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Neural Network/4. Prompting cho model nhỏ.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/C4 Model.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Mock Data và gọi nội bộ hàm trong Javascript.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Lỗi khi code javaScript.md",
-    "2025-10-30.md",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002835.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002431.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029001941.png",
