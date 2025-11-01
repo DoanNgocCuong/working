@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "878011cd0d0b7e79",
+        "id": "6e9406a4d5ce2f2d",
         "type": "tabs",
         "children": [
           {
-            "id": "4664a47d8c11209f",
+            "id": "b2d39c4d755ae871",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/3_LangChain/Langflow.md",
+                "file": "BUSINESS/0_100M$GlobalMoneyModel/Day 15 -.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Langflow"
+              "title": "Day 15 -"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: langflow",
+                "query": "langchain",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -142,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/3_LangChain/Langflow.md",
+                "file": "BUSINESS/0_100M$GlobalMoneyModel/Day 15 -.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Langflow"
+              "title": "Outline of Day 15 -"
             }
           }
         ],
@@ -156,7 +155,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.5
+    "width": 205.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -170,8 +170,14 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "4664a47d8c11209f",
+  "active": "b2d39c4d755ae871",
   "lastOpenFiles": [
+    "BUSINESS/0_100M$GlobalMoneyModel/Day 14 Pay Less Now or Pay More Later.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/Day 15 -.md",
+    "2025-11-01.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/3_LangChain/Bài viết 1 - 1 cách tổng quan nhất về Langchain.md",
+    "Untitled.base",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/3_LangChain/Langflow.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/LangChain 1.1 Langfuse rồi thì có dùng các tools OpenTelemetry khác nữa không + LangFuse (free) - LangSmith (fee) - LangGraph Studio (free local, log in with LangSmith free Account) ..md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/Langchain 1.6 - Observe - Langfuse.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/Lập trình song song/Batch size và Max workers.md",
@@ -193,11 +199,6 @@
     "2025-10-31.md",
     "BUSINESS/0_100M$GlobalMoneyModel/Bài làm của ace khác.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/Model Compare GPT OSS 20B vs GPT-4o mini Comprehensive side-by-side LLM comparison.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/GPT5 vs Claude.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/Vấn đề 14 khi tôi code frontend bacekend đều javascript theo kiểu Model - View - Controller.md",
-    "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Neural Network/4. Prompting cho model nhỏ.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/C4 Model.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Mock Data và gọi nội bộ hàm trong Javascript.md",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002835.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002431.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029001941.png",
@@ -217,7 +218,6 @@
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/image",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image",
     "FINTECH/Data/SysthesisData",
-    "FINTECH/Untitled",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
