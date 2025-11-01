@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-10-31.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/6. Server Deploy - mật khẩu vào Server - Github.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-10-31"
+              "title": "6. Server Deploy - mật khẩu vào Server - Github"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: port",
+                "query": "thanhdt24",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -141,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2025-10-31.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/6. Server Deploy - mật khẩu vào Server - Github.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-10-31"
+              "title": "Outline of 6. Server Deploy - mật khẩu vào Server - Github"
             }
           }
         ],
@@ -171,8 +172,15 @@
   },
   "active": "4664a47d8c11209f",
   "lastOpenFiles": [
-    "BUSINESS/0_100M$GlobalMoneyModel/Bài làm của ace khác.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/0. basic git.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/3. commit, deploy, release Note.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/5_GitLFS_large_file_storage.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/3. Strategic Approaches to Understanding GitHub Repositories - Genspark 20250626.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/6. Server Deploy - mật khẩu vào Server - Github.md",
+    "FINTECH/0_FinTech_Overview_Oct12_2025.md",
     "2025-10-31.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/Bài làm của ace khác.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/Model Compare GPT OSS 20B vs GPT-4o mini Comprehensive side-by-side LLM comparison.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/GPT5 vs Claude.md",
@@ -190,16 +198,9 @@
     "2025-10-29.md",
     "BUSINESS/0_100M$GlobalMoneyModel/Business Model - P2 - Từ AI Architect in Finance - Business Model Stategy - Ecosystem Investor - sang Finance Business Model Strategy- Mentor Investing - Business Models and Money Models.md",
     "BUSINESS/0_100M$GlobalMoneyModel/Business Model P1 - Phân tích mô hình kinh doanh ngành Tech (2 xu hướng rõ rệt - Academy vs Product SaaS).md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Day 14 Pay Less Now or Pay More Later.md",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002835.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002431.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029001941.png",
-    "BUSINESS/0_100M$GlobalMoneyModel/Business Model - P3 - FinAI hay Finance thuần.md",
-    "Phân tích mô hình kinh doanh ngành Tech (2 xu hướng rõ rệt - Academy vs Product SaaS).md",
-    "BUSINESS/0_100M$GlobalMoneyModel/1_.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/change image.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Untitled 1.md",
-    "2025-10-28.md",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251028142101.png",
     "DATA_SCIENCE_AND_AI/Domain7Cloud&Infrastructure/image/Pasted image 20251027221142.png",
     "DATA_SCIENCE_AND_AI/Domain7Cloud&Infrastructure/image/Pasted image 20251027221012.png",
