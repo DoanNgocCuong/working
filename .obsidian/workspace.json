@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "thanhdt24",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -170,7 +170,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "4664a47d8c11209f",
+  "active": "db02c5a91e7f8e1e",
   "lastOpenFiles": [
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/0. basic git.md",
