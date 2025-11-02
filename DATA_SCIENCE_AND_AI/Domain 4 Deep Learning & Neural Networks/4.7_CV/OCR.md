@@ -46,3 +46,15 @@ Dưới đây là **bảng mô tả quá trình tăng VRAM** khi khởi chạy v
 ---
 
 **Bảng này giúp bạn dễ dàng dự đoán VRAM sử dụng và kiểm soát tài nguyên khi thiết kế pipeline OCR hiệu quả trên GPU.**
+
+
+
+
+## dots.ocr 
+
+
+Anh có thể xài dots.ocr cho bài OCR tiếng việt ạ, tụi em cũng đang dùng cái này cho OCR  
+https://dotsocr.xiaohongshu.com/  
+https://github.com/rednote-hilab/dots.ocr  
+  
+	host về khoảng 10GB VRAM, máy khoảng 16VRAM là dùng được ạ.
