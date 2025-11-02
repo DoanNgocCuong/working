@@ -156,6 +156,8 @@
 
 So sánh các nhà đầu tư nổi tiếng thế giới theo phong cách đầu tư và tài sản ròng
 
+![](image/Pasted%20image%2020251102184514.png)
+
 ## Nhà Đầu Tư Nổi Tiếng Việt Nam
 
 ## Top 6 Doanh Nhân Giàu Nhất Sàn Chứng Khoán Việt Nam 2025
@@ -212,6 +214,7 @@ So sánh các nhà đầu tư nổi tiếng thế giới theo phong cách đầu
 **Đặc điểm**: Hàng đầu tại Việt Nam trong ngành hàng tiêu dùng, chiếm lĩnh thị phần lớn với nhiều thương hiệu nổi tiếng
 
 Top 6 doanh nhân giàu nhất Việt Nam 2025
+![](image/Pasted%20image%2020251102184450.png)
 
 ## Tổ Chức Hỗ Trợ Khởi Nghiệp
 
