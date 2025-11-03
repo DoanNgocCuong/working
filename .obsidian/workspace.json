@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FINANCE/03-11-2025 Các nơi đào tạo.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Neural Network/2. vllm - và vấn đề môi trường.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-11-2025 Các nơi đào tạo"
+              "title": "2. vllm - và vấn đề môi trường"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "file: pyt",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -172,12 +172,15 @@
   },
   "active": "b67c40ca344b36bf",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Neural Network/2. Pytorch - Hunggingface - Transformer.md",
+    "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Neural Network/2. vllm - và vấn đề môi trường.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
+    "FINANCE/03-11-2025 Các nơi đào tạo CFA.md",
     "FINANCE/0-.md",
     "FINANCE/03-11-2025 Quantitative research  - and the road Strategy Strategic Mentor–Advisor & Knowledge Equity Investor for Global Ecosystems, IPO, Holdings and M&A - Đoàn Ngọc Cường Perflexity.md",
     "FINANCE/02-11-2025 Các kênh Youtube về tài chính.md",
     "FINANCE/02-11-2025 Các nhà đầu tư dài hạn.md",
     "FINANCE/02-11-2025 Tư vấn - Định giá - Đầu tư IPO - Holdings -.md",
-    "FINANCE/03-11-2025 Các nơi đào tạo.md",
     "FINANCE/image/Pasted image 20251103153951.png",
     "FINANCE/Các vị trí.md",
     "FINANCE/Untitled.md",
@@ -195,7 +198,6 @@
     "FINANCE/image",
     "FINANCE/1_BaoCaoTaiChinh",
     "FINANCE",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.7_CV/OCR.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/6. Server Deploy và vấn đề github - mật khẩu vào Server - Github.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Giải nén rar zip - python - Tóm lại dùng pyunpack cho zip và rarfile cho rar.md",
@@ -207,8 +209,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/3_LangChain/Bài viết 1 - 1 cách tổng quan nhất về Langchain.md",
     "Untitled.base",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/3_LangChain/Langflow.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/LangChain 1.1 Langfuse rồi thì có dùng các tools OpenTelemetry khác nữa không + LangFuse (free) - LangSmith (fee) - LangGraph Studio (free local, log in with LangSmith free Account) ..md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/Langchain 1.6 - Observe - Langfuse.md",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002835.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002431.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029001941.png",
