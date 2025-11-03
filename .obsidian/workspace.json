@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Neural Network/2. vllm - và vấn đề môi trường.md",
+                "file": "FINANCE/03-11-2025 Các nơi đào tạo CFA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. vllm - và vấn đề môi trường"
+              "title": "03-11-2025 Các nơi đào tạo CFA"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: pyt",
+                "query": "file:",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -172,8 +172,9 @@
   },
   "active": "b67c40ca344b36bf",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Neural Network/2. Pytorch - Hunggingface - Transformer.md",
+    "FINANCE/Các vị trí.md",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Neural Network/2. vllm - và vấn đề môi trường.md",
+    "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Neural Network/2. Pytorch - Hunggingface - Transformer.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "FINANCE/03-11-2025 Các nơi đào tạo CFA.md",
     "FINANCE/0-.md",
@@ -182,7 +183,6 @@
     "FINANCE/02-11-2025 Các nhà đầu tư dài hạn.md",
     "FINANCE/02-11-2025 Tư vấn - Định giá - Đầu tư IPO - Holdings -.md",
     "FINANCE/image/Pasted image 20251103153951.png",
-    "FINANCE/Các vị trí.md",
     "FINANCE/Untitled.md",
     "FINANCE/Các sàn chứng khoán.md",
     "FINANCE/Lộ trình.md",
