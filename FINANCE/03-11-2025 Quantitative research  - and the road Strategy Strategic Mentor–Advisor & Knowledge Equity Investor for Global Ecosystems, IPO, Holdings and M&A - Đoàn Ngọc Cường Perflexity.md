@@ -1,7 +1,12 @@
-																																																																								Một số task hàng ngày của công việc này và impact gì đến tương lai?
+
+# 1 - Một số task hàng ngày của công việc này và impact gì đến tương lai? Có ông nào từng làm quantitative research sau này trở thành Strategy Strategic Mentor–Advisor & Knowledge Equity Investor for Global Ecosystems, IPO, Holdings and M&A ko?  warrent buffet và người đồng đội thân cận của ông ấy có theo quantitative research đâu nhỉ
+
+```
+Một số task hàng ngày của công việc này và impact gì đến tương lai?
 Có ông nào từng làm quantitative research sau này trở thành Strategy Strategic Mentor–Advisor & Knowledge Equity Investor for Global Ecosystems, IPO, Holdings and M&A ko?
 
 warrent buffet và người đồng đội thân cận của ông ấy có theo quantitative research đâu nhỉ
+```
 
 
 ## Warren Buffett và Charlie Munger: Quan điểm về Quantitative Research
@@ -98,8 +103,11 @@ Warren Buffett và Charlie Munger **không theo đuổi quantitative research** 
 20. [https://finance.yahoo.com/news/top-analyst-reports-berkshire-hathaway-205500589.html](https://finance.yahoo.com/news/top-analyst-reports-berkshire-hathaway-205500589.html)
 
 ---
+# 2. Có ai “từ Quantitatitve Research → Strategic Advisor” kiểu Buffett không?
 
-# Có ai “từ Quantitatitve Research → Strategic Advisor” kiểu Buffett không?
+```bash
+Có ai “từ Quantitatitve Research → Strategic Advisor” kiểu Buffett không?
+```
 
 
 ## Có ai "từ Quantitative Research → Strategic Advisor" kiểu Buffett không?
