@@ -5,4 +5,13 @@
 2. Có thể thực tập full time ạ. Em có mong muốn sau 3-6 tháng có thể move lên chính thức, fresher ạ. ^^
 3. Trình độ ngoại ngữ: Em có chứng chỉ 4 kỹ năng B1 ạ. 
 4. Kinh nghiệm chuyên môn: AI Engineer hơn 1 năm kinh nghiệm. 
-   D
+   Định hướng dài hạn của em: 
+- AI Architect and AI Modeling for Financial Systems
+- Strategic Advisor for Financial and Business Model Strategy
+- Strategic Mentor–Advisor & Knowledge Equity Investor for Global Ecosystems, Business Valuation, IPO, Holdings and M&A
+
+ Theo đuổi ngành Finance
+ => Đây cũng là lý do em chuyển từ AI Engineer EduTech hơn 1 năm gắn bó sang Finance ạ. 
+ 
+ 
+ 
