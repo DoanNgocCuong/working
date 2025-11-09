@@ -1,3 +1,6 @@
+
+https://github.com/IsProjectX/robot-lesson-workflow/commit/4d7b72d9474affafb9efe158d563c0801fa25c52
+
 # 1. Không phải chỉ có 1 cách dùng sẵn `@observe` đâu nhé!:
 
 ## 🎯 **Cách 1: Decorator (Đơn giản nhất)**
@@ -606,5 +609,5 @@ Link: http://103.253.20.30:3009/project/cmfvxh2od0014ll075z9af8gu/traces?dateRan
 
 CHỐT LẠI: 
 1. Là trace ở hàm con được trace mỗi hàm dôi lên 0.01  
-2. Là việc trace ở hàm cha sẽ bị dôi 0.2s so với tổng của việc cộng time của các thành phần con (kể cả con được trace hay không được trace)
+2. Là việc trace ở hàm cha sẽ bị dôi 0.02s so với tổng của việc cộng time của các thành phần con (kể cả con được trace hay không được trace)
 ```
