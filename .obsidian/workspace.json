@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FINANCE/Crypto - Bitcoin - 04112025 - Warren Buffett và Charlie Munger – hai nhà đầu tư huyền thoại và đồng sáng lập Berkshire Hathaway – đều rất phản đối crypto và Bitcoin..md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/Vấn đề GHI ĐÈ trong Groq (Ghi đè enviroemtns vào ,=l.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Crypto - Bitcoin - 04112025 - Warren Buffett và Charlie Munger – hai nhà đầu tư huyền thoại và đồng sáng lập Berkshire Hathaway – đều rất phản đối crypto và Bitcoin."
+              "title": "Vấn đề GHI ĐÈ trong Groq (Ghi đè enviroemtns vào ,=l"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: đầu",
+                "query": "file: oss",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -172,6 +172,9 @@
   },
   "active": "f5cdaece4632a00b",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/Model Compare GPT OSS 20B vs GPT-4o mini Comprehensive side-by-side LLM comparison.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/Vấn đề GHI ĐÈ trong Groq (Ghi đè enviroemtns vào ,=l.md",
+    "FINANCE/Crypto - Bitcoin - 04112025 - Warren Buffett và Charlie Munger – hai nhà đầu tư huyền thoại và đồng sáng lập Berkshire Hathaway – đều rất phản đối crypto và Bitcoin..md",
     "FINANCE/Các sàn chứng khoán.md",
     "FINANCE/02-11-2025 Các nhà đầu tư dài hạn.md",
     "FINANCE/02-11-2025 Tư vấn - Định giá - Đầu tư IPO - Holdings -.md",
@@ -181,7 +184,6 @@
     "BUSINESS/0_100M$GlobalMoneyModel/Day 15 -.md",
     "FINANCE/Các vị trí.md",
     "FINANCE/Lộ trình.md",
-    "FINANCE/Crypto - Bitcoin - 04112025 - Warren Buffett và Charlie Munger – hai nhà đầu tư huyền thoại và đồng sáng lập Berkshire Hathaway – đều rất phản đối crypto và Bitcoin..md",
     "2025-11-04.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Deploy - Docker Logs.md",
     "FINANCE/03-11-2025 Các nơi đào tạo CFA.md",
@@ -206,8 +208,6 @@
     "FINANCE",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.7_CV/OCR.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/6. Server Deploy và vấn đề github - mật khẩu vào Server - Github.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Giải nén rar zip - python - Tóm lại dùng pyunpack cho zip và rarfile cho rar.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/3. Python cơ bản.md",
     "Untitled.base",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002835.png",
     "BUSINESS/0_100M$GlobalMoneyModel/image/Pasted image 20251029002431.png",
