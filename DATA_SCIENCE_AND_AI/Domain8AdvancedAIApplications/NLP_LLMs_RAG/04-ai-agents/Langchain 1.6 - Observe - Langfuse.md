@@ -1,5 +1,7 @@
 
 https://github.com/IsProjectX/robot-lesson-workflow/commit/4d7b72d9474affafb9efe158d563c0801fa25c52
+- D:\GIT\robot-lesson-workflow\app\module\workflows\v2_robot_workflow\chatbot\policies\log_trace_image\log2.md
+- D:\GIT\robot-lesson-workflow\app\module\workflows\v2_robot_workflow\chatbot\policies\log_trace_image\log1.txt
 
 # 1. Không phải chỉ có 1 cách dùng sẵn `@observe` đâu nhé!:
 
