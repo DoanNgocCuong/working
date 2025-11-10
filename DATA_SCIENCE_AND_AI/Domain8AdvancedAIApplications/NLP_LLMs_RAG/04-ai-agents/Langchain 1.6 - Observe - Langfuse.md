@@ -613,3 +613,8 @@ CHỐT LẠI:
 1. Là trace ở hàm con được trace mỗi hàm dôi lên 0.01  
 2. Là việc trace ở hàm cha sẽ bị dôi 0.02s so với tổng của việc cộng time của các thành phần con (kể cả con được trace hay không được trace)
 ```
+
+
+
+---
+# [Từ 2h đêm - 5h sáng: 3h xử lý việc bằng cả 2-3 ngày, thậm chí cả 1 tuần từ T2-T6 hoặc 2 tuần (tuy nhiên có yếu tố cộng dồn tích luỹ): Cụ thể nhờ trong tuần code thiết lập 16 steps nên mình biết là: 1. Overhead trong nội tại trace là 0.01 và 2. Overhead của thằng cha với các thằng con là 0.2 => Chỉ trong 3h khi NƯỚC TRÀN LY, mình fix xong việc RESPONSE TIME] - Chỉ giữ lại: Trace webhook-route và LLMs (bỏ tiếp nốt trace webhook-service) + Init trace mỗi init"
