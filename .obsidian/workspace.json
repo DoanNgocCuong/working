@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "FILE: docker",
+                "query": "FILE: log ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -186,7 +186,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "2ebb200360fb3dbd",
+  "active": "db02c5a91e7f8e1e",
   "lastOpenFiles": [
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Deploy - Docker Logs.md",
