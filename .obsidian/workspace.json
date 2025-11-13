@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Deploy - Docker Logs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.1.3 Dọn docker - kill process - port server"
+              "title": "2.1.2 Docker Deploy - Docker Logs"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "FILE: port",
+                "query": "FILE: docker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -188,13 +188,16 @@
   },
   "active": "2ebb200360fb3dbd",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/1. Long term Memory Architechture/0.2 Đồ án tiếp CƠ CHẾ QUẢN LÝ BỘ NHỚ - report 3_12032025 -.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Deploy - Docker Logs.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker - Docker Hub.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/2.3 Các port.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.2.8 Summary export PORT Docker.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/1. Long term Memory Architechture/0.2 Đồ án tiếp CƠ CHẾ QUẢN LÝ BỘ NHỚ - report 3_12032025 -.md",
     "DATA_SCIENCE_AND_AI/Domain7Cloud&Infrastructure/containerization-orchestration/docker-ecosystem/multi-container-applications/docker-compose-logs-realtime-troubleshooting.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.4 Dọn docker - kill process - port server 1.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Check Port nào đang được chạy ở file nào.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/2.3 Các port.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "DATA_SCIENCE_AND_AI/Domain 3 Machine Learning Fundamentals/Tài liệu Finetune Lora.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Final Report - LoRA + GRPO Integration - Báo Cáo Cuối Cùng - Tích Hợp LoRA + GRPO.md",
     "BUSINESS/Business model - 13102025.md",
@@ -212,14 +215,11 @@
     "BUSINESS/0_100M$GlobalMoneyModel/Day 26 Continuity Bonus - Dùng Phần Thưởng hấp Dẫn Để Thu Hút Khách hàng Đăng Ký Định Kỳ..md",
     "working-clean",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.16 Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
-    "BUSINESS/CongTy/Masan - 08 - 11 - 2025.md",
     "BUSINESS/CongTy/image/Pasted image 20251108184929.png",
     "BUSINESS/CongTy/image",
     "BUSINESS/CongTy",
     "FINANCE/CongTy",
-    "BUSINESS/0_CON NGƯỜI - BÀI TOÁN QUAN TRỌNG NHẤT CẦN GIẢI/Networking.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/image/Pasted image 20251106141322.png",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/6. Server Deploy và vấn đề github - mật khẩu vào Server - Github.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/image/Pasted image 20251105160658.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/image",
     "BUSINESS/Time",
