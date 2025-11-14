@@ -843,6 +843,11 @@ if __name__ == "__main__":
 ---
 
 ```
+import os
+
+from pathlib import Path
+
+from dotenv import load_dotenv
 
 # Load .env file from project root before importing langfuse
 # This ensures environment variables are available when langfuse_client is initialized
