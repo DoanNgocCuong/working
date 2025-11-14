@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Check Port nào đang được chạy ở file nào.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/2. Các thao tác DB cơ bản.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Check Port nào đang được chạy ở file nào"
+              "title": "2. Các thao tác DB cơ bản"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "FILE: port",
+                "query": "FILE: database",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,8 +89,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -157,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Check Port nào đang được chạy ở file nào.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/2. Các thao tác DB cơ bản.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Check Port nào đang được chạy ở file nào"
+              "title": "Outline of 2. Các thao tác DB cơ bản"
             }
           }
         ],
@@ -187,9 +186,11 @@
   },
   "active": "2ebb200360fb3dbd",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Note chung các Database.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/2. Các thao tác DB cơ bản.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Check Port nào đang được chạy ở file nào.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.2.8 Summary export PORT Docker.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/Langchain 1.6 - Observe - Langfuse.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Check Port nào đang được chạy ở file nào.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "FINANCE/Luong/13112025 -.md",
     "2025-11-13.md",
@@ -212,8 +213,6 @@
     "BUSINESS/0_100M$GlobalMoneyModel/Business Model P1 - Phân tích mô hình kinh doanh ngành Tech (2 xu hướng rõ rệt - Academy vs Product SaaS).md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.2 LLMs/Host Embedding Model/19052025  - How to host embedding model.md",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Neural Network/2. vllm - và vấn đề môi trường.md",
-    "FINTECH/DCF 14102025/1 - DCF và BÁO CÁO TÀI CHÍNH.md",
-    "FINANCE/03-11-2025 Các nơi đào tạo CFA.md",
     "working-clean",
     "BUSINESS/CongTy/image/Pasted image 20251108184929.png",
     "BUSINESS/CongTy/image",
