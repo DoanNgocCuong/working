@@ -25,3 +25,15 @@ find /path/to/project -name "docker-compose*.yml" -o -name "docker-compose*.yaml
 ### 1.2 Dùng `docker ps -a` để liệt kê tất cả.
     
 ### 1.3 Dùng `docker inspect <container_id_or_name>` để kiểm tra port của từng container (kể cả đã stop).
+
+
+# tìm các file chứa kí tự: studio-ai-platform-lesson-server-master
+
+```
+grep -r "studio-ai-platform-lesson-server-master" /home/ubuntu/GenAIProject
+
+```
+
+```
+docker logs -f --tail 100 studio-ai-platform-lesson-server-master
+```
