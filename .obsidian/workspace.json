@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FINANCE/Luong/13112025 -.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Check Port nào đang được chạy ở file nào.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13112025 -"
+              "title": "Check Port nào đang được chạy ở file nào"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "FILE: ",
+                "query": "FILE: port",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +89,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -187,11 +188,11 @@
   },
   "active": "2ebb200360fb3dbd",
   "lastOpenFiles": [
-    "2025-11-13.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "FINANCE/Luong/13112025 -.md",
+    "2025-11-13.md",
     "FINANCE/Luong",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Deploy - Docker Logs.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker - Docker Hub.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/2.3 Các port.md",

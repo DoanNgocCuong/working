@@ -13,3 +13,15 @@ lrwxrwxrwx 1 root root 0 Nov 12 10:51 /proc/12345/cwd -> /run/containerd/io.cont
 ```
 find /path/to/project -name "docker-compose*.yml" -o -name "docker-compose*.yaml" -exec grep -l "9403" {} \;
 ```
+
+
+---
+
+Đây là hướng dẫn từng bước để kiểm tra **port export** của các container đang chạy và không chạy trên Docker:
+
+---
+### 1.1 Dùng `docker ps` cho container đang chạy.
+    
+### 1.2 Dùng `docker ps -a` để liệt kê tất cả.
+    
+### 1.3 Dùng `docker inspect <container_id_or_name>` để kiểm tra port của từng container (kể cả đã stop).
