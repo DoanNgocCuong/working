@@ -212,3 +212,13 @@ curl --location 'http://103.253.20.30:3000/api/generate-all-exercises-lyly-the-c
 =REGEXEXTRACT(TO_TEXT(M2), """question_vi"":\s*""([^""]+)""")
 
 ```
+
+
+---
+# 4. Cách tính PERCENTILE 
+
+Chú ý: để ý bug: số trong cột ko được định dạng ở formt number / 
+
+```
+=COUNT(FILTER(F2:F109, TRIM(B2:B109)="RoleB"))
+```
