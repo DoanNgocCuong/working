@@ -9,7 +9,7 @@ NotebookLM: Tóm tắt bằng tiếng Việt 1 cách chi tiết, chuyên sâu, c
 **H2: $100M PLAYBOOK: CLOSING (CẨM NANG CHỐT SALE) CÁCH BIẾN LỜI TỪ CHỐI THÀNH DOANH SỐ**
 
 ---
-
+## **H2: $100M PLAYBOOK: CLOSING (CẨM NANG CHỐT SALE) CÁCH BIẾN LỜI TỪ CHỐI THÀNH DOANH SỐ**
 ### H3: Bắt đầu tại đây (Start Here)
 
 Đây là câu chuyện về tháng 1 năm 2017, khi Alex Hormozi trải qua 90 ngày khó khăn. Ông của ông qua đời, mẹ ông nằm viện vì chấn thương đe dọa tính mạng. Đối tác kinh doanh đã rút cạn tài khoản và giấu tiền ở nước ngoài sau bốn năm xây dựng và bán năm phòng tập gym đầu tiên. Thêm vào đó, ông gặp một vụ va chạm trực diện, dẫn đến bị DUI (lái xe khi say) và phải ngồi tù.
