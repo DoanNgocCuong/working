@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Websocket/Websocket.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Prompt for đọc toàn bộ source code.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Websocket"
+              "title": "Prompt for đọc toàn bộ source code"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: MLO",
+                "query": "file: system",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Websocket/Websocket.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Prompt for đọc toàn bộ source code.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Websocket"
+              "title": "Outline of Prompt for đọc toàn bộ source code"
             }
           }
         ],
@@ -184,12 +184,20 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "2ebb200360fb3dbd",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025",
+    "BUSINESS/1_PRODUCT/Untitled",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Note Nhập môn MLOPs.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Prompt for đọc toàn bộ source code.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. Hệ thống/System - server.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/Module 5/B2_RAG/AI_RAG_RecommendSystem_with_AI_RAG_Mem0.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Untitled",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Websocket/Websocket.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Websocket/image/Pasted image 20251124142035.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Websocket/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. MLOps.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Websocket/Websocket.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Websocket",
     "BUSINESS/1_PRODUCT/Manager/Luồng Làm Việc Nexus - Quy Trình Phát Triển Sản Phẩm Tối Ưu với AI - Luồng Làm Việc Nexus.md",
     "BUSINESS/1_PRODUCT/Manager/Buổi 1 - Overview metathinking khi sử dụng Manus cho các đầu việc lớn của team Product.md",
@@ -215,23 +223,15 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image",
     "DATA_SCIENCE_AND_AI/Domain 9 Business/14. StepUpEnglish/8_Project/1_dify/Module2_Database/2. Database của Rating ở meta data.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.2.9 Docker Network is till - Docker Network bị sử dụng.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.2.7 Docker networks bridge và networks và network_mode host.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.13 VẤN ĐỀ API KEY BỊ CHỒNG LẤN TRONG DOCKER.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/5_Database/Queue, Client, Consumer, Worker, Redis.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/5_Database/Redis.md",
     "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/Closing - Vn",
     "BUSINESS/0_100M$GlobalMoneyModel/BlackBook",
     "DATA_SCIENCE_AND_AI/Domain 9 Business/14. StepUpEnglish/8_Project/1_dify/Module2_Database/image/Pasted image 20251002123546.png",
-    "FINANCE/Luong",
-    "working-clean",
     "BUSINESS/CongTy/image/Pasted image 20251108184929.png",
-    "BUSINESS/CongTy/image",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/image/Pasted image 20251106141322.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/image/Pasted image 20251105160658.png",
     "FINANCE/image/Pasted image 20251103153951.png",
     "FINANCE/TaiChinhCaNhan/image/Pasted image 20251103002157.png",
     "FINANCE/TaiChinhCaNhan/image/Pasted image 20251103002151.png",
-    "FINANCE/image/Pasted image 20251102184514.png",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
