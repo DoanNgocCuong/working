@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/50 cuốn về Product.md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.1  Visulize Logic đầu ngày PIC - Đoàn Ngọc Cường - MANUS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "50 cuốn về Product"
+              "title": "Tài liệu 3.1  Visulize Logic đầu ngày PIC - Đoàn Ngọc Cường - MANUS"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/50 cuốn về Product.md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.1  Visulize Logic đầu ngày PIC - Đoàn Ngọc Cường - MANUS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 50 cuốn về Product"
+              "title": "Outline of Tài liệu 3.1  Visulize Logic đầu ngày PIC - Đoàn Ngọc Cường - MANUS"
             }
           }
         ],
@@ -171,6 +171,7 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
+    "BUSINESS/1_PRODUCT/50 cuốn về Product.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.1  Visulize Logic đầu ngày PIC - Đoàn Ngọc Cường - MANUS.md",
     "BUSINESS/1_PRODUCT/Product Flow.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 2 - Logic cập nhật các variable cuối ngày.md",
@@ -194,7 +195,6 @@
     "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/Closing - Comment.md",
     "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/PROOF CHECKLIST.md",
     "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Luồng Làm Việc Nexus - Quy Trình Phát Triển Sản Phẩm Tối Ưu với AI - Luồng Làm Việc Nexus.md",
-    "BUSINESS/1_PRODUCT/50 cuốn về Product.md",
     "BUSINESS/1_PRODUCT/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/1. Khai Giảng 07042025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Prompt for đọc toàn bộ source code.md",
