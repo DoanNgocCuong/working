@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/Tài liệu Product.md",
+                "file": "BUSINESS/FINANCE/Bài tập 1 - 25 11 2025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tài liệu Product"
+              "title": "Bài tập 1 - 25 11 2025"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 533.5
+    "width": 334.5
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/Tài liệu Product.md",
+                "file": "BUSINESS/FINANCE/Bài tập 1 - 25 11 2025.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tài liệu Product"
+              "title": "Outline of Bài tập 1 - 25 11 2025"
             }
           }
         ],
@@ -171,8 +171,14 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/Untitled/Untitled.md",
+    "BUSINESS/FINANCE/Ví dụ đơn giản thực tế.md",
+    "BUSINESS/FINANCE/Bài tập 1 - 25 11 2025.md",
+    "BUSINESS/FINANCE/Untitled.md",
+    "BUSINESS/FINANCE/Một số mẩu chuyện warren buffet.md",
+    "BUSINESS/FINANCE/Untitled 1.md",
+    "BUSINESS/2_FINANCE/1..md",
     "BUSINESS/1_PRODUCT/Tài liệu Product.md",
+    "BUSINESS/1_PRODUCT/Untitled/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Mermaid Diagrams - Logic Chọn Talk or Game-Agent Đầu Ngày - 25112025.md",
     "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Buổi 1 - Overview metathinking khi sử dụng Manus cho các đầu việc lớn của team Product.md",
     "BUSINESS/1_PRODUCT/Untitled",
@@ -192,12 +198,6 @@
     "BUSINESS/1_PRODUCT/Cách làm những thứ mới.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Untitled.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.6 - Kiến trúc repo - repo_architecture.md.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.7 - Tài liệu Thiết kế Database PostgreSQL Context Handling.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.4 - Cách tính friendlyship_score.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.2 - Logic Backend và AI.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.5 - Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
-    "BUSINESS/1_PRODUCT/Untitled 1.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.1  Visulize Logic đầu ngày PIC - Đoàn Ngọc Cường - MANUS.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180917.png",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180850.png",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180753.png",
