@@ -140,13 +140,7 @@ curl -X POST http://localhost:8000/v1/scoring/calculate-friendship \
   -H "Content-Type: application/json" \
   -d '{
     "user_id": "user_123",
-    "conversation_log": [
-      {"speaker": "user", "turn_id": 1, "text": "Hi Pika!"},
-      {"speaker": "pika", "turn_id": 2, "text": "Hello! How are you?"},
-      {"speaker": "user", "turn_id": 3, "text": "I watched a Miyazaki movie!"},
-      {"speaker": "pika", "turn_id": 4, "text": "That is wonderful!"}
-    ],
-    "session_emotion": "interesting"
+    "conversation_id"
   }'
 ```
 
