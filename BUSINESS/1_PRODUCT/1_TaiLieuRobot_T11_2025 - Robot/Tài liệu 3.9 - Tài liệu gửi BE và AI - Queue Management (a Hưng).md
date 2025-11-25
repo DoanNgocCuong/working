@@ -6,7 +6,12 @@ AI 6h-24h sau sẽ call tới API : user_id, conversation_id để lấy thông 
 # Get data dựa vào conversation_id và user_id
 curl -X GET http://localhost:8000/
 
-
+Đảm bảo log trả đủ: 
+- conversation, 
+- learning_type:workflow/greeting / learn agent / talk agent / game gent (trả rõ type)
+- total_time: thời gian trẻ nói
+  
+API format thì tuỳ ý ạ, anh Việt gửi em format example sớm nhá ạ. 
 
 ```
 

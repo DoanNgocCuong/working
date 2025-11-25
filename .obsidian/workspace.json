@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu gửi BE.md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu gửi BE và AI - Queue Management (a Hưng).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tài liệu 3.9 - Tài liệu gửi BE"
+              "title": "Tài liệu 3.9 - Tài liệu gửi BE và AI - Queue Management (a Hưng)"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu gửi BE.md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu gửi BE và AI - Queue Management (a Hưng).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tài liệu 3.9 - Tài liệu gửi BE"
+              "title": "Outline of Tài liệu 3.9 - Tài liệu gửi BE và AI - Queue Management (a Hưng)"
             }
           }
         ],
@@ -171,11 +171,11 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Template Prompt a Hiệp.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu gửi BE.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.8 API Update Example.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.8 Feedback tài liệu tổng toàn bộ.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu gửi BE và AI - Queue Management (a Hưng).md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Template Prompt a Hiệp.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.8 API Update Example.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 1 - Cấu trúc lưu trữ Friendship Statement Variable.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 2 - Logic cập nhật các variable cuối ngày.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3 - Logic chọn Talk or Game - Agent đầu ngày.md",
