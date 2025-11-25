@@ -22,7 +22,7 @@ Một tác vụ nền (background job), chẳng hạn như Cron Job hoặc một
     *   `user_initiated_questions`: Số lần người dùng chủ động hỏi Pika.
     *   `followup_topics_count`: Tên chủ đề mới do người dùng gợi ý.
     *   `session_emotion`: Cảm xúc chủ đạo trong ngày ('interesting', 'boring', 'neutral', 'angry', 'happy','sad').
-    *   `new_memories_count`: Số ký ức mới được tạo.
+    *   `new_memories_count`: Số ký ức mới được tạo. 
     *   `topic_details`: Chi tiết tương tác cho từng topic (số turn, số câu hỏi).
 
     **b. Tính toán `daily_change_score` cho `friendship_score`:**
