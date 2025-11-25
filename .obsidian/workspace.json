@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling.md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling - 25112025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling"
+              "title": "Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling - 25112025"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 532.5
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling.md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling - 25112025.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling"
+              "title": "Outline of Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling - 25112025"
             }
           }
         ],
@@ -169,40 +169,40 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "0721c95424d87d2e",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu giao tiếp AI - BE.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.8 Feedback tài liệu tổng toàn bộ.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.10 - từ 1 cục mơ hồ không biết 1 tuần hay 2 tuần mới xong = Manus chẻ nhỏ và define tất cả từ LUỒNG LOGIC GIAO TIẾP, DB, API FORMAT.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling - 25112025.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.9 - Tài liệu giao tiếp AI - BE.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.8 Feedback tài liệu tổng toàn bộ.md",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Prompting/4. Prompt Template - giải word count và Agenda trải nghiệm ko mượt (tìm many options for Agenda) - 25112025.md",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Prompting/0. Prompting Builder.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Template Prompt a Hiệp.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.8 API Update Example.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 1 - Cấu trúc lưu trữ Friendship Statement Variable.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 2 - Logic cập nhật các variable cuối ngày.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3 - Logic chọn Talk or Game - Agent đầu ngày.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.7 - Tài liệu Thiết kế NoSQL for Postgres DB PostgreSQL + JSONB (NoSQL-style)..md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.3 - Tại sao chọn MongoDB.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Template Prompt a Hiệp.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.8 API Update Example.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 1 - Cấu trúc lưu trữ Friendship Statement Variable.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 2 - Logic cập nhật các variable cuối ngày.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3 - Logic chọn Talk or Game - Agent đầu ngày.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.7 - Tài liệu Thiết kế NoSQL for Postgres DB PostgreSQL + JSONB (NoSQL-style)..md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.3 - Tại sao chọn MongoDB.md",
     "BUSINESS/1_PRODUCT/Cách làm những thứ mới.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Untitled.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.6 - Kiến trúc repo - repo_architecture.md.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.7 - Tài liệu Thiết kế Database PostgreSQL Context Handling.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.4 - Cách tính friendlyship_score.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.2 - Logic Backend và AI.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.5 - Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Untitled.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.6 - Kiến trúc repo - repo_architecture.md.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.7 - Tài liệu Thiết kế Database PostgreSQL Context Handling.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.4 - Cách tính friendlyship_score.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.2 - Logic Backend và AI.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.5 - Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
     "BUSINESS/1_PRODUCT/Untitled 1.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.1  Visulize Logic đầu ngày PIC - Đoàn Ngọc Cường - MANUS.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 0.2 - PRD.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/README.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.1  Visulize Logic đầu ngày PIC - Đoàn Ngọc Cường - MANUS.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 0.2 - PRD.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/README.md",
     "BUSINESS/1_PRODUCT/50 cuốn về Product.md",
     "BUSINESS/1_PRODUCT/Product Flow.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/image/Pasted image 20251124180917.png",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/image/Pasted image 20251124180850.png",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/image/Pasted image 20251124180753.png",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/image/Pasted image 20251124180701.png",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/image",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 0.1 - PRD - Master Orchestration - Pika Agent.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180917.png",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180850.png",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180753.png",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180701.png",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot",
     "BUSINESS/1_PRODUCT/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled",
