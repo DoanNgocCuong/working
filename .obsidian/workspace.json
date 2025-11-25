@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.4 - Cách tính friendlyship_score.md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 0.2 - PRD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tài liệu 3.4 - Cách tính friendlyship_score"
+              "title": "Tài liệu 0.2 - PRD"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.4 - Cách tính friendlyship_score.md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 0.2 - PRD.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tài liệu 3.4 - Cách tính friendlyship_score"
+              "title": "Outline of Tài liệu 0.2 - PRD"
             }
           }
         ],
@@ -171,8 +171,9 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.2 - Logic Backend và AI.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.5 - Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.4 - Cách tính friendlyship_score.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.2 - Logic Backend và AI.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.3 - Tại sao chọn MongoDB.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3 - Logic chọn Talk or Game - Agent đầu ngày.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 2 - Logic cập nhật các variable cuối ngày.md",
@@ -201,7 +202,6 @@
     "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/PROOF CHECKLIST.md",
     "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Luồng Làm Việc Nexus - Quy Trình Phát Triển Sản Phẩm Tối Ưu với AI - Luồng Làm Việc Nexus.md",
     "BUSINESS/1_PRODUCT/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/1. Khai Giảng 07042025.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot",
     "BUSINESS/1_PRODUCT/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Untitled",

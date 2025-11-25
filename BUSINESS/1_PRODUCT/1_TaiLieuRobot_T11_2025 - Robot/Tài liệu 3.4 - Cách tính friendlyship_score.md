@@ -41,7 +41,7 @@ Cục DB Friendlyship sẽ quản lý tất cả điều này (để về sau c�
 2. DB cục friendlyship_score, friendlyship_level  --- mappping với 1 loạt logic chọn Greeting Agent, Talk Agent, Game/Activity Agent . 
 - Cần define 1 đầu API để truyền user_id và friendlyship_level, loại cần lấy và số lượng cần lấy => thì sẽ lấy ra. 
 
-Nói chung đây là module Context Handling quản lý Friendlyship và Friendlyship - Kho Agent. 
+Nói chung đây là module Context Handling quản lý Friendlyship và Kho Agent ứng với friendlyship_level. 
 
 ---
 Viết tài liệu triển khai chi tiết từ Product -> Technical. 
