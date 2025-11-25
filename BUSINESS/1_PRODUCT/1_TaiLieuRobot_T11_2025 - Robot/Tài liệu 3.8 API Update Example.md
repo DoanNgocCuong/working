@@ -132,17 +132,7 @@ Content-Type: application/json
 ```
 
 Phía BE chỉ cần gửi user_id và conversation_id đến phía AI
-### Request Fields - Phía AI tự xử lý để từ . 
-
-| Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `user_id` | String | Yes | ID duy nhất của user |
-| `conversation_log` | Array | Yes | Danh sách các lượt nói trong phiên |
-| `conversation_log[].speaker` | String | Yes | "user" hoặc "pika" |
-| `conversation_log[].turn_id` | Integer | Yes | Số thứ tự lượt nói |
-| `conversation_log[].text` | String | Yes | Nội dung lượt nói |
-| `session_emotion` | String | No | Cảm xúc chủ đạo: interesting, boring, neutral, happy, sad |
-
+### Request Fields - Phía AI tự xử lý để từ .
 ### cURL Example
 
 ```bash
@@ -165,22 +155,7 @@ curl -X POST http://localhost:8000/v1/scoring/calculate-friendship \
 ```json
 {
   "user_id": "user_123",
-  "friendship_score_change": 35.5,
-  "topic_metrics_update": [
-    {
-      "topic_id": "agent_movie",
-      "score_change": 7.0,
-      "turns_increment": 2
-    }
-  ],
-  "new_memories": [
-    {
-      "memory_id": "mem_001",
-      "content": "Thích xem phim Spirited Away của Hayao Miyazaki",
-      "related_topic": "agent_movie",
-      "timestamp": "2025-11-25T18:30:00Z"
-    }
-  ]
+  "": oke đã gửi dữ liệu thành công, phía AI sẽ lưu trữ và tính toán dynamic memory và friendlyship_score. 
 }
 ```
 
