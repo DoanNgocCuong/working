@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu gửi BE và AI - Queue Management (a Hưng).md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu giao tiếp AI - BE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tài liệu 3.9 - Tài liệu gửi BE và AI - Queue Management (a Hưng)"
+              "title": "Tài liệu 3.9 - Tài liệu giao tiếp AI - BE"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: Promptin",
+                "query": "file: promp",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu gửi BE và AI - Queue Management (a Hưng).md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu giao tiếp AI - BE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tài liệu 3.9 - Tài liệu gửi BE và AI - Queue Management (a Hưng)"
+              "title": "Outline of Tài liệu 3.9 - Tài liệu giao tiếp AI - BE"
             }
           }
         ],
@@ -171,9 +171,11 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.8 Feedback tài liệu tổng toàn bộ.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu gửi BE và AI - Queue Management (a Hưng).md",
+    "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Prompting/4. Prompt Template - giải word count và Agenda trải nghiệm ko mượt (tìm many options for Agenda) - 25112025.md",
+    "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 Prompting/0. Prompting Builder.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.9 - Tài liệu giao tiếp AI - BE.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.8 Feedback tài liệu tổng toàn bộ.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Template Prompt a Hiệp.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.8 API Update Example.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 1 - Cấu trúc lưu trữ Friendship Statement Variable.md",
@@ -200,8 +202,6 @@
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/image/Pasted image 20251124180701.png",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/image",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 0.1 - PRD - Master Orchestration - Pika Agent.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Prompting a Hiệp.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Prompting/Prompting a Hiệp.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot",
     "BUSINESS/1_PRODUCT/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Untitled",
