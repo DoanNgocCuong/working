@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu tổng toàn bộ.md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.7 - Tài liệu Thiết kế NoSQL for Postgres DB PostgreSQL + JSONB (NoSQL-style)..md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tài liệu tổng toàn bộ"
+              "title": "Tài liệu 3.7 - Tài liệu Thiết kế NoSQL for Postgres DB PostgreSQL + JSONB (NoSQL-style)."
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu tổng toàn bộ.md",
+                "file": "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.7 - Tài liệu Thiết kế NoSQL for Postgres DB PostgreSQL + JSONB (NoSQL-style)..md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tài liệu tổng toàn bộ"
+              "title": "Outline of Tài liệu 3.7 - Tài liệu Thiết kế NoSQL for Postgres DB PostgreSQL + JSONB (NoSQL-style)."
             }
           }
         ],
@@ -171,19 +171,25 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.8 API Update Example.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.8 Feedback tài liệu tổng toàn bộ.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.7 - Tài liệu Thiết kế NoSQL for Postgres DB PostgreSQL + JSONB (NoSQL-style)..md",
+    "BUSINESS/1_PRODUCT/Cách làm những thứ mới.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Untitled.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Template Prompt a Hiệp.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.5 - Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.1  Visulize Logic đầu ngày PIC - Đoàn Ngọc Cường - MANUS.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu tổng toàn bộ.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.6 - Kiến trúc repo - repo_architecture.md.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.7 - Tài liệu Thiết kế Database PostgreSQL Context Handling.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.4 - Cách tính friendlyship_score.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.3 - Tại sao chọn MongoDB.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.2 - Logic Backend và AI.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.5 - Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
+    "BUSINESS/1_PRODUCT/Untitled 1.md",
+    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.1  Visulize Logic đầu ngày PIC - Đoàn Ngọc Cường - MANUS.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 2 - Logic cập nhật các variable cuối ngày.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 1 - Cấu trúc lưu trữ Friendship Statement Variable.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3 - Logic chọn Talk or Game - Agent đầu ngày.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.3 - Tại sao chọn MongoDB.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.2 - Logic Backend và AI.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 3.6 - Kiến trúc repo - repo_architecture.md.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 0.2 - PRD.md",
-    "BUSINESS/1_PRODUCT/Cách làm những thứ mới.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/README.md",
     "BUSINESS/1_PRODUCT/50 cuốn về Product.md",
     "BUSINESS/1_PRODUCT/Product Flow.md",
@@ -193,15 +199,9 @@
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/image/Pasted image 20251124180701.png",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/image",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Tài liệu 0.1 - PRD - Master Orchestration - Pika Agent.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Untitled.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot/Prompting a Hiệp.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Prompting/Prompting a Hiệp.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Python 1.9 - orjson.dumps(data) - ENSURE_ASCII - Dự án robot -workflow refactor - 24102025.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/Lead-Nurture - Summary - Sơ đồ hoá.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/Closing - Summary - Sơ Đồ Hoá.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Check Port nào đang được chạy ở file nào.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/Closing - Comment.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/PROOF CHECKLIST.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_T11_2025 - Robot",
     "BUSINESS/1_PRODUCT/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Untitled",
