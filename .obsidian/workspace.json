@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 3 - Worker - Batch size concurrency -.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RabbitMQ 3 - Worker - Batch size concurrency -"
+              "title": "RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 3 - Worker - Batch size concurrency -.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of RabbitMQ 3 - Worker - Batch size concurrency -"
+              "title": "Outline of RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn"
             }
           }
         ],
@@ -172,7 +172,7 @@
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 2 - Tối Ưu Hóa Concurrency và Số Lượng Worker (RabbitMQ).md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 3 - Worker - Batch size concurrency -.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Các lệnh cơ bản PostGress.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 1 - worker.py - Phương Án Kỹ Thuật Chi Tiết Triển Khai RabbitMQ.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/DEMO 1 - BE bắn thông tin đến AI - AI trả về 202 luôn và đẩy TASK vào Queue.md",
