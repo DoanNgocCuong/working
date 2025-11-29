@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/VẤN ĐỀ DATABASE bị thừa khoảng trắng khi nhập string = Dẫn đến ko query được.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VẤN ĐỀ DATABASE bị thừa khoảng trắng khi nhập string = Dẫn đến ko query được"
+              "title": "Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: Database",
+                "query": "file: fro",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/VẤN ĐỀ DATABASE bị thừa khoảng trắng khi nhập string = Dẫn đến ko query được.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of VẤN ĐỀ DATABASE bị thừa khoảng trắng khi nhập string = Dẫn đến ko query được"
+              "title": "Outline of Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn"
             }
           }
         ],
@@ -171,8 +171,14 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/0. Note chung các Database.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/1. Tối ưu Frontend - a Thiện.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/LLMFullStack/OpenSource pull về build FullStack.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Bài 1 - 6 Steps Cú pháp - Check Metadata Table Col - Hash text Chiến lược trong Memory -.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251129200111.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251129195204.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/VẤN ĐỀ DATABASE bị thừa khoảng trắng khi nhập string = Dẫn đến ko query được.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/0. Note chung các Database.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 2 - Tối Ưu Hóa Concurrency và Số Lượng Worker (RabbitMQ).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Các lệnh cơ bản PostGress.md",
@@ -199,15 +205,9 @@
     "BUSINESS/2_FINANCE/1..md",
     "BUSINESS/1_PRODUCT/Untitled/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Mermaid Diagrams - Logic Chọn Talk or Game-Agent Đầu Ngày - 25112025.md",
-    "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Buổi 1 - Overview metathinking khi sử dụng Manus cho các đầu việc lớn của team Product.md",
     "BUSINESS/1_PRODUCT/Untitled",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.100 - Tài liệu tổng toàn bộ - Module Context Handling - 25112025.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Tài liệu 3.10 - từ 1 cục mơ hồ không biết 1 tuần hay 2 tuần mới xong = Manus chẻ nhỏ và define tất cả từ LUỒNG LOGIC GIAO TIẾP, DB, API FORMAT trong 1 ngày.md",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/Template Prompt a Hiệp.md",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180917.png",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180850.png",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180753.png",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180701.png",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Untitled",
