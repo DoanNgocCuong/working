@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn.md",
+                "file": "DATA_SCIENCE_AND_AI/New folder/4_Product/Product Management.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn"
+              "title": "Product Management"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: fro",
+                "query": "file: product",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn.md",
+                "file": "DATA_SCIENCE_AND_AI/New folder/4_Product/Product Management.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn"
+              "title": "Outline of Product Management"
             }
           }
         ],
@@ -171,8 +171,10 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/1. Tối ưu Frontend - a Thiện.md",
+    "DATA_SCIENCE_AND_AI/New folder/4_Product/2. Product (Technical and Product).md",
+    "DATA_SCIENCE_AND_AI/New folder/4_Product/Product Management.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/1. Tối ưu Frontend - a Thiện.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/LLMFullStack/OpenSource pull về build FullStack.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Bài 1 - 6 Steps Cú pháp - Check Metadata Table Col - Hash text Chiến lược trong Memory -.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251129200111.png",
@@ -203,8 +205,6 @@
     "BUSINESS/FINANCE/Một số mẩu chuyện warren buffet.md",
     "BUSINESS/FINANCE/Untitled 1.md",
     "BUSINESS/2_FINANCE/1..md",
-    "BUSINESS/1_PRODUCT/Untitled/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Mermaid Diagrams - Logic Chọn Talk or Game-Agent Đầu Ngày - 25112025.md",
     "BUSINESS/1_PRODUCT/Untitled",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180917.png",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180850.png",
