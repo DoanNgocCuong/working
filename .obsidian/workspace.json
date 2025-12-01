@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/New folder/4_Product/Example 1 -  Binance, Coinbase, ATX, Metamask Web3 wallet.md",
+                "file": "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Example 1 -  Binance, Coinbase, ATX, Metamask Web3 wallet"
+              "title": "Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: product",
+                "query": "file: fintech",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/New folder/4_Product/Example 1 -  Binance, Coinbase, ATX, Metamask Web3 wallet.md",
+                "file": "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Example 1 -  Binance, Coinbase, ATX, Metamask Web3 wallet"
+              "title": "Outline of Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT"
             }
           }
         ],
@@ -171,8 +171,17 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/New folder/4_Product/Example.md",
+    "BUSINESS/2_FINANCE/FINTECH/0_FinTech_Overview_Oct12_2025.md",
+    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/3. Đường dẫn trong lập trình.md",
+    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/8 . Thuật toán xử lý text.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/Pasted image 20251022162658.png",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/Dùng _ cho help_function hay private method in Python.md",
+    "DATA_SCIENCE_AND_AI/2_English/0. Chiến thuật.md",
+    "BUSINESS/2_FINANCE/FINANCE/25 - 11 - 2025 Định giá và kể chuyện.md",
     "DATA_SCIENCE_AND_AI/New folder/4_Product/Example 1 -  Binance, Coinbase, ATX, Metamask Web3 wallet.md",
+    "DATA_SCIENCE_AND_AI/New folder/4_Product/Example.md",
     "DATA_SCIENCE_AND_AI/New folder/4_Product/3. Product Management.md",
     "DATA_SCIENCE_AND_AI/New folder/4_Product/2. Product (Technical and Product).md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn.md",
@@ -192,22 +201,14 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/04-ai-agents.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/0. Nguồn học Big Data và Syllabus.md",
     "BUSINESS/1_PRODUCT/Untitled.md",
-    "BUSINESS/1_PRODUCT/Tài liệu Product - Technical Giao tiếp giữa các bên.md",
-    "BUSINESS/1_PRODUCT/Product Flow.md",
-    "BUSINESS/FINANCE/25 - 11 - 2025 Định giá và kể chuyện.md",
-    "BUSINESS/FINANCE/image/Pasted image 20251125231043.png",
-    "BUSINESS/FINANCE/image/Pasted image 20251125231031.png",
-    "BUSINESS/FINANCE/image/Pasted image 20251125230823.png",
-    "BUSINESS/FINANCE/image/Pasted image 20251125230742.png",
-    "BUSINESS/FINANCE/image/Pasted image 20251125230625.png",
-    "BUSINESS/FINANCE/image/Pasted image 20251125230522.png",
-    "BUSINESS/FINANCE/Bài tập 1 - Các chỉ số quan trọng trong tài chính -  25 11 2025.md",
-    "BUSINESS/FINANCE/Ví dụ đơn giản thực tế.md",
-    "BUSINESS/FINANCE/Untitled.md",
-    "BUSINESS/FINANCE/Một số mẩu chuyện warren buffet.md",
+    "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125231043.png",
+    "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125231031.png",
+    "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230823.png",
+    "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230742.png",
+    "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230625.png",
+    "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230522.png",
     "BUSINESS/1_PRODUCT/Untitled",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180917.png",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180850.png",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Untitled",
@@ -216,7 +217,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Websocket",
     "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical",
     "BUSINESS/2_FINANCE",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
