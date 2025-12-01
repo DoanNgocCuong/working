@@ -32,11 +32,24 @@ Sau 6 năm, Huy đã quyết định bỏ công việc ổn định tại Friesl
 - **Cố vấn Tài chính Cấp cao** - FIDT (Công ty CP Tư vấn Đầu tư và Quản lý Gia sản)
 - Theo một số nguồn: Có thể liên quan đến vị trí Phó Chủ tịch tại Chứng khoán APG
 
+Dẫn chứng cụ thể: Ông Nguyễn An Huy thường xuyên được trích dẫn trong các bài viết về tài chính, đầu tư, chứng khoán và hoạch định tài chính cá nhân trên các báo lớn như VnExpress, Tuổi Trẻ, Báo Mới với danh nghĩa chuyên gia của FIDT.
+
+1. **Từ VnExpress** (Tháng 10/2025): "Dưới góc nhìn của chuyên gia tư vấn Nguyễn An Huy, **cố vấn tài chính cấp cao tại Công ty FIDT**..." [VnExpress](https://vnexpress.net/de-xuat-token-hoa-de-tich-luy-hoac-xo-so-nha-o-xa-hoi-4948154.html)
+
+2. **Từ Báo Mới** (Tháng 11/2024): "Ông Nguyễn An Huy, **Tổ trưởng Tổ tư vấn Tài chính cá nhân tại Công ty CP Tư vấn đầu tư & Quản lý tài sản FIDT**" [Báo Mới](https://baomoi.com/vi-sao-gia-bitcoin-lien-tuc-tang-c50706395.epi)
+
+3. **Từ Facebook FIDT** (Tháng 7/2024): "Nguyễn An Huy - **Chuyên gia hoạch định tài chính cá nhân tại Công ty FIDT**" [Facebook FIDT](https://www.facebook.com/FanpageFIDT/videos/1664375664312334/)
+
+4. **Từ Nhịp Sống Kinh Doanh** (Tháng 7/2025): "Ông Nguyễn An Huy – **Cố vấn tài chính cấp cao tại FIDT**" [Nhịp Sống Kinh Doanh](https://nhipsongkinhdoanh.vn/vung-khang-cu-manh--thi-truong-da-cham-muc-dinh-gia-binh-quan-10-nam-19068.htm)
+
+
 ### **Kinh nghiệm chuyên môn**
 
 - **10+ năm** kinh nghiệm trên thị trường chứng khoán Việt Nam
 - **6 năm** kinh nghiệm quản lý và tư vấn đầu tư cho khách hàng cá nhân
 - Từng là Trưởng nhóm kinh doanh bảo hiểm tại Chubb Life Việt Nam
+
+
 
 ---
 
