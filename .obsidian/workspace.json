@@ -11,10 +11,14 @@
             "id": "0721c95424d87d2e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "BUSINESS/2_FINANCE/FINTECH/Quy trình RI Pipeline v2 - Định giá nhóm Tài chính (Bank Insurance  Broker).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Quy trình RI Pipeline v2 - Định giá nhóm Tài chính (Bank Insurance  Broker)"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: rabbit",
+                "query": "file: finance",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -137,12 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "BUSINESS/2_FINANCE/FINTECH/Quy trình RI Pipeline v2 - Định giá nhóm Tài chính (Bank Insurance  Broker).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Quy trình RI Pipeline v2 - Định giá nhóm Tài chính (Bank Insurance  Broker)"
             }
           }
         ],
@@ -164,8 +169,11 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "0721c95424d87d2e",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
+    "BUSINESS/0_100M$GlobalMoneyModel/Business Model - P2 - Từ AI Architect in Finance - Business Model Stategy - Ecosystem Investor - sang Finance Business Model Strategy- Mentor Investing - Business Models and Money Models.md",
+    "BUSINESS/2_FINANCE/FINTECH/Quy trình RI Pipeline v2 - Định giá nhóm Tài chính (Bank Insurance  Broker).md",
+    "BUSINESS/2_FINANCE/FINTECH/0_FinTech_Overview_Oct12_2025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/1. Khai Giảng 07042025.md",
     "BUSINESS/2_FINANCE/FINANCE/Bài tập 1 - Các chỉ số quan trọng trong tài chính -  25 11 2025.md",
     "BUSINESS/2_FINANCE/FINANCE/Các chỉ số tài chính P1 - Biên lợi nhuận gộp.md",
@@ -174,7 +182,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 2 - Tối Ưu Hóa Concurrency và Số Lượng Worker (RabbitMQ).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
     "BUSINESS/0_CON NGƯỜI - BÀI TOÁN QUAN TRỌNG NHẤT CẦN GIẢI/Present.md",
-    "BUSINESS/2_FINANCE/FINTECH/0_FinTech_Overview_Oct12_2025.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/3. Đường dẫn trong lập trình.md",
     "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/8 . Thuật toán xử lý text.md",
@@ -194,8 +201,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251129195204.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/VẤN ĐỀ DATABASE bị thừa khoảng trắng khi nhập string = Dẫn đến ko query được.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/0. Note chung các Database.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Các lệnh cơ bản PostGress.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/DEMO 1 - BE bắn thông tin đến AI - AI trả về 202 luôn và đẩy TASK vào Queue.md",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125231043.png",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125231031.png",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230823.png",
