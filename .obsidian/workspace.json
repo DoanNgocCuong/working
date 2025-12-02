@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Cách 2 user_id được xử lý song song vào DB bằng cách xử dụng LOCK - Xử lý Concurrent User_ID - Thread Safety và Row-level Locking.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/security/SECRET_KEY - SECRET - SECURITY - Tài liệu 3.19 - SECRET_KEY cho JWT encryption.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cách 2 user_id được xử lý song song vào DB bằng cách xử dụng LOCK - Xử lý Concurrent User_ID - Thread Safety và Row-level Locking"
+              "title": "SECRET_KEY - SECRET - SECURITY - Tài liệu 3.19 - SECRET_KEY cho JWT encryption"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Cách 2 user_id được xử lý song song vào DB bằng cách xử dụng LOCK - Xử lý Concurrent User_ID - Thread Safety và Row-level Locking.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/security/SECRET_KEY - SECRET - SECURITY - Tài liệu 3.19 - SECRET_KEY cho JWT encryption.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Cách 2 user_id được xử lý song song vào DB bằng cách xử dụng LOCK - Xử lý Concurrent User_ID - Thread Safety và Row-level Locking"
+              "title": "Outline of SECRET_KEY - SECRET - SECURITY - Tài liệu 3.19 - SECRET_KEY cho JWT encryption"
             }
           }
         ],
@@ -171,8 +171,10 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 4 - Xử lý vấn đề chồng lấn dữ liệu khi chạy nhiều THREAD (WORKER_CONCURRENCY_PER_WORKER) của 1 WORKER.   (WORKER_REPLICAS là số lượng  worker).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Cách 2 user_id được xử lý song song vào DB bằng cách xử dụng LOCK - Xử lý Concurrent User_ID - Thread Safety và Row-level Locking.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/security/SECRET_KEY - SECRET - SECURITY - Tài liệu 3.19 - SECRET_KEY cho JWT encryption.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/security",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 4 - Xử lý vấn đề chồng lấn dữ liệu khi chạy nhiều THREAD (WORKER_CONCURRENCY_PER_WORKER) của 1 WORKER.   (WORKER_REPLICAS là số lượng  worker).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 1 - worker.py - Phương Án Kỹ Thuật Chi Tiết Triển Khai RabbitMQ.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Circuit Breaker - Bảo vệ hệ thống khi có 1 loạt API bị fail để tránh lãng phí tài nguyên.md",
@@ -201,7 +203,6 @@
     "BUSINESS/2_FINANCE/FINANCE/Bài tập 1 - Các chỉ số quan trọng trong tài chính -  25 11 2025.md",
     "BUSINESS/2_FINANCE/FINANCE/Các chỉ số tài chính P1 - Biên lợi nhuận gộp.md",
     "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 2 - Tối Ưu Hóa Concurrency và Số Lượng Worker (RabbitMQ).md",
     "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/Pasted image 20251022162658.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251129200111.png",
@@ -216,7 +217,6 @@
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Untitled",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
