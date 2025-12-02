@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Other/Tai nghe Senbenbao Mini Pro4 - TWS Pro4.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tai nghe Senbenbao Mini Pro4 - TWS Pro4"
+              "title": "1. Postgres"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: finance",
+                "query": "file: post",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -141,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Other/Tai nghe Senbenbao Mini Pro4 - TWS Pro4.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tai nghe Senbenbao Mini Pro4 - TWS Pro4"
+              "title": "Outline of 1. Postgres"
             }
           }
         ],
@@ -171,8 +172,18 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "BUSINESS/2_FINANCE/FINTECH/Quy trình RI Pipeline v2 - Định giá nhóm Tài chính (Bank Insurance  Broker).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/3.3 Post suggestion for web3.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Template Report.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Link Repo Locust Test.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Giải Thích Metrics trong Locust Test.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/TESTING - LOCUS TEST.md",
+    "Other/Tai nghe chụp Bluetooth.md",
     "Other/Tai nghe Senbenbao Mini Pro4 - TWS Pro4.md",
+    "Other/image/Pasted image 20251202004559.png",
+    "Other/image",
+    "BUSINESS/2_FINANCE/FINTECH/Quy trình RI Pipeline v2 - Định giá nhóm Tài chính (Bank Insurance  Broker).md",
     "BUSINESS/0_100M$GlobalMoneyModel/Business Model - P2 - Từ AI Architect in Finance - Business Model Stategy - Ecosystem Investor - sang Finance Business Model Strategy- Mentor Investing - Business Models and Money Models.md",
     "BUSINESS/2_FINANCE/FINTECH/0_FinTech_Overview_Oct12_2025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/1. Khai Giảng 07042025.md",
@@ -192,15 +203,8 @@
     "BUSINESS/2_FINANCE/FINANCE/25 - 11 - 2025 Định giá và kể chuyện.md",
     "DATA_SCIENCE_AND_AI/New folder/4_Product/Example 1 -  Binance, Coinbase, ATX, Metamask Web3 wallet.md",
     "DATA_SCIENCE_AND_AI/New folder/4_Product/Example.md",
-    "DATA_SCIENCE_AND_AI/New folder/4_Product/3. Product Management.md",
-    "DATA_SCIENCE_AND_AI/New folder/4_Product/2. Product (Technical and Product).md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/1. Tối ưu Frontend - a Thiện.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/LLMFullStack/OpenSource pull về build FullStack.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Bài 1 - 6 Steps Cú pháp - Check Metadata Table Col - Hash text Chiến lược trong Memory -.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251129200111.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251129195204.png",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/VẤN ĐỀ DATABASE bị thừa khoảng trắng khi nhập string = Dẫn đến ko query được.md",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125231043.png",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125231031.png",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230823.png",
@@ -208,15 +212,12 @@
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230625.png",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230522.png",
     "BUSINESS/1_PRODUCT/Untitled",
-    "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image/Pasted image 20251124180917.png",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot/image",
     "BUSINESS/1_PRODUCT/1_TaiLieuRobot_24112025 - Robot",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Websocket/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Websocket",
-    "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical",
-    "BUSINESS/2_FINANCE",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
