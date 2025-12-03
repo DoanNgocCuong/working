@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
+                "file": "BUSINESS/1_PRODUCT/Untitled 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT"
+              "title": "Untitled 2"
             }
           }
         ]
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -142,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
+                "file": "BUSINESS/1_PRODUCT/Untitled 2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT"
+              "title": "Outline of Untitled 2"
             }
           }
         ],
@@ -170,17 +169,18 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "db02c5a91e7f8e1e",
+  "active": "0721c95424d87d2e",
   "lastOpenFiles": [
+    "BUSINESS/0_100M$GlobalMoneyModel/Business Model - P2 - Từ AI Architect in Finance - Business Model Stategy - Ecosystem Investor - sang Finance Business Model Strategy- Mentor Investing - Business Models and Money Models.md",
+    "BUSINESS/1_PRODUCT/Untitled 2.md",
+    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
     "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/1.4 FIDT - a Huy và join.md",
     "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/1.3 Các sản phẩm AI - Quản lý tài sản, tài chính, đầu tư.md",
-    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
     "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/FIDT Group HN.md",
     "BUSINESS/2_FINANCE/FINANCE/FinAI/BCTC_and_CacBoChiSo/Các bộ chỉ số.md",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251102184514.png",
     "BUSINESS/2_FINANCE/FINANCE/FinAI/BCTC_and_CacBoChiSo",
     "BUSINESS/2_FINANCE/FINANCE/FinAI",
-    "BUSINESS/0_100M$GlobalMoneyModel/Business Model - P2 - Từ AI Architect in Finance - Business Model Stategy - Ecosystem Investor - sang Finance Business Model Strategy- Mentor Investing - Business Models and Money Models.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/security/SECRET_KEY - SECRET - SECURITY - Tài liệu 3.19 - SECRET_KEY cho JWT encryption.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Cách 2 user_id được xử lý song song vào DB bằng cách xử dụng LOCK - Xử lý Concurrent User_ID - Thread Safety và Row-level Locking.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/security",
@@ -206,7 +206,6 @@
     "Other/Tai nghe Senbenbao Mini Pro4 - TWS Pro4.md",
     "Other/image/Pasted image 20251202004559.png",
     "Other/image",
-    "BUSINESS/2_FINANCE/FINTECH/Quy trình RI Pipeline v2 - Định giá nhóm Tài chính (Bank Insurance  Broker).md",
     "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/Pasted image 20251022162658.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251129200111.png",
