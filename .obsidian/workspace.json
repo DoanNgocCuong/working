@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/gunicorn.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "gunicorn"
+              "title": "Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU)"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: ml",
+                "query": "file: git",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -141,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/gunicorn.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of gunicorn"
+              "title": "Outline of Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU)"
             }
           }
         ],
@@ -171,9 +172,16 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. MLOps.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/gunicorn.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image/Pasted image 20251203143513.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image/Pasted image 20251203143436.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Giải Thích Metrics trong Locust Test.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/5. Cách.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/gunicorn.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. MLOps.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/3. commit, deploy, release Note.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/10. Github version code.md",
@@ -198,12 +206,7 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 1 - worker.py - Phương Án Kỹ Thuật Chi Tiết Triển Khai RabbitMQ.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Circuit Breaker - Bảo vệ hệ thống khi có 1 loạt API bị fail để tránh lãng phí tài nguyên.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/System Design.md",
-    "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.0 NLP - Foundation + Ngách + Actual Problem/4.1 Question Answering Model/18022025 - QA Systems - AIO Summary.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled 1.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled 1",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Database - Max connection.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust",
     "Other/image/Pasted image 20251202004559.png",
     "Other/image",
@@ -214,9 +217,6 @@
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125231043.png",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125231031.png",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230823.png",
-    "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230742.png",
-    "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230625.png",
-    "BUSINESS/1_PRODUCT/Untitled",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
