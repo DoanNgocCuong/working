@@ -86,6 +86,78 @@ Mang vào Manus define mọi thứ.
 ### Chi tiết hơn luồng sử dụng: https://manus.im/share/e6qGLhxx4QzoIGiYLyk7qp?replay=1
 
 
+#### 3️⃣ Flowchart Chi Tiết - Chọn Greeting (Priority-Based)
+
+```mermaid
+flowchart TD
+    Start([Bắt đầu chọn Greeting]) --> Input[Input: Phase + friendship_status]
+  
+    Input --> Check1{Kiểm tra:<br/>user.birthday<br/>== hôm nay?}
+  
+    Check1 -->|Có| G1["✓ Chọn Greeting:<br/>S2 Birthday<br/>(Mừng sinh nhật)"]
+    Check1 -->|Không| Check2{Kiểm tra:<br/>last_interaction_date<br/>cách đây > 7 ngày?}
+  
+    Check2 -->|Có| G2["✓ Chọn Greeting:<br/>S4 Returning After<br/>Long Absence<br/>(Chào mừng quay lại)"]
+    Check2 -->|Không| Check3{Kiểm tra:<br/>lastday_emotion<br/>== sad?}
+  
+    Check3 -->|Có| G3["✓ Chọn Greeting:<br/>Agent hỏi cảm xúc<br/>(Quan tâm đến cảm xúc)"]
+    Check3 -->|Không| Check4{Kiểm tra:<br/>last_day_follow_up_topic<br/>tồn tại?}
+  
+    Check4 -->|Có| G4["✓ Chọn Greeting:<br/>Agent follow up topic<br/>(Tiếp tục chủ đề hôm trước)"]
+    Check4 -->|Không| Default["Chọn ngẫu nhiên<br/>từ kho Greeting của Phase<br/>ưu tiên chưa dùng gần đây"]
+  
+    G1 --> Output([greeting_id])
+    G2 --> Output
+    G3 --> Output
+    G4 --> Output
+    Default --> Output
+  
+    style Start fill:#e1f5e1
+    style Output fill:#e1ffe1
+    style G1 fill:#ffe1e1
+    style G2 fill:#ffe1e1
+    style G3 fill:#ffe1e1
+    style G4 fill:#ffe1e1
+    style Default fill:#fff4e1
+```
+
+---
+
+#### 4️⃣ Flowchart Chi Tiết - Tạo Danh Sách Ứng Viên
+
+```mermaid
+flowchart TD
+    Start([Bắt đầu tạo<br/>danh sách ứng viên]) --> Input[Input: Phase +<br/>friendship_status +<br/>topic_metrics]
+  
+    Input --> Parallel{Tạo ứng viên<br/>từ 3 nguồn chính}
+  
+    Parallel --> Source1[Nguồn 1: Talk Sở thích]
+    Parallel --> Source2[Nguồn 2: Talk Khám phá]
+    Parallel --> Source3[Nguồn 3: Game]
+  
+    Source1 --> S1Process["Lấy 2 Talk Agent có<br/>topic_score cao nhất<br/>từ topic_metrics<br/>━━━━━━━━━━<br/>Ví dụ: movie(120), school(80)<br/>→ Chọn: movie, school"]
+  
+    Source2 --> S2Process["Lấy 1 Talk Agent có<br/>total_turns thấp nhất<br/>từ kho Talk của Phase<br/>━━━━━━━━━━<br/>Ví dụ: toy(0 turns)<br/>→ Chọn: toy"]
+  
+    Source3 --> S3Process["Lấy 2 Game Agent:<br/>1 Game: topic_score cao nhất<br/>1 Game: total_turns thấp nhất<br/>━━━━━━━━━━<br/>Ví dụ: puzzle(50), drawing(0)<br/>→ Chọn: puzzle, drawing"]
+  
+    S1Process --> Merge[Gộp tất cả ứng viên]
+    S2Process --> Merge
+    S3Process --> Merge
+  
+    Merge --> CandidateList(["Danh sách ứng viên<br/>hoàn chỉnh<br/>━━━━━━━━━━<br/>3 Talk + 2 Game<br/>Tổng: 5 agents"])
+  
+    style Start fill:#e1f5e1
+    style CandidateList fill:#e1ffe1
+    style S1Process fill:#e1f0ff
+    style S2Process fill:#fff4e1
+    style S3Process fill:#f0e1ff
+```
+
+---
+
+
+
 
 # 4. Thực tế khi có tấm bản đồ 
 
@@ -112,15 +184,23 @@ Link Manus : https://manus.im/share/e6qGLhxx4QzoIGiYLyk7qp?replay=1
 Output cuối đạt được: https://stepup-english.atlassian.net/wiki/spaces/RP/pages/1565917188/CONTEXT+HANDLING+Stress+Test+Risk+Security+-+Production
 
 
-|   |   |   |   |   |   |
-|---|---|---|---|---|---|
-|**Metric**|**100 Users**|**200 Users**|**Difference**|**% Change**|**Analysis**|
-|**Concurrent Users**|100|200|+100|+100%|Double load|
-|**Total Requests**|10,294|11,276|+982|+9.5%|Similar volume|
-|**RPS**|48.8 req/s|57.6 req/s|+8.8|+18%|RPS tăng nhưng không linear|
-|**95th Percentile**|**200 ms**|**1,700 ms**|**+1,500**|**+750%**|**⚠️Major issue**|
-|**99th Percentile**|**340 ms**|**1,900 ms**|**+1,560**|**+459%**|**⚠️Major issue**|
+## 5.1 Kết quả đạt được: chỉ số và các phần Optimize đã có
 
+|                      |               |               |                |              |                             |
+| -------------------- | ------------- | ------------- | -------------- | ------------ | --------------------------- |
+| **Metric**           | **100 Users** | **200 Users** | **Difference** | **% Change** | **Analysis**                |
+| **Concurrent Users** | 100           | 200           | +100           | +100%        | Double load                 |
+| **Total Requests**   | 10,294        | 11,276        | +982           | +9.5%        | Similar volume              |
+| **RPS**              | 48.8 req/s    | 57.6 req/s    | +8.8           | +18%         | RPS tăng nhưng không linear |
+| **95th Percentile**  | **200 ms**    | **1,700 ms**  | **+1,500**     | **+750%**    | **⚠️Major issue**           |
+| **99th Percentile**  | **340 ms**    | **1,900 ms**  | **+1,560**     | **+459%**    | **⚠️Major issue**           |
+
+|                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Trước**                                                                                                                                                                | **Sau**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| 1. **3h sáng hàng ngày call để chạy hàng loạt cron job**                                                                                                                 | **Có 2 cơ chế.**  <br>**1. Khi BE gửi data đến, ngay lập tức trả 202 cho BE .**  <br>**=> Chạy 1 luồng RabbitMQ bên dưới để xử lý conversation ngay lập tức. (99% API)**<br><br>2. **Vẫn có cơ chế 6h 1 lần quét các conversation ở trạng thái PENDING, FAIL => Xử lý lại. (1% API)**                                                                                                                                                                                                                                                                                                                                                                                  |
+| 2. Chịu tải khi BE bắn thông tin và khi BE query lấy list bài học Agent.                                                                                                 | Hiện tại: 100 user cùng lúc với response time P95, P99 340ms  <br>=> Khi scaling có 2 cách.  <br>C1. Tăng max_connections từ 100 → 300 trong DB qua việc chạy 1 câu lệnh (việc tăng max_connections có thể gây lãng phí tài nguyên)  <br>C2. Scaling server load balance (DevOps xử lý)                                                                                                                                                                                                                                                                                                                                                                                |
+| 3. Tốc độ và luồng xử lý CONVERSATION  <br>    Trước: 1 conversation 1 lúc => Điều gì xảy ra khi 200 user cùg xài, 1000 user cùng xài => Việc xử lý conversation kéo dài | Update  <br>1. Update để cho phép multiple worker: WORKER_REPLICAS=10  <br>(Với CPU 96 cores => Số lượng workers có thể lên tới N - 2N (N là số cores).  <br>  <br>2. Update để 1 worker xử lý song song 1 message  <br>WORKER_CONCURRENCY_PER_WORKER=10  <br>- Vấn đề ban đầu 1 worker chỉ xử lý được 1 message (vì vấn đề code tuần tự + vấn đề nếu code song song thì bị ghi đè DB nếu 2 thread/2 message cùng xử lý 1 user_id)  <br>+, Lost update trong update_topic_metrics (HIGH — 70–80% khi nhiều threads)<br><br>+, Lost update trong apply_score_change (MEDIUM — 30–50%)<br><br>---<br><br>Đã xử lý: SELECT FOR UPDATE để lock row khi update cùng user_id |
 
 
 
