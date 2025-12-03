@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -169,7 +170,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "0721c95424d87d2e",
+  "active": "db02c5a91e7f8e1e",
   "lastOpenFiles": [
     "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/1.4 FIDT - a Huy và join.md",
     "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/1.3 Các sản phẩm AI - Quản lý tài sản, tài chính, đầu tư.md",
