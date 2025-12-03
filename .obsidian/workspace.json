@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.10 NETWORK.md",
+                "file": "BUSINESS/1_PRODUCT/Chia sẻ cách dùng MANUS để giải bài kĩ thuật.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.10 NETWORK"
+              "title": "Chia sẻ cách dùng MANUS để giải bài kĩ thuật"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: network",
+                "query": "file: nguyễn ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.10 NETWORK.md",
+                "file": "BUSINESS/1_PRODUCT/Chia sẻ cách dùng MANUS để giải bài kĩ thuật.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.10 NETWORK"
+              "title": "Outline of Chia sẻ cách dùng MANUS để giải bài kĩ thuật"
             }
           }
         ],
@@ -171,8 +171,15 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.2.9 Docker Network is till - Docker Network bị sử dụng.md",
+    "BUSINESS/1_PRODUCT/image/Pasted image 20251203234505.png",
+    "BUSINESS/1_PRODUCT/image/Pasted image 20251203234402.png",
+    "BUSINESS/1_PRODUCT/image/Pasted image 20251203234327.png",
+    "BUSINESS/1_PRODUCT/image",
+    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/1.1.md",
+    "BUSINESS/1_PRODUCT/Chia sẻ cách dùng MANUS để giải bài kĩ thuật.md",
+    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.10 NETWORK.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.2.9 Docker Network is till - Docker Network bị sử dụng.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.2.7 Docker networks bridge và networks và network_mode host.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled 2",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
@@ -197,10 +204,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image/Pasted image 20251203143436.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Giải Thích Metrics trong Locust Test.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/5. Cách.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/gunicorn.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. MLOps.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Prompt",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251102184514.png",
     "BUSINESS/2_FINANCE/FINANCE/FinAI/BCTC_and_CacBoChiSo",
@@ -210,13 +213,10 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled 1",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust",
     "Other/image/Pasted image 20251202004559.png",
-    "Other/image",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Python/image/Pasted image 20251022162658.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251129200111.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251129195204.png",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125231043.png",
-    "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125231031.png",
-    "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251125230823.png",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
