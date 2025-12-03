@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU).md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU)"
+              "title": "1. Postgres"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: git",
+                "query": "file: database",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -142,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU).md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU)"
+              "title": "Outline of 1. Postgres"
             }
           }
         ],
@@ -172,8 +171,23 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Nguyên lý DB.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. MySQL Cơ bản.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5_Database/Redis.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5_Database/Database/3. Sau thời gian chiến lược thực thi của DB thay đổi.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5_Database/Database/Cách 2 user_id được xử lý song song vào DB bằng cách xử dụng LOCK - Xử lý Concurrent User_ID - Thread Safety và Row-level Locking.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5_Database/Database/Các lệnh cơ bản PostGress.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5_Database/Database/2. Filtering DB.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5_Database/Database/1. Supabase.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5_Database/Queue, Client, Consumer, Worker, Redis.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/0. Note chung các Database.md",
+    "DATA_SCIENCE_AND_AI/Domain 9 Business/14. StepUpEnglish/8_Project/1_dify/Module2_Database/__init__ Project Dify Module2_Database.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/VẤN ĐỀ DATABASE bị thừa khoảng trắng khi nhập string = Dẫn đến ko query được.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5_Database/Database/RabbitMQ 2 - Tối Ưu Hóa Concurrency và Số Lượng Worker (RabbitMQ).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5_Database/Database/DEMO 1 - BE bắn thông tin đến AI - AI trả về 202 luôn và đẩy TASK vào Queue.md",
+    "DATA_SCIENCE_AND_AI/Domain 9 Business/14. StepUpEnglish/8_Project/1_dify/Module2_Database/2. Database của Rating ở meta data.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU).md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image/Pasted image 20251203143513.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image/Pasted image 20251203143436.png",
@@ -186,26 +200,12 @@
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/10. Github version code.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/6. Server Deploy và vấn đề github - mật khẩu vào Server - Github.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Prompt/Prompt Kiểm Tra System Design.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Machine Learning System Design.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Prompt",
-    "BUSINESS/1_PRODUCT/Untitled 2.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/Business Model - P2 - Từ AI Architect in Finance - Business Model Stategy - Ecosystem Investor - sang Finance Business Model Strategy- Mentor Investing - Business Models and Money Models.md",
-    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
-    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/1.4 FIDT - a Huy và join.md",
-    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/1.3 Các sản phẩm AI - Quản lý tài sản, tài chính, đầu tư.md",
-    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/FIDT Group HN.md",
-    "BUSINESS/2_FINANCE/FINANCE/FinAI/BCTC_and_CacBoChiSo/Các bộ chỉ số.md",
     "BUSINESS/2_FINANCE/FINANCE/image/Pasted image 20251102184514.png",
     "BUSINESS/2_FINANCE/FINANCE/FinAI/BCTC_and_CacBoChiSo",
     "BUSINESS/2_FINANCE/FINANCE/FinAI",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/security/SECRET_KEY - SECRET - SECURITY - Tài liệu 3.19 - SECRET_KEY cho JWT encryption.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Cách 2 user_id được xử lý song song vào DB bằng cách xử dụng LOCK - Xử lý Concurrent User_ID - Thread Safety và Row-level Locking.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/security",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 4 - Xử lý vấn đề chồng lấn dữ liệu khi chạy nhiều THREAD (WORKER_CONCURRENCY_PER_WORKER) của 1 WORKER.   (WORKER_REPLICAS là số lượng  worker).md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/RabbitMQ 1 - worker.py - Phương Án Kỹ Thuật Chi Tiết Triển Khai RabbitMQ.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Database/Untitled",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Circuit Breaker - Bảo vệ hệ thống khi có 1 loạt API bị fail để tránh lãng phí tài nguyên.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5_Database/Database/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled 1",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust",
     "Other/image/Pasted image 20251202004559.png",
