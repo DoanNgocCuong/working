@@ -103,8 +103,24 @@ Mang vào Manus define mọi thứ.
 # 5. Manus support giải các bài khác khi tự bơi trong xương mù: 
 
 1. MECE toàn bộ các giải pháp để xử lý conversation (từ việc code cron job 6h chạy 1 lần, 3min chạy 1 lần, so với việc BE call tới chạy luôn mới trả, so với cách triển khai RabbitMQ Worker, so với khi tự code worker với việc dùng Clery có sẵn của python) ? (tự dùng Manus để brainstorm giải quyết),
+2. Tiêu chuẩn Production ? Risk Production và Security (Claude + Manus)
+
 
 Link Manus : https://manus.im/share/e6qGLhxx4QzoIGiYLyk7qp?replay=1
+
+
+Output cuối đạt được: https://stepup-english.atlassian.net/wiki/spaces/RP/pages/1565917188/CONTEXT+HANDLING+Stress+Test+Risk+Security+-+Production
+
+
+|   |   |   |   |   |   |
+|---|---|---|---|---|---|
+|**Metric**|**100 Users**|**200 Users**|**Difference**|**% Change**|**Analysis**|
+|**Concurrent Users**|100|200|+100|+100%|Double load|
+|**Total Requests**|10,294|11,276|+982|+9.5%|Similar volume|
+|**RPS**|48.8 req/s|57.6 req/s|+8.8|+18%|RPS tăng nhưng không linear|
+|**95th Percentile**|**200 ms**|**1,700 ms**|**+1,500**|**+750%**|**⚠️Major issue**|
+|**99th Percentile**|**340 ms**|**1,900 ms**|**+1,560**|**+459%**|**⚠️Major issue**|
+
 
 
 
