@@ -215,3 +215,8 @@ Output cuối đạt được: https://stepup-english.atlassian.net/wiki/spaces/
 | Hiểu logic phức tạp  | Đọc doc 30p, vẫn bối rối                 | Vẽ diagram, hiểu ngay                                           |
 | Estimate timeline    | Đoán mò, "mơ hồ", ko rõ đường đi, tự bơi | Chắc chắn 70-80-95%                                             |
 | Define API contracts | Vừa làm vừa viết docs, code xong lại sửa | Define + validate giải pháp kiến trúc 1 lèo => xong code tự tin |
+
+
+---
+![](image/Pasted%20image%2020251204020402.png)
+
