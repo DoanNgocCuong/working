@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 5 - RABBITMQ IMPLEMENTATION & CONCURRENCY OPTIMIZATION.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/6. Move DB.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RabbitMQ 5 - RABBITMQ IMPLEMENTATION & CONCURRENCY OPTIMIZATION"
+              "title": "6. Move DB"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: rabbit",
+                "query": "file: database",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 5 - RABBITMQ IMPLEMENTATION & CONCURRENCY OPTIMIZATION.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/6. Move DB.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of RabbitMQ 5 - RABBITMQ IMPLEMENTATION & CONCURRENCY OPTIMIZATION"
+              "title": "Outline of 6. Move DB"
             }
           }
         ],
@@ -171,12 +171,14 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 2 - Tối Ưu Hóa Concurrency và Số Lượng Worker (RabbitMQ).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/init_ Database.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/6. Move DB.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Database - Max connection.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 5 - RABBITMQ IMPLEMENTATION & CONCURRENCY OPTIMIZATION.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 2 - Tối Ưu Hóa Concurrency và Số Lượng Worker (RabbitMQ).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 4 - Xử lý vấn đề chồng lấn dữ liệu khi chạy nhiều THREAD (WORKER_CONCURRENCY_PER_WORKER) của 1 WORKER.   (WORKER_REPLICAS là số lượng  worker).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.1 Cách để xử lý transaction.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/init_ Database.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 1 - worker.py - Phương Án Kỹ Thuật Chi Tiết Triển Khai RabbitMQ.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/DEMO 1 - BE bắn thông tin đến AI - AI trả về 202 luôn và đẩy TASK vào Queue.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Cách 2 user_id được xử lý song song vào DB bằng cách xử dụng LOCK - Xử lý Concurrent User_ID - Thread Safety và Row-level Locking.md",
@@ -185,7 +187,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Supabase.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/attachments/Pasted image 20250717123940.png",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Database - Max connection.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/0. basic git.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Untitled.md",
@@ -207,7 +208,6 @@
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234402.png",
     "BUSINESS/1_PRODUCT/image",
     "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/1.1.md",
-    "BUSINESS/2_FINANCE/FINTECH/1. Phân Tích Các Anh Đi Trước/Anh Nguyễn An Huy và Phần mềm Quản lý Tài sản và Dịch vụ Tư vấn Tài chính Toàn diện của FIDT.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled 2",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image/Pasted image 20251203143513.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image",
