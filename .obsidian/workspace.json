@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/2. Các thao tác DB cơ bản.md",
+                "file": "BUSINESS/2_FINANCE/FINTECH/Deep Research - Các Công Ty AI x Finance.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Các thao tác DB cơ bản"
+              "title": "Deep Research - Các Công Ty AI x Finance"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/2. Các thao tác DB cơ bản.md",
+                "file": "BUSINESS/2_FINANCE/FINTECH/Deep Research - Các Công Ty AI x Finance.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2. Các thao tác DB cơ bản"
+              "title": "Outline of Deep Research - Các Công Ty AI x Finance"
             }
           }
         ],
@@ -171,6 +171,8 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/2. Các thao tác DB cơ bản.md",
+    "BUSINESS/2_FINANCE/FINTECH/Deep Research - Các Công Ty AI x Finance.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5. Parallel of DB - 04122025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/6. Move DB.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1.7 Check constrast của bảng trong DB.md",
@@ -198,9 +200,7 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/RATE LIMIT và CIRCUIT BREAKER - Circuit Breaker và SSL Verification.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Circuit Breaker - Bảo vệ hệ thống khi có 1 loạt API bị fail để tránh lãng phí tài nguyên.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. MLOps.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/6. Server Deploy và vấn đề github - mật khẩu vào Server - Github.md",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234655.png",
-    "BUSINESS/1_PRODUCT/Kể về cách dùng MANUS để giải bài kĩ thuật.md",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204020402.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234327.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204000322.png",
