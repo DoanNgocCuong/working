@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/FinAI/1.7.1 Rủi ro pháp lý.md",
+                "file": "BUSINESS/1_PRODUCT/FinAI/1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.7.1 Rủi ro pháp lý"
+              "title": "1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM)"
             }
           }
         ],
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/FinAI/1.7.1 Rủi ro pháp lý.md",
+                "file": "BUSINESS/1_PRODUCT/FinAI/1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1.7.1 Rủi ro pháp lý"
+              "title": "Outline of 1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM)"
             }
           }
         ],
@@ -188,7 +188,17 @@
   "lastOpenFiles": [
     "BUSINESS/1_PRODUCT/FinAI/1.7 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
     "BUSINESS/1_PRODUCT/FinAI/1.7 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.7 - V2 finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
+    "BUSINESS/1_PRODUCT/FinAI/1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
+    "BUSINESS/1_PRODUCT/FinAI/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
+    "BUSINESS/1_PRODUCT/FinAI/1.6 Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
+    "BUSINESS/1_PRODUCT/FinAI/1.5 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
+    "BUSINESS/1_PRODUCT/FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
+    "BUSINESS/1_PRODUCT/FinAI/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
+    "BUSINESS/1_PRODUCT/FinAI/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
+    "BUSINESS/1_PRODUCT/FinAI/1.7.1 Rủi ro pháp lý.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/Untitled.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025",
+    "BUSINESS/1_PRODUCT/FinAI/1.8 Cách làm những thứ mới.md",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206161715.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204020402.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204000322.png",
@@ -197,15 +207,7 @@
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234505.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234402.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234327.png",
-    "BUSINESS/1_PRODUCT/FinAI/1.8 Cách làm những thứ mới.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.6 Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.5 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
-    "BUSINESS/1_PRODUCT/FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
     "BUSINESS/1_PRODUCT/FinAI",
-    "BUSINESS/1_PRODUCT/FinAI/1.7.1 Rủi ro pháp lý.md",
     "BUSINESS/1_PRODUCT/John Warrillow -.md",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206192927.png",
     "BUSINESS/1_PRODUCT/Kể về cách dùng MANUS để giải bài kĩ thuật.md",
@@ -230,7 +232,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Prompt",
     "BUSINESS/2_FINANCE/FINANCE/FinAI/BCTC_and_CacBoChiSo",
     "BUSINESS/2_FINANCE/FINANCE/FinAI",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/security",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
