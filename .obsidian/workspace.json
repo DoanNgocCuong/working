@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
+                "file": "BUSINESS/1_PRODUCT/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.1 HACK NÃO PRODUCT - TECHNOLOGY"
+              "title": "1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
+                "file": "BUSINESS/1_PRODUCT/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1.1 HACK NÃO PRODUCT - TECHNOLOGY"
+              "title": "Outline of 1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up"
             }
           }
         ],
@@ -171,6 +171,9 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
+    "BUSINESS/1_PRODUCT/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
+    "BUSINESS/1_PRODUCT/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
+    "BUSINESS/1_PRODUCT/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206161715.png",
     "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.3_Summary về Luồng làm việc Nexus.md",
     "BUSINESS/1_PRODUCT/Untitled 2.md",
@@ -196,8 +199,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/init_ Database.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 5 - RABBITMQ IMPLEMENTATION & CONCURRENCY OPTIMIZATION.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 2 - Tối Ưu Hóa Concurrency và Số Lượng Worker (RabbitMQ).md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 4 - Xử lý vấn đề chồng lấn dữ liệu khi chạy nhiều THREAD (WORKER_CONCURRENCY_PER_WORKER) của 1 WORKER.   (WORKER_REPLICAS là số lượng  worker).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/attachments/Pasted image 20250717123940.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251204125323.png",
@@ -210,7 +211,6 @@
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234402.png",
     "BUSINESS/1_PRODUCT/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled 2",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image/Pasted image 20251203143513.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Prompt",
     "BUSINESS/2_FINANCE/FINANCE/FinAI/BCTC_and_CacBoChiSo",
