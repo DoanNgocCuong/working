@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/FinAI/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/FinAI/1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
+                "file": "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.3 Vấn đề, nỗi đau của khách hàng.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM)"
+              "title": "3.2.3 Vấn đề, nỗi đau của khách hàng"
             }
           }
         ],
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334.5
+    "width": 200
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -128,11 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.3 Vấn đề, nỗi đau của khách hàng.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from 3.2.3 Vấn đề, nỗi đau của khách hàng"
             }
           },
           {
@@ -156,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/FinAI/1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
+                "file": "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.3 Vấn đề, nỗi đau của khách hàng.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM)"
+              "title": "Outline of 3.2.3 Vấn đề, nỗi đau của khách hàng"
             }
           }
         ],
@@ -170,7 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433.5
+    "width": 300.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,19 +187,24 @@
   },
   "active": "4cef5761b5382b54",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/FinAI/1.7 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.7 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
-    "BUSINESS/1_PRODUCT/FinAI/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.6 Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.5 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
-    "BUSINESS/1_PRODUCT/FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
-    "BUSINESS/1_PRODUCT/FinAI/1.7.1 Rủi ro pháp lý.md",
     "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/Untitled.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.1 Báo cáo Sản phẩm - Thiết kế lại Trung tâm Thể thao FPT Play để Nâng cao Tỷ lệ Giữ chân & Tương tác Người dùng.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.3 Vấn đề, nỗi đau của khách hàng.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.2 Cách phân nhóm.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2 Product Report Redesigning FPT Play Sports Hub for Enhanced User Retention & Engagement.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.1 Link tài liệu.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.7 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.7 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.6 Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.5 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.7.1 Rủi ro pháp lý.md",
     "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025",
-    "BUSINESS/1_PRODUCT/FinAI/1.8 Cách làm những thứ mới.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.8 Cách làm những thứ mới.md",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206161715.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204020402.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204000322.png",
@@ -207,7 +213,7 @@
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234505.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234402.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234327.png",
-    "BUSINESS/1_PRODUCT/FinAI",
+    "BUSINESS/1_PRODUCT/4_FinAI",
     "BUSINESS/1_PRODUCT/John Warrillow -.md",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206192927.png",
     "BUSINESS/1_PRODUCT/Kể về cách dùng MANUS để giải bài kĩ thuật.md",
@@ -218,11 +224,6 @@
     "BUSINESS/2_FINANCE/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Database - Max connection.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/DEMO 1 - BE bắn thông tin đến AI - AI trả về 202 luôn và đẩy TASK vào Queue.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Bài 1 - 6 Steps Cú pháp - Check Metadata Table Col - Hash text Chiến lược trong Memory -.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Cách 2 user_id được xử lý song song vào DB bằng cách xử dụng LOCK - Xử lý Concurrent User_ID - Thread Safety và Row-level Locking.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/0. Note chung các Database.md",
-    "BUSINESS/0_100M$GlobalMoneyModel/StartUp/1.1 Hành trình chuyển giao.md",
     "BUSINESS/0_100M$GlobalMoneyModel/StartUp",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/attachments/Pasted image 20250717123940.png",
