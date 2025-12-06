@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1.6 Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
+                "file": "BUSINESS/1_PRODUCT/Untitled 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.6 Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài"
+              "title": "Untitled 3"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1.6 Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
+                "file": "BUSINESS/1_PRODUCT/Untitled 3.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1.6 Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài"
+              "title": "Outline of Untitled 3"
             }
           }
         ],
@@ -171,12 +171,17 @@
   },
   "active": "0721c95424d87d2e",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/1.5 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
+    "BUSINESS/1_PRODUCT/1.7 vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
+    "BUSINESS/1_PRODUCT/Untitled 3.md",
     "BUSINESS/1_PRODUCT/1.6 Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
-    "BUSINESS/1_PRODUCT/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
     "BUSINESS/1_PRODUCT/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
-    "BUSINESS/1_PRODUCT/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
+    "BUSINESS/1_PRODUCT/1.7 finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
     "BUSINESS/1_PRODUCT/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
+    "BUSINESS/1_PRODUCT/Kể về cách dùng MANUS để giải bài kĩ thuật.md",
+    "BUSINESS/1_PRODUCT/Cách làm những thứ mới.md",
+    "BUSINESS/1_PRODUCT/1.5 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
+    "BUSINESS/1_PRODUCT/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
+    "BUSINESS/1_PRODUCT/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206161715.png",
     "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.3_Summary về Luồng làm việc Nexus.md",
     "BUSINESS/1_PRODUCT/Untitled 2.md",
@@ -194,11 +199,6 @@
     "BUSINESS/0_100M$GlobalMoneyModel/StartUp",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Giải Thích Metrics trong Locust Test.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Link Repo Locust Test.md",
-    "BUSINESS/2_FINANCE/FINTECH/Deep Research - Các Công Ty AI x Finance.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/2. Các thao tác DB cơ bản.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/5. Parallel of DB - 04122025.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/6. Move DB.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1.7 Check constrast của bảng trong DB.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/attachments/Pasted image 20250717123940.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20251204125323.png",
