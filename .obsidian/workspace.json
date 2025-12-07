@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "THE_ROAD/07122025_So Sánh AI vs Finance - Lựa Chọn Lõi Chiến Lược.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/1.3 - Locust - Mối quan hệ - Users, CCU, RPS trong Locust.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "07122025_So Sánh AI vs Finance - Lựa Chọn Lõi Chiến Lược"
+              "title": "1.3 - Locust - Mối quan hệ - Users, CCU, RPS trong Locust"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: postg",
+                "query": "file: locus",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "THE_ROAD/07122025_So Sánh AI vs Finance - Lựa Chọn Lõi Chiến Lược.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/1.3 - Locust - Mối quan hệ - Users, CCU, RPS trong Locust.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 07122025_So Sánh AI vs Finance - Lựa Chọn Lõi Chiến Lược"
+              "title": "Outline of 1.3 - Locust - Mối quan hệ - Users, CCU, RPS trong Locust"
             }
           }
         ],
@@ -185,10 +185,16 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "7bbd2100f0471588",
+  "active": "4cef5761b5382b54",
   "lastOpenFiles": [
-    "Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Locust 1.1 - Các test cases và ý nghĩa của việc test.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/1.3 - Locust - Mối quan hệ - Users, CCU, RPS trong Locust.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/TESTING - LOCUS TEST.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.4 Dọn docker - kill process - port server 1.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/1. Long term Memory Architechture/0.2 Đồ án tiếp CƠ CHẾ QUẢN LÝ BỘ NHỚ - report 3_12032025 -.md",
     "THE_ROAD/07122025_So Sánh AI vs Finance - Lựa Chọn Lõi Chiến Lược.md",
+    "Untitled.md",
     "THE_ROAD",
     "Untitled",
     "Untitled 1.md",
@@ -211,12 +217,6 @@
     "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.4.2 Data của FPT Play.md",
     "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.4.1 NGƯỜI MỚI - Xác định “sản phẩm trong sự liên kết” → business goals → North Star Metric.md",
     "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/Untitled 1.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/Untitled.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.6 Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.5 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
     "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206161715.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204020402.png",
