@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Postgres"
+              "title": "1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1. Postgres"
+              "title": "Outline of 1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER"
             }
           }
         ],
@@ -187,6 +187,19 @@
   },
   "active": "4cef5761b5382b54",
   "lastOpenFiles": [
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/tHI/3.1 Link tài liệu.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/tHI",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.3_Summary về Luồng làm việc Nexus.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.2 Luồng Làm Việc Nexus - Quy Trình Phát Triển Sản Phẩm Tối Ưu với AI - Luồng Làm Việc Nexus.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.1 Overview metathinking khi sử dụng Manus cho các đầu việc lớn của team Product.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2 Product Report Redesigning FPT Play Sports Hub for Enhanced User Retention & Engagement.md",
+    "BUSINESS/1_PRODUCT/5_FastShipProduct",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/2. Các thao tác DB cơ bản.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Deploy DB.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/init_ Database.md",
@@ -206,17 +219,6 @@
     "BUSINESS/1_PRODUCT/4_FinAI/Technical",
     "BUSINESS/1_PRODUCT/TECHNICAL",
     "BUSINESS/1_PRODUCT/4_FinAI/1.7 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.7 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.7.1 Rủi ro pháp lý.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.3 Vấn đề, nỗi đau của khách hàng.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.2 Cách phân nhóm.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.1 Báo cáo Sản phẩm - Thiết kế lại Trung tâm Thể thao FPT Play để Nâng cao Tỷ lệ Giữ chân & Tương tác Người dùng.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2 Product Report Redesigning FPT Play Sports Hub for Enhanced User Retention & Engagement.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.1 Link tài liệu.md",
-    "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Luồng Làm Việc Nexus - Quy Trình Phát Triển Sản Phẩm Tối Ưu với AI - Luồng Làm Việc Nexus.md",
-    "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Buổi 1 - Overview metathinking khi sử dụng Manus cho các đầu việc lớn của team Product.md",
-    "BUSINESS/1_PRODUCT/2_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.3_Summary về Luồng làm việc Nexus.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.4.2 - BÀI FPT PLAY.md",
     "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206161715.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204020402.png",
@@ -229,10 +231,7 @@
     "BUSINESS/1_PRODUCT/4_FinAI",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206192927.png",
     "BUSINESS/0_100M$GlobalMoneyModel/StartUp",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/attachments/Pasted image 20250717123940.png",
-    "BUSINESS/1_PRODUCT/image",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled 2",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
