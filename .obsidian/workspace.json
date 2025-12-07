@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/Retention.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.0 Example.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Retention"
+              "title": "2.0 Example"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/Retention.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.0 Example.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Retention"
+              "title": "Outline of 2.0 Example"
             }
           }
         ],
@@ -187,8 +187,12 @@
   },
   "active": "4cef5761b5382b54",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2 Product Report Redesigning FPT Play Sports Hub for Enhanced User Retention & Engagement.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.1 Module.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.0 Example.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.1 Detail 1 -.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled.md",
     "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/Retention.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2 Product Report Redesigning FPT Play Sports Hub for Enhanced User Retention & Engagement.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.6.2 V2 - finAI CEO Strategic Brief.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
     "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/tHI/3.1 Link tài liệu.md",
@@ -212,12 +216,8 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.4 Dọn docker - kill process - port server 1.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/1. Long term Memory Architechture/0.2 Đồ án tiếp CƠ CHẾ QUẢN LÝ BỘ NHỚ - report 3_12032025 -.md",
     "THE_ROAD/07122025_So Sánh AI vs Finance - Lựa Chọn Lõi Chiến Lược.md",
-    "Untitled.md",
     "THE_ROAD",
     "Untitled",
-    "Untitled 1.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.7 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical",
     "BUSINESS/1_PRODUCT/TECHNICAL",
     "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025",
