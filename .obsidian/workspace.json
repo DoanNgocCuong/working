@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Serving LLms.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. git, SOLID, Code chuẩn"
+              "title": "Serving LLms"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: git remote set url",
+                "query": "file: serving",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Serving LLms.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1. git, SOLID, Code chuẩn"
+              "title": "Outline of Serving LLms"
             }
           }
         ],
@@ -187,8 +187,22 @@
   },
   "active": "4cef5761b5382b54",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/0. basic git.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Untitled 1.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Serving LLms.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Init Serving LLMs.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. Hệ thống/System - server.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Python serve FOLDER.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Microservices.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/Langchain 1.6 - Observe - Langfuse.md",
+    "DATA_SCIENCE_AND_AI/Domain0_Package/Dung lượng ổ cứng server.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Chạy ngầm server.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/9. Server.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/6. Server Deploy và vấn đề github - mật khẩu vào Server - Github.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/0. basic git.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/3. commit, deploy, release Note.md",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.4 Chuỗi bài toán Intent Classification/4.4 Summary Mô hình Classification và các.md",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.4 Chuỗi bài toán Intent Classification/4.4.1 Bài toán INTENT CLASSIFICATION.md",
@@ -203,26 +217,12 @@
     "BUSINESS/1_PRODUCT/0_Chung",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/Deep Learning Foundation.md",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.4 Chuỗi bài toán Intent Classification",
-    "BUSINESS/0_CON NGƯỜI - BÀI TOÁN QUAN TRỌNG NHẤT CẦN GIẢI/Present.md",
-    "BUSINESS/0_CON NGƯỜI - BÀI TOÁN QUAN TRỌNG NHẤT CẦN GIẢI/Untitled.md",
-    "BUSINESS/0_CON NGƯỜI - BÀI TOÁN QUAN TRỌNG NHẤT CẦN GIẢI/Untitled 1.md",
-    "BUSINESS/0_CON NGƯỜI - BÀI TOÁN QUAN TRỌNG NHẤT CẦN GIẢI/Untitled 2.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT/2.4 Luồng MANUS - Phương Pháp Xác Định Tiêu Chí Thành Công Cho Bài Toán Không Rõ Ràng.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT/Untitled.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
     "BUSINESS/1_PRODUCT/0_HackTime",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.3.2 Manus v1 - Vnese - 168 credit.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/tHI/3.2 Phân tích đề vòng 2.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.3 - Manus v1 - 08122025 - 168 credit.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.3.2 .md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.3.2 Manus v1 - Vnese - Copy.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.4.2 - BÀI FPT PLAY.md",
     "DATA_SCIENCE_AND_AI/0_GROW",
     "BUSINESS/0_100M$GlobalMoneyModel/1_GPT",
     "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/tHI",
     "BUSINESS/1_PRODUCT/1_PRODUCT",
     "BUSINESS/1_PRODUCT/5_FastShipProduct",
-    "THE_ROAD",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206161715.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204020402.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204000322.png",
