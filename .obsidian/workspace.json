@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/1.7.1 Rủi ro pháp lý.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.5 Các tài liệu trong thiết kế Software Engineer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.7.1 Rủi ro pháp lý"
+              "title": "2.5 Các tài liệu trong thiết kế Software Engineer"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: serving",
+                "query": "file: exampl",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/1.7.1 Rủi ro pháp lý.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.5 Các tài liệu trong thiết kế Software Engineer.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1.7.1 Rủi ro pháp lý"
+              "title": "Outline of 2.5 Các tài liệu trong thiết kế Software Engineer"
             }
           }
         ],
@@ -187,33 +187,33 @@
   },
   "active": "4cef5761b5382b54",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/4_FinAI/1.7 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.7 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.4.1 NGƯỜI MỚI - Xác định “sản phẩm trong sự liên kết” → business goals → North Star Metric.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.3 Vấn đề, nỗi đau của khách hàng.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.1 Báo cáo Sản phẩm - Thiết kế lại Trung tâm Thể thao FPT Play để Nâng cao Tỷ lệ Giữ chân & Tương tác Người dùng.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.2 Cách phân nhóm.md",
-    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2 Product Report Redesigning FPT Play Sports Hub for Enhanced User Retention & Engagement.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.4 MECE TOÀN BỘ CÁC BẢN THIẾT KẾ ĐỂ TRIỂN KHAI 100 phan tram DỰ ÁN.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/2.1 STAGE 1 - Input & Ingestion (CORE, MVP) – Enterprise Spec v2.2.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.8 Cách làm những thứ mới.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.7.1 Rủi ro pháp lý.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/Cursor mechanism overview.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.5 Các tài liệu trong thiết kế Software Engineer.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.3_Summary về Luồng làm việc Nexus.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.2 Luồng Làm Việc Nexus - Quy Trình Phát Triển Sản Phẩm Tối Ưu với AI - Luồng Làm Việc Nexus.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.1 Overview metathinking khi sử dụng Manus cho các đầu việc lớn của team Product.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Sai lầm 1 - Tối ưu service hosting (Groq thay cho GPT).md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Sai lầm 1 - Không cần streaming nhưng bật streaming.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Sai lầm 2 - Tối ưu sử dụng OUTPUT format.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Init Serving LLMs.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/0 - Tối Ưu Hóa Hệ Thống Serving LLM Cho Các Dự Án Quy Mô Lớn - Một Khuôn Khổ Phân Tích Toàn Diện Dành Cho Kỹ Sư AI.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/1 - Tối ưu level 1 Serving.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.16 Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.13 VẤN ĐỀ API KEY BỊ CHỒNG LẤN TRONG DOCKER.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.0 Example Kiến trúc 3.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.0 Example Kiến trúc 2.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/2 - Tối ưu.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Untitled 1.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/Cách Mô Tả Codebase Để Phân Tích Bằng LLMAgents 4.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.3.2 Manus v1 - Vnese - 168 credit.md",
+    "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.3 - Manus v1 - 08122025 - 168 credit.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/2.5 Nexus-Driven Secure Development Lifecycle - NSDL Luồng Làm Việc Tối Ưu Cho Phát Triển Sản Phẩm Nhanh, Chất Lượng và An Toàn.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/2.4 Luồng MANUS - Phương Pháp Xác Định Tiêu Chí Thành Công Cho Bài Toán Không Rõ Ràng.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/5. Docs - TÀI LIỆU SOFTWARE ENGINEERING.md",
+    "DATA_SCIENCE_AND_AI/0_GROW/Untitled.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/Untitled 1.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/Untitled.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/1.3 Tài liệu training phát triển sản phẩm nội bộ của Step Up.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT/1.1 HACK NÃO PRODUCT - TECHNOLOGY.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.7 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. Hệ thống/System - server.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Python serve FOLDER.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Microservices.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/Langchain 1.6 - Observe - Langfuse.md",
     "DATA_SCIENCE_AND_AI/0_Các Bài Học Xương Máu",
     "BUSINESS/1_PRODUCT/0_Chung",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.4 Chuỗi bài toán Intent Classification",
