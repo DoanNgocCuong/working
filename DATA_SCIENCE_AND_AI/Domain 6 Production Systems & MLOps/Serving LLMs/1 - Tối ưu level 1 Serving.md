@@ -34,45 +34,28 @@ Bạn hỏi một câu **rất thông minh**. Giờ mình sẽ so sánh toàn d
 
 
 
-# 🏭 Bảng "Bí Kíp" Cấu Hình Nhà Máy AI (vLLM) - Phiên Bản Đầy Đủ
+# 🏭 Các tham số ảnh hưởng 
 
-| Tên Chỉ Số                     | Ý Nghĩa (Giải thích cho học sinh)                                           | Ví dụ Thực tế                                                                                                           | Giá trị nên đặt                                                       | Ảnh hưởng đến Response Time                                                                                                                                                                  |
-| ------------------------------ | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`--host`**                   | **Mở cửa nhà máy**  <br>Cho phép nhận đơn từ bên ngoài hay chỉ nội bộ       | `127.0.0.1`: Chỉ người trong nhà đặt hàng  <br>`0.0.0.0`: Ai cũng có thể ghé vào (nếu không có bảo vệ chặn)             | `0.0.0.0`  <br>_(Để Pika từ máy khác gọi được)_                       | ⏱️ **Không ảnh hưởng**  <br>Chỉ là địa chỉ mạng, không liên quan đến tốc độ xử lý                                                                                                            |
-| **`--port`**                   | **Số phòng tiếp khách**  <br>Cổng TCP để client kết nối vào nhà máy         | Giống như phòng 101, 102 trong khách sạn. Mỗi dịch vụ một phòng khác nhau                                               | `30030` hoặc `8000`  <br>_(Chọn số nào cũng được, không trùng là OK)_ | ⏱️ **Không ảnh hưởng**  <br>Chỉ là "số nhà", không liên quan tốc độ                                                                                                                          |
-| **`--dtype`**                  | **Độ tinh xảo của gạch LEGO**  <br>Gạch to hay nhỏ? Nặng hay nhẹ?           | `float16`: Gạch nhẹ (2kg/viên)  <br>`float32`: Gạch nặng (4kg/viên)  <br>Nhẹ hơn = Xe chở nhanh hơn                     | `float16`  <br>_(Nhẹ và nhanh)_                                       | ⏱️ **Giảm 10-15%**  <br>Gạch nhẹ hơn → GPU xử lý nhanh hơn → Trả lời sớm hơn                                                                                                                 |
-| **`--gpu-memory-utilization`** | **Diện tích kho chứa hàng**  <br>Dành bao nhiêu % sân nhà máy làm kho       | Nhà máy 100m², dành 30m² làm kho = 0.3  <br>Kho rộng = Chứa nhiều đơn hàng                                              | `0.3-0.4`  <br>_(Kho vừa đủ, không lãng phí)_                         | ⏱️ **Ảnh hưởng ngược chiều:**  <br>- **Cao (0.6)** = Kho to → Xử lý nhiều đơn cùng lúc → Mỗi đơn hàng chờ lâu hơn ❌  <br>- **Thấp (0.3)** = Kho nhỏ → Ít đơn cùng lúc → Mỗi đơn xong nhanh ✅ |
-| **`--max-model-len`**          | **Độ dài băng chuyền**  <br>Sản phẩm dài nhất có thể lắp ráp                | Băng chuyền 2m → Con rồng 3m sẽ bị cắt đuôi  <br>Ngắn = Nhanh xong, nhưng không làm được sản phẩm to                    | `256-512`  <br>_(Pika chỉ nói ngắn, không cần dài)_                   | ⏱️ **RẤT QUAN TRỌNG! Giảm 50-70ms**  <br>Băng chuyền ngắn hơn → Máy chạy nhanh hơn → Khách nhận hàng sớm hơn  <br>**Đây là yếu tố #1!**                                                      |
-| **`--max-num-seqs`**           | **Số làn chạy song song**  <br>Bao nhiêu quầy thu ngân mở cùng lúc          | 1 quầy = Xếp hàng dài  <br>10 quầy = Phục vụ 10 người cùng lúc  <br>Nhưng cần kho to để chứa 10 đơn                     | `256-512`  <br>_(Model nhỏ nên mở nhiều quầy thoải mái)_              | ⏱️ **Ảnh hưởng ngược chiều:**  <br>- **Cao (512)** = Nhiều quầy → Tổng khách/giờ cao, nhưng mỗi người chờ lâu  <br>- **Thấp (1)** = 1 quầy → Khách ít, nhưng người đang xử lý rất nhanh ✅    |
-| **`--max-num-batched-tokens`** | **Sức tải xe đẩy**  <br>Tổng số mảnh LEGO tối đa xe có thể chở 1 lần        | Xe chở được 2048 mảnh  <br>Dù 1 đơn to hay 10 đơn nhỏ, tổng không quá 2048                                              | `2048-4096`  <br>_(Đủ sức cân nhiều đơn hàng nhỏ)_                    | ⏱️ **Ảnh hưởng nhẹ (5-10%)**  <br>Xe to hơn → Chở nhiều đơn 1 lượt → Giảm số chuyến đi → Hơi nhanh hơn                                                                                       |
-| **`--enable-prefix-caching`**  | **Chế độ "Copy bài mẫu"**  <br>Ghi nhớ phần đầu giống nhau để không làm lại | Giáo viên chép đề lên bảng 1 lần  <br>100 học sinh chỉ cần chép đáp án, không chép lại đề                               | `True` (BẮT BUỘC bật)  <br>_(Tiết kiệm cực nhiều thời gian!)_         | ⏱️ **GIẢM CỰC MẠNH! 20-40ms**  <br>Lần 1: Đọc 100 chữ (chậm)  <br>Lần 2+: Chỉ đọc 5 chữ mới (nhanh gấp 20 lần!)  <br>**Đây là yếu tố #3!**                                                   |
-| **`--kv-cache-dtype`**         | **Chất liệu khay đựng**  <br>Khay nhựa thường hay khay nén?                 | `fp16`: Khay thường (2kg/cái)  <br>`fp8`: Khay siêu mỏng (1kg/cái)  <br>Khay mỏng = Xếp được nhiều hơn                  | `auto`  <br>_(Để máy tự chọn khay phù hợp)_                           | ⏱️ **Giảm 5-10%**  <br>Khay mỏng hơn → Chứa nhiều đơn hơn trong cùng kho → Tối ưu hơn                                                                                                        |
-| **`--enforce-eager`**          | **Chế độ "Cầm tay chỉ việc"**  <br>Sếp chỉ từng bước hay giao việc xong đi? | `True`: Sếp đứng bên cạnh chỉ "Lắp mảnh 1... Lắp mảnh 2..." (chậm)  <br>`False`: Sếp đưa bản vẽ, thợ tự làm hết (nhanh) | `False` (TẮT ĐI)  <br>_(Để thợ tự do làm việc)_                       | ⏱️ **GIẢM CỰC MẠNH! 30-50ms**  <br>Không chỉ từng bước → Thợ làm liên tục không nghỉ → Nhanh gấp 3 lần  <br>**Đây là yếu tố #2!**                                                            |
-| **`--disable-log-requests`**   | **Tắt loa thông báo**  <br>Mỗi đơn hàng đến có cần thông báo không?         | Loa kêu: "Đơn số 1!", "Đơn số 2!"...  <br>Tắt đi = Yên tĩnh hơn, không mất thời gian nói                                | `True` (Tắt loa)  <br>_(Đỡ ồn, đỡ mất thời gian)_                     | ⏱️ **Giảm 1-3ms**  <br>Không ghi log → Không tốn thời gian viết → Nhanh hơn xíu                                                                                                              |
-| **`--trust-remote-code`**      | **Chìa khóa vạn năng**  <br>Tin tưởng bản vẽ lạ từ internet không?          | Tải bản vẽ từ HuggingFace  <br>Máy hỏi: "Tin không?"  <br>Bạn: "Tin!" → Máy chạy                                        | `True` (Tin tưởng)  <br>_(Cần thiết cho model mới như SmolLM2)_       | ⏱️ **Không ảnh hưởng runtime**  <br>Chỉ kiểm tra 1 lần lúc khởi động, sau đó không ảnh hưởng tốc độ                                                                                          |
-| **`--chunked-prefill`**        | **Chia nhỏ công việc đầu**  <br>Đọc đề bài 1 lượt hay chia nhỏ từng đoạn?   | Đề dài 2000 chữ:  <br>- Đọc 1 lượt: Người khác phải chờ  <br>- Chia 4 lần 500 chữ: Người khác xen kẽ được               | `True` (Bật)  <br>_(Cho phép xen kẽ công việc)_                       | ⏱️ **Giảm 10-20ms**  <br>Khi đọc đề của khách A (chậm), khách B, C vẫn được phục vụ (nhanh) xen kẽ                                                                                           |
+| Hạng | Chỉ số / Thuộc tính        | Ý nghĩa ngắn gọn (lý thuyết + liên tưởng)                                                                                                                                                     | Gợi ý triển khai (Ví dụ + Giá trị + Ảnh hưởng)                                                                                         |
+| ---: | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+|   🥇 | `--max-model-len`          | Giới hạn độ dài ngữ cảnh mà mô hình có thể “nhìn thấy” mỗi lần suy nghĩ. Ngắn lại thì tính ít hơn nên nhanh hơn. **Liên tưởng:** bàn làm việc nhỏ hơn → chỉ bày đúng thứ cần dùng, dọn nhanh. | • Ví dụ: 512 vs 2048 tokens • Gợi ý: 256–512 nếu chỉ cần ngắn; 1024 an toàn • Ảnh hưởng: Rất lớn (cải thiện TTFT/TPOT khi prompt ngắn) |
+|   🥈 | `--enforce-eager=False`    | Không ép thực thi kiểu “làm từng bước thủ công”; để runtime tối ưu hóa (graph capture, fusion…). **Liên tưởng:** giao việc theo “quy trình chuẩn” thay vì sếp đứng kè kè chỉ từng động tác.   | • Ví dụ: không bật khi serve ổn định • Gợi ý: để mặc định (không bật) • Ảnh hưởng: Lớn (tùy GPU/pipeline)                              |
+|   🥉 | `--enable-prefix-caching`  | Tái sử dụng phần tiền tố đã tính (KV cache) cho các yêu cầu có đầu vào giống nhau. **Liên tưởng:** photo đề một lần, phát bản sao cho cả lớp.                                                 | • Ví dụ: nhiều request có “lời dẫn” chung • Gợi ý: bật • Ảnh hưởng: Lớn (giảm mạnh chi phí prefill)                                    |
+|    4 | **Quantization (AWQ)**     | Nén trọng số xuống độ chính xác thấp hơn để giảm tải bộ nhớ/tính toán, đánh đổi chút chất lượng. **Liên tưởng:** nén video 4K xuống 1080p để phát mượt.                                       | • Ví dụ: Qwen-0.5B-AWQ • Gợi ý: bật nếu model hỗ trợ • Ảnh hưởng: Lớn (tăng throughput/giảm latency; chất lượng giảm nhẹ)              |
+|    5 | `--enable-chunked-prefill` | Chia input dài thành khúc để engine xen kẽ phục vụ các phiên khác, giảm thời gian chờ ban đầu. **Liên tưởng:** đọc từng chương thay vì cả quyển mới trả lời.                                  | • Ví dụ: prompt 2k chia thành các khúc • Gợi ý: bật • Ảnh hưởng: Trung bình–Lớn (giảm TTFT với prompt dài)                             |
+|    6 | `--dtype`                  | Kiểu số học khi tính toán; số “nhẹ” (fp16/half) bớt tốn tài nguyên hơn fp32. **Liên tưởng:** dùng gạch nhẹ để xây cho nhanh.                                                                  | • Ví dụ: `float16`/`half` • Gợi ý: dùng `half` • Ảnh hưởng: Trung bình                                                                 |
+|    7 | `--kv-cache-dtype`         | Định dạng lưu bộ nhớ chú ý (KV); định dạng nén (fp8) chứa được nhiều phiên hơn trong cùng VRAM. **Liên tưởng:** khay mỏng hơn nên xếp được thêm khay.                                         | • Ví dụ: `auto` hoặc `fp8` nếu hỗ trợ • Gợi ý: `auto` (ưu tiên), cân nhắc `fp8` • Ảnh hưởng: Trung bình (tăng số seq đồng thời)        |
+|    8 | **Model Size**             | Số tham số càng lớn, suy nghĩ càng “nhiều tầng” nhưng tốn thời gian. **Liên tưởng:** xe tải nặng chở được nhiều nhưng tăng tốc chậm.                                                          | • Ví dụ: 135M vs 500M • Gợi ý: chọn nhỏ nhất đáp ứng chất lượng • Ảnh hưởng: Trung bình                                                |
+|    9 | `--max-num-batched-tokens` | Trần tổng token xử lý trong một lượt; batch hợp lý giảm chi phí vòng lặp. **Liên tưởng:** gom hàng vừa đủ lên một xe để bớt phải quay đầu.                                                    | • Ví dụ: 2048–4096 • Gợi ý: 2048–4096 • Ảnh hưởng: Nhẹ–Trung bình (batch hợp lý giúp đều đặn)                                          |
+|   10 | `--gpu-memory-utilization` | Tỷ lệ VRAM cho engine/KV; cao giúp chứa nhiều phiên/context hơn, nhưng tác động độ trễ còn tùy cách gom batch. **Liên tưởng:** mở thêm bàn ghế thì phục vụ được nhiều nhóm hơn.               | • Ví dụ: 0.85–0.9 (server) • Gợi ý: 0.8–0.9 • Ảnh hưởng: Nhẹ–Trung bình (trade-off throughput ↔ latency)                               |
+|   11 | `--max-num-seqs`           | Giới hạn số sequence đồng thời mà scheduler xét mỗi vòng; tăng thông lượng nhưng có thể đẩy P95/P99. **Liên tưởng:** mở thêm quầy thu ngân, mỗi khách có thể chờ lâu hơn.                     | • Ví dụ: 8 (low-latency) / 32–64 (throughput) • Gợi ý: 8–64 tùy mục tiêu • Ảnh hưởng: Nhẹ–Trung bình (tối ưu P95/P99 vs QPS)           |
+|   12 | `--swap-space`             | Bộ nhớ dự phòng trên disk khi thiếu VRAM; an toàn hơn OOM nhưng truy cập chậm. **Liên tưởng:** gửi hàng tạm sang kho ngoại thành.                                                             | • Ví dụ: 4 GB • Gợi ý: 4 • Ảnh hưởng: Gián tiếp (ổn định; swap thực tế thì chậm)                                                       |
+|   13 | `--disable-log-requests`   | Giảm chi phí ghi log I/O cho mỗi request. **Liên tưởng:** tắt loa thông báo để bếp tập trung nấu.                                                                                             | • Ví dụ: tắt ghi log chi tiết • Gợi ý: bật • Ảnh hưởng: Nhẹ (vài ms)                                                                   |
+|   14 | `--host`, `--port`         | Địa chỉ mạng/cổng phục vụ; chỉ ảnh hưởng kết nối, không ảnh hưởng tính toán. **Liên tưởng:** số nhà/biển chỉ đường.                                                                           | • Ví dụ: `0.0.0.0:30030` • Gợi ý: tùy hạ tầng • Ảnh hưởng: Không (chỉ kết nối)                                                         |
+|   15 | `--trust-remote-code`      | Cho phép chạy mã tuỳ biến đi kèm model (HF); cần cho một số kiến trúc. **Liên tưởng:** bật chìa khóa vạn năng để mở bản vẽ đặc thù.                                                           | • Ví dụ: HF model cần code • Gợi ý: bật khi cần • Ảnh hưởng: Không (ảnh hưởng lúc khởi động)                                           |
 
----
 
-## 🎯 Bảng Xếp Hạng: Ảnh Hưởng đến Response Time
 
-Sắp xếp theo mức độ quan trọng (từ cao xuống thấp):
-
-| Hạng   | Chỉ Số                     | Tác Động             | Giải Thích Đơn Giản                                                                                          | Mức Độ                |
-| ------ | -------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------- |
-| **🥇** | `--max-model-len`          | ⬇️ **-50 đến -70ms** | Băng chuyền ngắn → Làm nhanh hơn → Trả hàng sớm                                                              | 🔴 **CỰC QUAN TRỌNG** |
-| **🥈** | `--enforce-eager=False`    | ⬇️ **-30 đến -50ms** | Thợ tự làm không cần chỉ đạo từng bước → Nhanh gấp 3                                                         | 🔴 **CỰC QUAN TRỌNG** |
-| **🥉** | `--enable-prefix-caching`  | ⬇️ **-20 đến -40ms** | Chỉ đọc phần mới, không đọc lại phần cũ → Tiết kiệm 80% thời gian                                            | 🔴 **CỰC QUAN TRỌNG** |
-| **4**  | `--chunked-prefill`        | ⬇️ **-10 đến -20ms** | Chia nhỏ công việc để xen kẽ → Không ai phải chờ lâu                                                         | 🟡 **QUAN TRỌNG**     |
-| **5**  | `--dtype=float16`          | ⬇️ **-10 đến -15%**  | Gạch nhẹ hơn → Xe chở nhanh hơn                                                                              | 🟡 **QUAN TRỌNG**     |
-| **6**  | `--kv-cache-dtype`         | ⬇️ **-5 đến -10%**   | Khay mỏng → Chứa nhiều hơn → Tối ưu hơn                                                                      | 🟢 **TỐT NẾU CÓ**     |
-| **7**  | `--max-num-batched-tokens` | ⬇️ **-5 đến -10%**   | Xe to hơn → Chở nhiều 1 lần → Ít chuyến hơn                                                                  | 🟢 **TỐT NẾU CÓ**     |
-| **8**  | `--disable-log-requests`   | ⬇️ **-1 đến -3ms**   | Không nói nhiều → Tiết kiệm chút xíu thời gian                                                               | 🟢 **TỐT NẾU CÓ**     |
-| **9**  | `--gpu-memory-utilization` | 🔄 **Ngược chiều**   | Kho to = Nhiều đơn nhưng mỗi đơn chậm  <br>Kho nhỏ = Ít đơn nhưng mỗi đơn nhanh                              | 🟡 **CÂN BẰNG**       |
-| **10** | `--max-num-seqs`           | 🔄 **Ngược chiều**   | Nhiều quầy = Tổng khách nhiều, nhưng mỗi người chờ lâu  <br>Ít quầy = Khách ít, nhưng người đang xử lý nhanh | 🟡 **CÂN BẰNG**       |
-| **11** | `--host`, `--port`         | ⏱️ **0ms**           | Chỉ là địa chỉ, không ảnh hưởng tốc độ                                                                       | ⚪ **KHÔNG ẢNH HƯỞNG** |
-| **12** | `--trust-remote-code`      | ⏱️ **0ms**           | Chỉ kiểm tra lúc khởi động, không ảnh hưởng sau đó                                                           | ⚪ **KHÔNG ẢNH HƯỞNG** |
-|        |                            |                      |                                                                                                              |                       |
 
 ```
 CUDA_VISIBLE_DEVICES=2 python -m vllm.entrypoints.openai.api_server \
@@ -92,112 +75,9 @@ CUDA_VISIBLE_DEVICES=2 python -m vllm.entrypoints.openai.api_server \
     --disable-log-requests
 ```
 
-| **Thuộc tính**             | **Kiểu 1 (Python Module)**                     | **Kiểu 2 (vLLM CLI)**          |                                                                                   |     |
-| -------------------------- | ---------------------------------------------- | ------------------------------ | --------------------------------------------------------------------------------- | --- |
-| **Lệnh khởi chạy**         | `python -m vllm.entrypoints.openai.api_server` | `vllm serve`                   |                                                                                   |     |
-| **CUDA Device**            | `CUDA_VISIBLE_DEVICES=0`                       | Không chỉ định (mặc định)      |                                                                                   |     |
-| **Model**                  | HuggingFaceTB/SmolLM2-135M-Instruct            | Qwen/Qwen2.5-0.5B-Instruct-AWQ |                                                                                   |     |
-| **Model Size**             | 135M parameters                                | 500M parameters                | 🔴 **Kiểu 2 chậm hơn** - Model lớn gấp 3.7x → inference time cao hơn              |     |
-| **Port**                   | 30030                                          | 8825                           |                                                                                   |     |
-| **Host**                   | 0.0.0.0                                        | 0.0.0.0                        |                                                                                   |     |
-| **Data Type**              | float16                                        | half                           |                                                                                   |     |
-| **GPU Memory Utilization** | 0.3 (30%)                                      | 0.5 (50%)                      | 🟢 **Kiểu 2 nhanh hơn** - Nhiều memory → ít swap, cache tốt hơn                   |     |
-| **Max Model Length**       | 512 tokens                                     | 2048 tokens                    | 🔴 **Kiểu 2 chậm hơn** - Context dài → attention computation tăng O(n²)           |     |
-| **Max Sequences**          | 512                                            | 32                             | 🟡 **Tradeoff** - Kiểu 1: nhiều request nhưng mỗi request chậm hơn do competition |     |
-| **Max Batched Tokens**     | Không chỉ định                                 | 2048                           | 🟢 **Kiểu 2 ổn định hơn** - Tránh OOM, response time đồng đều                     |     |
-| **Quantization**           | Không                                          | AWQ                            | 🟢 **Kiểu 2 nhanh hơn** - AWQ giảm 50-70% thời gian inference                     |     |
-| **Prefix Caching**         | ✅ Enabled                                      | ✅ Enabled                      | 🟢 **Cả hai nhanh** - Cache prefix giảm 30-50% latency                            |     |
-| **Chunked Prefill**        | Không                                          | ✅ Enabled                      | 🟢 **Kiểu 2 nhanh hơn** - Xử lý song song, giảm TTFT                              |     |
-| **Swap Space**             | Không chỉ định                                 | 4GB                            | 🟡 **Kiểu 2 ổn định** - Tránh crash nhưng có thể chậm nếu swap                    |     |
-| **Trust Remote Code**      | ✅ Enabled                                      | Không chỉ định                 |                                                                                   |     |
-| **Disable Log Requests**   | ✅ Enabled                                      | Không chỉ định                 |                                                                                   |     |
-
-| **Thuộc tính**             | **Giải thích**                 | **Ví dụ dễ hiểu**                                                       | **Tác động thực tế**                                        |
-| -------------------------- | ------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------- |
-| **Model Size**             | Số lượng tham số của model     | Như so sánh **xe máy 135cc** vs **ô tô 500cc**                          | Model 500M mạnh hơn nhưng "ăn xăng" nhiều hơn → chậm hơn    |
-| **Quantization (AWQ)**     | Nén model từ 16-bit → 4-bit    | Như nén video **4K → 1080p** nhưng vẫn rõ                               | Giảm 70% memory, nhanh hơn 2-3x nhưng chất lượng giảm 5-10% |
-| **GPU Memory Utilization** | % RAM GPU được sử dụng         | **30%**: Dùng 3GB/10GB<br>**50%**: Dùng 5GB/10GB                        | 50% → ít bị lag, cache nhiều hơn → nhanh hơn                |
-| **Max Model Length**       | Độ dài context tối đa          | **512 tokens** ≈ 1 đoạn văn ngắn<br>**2048 tokens** ≈ 4-5 đoạn văn      | Context dài → AI nhớ nhiều hơn nhưng xử lý chậm hơn         |
-| **Max Sequences**          | Số request xử lý đồng thời     | **512**: Như quán phở có 512 bàn<br>**32**: Như nhà hàng cao cấp 32 bàn | Nhiều bàn → phục vụ nhiều khách nhưng mỗi khách chờ lâu hơn |
-| **Max Batched Tokens**     | Giới hạn tokens xử lý cùng lúc | Như giới hạn **2048 món** cùng lúc trong bếp                            | Tránh quá tải → thời gian phục vụ đều đặn hơn               |
-| **Prefix Caching**         | Lưu cache phần đầu câu hỏi     | Như **nhớ tên khách** khi họ quay lại quán                              | Khách quen được phục vụ nhanh hơn 30-50%                    |
-| **Chunked Prefill**        | Chia nhỏ xử lý input dài       | Như **đọc sách từng chương** thay vì cả quyển                           | Bắt đầu trả lời nhanh hơn, không phải đợi đọc hết           |
-| **Swap Space**             | Bộ nhớ dự phòng trên ổ cứng    | Như **kho dự trữ 4GB** khi hết chỗ                                      | Tránh crash nhưng chậm hơn khi phải lấy từ kho              |
 
 
----
 
-## 💡 Công Thức Tính Response Time (Dễ Hiểu)
-
-```
-Response Time (Thời gian trả lời) = Thời gian đọc đề + Thời gian viết đáp án
-
-Thời gian đọc đề (TTFT) = Đọc bao nhiêu chữ ÷ Tốc độ đọc + Thời gian chờ máy khởi động
-
-Thời gian viết đáp án = Số chữ cần viết ÷ Tốc độ viết
-
-```
-
-**Ví dụ thực tế:**
-
-```
-ĐỀ BÀI: "User: Hà Nội\nBot: Chính xác!" (30 chữ)
-ĐÁP ÁN: {"emotion":"happy"} (10 chữ)
-
-═══ TRƯỚC TỐI ƯU ═══
-• Băng chuyền dài: 2048 chữ (dù chỉ cần 30)
-• Sếp chỉ từng bước (enforce-eager=True)
-• Không có bài mẫu (prefix-caching=False)
-
-Thời gian đọc đề: 30 ÷ 100 chữ/s + 50ms chờ = 350ms ❌
-Thời gian viết: 10 ÷ 100 chữ/s = 100ms
-TỔNG: 450ms ❌❌❌
-
-═══ SAU TỐI ƯU ═══
-• Băng chuyền ngắn: 256 chữ (vừa đủ)
-• Thợ tự làm (enforce-eager=False)
-• Có bài mẫu (prefix-caching=True, chỉ đọc 5 chữ mới)
-
-Thời gian đọc đề: 5 ÷ 150 chữ/s + 5ms chờ = 38ms ✅
-Thời gian viết: 10 ÷ 150 chữ/s = 67ms
-TỔNG: 105ms ✅✅✅
-
-⚡ NHANH HƠN: 450ms → 105ms (4.3x) ⚡
-
-```
-
-```
-CUDA_VISIBLE_DEVICES=2 python -m vllm.entrypoints.openai.api_server \
-    --model 'HuggingFaceTB/SmolLM2-135M-Instruct' \
-    --host 0.0.0.0 \
-    --port 30030 \
-    --quantization awq \
-    --dtype half \
-    --gpu-memory-utilization 0.5 \
-    --max-model-len 2048 \
-    --max-num-seqs 32 \
-    --max-num-batched-tokens 2048 \
-    --enable-prefix-caching \
-    --enable-chunked-prefill \
-    --swap-space 4 \
-    --trust-remote-code \
-    --disable-log-requests
-```
----
-
-## 🎓 Tóm Lại Cho Học Sinh Cấp 2
-
-Nếu bạn muốn robot Pika trả lời **SIÊU NHANH**, hãy nhớ 3 điều này:
-
-1. **Băng chuyền ngắn thôi** (`--max-model-len` nhỏ): Đừng xây băng chuyền 2km cho sản phẩm 2m!
-    
-2. **Để thợ tự làm** (`--enforce-eager=False`): Đừng đứng bên cạnh chỉ từng bước!
-    
-3. **Copy bài mẫu** (`--enable-prefix-caching`): Đề giống nhau thì chỉ chép 1 lần!
-    
-
-Làm đủ 3 điều này, Pika sẽ trả lời nhanh gấp **4-5 lần**! 🚀
-1. [https://www.perplexity.ai/search/bin-bash-run-phi-3-mini-emotio-3uveNPLaTUma_IfSP3asPA](https://www.perplexity.ai/search/bin-bash-run-phi-3-mini-emotio-3uveNPLaTUma_IfSP3asPA)
 
 
 # 2. Sai lầm 2 : Config làm chậm model => Tối ưu các tham số nhỏ nhỏ như max_completion_tokens, ...
