@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/1.0 Research - Planning - Implement.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/1 - Tối ưu level 1 Serving.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.0 Research - Planning - Implement"
+              "title": "1 - Tối ưu level 1 Serving"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: exampl",
+                "query": "file: host",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/1.0 Research - Planning - Implement.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/1 - Tối ưu level 1 Serving.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1.0 Research - Planning - Implement"
+              "title": "Outline of 1 - Tối ưu level 1 Serving"
             }
           }
         ],
@@ -187,35 +187,36 @@
   },
   "active": "4cef5761b5382b54",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Init Serving LLMs.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Untitled 1.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Sai lầm 2 - Tối ưu sử dụng OUTPUT format.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Sai lầm 1 - Tối ưu service hosting (Groq thay cho GPT).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/Sai lầm 1 - Không cần streaming nhưng bật streaming.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/0 - Tối Ưu Hóa Hệ Thống Serving LLM Cho Các Dự Án Quy Mô Lớn - Một Khuôn Khổ Phân Tích Toàn Diện Dành Cho Kỹ Sư AI.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/1 - Tối ưu level 1 Serving.md",
+    "DATA_SCIENCE_AND_AI/Domain 9 Business/14. StepUpEnglish/8_Project/1_dify/Module2_Database/1.5 Config link host + docker compose Trên server không cần ssh.md",
+    "BUSINESS/2_FINANCE/1 - Finance và AI.md",
+    "BUSINESS/Pitching.md",
+    "BUSINESS/Business.md",
+    "BUSINESS/2_FINANCE/Untitled.md",
+    "BUSINESS/2_FINANCE/FINANCE/Investment Analyst.md",
+    "BUSINESS/2_FINANCE/FINANCE/Lộ trình.md",
+    "BUSINESS/2_FINANCE/FINANCE/Untitled 1.md",
+    "BUSINESS/2_FINANCE/FINANCE/Untitled.md",
+    "BUSINESS/2_FINANCE/FINANCE/Một số mẩu chuyện warren buffet.md",
+    "BUSINESS/2_FINANCE/FINANCE/Ví dụ đơn giản thực tế.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/1.0 Research - Planning - Implement.md",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/image/Pasted image 20251209131206.png",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/image",
     "PEOPLE/THE_ROAD/07122025_So Sánh AI vs Finance - Lựa Chọn Lõi Chiến Lược.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/1.0 Research - Planning - Implement.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/example a Hiệp.md",
     "PEOPLE",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Example Kiến trúc 4.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Example Kiến trúc 3.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Example Kiến trúc 2.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Example 2 - Stage 1 – Input & Ingestion (CORE, MVP) – Enterprise Spec v2.2.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.1 STAGE 1 - Input & Ingestion (CORE, MVP) – Enterprise Spec v2.2.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Example 1 - 1.1 Context Handling_Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Example KienTruc 1.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Example Summary Template.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled 2.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled 1.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.0 6 Modules.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Untitled.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/2.1 Tài liệu summary giai đoạn 1.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.1 Detail 1 -.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.1 Module.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/2.5 Nexus-Driven Secure Development Lifecycle - NSDL Luồng Làm Việc Tối Ưu Cho Phát Triển Sản Phẩm Nhanh, Chất Lượng và An Toàn.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/2.4 Luồng MANUS - Phương Pháp Xác Định Tiêu Chí Thành Công Cho Bài Toán Không Rõ Ràng.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/1.2 Luồng Làm Việc Tối Ưu Cho Đội Ngũ Product Với Trợ Lực Từ AI.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.4 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.1 Báo cáo Nghiên cứu Kỹ thuật Chuyên sâu - Kiến trúc Tác nhân AI Trình duyệt và Tính khả thi của Mô hình Hybrid Extension trên nền tảng Chromium.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.2 STAGE 2 - Query Understanding & Task Spec (CORE, MVP).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs",
     "DATA_SCIENCE_AND_AI/0_Các Bài Học Xương Máu",
     "BUSINESS/1_PRODUCT/0_Chung",
@@ -232,7 +233,6 @@
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234402.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251203234327.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206192927.png",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/attachments/Pasted image 20250717123940.png",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
 }
