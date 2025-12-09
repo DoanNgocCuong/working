@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.2 LLMs/1.1 SO sánh0.5 với 1.5.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.1 STAGE 1 - Input & Ingestion (CORE, MVP) – Enterprise Spec v2.2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.1 SO sánh0.5 với 1.5"
+              "title": "2.1 STAGE 1 - Input & Ingestion (CORE, MVP) – Enterprise Spec v2.2"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.2 LLMs/1.1 SO sánh0.5 với 1.5.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.1 STAGE 1 - Input & Ingestion (CORE, MVP) – Enterprise Spec v2.2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1.1 SO sánh0.5 với 1.5"
+              "title": "Outline of 2.1 STAGE 1 - Input & Ingestion (CORE, MVP) – Enterprise Spec v2.2"
             }
           }
         ],
@@ -187,8 +187,13 @@
   },
   "active": "4cef5761b5382b54",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.2 LLMs/SLM - Small Language Model.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.2 STAGE 2 - Query Understanding & Task Spec (CORE, MVP).md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.1 STAGE 1 - Input & Ingestion (CORE, MVP) – Enterprise Spec v2.2.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.1 Detail 1 -.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.0 6 Modules.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/Cách Mô Tả Codebase Để Phân Tích Bằng LLMAgents 4.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.2 LLMs/1.1 SO sánh0.5 với 1.5.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.2 LLMs/SLM - Small Language Model.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.2 LLMs/2. 50 câu hỏi thường gặp phỏng vấn AI LLMs.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/1 - Tối ưu level 1 Serving.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/2 - Serving.md",
@@ -208,13 +213,8 @@
     "BUSINESS/2_FINANCE/FINANCE/Lộ trình.md",
     "BUSINESS/2_FINANCE/FINANCE/Untitled 1.md",
     "BUSINESS/2_FINANCE/FINANCE/Untitled.md",
-    "BUSINESS/2_FINANCE/FINANCE/Một số mẩu chuyện warren buffet.md",
-    "BUSINESS/2_FINANCE/FINANCE/Ví dụ đơn giản thực tế.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/1.0 Research - Planning - Implement.md",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/image/Pasted image 20251209131206.png",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/image",
-    "PEOPLE/THE_ROAD/07122025_So Sánh AI vs Finance - Lựa Chọn Lõi Chiến Lược.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/example a Hiệp.md",
     "PEOPLE",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs",
