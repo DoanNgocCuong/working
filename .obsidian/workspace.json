@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.2 STAGE 2 - Query Understanding & Task Spec (CORE, MVP).md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 2 - v2 Đoàn Cường.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.2 STAGE 2 - Query Understanding & Task Spec (CORE, MVP)"
+              "title": "2.3 STAGE 2 - v2 Đoàn Cường"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.2 STAGE 2 - Query Understanding & Task Spec (CORE, MVP).md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 2 - v2 Đoàn Cường.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.2 STAGE 2 - Query Understanding & Task Spec (CORE, MVP)"
+              "title": "Outline of 2.3 STAGE 2 - v2 Đoàn Cường"
             }
           }
         ],
@@ -170,10 +170,11 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "2c043420b8023f3a",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 Stage 1, 2, 3 theo TDD.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 3 - Router, Planner.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 2 - v2 Đoàn Cường.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 Stage 1, 2, 3 theo TDD.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.2 STAGE 2 - Query Understanding & Task Spec (CORE, MVP).md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.8 Tài liệu Thiết kế Toàn diện - finAI Agentic Browser.md",
     "BUSINESS/1_PRODUCT/4_FinAI/2.1 Tài liệu summary giai đoạn 1.md",
@@ -197,7 +198,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Database - Max connection.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Example Summary Template.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.1 Các tài liệu trong thiết kế Software Engineer.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled",
     "BUSINESS/1_PRODUCT/4_FinAI/Research",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/image/Pasted image 20251209131206.png",
