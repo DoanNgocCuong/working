@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.2 STAGE 2 - v2 - LOW-LEVEL DESIGN (LLD) - MODULE 2 QUERY UNDERSTANDING.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled 5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.2 STAGE 2 - v2 - LOW-LEVEL DESIGN (LLD) - MODULE 2 QUERY UNDERSTANDING"
+              "title": "Untitled 5"
             }
           },
           {
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: prod",
+                "query": "file: ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.2 STAGE 2 - v2 - LOW-LEVEL DESIGN (LLD) - MODULE 2 QUERY UNDERSTANDING.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled 5.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.2 STAGE 2 - v2 - LOW-LEVEL DESIGN (LLD) - MODULE 2 QUERY UNDERSTANDING"
+              "title": "Outline of Untitled 5"
             }
           }
         ],
@@ -201,8 +201,20 @@
   },
   "active": "8669d0a2efd6c516",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 2 - v2 HIGH LEVEL DESIGN (TECHNICAL DEEP DIVE) - MODULE 2 QUERY UNDERSTANDING - Đoàn Cường - 150 tín dụng - 10122025.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 - PRODUCTION QUALITY.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled 5.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
+    "CÁC SAI LẦM THƯỜNG GẶP/PRODUCT/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/0. TOP SAI LẦM THƯỜNG GẶP.md",
+    "CÁC SAI LẦM THƯỜNG GẶP/PRODUCT",
+    "CÁC SAI LẦM THƯỜNG GẶP",
+    "BUSINESS/1_PRODUCT/3 - UI, UX/CÁC SAI LẦM SỰ NGHIỆP.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/11122025.md",
+    "BUSINESS/1_PRODUCT/_",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/report/report.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.2 STAGE 2 - v2 - LOW-LEVEL DESIGN (LLD) - MODULE 2 QUERY UNDERSTANDING.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/report",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 2 - v2 HIGH LEVEL DESIGN (TECHNICAL DEEP DIVE) - MODULE 2 QUERY UNDERSTANDING - Đoàn Cường - 150 tín dụng - 10122025.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.5 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v1 - TECHNICAL DEEP DIVE DESIGN DOCS (HIGH LEVEL DESIGN AND LOW LEVEL DESIGN) - (TDD) - Example Summary Template - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Perflexity Deep Research.md",
@@ -219,15 +231,7 @@
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP(bản cũ)",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 - v3 - TECHNICAL DEEP DIVE - genspark.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Low Level Design - 11122025.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled 8.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.4.1 Prompt Full Business - Product and Tech,.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.2 Luồng Làm Việc Nexus - Quy Trình Phát Triển Sản Phẩm Tối Ưu với AI - Luồng Làm Việc Nexus.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.1 Các tài liệu trong thiết kế Software Engineer.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.4 MECE TỪ PRODUCT TỚI TECH - TOÀN BỘ CÁC BẢN THIẾT KẾ ĐỂ TRIỂN KHAI 100 phan tram DỰ ÁN.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Example 2 - Web Browser.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.4 Các Bản Thiết Kế Phần Mềm Để Một Người Cùng AI Hoàn Thiện Dự Án.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.1 Overview metathinking khi sử dụng Manus cho các đầu việc lớn của team Product.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/Untitled 1.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/image/Pasted image 20251211124140.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/image",
     "BUSINESS/1_PRODUCT/4_FinAI/Research",
@@ -235,10 +239,6 @@
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/image",
     "PEOPLE",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs",
-    "DATA_SCIENCE_AND_AI/0_Các Bài Học Xương Máu",
-    "BUSINESS/1_PRODUCT/0_Chung",
-    "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.4 Chuỗi bài toán Intent Classification",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206161715.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204020402.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204000322.png",
