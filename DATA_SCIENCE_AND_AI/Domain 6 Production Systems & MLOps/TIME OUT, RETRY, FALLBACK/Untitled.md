@@ -17,7 +17,7 @@ Hiện trạng: đoạn này không có retry/fallback. Nếu LLM chính lỗi (
 - Đặt timeout 1.5s cho call model chính.  
 - Chạy song song model chính và model phụ gpt-4o-mini sau 1.5s nếu chính chưa xong; ai về trước lấy kết quả đó.  
 - Log cảnh báo: `"model chính đã lỗi, chuyển qua dùng model gpt-4o-mini"` khi bật nhánh fallback.  
-- Nếu cả hai cùng fail hoặc cùng quá hạn: trả về thông báo lỗi chuẩn (vd. `{status:"error", reason:"llm_timeout", request_id:...}`) thay vì `None`/exception trần.
+- Nếu cả hai cùng fail hoặc cùng quá hạn: dùng response mặc định
 
 Mô tả luồng đề xuất (logic, chưa code):  
 1) Gọi model chính với timeout 1.5s (future A).  
@@ -26,4 +26,3 @@ Mô tả luồng đề xuất (logic, chưa code):
 4) Chờ race A vs B; cái nào trả trước dùng cái đó; hủy future còn lại.  
 5) Nếu cả A và B đều lỗi/timeout → trả response lỗi chuẩn hóa (kèm request_id).  
 
-Hiện tại code cũ: khi fail call LLM sẽ ném exception (hoặc `None` tùy `llm_base`), không có fallback và không có log chuyển model. Nếu muốn mình có thể thêm wrapper thực thi logic trên ngay tại chỗ gọi `llm_base.get_response`.
