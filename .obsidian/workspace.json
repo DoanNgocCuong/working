@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/Module 5/B2_RAG/1. Mem0 - Implement Mem0 selfhost.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/Partition -.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Mem0 - Implement Mem0 selfhost"
+              "title": "Partition -"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/Module 5/B2_RAG/1. Mem0 - Implement Mem0 selfhost.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/Partition -.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1. Mem0 - Implement Mem0 selfhost"
+              "title": "Outline of Partition -"
             }
           }
         ],
@@ -186,8 +186,11 @@
   },
   "active": "2c043420b8023f3a",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/Module 5/B2_RAG/AI_RAG_RecommendSystem_with_AI_RAG_Mem0.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/image/Pasted image 20251211124140.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/Module 5/B2_RAG/1. Mem0 - Implement Mem0 selfhost.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/Partition -.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/Module 5/B2_RAG/AI_RAG_RecommendSystem_with_AI_RAG_Mem0.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Example Summary Template - TECHNICAL DEEP-DIVE SPECIFICATION (TDD).md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.1 Các tài liệu trong thiết kế Software Engineer.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled 4.md",
@@ -210,8 +213,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.2 LLMs/SLM - 1 bài báo về SLM.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.2 LLMs/SLM - Small Language Model.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Example 2 - Web Browser.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.5 TDD (Technical Deep Dive docs) - FinAI Team.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.3 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled",
     "BUSINESS/1_PRODUCT/4_FinAI/Research",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/image/Pasted image 20251209131206.png",
@@ -222,7 +223,6 @@
     "DATA_SCIENCE_AND_AI/0_Các Bài Học Xương Máu",
     "BUSINESS/1_PRODUCT/0_Chung",
     "DATA_SCIENCE_AND_AI/Domain 4 Deep Learning & Neural Networks/4.4 Chuỗi bài toán Intent Classification",
-    "BUSINESS/1_PRODUCT/0_HackTime",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251206161715.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204020402.png",
     "BUSINESS/1_PRODUCT/image/Pasted image 20251204000322.png",
