@@ -4,6 +4,376 @@
 
 Now I have comprehensive information about agent system design. Let me create a detailed response for the user.
 
+# Thiết kế Hệ thống Agent (Tác nhân AI)
+
+Bây giờ tôi đã có thông tin toàn diện về thiết kế hệ thống agent. Dưới đây là phản hồi chi tiết dành cho người dùng.
+
+## Thiết kế Hệ thống Agent
+
+Thiết kế hệ thống Agent bao gồm các nguyên tắc kiến trúc, các mô hình mẫu (patterns) và các thành phần cho phép các tác nhân AI tự chủ (autonomous AI agents) suy luận, lập kế hoạch và thực thi nhiệm vụ trong các môi trường phức tạp. Đây là hướng dẫn toàn diện bao gồm các khái niệm nền tảng, mô hình kiến trúc, phương pháp triển khai và các thực hành tốt nhất (best practices).
+
+### Các Thành phần Cốt lõi của Hệ thống Agent
+
+Tất cả các hệ thống agent đều chia sẻ ba thành phần cơ bản hoạt động cùng nhau để kích hoạt hành vi tự chủ:^1
+
+**Mô hình (Bộ não - The Brain)** — Một mô hình ngôn ngữ lớn (LLM) đóng vai trò là động cơ suy luận, cho phép agent hiểu các yêu cầu, suy luận về các giải pháp và đưa ra quyết định về những hành động cần thực hiện. Chất lượng của LLM ảnh hưởng trực tiếp đến khả năng ra quyết định và độ tin cậy của agent.
+
+**Công cụ (Hành động bên ngoài - External Actions)** — Các hàm (functions), API và dịch vụ bên ngoài mà agent có thể gọi để trích xuất dữ liệu, sửa đổi hệ thống hoặc tương tác với môi trường bên ngoài. Các công cụ mở rộng khả năng của agent vượt ra ngoài phạm vi suy luận thuần túy và cho phép tạo ra tác động trong thế giới thực.
+
+**Hướng dẫn (Rào chắn kiểm soát - Guardrails)** — Các hướng dẫn rõ ràng, system prompts (lời nhắc hệ thống) và các ràng buộc xác định cách agent nên cư xử, những gì nó nên ưu tiên và các ranh giới đạo đức mà nó phải tôn trọng.
+
+Ngoài các thành phần cốt lõi này, các hệ thống agent trong môi trường sản xuất (production) thường bao gồm các module nâng cao: **hệ thống bộ nhớ** để duy trì ngữ cảnh qua các phiên làm việc sử dụng cả lưu trữ ngắn hạn (lịch sử hội thoại) và dài hạn (cơ sở dữ liệu vector cho tìm kiếm ngữ nghĩa); **cơ chế lập kế hoạch** để phân rã các mục tiêu phức tạp thành các bước có thể thực thi; **module nhận thức** để hiểu ngữ cảnh môi trường; và **khung thực thi** để thực hiện hành động một cách đáng tin cậy.
+
+### Các Mô hình Kiến trúc cho Hệ thống Agent
+
+Thiết kế hệ thống agent tồn tại trên một dải liên tục từ đơn giản đến phức tạp, với các mô hình khác nhau phù hợp với các yêu cầu khác nhau.
+
+**Chuỗi Xác định (Deterministic Chain - Các bước được mã hóa cứng)**
+
+Mô hình đơn giản nhất, nơi các nhà phát triển xác định trước trình tự chính xác của các bước, công cụ và tham số. Hệ thống tuân theo cùng một quy trình làm việc cho tất cả các yêu cầu, mang lại khả năng dự đoán cao và độ phức tạp thấp. Cách tiếp cận này hoạt động tốt cho các quy trình đơn giản, lặp lại như đường ống xử lý tài liệu hoặc các chuỗi hỏi-đáp đơn giản không yêu cầu ra quyết định động.
+
+**Hệ thống Đơn Agent (Single-Agent System)**
+
+Một luồng phối hợp duy nhất, trong đó một agent điều phối nhiều cuộc gọi LLM để xử lý các yêu cầu phức tạp. Agent chấp nhận truy vấn của người dùng, suy luận về cách tiếp cận tốt nhất, quyết định linh hoạt công cụ nào cần gọi, tích hợp kết quả vào cuộc hội thoại và lặp lại cho đến khi đạt được mục tiêu. Hệ thống đơn agent cân bằng giữa tính linh hoạt và khả năng bảo trì, xử lý các quy trình công việc yêu cầu lựa chọn công cụ động và suy luận đa bước trong khi vẫn giữ kiến trúc đơn giản.
+
+**Hệ thống Đa Agent (Multi-Agent Systems)**
+
+Các kiến trúc phân tán với các agent chuyên biệt, mỗi agent xử lý các miền hoặc nhiệm vụ cụ thể, được phối hợp thông qua một bộ điều phối trung tâm (central orchestrator). Trong kiến trúc đa agent, mỗi agent duy trì chuyên môn, ngữ cảnh và bộ công cụ riêng của miền đó, cho phép phân tách trách nhiệm tốt hơn và khả năng mở rộng cao hơn.
+
+Bộ điều phối (có thể là một LLM khác hoặc bộ định tuyến dựa trên quy tắc) nhận các yêu cầu, xác định agent chuyên biệt nào phù hợp nhất và quản lý việc chuyển giao giữa các agent. Ví dụ, một trợ lý doanh nghiệp có thể sử dụng các agent riêng biệt cho hỗ trợ khách hàng (tra cứu CRM, trả hàng, vận chuyển), phân tích (truy vấn SQL, tóm tắt dữ liệu) và hoạt động tài chính, với một router giám sát chỉ đạo các truy vấn một cách thích hợp.
+
+Hệ thống đa agent giới thiệu thêm các mô hình tổ chức. **Mô hình điều phối tập trung** sử dụng một agent mạnh mẽ duy nhất như một nhạc trưởng điều phối tất cả những người khác, duy trì trạng thái toàn cục và đưa ra mọi quyết định định tuyến. Điều này tạo ra hành vi có thể dự đoán và gỡ lỗi được nhưng có khả năng hạn chế tính song song. **Mô hình bầy đàn (swarm pattern)** cho phép bất kỳ agent nào giao tiếp với mọi agent khác, cho phép giải quyết vấn đề cộng tác, phản biện và chuyển giao nhiệm vụ. **Mô hình phân cấp (hierarchical pattern)** kết hợp sự phối hợp chiến lược tập trung với việc thực thi chiến thuật phi tập trung, cung cấp cả sự giám sát và tính linh hoạt.
+
+### Phối hợp Hướng sự kiện (Event-Driven) cho Hệ thống Agent
+
+Các hệ thống agent có khả năng mở rộng hiện đại ngày càng sử dụng kiến trúc hướng sự kiện, nơi các agent giao tiếp thông qua các sự kiện có cấu trúc thay vì các cuộc gọi trực tiếp. Các sự kiện đóng vai trò là mô hình hoạt động chung—một ngôn ngữ chung cho phép các agent trao đổi thông tin, duy trì sự liên kết và phối hợp nhiệm vụ.
+
+Trong các hệ thống đa agent hướng sự kiện, các agent được thiết kế để phản ứng với các sự kiện và lệnh thay vì hành động cô lập. Các lợi ích chính bao gồm **sự phối hợp và đồng bộ hóa đáng tin cậy** mà không cần ghép nối chặt chẽ (tight coupling), **khả năng phục hồi thông qua các sự kiện có thể phát lại** cho phép khôi phục từ các lỗi, và **các mô hình tiêu thụ tinh vi** nơi nhiều agent có thể phản hồi cùng một sự kiện mà không gây nhầm lẫn. Cách tiếp cận này cải thiện đáng kể độ tin cậy của hệ thống trong các môi trường phức tạp, khó dự đoán.
+
+### Các Mẫu Thiết kế cho Quy trình làm việc của Agent (Agentic Workflows)
+
+Ngoài các mô hình kiến trúc, các mẫu thiết kế quy trình làm việc cụ thể giải quyết các thách thức chung:
+
+**Luồng có kiểm soát (Controlled Flows)** — Các trình tự được xác định trước với các điểm ra quyết định động thỉnh thoảng xuất hiện, cân bằng giữa cấu trúc và sự linh hoạt.
+
+**LLM làm bộ định tuyến (LLM as Router)** — Sử dụng một LLM để định tuyến thông minh các yêu cầu đến các trình xử lý thích hợp dựa trên phân tích nội dung.
+
+**Song song hóa (Parallelization)** — Nhiều agent hoặc công cụ làm việc đồng thời trên các nhiệm vụ phụ khác nhau, sau đó tổng hợp kết quả.
+
+**Suy ngẫm và Phản biện (Reflect and Critique)** — Các agent đánh giá và cải thiện đầu ra của chính họ trước khi trả về kết quả, thực hiện các cơ chế kiểm soát chất lượng.
+
+**Con người trong vòng lặp (Human in the Loop)** — Sự giám sát và phê duyệt chiến lược của con người tại các điểm quyết định quan trọng, đặc biệt quan trọng đối với các ứng dụng có rủi ro cao.
+
+Mô hình tối ưu phụ thuộc vào độ phức tạp của nhiệm vụ, độ tin cậy yêu cầu, cấu trúc quy trình làm việc và hậu quả của các lỗi.
+
+### Các Framework Triển khai
+
+Một số framework sản xuất hỗ trợ phát triển hệ thống agent:
+
+**LangChain** — Một framework dạng mô-đun với kiến trúc dựa trên thành phần (mô hình, prompt, bộ nhớ, chuỗi, agent, công cụ) cho phép các nhà phát triển hoán đổi các thành phần mà không cần viết lại toàn bộ ứng dụng. Nó có các mô hình lấy agent làm trung tâm cho việc sử dụng công cụ động, phân rã chuỗi suy nghĩ (chain-of-thought) để minh bạch hóa, hơn 100 trình tải tài liệu và tích hợp với LangSmith cho khả năng quan sát (observability) cấp độ sản xuất.
+
+**LangGraph** — Một framework có trạng thái (stateful) được xây dựng trên LangChain, mô hình hóa các quy trình làm việc dưới dạng đồ thị với các nút (công cụ, hàm, LLM) và các cạnh (vòng lặp, tuyến đường có điều kiện). LangGraph vượt trội trong quản lý trạng thái với tính năng checkpointing liên tục và gỡ lỗi theo thời gian (time-travel debugging), tích hợp con người trong vòng lặp với khả năng khởi động lại agent an toàn, và các kiểm soát sản xuất bao gồm rào chắn, thời gian chờ và quản lý đồng thời. Đối với các hệ thống đa agent phức tạp, LangGraph cung cấp bộ công cụ toàn diện nhất với sự tích hợp mạnh mẽ vào LangSmith để giám sát.
+
+**LlamaIndex** — Một framework tập trung vào dữ liệu được thiết kế cho các ứng dụng RAG và agent nâng cao sử dụng dữ liệu nội bộ. Nó cung cấp hơn 50 trình kết nối dữ liệu có sẵn, các đường ống nhập dữ liệu tinh vi và một module Workflow cho phép điều phối đa agent. Mặc dù không mạnh mẽ bằng LangGraph cho các hệ thống đa agent có trạng thái, nó vượt trội đối với các ứng dụng nặng về tài liệu.
+
+### Phương pháp luận Thiết kế Hệ thống
+
+Thiết kế hệ thống agent hiệu quả tuân theo cách tiếp cận lũy tiến:
+
+**Bắt đầu đơn giản** — Bắt đầu với các chuỗi đơn giản hoặc quy trình làm việc xác định. Các hệ thống đơn giản xây dựng nhanh hơn, dễ gỡ lỗi hơn và đủ cho nhiều trường hợp sử dụng.
+
+**Tăng dần độ phức tạp** — Khi các yêu cầu phát triển, giới thiệu logic gọi công cụ để ra quyết định động, cho phép agent thích ứng tại thời gian chạy (runtime).
+
+**Chuyển sang Đa Agent** — Chỉ áp dụng các mô hình đa agent khi bạn có các miền (domain) phân biệt rõ ràng, nhiều ngữ cảnh hội thoại hoặc bộ công cụ quá lớn để một agent đơn lẻ xử lý.
+
+Sự tiến triển này ngăn chặn việc thiết kế quá mức (over-engineering) trong khi vẫn cho phép khả năng mở rộng. Nhiều hệ thống trong thế giới thực kết hợp các mô hình—ví dụ, sử dụng hầu hết các chuỗi xác định với việc gọi công cụ dựa trên LLM động có chọn lọc cho các bước cụ thể.
+
+### Thiết kế Quy trình làm việc Hiệu quả
+
+Khi thiết kế quy trình làm việc cho agent, một số thực hành đảm bảo độ tin cậy và khả năng mở rộng:
+
+**Giữ quy trình làm việc dạng mô-đun và linh hoạt** — Cho phép bảo trì và cập nhật dễ dàng mà không gây ra lỗi dây chuyền trên toàn hệ thống.
+
+**Sử dụng API và định dạng dữ liệu chuẩn hóa** — Tạo điều kiện giao tiếp liền mạch giữa các agent và đảm bảo khả năng tương tác.
+
+**Triển khai giám sát và ghi nhật ký (logging)** — Theo dõi hiệu suất của agent, xác định các điểm tắc nghẽn và hỗ trợ gỡ lỗi trong môi trường sản xuất.
+
+**Trực quan hóa các tương tác** — Sử dụng lưu đồ, biểu đồ làn bơi (swimlane diagrams) hoặc biểu đồ máy trạng thái để ánh xạ các tương tác của agent và cây quyết định, làm cho các quy trình làm việc phức tạp trở nên dễ hiểu.
+
+### Độ tin cậy và Đánh giá
+
+Các hệ thống agent trong môi trường sản xuất yêu cầu các khung đánh giá nghiêm ngặt:
+
+**Các lĩnh vực đánh giá chính bao gồm:**
+
+**Truy vết phụ thuộc (Dependency tracing)** — Hiểu cách đầu ra của một agent ảnh hưởng đến hành vi và quyết định của agent tiếp theo.
+
+**Phân tích lan truyền lỗi (Error propagation analysis)** — Xác định nơi bắt nguồn lỗi và cách chúng lan truyền qua mạng lưới agent.
+
+**Điểm tin cậy giữa các agent (Inter-agent trust scoring)** — Đo lường độ tin cậy của từng agent cá nhân và đánh giá ảnh hưởng của chúng đối với việc hoàn thành nhiệm vụ tổng thể.
+
+**Kiểm thử khả năng phục hồi quy trình (Workflow resilience testing)** — Mô phỏng các lỗi và gián đoạn để đánh giá sự mạnh mẽ và khả năng phục hồi của hệ thống.
+
+### Những Thách thức Chính trong việc Mở rộng Hệ thống Agent
+
+Khi các hệ thống agent phát triển, một số thách thức quan trọng xuất hiện:
+
+**Chi phí Phối hợp và Giao tiếp** — Các hệ thống đa agent yêu cầu cơ chế đồng bộ hóa phức tạp. Khi số lượng agent tăng lên, các mô hình giao tiếp phải được tối ưu hóa, các hành vi nảy sinh (emergent behaviors) xuất hiện và các cấu trúc phân cấp trở nên cần thiết.
+
+**Phân bổ tài nguyên** — Quản lý tài nguyên tính toán, ngân sách gọi API và việc sử dụng token trên nhiều agent hoạt động đồng thời đòi hỏi quản lý tài nguyên tinh vi.
+
+**Vấn đề Bảo mật và Tin cậy** — Các lỗ hổng bảo mật nhân lên trong các triển khai lớn. Các agent đưa ra quyết định tự chủ ở quy mô lớn làm dấy lên lo ngại về bảo mật đối với các hành động trái phép, lộ dữ liệu và xâm phạm hệ thống.
+
+**Độ phức tạp Kiến trúc** — Các hành vi nảy sinh xuất hiện mà không thể dự đoán được từ các quy tắc của từng agent riêng lẻ. Sự bùng nổ tổ hợp của các tương tác có thể xảy ra khiến việc kiểm thử toàn diện là không thể, đòi hỏi các phương pháp thống kê và mô phỏng. Nợ kỹ thuật tích lũy nhanh chóng khi các phụ thuộc nhân lên.
+
+**Độ phức tạp theo Quy mô Hệ thống** — Các hệ thống nhỏ (<10 agent) có thể sử dụng giao tiếp trực tiếp, nhưng các hệ thống trung bình (10-100 agent) yêu cầu tối ưu hóa, các hệ thống lớn (100-1000 agent) cần cấu trúc phân cấp, và các hệ thống rất lớn (1000+ agent) yêu cầu các thuật toán phối hợp phức tạp.
+
+### Các Thực hành Tốt nhất cho Thiết kế Hiệu quả
+
+**Phối hợp Tin cậy** — Đảm bảo các agent giao tiếp thông qua các cơ chế được xác định rõ ràng, có khả năng chịu lỗi. Kiến trúc hướng sự kiện cung cấp khả năng phục hồi tự nhiên thông qua khả năng phát lại (replay).
+
+**Giám sát sự Chồng chéo của Agent** — Ngăn chặn sự dư thừa và nhầm lẫn bằng cách giám sát các miền kiến thức và phạm vi hành động giữa các agent. Tái cấu trúc hoặc nhóm các agent tương tự dưới các giao diện chung.
+
+**Quản trị ở Quy mô lớn** — Giới thiệu các giám sát viên agent (agent supervisors) khi kiến trúc phát triển qua các miền. Sử dụng tổ chức phân cấp (giám sát viên → nhóm agent) để duy trì sự rõ ràng và dễ dàng giải quyết ý định.
+
+**Cải tiến Lũy tiến (Progressive Enhancement)** — Bắt đầu với các mẫu đơn giản hơn và chỉ tăng độ phức tạp khi được chứng minh là cần thiết. Các phương pháp lai (kết hợp các yếu tố tập trung và phi tập trung) thường cung cấp sự cân bằng tối ưu.
+
+**Kiểm thử và Đánh giá** — Triển khai các đường ống đánh giá liên tục với các framework như tích hợp LangSmith để theo dõi hiệu suất của agent, mức tiêu thụ tài nguyên và hành vi hệ thống qua các quy trình làm việc phức tạp.
+
+Thiết kế hệ thống agent đang phát triển nhanh chóng khi các tổ chức chuyển từ các chuỗi đơn giản sang các kiến trúc đa agent tinh vi. Chìa khóa là khớp độ phức tạp của kiến trúc với các yêu cầu thực tế trong khi duy trì khả năng quan sát, độ tin cậy và khả năng bảo trì trong suốt vòng đời hệ thống.
+
+<span style="display:none"></span>
+
+<div align="center">⁂</div>
+
+---
+
+
+
+# Visulize 
+Dựa trên nội dung rất chi tiết và chuyên sâu về **Agent System Design** mà bạn cung cấp, tôi sẽ chuyển hóa chúng thành các sơ đồ Mermaid để trực quan hóa các khái niệm từ thành phần cốt lõi đến kiến trúc tổng thể.
+
+Chúng ta sẽ chia làm 4 sơ đồ chính để bao quát toàn bộ nội dung:
+
+1. **Anatomy of an Agent:** Cấu trúc bên trong của một Agent.
+    
+2. **Architectural Patterns:** Sự tiến hóa từ Chain đơn giản đến Multi-Agent.
+    
+3. **Event-Driven Architecture:** Mô hình phối hợp hướng sự kiện cho hệ thống lớn.
+    
+4. **System Design Methodology:** Quy trình tư duy thiết kế từ đơn giản đến phức tạp.
+    
+
+---
+
+### 1. Cấu trúc Cốt lõi của một Agent (Core Components)
+
+Sơ đồ này mô tả "The Brain" (Model), "Tools", "Instructions" và các module mở rộng như Memory và Planning.
+
+Đoạn mã
+
+```mermaid
+graph TD
+    subgraph Context [Environment / User]
+        User((User Request))
+        ExtSys[External Systems]
+    end
+
+    subgraph Agent_System [Agent System Core Components]
+        direction TB
+        
+        Orch[Execution Framework / Control Loop]
+        
+        subgraph Brain [The Brain]
+            LLM[LLM / Reasoning Engine]
+        end
+        
+        subgraph Knowledge [Memory & Context]
+            STM[(Short-term Memory\nConversation History)]
+            LTM[(Long-term Memory\nVector DB / RAG)]
+        end
+        
+        subgraph Guidance [Instructions & Safety]
+            Prompt[System Prompts]
+            Guard[Guardrails / Ethics]
+        end
+        
+        subgraph Actions [Tools & Perception]
+            Tools[Tools / APIs / Functions]
+            Plan[Planning / Decomposition]
+        end
+    end
+
+    %% Flow
+    User --> Orch
+    Orch <-->|Context & History| STM
+    Orch <-->|Retrieval| LTM
+    Orch -->|Prompt & Context| LLM
+    LLM -->|Decision / Plan| Orch
+    Orch -->|Validation| Guard
+    Orch -->|Execution| Tools
+    Tools <--> ExtSys
+    Orch -->|Final Response| User
+
+    %% Styling
+    classDef brain fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef core fill:#e1f5fe,stroke:#0277bd,stroke-width:2px;
+    classDef storage fill:#fff9c4,stroke:#fbc02d,stroke-width:2px;
+    class LLM brain;
+    class Orch,Tools,Plan core;
+    class STM,LTM storage;
+```
+
+---
+
+### 2. Các Mô hình Kiến trúc (Architectural Patterns)
+
+Sơ đồ này so sánh 3 cấp độ: Deterministic Chain (Cứng), Single Agent (Linh hoạt), và Multi-Agent Orchestration (Phân tán).
+
+Đoạn mã
+
+```mermaid
+flowchart TB
+    subgraph Pattern1 [1. Deterministic Chain]
+        direction LR
+        Step1[Input] --> Step2[Step A] --> Step3[Step B] --> Step4[Output]
+        style Pattern1 fill:#f9f9f9,stroke:#999,stroke-dasharray: 5 5
+    end
+
+    subgraph Pattern2 [2. Single-Agent System]
+        direction TB
+        SA_Input(Task) --> SA_Reason[LLM Reasoning]
+        SA_Reason -- "Decide Tool" --> SA_Tool[Execute Tool]
+        SA_Tool -- "Observation" --> SA_Reason
+        SA_Reason -- "Complete" --> SA_Output(Final Answer)
+    end
+
+    subgraph Pattern3 [3. Multi-Agent System (Orchestrator)]
+        direction TB
+        MA_Input(Complex Goal) --> Router{Orchestrator / Router}
+        
+        Router -->|Domain: Support| AgentA[Support Agent]
+        Router -->|Domain: Analytics| AgentB[Data Analyst Agent]
+        Router -->|Domain: Ops| AgentC[Ops Agent]
+        
+        AgentA <--> ToolsA[CRM Tools]
+        AgentB <--> ToolsB[SQL / Python]
+        AgentC <--> ToolsC[APIs]
+        
+        AgentA & AgentB & AgentC -->|Result| Router
+        Router --> MA_Output(Synthesized Response)
+    end
+
+    %% Connect patterns logically (conceptual flow)
+    Pattern1 -.->|Complexity Increases| Pattern2
+    Pattern2 -.->|Scale Increases| Pattern3
+```
+
+---
+
+### 3. Hệ thống Đa Agent Hướng Sự kiện (Event-Driven Coordination)
+
+Đây là mô hình hiện đại cho các hệ thống lớn (Scalable Agent Systems), nơi các Agent không gọi nhau trực tiếp mà giao tiếp qua Event Bus để đảm bảo tính "Decoupled" và "Resilience".
+
+Đoạn mã
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant EventBus as Event Bus / Message Broker
+    participant AgentA as Agent A (Triager)
+    participant AgentB as Agent B (Researcher)
+    participant AgentC as Agent C (Writer)
+
+    User->>EventBus: Event: New_Request_Received
+    
+    rect rgb(240, 248, 255)
+        Note over EventBus, AgentA: Decoupled Coordination
+        EventBus->>AgentA: Consume: New_Request
+        AgentA->>AgentA: Analyze Intent
+        AgentA->>EventBus: Publish: Intent_Classified (Research_Needed)
+    end
+    
+    rect rgb(255, 240, 245)
+        Note over EventBus, AgentB: Parallel Processing capability
+        EventBus->>AgentB: Consume: Intent_Classified
+        AgentB->>AgentB: Search Web / Query DB
+        AgentB->>EventBus: Publish: Data_Gathered
+    end
+
+    rect rgb(230, 255, 230)
+        EventBus->>AgentC: Consume: Data_Gathered
+        AgentC->>AgentC: Draft Content
+        AgentC->>EventBus: Publish: Task_Completed
+    end
+
+    EventBus->>User: Final Response
+```
+
+---
+
+### 4. Quy trình Thiết kế & Phương pháp luận (System Design Methodology)
+
+Mô hình hóa quy trình "Start Simple -> Scale" và các yếu tố đánh giá (Evaluation) như trong tài liệu đề cập.
+
+Đoạn mã
+
+```mermaid
+graph TD
+    Start((Start)) --> Phase1[Phase 1: Deterministic]
+    
+    subgraph P1 [Simple & Predictable]
+        Phase1 --> HardCoded[Hard-Coded Chains]
+        HardCoded --> Valid1{Requirements met?}
+    end
+    
+    Valid1 -- No --> Phase2[Phase 2: Dynamic Single Agent]
+    
+    subgraph P2 [Flexible Reasoning]
+        Phase2 --> ToolUse[Add Tool Calling]
+        ToolUse --> Reflection[Add Reflect & Critique]
+        Reflection --> Valid2{Too complex / Context limit?}
+    end
+    
+    Valid2 -- Yes --> Phase3[Phase 3: Multi-Agent]
+    
+    subgraph P3 [Scalable & Specialized]
+        Phase3 --> Decompose[Decompose Domains]
+        Decompose --> ChoosePattern{Choose Pattern}
+        ChoosePattern -->|Control| Centralized[Centralized Orchestrator]
+        ChoosePattern -->|Collaboration| Swarm[Swarm / Mesh]
+        ChoosePattern -->|Hybrid| Hierarchical[Hierarchical Supervisor]
+        
+        Centralized & Swarm & Hierarchical --> EventDriven[Event-Driven Architecture]
+    end
+
+    subgraph Eval [Evaluation & Reliability]
+        Trace[Dependency Tracing]
+        Trust[Inter-agent Trust Scoring]
+        Resil[Resilience Testing]
+    end
+
+    P3 -.-> Eval
+    
+    style Start fill:#000,stroke:#fff,color:#fff
+    style Phase1 fill:#e0e0e0
+    style Phase2 fill:#b3e5fc
+    style Phase3 fill:#c8e6c9
+```
+
+### Tóm tắt các biểu đồ:
+
+1. **Sơ đồ 1** giúp người dùng hình dung "bộ phận cơ thể" của một con AI Agent.
+    
+2. **Sơ đồ 2** cho thấy bức tranh toàn cảnh về các lựa chọn kiến trúc (từ đơn giản đến phức tạp).
+    
+3. **Sơ đồ 3** đi sâu vào cách các Agent nói chuyện với nhau trong môi trường Enterprise (tránh việc gọi chéo gây rối).
+    
+4. **Sơ đồ 4** là kim chỉ nam (roadmap) cho dev: Đừng vội làm phức tạp, hãy đi từ Chain -> Single -> Multi.
+
+
+
+---
 ## Agent System Design
 
 Agent system design encompasses the architectural principles, patterns, and components that enable autonomous AI agents to reason, plan, and execute tasks in complex environments. This is a comprehensive guide covering foundational concepts, architectural patterns, implementation approaches, and best practices.
@@ -183,367 +553,3 @@ Dưới đây là bản dịch tiếng Việt đầy đủ và chi tiết cho n�
 
 ---
 
-# Thiết kế Hệ thống Agent (Tác nhân AI)
-
-Bây giờ tôi đã có thông tin toàn diện về thiết kế hệ thống agent. Dưới đây là phản hồi chi tiết dành cho người dùng.
-
-## Thiết kế Hệ thống Agent
-
-Thiết kế hệ thống Agent bao gồm các nguyên tắc kiến trúc, các mô hình mẫu (patterns) và các thành phần cho phép các tác nhân AI tự chủ (autonomous AI agents) suy luận, lập kế hoạch và thực thi nhiệm vụ trong các môi trường phức tạp. Đây là hướng dẫn toàn diện bao gồm các khái niệm nền tảng, mô hình kiến trúc, phương pháp triển khai và các thực hành tốt nhất (best practices).
-
-### Các Thành phần Cốt lõi của Hệ thống Agent
-
-Tất cả các hệ thống agent đều chia sẻ ba thành phần cơ bản hoạt động cùng nhau để kích hoạt hành vi tự chủ:^1
-
-**Mô hình (Bộ não - The Brain)** — Một mô hình ngôn ngữ lớn (LLM) đóng vai trò là động cơ suy luận, cho phép agent hiểu các yêu cầu, suy luận về các giải pháp và đưa ra quyết định về những hành động cần thực hiện. Chất lượng của LLM ảnh hưởng trực tiếp đến khả năng ra quyết định và độ tin cậy của agent.
-
-**Công cụ (Hành động bên ngoài - External Actions)** — Các hàm (functions), API và dịch vụ bên ngoài mà agent có thể gọi để trích xuất dữ liệu, sửa đổi hệ thống hoặc tương tác với môi trường bên ngoài. Các công cụ mở rộng khả năng của agent vượt ra ngoài phạm vi suy luận thuần túy và cho phép tạo ra tác động trong thế giới thực.
-
-**Hướng dẫn (Rào chắn kiểm soát - Guardrails)** — Các hướng dẫn rõ ràng, system prompts (lời nhắc hệ thống) và các ràng buộc xác định cách agent nên cư xử, những gì nó nên ưu tiên và các ranh giới đạo đức mà nó phải tôn trọng.
-
-Ngoài các thành phần cốt lõi này, các hệ thống agent trong môi trường sản xuất (production) thường bao gồm các module nâng cao: **hệ thống bộ nhớ** để duy trì ngữ cảnh qua các phiên làm việc sử dụng cả lưu trữ ngắn hạn (lịch sử hội thoại) và dài hạn (cơ sở dữ liệu vector cho tìm kiếm ngữ nghĩa); **cơ chế lập kế hoạch** để phân rã các mục tiêu phức tạp thành các bước có thể thực thi; **module nhận thức** để hiểu ngữ cảnh môi trường; và **khung thực thi** để thực hiện hành động một cách đáng tin cậy.
-
-### Các Mô hình Kiến trúc cho Hệ thống Agent
-
-Thiết kế hệ thống agent tồn tại trên một dải liên tục từ đơn giản đến phức tạp, với các mô hình khác nhau phù hợp với các yêu cầu khác nhau.
-
-**Chuỗi Xác định (Deterministic Chain - Các bước được mã hóa cứng)**
-
-Mô hình đơn giản nhất, nơi các nhà phát triển xác định trước trình tự chính xác của các bước, công cụ và tham số. Hệ thống tuân theo cùng một quy trình làm việc cho tất cả các yêu cầu, mang lại khả năng dự đoán cao và độ phức tạp thấp. Cách tiếp cận này hoạt động tốt cho các quy trình đơn giản, lặp lại như đường ống xử lý tài liệu hoặc các chuỗi hỏi-đáp đơn giản không yêu cầu ra quyết định động.
-
-**Hệ thống Đơn Agent (Single-Agent System)**
-
-Một luồng phối hợp duy nhất, trong đó một agent điều phối nhiều cuộc gọi LLM để xử lý các yêu cầu phức tạp. Agent chấp nhận truy vấn của người dùng, suy luận về cách tiếp cận tốt nhất, quyết định linh hoạt công cụ nào cần gọi, tích hợp kết quả vào cuộc hội thoại và lặp lại cho đến khi đạt được mục tiêu. Hệ thống đơn agent cân bằng giữa tính linh hoạt và khả năng bảo trì, xử lý các quy trình công việc yêu cầu lựa chọn công cụ động và suy luận đa bước trong khi vẫn giữ kiến trúc đơn giản.
-
-**Hệ thống Đa Agent (Multi-Agent Systems)**
-
-Các kiến trúc phân tán với các agent chuyên biệt, mỗi agent xử lý các miền hoặc nhiệm vụ cụ thể, được phối hợp thông qua một bộ điều phối trung tâm (central orchestrator). Trong kiến trúc đa agent, mỗi agent duy trì chuyên môn, ngữ cảnh và bộ công cụ riêng của miền đó, cho phép phân tách trách nhiệm tốt hơn và khả năng mở rộng cao hơn.
-
-Bộ điều phối (có thể là một LLM khác hoặc bộ định tuyến dựa trên quy tắc) nhận các yêu cầu, xác định agent chuyên biệt nào phù hợp nhất và quản lý việc chuyển giao giữa các agent. Ví dụ, một trợ lý doanh nghiệp có thể sử dụng các agent riêng biệt cho hỗ trợ khách hàng (tra cứu CRM, trả hàng, vận chuyển), phân tích (truy vấn SQL, tóm tắt dữ liệu) và hoạt động tài chính, với một router giám sát chỉ đạo các truy vấn một cách thích hợp.
-
-Hệ thống đa agent giới thiệu thêm các mô hình tổ chức. **Mô hình điều phối tập trung** sử dụng một agent mạnh mẽ duy nhất như một nhạc trưởng điều phối tất cả những người khác, duy trì trạng thái toàn cục và đưa ra mọi quyết định định tuyến. Điều này tạo ra hành vi có thể dự đoán và gỡ lỗi được nhưng có khả năng hạn chế tính song song. **Mô hình bầy đàn (swarm pattern)** cho phép bất kỳ agent nào giao tiếp với mọi agent khác, cho phép giải quyết vấn đề cộng tác, phản biện và chuyển giao nhiệm vụ. **Mô hình phân cấp (hierarchical pattern)** kết hợp sự phối hợp chiến lược tập trung với việc thực thi chiến thuật phi tập trung, cung cấp cả sự giám sát và tính linh hoạt.
-
-### Phối hợp Hướng sự kiện (Event-Driven) cho Hệ thống Agent
-
-Các hệ thống agent có khả năng mở rộng hiện đại ngày càng sử dụng kiến trúc hướng sự kiện, nơi các agent giao tiếp thông qua các sự kiện có cấu trúc thay vì các cuộc gọi trực tiếp. Các sự kiện đóng vai trò là mô hình hoạt động chung—một ngôn ngữ chung cho phép các agent trao đổi thông tin, duy trì sự liên kết và phối hợp nhiệm vụ.
-
-Trong các hệ thống đa agent hướng sự kiện, các agent được thiết kế để phản ứng với các sự kiện và lệnh thay vì hành động cô lập. Các lợi ích chính bao gồm **sự phối hợp và đồng bộ hóa đáng tin cậy** mà không cần ghép nối chặt chẽ (tight coupling), **khả năng phục hồi thông qua các sự kiện có thể phát lại** cho phép khôi phục từ các lỗi, và **các mô hình tiêu thụ tinh vi** nơi nhiều agent có thể phản hồi cùng một sự kiện mà không gây nhầm lẫn. Cách tiếp cận này cải thiện đáng kể độ tin cậy của hệ thống trong các môi trường phức tạp, khó dự đoán.
-
-### Các Mẫu Thiết kế cho Quy trình làm việc của Agent (Agentic Workflows)
-
-Ngoài các mô hình kiến trúc, các mẫu thiết kế quy trình làm việc cụ thể giải quyết các thách thức chung:
-
-**Luồng có kiểm soát (Controlled Flows)** — Các trình tự được xác định trước với các điểm ra quyết định động thỉnh thoảng xuất hiện, cân bằng giữa cấu trúc và sự linh hoạt.
-
-**LLM làm bộ định tuyến (LLM as Router)** — Sử dụng một LLM để định tuyến thông minh các yêu cầu đến các trình xử lý thích hợp dựa trên phân tích nội dung.
-
-**Song song hóa (Parallelization)** — Nhiều agent hoặc công cụ làm việc đồng thời trên các nhiệm vụ phụ khác nhau, sau đó tổng hợp kết quả.
-
-**Suy ngẫm và Phản biện (Reflect and Critique)** — Các agent đánh giá và cải thiện đầu ra của chính họ trước khi trả về kết quả, thực hiện các cơ chế kiểm soát chất lượng.
-
-**Con người trong vòng lặp (Human in the Loop)** — Sự giám sát và phê duyệt chiến lược của con người tại các điểm quyết định quan trọng, đặc biệt quan trọng đối với các ứng dụng có rủi ro cao.
-
-Mô hình tối ưu phụ thuộc vào độ phức tạp của nhiệm vụ, độ tin cậy yêu cầu, cấu trúc quy trình làm việc và hậu quả của các lỗi.
-
-### Các Framework Triển khai
-
-Một số framework sản xuất hỗ trợ phát triển hệ thống agent:
-
-**LangChain** — Một framework dạng mô-đun với kiến trúc dựa trên thành phần (mô hình, prompt, bộ nhớ, chuỗi, agent, công cụ) cho phép các nhà phát triển hoán đổi các thành phần mà không cần viết lại toàn bộ ứng dụng. Nó có các mô hình lấy agent làm trung tâm cho việc sử dụng công cụ động, phân rã chuỗi suy nghĩ (chain-of-thought) để minh bạch hóa, hơn 100 trình tải tài liệu và tích hợp với LangSmith cho khả năng quan sát (observability) cấp độ sản xuất.
-
-**LangGraph** — Một framework có trạng thái (stateful) được xây dựng trên LangChain, mô hình hóa các quy trình làm việc dưới dạng đồ thị với các nút (công cụ, hàm, LLM) và các cạnh (vòng lặp, tuyến đường có điều kiện). LangGraph vượt trội trong quản lý trạng thái với tính năng checkpointing liên tục và gỡ lỗi theo thời gian (time-travel debugging), tích hợp con người trong vòng lặp với khả năng khởi động lại agent an toàn, và các kiểm soát sản xuất bao gồm rào chắn, thời gian chờ và quản lý đồng thời. Đối với các hệ thống đa agent phức tạp, LangGraph cung cấp bộ công cụ toàn diện nhất với sự tích hợp mạnh mẽ vào LangSmith để giám sát.
-
-**LlamaIndex** — Một framework tập trung vào dữ liệu được thiết kế cho các ứng dụng RAG và agent nâng cao sử dụng dữ liệu nội bộ. Nó cung cấp hơn 50 trình kết nối dữ liệu có sẵn, các đường ống nhập dữ liệu tinh vi và một module Workflow cho phép điều phối đa agent. Mặc dù không mạnh mẽ bằng LangGraph cho các hệ thống đa agent có trạng thái, nó vượt trội đối với các ứng dụng nặng về tài liệu.
-
-### Phương pháp luận Thiết kế Hệ thống
-
-Thiết kế hệ thống agent hiệu quả tuân theo cách tiếp cận lũy tiến:
-
-**Bắt đầu đơn giản** — Bắt đầu với các chuỗi đơn giản hoặc quy trình làm việc xác định. Các hệ thống đơn giản xây dựng nhanh hơn, dễ gỡ lỗi hơn và đủ cho nhiều trường hợp sử dụng.
-
-**Tăng dần độ phức tạp** — Khi các yêu cầu phát triển, giới thiệu logic gọi công cụ để ra quyết định động, cho phép agent thích ứng tại thời gian chạy (runtime).
-
-**Chuyển sang Đa Agent** — Chỉ áp dụng các mô hình đa agent khi bạn có các miền (domain) phân biệt rõ ràng, nhiều ngữ cảnh hội thoại hoặc bộ công cụ quá lớn để một agent đơn lẻ xử lý.
-
-Sự tiến triển này ngăn chặn việc thiết kế quá mức (over-engineering) trong khi vẫn cho phép khả năng mở rộng. Nhiều hệ thống trong thế giới thực kết hợp các mô hình—ví dụ, sử dụng hầu hết các chuỗi xác định với việc gọi công cụ dựa trên LLM động có chọn lọc cho các bước cụ thể.
-
-### Thiết kế Quy trình làm việc Hiệu quả
-
-Khi thiết kế quy trình làm việc cho agent, một số thực hành đảm bảo độ tin cậy và khả năng mở rộng:
-
-**Giữ quy trình làm việc dạng mô-đun và linh hoạt** — Cho phép bảo trì và cập nhật dễ dàng mà không gây ra lỗi dây chuyền trên toàn hệ thống.
-
-**Sử dụng API và định dạng dữ liệu chuẩn hóa** — Tạo điều kiện giao tiếp liền mạch giữa các agent và đảm bảo khả năng tương tác.
-
-**Triển khai giám sát và ghi nhật ký (logging)** — Theo dõi hiệu suất của agent, xác định các điểm tắc nghẽn và hỗ trợ gỡ lỗi trong môi trường sản xuất.
-
-**Trực quan hóa các tương tác** — Sử dụng lưu đồ, biểu đồ làn bơi (swimlane diagrams) hoặc biểu đồ máy trạng thái để ánh xạ các tương tác của agent và cây quyết định, làm cho các quy trình làm việc phức tạp trở nên dễ hiểu.
-
-### Độ tin cậy và Đánh giá
-
-Các hệ thống agent trong môi trường sản xuất yêu cầu các khung đánh giá nghiêm ngặt:
-
-**Các lĩnh vực đánh giá chính bao gồm:**
-
-**Truy vết phụ thuộc (Dependency tracing)** — Hiểu cách đầu ra của một agent ảnh hưởng đến hành vi và quyết định của agent tiếp theo.
-
-**Phân tích lan truyền lỗi (Error propagation analysis)** — Xác định nơi bắt nguồn lỗi và cách chúng lan truyền qua mạng lưới agent.
-
-**Điểm tin cậy giữa các agent (Inter-agent trust scoring)** — Đo lường độ tin cậy của từng agent cá nhân và đánh giá ảnh hưởng của chúng đối với việc hoàn thành nhiệm vụ tổng thể.
-
-**Kiểm thử khả năng phục hồi quy trình (Workflow resilience testing)** — Mô phỏng các lỗi và gián đoạn để đánh giá sự mạnh mẽ và khả năng phục hồi của hệ thống.
-
-### Những Thách thức Chính trong việc Mở rộng Hệ thống Agent
-
-Khi các hệ thống agent phát triển, một số thách thức quan trọng xuất hiện:
-
-**Chi phí Phối hợp và Giao tiếp** — Các hệ thống đa agent yêu cầu cơ chế đồng bộ hóa phức tạp. Khi số lượng agent tăng lên, các mô hình giao tiếp phải được tối ưu hóa, các hành vi nảy sinh (emergent behaviors) xuất hiện và các cấu trúc phân cấp trở nên cần thiết.
-
-**Phân bổ tài nguyên** — Quản lý tài nguyên tính toán, ngân sách gọi API và việc sử dụng token trên nhiều agent hoạt động đồng thời đòi hỏi quản lý tài nguyên tinh vi.
-
-**Vấn đề Bảo mật và Tin cậy** — Các lỗ hổng bảo mật nhân lên trong các triển khai lớn. Các agent đưa ra quyết định tự chủ ở quy mô lớn làm dấy lên lo ngại về bảo mật đối với các hành động trái phép, lộ dữ liệu và xâm phạm hệ thống.
-
-**Độ phức tạp Kiến trúc** — Các hành vi nảy sinh xuất hiện mà không thể dự đoán được từ các quy tắc của từng agent riêng lẻ. Sự bùng nổ tổ hợp của các tương tác có thể xảy ra khiến việc kiểm thử toàn diện là không thể, đòi hỏi các phương pháp thống kê và mô phỏng. Nợ kỹ thuật tích lũy nhanh chóng khi các phụ thuộc nhân lên.
-
-**Độ phức tạp theo Quy mô Hệ thống** — Các hệ thống nhỏ (<10 agent) có thể sử dụng giao tiếp trực tiếp, nhưng các hệ thống trung bình (10-100 agent) yêu cầu tối ưu hóa, các hệ thống lớn (100-1000 agent) cần cấu trúc phân cấp, và các hệ thống rất lớn (1000+ agent) yêu cầu các thuật toán phối hợp phức tạp.
-
-### Các Thực hành Tốt nhất cho Thiết kế Hiệu quả
-
-**Phối hợp Tin cậy** — Đảm bảo các agent giao tiếp thông qua các cơ chế được xác định rõ ràng, có khả năng chịu lỗi. Kiến trúc hướng sự kiện cung cấp khả năng phục hồi tự nhiên thông qua khả năng phát lại (replay).
-
-**Giám sát sự Chồng chéo của Agent** — Ngăn chặn sự dư thừa và nhầm lẫn bằng cách giám sát các miền kiến thức và phạm vi hành động giữa các agent. Tái cấu trúc hoặc nhóm các agent tương tự dưới các giao diện chung.
-
-**Quản trị ở Quy mô lớn** — Giới thiệu các giám sát viên agent (agent supervisors) khi kiến trúc phát triển qua các miền. Sử dụng tổ chức phân cấp (giám sát viên → nhóm agent) để duy trì sự rõ ràng và dễ dàng giải quyết ý định.
-
-**Cải tiến Lũy tiến (Progressive Enhancement)** — Bắt đầu với các mẫu đơn giản hơn và chỉ tăng độ phức tạp khi được chứng minh là cần thiết. Các phương pháp lai (kết hợp các yếu tố tập trung và phi tập trung) thường cung cấp sự cân bằng tối ưu.
-
-**Kiểm thử và Đánh giá** — Triển khai các đường ống đánh giá liên tục với các framework như tích hợp LangSmith để theo dõi hiệu suất của agent, mức tiêu thụ tài nguyên và hành vi hệ thống qua các quy trình làm việc phức tạp.
-
-Thiết kế hệ thống agent đang phát triển nhanh chóng khi các tổ chức chuyển từ các chuỗi đơn giản sang các kiến trúc đa agent tinh vi. Chìa khóa là khớp độ phức tạp của kiến trúc với các yêu cầu thực tế trong khi duy trì khả năng quan sát, độ tin cậy và khả năng bảo trì trong suốt vòng đời hệ thống.
-
-<span style="display:none"></span>
-
-<div align="center">⁂</div>
-
----
-
-# Visulize 
-Dựa trên nội dung rất chi tiết và chuyên sâu về **Agent System Design** mà bạn cung cấp, tôi sẽ chuyển hóa chúng thành các sơ đồ Mermaid để trực quan hóa các khái niệm từ thành phần cốt lõi đến kiến trúc tổng thể.
-
-Chúng ta sẽ chia làm 4 sơ đồ chính để bao quát toàn bộ nội dung:
-
-1. **Anatomy of an Agent:** Cấu trúc bên trong của một Agent.
-    
-2. **Architectural Patterns:** Sự tiến hóa từ Chain đơn giản đến Multi-Agent.
-    
-3. **Event-Driven Architecture:** Mô hình phối hợp hướng sự kiện cho hệ thống lớn.
-    
-4. **System Design Methodology:** Quy trình tư duy thiết kế từ đơn giản đến phức tạp.
-    
-
----
-
-### 1. Cấu trúc Cốt lõi của một Agent (Core Components)
-
-Sơ đồ này mô tả "The Brain" (Model), "Tools", "Instructions" và các module mở rộng như Memory và Planning.
-
-Đoạn mã
-
-```mermaid
-graph TD
-    subgraph Context [Environment / User]
-        User((User Request))
-        ExtSys[External Systems]
-    end
-
-    subgraph Agent_System [Agent System Core Components]
-        direction TB
-        
-        Orch[Execution Framework / Control Loop]
-        
-        subgraph Brain [The Brain]
-            LLM[LLM / Reasoning Engine]
-        end
-        
-        subgraph Knowledge [Memory & Context]
-            STM[(Short-term Memory\nConversation History)]
-            LTM[(Long-term Memory\nVector DB / RAG)]
-        end
-        
-        subgraph Guidance [Instructions & Safety]
-            Prompt[System Prompts]
-            Guard[Guardrails / Ethics]
-        end
-        
-        subgraph Actions [Tools & Perception]
-            Tools[Tools / APIs / Functions]
-            Plan[Planning / Decomposition]
-        end
-    end
-
-    %% Flow
-    User --> Orch
-    Orch <-->|Context & History| STM
-    Orch <-->|Retrieval| LTM
-    Orch -->|Prompt & Context| LLM
-    LLM -->|Decision / Plan| Orch
-    Orch -->|Validation| Guard
-    Orch -->|Execution| Tools
-    Tools <--> ExtSys
-    Orch -->|Final Response| User
-
-    %% Styling
-    classDef brain fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef core fill:#e1f5fe,stroke:#0277bd,stroke-width:2px;
-    classDef storage fill:#fff9c4,stroke:#fbc02d,stroke-width:2px;
-    class LLM brain;
-    class Orch,Tools,Plan core;
-    class STM,LTM storage;
-```
-
----
-
-### 2. Các Mô hình Kiến trúc (Architectural Patterns)
-
-Sơ đồ này so sánh 3 cấp độ: Deterministic Chain (Cứng), Single Agent (Linh hoạt), và Multi-Agent Orchestration (Phân tán).
-
-Đoạn mã
-
-```mermaid
-flowchart TB
-    subgraph Pattern1 [1. Deterministic Chain]
-        direction LR
-        Step1[Input] --> Step2[Step A] --> Step3[Step B] --> Step4[Output]
-        style Pattern1 fill:#f9f9f9,stroke:#999,stroke-dasharray: 5 5
-    end
-
-    subgraph Pattern2 [2. Single-Agent System]
-        direction TB
-        SA_Input(Task) --> SA_Reason[LLM Reasoning]
-        SA_Reason -- "Decide Tool" --> SA_Tool[Execute Tool]
-        SA_Tool -- "Observation" --> SA_Reason
-        SA_Reason -- "Complete" --> SA_Output(Final Answer)
-    end
-
-    subgraph Pattern3 [3. Multi-Agent System (Orchestrator)]
-        direction TB
-        MA_Input(Complex Goal) --> Router{Orchestrator / Router}
-        
-        Router -->|Domain: Support| AgentA[Support Agent]
-        Router -->|Domain: Analytics| AgentB[Data Analyst Agent]
-        Router -->|Domain: Ops| AgentC[Ops Agent]
-        
-        AgentA <--> ToolsA[CRM Tools]
-        AgentB <--> ToolsB[SQL / Python]
-        AgentC <--> ToolsC[APIs]
-        
-        AgentA & AgentB & AgentC -->|Result| Router
-        Router --> MA_Output(Synthesized Response)
-    end
-
-    %% Connect patterns logically (conceptual flow)
-    Pattern1 -.->|Complexity Increases| Pattern2
-    Pattern2 -.->|Scale Increases| Pattern3
-```
-
----
-
-### 3. Hệ thống Đa Agent Hướng Sự kiện (Event-Driven Coordination)
-
-Đây là mô hình hiện đại cho các hệ thống lớn (Scalable Agent Systems), nơi các Agent không gọi nhau trực tiếp mà giao tiếp qua Event Bus để đảm bảo tính "Decoupled" và "Resilience".
-
-Đoạn mã
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant EventBus as Event Bus / Message Broker
-    participant AgentA as Agent A (Triager)
-    participant AgentB as Agent B (Researcher)
-    participant AgentC as Agent C (Writer)
-
-    User->>EventBus: Event: New_Request_Received
-    
-    rect rgb(240, 248, 255)
-        Note over EventBus, AgentA: Decoupled Coordination
-        EventBus->>AgentA: Consume: New_Request
-        AgentA->>AgentA: Analyze Intent
-        AgentA->>EventBus: Publish: Intent_Classified (Research_Needed)
-    end
-    
-    rect rgb(255, 240, 245)
-        Note over EventBus, AgentB: Parallel Processing capability
-        EventBus->>AgentB: Consume: Intent_Classified
-        AgentB->>AgentB: Search Web / Query DB
-        AgentB->>EventBus: Publish: Data_Gathered
-    end
-
-    rect rgb(230, 255, 230)
-        EventBus->>AgentC: Consume: Data_Gathered
-        AgentC->>AgentC: Draft Content
-        AgentC->>EventBus: Publish: Task_Completed
-    end
-
-    EventBus->>User: Final Response
-```
-
----
-
-### 4. Quy trình Thiết kế & Phương pháp luận (System Design Methodology)
-
-Mô hình hóa quy trình "Start Simple -> Scale" và các yếu tố đánh giá (Evaluation) như trong tài liệu đề cập.
-
-Đoạn mã
-
-```me
-graph TD
-    Start((Start)) --> Phase1[Phase 1: Deterministic]
-    
-    subgraph P1 [Simple & Predictable]
-        Phase1 --> HardCoded[Hard-Coded Chains]
-        HardCoded --> Valid1{Requirements met?}
-    end
-    
-    Valid1 -- No --> Phase2[Phase 2: Dynamic Single Agent]
-    
-    subgraph P2 [Flexible Reasoning]
-        Phase2 --> ToolUse[Add Tool Calling]
-        ToolUse --> Reflection[Add Reflect & Critique]
-        Reflection --> Valid2{Too complex / Context limit?}
-    end
-    
-    Valid2 -- Yes --> Phase3[Phase 3: Multi-Agent]
-    
-    subgraph P3 [Scalable & Specialized]
-        Phase3 --> Decompose[Decompose Domains]
-        Decompose --> ChoosePattern{Choose Pattern}
-        ChoosePattern -->|Control| Centralized[Centralized Orchestrator]
-        ChoosePattern -->|Collaboration| Swarm[Swarm / Mesh]
-        ChoosePattern -->|Hybrid| Hierarchical[Hierarchical Supervisor]
-        
-        Centralized & Swarm & Hierarchical --> EventDriven[Event-Driven Architecture]
-    end
-
-    subgraph Eval [Evaluation & Reliability]
-        Trace[Dependency Tracing]
-        Trust[Inter-agent Trust Scoring]
-        Resil[Resilience Testing]
-    end
-
-    P3 -.-> Eval
-    
-    style Start fill:#000,stroke:#fff,color:#fff
-    style Phase1 fill:#e0e0e0
-    style Phase2 fill:#b3e5fc
-    style Phase3 fill:#c8e6c9
-```
-
-### Tóm tắt các biểu đồ:
-
-1. **Sơ đồ 1** giúp người dùng hình dung "bộ phận cơ thể" của một con AI Agent.
-    
-2. **Sơ đồ 2** cho thấy bức tranh toàn cảnh về các lựa chọn kiến trúc (từ đơn giản đến phức tạp).
-    
-3. **Sơ đồ 3** đi sâu vào cách các Agent nói chuyện với nhau trong môi trường Enterprise (tránh việc gọi chéo gây rối).
-    
-4. **Sơ đồ 4** là kim chỉ nam (roadmap) cho dev: Đừng vội làm phức tạp, hãy đi từ Chain -> Single -> Multi.
