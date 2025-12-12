@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 2 - v2 HIGH LEVEL DESIGN (TECHNICAL DEEP DIVE) - MODULE 2 QUERY UNDERSTANDING - Đoàn Cường - 150 tín dụng - 10122025.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Cơ chế xử lý timeout.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.3 STAGE 2 - v2 HIGH LEVEL DESIGN (TECHNICAL DEEP DIVE) - MODULE 2 QUERY UNDERSTANDING - Đoàn Cường - 150 tín dụng - 10122025"
+              "title": "Cơ chế xử lý timeout"
             }
           },
           {
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: fin",
+                "query": "file: ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 2 - v2 HIGH LEVEL DESIGN (TECHNICAL DEEP DIVE) - MODULE 2 QUERY UNDERSTANDING - Đoàn Cường - 150 tín dụng - 10122025.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Cơ chế xử lý timeout.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.3 STAGE 2 - v2 HIGH LEVEL DESIGN (TECHNICAL DEEP DIVE) - MODULE 2 QUERY UNDERSTANDING - Đoàn Cường - 150 tín dụng - 10122025"
+              "title": "Outline of Cơ chế xử lý timeout"
             }
           }
         ],
@@ -201,15 +201,16 @@
   },
   "active": "8669d0a2efd6c516",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 3.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. MLOps.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Cơ chế xử lý timeout.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 2 - v2 HIGH LEVEL DESIGN (TECHNICAL DEEP DIVE) - MODULE 2 QUERY UNDERSTANDING - Đoàn Cường - 150 tín dụng - 10122025.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 3.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.2 STAGE 2 - v2 - LOW-LEVEL DESIGN (LLD) - MODULE 2 QUERY UNDERSTANDING.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.4 STAGE 4.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP(bản cũ)/2.3 STAGE 3 - Router, Planner - 150 tín dụng.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/11122025.md",
     "BUSINESS/2_FINANCE/1 - Finance và AI.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/TIME OUT, RETRY, FALLBACK/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. MLOps.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/TIME OUT, RETRY, FALLBACK",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/0 - Tối Ưu Hóa Hệ Thống Serving LLM Cho Các Dự Án Quy Mô Lớn - Một Khuôn Khổ Phân Tích Toàn Diện Dành Cho Kỹ Sư AI.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.2 LLMs/2. 50 câu hỏi thường gặp phỏng vấn AI LLMs.md",
@@ -227,7 +228,6 @@
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled 5.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
     "CÁC SAI LẦM THƯỜNG GẶP/PRODUCT/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/0. TOP SAI LẦM THƯỜNG GẶP.md",
     "CÁC SAI LẦM THƯỜNG GẶP/PRODUCT",
     "CÁC SAI LẦM THƯỜNG GẶP",
     "BUSINESS/1_PRODUCT/_",
