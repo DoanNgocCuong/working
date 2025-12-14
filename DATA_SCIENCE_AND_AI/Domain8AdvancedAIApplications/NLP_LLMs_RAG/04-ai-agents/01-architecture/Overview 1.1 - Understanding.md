@@ -190,37 +190,55 @@ flowchart TD
 
 ```
 
-Dưới đây là flow (Mermaid hợp lệ) với 3 tools và nhánh khi kết quả chưa tốt, agent phải lặp lại:
+---
+```mermaid
+flowchart TD
+    U[Developer IDE Cursor] --> A[Cursor Agent Orchestrator]
 
+    subgraph PERCEPTION
+        A --> B1[Collect Context: active file, selection, cursor]
+        B1 --> B2[Repo Analyzer: project tree, symbols, references]
+        B2 --> B3[Collect Signals: test failures, lint errors, git diff]
+    end
 
-- Tools:
-    
-    - `read_logs`: lấy log lỗi mới nhất.
-        
-    - `query_db`: xem trạng thái service trong DB/metrics.
-        
-    - `apply_patch`: áp dụng bản sửa (hoặc chạy thử trong sandbox).
-        
-- Lặp lại khi “kết quả chưa tốt”:
-    
-    - Sau `apply_patch`, agent quan sát (`Observe 3`) rồi đánh giá ở nút `K`.
-        
-    - Nếu hệ thống **chưa ổn** (error vẫn còn, metrics vẫn xấu):
-        
-        - Đi nhánh “Chua tot” → `Reason 4`:
-            
-            - LLM phân tích vì sao patch thất bại.
-                
-            - Điều chỉnh kế hoạch: thử tool khác, rollback, hoặc thu thập thêm dữ liệu.
-                
-        - Sau đó quay lại `C`:
-            
-            - Có thể chạy lại `read_logs` (log mới sau patch),
-                
-            - Hoặc chọn tool khác (ví dụ: rollback, thay đổi config) tùy kiến trúc thực tế.
-                
-- Về bản chất:
-    
-    - Mỗi vòng Reason (B, E, H, L) đều nhìn toàn bộ history (log cũ, DB state, kết quả patch) rồi quyết định: gọi tool nào, có cần đổi chiến lược không.
-        
-    - Vòng này có thể lặp nhiều lần cho đến khi điều kiện dừng “hệ thống đã ổn định” được thỏa mãn, hoặc chạm giới hạn (max steps, max cost) rồi escalate sang human.
+    B3 --> C[Agent State: messages plus repo context]
+
+    subgraph LOOP
+        C --> D[Reason Step: LLM decides next actions]
+        D --> E{Has tool call}
+        E --> F[Propose Changes: plan and code edits]
+        E --> G[Tool Execution Layer]
+
+        subgraph TOOLS
+            G --> T1[read_file path]
+            G --> T2[search_in_repo query]
+            G --> T3[apply_diff]
+            G --> T4[run_tests pattern]
+            G --> T5[project_graph info]
+        end
+
+        T1 --> H[Observe Result from tools]
+        T2 --> H
+        T3 --> H
+        T4 --> H
+        T5 --> H
+
+        H --> I[Update Agent State with tool results]
+        I --> D
+    end
+
+    F --> J[Quality and Safety Check]
+    J --> C
+    J --> K[Present Patch in IDE]
+
+    K --> L[Developer Decision]
+    L --> M[Accept and apply changes]
+    L --> N[Edit patch manually]
+    L --> O[Reject patch]
+
+    M --> P[Optional: run tests again]
+    P --> Q{Tests pass}
+    Q --> C
+    Q --> S[Done]
+
+```
