@@ -334,3 +334,68 @@ Bạn có thể chốt lại bài nghiên cứu bằng một nhận định tổ
 > "Năm 2024-2025 đánh dấu sự chuyển dịch của AI từ **'Chatbot biết tuốt'** sang **'Agent hành động'**. Hai bài toán khó nhất đã được giải quyết là **kiểm soát sự phức tạp nội tại** (Self-Healing Code) và **thích ứng với sự hỗn loạn bên ngoài** (Visual Web Agents). Sự hội tụ của hai dòng Agent này sẽ tạo ra lực lượng lao động số (Digital Workforce) thực sự, nơi AI vừa có thể tự bảo trì bản thân, vừa có thể tương tác với thế giới loài người."
 
 **Decision:** 100% đồng ý với lựa chọn của bạn. Đây là 2 chủ đề "xương sống" và có tính ứng dụng cao nhất hiện nay. Bạn có thể tiến hành Deep Research ngay.
+
+---
+```
+Hoàn thiện checklist sau: 
+1. Deep research về Agent System Architect của 2 bài toán siêu lớn này. (2 bài toán SOTA được mô tả trong tài liệu đính kèm: pasted_content_6.txt)
+2. Viết tài liệu 100 trang chi tiết về nó 
+HOÀN THIỆN 2 CHECKLIST TRÊN NHÉ
+
+YÊU CẦU CHI TIẾT được đính kèm: pasted_content_7.txt
+YÊU CẦU CHI TIẾT VỀ CHẤT LƯỢNG:
+=================================
+
+✅ CONTENT QUALITY:
+   - Mỗi section phải có 3-5 ACADEMIC SOURCES (arXiv papers, conference papers, tech reports)
+   - Mỗi claim kỹ thuật phải được citation (không bao giờ hallucinate số liệu)
+   - Tối thiểu 50% bài báo từ published research (arXiv, NeurIPS, ICML, ICLR, OSDI, USENIX)
+   - Tối đa 50% bài báo từ blog/tech documentation (nhưng phải từ official sources: GitHub Blog, 
+     Google Research, Meta AI, Anthropic)
+
+✅ TECHNICAL DEPTH:
+   - Giải thích toán học (khi cần): Viết công thức LaTeX cho các thuật toán chính
+   - Diagram & Flowcharts: Mỗi section phải có ít nhất 1 mermaid diagram hoặc ASCII art minh họa
+   - Code Examples: Khi giải thích kiến trúc, đưa ra pseudocode hoặc real code snippet (nếu applicable)
+   - Benchmark Numbers: Mỗi case study phải có metric cụ thể (% accuracy, latency, throughput)
+
+✅ STRUCTURE & FORMATTING:
+   - Format: Markdown (.md) chuyên nghiệp
+
+✅ WRITING STYLE:
+   - Formal academic tone (Tài liệu kỹ thuật production)
+   - Tránh marketing language, tập trung vào事実 (facts)
+   - Clear thesis statements ở đầu mỗi section
+   - Summary bullet points ở cuối mỗi section
+
+---
+
+DELIVERABLES:
+==============
+1. markdown hoàn chỉnh (~100 trang, 10MB max) - BẮT BUỘC ĐỦ 100 TRANG NHÉ
+2. Markdown source file (để dễ edit)
+3. Bibliography file (CSV hoặc BibTeX format) với link tới các source
+4. Executive Summary (2-3 trang) highlighting key findings
+
+---
+
+TONE & AUDIENCE:
+=================
+- Audience: Kỹ sư lâu năm, AI researchers, CTO, Engineering Managers, AIArchitect
+- Tone: 30% Research/Educational + 80% Engineer/Architect (không dành cho newcomers)
+- Purpose: Báo cáo white paper cho nội bộ công ty / presentation tại conference
+
+---
+
+SPECIAL REQUIREMENTS:
+=======================
+- Tách biệt rõ ràng giữa "published research" và "industry implementation"
+  (để tránh nhầm lẫn giữa academic vs. practical)
+- Highlight "open questions" / "future work" ở cuối mỗi phần
+  (để chỉ ra những bài toán vẫn chưa được giải)
+- Tối thiểu 1 section comparision table: Self-Healing vs. Browser Agents
+  (để chỉ ra điểm tương đồng / khác biệt)
+
+```
+
+
