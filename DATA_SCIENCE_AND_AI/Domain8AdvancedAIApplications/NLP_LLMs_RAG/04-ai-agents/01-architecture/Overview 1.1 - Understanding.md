@@ -167,7 +167,9 @@ if __name__ == "__main__":
 - Lặp ở level kiến trúc: ReAct pattern.
 - Lặp ở level code: vòng `for` với state `messages` được update sau mỗi vòng.
 
-## 2.2 Cursor Demo: 
+# 3. Cursor Demo: 
+
+## 3.1 Luồng đơn giản
 
 ```mermaid
 flowchart TD
@@ -220,9 +222,6 @@ flowchart TD
     Q --> S[Done]
 
 ```
-
-
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
 
 ### 1. Luồng trên đã “chuẩn thực tế” chưa?
 
@@ -427,12 +426,7 @@ Nếu bạn muốn, bước tiếp theo có thể:
 
 
 
-## 2.2 Cursor tiếp 
-
-
----
-
-## 2.3 Cái này mở rộng ra để chuẩn 1 hệ thống agent gồm các thành phần ?
+## 3.2 Cursor tiếp Cái này mở rộng ra để chuẩn 1 hệ thống agent gồm các thành phần ?
 
 Có thể coi “Cursor Demo” ở trên là **instance cụ thể** của một kiến trúc agent chuẩn. Ta mở rộng và “trừu tượng hoá” nó thành một **Agent System Architecture chung** với đầy đủ thành phần, rồi chỉ ra Cursor là 1 case đặc biệt.
 
@@ -440,7 +434,7 @@ Dưới đây là phiên bản **tổng quát**:
 
 ***
 
-## 1. Kiến trúc hệ thống Agent chuẩn (tổng quát hóa từ Cursor)
+### 1. Kiến trúc hệ thống Agent chuẩn (tổng quát hóa từ Cursor)
 
 ```mermaid
 flowchart TD
@@ -486,9 +480,9 @@ flowchart TD
 
 ***
 
-## 2. Mapping các thành phần “chuẩn” với Cursor Demo
+### 2. Mapping các thành phần “chuẩn” với Cursor Demo
 
-### 2.1. Perception Layer
+#### 2.1. Perception Layer
 
 - **Input Processor (P1)**
     - Chuẩn hóa input:
@@ -508,7 +502,7 @@ flowchart TD
         - Context (code, log, KB snippet, UI text…).
 
 
-### 2.2. Cognition Layer
+#### 2.2. Cognition Layer
 
 - **Reasoning Engine (C1)**
     - LLM chính:
@@ -535,7 +529,7 @@ flowchart TD
     - Đây là nơi “lập kế hoạch + action” hòa quyện (ReAct, ToT…).
 
 
-### 2.3. Action Layer
+#### 2.3. Action Layer
 
 - **Tool Execution Engine (T)**
     - Nhận danh sách tool_call:
@@ -562,7 +556,7 @@ flowchart TD
 
 State S quay lại Cognition → tạo vòng Reason–Act–Observe lặp nhiều lần.
 
-### 2.4. Governance Layer
+#### 2.4. Governance Layer
 
 - **Quality and Safety Checks (G1)**
     - Đánh giá:
@@ -588,7 +582,7 @@ State S quay lại Cognition → tạo vòng Reason–Act–Observe lặp nhiề
 
 ***
 
-## 3. Cursor chỉ là một “instantiation” của hệ thống chuẩn
+### 3. Cursor chỉ là một “instantiation” của hệ thống chuẩn
 
 Trong hệ thống chung:
 
@@ -611,48 +605,223 @@ Nếu bạn muốn, bước tiếp theo mình có thể:
 - Vẽ lại bản “Agent System chuẩn” này với labels trùng hẳn 4 layer MECE trong tài liệu `agent_system_design_roadmap_vi.md`, để bạn gắn trực tiếp vào sách là “Hình: Kiến trúc Agent tổng quát (chuẩn hóa từ Cursor, Self-Healing, Browser Agent)”.
 
 ---
-## 2.3 Manus 
 
-```mermaid
-flowchart TD
-    U[User Request\n\"Viet tai lieu / chuong / bao cao\"] --> A[Manus Orchestrator]
 
-    subgraph PERCEPTION
-        A --> P1[Input Processor\nlam sach, chuan hoa brief]
-        P1 --> P2[Context Collector\nfiles dinh kem, history, constraints]
-        P2 --> P3[Initial State Builder\nhe thong + user + goal messages]
-    end
+## 3.3 Cursor là kiến trúc 3 hay 4 ? 
 
-    P3 --> S[Agent State\nmessages + context]
+### **Cursor Agent thuộc QUADRANT 3: AUTONOMY** 
 
-    subgraph COGNITION
-        S --> C1[Understand Task\nLLM phan tich muc tieu, doc gia, do dai]
-        C1 --> C2{Need Research or References?}
-        C2 --> C3[Outline Planner\nlap dan y, cau truc tai lieu]
-        C2 --> C4[Research Planner\ntao cac query va steps]
-    end
+#### **Phân tích theo 2 trục:**
 
-    subgraph RESEARCH
-        C4 --> R1[Call Research Tools\nweb search, file search, RAG]
-        R1 --> R2[Collect and Filter Sources]
-        R2 --> R3[Summarize and Structure Notes]
-        R3 --> S
-    end
-
-    C3 --> W1[Draft Writer\nLLM viet ban nhap theo dan y + notes]
-    W1 --> W2{Need Refinement?}
-
-    W2 --> W3[Refinement Loop\nclarity, style, structure, citations]
-    W3 --> W2
-    W2 --> W4[Assemble Final Draft]
-
-    subgraph GOVERNANCE
-        W4 --> G1[Quality Check\nstyle, constraints, length, coverage]
-        G1 --> G2[Policy and Guardrails\nno leakage, no disallowed content]
-        G2 --> G3[Human Review UI\nuser xem, comment, yeu cau sua]
-    end
-
-    G3 --> O[Apply Edits and Return Output]
-    O --> U
+###### **1. Trục Agency (Mức độ Tự chủ): CAO ✅**
 
 ```
+Cursor Agent:
+- Goal-oriented: "Fix this bug", "Refactor function" 
+- Vòng lặp ReAct: Reason → Act → Observe → Reason
+- LLM TỰ quyết định:
+  ✓ Tool nào cần gọi (read_file, search_in_repo, apply_diff)
+  ✓ Khi nào cần thêm info, khi nào đủ để propose patch
+  ✓ Điều chỉnh plan based on tool results
+- Không follow strict workflow định sẵn
+```
+
+**→ HIGH Agency** (Tự chủ, không xác định trước)
+
+###### **2. Trục Coordination (Mức độ Phối hợp): THẤP ✅**
+
+```
+Cursor Agent:
+- Chỉ có 1 agent chính
+- KHÔNG có sub-agents
+- KHÔNG có peer-to-peer communication  
+- KHÔNG có task delegation giữa nhiều agents
+```
+
+**→ LOW Coordination** (Đơn agent)
+
+---
+
+### **Mapping vào Ma trận:**
+
+| | **LOW Agency** | **HIGH Agency** |
+|---|---|---|
+| **LOW Coord** | Q1: Instruction | **Q3: Autonomy** ← **CURSOR ĐÂY** |
+| **HIGH Coord** | Q2: Orchestration | Q4: Choreography |
+
+---
+
+### **Tại sao KHÔNG phải các Quadrant khác?**
+
+#### ❌ **KHÔNG phải Q1 (Instruction)**
+```
+Q1 characteristics:
+- Linear workflow (A → B → C → Done)
+- Deterministic, pre-defined steps
+- LLM chỉ làm 1 task cố định
+- No loop, no adaptation
+
+Cursor khác:
+✓ Có vòng lặp ReAct
+✓ LLM tự quyết định next step
+✓ Adaptive based on context
+```
+
+#### ❌ **KHÔNG phải Q2 (Orchestration)**
+```
+Q2 characteristics:
+- Multiple agents/stations
+- Central orchestrator điều phối
+- Each agent = specialized task
+- Pre-defined workflow giữa các agents
+
+Cursor khác:
+✓ Chỉ 1 agent, không có sub-agents
+✓ Không có hub-and-spoke pattern
+✓ Workflow không định sẵn
+```
+
+**NOTE:** Tên "Cursor Agent **Orchestrator**" gây nhầm lẫn! 
+- Trong Cursor, "Orchestrator" chỉ là tên của **agent controller chính**
+- KHÔNG có nghĩa là nó orchestrate nhiều agents (như Q2)
+
+#### ❌ **KHÔNG phải Q4 (Choreography)**
+```
+Q4 characteristics:
+- Multiple autonomous agents
+- Peer-to-peer communication
+- Emergent behavior từ collaboration
+- No central control
+
+Cursor khác:
+✓ Single agent, không có P2P
+✓ Không có agent nào khác để collaborate
+```
+
+---
+
+### **So sánh Cursor với Q3 Agent điển hình:**
+
+#### **Ví dụ Q3 trong document:**
+```
+- Agent Lập kế hoạch Du lịch
+- Agent Nghiên cứu
+- Agent Gỡ lỗi Code ← GIỐNG CURSOR NHẤT!
+```
+
+#### **Cursor = Q3 "Code Debugging Agent"**
+
+| Đặc điểm Q3 | Cursor Implementation |
+|---|---|
+| **Goal-oriented** | "Fix this error", "Add feature X" |
+| **ReAct Loop** | Reason (LLM) → Act (tools) → Observe (results) |
+| **Tool selection** | Tự chọn: read_file, search, apply_diff, run_tests |
+| **Adaptive** | Nếu test fail → đọc thêm file → fix lại |
+| **Single agent** | 1 agent chính, không có sub-agents |
+| **Memory** | Agent State = messages + repo context |
+
+---
+
+### **Diagram so sánh Cursor với Q3 standard:**
+
+```mermaid
+flowchart TB
+    subgraph Standard_Q3[Q3 Standard Pattern]
+        G1[Goal: High-level] --> L1((ReAct Loop))
+        L1 --> R1[Reason: Plan]
+        R1 --> A1[Act: Tools]
+        A1 --> O1[Observe]
+        O1 --> L1
+        L1 -.->|Done| Out1[Output]
+    end
+    
+    subgraph Cursor_Q3[Cursor = Q3 Instance]
+        G2[Goal: Fix bug] --> L2((ReAct Loop))
+        L2 --> R2[Reason: LLM]
+        R2 --> A2[Act: read_file<br/>search_repo<br/>apply_diff]
+        A2 --> O2[Observe: Results]
+        O2 --> L2
+        L2 -.->|Done| Out2[Patch + Explain]
+    end
+    
+    Out2 --> HITL[Human-in-the-Loop<br/>Dev Accept/Edit/Reject]
+    
+    style Standard_Q3 fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Cursor_Q3 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style L1 fill:#ff5722,color:#fff
+    style L2 fill:#ff5722,color:#fff
+    style HITL fill:#4caf50,color:#fff
+```
+
+---
+
+### **Đặc điểm QUAN TRỌNG của Cursor (Q3):**
+
+#### **1. Governance Layer mạnh**
+```
+Cursor có thêm:
+- Quality Check: syntax, compile
+- Safety Check: không xóa file nguy hiểm
+- HITL (Human-in-the-Loop): Dev PHẢI approve patch
+→ Đây là extension của Q3, không làm thay đổi quadrant
+```
+
+#### **2. Perception Layer phong phú**
+```
+Cursor thu thập context rất kỹ:
+- Repo tree, symbols, references
+- Test failures, lint errors
+- Git diff
+→ Vẫn là Q3, chỉ là high-quality implementation
+```
+
+#### **3. Có thể lặp sau khi apply patch**
+```
+Flow: Apply → Run tests → Fail → Loop lại
+→ Vẫn là single agent ReAct loop, vẫn Q3
+```
+
+---
+
+### **Khi nào Cursor sẽ chuyển sang Q2 hoặc Q4?**
+
+#### **Nếu chuyển sang Q2 (Orchestration):**
+```
+Cần thay đổi:
+- Tách thành nhiều agents chuyên biệt:
+  Agent 1: Code generation
+  Agent 2: Test writing
+  Agent 3: Documentation
+  Agent 4: Code review
+- Central orchestrator điều phối strict workflow
+- Mỗi agent làm 1 việc cố định
+```
+
+#### **Nếu chuyển sang Q4 (Choreography):**
+```
+Cần thay đổi:
+- Nhiều autonomous agents:
+  Agent 1: Backend code
+  Agent 2: Frontend code
+  Agent 3: Database migration
+  Agent 4: API design
+- P2P communication giữa agents
+- Emergent behavior (agents tự quyết định collaborate)
+- No central control
+```
+
+---
+
+### **Kết luận:**
+
+**Cursor Agent = QUADRANT 3: AUTONOMY**
+
+**Lý do:**
+1. ✅ **HIGH Agency**: ReAct loop, tự chủ, goal-oriented
+2. ✅ **LOW Coordination**: Single agent, no multi-agent
+3. ✅ Match hoàn toàn pattern "Code Debugging Agent" trong Q3
+4. ✅ Có Governance Layer (HITL) nhưng không làm thay đổi quadrant
+
+**Tên "Orchestrator" chỉ là naming convention, không có nghĩa là Q2!**
+
+Anh thấy logic chưa ạ? 😊

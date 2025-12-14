@@ -264,6 +264,34 @@ Một agent "Instruction" hoạt động giống như một quy trình Tự đ�
 
 ![Sơ đồ luồng Agent đơn giản](simple_agent_flow.png)
 
+```mermaid
+flowchart TD
+    Start([External Trigger<br/>Email mới, Event...]) --> IP[Input Processor<br/>Trích xuất nội dung]
+    
+    IP --> Prompt[Fixed Prompt Template<br/>'Phân loại ticket thành A/B/C<br/>Priority: High/Medium/Low<br/>Return JSON']
+    
+    Prompt --> LLM[Reasoning Engine<br/>LLM Call - Single Shot]
+    
+    LLM --> Parse[Parse JSON Output<br/>category, priority]
+    
+    Parse --> Tool[Execution Engine<br/>Call Single Tool:<br/>tag_support_ticket]
+    
+    Tool --> API[External API<br/>Jira/Zendesk]
+    
+    API --> End([End<br/>Ticket được tag])
+    
+    style Start fill:#e1f5ff
+    style End fill:#c8e6c9
+    style LLM fill:#fff9c4
+    style Tool fill:#ffe0b2
+    
+    classDef deterministic fill:#f0f0f0,stroke:#333,stroke-width:2px
+    class IP,Prompt,Parse deterministic
+```
+
+> Agent chỉ làm một việc tuyến tính: nhận input, gọi LLM 1 lần để phân loại, rồi gọi đúng 1 tool. Không có vòng lặp, không lập kế hoạch nhiều bước, không nhớ lịch sử.
+
+
 *   **Luồng hoạt động:**
     1.  **Đầu vào:** Một sự kiện bên ngoài kích hoạt agent (ví dụ: email mới được gửi đến hòm thư hỗ trợ).
     2.  **Xử lý:** Input Processor nhận email và trích xuất nội dung.
@@ -301,6 +329,69 @@ Khi một quy trình nghiệp vụ trở nên quá phức tạp cho một agent 
 
 #### 5.1. Kiến trúc và Luồng hoạt động
 
+```mermaid
+flowchart TD
+    SCHED[Scheduler hoac Trigger] --> ORCH[Orchestrator Workflow Engine]
+
+    ORCH --> A1[Agent Thu thap Du lieu]
+    A1 --> DB[He thong DB tai chinh]
+    A1 --> ORCH
+
+    ORCH --> A2[Agent Phan tich So lieu]
+    A2 --> LIB[Thu vien Phan tich vd Pandas]
+    A2 --> ORCH
+
+    ORCH --> A3[Agent Viet Bao cao]
+    A3 --> LLM[LLM sinh van ban]
+    A3 --> ORCH
+
+    ORCH --> A4[Agent Dinh dang tai lieu]
+    A4 --> FORMAT[Tool xuat PDF hoac slide]
+    A4 --> ORCH
+
+    ORCH --> OUT[Gui bao cao cho Stakeholder]
+
+```
+
+```mermaid
+flowchart TB
+    Trigger([Scheduler Trigger<br/>Ngày cuối quý]) --> Orchestrator{Central Orchestrator<br/>Code điều phối}
+    
+    Orchestrator -->|Step 1| Agent1[Agent 1: Thu thập Dữ liệu<br/>Tools: DB Connector]
+    Agent1 --> Data1[(Raw Data<br/>Sales + Accounting)]
+    
+    Data1 --> Orchestrator
+    
+    Orchestrator -->|Step 2| Agent2[Agent 2: Phân tích<br/>Tools: Pandas, Calculator]
+    Agent2 --> Data2[Computed Metrics<br/>Revenue, Profit, Cost]
+    
+    Data2 --> Orchestrator
+    
+    Orchestrator -->|Step 3| Agent3[Agent 3: Viết Báo cáo<br/>Tools: LLM Generator]
+    Agent3 --> Report[Summary Text<br/>Tình hình kinh doanh]
+    
+    Report --> Orchestrator
+    
+    Orchestrator -->|Step 4| Agent4[Agent 4: Định dạng<br/>Tools: PDF Generator]
+    Agent4 --> PDF[Final PDF Report<br/>+ Logo]
+    
+    PDF --> Orchestrator
+    
+    Orchestrator -->|Final| Email[Send Email Tool<br/>Gửi cho Ban giám đốc]
+    
+    Email --> End([End])
+    
+    style Orchestrator fill:#ff9800,stroke:#e65100,stroke-width:3px,color:#fff
+    style Agent1 fill:#64b5f6
+    style Agent2 fill:#81c784
+    style Agent3 fill:#ffb74d
+    style Agent4 fill:#ba68c8
+    style Email fill:#e57373
+```
+
+> Orchestrator (code) điều phối lần lượt nhiều agent chuyên biệt. Mỗi agent làm phần việc của mình rồi trả kết quả về. Luồng công việc cố định, ít hoặc không có tự chủ ở từng agent.
+
+
 Kiến trúc "Orchestration" giống như một dây chuyền lắp ráp thông minh, nơi mỗi "trạm" là một agent chuyên biệt (hoặc một LLM call). Một "nhà điều phối" (Orchestrator), thường là code cứng chứ không phải LLM, sẽ điều hướng công việc qua các trạm theo một luồng đã định.
 
 *   **Luồng hoạt động (Ví dụ: Quy trình tạo báo cáo tài chính hàng quý):**
@@ -331,6 +422,89 @@ Kiến trúc Orchestration rất giống với kiến trúc Microservices. Mỗi
 Đây là nơi sự "thông minh" thực sự của agent bắt đầu tỏa sáng. Thay vì chỉ làm theo kịch bản, agent được trao quyền tự chủ để đạt được mục tiêu.
 
 #### 6.1. Kiến trúc và Luồng hoạt động
+
+```mermaid
+flowchart TD
+    U[User Goal muc tieu cap cao] --> A[Autonomous Agent]
+
+    subgraph LOOP[Reason Act Observe Loop]
+        A --> S[Agent State muc tieu va context]
+
+        S --> R[Reason Step LLM suy luan]
+        R --> DEC{Can goi tool?}
+
+        DEC --> PLAN[No tool Can Tra loi hoac lap ke hoach cuoi]
+        DEC --> CALL[Yes tool Call]
+
+        CALL --> T[Tool Execution Layer]
+        T --> T1[Domain Tools API DB FS]
+        T --> T2[Knowledge Tools search RAG]
+        T1 --> OBS[Observe ket qua]
+        T2 --> OBS
+
+        OBS --> S
+    end
+
+    PLAN --> OUT[Final Plan hoac Answer]
+    OUT --> U
+
+```
+
+```mermaid
+flowchart TD
+    Goal([User Goal<br/>'Plan chuyến đi Đà Lạt<br/>cuối tuần, focus cà phê'])
+    
+    Goal --> State[Agent State<br/>Messages + Context]
+    
+    State --> Loop{ReAct Loop}
+    
+    Loop --> Reason1[🧠 REASON #1<br/>'Cần biết ngày đi/về<br/>→ Hỏi user']
+    Reason1 --> Act1[💬 ACT: Ask User<br/>'Bạn muốn đi cuối tuần nào?']
+    Act1 --> Observe1[👁 OBSERVE<br/>User reply: '20-22/12']
+    
+    Observe1 --> UpdateState1[Update State<br/>+ date info]
+    UpdateState1 --> Loop
+    
+    Loop --> Reason2[🧠 REASON #2<br/>'Đã có ngày<br/>→ Cần tìm chuyến bay']
+    Reason2 --> Act2[🔧 ACT: Tool Call<br/>search_flights]
+    Act2 --> Tool1[Flight Search API]
+    Tool1 --> Observe2[👁 OBSERVE<br/>List flights returned]
+    
+    Observe2 --> UpdateState2[Update State<br/>+ flight options]
+    UpdateState2 --> Loop
+    
+    Loop --> Reason3[🧠 REASON #3<br/>'Đã có bay<br/>→ Tìm quán cà phê']
+    Reason3 --> Act3[🔧 ACT: Tool Call<br/>search_POI type=cafe]
+    Act3 --> Tool2[POI Search API]
+    Tool2 --> Observe3[👁 OBSERVE<br/>Cafe list returned]
+    
+    Observe3 --> UpdateState3[Update State<br/>+ cafe list]
+    UpdateState3 --> Loop
+    
+    Loop --> ReasonN[🧠 REASON #N<br/>'Đủ thông tin<br/>→ Tạo lịch trình']
+    ReasonN --> Final[📋 Final Output<br/>Complete Itinerary]
+    
+    Final --> End([End])
+    
+    style Loop fill:#ff5722,stroke:#bf360c,stroke-width:3px,color:#fff
+    style Reason1 fill:#fff9c4
+    style Reason2 fill:#fff9c4
+    style Reason3 fill:#fff9c4
+    style ReasonN fill:#fff9c4
+    style Act1 fill:#e1bee7
+    style Act2 fill:#e1bee7
+    style Act3 fill:#e1bee7
+    style Observe1 fill:#c5e1a5
+    style Observe2 fill:#c5e1a5
+    style Observe3 fill:#c5e1a5
+    
+    style State fill:#ffccbc,stroke:#d84315,stroke-width:2px
+    style UpdateState1 fill:#ffccbc,stroke:#d84315,stroke-width:2px
+    style UpdateState2 fill:#ffccbc,stroke:#d84315,stroke-width:2px
+    style UpdateState3 fill:#ffccbc,stroke:#d84315,stroke-width:2px
+```
+
+> Một agent duy nhất lặp vòng ReAct: Reason → Act (tool) → Observe → Reason… cho đến khi đạt mục tiêu. Nó tự quyết định cần tool nào, bao nhiêu bước, kế hoạch thế nào.
 
 Agent "Autonomy" hoạt động theo một vòng lặp liên tục, nổi tiếng nhất là mẫu **ReAct (Reason + Act)**. Nó không đi theo một đường thẳng mà là một chu trình khám phá và điều chỉnh.
 
@@ -374,6 +548,76 @@ Kiến trúc "Choreography" không có một nhà điều phối trung tâm. Tha
 
 **Sơ đồ luồng hoạt động (Ví dụ: Đội Agent Nghiên cứu Thị trường):**
 
+```mermaid
+flowchart TD
+    PM[Product Manager hoac Business Owner] --> LEAD[Chief Agent Truong nhom]
+
+    LEAD --> D1[Define Global Goal]
+    D1 --> SPLIT[Phan ra cac nhiem vu con]
+
+    SPLIT --> R1[Research Agent Thi truong]
+    SPLIT --> R2[Finance Agent Von va doanh thu]
+    SPLIT --> R3[Social Agent Cam xuc nguoi dung]
+
+    R1 --> WEB[Web Search Tools va RAG]
+    R2 --> FINAPI[API tai chinh vd Crunchbase]
+    R3 --> SOCAPI[API mang xa hoi]
+
+    WEB --> R1R[Report Market Findings]
+    FINAPI --> R2R[Report Funding and Numbers]
+    SOCAPI --> R3R[Report Sentiment Insights]
+
+    R1R --> LEAD
+    R2R --> LEAD
+    R3R --> LEAD
+
+    LEAD --> SYN[Summarize and Synthesize to Final Report]
+    SYN --> PM
+
+```
+
+```mermaid
+flowchart TB
+    Goal([PM: Research Goal]) --> Chief[Chief Agent<br/>📋 Plan & Coordinate]
+    
+    Chief -.->|Assign| A1
+    Chief -.->|Assign| A2
+    Chief -.->|Assign| A3
+    
+    subgraph Agents[Autonomous Agents - Parallel Execution]
+        A1[📊 Data Agent<br/>Loop: Reason-Act-Observe<br/>Tools: Search, Parse]
+        A2[💰 Finance Agent<br/>Loop: Reason-Act-Observe<br/>Tools: APIs, DB]
+        A3[📱 Social Agent<br/>Loop: Reason-Act-Observe<br/>Tools: Social APIs]
+    end
+    
+    %% Peer-to-peer
+    A1 <-.->|P2P Communication| A2
+    A2 <-.->|P2P Communication| A3
+    A1 <-.->|P2P Communication| A3
+    
+    %% Results back
+    A1 -->|Result| Chief
+    A2 -->|Result| Chief
+    A3 -->|Result| Chief
+    
+    %% Chief can request more
+    Chief -.->|Request Details| A1
+    Chief -.->|Clarify| A2
+    
+    Chief --> Synthesize[Synthesize & Report]
+    Synthesize --> Final([Final Output])
+    
+    style Chief fill:#ff6f00,color:#fff,stroke:#e65100,stroke-width:3px
+    style A1 fill:#2196f3,color:#fff
+    style A2 fill:#4caf50,color:#fff
+    style A3 fill:#9c27b0,color:#fff
+    style Agents fill:#f5f5f5,stroke:#9e9e9e,stroke-width:2px,stroke-dasharray: 5 5
+    
+    linkStyle 0,1,2 stroke:#757575,stroke-width:1px,stroke-dasharray: 3 3
+    linkStyle 3,4,5 stroke:#f44336,stroke-width:2px,stroke-dasharray: 5 5
+    linkStyle 9,10 stroke:#2196f3,stroke-width:1px,stroke-dasharray: 3 3
+```
+
 ![Sơ đồ luồng Agent phức tạp](complex_agent_flow.png)
 
 *   **Luồng hoạt động:**
@@ -413,6 +657,55 @@ Do đó, kiến trúc này hiện chủ yếu được sử dụng trong các m�
 
 *Kết thúc Phần II. Chúng ta đã khám phá bốn loại kiến trúc agent chính. Giờ đây, bạn đã có một "la bàn" để định vị các loại bài toán khác nhau. Trong Phần III, chúng ta sẽ bắt đầu hành trình thực tế: xây dựng các agent thuộc các quadrant này thông qua một lộ trình chi tiết với code mẫu.*
 
+```mermaid
+graph TB
+    subgraph Q1[QUADRANT 1: INSTRUCTION]
+        Q1_Input[Input] --> Q1_LLM[LLM<br/>Single Shot]
+        Q1_LLM --> Q1_Tool[1 Tool]
+        Q1_Tool --> Q1_Output[Output]
+    end
+    
+    subgraph Q2[QUADRANT 2: ORCHESTRATION]
+        Q2_Orch{Orchestrator}
+        Q2_Orch --> Q2_A1[Agent 1]
+        Q2_Orch --> Q2_A2[Agent 2]
+        Q2_Orch --> Q2_A3[Agent 3]
+        Q2_A1 --> Q2_Orch
+        Q2_A2 --> Q2_Orch
+        Q2_A3 --> Q2_Orch
+    end
+    
+    subgraph Q3[QUADRANT 3: AUTONOMY]
+        Q3_Goal[Goal] --> Q3_Loop((ReAct<br/>Loop))
+        Q3_Loop --> Q3_Reason[Reason]
+        Q3_Reason --> Q3_Act[Act]
+        Q3_Act --> Q3_Observe[Observe]
+        Q3_Observe --> Q3_Loop
+        Q3_Loop --> Q3_Output[Output]
+    end
+    
+    subgraph Q4[QUADRANT 4: CHOREOGRAPHY]
+        Q4_Chief[Chief Agent]
+        Q4_Chief -.-> Q4_A1[Agent 1]
+        Q4_Chief -.-> Q4_A2[Agent 2]
+        Q4_Chief -.-> Q4_A3[Agent 3]
+        Q4_A1 -.-> Q4_A2
+        Q4_A2 -.-> Q4_A3
+        Q4_A1 --> Q4_Chief
+        Q4_A2 --> Q4_Chief
+        Q4_A3 --> Q4_Chief
+    end
+    
+    style Q1 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Q2 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style Q3 fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Q4 fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    
+    style Q1_LLM fill:#fff9c4
+    style Q2_Orch fill:#ff9800,color:#fff
+    style Q3_Loop fill:#ff5722,color:#fff
+    style Q4_Chief fill:#e91e63,color:#fff
+```
 
 ## PHẦN III: LỘ TRÌNH LÀM CHỦ THIẾT KẾ HỆ THỐNG AGENT
 
