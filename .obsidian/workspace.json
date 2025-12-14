@@ -173,8 +173,8 @@
               "state": {
                 "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/01-architecture/Overview 1.1 - Understanding.md",
                 "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "showSearch": true,
+                "searchQuery": "Có thể coi “Cursor Demo” "
               },
               "icon": "lucide-list",
               "title": "Outline of Overview 1.1 - Understanding"
@@ -199,7 +199,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "359852dfb5f01872",
+  "active": "ab1c80ab6db081da",
   "lastOpenFiles": [
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/01-architecture/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/01-architecture/Overview 1.1 - Understanding.md",
