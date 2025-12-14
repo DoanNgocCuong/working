@@ -223,6 +223,115 @@ flowchart TD
 
 ```
 
+```mermaid
+flowchart TD
+    U([👨‍💻 Developer IDE Cursor<br/>'Fix this bug']) --> A[Agent Orchestrator]
+
+    subgraph PERCEPTION["🔍 PERCEPTION LAYER"]
+        A --> B1[📥 Collect Context<br/>active file, selection, cursor]
+        B1 --> B2[🔎 Repo Analyzer<br/>project tree, symbols, references]
+        B2 --> B3[📊 Collect Signals<br/>test failures, lint errors, git diff]
+    end
+
+    B3 --> C[💾 Agent State<br/>messages + repo context]
+
+    subgraph COGNITION["🧠 COGNITION LAYER - ReAct Loop"]
+        C --> D[💡 Reason Step<br/>LLM decides next actions]
+        D --> E{🤔 Has<br/>tool call?}
+        E -->|No - Ready| F[📋 Propose Changes<br/>plan and code edits]
+        E -->|Yes - Need more| G[🎯 Tool Selection]
+
+        subgraph ACTION["⚡ ACTION LAYER"]
+            G --> TOOLS[Tool Execution]
+            
+            subgraph TOOLS_SUB[Domain Tools]
+                T1[🔍 read_file<br/>path]
+                T2[🔎 search_in_repo<br/>query]
+                T3[✏️ apply_diff]
+                T4[🧪 run_tests<br/>pattern]
+                T5[📊 project_graph<br/>info]
+            end
+            
+            TOOLS --> T1
+            TOOLS --> T2
+            TOOLS --> T3
+            TOOLS --> T4
+            TOOLS --> T5
+
+            T1 --> H[👁️ Observe Results]
+            T2 --> H
+            T3 --> H
+            T4 --> H
+            T5 --> H
+        end
+
+        H --> I[🔄 Update Agent State<br/>with tool results]
+        I --> D
+    end
+
+    subgraph GOVERNANCE["🛡️ GOVERNANCE LAYER"]
+        F --> J[⚖️ Quality & Safety Check<br/>syntax, scope, tests]
+        J -.->|Need refinement| C
+        J --> K[🖥️ Present Patch in IDE<br/>show diff + explanation]
+
+        K --> L{👤 Developer<br/>Decision}
+        L --> M[✅ Accept<br/>apply changes]
+        L --> N[✏️ Edit<br/>manually]
+        L --> O[❌ Reject]
+    end
+
+    M --> P[🧪 Optional:<br/>run tests again]
+    P --> Q{Tests<br/>pass?}
+    Q -->|Fail| C
+    Q -->|Pass| S([✨ Done])
+    N --> S
+    O --> S
+
+    %% Styling - Layers với màu gradient/metallic
+    style PERCEPTION fill:#e3f2fd,stroke:#1565c0,stroke-width:4px,color:#000
+    style COGNITION fill:#fff9c4,stroke:#f57f00,stroke-width:4px,color:#000
+    style ACTION fill:#c8e6c9,stroke:#2e7d32,stroke-width:4px,color:#000
+    style GOVERNANCE fill:#ffccbc,stroke:#bf360c,stroke-width:4px,color:#000
+    
+    %% Styling - Perception components (Blue tones)
+    style A fill:#90caf9,stroke:#1565c0,stroke-width:2px,color:#000
+    style B1 fill:#64b5f6,stroke:#1976d2,stroke-width:2px,color:#fff
+    style B2 fill:#42a5f5,stroke:#1565c0,stroke-width:2px,color:#fff
+    style B3 fill:#2196f3,stroke:#0d47a1,stroke-width:2px,color:#fff
+    
+    %% Styling - Cognition components (Yellow/Orange tones)
+    style C fill:#fff59d,stroke:#f9a825,stroke-width:3px,color:#000
+    style D fill:#ffeb3b,stroke:#f57f00,stroke-width:2px,color:#000
+    style E fill:#ffc107,stroke:#e65100,stroke-width:3px,color:#000
+    style F fill:#ffb300,stroke:#e65100,stroke-width:2px,color:#000
+    style G fill:#ff8f00,stroke:#e65100,stroke-width:2px,color:#fff
+    style I fill:#fff59d,stroke:#f9a825,stroke-width:2px,color:#000
+    
+    %% Styling - Action components (Green tones)
+    style TOOLS fill:#a5d6a7,stroke:#388e3c,stroke-width:2px,color:#000
+    style TOOLS_SUB fill:#81c784,stroke:#2e7d32,stroke-width:2px,color:#000
+    style T1 fill:#66bb6a,stroke:#2e7d32,stroke-width:1px,color:#fff
+    style T2 fill:#66bb6a,stroke:#2e7d32,stroke-width:1px,color:#fff
+    style T3 fill:#66bb6a,stroke:#2e7d32,stroke-width:1px,color:#fff
+    style T4 fill:#66bb6a,stroke:#2e7d32,stroke-width:1px,color:#fff
+    style T5 fill:#66bb6a,stroke:#2e7d32,stroke-width:1px,color:#fff
+    style H fill:#4caf50,stroke:#1b5e20,stroke-width:2px,color:#fff
+    
+    %% Styling - Governance components (Red/Orange tones)
+    style J fill:#ff8a65,stroke:#bf360c,stroke-width:2px,color:#fff
+    style K fill:#ff7043,stroke:#d84315,stroke-width:2px,color:#fff
+    style L fill:#ff5722,stroke:#bf360c,stroke-width:3px,color:#fff
+    style M fill:#66bb6a,stroke:#2e7d32,stroke-width:2px,color:#fff
+    style N fill:#42a5f5,stroke:#1565c0,stroke-width:2px,color:#fff
+    style O fill:#ef5350,stroke:#c62828,stroke-width:2px,color:#fff
+    style P fill:#ab47bc,stroke:#6a1b9a,stroke-width:2px,color:#fff
+    style Q fill:#ffa726,stroke:#e65100,stroke-width:2px,color:#000
+    
+    %% Styling - Start/End (Purple/Green gradients)
+    style U fill:#ce93d8,stroke:#6a1b9a,stroke-width:3px,color:#000
+    style S fill:#aed581,stroke:#558b2f,stroke-width:3px,color:#000
+```
+
 ### 1. Luồng trên đã “chuẩn thực tế” chưa?
 
 Ở mức **khái niệm kiến trúc (high‑level)**, luồng đó khá sát với cách một **coding agent kiểu Cursor** vận hành:
@@ -722,67 +831,6 @@ Cursor khác:
 
 ---
 
-### **Diagram so sánh Cursor với Q3 standard:**
-
-```mermaid
-flowchart TB
-    subgraph Standard_Q3[Q3 Standard Pattern]
-        G1[Goal: High-level] --> L1((ReAct Loop))
-        L1 --> R1[Reason: Plan]
-        R1 --> A1[Act: Tools]
-        A1 --> O1[Observe]
-        O1 --> L1
-        L1 -.->|Done| Out1[Output]
-    end
-    
-    subgraph Cursor_Q3[Cursor = Q3 Instance]
-        G2[Goal: Fix bug] --> L2((ReAct Loop))
-        L2 --> R2[Reason: LLM]
-        R2 --> A2[Act: read_file<br/>search_repo<br/>apply_diff]
-        A2 --> O2[Observe: Results]
-        O2 --> L2
-        L2 -.->|Done| Out2[Patch + Explain]
-    end
-    
-    Out2 --> HITL[Human-in-the-Loop<br/>Dev Accept/Edit/Reject]
-    
-    style Standard_Q3 fill:#fff3e0,stroke:#f57c00,stroke-width:2px
-    style Cursor_Q3 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
-    style L1 fill:#ff5722,color:#fff
-    style L2 fill:#ff5722,color:#fff
-    style HITL fill:#4caf50,color:#fff
-```
-
----
-
-### **Đặc điểm QUAN TRỌNG của Cursor (Q3):**
-
-#### **1. Governance Layer mạnh**
-```
-Cursor có thêm:
-- Quality Check: syntax, compile
-- Safety Check: không xóa file nguy hiểm
-- HITL (Human-in-the-Loop): Dev PHẢI approve patch
-→ Đây là extension của Q3, không làm thay đổi quadrant
-```
-
-#### **2. Perception Layer phong phú**
-```
-Cursor thu thập context rất kỹ:
-- Repo tree, symbols, references
-- Test failures, lint errors
-- Git diff
-→ Vẫn là Q3, chỉ là high-quality implementation
-```
-
-#### **3. Có thể lặp sau khi apply patch**
-```
-Flow: Apply → Run tests → Fail → Loop lại
-→ Vẫn là single agent ReAct loop, vẫn Q3
-```
-
----
-
 ### **Khi nào Cursor sẽ chuyển sang Q2 hoặc Q4?**
 
 #### **Nếu chuyển sang Q2 (Orchestration):**
@@ -812,16 +860,3 @@ Cần thay đổi:
 
 ---
 
-### **Kết luận:**
-
-**Cursor Agent = QUADRANT 3: AUTONOMY**
-
-**Lý do:**
-1. ✅ **HIGH Agency**: ReAct loop, tự chủ, goal-oriented
-2. ✅ **LOW Coordination**: Single agent, no multi-agent
-3. ✅ Match hoàn toàn pattern "Code Debugging Agent" trong Q3
-4. ✅ Có Governance Layer (HITL) nhưng không làm thay đổi quadrant
-
-**Tên "Orchestrator" chỉ là naming convention, không có nghĩa là Q2!**
-
-Anh thấy logic chưa ạ? 😊

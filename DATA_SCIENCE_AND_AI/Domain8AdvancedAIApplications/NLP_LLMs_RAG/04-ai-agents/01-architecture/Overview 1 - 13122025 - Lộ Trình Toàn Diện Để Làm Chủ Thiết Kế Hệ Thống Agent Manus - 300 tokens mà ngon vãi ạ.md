@@ -1,4 +1,638 @@
-# Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent
+
+```
+1. MECE TOÀN BỘ CÁC PHẦN CỦA AGENT 2. MECE TOÀN BỘ CÁC KIỂU ỨNG DỤNG CỦA NÓ => Cần tập trung vào việc demo 1 luồng AI Agent cho 1 bài toán từ dễ đến khó => Cần chuẩn bị ít nhất 3 demo về Agent System Design 3. ĐÚC KẾT THE ROAD để master Agent system design
+   
+Xem hết các link tài liệu tôi gửi trong file pasted_content_3.txt Hoàn thiện check list sau: 1. Vẽ luồng mô tả 1 hệ thống Agent đơn giản nhưng được sử dụng trong các bài toán thực tế 2. Vẽ luồng mô tả 1 hệ thống Agent siêu phức tạp được dùng bởi các công ty lớn trong bài toán thực tế. Agent system design 3. 1 road giải thích chi tiết toàn bộ về Agent System Design từ đơn giản đến phức tạp bằng tiếng việt output: 40 trang siêu chi tiết từng phần (Đếm đủ 40 trang chi tiết chưa nhé) MECE TOÀN BỘ CÁC VẤN ĐỀ QUAN TRỌNG NHẤT CỦA AGENT SYSTEM DESIGN hãy giải đáp hết.   
+```
+
+Link đính kèm: 
+📹 Videos:
+1. LLM Introduction: https://www.youtube.com/watch?v=zjkBMFhNj_g
+2. LLMs from Scratch: https://www.youtube.com/watch?v=9vM4p9NN0Ts
+3. Agentic AI Overview (Stanford): https://www.youtube.com/watch?v=kJLiOGle3Lw
+4. Building and Evaluating Agents: https://www.youtube.com/watch?v=d5EltXhbcfA
+5. Building Effective Agents: https://www.youtube.com/watch?v=D7_ipDqhtwk
+6. Building Agents with MCP: https://www.youtube.com/watch?v=kQmXtrmQ5Zg
+7. Building an Agent from Scratch: https://www.youtube.com/watch?v=xzXdLRUyjUg
+8. Philo Agents: https://www.youtube.com/playlist?list=PLacQJwuclt_sV-tfZmpT1Ov6jldHl30NR
+
+🗂️ Repos
+1. GenAI Agents: https://github.com/nirdiamant/GenAI_Agents
+2. Microsoft's AI Agents for Beginners: https://github.com/microsoft/ai-agents-for-beginners
+3. Prompt Engineering Guide: https://lnkd.in/gJjGbxQr
+4. Hands-On Large Language Models: https://lnkd.in/dxaVF86w
+5. AI Agents for Beginners: https://github.com/microsoft/ai-agents-for-beginners
+6. GenAI Agentshttps://lnkd.in/dEt72MEy
+7. Made with ML: https://lnkd.in/d2dMACMj
+8. Hands-On AI Engineering:https://github.com/Sumanth077/Hands-On-AI-Engineering
+9. Awesome Generative AI Guide: https://lnkd.in/dJ8gxp3a
+10. Designing Machine Learning Systems: https://lnkd.in/dEx8sQJK
+11. Machine Learning for Beginners from Microsoft: https://lnkd.in/dBj3BAEY
+12. LLM Course: https://github.com/mlabonne/llm-course
+
+🗺️ Guides
+1. Google's Agent Whitepaper: https://lnkd.in/gFvCfbSN
+2. Google's Agent Companion: https://lnkd.in/gfmCrgAH
+3. Building Effective Agents by Anthropic: https://lnkd.in/gRWKANS4.
+4. Claude Code Best Agentic Coding practices: https://lnkd.in/gs99zyCf
+5. OpenAI's Practical Guide to Building Agents: https://lnkd.in/guRfXsFK
+
+📚Books:
+1. Understanding Deep Learning: https://udlbook.github.io/udlbook/
+2. Building an LLM from Scratch: https://lnkd.in/g2YGbnWS
+3. The LLM Engineering Handbook: https://lnkd.in/gWUT2EXe
+4. AI Agents: The Definitive Guide - Nicole Koenigstein:  https://lnkd.in/dJ9wFNMD
+5. Building Applications with AI Agents - Michael Albada: https://lnkd.in/dSs8srk5
+6. AI Agents with MCP - Kyle Stratis: https://lnkd.in/dR22bEiZ
+7. AI Engineering: https://www.oreilly.com/library/view/ai-engineering/9781098166298/
+
+📜 Papers
+1. ReAct: https://lnkd.in/gRBH3ZRq
+2. Generative Agents: https://lnkd.in/gsDCUsWm.
+3. Toolformer: https://lnkd.in/gyzrege6
+4. Chain-of-Thought Prompting: https://lnkd.in/gaK5CXzD.
+5. Tree of Thoughts: https://lnkd.in/gRJdv_iU.
+6. Reflexion: https://lnkd.in/gGFMgjUj
+7. Retrieval-Augmented Generation Survey: https://lnkd.in/gGUqkkyR.
+
+🧑‍🏫 Courses:
+1. HuggingFace's Agent Course: https://lnkd.in/gmTftTXV
+2. MCP with Anthropic: https://lnkd.in/geffcwdq
+3. Building Vector Databases with Pinecone: https://lnkd.in/gCS4sd7Y
+4. Vector Databases from Embeddings to Apps: https://lnkd.in/gm9HR6_2
+5. Agent Memory: https://lnkd.in/gNFpC542
+6. Building and Evaluating RAG apps: https://lnkd.in/g2qC9-mh
+7. Building Browser Agents: https://lnkd.in/gsMmCifQ
+8. LLMOps: https://lnkd.in/g7bHU37w
+9. Evaluating AI Agents: https://lnkd.in/gHJtwF5s
+10. Computer Use with Anthropic: https://lnkd.in/gMUWg7Fa
+11. Multi-Agent Use: https://lnkd.in/gU9DY9kj
+12. Improving LLM Accuracy: https://lnkd.in/gsE-4FvY
+13. Agent Design Patterns: https://lnkd.in/gzKvx5A4
+14. Multi Agent Systems: https://lnkd.in/gUayts9s
+
+📩 Newsletters
+1. Gradient Ascent: https://lnkd.in/gZbZAeQW
+2. DecodingML by Paul: https://lnkd.in/gpZPgk7J
+3. Deep (Learning) Focus by Cameron: https://lnkd.in/gTUNcUVE
+4. NeoSage by Shivani: https://blog.neosage.io/
+5. Jam with AI by Shirin and Shantanu: https://lnkd.in/gQXJzuV8
+6. Data Hustle by Sai: https://lnkd.in/gZpdTTYD
+
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+
+# P1: PERPLEXITY: Agent system design
+
+Now I have comprehensive information about agent system design. Let me create a detailed response for the user.
+
+## Agent System Design
+
+Agent system design encompasses the architectural principles, patterns, and components that enable autonomous AI agents to reason, plan, and execute tasks in complex environments. This is a comprehensive guide covering foundational concepts, architectural patterns, implementation approaches, and best practices.
+
+### Core Components of Agent Systems
+
+All agent systems share three fundamental components that work together to enable autonomous behavior:[^1]
+
+**Model (The Brain)** — A large language model that serves as the reasoning engine, enabling the agent to understand requests, reason about solutions, and make decisions about which actions to take. The quality of the LLM directly impacts the agent's decision-making capabilities and reliability.[^1]
+
+**Tools (External Actions)** — Functions, APIs, and external services that the agent can invoke to retrieve data, modify systems, or interact with the external environment. Tools extend the agent's capabilities beyond pure reasoning and enable real-world impact.[^1]
+
+**Instructions (Guardrails)** — Explicit guidelines, system prompts, and constraints that define how the agent should behave, what it should prioritize, and ethical boundaries it should respect.[^1]
+
+Beyond these core components, production agent systems typically include advanced modules: **memory systems** for maintaining context across sessions using both short-term (conversation history) and long-term (vector databases for semantic search) storage; **planning mechanisms** for decomposing complex objectives into executable steps; **perception modules** for understanding environmental context; and **execution frameworks** for reliable action taking.[^2][^3]
+
+### Architectural Patterns for Agent Systems
+
+Agent system design exists on a continuum from simple to complex, with different patterns suited to different requirements.[^4]
+
+**Deterministic Chain (Hard-Coded Steps)**
+
+The simplest pattern where developers predefine the exact sequence of steps, tools, and parameters. The system follows the same workflow for all requests, offering high predictability and low complexity. This approach works well for straightforward, repeatable processes like document processing pipelines or simple question-answering chains that don't require dynamic decision-making.[^4]
+
+**Single-Agent System**
+
+A single coordinated flow where one agent orchestrates multiple LLM calls to handle complex requests. The agent accepts user queries, reasons about the best approach, dynamically decides which tools to call, integrates results into the conversation, and iterates until objectives are achieved. Single-agent systems balance flexibility with maintainability, handling workflows that require dynamic tool selection and multi-step reasoning while remaining architecturally straightforward.[^4]
+
+**Multi-Agent Systems**
+
+Distributed architectures with specialized agents that each handle specific domains or tasks, coordinated through a central orchestrator. In multi-agent architectures, each agent maintains its own domain expertise, context, and tool set, allowing for better separation of concerns and scalability.[^5][^4]
+
+The orchestrator (which may be another LLM or rule-based router) receives requests, determines which specialized agent is best suited, and manages handoffs between agents. For example, an enterprise assistant might use separate agents for customer support (CRM lookups, returns, shipping), analytics (SQL queries, data summarization), and financial operations, with a supervisor router directing queries appropriately.[^4]
+
+Multi-agent systems introduce additional organizational patterns. The **centralized orchestrator pattern** uses a single powerful agent as a conductor that coordinates all others, maintaining global state and making all routing decisions. This creates predictable, debuggable behavior but potentially limits parallelism. The **swarm pattern** enables any agent to communicate with every other agent, allowing collaborative problem-solving, critique, and task handoffs. The **hierarchical pattern** combines centralized strategic coordination with decentralized tactical execution, providing both oversight and flexibility.[^6][^7][^5]
+
+### Event-Driven Coordination for Agent Systems
+
+Modern scalable agent systems increasingly use event-driven architectures where agents communicate through structured events rather than direct calls. Events serve as the shared operating model—a common language enabling agents to exchange information, maintain alignment, and coordinate tasks.[^8]
+
+In event-driven multi-agent systems, agents are designed to react to events and commands rather than act in isolation. Key benefits include **reliable coordination and synchronization** without tight coupling, **resilience through replayable events** that allow recovery from failures, and **sophisticated consumer models** where multiple agents can respond to the same event without confusion. This approach dramatically improves system reliability in complex, unpredictable environments.[^8]
+
+### Design Patterns for Agentic Workflows
+
+Beyond architectural patterns, specific workflow design patterns address common challenges:[^9]
+
+**Controlled Flows** — Predefined sequences with occasional dynamic decision points, balancing structure with flexibility.
+
+**LLM as Router** — Using an LLM to intelligently route requests to appropriate handlers based on content analysis.
+
+**Parallelization** — Multiple agents or tools working simultaneously on different sub-tasks, then synthesizing results.
+
+**Reflect and Critique** — Agents evaluating and improving their own outputs before returning results, implementing quality control mechanisms.
+
+**Human in the Loop** — Strategic human oversight and approval at critical decision points, especially important for high-stakes applications.
+
+The optimal pattern depends on task complexity, required reliability, workflow structure, and consequences of errors.[^9]
+
+### Implementation Frameworks
+
+Several production frameworks support agent system development:
+
+**LangChain** — A modular framework with component-based architecture (models, prompts, memory, chains, agents, tools) that allows developers to swap components without rewriting entire applications. It features agent-centric paradigms for dynamic tool usage, chain-of-thought decomposition for transparency, 100+ document loaders, and integration with LangSmith for production-grade observability.[^10]
+
+**LangGraph** — A stateful framework built on LangChain that models workflows as graphs with nodes (tools, functions, LLMs) and edges (loops, conditional routes). LangGraph excels at state management with persistent checkpointing and time-travel debugging, human-in-the-loop integration with safe agent restarts, and production controls including guards, timeouts, and concurrency management. For complex multi-agent systems, LangGraph provides the most comprehensive toolset with strong integration to LangSmith for observability.[^11]
+
+**LlamaIndex** — A data-centric framework designed for advanced RAG and agentic applications using internal data. It offers 50+ out-of-the-box data connectors, sophisticated ingestion pipelines, and a Workflow module enabling multi-agent orchestration. While not as robust as LangGraph for stateful multi-agent systems, it excels for document-heavy applications.[^11]
+
+### System Design Methodology
+
+Effective agent system design follows a progressive approach:[^4]
+
+**Start Simple** — Begin with straightforward chains or deterministic workflows. Simple systems are faster to build, easier to debug, and sufficient for many use cases.
+
+**Gradually Add Complexity** — As requirements evolve, introduce tool-calling logic for dynamic decision-making, enabling the agent to adapt at runtime.
+
+**Go Multi-Agent** — Adopt multi-agent patterns only when you have clearly distinct domains, multiple conversation contexts, or tool sets too large for single-agent handling.
+
+This progression prevents over-engineering while enabling scalability. Many real-world systems combine patterns—for instance, using mostly deterministic chains with selective dynamic LLM-based tool calling for specific steps.[^4]
+
+### Designing Effective Workflows
+
+When designing agent workflows, several practices ensure reliability and scalability:[^12]
+
+**Keep workflows modular and flexible** — Enable easy maintenance and updates without cascading failures across the system.
+
+**Use standardized APIs and data formats** — Facilitate seamless communication between agents and ensure interoperability.
+
+**Implement monitoring and logging** — Track agent performance, identify bottlenecks, and support debugging in production.
+
+**Visualize interactions** — Use flowcharts, swimlane diagrams, or state machine diagrams to map agent interactions and decision trees, making complex workflows understandable.
+
+### Reliability and Evaluation
+
+Production agent systems require rigorous evaluation frameworks:[^13]
+
+**Key evaluation areas include:**
+
+**Dependency tracing** — Understanding how one agent's output influences downstream agent behavior and decisions.[^13]
+
+**Error propagation analysis** — Identifying where failures originate and how they cascade through the agent network.[^13]
+
+**Inter-agent trust scoring** — Measuring individual agent reliability and assessing their influence on overall task completion.[^13]
+
+**Workflow resilience testing** — Simulating failures and disruptions to evaluate the system's robustness and recovery capabilities.[^13]
+
+### Key Challenges in Scaling Agent Systems
+
+As agent systems grow, several critical challenges emerge:[^14]
+
+**Coordination and Communication Overhead** — Multi-agent systems require complex synchronization mechanisms. As agent populations grow, communication patterns must be optimized, emerging behaviors appear, and hierarchical structures become necessary.[^14]
+
+**Resource Allocation** — Managing computational resources, API call budgets, and token usage across multiple agents operating simultaneously requires sophisticated resource management.
+
+**Security and Trust Issues** — Security vulnerabilities multiply in large deployments. Agents making autonomous decisions at scale raise security concerns about unauthorized actions, data exposure, and system compromise.
+
+**Architectural Complexity** — Emergent behaviors arise that cannot be predicted from individual agent rules. The combinatorial explosion of possible interactions makes comprehensive testing impossible, requiring statistical approaches and simulation. Technical debt accumulates rapidly as dependencies multiply.[^14]
+
+**System Scale Complexity** — Small systems (<10 agents) can use direct communication, but medium systems (10-100 agents) require optimization, large systems (100-1000 agents) need hierarchical structures, and very large systems (1000+ agents) require complex coordination algorithms.[^14]
+
+### Best Practices for Effective Design
+
+**Reliable Coordination** — Ensure agents communicate through well-defined, fault-tolerant mechanisms. Event-driven architectures provide natural resilience through replay capabilities.[^8]
+
+**Monitor Agent Overlap** — Prevent redundancy and confusion by monitoring knowledge domains and action scope across agents. Refactor or group similar agents under shared interfaces.[^5]
+
+**Governance at Scale** — Introduce agent supervisors as architecture grows across domains. Use hierarchical organization (supervisor → agent group) to maintain clarity and ease intent resolution.[^5]
+
+**Progressive Enhancement** — Start with simpler patterns and increase complexity only as proven necessary. Hybrid approaches (combining centralized and decentralized elements) often provide optimal balance.[^7]
+
+**Testing and Evaluation** — Implement continuous evaluation pipelines with frameworks like LangSmith integration to track agent performance, resource consumption, and system behavior across complex workflows.[^11]
+
+Agent system design is evolving rapidly as organizations move from simple chains to sophisticated multi-agent architectures. The key is matching architectural complexity to actual requirements while maintaining observability, reliability, and maintainability throughout the system lifecycle.
+<span style="display:none">[^15][^16][^17][^18]</span>
+
+<div align="center">⁂</div>
+
+[^1]: https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf
+
+[^2]: https://www.leanware.co/insights/ai-agent-architecture
+
+[^3]: https://www.leanware.co/insights/llm-agent-architecture-guide
+
+[^4]: https://docs.databricks.com/aws/en/generative-ai/guide/agent-system-design-patterns
+
+[^5]: https://developer.microsoft.com/blog/designing-multi-agent-intelligence
+
+[^6]: https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system
+
+[^7]: https://galileo.ai/blog/architectures-for-multi-agent-systems
+
+[^8]: https://www.confluent.io/blog/event-driven-multi-agent-systems/
+
+[^9]: https://www.mongodb.com/resources/basics/artificial-intelligence/agentic-systems
+
+[^10]: https://www.techaheadcorp.com/blog/top-agent-frameworks/
+
+[^11]: https://xenoss.io/blog/langchain-langgraph-llamaindex-llm-frameworks
+
+[^12]: https://superagi.com/agentic-ai-orchestration-a-step-by-step-guide-to-managing-multiple-ai-agents-and-ml-models/
+
+[^13]: https://www.fiddler.ai/articles/ai-agent-evaluation
+
+[^14]: https://zigron.com/2025/08/07/5-challenges-multi-agent-systems/
+
+[^15]: https://www.anthropic.com/research/building-effective-agents
+
+[^16]: https://cloud.google.com/blog/topics/partners/building-scalable-ai-agents-design-patterns-with-agent-engine-on-google-cloud
+
+[^17]: https://www.techtarget.com/searchenterpriseai/feature/Real-world-agentic-AI-examples-and-use-cases
+
+[^18]: https://futureagi.com/blogs/llm-agent-architectures-core-components
+
+
+---
+Dưới đây là bản dịch tiếng Việt đầy đủ và chi tiết cho nội dung về thiết kế hệ thống Agent, giữ nguyên toàn bộ ý nghĩa và cấu trúc của bản gốc.
+
+---
+
+# Thiết kế Hệ thống Agent (Tác nhân AI)
+
+Bây giờ tôi đã có thông tin toàn diện về thiết kế hệ thống agent. Dưới đây là phản hồi chi tiết dành cho người dùng.
+
+## Thiết kế Hệ thống Agent
+
+Thiết kế hệ thống Agent bao gồm các nguyên tắc kiến trúc, các mô hình mẫu (patterns) và các thành phần cho phép các tác nhân AI tự chủ (autonomous AI agents) suy luận, lập kế hoạch và thực thi nhiệm vụ trong các môi trường phức tạp. Đây là hướng dẫn toàn diện bao gồm các khái niệm nền tảng, mô hình kiến trúc, phương pháp triển khai và các thực hành tốt nhất (best practices).
+
+### Các Thành phần Cốt lõi của Hệ thống Agent
+
+Tất cả các hệ thống agent đều chia sẻ ba thành phần cơ bản hoạt động cùng nhau để kích hoạt hành vi tự chủ:^1
+
+**Mô hình (Bộ não - The Brain)** — Một mô hình ngôn ngữ lớn (LLM) đóng vai trò là động cơ suy luận, cho phép agent hiểu các yêu cầu, suy luận về các giải pháp và đưa ra quyết định về những hành động cần thực hiện. Chất lượng của LLM ảnh hưởng trực tiếp đến khả năng ra quyết định và độ tin cậy của agent.
+
+**Công cụ (Hành động bên ngoài - External Actions)** — Các hàm (functions), API và dịch vụ bên ngoài mà agent có thể gọi để trích xuất dữ liệu, sửa đổi hệ thống hoặc tương tác với môi trường bên ngoài. Các công cụ mở rộng khả năng của agent vượt ra ngoài phạm vi suy luận thuần túy và cho phép tạo ra tác động trong thế giới thực.
+
+**Hướng dẫn (Rào chắn kiểm soát - Guardrails)** — Các hướng dẫn rõ ràng, system prompts (lời nhắc hệ thống) và các ràng buộc xác định cách agent nên cư xử, những gì nó nên ưu tiên và các ranh giới đạo đức mà nó phải tôn trọng.
+
+Ngoài các thành phần cốt lõi này, các hệ thống agent trong môi trường sản xuất (production) thường bao gồm các module nâng cao: **hệ thống bộ nhớ** để duy trì ngữ cảnh qua các phiên làm việc sử dụng cả lưu trữ ngắn hạn (lịch sử hội thoại) và dài hạn (cơ sở dữ liệu vector cho tìm kiếm ngữ nghĩa); **cơ chế lập kế hoạch** để phân rã các mục tiêu phức tạp thành các bước có thể thực thi; **module nhận thức** để hiểu ngữ cảnh môi trường; và **khung thực thi** để thực hiện hành động một cách đáng tin cậy.
+
+### Các Mô hình Kiến trúc cho Hệ thống Agent
+
+Thiết kế hệ thống agent tồn tại trên một dải liên tục từ đơn giản đến phức tạp, với các mô hình khác nhau phù hợp với các yêu cầu khác nhau.
+
+**Chuỗi Xác định (Deterministic Chain - Các bước được mã hóa cứng)**
+
+Mô hình đơn giản nhất, nơi các nhà phát triển xác định trước trình tự chính xác của các bước, công cụ và tham số. Hệ thống tuân theo cùng một quy trình làm việc cho tất cả các yêu cầu, mang lại khả năng dự đoán cao và độ phức tạp thấp. Cách tiếp cận này hoạt động tốt cho các quy trình đơn giản, lặp lại như đường ống xử lý tài liệu hoặc các chuỗi hỏi-đáp đơn giản không yêu cầu ra quyết định động.
+
+**Hệ thống Đơn Agent (Single-Agent System)**
+
+Một luồng phối hợp duy nhất, trong đó một agent điều phối nhiều cuộc gọi LLM để xử lý các yêu cầu phức tạp. Agent chấp nhận truy vấn của người dùng, suy luận về cách tiếp cận tốt nhất, quyết định linh hoạt công cụ nào cần gọi, tích hợp kết quả vào cuộc hội thoại và lặp lại cho đến khi đạt được mục tiêu. Hệ thống đơn agent cân bằng giữa tính linh hoạt và khả năng bảo trì, xử lý các quy trình công việc yêu cầu lựa chọn công cụ động và suy luận đa bước trong khi vẫn giữ kiến trúc đơn giản.
+
+**Hệ thống Đa Agent (Multi-Agent Systems)**
+
+Các kiến trúc phân tán với các agent chuyên biệt, mỗi agent xử lý các miền hoặc nhiệm vụ cụ thể, được phối hợp thông qua một bộ điều phối trung tâm (central orchestrator). Trong kiến trúc đa agent, mỗi agent duy trì chuyên môn, ngữ cảnh và bộ công cụ riêng của miền đó, cho phép phân tách trách nhiệm tốt hơn và khả năng mở rộng cao hơn.
+
+Bộ điều phối (có thể là một LLM khác hoặc bộ định tuyến dựa trên quy tắc) nhận các yêu cầu, xác định agent chuyên biệt nào phù hợp nhất và quản lý việc chuyển giao giữa các agent. Ví dụ, một trợ lý doanh nghiệp có thể sử dụng các agent riêng biệt cho hỗ trợ khách hàng (tra cứu CRM, trả hàng, vận chuyển), phân tích (truy vấn SQL, tóm tắt dữ liệu) và hoạt động tài chính, với một router giám sát chỉ đạo các truy vấn một cách thích hợp.
+
+Hệ thống đa agent giới thiệu thêm các mô hình tổ chức. **Mô hình điều phối tập trung** sử dụng một agent mạnh mẽ duy nhất như một nhạc trưởng điều phối tất cả những người khác, duy trì trạng thái toàn cục và đưa ra mọi quyết định định tuyến. Điều này tạo ra hành vi có thể dự đoán và gỡ lỗi được nhưng có khả năng hạn chế tính song song. **Mô hình bầy đàn (swarm pattern)** cho phép bất kỳ agent nào giao tiếp với mọi agent khác, cho phép giải quyết vấn đề cộng tác, phản biện và chuyển giao nhiệm vụ. **Mô hình phân cấp (hierarchical pattern)** kết hợp sự phối hợp chiến lược tập trung với việc thực thi chiến thuật phi tập trung, cung cấp cả sự giám sát và tính linh hoạt.
+
+### Phối hợp Hướng sự kiện (Event-Driven) cho Hệ thống Agent
+
+Các hệ thống agent có khả năng mở rộng hiện đại ngày càng sử dụng kiến trúc hướng sự kiện, nơi các agent giao tiếp thông qua các sự kiện có cấu trúc thay vì các cuộc gọi trực tiếp. Các sự kiện đóng vai trò là mô hình hoạt động chung—một ngôn ngữ chung cho phép các agent trao đổi thông tin, duy trì sự liên kết và phối hợp nhiệm vụ.
+
+Trong các hệ thống đa agent hướng sự kiện, các agent được thiết kế để phản ứng với các sự kiện và lệnh thay vì hành động cô lập. Các lợi ích chính bao gồm **sự phối hợp và đồng bộ hóa đáng tin cậy** mà không cần ghép nối chặt chẽ (tight coupling), **khả năng phục hồi thông qua các sự kiện có thể phát lại** cho phép khôi phục từ các lỗi, và **các mô hình tiêu thụ tinh vi** nơi nhiều agent có thể phản hồi cùng một sự kiện mà không gây nhầm lẫn. Cách tiếp cận này cải thiện đáng kể độ tin cậy của hệ thống trong các môi trường phức tạp, khó dự đoán.
+
+### Các Mẫu Thiết kế cho Quy trình làm việc của Agent (Agentic Workflows)
+
+Ngoài các mô hình kiến trúc, các mẫu thiết kế quy trình làm việc cụ thể giải quyết các thách thức chung:
+
+**Luồng có kiểm soát (Controlled Flows)** — Các trình tự được xác định trước với các điểm ra quyết định động thỉnh thoảng xuất hiện, cân bằng giữa cấu trúc và sự linh hoạt.
+
+**LLM làm bộ định tuyến (LLM as Router)** — Sử dụng một LLM để định tuyến thông minh các yêu cầu đến các trình xử lý thích hợp dựa trên phân tích nội dung.
+
+**Song song hóa (Parallelization)** — Nhiều agent hoặc công cụ làm việc đồng thời trên các nhiệm vụ phụ khác nhau, sau đó tổng hợp kết quả.
+
+**Suy ngẫm và Phản biện (Reflect and Critique)** — Các agent đánh giá và cải thiện đầu ra của chính họ trước khi trả về kết quả, thực hiện các cơ chế kiểm soát chất lượng.
+
+**Con người trong vòng lặp (Human in the Loop)** — Sự giám sát và phê duyệt chiến lược của con người tại các điểm quyết định quan trọng, đặc biệt quan trọng đối với các ứng dụng có rủi ro cao.
+
+Mô hình tối ưu phụ thuộc vào độ phức tạp của nhiệm vụ, độ tin cậy yêu cầu, cấu trúc quy trình làm việc và hậu quả của các lỗi.
+
+### Các Framework Triển khai
+
+Một số framework sản xuất hỗ trợ phát triển hệ thống agent:
+
+**LangChain** — Một framework dạng mô-đun với kiến trúc dựa trên thành phần (mô hình, prompt, bộ nhớ, chuỗi, agent, công cụ) cho phép các nhà phát triển hoán đổi các thành phần mà không cần viết lại toàn bộ ứng dụng. Nó có các mô hình lấy agent làm trung tâm cho việc sử dụng công cụ động, phân rã chuỗi suy nghĩ (chain-of-thought) để minh bạch hóa, hơn 100 trình tải tài liệu và tích hợp với LangSmith cho khả năng quan sát (observability) cấp độ sản xuất.
+
+**LangGraph** — Một framework có trạng thái (stateful) được xây dựng trên LangChain, mô hình hóa các quy trình làm việc dưới dạng đồ thị với các nút (công cụ, hàm, LLM) và các cạnh (vòng lặp, tuyến đường có điều kiện). LangGraph vượt trội trong quản lý trạng thái với tính năng checkpointing liên tục và gỡ lỗi theo thời gian (time-travel debugging), tích hợp con người trong vòng lặp với khả năng khởi động lại agent an toàn, và các kiểm soát sản xuất bao gồm rào chắn, thời gian chờ và quản lý đồng thời. Đối với các hệ thống đa agent phức tạp, LangGraph cung cấp bộ công cụ toàn diện nhất với sự tích hợp mạnh mẽ vào LangSmith để giám sát.
+
+**LlamaIndex** — Một framework tập trung vào dữ liệu được thiết kế cho các ứng dụng RAG và agent nâng cao sử dụng dữ liệu nội bộ. Nó cung cấp hơn 50 trình kết nối dữ liệu có sẵn, các đường ống nhập dữ liệu tinh vi và một module Workflow cho phép điều phối đa agent. Mặc dù không mạnh mẽ bằng LangGraph cho các hệ thống đa agent có trạng thái, nó vượt trội đối với các ứng dụng nặng về tài liệu.
+
+### Phương pháp luận Thiết kế Hệ thống
+
+Thiết kế hệ thống agent hiệu quả tuân theo cách tiếp cận lũy tiến:
+
+**Bắt đầu đơn giản** — Bắt đầu với các chuỗi đơn giản hoặc quy trình làm việc xác định. Các hệ thống đơn giản xây dựng nhanh hơn, dễ gỡ lỗi hơn và đủ cho nhiều trường hợp sử dụng.
+
+**Tăng dần độ phức tạp** — Khi các yêu cầu phát triển, giới thiệu logic gọi công cụ để ra quyết định động, cho phép agent thích ứng tại thời gian chạy (runtime).
+
+**Chuyển sang Đa Agent** — Chỉ áp dụng các mô hình đa agent khi bạn có các miền (domain) phân biệt rõ ràng, nhiều ngữ cảnh hội thoại hoặc bộ công cụ quá lớn để một agent đơn lẻ xử lý.
+
+Sự tiến triển này ngăn chặn việc thiết kế quá mức (over-engineering) trong khi vẫn cho phép khả năng mở rộng. Nhiều hệ thống trong thế giới thực kết hợp các mô hình—ví dụ, sử dụng hầu hết các chuỗi xác định với việc gọi công cụ dựa trên LLM động có chọn lọc cho các bước cụ thể.
+
+### Thiết kế Quy trình làm việc Hiệu quả
+
+Khi thiết kế quy trình làm việc cho agent, một số thực hành đảm bảo độ tin cậy và khả năng mở rộng:
+
+**Giữ quy trình làm việc dạng mô-đun và linh hoạt** — Cho phép bảo trì và cập nhật dễ dàng mà không gây ra lỗi dây chuyền trên toàn hệ thống.
+
+**Sử dụng API và định dạng dữ liệu chuẩn hóa** — Tạo điều kiện giao tiếp liền mạch giữa các agent và đảm bảo khả năng tương tác.
+
+**Triển khai giám sát và ghi nhật ký (logging)** — Theo dõi hiệu suất của agent, xác định các điểm tắc nghẽn và hỗ trợ gỡ lỗi trong môi trường sản xuất.
+
+**Trực quan hóa các tương tác** — Sử dụng lưu đồ, biểu đồ làn bơi (swimlane diagrams) hoặc biểu đồ máy trạng thái để ánh xạ các tương tác của agent và cây quyết định, làm cho các quy trình làm việc phức tạp trở nên dễ hiểu.
+
+### Độ tin cậy và Đánh giá
+
+Các hệ thống agent trong môi trường sản xuất yêu cầu các khung đánh giá nghiêm ngặt:
+
+**Các lĩnh vực đánh giá chính bao gồm:**
+
+**Truy vết phụ thuộc (Dependency tracing)** — Hiểu cách đầu ra của một agent ảnh hưởng đến hành vi và quyết định của agent tiếp theo.
+
+**Phân tích lan truyền lỗi (Error propagation analysis)** — Xác định nơi bắt nguồn lỗi và cách chúng lan truyền qua mạng lưới agent.
+
+**Điểm tin cậy giữa các agent (Inter-agent trust scoring)** — Đo lường độ tin cậy của từng agent cá nhân và đánh giá ảnh hưởng của chúng đối với việc hoàn thành nhiệm vụ tổng thể.
+
+**Kiểm thử khả năng phục hồi quy trình (Workflow resilience testing)** — Mô phỏng các lỗi và gián đoạn để đánh giá sự mạnh mẽ và khả năng phục hồi của hệ thống.
+
+### Những Thách thức Chính trong việc Mở rộng Hệ thống Agent
+
+Khi các hệ thống agent phát triển, một số thách thức quan trọng xuất hiện:
+
+**Chi phí Phối hợp và Giao tiếp** — Các hệ thống đa agent yêu cầu cơ chế đồng bộ hóa phức tạp. Khi số lượng agent tăng lên, các mô hình giao tiếp phải được tối ưu hóa, các hành vi nảy sinh (emergent behaviors) xuất hiện và các cấu trúc phân cấp trở nên cần thiết.
+
+**Phân bổ tài nguyên** — Quản lý tài nguyên tính toán, ngân sách gọi API và việc sử dụng token trên nhiều agent hoạt động đồng thời đòi hỏi quản lý tài nguyên tinh vi.
+
+**Vấn đề Bảo mật và Tin cậy** — Các lỗ hổng bảo mật nhân lên trong các triển khai lớn. Các agent đưa ra quyết định tự chủ ở quy mô lớn làm dấy lên lo ngại về bảo mật đối với các hành động trái phép, lộ dữ liệu và xâm phạm hệ thống.
+
+**Độ phức tạp Kiến trúc** — Các hành vi nảy sinh xuất hiện mà không thể dự đoán được từ các quy tắc của từng agent riêng lẻ. Sự bùng nổ tổ hợp của các tương tác có thể xảy ra khiến việc kiểm thử toàn diện là không thể, đòi hỏi các phương pháp thống kê và mô phỏng. Nợ kỹ thuật tích lũy nhanh chóng khi các phụ thuộc nhân lên.
+
+**Độ phức tạp theo Quy mô Hệ thống** — Các hệ thống nhỏ (<10 agent) có thể sử dụng giao tiếp trực tiếp, nhưng các hệ thống trung bình (10-100 agent) yêu cầu tối ưu hóa, các hệ thống lớn (100-1000 agent) cần cấu trúc phân cấp, và các hệ thống rất lớn (1000+ agent) yêu cầu các thuật toán phối hợp phức tạp.
+
+### Các Thực hành Tốt nhất cho Thiết kế Hiệu quả
+
+**Phối hợp Tin cậy** — Đảm bảo các agent giao tiếp thông qua các cơ chế được xác định rõ ràng, có khả năng chịu lỗi. Kiến trúc hướng sự kiện cung cấp khả năng phục hồi tự nhiên thông qua khả năng phát lại (replay).
+
+**Giám sát sự Chồng chéo của Agent** — Ngăn chặn sự dư thừa và nhầm lẫn bằng cách giám sát các miền kiến thức và phạm vi hành động giữa các agent. Tái cấu trúc hoặc nhóm các agent tương tự dưới các giao diện chung.
+
+**Quản trị ở Quy mô lớn** — Giới thiệu các giám sát viên agent (agent supervisors) khi kiến trúc phát triển qua các miền. Sử dụng tổ chức phân cấp (giám sát viên → nhóm agent) để duy trì sự rõ ràng và dễ dàng giải quyết ý định.
+
+**Cải tiến Lũy tiến (Progressive Enhancement)** — Bắt đầu với các mẫu đơn giản hơn và chỉ tăng độ phức tạp khi được chứng minh là cần thiết. Các phương pháp lai (kết hợp các yếu tố tập trung và phi tập trung) thường cung cấp sự cân bằng tối ưu.
+
+**Kiểm thử và Đánh giá** — Triển khai các đường ống đánh giá liên tục với các framework như tích hợp LangSmith để theo dõi hiệu suất của agent, mức tiêu thụ tài nguyên và hành vi hệ thống qua các quy trình làm việc phức tạp.
+
+Thiết kế hệ thống agent đang phát triển nhanh chóng khi các tổ chức chuyển từ các chuỗi đơn giản sang các kiến trúc đa agent tinh vi. Chìa khóa là khớp độ phức tạp của kiến trúc với các yêu cầu thực tế trong khi duy trì khả năng quan sát, độ tin cậy và khả năng bảo trì trong suốt vòng đời hệ thống.
+
+<span style="display:none"></span>
+
+<div align="center">⁂</div>
+
+---
+
+# Visulize 
+Dựa trên nội dung rất chi tiết và chuyên sâu về **Agent System Design** mà bạn cung cấp, tôi sẽ chuyển hóa chúng thành các sơ đồ Mermaid để trực quan hóa các khái niệm từ thành phần cốt lõi đến kiến trúc tổng thể.
+
+Chúng ta sẽ chia làm 4 sơ đồ chính để bao quát toàn bộ nội dung:
+
+1. **Anatomy of an Agent:** Cấu trúc bên trong của một Agent.
+    
+2. **Architectural Patterns:** Sự tiến hóa từ Chain đơn giản đến Multi-Agent.
+    
+3. **Event-Driven Architecture:** Mô hình phối hợp hướng sự kiện cho hệ thống lớn.
+    
+4. **System Design Methodology:** Quy trình tư duy thiết kế từ đơn giản đến phức tạp.
+    
+
+---
+
+### 1. Cấu trúc Cốt lõi của một Agent (Core Components)
+
+Sơ đồ này mô tả "The Brain" (Model), "Tools", "Instructions" và các module mở rộng như Memory và Planning.
+
+Đoạn mã
+
+```mermaid
+graph TD
+    subgraph Context [Environment / User]
+        User((User Request))
+        ExtSys[External Systems]
+    end
+
+    subgraph Agent_System [Agent System Core Components]
+        direction TB
+        
+        Orch[Execution Framework / Control Loop]
+        
+        subgraph Brain [The Brain]
+            LLM[LLM / Reasoning Engine]
+        end
+        
+        subgraph Knowledge [Memory & Context]
+            STM[(Short-term Memory\nConversation History)]
+            LTM[(Long-term Memory\nVector DB / RAG)]
+        end
+        
+        subgraph Guidance [Instructions & Safety]
+            Prompt[System Prompts]
+            Guard[Guardrails / Ethics]
+        end
+        
+        subgraph Actions [Tools & Perception]
+            Tools[Tools / APIs / Functions]
+            Plan[Planning / Decomposition]
+        end
+    end
+
+    %% Flow
+    User --> Orch
+    Orch <-->|Context & History| STM
+    Orch <-->|Retrieval| LTM
+    Orch -->|Prompt & Context| LLM
+    LLM -->|Decision / Plan| Orch
+    Orch -->|Validation| Guard
+    Orch -->|Execution| Tools
+    Tools <--> ExtSys
+    Orch -->|Final Response| User
+
+    %% Styling
+    classDef brain fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef core fill:#e1f5fe,stroke:#0277bd,stroke-width:2px;
+    classDef storage fill:#fff9c4,stroke:#fbc02d,stroke-width:2px;
+    class LLM brain;
+    class Orch,Tools,Plan core;
+    class STM,LTM storage;
+```
+
+---
+
+### 2. Các Mô hình Kiến trúc (Architectural Patterns)
+
+Sơ đồ này so sánh 3 cấp độ: Deterministic Chain (Cứng), Single Agent (Linh hoạt), và Multi-Agent Orchestration (Phân tán).
+
+Đoạn mã
+
+```mermaid
+flowchart TB
+    subgraph Pattern1 [1. Deterministic Chain]
+        direction LR
+        Step1[Input] --> Step2[Step A] --> Step3[Step B] --> Step4[Output]
+        style Pattern1 fill:#f9f9f9,stroke:#999,stroke-dasharray: 5 5
+    end
+
+    subgraph Pattern2 [2. Single-Agent System]
+        direction TB
+        SA_Input(Task) --> SA_Reason[LLM Reasoning]
+        SA_Reason -- "Decide Tool" --> SA_Tool[Execute Tool]
+        SA_Tool -- "Observation" --> SA_Reason
+        SA_Reason -- "Complete" --> SA_Output(Final Answer)
+    end
+
+    subgraph Pattern3 [3. Multi-Agent System (Orchestrator)]
+        direction TB
+        MA_Input(Complex Goal) --> Router{Orchestrator / Router}
+        
+        Router -->|Domain: Support| AgentA[Support Agent]
+        Router -->|Domain: Analytics| AgentB[Data Analyst Agent]
+        Router -->|Domain: Ops| AgentC[Ops Agent]
+        
+        AgentA <--> ToolsA[CRM Tools]
+        AgentB <--> ToolsB[SQL / Python]
+        AgentC <--> ToolsC[APIs]
+        
+        AgentA & AgentB & AgentC -->|Result| Router
+        Router --> MA_Output(Synthesized Response)
+    end
+
+    %% Connect patterns logically (conceptual flow)
+    Pattern1 -.->|Complexity Increases| Pattern2
+    Pattern2 -.->|Scale Increases| Pattern3
+```
+
+---
+
+### 3. Hệ thống Đa Agent Hướng Sự kiện (Event-Driven Coordination)
+
+Đây là mô hình hiện đại cho các hệ thống lớn (Scalable Agent Systems), nơi các Agent không gọi nhau trực tiếp mà giao tiếp qua Event Bus để đảm bảo tính "Decoupled" và "Resilience".
+
+Đoạn mã
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant EventBus as Event Bus / Message Broker
+    participant AgentA as Agent A (Triager)
+    participant AgentB as Agent B (Researcher)
+    participant AgentC as Agent C (Writer)
+
+    User->>EventBus: Event: New_Request_Received
+    
+    rect rgb(240, 248, 255)
+        Note over EventBus, AgentA: Decoupled Coordination
+        EventBus->>AgentA: Consume: New_Request
+        AgentA->>AgentA: Analyze Intent
+        AgentA->>EventBus: Publish: Intent_Classified (Research_Needed)
+    end
+    
+    rect rgb(255, 240, 245)
+        Note over EventBus, AgentB: Parallel Processing capability
+        EventBus->>AgentB: Consume: Intent_Classified
+        AgentB->>AgentB: Search Web / Query DB
+        AgentB->>EventBus: Publish: Data_Gathered
+    end
+
+    rect rgb(230, 255, 230)
+        EventBus->>AgentC: Consume: Data_Gathered
+        AgentC->>AgentC: Draft Content
+        AgentC->>EventBus: Publish: Task_Completed
+    end
+
+    EventBus->>User: Final Response
+```
+
+---
+
+### 4. Quy trình Thiết kế & Phương pháp luận (System Design Methodology)
+
+Mô hình hóa quy trình "Start Simple -> Scale" và các yếu tố đánh giá (Evaluation) như trong tài liệu đề cập.
+
+Đoạn mã
+
+```mermaid
+graph TD
+    Start((Start)) --> Phase1[Phase 1: Deterministic]
+    
+    subgraph P1 [Simple & Predictable]
+        Phase1 --> HardCoded[Hard-Coded Chains]
+        HardCoded --> Valid1{Requirements met?}
+    end
+    
+    Valid1 -- No --> Phase2[Phase 2: Dynamic Single Agent]
+    
+    subgraph P2 [Flexible Reasoning]
+        Phase2 --> ToolUse[Add Tool Calling]
+        ToolUse --> Reflection[Add Reflect & Critique]
+        Reflection --> Valid2{Too complex / Context limit?}
+    end
+    
+    Valid2 -- Yes --> Phase3[Phase 3: Multi-Agent]
+    
+    subgraph P3 [Scalable & Specialized]
+        Phase3 --> Decompose[Decompose Domains]
+        Decompose --> ChoosePattern{Choose Pattern}
+        ChoosePattern -->|Control| Centralized[Centralized Orchestrator]
+        ChoosePattern -->|Collaboration| Swarm[Swarm / Mesh]
+        ChoosePattern -->|Hybrid| Hierarchical[Hierarchical Supervisor]
+        
+        Centralized & Swarm & Hierarchical --> EventDriven[Event-Driven Architecture]
+    end
+
+    subgraph Eval [Evaluation & Reliability]
+        Trace[Dependency Tracing]
+        Trust[Inter-agent Trust Scoring]
+        Resil[Resilience Testing]
+    end
+
+    P3 -.-> Eval
+    
+    style Start fill:#000,stroke:#fff,color:#fff
+    style Phase1 fill:#e0e0e0
+    style Phase2 fill:#b3e5fc
+    style Phase3 fill:#c8e6c9
+```
+
+### Tóm tắt các biểu đồ:
+
+1. **Sơ đồ 1** giúp người dùng hình dung "bộ phận cơ thể" của một con AI Agent.
+    
+2. **Sơ đồ 2** cho thấy bức tranh toàn cảnh về các lựa chọn kiến trúc (từ đơn giản đến phức tạp).
+    
+3. **Sơ đồ 3** đi sâu vào cách các Agent nói chuyện với nhau trong môi trường Enterprise (tránh việc gọi chéo gây rối).
+    
+4. **Sơ đồ 4** là kim chỉ nam (roadmap) cho dev: Đừng vội làm phức tạp, hãy đi từ Chain -> Single -> Multi.
+
+---
+
+
+# P2 : MANUS - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent
 
 **Tác giả:** Manus AI
 **Phiên bản:** 1.0
@@ -90,6 +724,252 @@ graph LR
     Action --> Perception;
     Governance -- Monitors & Controls --> Cognition;
     Governance -- Monitors & Controls --> Action;
+```
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#e3f2fd','primaryTextColor':'#000','primaryBorderColor':'#1976d2','lineColor':'#546e7a','secondaryColor':'#fff9c4','tertiaryColor':'#c8e6c9','fontSize':'14px'}}}%%
+flowchart TB
+    %% External entities
+    User(["👨‍💻 USER INPUT<br/>Text | Voice | Image | Video"])
+    
+    %% ========== PERCEPTION LAYER ==========
+    subgraph PERCEPTION["🔍 PERCEPTION LAYER - Thu thập & Chuẩn hóa Context"]
+        direction TB
+        
+        subgraph IP["📥 INPUT PROCESSOR"]
+            direction TB
+            IP1["🎭 Modality Handler<br/>────────<br/>• Speech-to-Text<br/>• Vision Model<br/>• File Parser"]
+            IP2["🛡️ Validation & Sanitization<br/>────────<br/>• Format Check<br/>• Prompt Injection Defense<br/>• Malicious Code Filter"]
+            IP3["⚙️ Normalization<br/>────────<br/>• Unified Format<br/>• ISO Standards<br/>• JSON Structure"]
+            IP1 --> IP2 --> IP3
+        end
+        
+        subgraph EM["🌍 ENVIRONMENT MONITOR"]
+            direction TB
+            EM1["📊 State Tracking<br/>────────<br/>• Time & Location<br/>• Order Status<br/>• API States"]
+            EM2["🔄 Update Mechanism<br/>────────<br/>• Real-time (WebSocket)<br/>• Periodic (Polling)<br/>• Event-driven"]
+            EM3["🚨 Event Detection<br/>────────<br/>• Change Detection<br/>• Trigger System<br/>• Alert Generation"]
+            EM1 --> EM2 --> EM3
+        end
+        
+        IP ~~~ EM
+    end
+    
+    %% ========== COGNITION LAYER ==========
+    subgraph COGNITION["🧠 COGNITION LAYER - Suy luận, Lập kế hoạch & Ghi nhớ"]
+        direction TB
+        
+        subgraph RE["💡 REASONING ENGINE"]
+            direction TB
+            RE1["🎯 Model Selection<br/>────────<br/>• GPT-4o (Complex)<br/>• GPT-4o-mini (Simple)<br/>• Fine-tuned Models"]
+            RE2["📝 Prompt Architecture<br/>────────<br/>• System Prompt<br/>• Few-Shot Examples<br/>• Context Injection"]
+            RE3["🔗 Reasoning Patterns<br/>────────<br/>• Chain-of-Thought<br/>• ReAct (Reason+Act)<br/>• Tree of Thoughts"]
+            RE1 --> RE2 --> RE3
+        end
+        
+        subgraph PM["📋 PLANNING MODULE"]
+            direction TB
+            PM1["🧩 Task Decomposition<br/>────────<br/>• Break into Subtasks<br/>• Define Dependencies<br/>• Set Priorities"]
+            PM2["📐 Plan Representation<br/>────────<br/>• Sequential List<br/>• DAG (Parallel)<br/>• State Machine"]
+            PM3["🔄 Dynamic Replanning<br/>────────<br/>• Failure Detection<br/>• Alternative Routes<br/>• Adaptive Strategy"]
+            PM1 --> PM2 --> PM3
+        end
+        
+        subgraph MS["💾 MEMORY SYSTEM"]
+            direction TB
+            MS1["⚡ Short-Term Memory<br/>────────<br/>• Context Window<br/>• Current Session<br/>• Redis Cache"]
+            MS2["🗄️ Long-Term Memory<br/>────────<br/>• Vector DB (RAG)<br/>• User Preferences<br/>• Knowledge Base"]
+            MS1 -.->|Session Data| MS2
+        end
+        
+        RE --> PM
+        PM -.->|Query| MS
+        MS -.->|Context| RE
+    end
+    
+    %% ========== ACTION LAYER ==========
+    subgraph ACTION["⚡ ACTION LAYER - Thực thi & Quan sát"]
+        direction TB
+        
+        subgraph TL["🔧 TOOL & FUNCTION LIBRARY"]
+            direction TB
+            TL1["📚 Tool Definition<br/>────────<br/>• Function Name<br/>• Docstring<br/>• Pydantic Schema"]
+            TL2["🔨 Tool Types<br/>────────<br/>• Python Functions<br/>• External APIs<br/>• Sub-Agents"]
+            TL3["📦 Versioning & Management<br/>────────<br/>• Version Control<br/>• API Compatibility<br/>• Registry System"]
+            TL1 --> TL2 --> TL3
+        end
+        
+        subgraph EE["🚀 EXECUTION ENGINE"]
+            direction TB
+            EE1["📞 Tool Invocation<br/>────────<br/>• Function Calls<br/>• API Requests<br/>• Parameter Binding"]
+            EE2["🔧 Error Handling<br/>────────<br/>• Try-Catch Logic<br/>• Exponential Backoff<br/>• Circuit Breaker"]
+            EE3["⚙️ Advanced Features<br/>────────<br/>• Timeout Control<br/>• Concurrent Execution<br/>• Result Parsing"]
+            EE1 --> EE2 --> EE3
+        end
+        
+        TL -.->|Provide Tools| EE
+    end
+    
+    %% ========== GOVERNANCE LAYER ==========
+    subgraph GOVERNANCE["🛡️ GOVERNANCE LAYER - Giám sát, Kiểm soát & An toàn"]
+        direction TB
+        
+        subgraph GR["⚖️ GUARDRAILS & SAFETY"]
+            direction TB
+            GR1["🛡️ Input/Output Filtering<br/>────────<br/>• Prompt Injection Defense<br/>• PII Protection<br/>• Content Moderation"]
+            GR2["🔐 Access Control<br/>────────<br/>• RBAC (Role-Based)<br/>• Tool Permissions<br/>• Privilege Management"]
+            GR3["💰 Resource Monitoring<br/>────────<br/>• Token Budget<br/>• API Rate Limits<br/>• Cost Tracking"]
+            GR1 --> GR2 --> GR3
+        end
+        
+        subgraph HITL["👤 HUMAN-IN-THE-LOOP"]
+            direction TB
+            HITL1["🛑 Checkpoint Definition<br/>────────<br/>• Critical Actions<br/>• Low Confidence<br/>• High Cost"]
+            HITL2["🖥️ Review Interface<br/>────────<br/>• Approve/Reject UI<br/>• Plan Visualization<br/>• Edit Parameters"]
+            HITL3["🔺 Escalation Paths<br/>────────<br/>• Expert Routing<br/>• Failure Handling<br/>• Manual Override"]
+            HITL1 --> HITL2 --> HITL3
+        end
+        
+        GR ~~~ HITL
+    end
+    
+    %% Final output
+    Output(["📤 FINAL OUTPUT<br/>Action Results | Response"])
+    
+    %% ========== MAIN FLOW ==========
+    User -->|Raw Input| PERCEPTION
+    PERCEPTION -->|Normalized Context<br/>+ Environment State| COGNITION
+    COGNITION -->|Action Plan<br/>+ Tool Selection| ACTION
+    ACTION -->|Execution Results<br/>+ Observations| PERCEPTION
+    ACTION -->|Preliminary Output| GOVERNANCE
+    GOVERNANCE -->|Validated Output| Output
+    
+    %% ========== GOVERNANCE MONITORING ==========
+    GOVERNANCE -.->|Monitor Reasoning<br/>& Planning| COGNITION
+    GOVERNANCE -.->|Control Execution<br/>& Tool Access| ACTION
+    HITL -.->|Human Approval<br/>for Critical Actions| Output
+    
+    %% ========== STYLING ==========
+    
+    %% Layer styling
+    style PERCEPTION fill:#e3f2fd,stroke:#1976d2,stroke-width:4px,color:#000
+    style COGNITION fill:#fff9c4,stroke:#f57f00,stroke-width:4px,color:#000
+    style ACTION fill:#c8e6c9,stroke:#388e3c,stroke-width:4px,color:#000
+    style GOVERNANCE fill:#ffccbc,stroke:#d84315,stroke-width:4px,color:#000
+    
+    %% Perception components
+    style IP fill:#bbdefb,stroke:#1565c0,stroke-width:3px,color:#000
+    style EM fill:#bbdefb,stroke:#1565c0,stroke-width:3px,color:#000
+    style IP1 fill:#90caf9,stroke:#0d47a1,stroke-width:2px
+    style IP2 fill:#90caf9,stroke:#0d47a1,stroke-width:2px
+    style IP3 fill:#90caf9,stroke:#0d47a1,stroke-width:2px
+    style EM1 fill:#90caf9,stroke:#0d47a1,stroke-width:2px
+    style EM2 fill:#90caf9,stroke:#0d47a1,stroke-width:2px
+    style EM3 fill:#90caf9,stroke:#0d47a1,stroke-width:2px
+    
+    %% Cognition components
+    style RE fill:#fff59d,stroke:#f57c00,stroke-width:3px,color:#000
+    style PM fill:#fff59d,stroke:#f57c00,stroke-width:3px,color:#000
+    style MS fill:#fff59d,stroke:#f57c00,stroke-width:3px,color:#000
+    style RE1 fill:#fff176,stroke:#e65100,stroke-width:2px
+    style RE2 fill:#fff176,stroke:#e65100,stroke-width:2px
+    style RE3 fill:#fff176,stroke:#e65100,stroke-width:2px
+    style PM1 fill:#fff176,stroke:#e65100,stroke-width:2px
+    style PM2 fill:#fff176,stroke:#e65100,stroke-width:2px
+    style PM3 fill:#fff176,stroke:#e65100,stroke-width:2px
+    style MS1 fill:#fff176,stroke:#e65100,stroke-width:2px
+    style MS2 fill:#fff176,stroke:#e65100,stroke-width:2px
+    
+    %% Action components
+    style TL fill:#a5d6a7,stroke:#2e7d32,stroke-width:3px,color:#000
+    style EE fill:#a5d6a7,stroke:#2e7d32,stroke-width:3px,color:#000
+    style TL1 fill:#81c784,stroke:#1b5e20,stroke-width:2px
+    style TL2 fill:#81c784,stroke:#1b5e20,stroke-width:2px
+    style TL3 fill:#81c784,stroke:#1b5e20,stroke-width:2px
+    style EE1 fill:#81c784,stroke:#1b5e20,stroke-width:2px
+    style EE2 fill:#81c784,stroke:#1b5e20,stroke-width:2px
+    style EE3 fill:#81c784,stroke:#1b5e20,stroke-width:2px
+    
+    %% Governance components
+    style GR fill:#ffab91,stroke:#bf360c,stroke-width:3px,color:#000
+    style HITL fill:#ffab91,stroke:#bf360c,stroke-width:3px,color:#000
+    style GR1 fill:#ff8a65,stroke:#bf360c,stroke-width:2px
+    style GR2 fill:#ff8a65,stroke:#bf360c,stroke-width:2px
+    style GR3 fill:#ff8a65,stroke:#bf360c,stroke-width:2px
+    style HITL1 fill:#ff8a65,stroke:#bf360c,stroke-width:2px
+    style HITL2 fill:#ff8a65,stroke:#bf360c,stroke-width:2px
+    style HITL3 fill:#ff8a65,stroke:#bf360c,stroke-width:2px
+    
+    %% External entities
+    style User fill:#e1bee7,stroke:#6a1b9a,stroke-width:3px,color:#000
+    style Output fill:#aed581,stroke:#33691e,stroke-width:3px,color:#000
+```
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#e3f2fd','fontSize':'15px'}}}%%
+flowchart TB
+    User(["👨‍💻 USER<br/>Input"])
+    
+    subgraph P1["🔍 PERCEPTION LAYER"]
+        direction LR
+        P1A["📥 Input Processor<br/>━━━━━━━━━<br/>🎭 Modality Handler<br/>🛡️ Validation<br/>⚙️ Normalization"]
+        P1B["🌍 Environment Monitor<br/>━━━━━━━━━<br/>📊 State Tracking<br/>🔄 Updates<br/>🚨 Events"]
+        P1A ~~~ P1B
+    end
+    
+    subgraph P2["🧠 COGNITION LAYER"]
+        direction LR
+        P2A["💡 Reasoning Engine<br/>━━━━━━━━━<br/>🎯 Model Selection<br/>📝 Prompt Design<br/>🔗 CoT/ReAct"]
+        P2B["📋 Planning Module<br/>━━━━━━━━━<br/>🧩 Decomposition<br/>📐 DAG/Sequential<br/>🔄 Replanning"]
+        P2C["💾 Memory<br/>━━━━━━━━━<br/>⚡ Short-term<br/>🗄️ Long-term"]
+        P2A --> P2B
+        P2B -.-> P2C
+        P2C -.-> P2A
+    end
+    
+    subgraph P3["⚡ ACTION LAYER"]
+        direction LR
+        P3A["🔧 Tool Library<br/>━━━━━━━━━<br/>📚 Definitions<br/>🔨 Functions/APIs<br/>📦 Versioning"]
+        P3B["🚀 Execution Engine<br/>━━━━━━━━━<br/>📞 Invocation<br/>🔧 Error Handling<br/>⚙️ Concurrency"]
+        P3A -.-> P3B
+    end
+    
+    subgraph P4["🛡️ GOVERNANCE LAYER"]
+        direction LR
+        P4A["⚖️ Guardrails<br/>━━━━━━━━━<br/>🛡️ I/O Filter<br/>🔐 RBAC<br/>💰 Budget"]
+        P4B["👤 HITL<br/>━━━━━━━━━<br/>🛑 Checkpoints<br/>🖥️ Review UI<br/>🔺 Escalation"]
+        P4A ~~~ P4B
+    end
+    
+    Output(["📤 OUTPUT"])
+    
+    User --> P1
+    P1 -->|Context| P2
+    P2 -->|Plan| P3
+    P3 -->|Results| P1
+    P3 --> P4
+    P4 --> Output
+    
+    P4 -.->|Monitor| P2
+    P4 -.->|Control| P3
+    
+    style P1 fill:#e3f2fd,stroke:#1976d2,stroke-width:4px
+    style P2 fill:#fff9c4,stroke:#f57f00,stroke-width:4px
+    style P3 fill:#c8e6c9,stroke:#388e3c,stroke-width:4px
+    style P4 fill:#ffccbc,stroke:#d84315,stroke-width:4px
+    
+    style P1A fill:#90caf9,stroke:#0d47a1,stroke-width:2px
+    style P1B fill:#90caf9,stroke:#0d47a1,stroke-width:2px
+    style P2A fill:#fff176,stroke:#e65100,stroke-width:2px
+    style P2B fill:#fff176,stroke:#e65100,stroke-width:2px
+    style P2C fill:#fff176,stroke:#e65100,stroke-width:2px
+    style P3A fill:#81c784,stroke:#1b5e20,stroke-width:2px
+    style P3B fill:#81c784,stroke:#1b5e20,stroke-width:2px
+    style P4A fill:#ff8a65,stroke:#bf360c,stroke-width:2px
+    style P4B fill:#ff8a65,stroke:#bf360c,stroke-width:2px
+    
+    style User fill:#e1bee7,stroke:#6a1b9a,stroke-width:3px
+    style Output fill:#aed581,stroke:#33691e,stroke-width:3px
 ```
 
 Bây giờ, chúng ta sẽ đi sâu vào từng thành phần trong mỗi lớp.
@@ -1791,3 +2671,13 @@ Giờ đây, bạn đã có một "bản đồ" chi tiết. Phần còn lại ph
 ---
 
 *Tài liệu này được cập nhật lần cuối vào ngày 13/12/2025. Lĩnh vực Agentic AI đang phát triển nhanh chóng, vì vậy hãy thường xuyên kiểm tra các nguồn tham khảo để cập nhật những phát triển mới nhất.*
+
+
+
+---
+
+# Demo 
+```mermaid
+
+```
+
