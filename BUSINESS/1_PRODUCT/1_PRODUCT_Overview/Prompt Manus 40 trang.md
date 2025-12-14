@@ -1,10 +1,21 @@
-# 1. 
-
-1. ....
+# 1. Output : Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ  -
 ```
 Xem hết các link tài liệu tôi gửi trong file pasted_content_3.txt Hoàn thiện check list sau: 1. Vẽ luồng mô tả 1 hệ thống Agent đơn giản nhưng được sử dụng trong các bài toán thực tế 2. Vẽ luồng mô tả 1 hệ thống Agent siêu phức tạp được dùng bởi các công ty lớn trong bài toán thực tế. Agent system design 3. 1 road giải thích chi tiết toàn bộ về Agent System Design từ đơn giản đến phức tạp bằng tiếng việt output: 40 trang siêu chi tiết từng phần (Đếm đủ 40 trang chi tiết chưa nhé) MECE TOÀN BỘ CÁC VẤN ĐỀ QUAN TRỌNG NHẤT CỦA AGENT SYSTEM DESIGN hãy giải đáp hết.
 ```
 
+
+# 2. 2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus
+
+```
+Đây là tài liệu cô đọng về việc production quality cho 1 sản phẩm AI, 1 sản phẩm software 
+Tuy nhiên các đầu mục hiện tại đang rất cô đọng, chưa chi tiết, khó cho người mới như tôi hiểu. 
+
+Tôi cần bạn viết chi tiết từng phần lấy ví dụ cụ thể để 1 người mới level Intern AI Engineer có thể hiểu và dựa vào tài liệu có thể tự triển khai được toàn bộ 1 hệ thống production quality. 
+Bạn cần hoàn thành checklist sau: 
+1. Bám sát tài liệu đọc hiểu chi tiết từng phần và chuẩn bị nội dung chi tiết cho từng phần 
+2. MECE để xem tài liệu còn thiếu gì không
+3. VIết chi tiết để ra tài liệu final => Output là 1 tài liệu markdown chi tiết và siêu chi tiết lên tới 100 trang, được coi là cuốn ALL IN ONE cho việc thiết kế sản phẩm produciton quality về mặt Engineer. 
+```
 
 ```
 Đây là source code của 1 hệ thống agent của robot 1. Đọc chi tiết toàn bộ source code trên, reasoning về nó 2. Đọc folder robot để hiểu bối cảnh bài toán và lên High Level Design 3. OUTPUT: Viết 1 tài liệu chi tiết 40 trang về High level design 1 tài liệu chi tiết 40 trang về low level design của hệ thống này
@@ -20,16 +31,6 @@ output: 40 trang siêu chi tiết từng phần (Đếm đủ 40 trang chi tiế
 3. OUTPUT: Viết 1 tài liệu chi tiết 40 trang về nó để diễn giải cho 1 Product Intern có thể hiểu sâu và hiểu thật chi tiết. output: 40 trang siêu chi tiết từng phần (Đếm đủ 40 trang chi tiết chưa nhé) 
 ```
 
-```
-Đây là tài liệu cô đọng về việc production quality cho 1 sản phẩm AI, 1 sản phẩm software 
-Tuy nhiên các đầu mục hiện tại đang rất cô đọng, chưa chi tiết, khó cho người mới như tôi hiểu. 
-
-Tôi cần bạn viết chi tiết từng phần lấy ví dụ cụ thể để 1 người mới level Intern AI Engineer có thể hiểu và dựa vào tài liệu có thể tự triển khai được toàn bộ 1 hệ thống production quality. 
-Bạn cần hoàn thành checklist sau: 
-1. Bám sát tài liệu đọc hiểu chi tiết từng phần và chuẩn bị nội dung chi tiết cho từng phần 
-2. MECE để xem tài liệu còn thiếu gì không
-3. VIết chi tiết để ra tài liệu final => Output là 1 tài liệu markdown chi tiết và siêu chi tiết lên tới 100 trang, được coi là cuốn ALL IN ONE cho việc thiết kế sản phẩm produciton quality về mặt Engineer. 
-```
 
 5. Tài liệu tracing langfuse - 305 credit (đây là tính cả bước đầu linh tinh mất 50-100 credits) - 14122025
 
@@ -399,3 +400,39 @@ SPECIAL REQUIREMENTS:
 ```
 
 
+
+
+---
+# 6. start Từ 1238 tín
+
+```
+Tôi gửi bạn 
+1. Kiến trúc module 1, 2, 3 theo thiết kế ban đầu của chúg tôi, cơ mà chưa ngon lắm. (bao gồm: Overview 6 modules, kiến trúc stage1, 2, 3, 4, ...)
+Chứng tôi đang muốn update, refactor lại . 
+2. Tôi cần chuyển sang thiết kế dạng Agent để có thể mở rộng
+(tôi gửi bạn: tài liệu về agent : Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ  -.md)
+3. Bài toán của chúng tôi là bài : Web Browser AI Agent - Đọc chi tiết: 1.6 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md để hiểu bài toán. 
++, Tài liệu về web browser AI AGent giống với Commet AI Asistant của Perlexity
++, Đọc file: 2.3 STAGE 3 - tool xử lý web - Spec MVP Trích xuất A11y or AX Tree → SnapshotV1  Context cho Agent.md , 2.3 STAGE 3 - Web Browser Architecture – Deep Research & Browser Agent Case Study.md
+, 2.4 STAGE 4 - Tool Registry Spec (User cá nhân) — Agentic Comet-like Browser (v2).md
+, 2.3 STAGE 3 - tool xử lý web - Spec MVP Trích xuất A11y or AX Tree → SnapshotV1  Context cho Agent.md
+4. Tôi muốn code bằng Langchain, Langgraph
++, Tôi gửi bạn: source code 1 dự án của langchain langgraph tôi đã làm thực tế 
+
+
+TÔI CẦN BẠN HOÀN THÀNH CHECKLIST SAU
+1. Đọc kỹ toàn bộ để hiểu bài toán và cách tôi đang xử lý 
+2. DEEP RESEARCH VÀ MECE, VÉT CẠN TOÀN BỘ CÁC GIẢI PHÁP TRÊN THẾ GIỚI 
+3. ĐÁNH GIÁ CÁC GIẢI PHÁP VÀ CHỌN RA BEST PRACTICES CHO BÀI TOÁN CỦA TÔI 
+4. LÊN TÀI LIỆU SIÊU CHI TIẾT
++, TÀI LIỆU 50 TRANG VỀ SYSTEM ARCHITECT, HIGH LEVEL DESIGN - TIÊU CHUẨN PRODUCTION QUALITY về toàn bộ dự án . 
+(Bạn có thể tham khảo file này củ tôi: 2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025) và tài liệu 2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md
+(nhớ đủ 50 trang)
++, Tài liệu 100 trang về Low level design CŨNG CHUẨN PRODUCTION QUALITY (gồm folder structure và toàn bộ các code dùng thật được cho dự án) framework Langchai, langgraph, langfuse, BE python, ... 
+(nhớ thật chi tiết đủ 100 trang chuẩn production quality)
+
+Output format:markdown
+```
+
+1330: Sau khi ấn enter và AI đọc sau đó dừng lại hỏi => mất 100 tken
+1505: mất 150 token để ra PHASE 1 có vài trang về best practices dự án?? KO DÙNG ĐƯỢC. 
