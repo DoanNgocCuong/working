@@ -1,4 +1,4 @@
-# 1. 
+# 1. Prompt 1
 
 ## 1.1 Tài liệu 1: 
 **CHÍNH XÁC.** Bạn đã xác định đúng **2 bài toán "đỉnh cao" (State-of-the-Art)** đại diện cho hai thái cực quan trọng nhất của AI Agent hiện nay trong môi trường số (Digital World).
