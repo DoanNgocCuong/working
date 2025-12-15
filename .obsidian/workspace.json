@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/01-architecture/Overview 1.2 - Tài liệu đọc thêm -  Lớp học Chuyên sâu về Kiến trúc Hệ thống Agent.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.1 v2 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Overview 1.2 - Tài liệu đọc thêm -  Lớp học Chuyên sâu về Kiến trúc Hệ thống Agent"
+              "title": "2.0.1.1 v2 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY 1"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: agent",
+                "query": "file Fallback, Timeout, Alert)",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/01-architecture/Overview 1.2 - Tài liệu đọc thêm -  Lớp học Chuyên sâu về Kiến trúc Hệ thống Agent.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.1 v2 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY 1.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Overview 1.2 - Tài liệu đọc thêm -  Lớp học Chuyên sâu về Kiến trúc Hệ thống Agent"
+              "title": "Outline of 2.0.1.1 v2 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY 1"
             }
           }
         ],
@@ -170,10 +170,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "713cd6b2a5063e31",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/04-ai-agents.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.1 v1 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.1 v2 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY 1.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/01-architecture/Overview 1.2 - Tài liệu đọc thêm -  Lớp học Chuyên sâu về Kiến trúc Hệ thống Agent.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/04-ai-agents.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v1 - TECHNICAL DEEP DIVE DESIGN DOCS (HIGH LEVEL DESIGN AND LOW LEVEL DESIGN) - (TDD) - Example Summary Template - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Perflexity Deep Research.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/01-architecture/Untitled 4.md",
@@ -184,7 +186,6 @@
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled 8.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.1 v1 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/NOTE RAG PRODUCTION.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 - 14122025.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
@@ -197,7 +198,6 @@
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.3 STAGE 3 - tool xử lý web - Spec MVP Trích xuất A11y or AX Tree → SnapshotV1  Context cho Agent.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/2.2 STAGE 2 - v2 - LOW-LEVEL DESIGN (LLD) - MODULE 2 QUERY UNDERSTANDING.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.5 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.8 Tài liệu Thiết kế Toàn diện - finAI Agentic Browser.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/04-ai-agents/06 - tracing",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/CKP",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4_MLOPs và Full Stack Docker",
