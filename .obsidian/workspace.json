@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0.1 Manus tổng hợp và deep research - 14122025 - Manus 500 tokens mà tệ (prompt tệ nhên thua mauniu=e.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/Bonus.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.0.1 Manus tổng hợp và deep research - 14122025 - Manus 500 tokens mà tệ (prompt tệ nhên thua mauniu=e"
+              "title": "Bonus"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive"
+              "title": "3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect)"
             }
           },
           {
@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP(bản cũ)/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ  -.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ  -"
+              "title": "3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "FILE: over",
+                "query": "file: Overvie",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,8 +103,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -172,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive"
+              "title": "Outline of 3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1"
             }
           }
         ],
@@ -200,54 +199,54 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "b86d548e9c01cb5a",
+  "active": "a52a8bdd882d870d",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP(bản cũ)/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ  -.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0.1 Manus tổng hợp và deep research - 14122025 - Manus 500 tokens mà tệ (prompt tệ nhên thua mauniu=e.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.16 Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.1 Overview metathinking khi sử dụng Manus cho các đầu việc lớn của team Product.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP(bản cũ)/2.0 Overview 6 Modules - v2.1 - Perflexity.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect).md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0.2 Manus tổng hợp và deep research - 14122025  - Manus lite - 100 token mà ra tài liệu ngon vãi.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled 1.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled 2.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/0_ARCHITECT/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/2.0 Overview 6 Modules - v2.2 - 10122025 - Manus 300 tín dụng - 07122025.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.7.1 Rủi ro pháp lý.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.5 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.3 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.2 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.1 Báo cáo Nghiên cứu Kỹ thuật Chuyên sâu - Kiến trúc Tác nhân AI Trình duyệt và Tính khả thi của Mô hình Hybrid Extension trên nền tảng Chromium.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.8 Tài liệu Thiết kế Toàn diện - finAI Agentic Browser.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/2.3 STAGE 3 - Web Browser Architecture – Deep Research & Browser Agent Case Study.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/0_ARCHITECT/Usecase1 - A Tale of Two Agents - A Deep Dive into State-of-the-Art Architectures for Self-Healing Infrastructure and Visually-Grounded Web Automation - 800 credits.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/2.3 STAGE 3.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/___.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 - PHASE 1+2 - Deep Research - System Architecture của Web Browser AI Agents.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long Term Memory New robot",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/2_MEMORY/Untitled",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/2_MEMORY",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/image/Pasted image 20251105160658.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/image",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/attachments/Pasted image 20250615062355.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/attachments/Pasted image 20250605160002.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/attachments/Pasted image 20250322054143.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/attachments/Pasted image 20250312154239.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/attachments/Pasted image 20250312154228.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/attachments/Pasted image 20250308081701.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/attachments/Pasted image 20250308081643.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/attachments/Pasted image 20250308081036.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/attachments/Pasted image 20250308015904.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/attachments",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/3. Dự án FLATFORM - BUILD GAME/attachments",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/3. Dự án FLATFORM - BUILD GAME",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/2_MEMORY/1. Long term Memory Architechture",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.3 AI Agent/2_MEMORY/1. Long Term Memory User/attachments",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766782601.png",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766753473.png",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/Pasted image 20251106141322.png",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/repo/MVP_Multi-Agent-Financial-Platform_LangchainLanggraph_T9_2025.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/image (4).png",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/02-multi-agent/KIRO.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/repo",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/Prompt Agent.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/Agent_Rag.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/2025-09-08.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/04-ai-agents.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/02-multi-agent",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Untitled",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Robot - Memory.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/_init_ architect - NLP - AI Agents.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Usecase1 - A Tale of Two Agents - A Deep Dive into State-of-the-Art Architectures for Self-Healing Infrastructure and Visually-Grounded Web Automation - 800 credits.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Untitled 5.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Untitled 4.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Untitled 3.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Untitled 2.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Untitled 1.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/prompt research AI Agent.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.2 Tài liệu đọc thêm - 15122025 - 2 bài toán khó.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.2 Tools.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.2 - Tài liệu đọc thêm -  Lớp học Chuyên sâu về Kiến trúc Hệ thống Agent.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Understanding.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/2_MEMORY/1. Long Term Memory User/attachments/Pasted image 20250322071142.png",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/2_MEMORY/1. Long Term Memory User/attachments/Pasted image 20250322054315.png",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/2_MEMORY/1. Long Term Memory User/attachments/Pasted image 20250322063052.png",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/2_MEMORY/1. Long Term Memory User/attachments/Pasted image 20250322060614.png",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/04-ai-agents/image/LangChain_LangGraph/1758766782601.png",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/04-ai-agents/image/LangChain_LangGraph/1758766753473.png",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/2_MEMORY/1. Long Term Memory User/attachments",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/04-ai-agents/image/LangChain_LangGraph",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/3. Dự án FLATFORM - BUILD GAME/attachments",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/2_MEMORY/Untitled",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]

@@ -1,4 +1,4 @@
-![[attachments/Pasted image 20250409102338.png]]
+![[Pasted image 20250409102338.png]]
 
 
 ![Screenshot 2025-04-08 at 15.43.04.png](attachment:21912a34-4252-4844-9477-9ed0235e6ba3:Screenshot_2025-04-08_at_15.43.04.png)
