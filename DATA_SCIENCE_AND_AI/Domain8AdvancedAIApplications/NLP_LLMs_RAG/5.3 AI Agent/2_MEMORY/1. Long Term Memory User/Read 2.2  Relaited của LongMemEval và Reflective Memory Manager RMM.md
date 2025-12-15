@@ -1,614 +1,242 @@
-### **📄 Đồ án nghiên cứu: LONG TERM MEMORY, MEMORY-AUGMENTED AI AGENTS**
-
-📝 **Tác giả:** (Tên của bạn)  
-🏫 **Đơn vị nghiên cứu:** (Tên trường đại học / viện nghiên cứu)  
-📅 **Ngày thực hiện:** (Ngày bắt đầu nghiên cứu)
-
----
-
-## **📌 1. Giới thiệu (Introduction)**
-
-### **1.1. Đặt vấn đề: 
-
-Các mô hình ngôn ngữ lớn (LLMs) như GPT, BERT, LLaMA hay PaLM đã chứng tỏ năng lực nổi bật trong việc hiểu và tạo ra ngôn ngữ tự nhiên, đặc biệt khi được triển khai dưới dạng hệ thống hội thoại hoặc trợ lý AI. Tuy nhiên, trong môi trường ứng dụng thực tế, nhất là tại các doanh nghiệp, những mô hình này phải đối mặt với một bài toán đáng kể liên quan đến việc duy trì ngữ cảnh, cập nhật dữ liệu động và tương tác lâu dài cùng người dùng. Mỗi khi lượng thông tin của các cuộc hội thoại trở nên đồ sộ, việc đưa tất cả nội dung vào phần ngữ cảnh (prompt) trở nên bất khả thi do giới hạn về mặt kỹ thuật cũng như chi phí tính toán. Bên cạnh đó, dữ liệu tại các doanh nghiệp không tĩnh mà luôn được điều chỉnh và bổ sung, đòi hỏi một cơ chế thường xuyên cập nhật để tránh tình trạng mô hình sử dụng thông tin cũ hoặc lạc hậu.
-
-Vấn đề của những mô hình ngôn ngữ này càng trở nên phức tạp hơn khi người dùng mong đợi khả năng “nhớ” các luồng hội thoại kéo dài nhiều phiên, thậm chí nhiều tháng. Trong các tình huống thực tế, như khi tương tác với khách hàng, việc chatbot quên mất những trao đổi trước đó khiến người dùng phải lặp lại thông tin và gây nên sự khó chịu không nhỏ. Nếu như trước đây, các giải pháp RAG (Retrieval-Augmented Generation) chủ yếu tập trung vào các tập dữ liệu tĩnh để giảm thiểu sai sót và tránh tình trạng mô hình “bịa” thông tin, thì nay, nhu cầu quản lý luồng hội thoại động và dữ liệu doanh nghiệp liên tục thay đổi lại đòi hỏi một cơ chế linh hoạt hơn. RAG truyền thống không được thiết kế để xử lý thường xuyên các cập nhật, thêm bớt hay xóa bỏ nội dung trong cơ sở dữ liệu, vì đa số tập trung vào văn bản “tĩnh” như cẩm nang, FAQ hoặc hướng dẫn.
-
-Khó khăn khác nảy sinh khi những mô hình ngôn ngữ này trở nên quá tải do phải nạp toàn bộ lịch sử của nhiều phiên hội thoại, dẫn đến chi phí tính toán tăng vọt và độ trễ xử lý cũng không còn đáp ứng được yêu cầu thực tế. Từ góc độ người dùng, việc có một chatbot thông minh và nhanh nhạy là ưu tiên hàng đầu, nhưng nếu hệ thống mất quá nhiều thời gian để suy xét hoặc trả lời không chính xác do rối loạn thông tin, trải nghiệm tương tác sẽ bị ảnh hưởng nặng nề. Đối với doanh nghiệp, lượng hội thoại có thể lên đến hàng triệu dòng, kết hợp với nhiều loại dữ liệu khác như hồ sơ khách hàng, thống kê kinh doanh hay các báo cáo nội bộ. Sự hiện diện của một kiến trúc có thể trích xuất phần thông tin cần thiết để đưa vào ngữ cảnh và bỏ qua những yếu tố không còn hữu ích là điều bắt buộc, nhằm tối ưu cả chi phí và khả năng vận hành.
-
-Bài toán “lãng quên” hay “ưu tiên thông tin” đặt ra yêu cầu đặc biệt về cách tổ chức và gán nhãn dữ liệu. Nếu giữ lại tất cả thì hệ thống bị quá tải, còn nếu xóa bớt một cách tùy tiện, mô hình có thể bỏ lỡ những chi tiết quan trọng vốn dĩ cần thiết để suy luận chính xác. Hơn nữa, mỗi khi có xung đột thông tin hoặc thay đổi về dữ liệu, quá trình cập nhật sao cho mô hình không trả lời dựa trên những gì đã lỗi thời lại trở thành một thách thức. Từ đó, câu hỏi trung tâm được đặt ra là làm thế nào để thiết kế một cơ chế “bộ nhớ ngoài” cho mô hình ngôn ngữ, có khả năng quản lý luồng hội thoại dài hạn, tiếp nhận và loại bỏ thông tin linh hoạt, đồng thời bảo đảm tốc độ và chất lượng trả lời không suy giảm.
-
-Tất cả các yếu tố vừa đề cập nhấn mạnh nhu cầu nghiên cứu và phát triển một lớp “bộ nhớ dài hạn” (long-term memory layer) có thể bổ sung cho LLM, giúp lưu trữ, truy xuất và cập nhật thông tin hiệu quả trong môi trường hội thoại nhiều phiên và dữ liệu doanh nghiệp liên tục phát sinh. Giải pháp lý tưởng cần cho phép tách biệt quá trình lưu trữ và trích xuất khỏi mô hình ngôn ngữ, đồng thời duy trì tính chính xác trong việc truy vấn những đoạn thông tin quan trọng mỗi khi cần dùng đến. Mục tiêu là nâng cao chất lượng hội thoại, giảm thiểu tình trạng lặp lại câu hỏi, hạn chế chi phí về token và thời gian, qua đó đáp ứng tốt hơn yêu cầu triển khai thực tế trong doanh nghiệp.
-
-### **1.2. Các giải pháp hiện tại và hạn chế
-- .... Phân đoạn dựa trên ...
-
-**Trợ lý hội thoại cá nhân hóa có trí nhớ (Memory-based Personalized Dialogue Agents)**
-
-Sự phát triển của các trợ lý hội thoại cá nhân hóa có trí nhớ đã nâng cao đáng kể khả năng tương tác dài hạn, bằng cách cho phép hệ thống **lưu giữ và sử dụng lại thông tin từ các cuộc trò chuyện trước đó** (Bae et al., 2022).
-
-Những phương pháp ban đầu, chẳng hạn như **CoMemNN** (Pei et al., 2021), giới thiệu các cơ chế để **từng bước xây dựng hồ sơ người dùng** trong quá trình đối thoại.
-
-Tuy nhiên, việc thu thập dữ liệu được gán nhãn đủ lớn để huấn luyện một hệ thống cá nhân hóa lâu dài là **rất khó** (Tseng et al., 2024).
-
-Gần đây, các nghiên cứu tập trung vào việc **kết hợp LLM với module bộ nhớ**. Ví dụ:
-
-| Bae et al., "Keep Me Updated!"                     | 2022 | [https://aclanthology.org/2022.findings-emnlp.276](https://aclanthology.org/2022.findings-emnlp.276) |
-| -------------------------------------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| Pei et al., "Cooperative Memory Network (CoMemNN)" | 2021 | [https://doi.org/10.1145/3442381.3449843](https://doi.org/10.1145/3442381.3449843)                   |
-
-## 🔗 **Link các bài báo được trích dẫn:**
-
-| Paper                                              | Năm  | Link                                                                                                 |
-| -------------------------------------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| Bae et al., "Keep Me Updated!"                     | 2022 | [https://aclanthology.org/2022.findings-emnlp.276](https://aclanthology.org/2022.findings-emnlp.276) |
-| Pei et al., "Cooperative Memory Network (CoMemNN)" | 2021 | [https://doi.org/10.1145/3442381.3449843](https://doi.org/10.1145/3442381.3449843)                   |
-| Tseng et al., "Two Tales of Persona in LLMs"       | 2024 | [https://aclanthology.org/2024.findings-emnlp.969](https://aclanthology.org/2024.findings-emnlp.969) |
-| Li et al., "LD-Agent"                              | 2024 | [https://arxiv.org/abs/2406.05925](https://arxiv.org/abs/2406.05925)                                 |
-| Zhong et al., "MemoryBank"                         | 2024 | [https://doi.org/10.1609/aaai.v38i17.29946](https://doi.org/10.1609/aaai.v38i17.29946)               |
-| Kim et al., "Theanine"                             | 2024 | [https://arxiv.org/abs/2406.10996](https://arxiv.org/abs/2406.10996)                                 |
-
----
-
-Nếu Quốc muốn, mình có thể tổng hợp đoạn này thành **một phần “Related Work” hoàn chỉnh cho research paper** hoặc vẽ sơ đồ so sánh các phương pháp. Quốc muốn chọn hướng nào?
-### **1.3. Mục tiêu và định hướng giải pháp
-
-Đồ án hướng đến mục tiêu sau:
-1. Tìm hiểu và nghiên cứu các phương pháp, kỹ thuật phân đoạn khác nhau,
-từ đó đưa ra đánh giá và các phương pháp kết hợp để tận dụng ưu điểm của các
-phương pháp cũng như hạn chế, nhược điểm phù hợp với tình huống đặt ra về tài
-nguyên sử dụng.
-2. Đưa ra đề xuất cải tiến và hiệu quả có khả năng làm nâng cao hiệu quả trong
-mô đun truy xuất.
-3. Cài đặt hệ thống và thử nghiệm với các kịch bản khác nhau. Nêu và phân tích
-được những kết quả thực nghiệm, so sánh đánh giá giữa các phương pháp và đưa
-ra các ưu điểm và nhược điểm của các kỹ thuật thử nghiệm.
-Trên cơ sở các phân tích và đánh giá ở phần 0.2 và để đạt được những mục tiêu
-đã nêu phía trên, đồ án này sẽ tập trung vào các khía cạnh:
-4. Thực hiện kết hợp phương pháp phân đoạn cổ điển với phương pháp phân
-đoạn sử dụng mô hình ngôn ngữ lớn để cải thiện chất lượng phân đoạn.
-4
-5. Thiết kế luồng truy xuất hiệu quả bằng cách kết hợp các phương pháp truy
-xuất và sử dụng thêm mô-đun xếp hạng để cải thiện thêm chất lượng truy xuất.
-
-Vấn đề với phương pháp cũ (LongMemEval gốc)
-
-1. **Granularity chưa tối ưu**:
-    
-    - Việc trích xuất `summary`, `fact`, `keyphrase` từ **toàn bộ session** hoặc **round riêng lẻ** có thể gặp tình trạng:
-        - Đoạn quá **ngắn** (không đủ ngữ cảnh để LLM trích xuất meaningful facts).
-        - Đoạn quá **dài** (gây nhiễu thông tin, LLM không thể tóm tắt chính xác, dễ mất detail).
-    - Không có cách kiểm soát mức độ coherence hoặc topic shift trong session dài.
-2. **Chỉ dùng 1 loại key duy nhất cho indexing**:
-    
-    - `K = V + fact` hoặc `K = V + summary` là tốt, nhưng mỗi loại key có điểm mạnh khác nhau:
-        - `summary`: tốt cho match semantic tổng thể.
-        - `keyphrase`: bắt cụ thể keyword.
-        - `fact`: truy xuất chính xác các entity, số liệu, mốc thời gian.
-    - Không tận dụng được hiệu ứng **ensemble giữa các loại key**.
-3. **Lacking structure in indexing**:
-    
-    - Indexing hiện tại là **flat** → không tận dụng tính chất "tầng" của văn bản hội thoại: đoạn – session – timeline.
-    - Thiếu khả năng điều hướng mượt mà giữa các mức khái quát (coarse) và chi tiết (fine).
-
----
-
-## ✅ Giải pháp đề xuất: Kết hợp **LLMs + Raptor + Multi-Key Embedding + Hierarchical Indexing**
-
-### **1. Conversation-Aware Chunking trước khi Extract**
-
-#### ✂️ 1.1. LLM-based Chunking
-
-- Dùng LLM để phân chia session thành các đoạn nhỏ (chunk) theo chuyển chủ đề, mục đích câu hỏi, hoặc hành vi người dùng.
-- Lợi ích:
-    - Tách được các segment theo topic.
-    - Giữ được coherence bên trong mỗi chunk.
-
-#### 🧱 1.2. Raptor Chunking
-
-- Dùng **RAPTOR (recursive abstractive chunking)** để tạo cây phân cấp cho từng session.
-- Mỗi node là một chunk hoặc summary của chunk con → có thể phục vụ **hierarchical retrieval**.
-
-
-=> **Sau đó ta thu được: thay vì K = Session + fact thì của ta là: K = Session1.i + Fact (Với i là Session 1.i được Chunking nhỏ ra từ Session to ban đầu).** 
-
-![[Pasted image 20250322071142.png]]
----
-
-### **2. Embedding: Flatten & Index**
-
-#### 🧾 2.1 Raptor Flat Embedding
-
-- Đưa từng chunk (ban đầu + LLM-chunked + summary chunk) vào embedding encoder.
-- Tạo index **dạng phẳng (flat)**, có thể dùng Reranker để chọn top-K chunk có khả năng cao nhất.
-
-#### 🧠 2.2 Hierarchical Indexing (2-phase Retrieval)
-
-**Pha 1: Coarse Retrieval**
-
-- Embed summary / keyphrase của chunk.
-- Dùng query để so sánh, chọn Top-K chunk liên quan.
-
-**Pha 2: Fine Retrieval**
-
-- Với mỗi chunk đã chọn ở coarse stage → đi sâu vào level fine:
-    - Embed lại các câu gốc / facts / sub-chunks.
-    - Lấy top-K’ fine-grained memory units.
-
-=> **Cuối cùng đưa vào LLM để đọc và trả lời (Reading stage).**
-
----
-
-### **3. Multi-Key Embedding cho Indexing**
-
-- Với mỗi chunk → tạo và embed song song:
-    - `K1 = V + summary`
-    - `K2 = V + fact`
-    - `K3 = V + keyphrase`
-- Kết hợp kết quả truy hồi từ các luồng (voting / weighted fusion / union-rerank).
-- Lý do:
-    - Summary bắt ngữ nghĩa chung.
-    - Fact giúp reasoning logic.
-    - Keyphrase giúp match keyword trong truy vấn cụ thể.
-
----
-
-## 🔁 Tổng pipeline cải tiến
-
 ```
-Session
-  ↓
-Conversation-aware Chunking (LLMs Chunk + Raptor Chunk)
-  ↓
-Chunk-level Value → Extract (summary, fact, keyphrase)
-  ↓
-Embed:
-   - K1 = V + summary
-   - K2 = V + fact
-   - K3 = V + keyphrase
-  ↓
-Phase 1: Coarse Retrieval từ summary/keyphrase
-  ↓
-Phase 2: Fine Retrieval từ facts
-  ↓
-Reading Strategy: CoN + JSON (Chain-of-Note)
-  ↓
-Answer
-```
-
----
-
-## 📈 Lợi ích chính
-
-- ✅ Giảm nhiễu, tối ưu granularity nhờ LLM chunking.
-- ✅ Tận dụng tốt semantic, factual và keyword-level cues qua multi-key.
-- ✅ Tăng khả năng truy hồi đúng với hierarchical search.
-- ✅ Phù hợp để scale cho 500+ sessions như LongMemEvalM.
-
----
-
-Nếu bạn cần mình mô phỏng pipeline này bằng sơ đồ (sequence hoặc flowchart), hoặc viết phần giải thích thành văn academic để ghép vào một paper / research blog, mình cũng làm được ngay nhé!
-
----
-Dưới đây là toàn bộ **kịch bản thử nghiệm** (experimental settings) tương ứng với từng ý tưởng cải tiến mà Quốc đề xuất — được tổ chức theo dạng **ma trận thí nghiệm** để có thể dễ dàng triển khai thực nghiệm, đánh giá từng thành phần và kết hợp của pipeline.
-
----
-
-## 🎯 **MỤC TIÊU THỬ NGHIỆM**
-
-> Kiểm chứng các cải tiến về chunking, indexing, embedding, retrieval và reading strategy nhằm cải thiện hiệu quả của hệ thống long-term memory QA (ví dụ trên benchmark như LONGMEMEVAL).
-
----
-
-## 🧪 **KỊCH BẢN THỬ NGHIỆM CHÍNH**
-
-### 🔹 **I. Chunking Strategy**
-
-|Mã|Tên phương pháp|Mô tả|
-|---|---|---|
-|C1|No Chunking (baseline)|Dùng cả session hoặc round làm value trực tiếp|
-|C2|LLM-based Chunking|Phân chia đoạn theo chủ đề/ngữ nghĩa bằng LLM|
-|C3|RAPTOR Chunking|Chunking dạng cây phân cấp theo RAPTOR|
-|C4|LLM + RAPTOR Hybrid|Chunk theo LLM → dùng RAPTOR để tóm tắt từng chunk|
-
----
-
-### 🔹 **II. Value Representation**
-
-|Mã|Dạng value đầu vào|Mô tả|
-|---|---|---|
-|V1|Full Session|Không chia nhỏ, để nguyên session|
-|V2|Round-based|Mỗi round là một value|
-|V3|Chunked|Chunk theo chiến lược C2, C3, C4|
-|V4|Summary|Tóm tắt của chunk hoặc session|
-|V5|Fact|Fact trích từ chunk/session|
-
----
-
-### 🔹 **III. Key Design (Indexing)**
-
-|Mã|Tên thiết kế key|Mô tả|
-|---|---|---|
-|K1|K = V|Dùng raw value làm key|
-|K2|K = fact|Key là facts đã trích|
-|K3|K = summary|Key là summary|
-|K4|K = V + fact|Nối fact vào value để tạo key|
-|K5|K = V + summary|Nối summary vào value|
-|K6|K = V + fact + summary + keyphrase|Multi-key (concat tất cả)|
-|K7|Multi-path index|Tạo nhiều loại key riêng biệt, embed độc lập|
-
----
-
-### 🔹 **IV. Retrieval Strategy**
-
-|Mã|Phương pháp truy hồi|Mô tả|
-|---|---|---|
-|R1|Flat Retrieval|Retrieval đơn lớp, cosine / FAISS|
-|R2|Coarse → Fine Retrieval (2-phase)|Truy xuất 2 pha: summary → fact|
-|R3|Flat + Reranker|Retrieval sơ cấp rồi rerank bằng LLM|
-|R4|Multi-path Fusion|Truy hồi theo từng key, rồi hợp kết quả (voting / union)|
-
----
-
-### 🔹 **V. Reading Strategy**
-
-|Mã|Kỹ thuật đọc kết quả|Mô tả|
-|---|---|---|
-|RS1|Direct Answer|Đưa chunk vào, yêu cầu LLM trả lời thẳng|
-|RS2|Chain-of-Note (CoN)|Trích info trước rồi reasoning sau|
-|RS3|JSON + CoN|Đưa input dạng JSON có cấu trúc, dùng CoN|
-|RS4|CoT + CoN|Kết hợp chain-of-thought reasoning với CoN|
-
----
-
-## ✅ **KẾT HỢP THỬ NGHIỆM GỢI Ý (FULL COMBO)**
-
-|#|Chunking|Value|Key|Retrieval|Reading|
-|---|---|---|---|---|---|
-|1|C1|V1|K1|R1|RS1|
-|2|C2|V3|K4|R2|RS3|
-|3|C3|V3|K6|R2|RS2|
-|4|C4|V3|K7|R4|RS3|
-|5|C3|V5|K2|R3|RS1|
-|6|C2|V3|K5|R1|RS2|
-|7|C4|V3|K6|R3|RS4|
-
-> 💡 _Bạn có thể chọn 3-5 combo để thử nghiệm A/B, đo các metric như:_
-> 
-> - **QA Accuracy (top-K)**
-> - **Recall@K, NDCG@K**
-> - **Inference time / latency**
-> - **Token count (input to reader)**
-
----
-
-## 📦 **Dữ liệu sử dụng**
-
-- Dataset chính: `LONGMEMEVAL-S` và `LONGMEMEVAL-M`
-- Có thể mở rộng thử nghiệm với `MemoryBank`, `PerLTQA` để kiểm tra độ generalize.
-
----
-
-Nếu bạn cần mình giúp viết script pipeline chạy thử nghiệm hoặc dựng YAML config cho từng scenario để quản lý chạy bằng `Hydra`/`WandB` hoặc hệ thống ML pipeline khác thì cứ nói nhé. Cũng có thể dựng lại bảng này dưới dạng Notion template hoặc Google Sheet để dễ quản lý.
-
-
----
-# SAU KHI HIỂU GỐC, BÀI BÁO GỐC, QUAY LẠI LANGGRAPH THÌ THẤY Ồ. RA LANGGRAPH NÓ ĐỀ XUẤT KIẾN TRÚC THÔI, CÒN CƠ BẢN THÌ LÀ BÀI BÁO ĐANG SEARCH NÀY 
-
-**LangGraph** là một **framework** được giới thiệu trong khóa học "Long-Term Agentic Memory with LangGraph" do Harrison Chase, Co-Founder và CEO của LangChain, giảng dạy. Khóa học này hướng dẫn cách xây dựng một **agent** với khả năng **ghi nhớ dài hạn**, cụ thể là trong việc quản lý email cá nhân.
-
-**Điểm mới mà LangGraph đề cập đến**:
-
-1. **Tích hợp ba loại memory trong agent**:
-    
-    - **Semantic Memory**: Lưu trữ các **facts** về người dùng, như sở thích, thói quen, để sử dụng trong các tương tác sau này.
-    - **Episodic Memory**: Ghi nhớ các **tình huống cụ thể** đã xảy ra trong quá khứ, giúp agent hiểu ngữ cảnh và cải thiện phản hồi.
-    - **Procedural Memory**: Lưu trữ các **hướng dẫn và quy trình** mà agent cần tuân theo, giúp tối ưu hóa hành vi dựa trên phản hồi.
-
-
----
-https://github.com/DoanNgocCuong/MiniProj_RAG3_RAG6_LegalChatbot_16032025
-
----
-# Hiểu sâu hơn về Datase: 
-
-
-LongMemEval là một bộ dữ liệu toàn diện, được thiết kế để đánh giá khả năng ghi nhớ dài hạn của các trợ lý trò chuyện. Bộ dữ liệu này bao gồm 500 câu hỏi chất lượng cao, tập trung vào năm khả năng cốt lõi:
-
-1. **Trích xuất thông tin (Information Extraction):** Khả năng nhớ lại thông tin cụ thể từ lịch sử tương tác dài, bao gồm cả chi tiết do người dùng hoặc trợ lý cung cấp.
-    
-2. **Lý luận đa phiên (Multi-Session Reasoning):** Khả năng tổng hợp thông tin từ nhiều phiên trò chuyện để trả lời các câu hỏi phức tạp yêu cầu sự tổng hợp và so sánh.
-    
-3. **Cập nhật kiến thức (Knowledge Updates):** Khả năng nhận biết và cập nhật thông tin cá nhân của người dùng theo thời gian.
-    
-4. **Lý luận thời gian (Temporal Reasoning):** Nhận thức về các khía cạnh thời gian của thông tin người dùng, bao gồm cả thời gian được đề cập rõ ràng và siêu dữ liệu thời gian trong các tương tác.
-    
-5. **Từ chối trả lời (Abstention):** Khả năng từ chối trả lời các câu hỏi liên quan đến thông tin không được đề cập trong lịch sử tương tác.
-    
-
-Lấy cảm hứng từ bài kiểm tra "tìm kim trong đống cỏ khô", LongMemEval sử dụng một quy trình kiểm soát thuộc tính để tạo ra lịch sử trò chuyện mạch lạc, có thể mở rộng và được đánh dấu thời gian cho mỗi câu hỏi. Hệ thống trò chuyện cần phân tích các tương tác động để ghi nhớ và trả lời câu hỏi sau khi tất cả các phiên tương tác đã diễn ra.
-
-**Cấu trúc Bộ Dữ Liệu:**
-
-Bộ dữ liệu bao gồm ba tệp chính:
-
-1. **longmemeval_s.json:** Mỗi lịch sử trò chuyện tiêu thụ khoảng 115.000 token (~40 phiên lịch sử).
-    
-2. **longmemeval_m.json:** Mỗi lịch sử trò chuyện chứa khoảng 500 phiên.
-    
-3. **longmemeval_oracle.json:** Chỉ bao gồm các phiên chứa bằng chứng cần thiết.
-    
-
-Mỗi tệp chứa 500 trường hợp đánh giá, mỗi trường hợp bao gồm các trường:
-
-- **question_id:** ID duy nhất cho mỗi câu hỏi.
-    
-- **question_type:** Loại câu hỏi, như single-session-user, single-session-assistant, single-session-preference, temporal-reasoning, knowledge-update, và multi-session. Nếu question_id kết thúc bằng _abs, đó là câu hỏi từ chối trả lời.
-    
-- **question:** Nội dung câu hỏi.
-    
-- **answer:** Câu trả lời mong đợi từ mô hình.
-    
-- **question_date:** Ngày của câu hỏi.
-    
-- **haystack_session_ids:** Danh sách ID của các phiên lịch sử (sắp xếp theo thời gian).
-    
-- **haystack_dates:** Danh sách các mốc thời gian của các phiên lịch sử.
-    
-- **haystack_sessions:** Danh sách nội dung thực tế của các phiên trò chuyện giữa người dùng và trợ lý. Mỗi phiên là một danh sách các lượt trao đổi, mỗi lượt có định dạng {"role": user/assistant, "content": nội dung tin nhắn}. Đối với các lượt chứa bằng chứng cần thiết, có thêm trường has_answer: true.
-    
-- **answer_session_ids:** Danh sách ID của các phiên chứa bằng chứng, dùng để đánh giá độ chính xác của việc nhớ lại ở cấp độ phiên.
-    
-
-**Thiết lập Môi Trường:**
-
-Để sử dụng bộ dữ liệu, bạn có thể tải xuống từ [Hugging Face](https://huggingface.co/datasets/xiaowu0162/longmemeval) và giải nén vào thư mục `data/`. Khuyến nghị sử dụng môi trường conda để cài đặt các yêu cầu cần thiết:
-
-```bash
-conda create -n longmemeval python=3.9
-conda activate longmemeval
-pip install -r requirements-full.txt
-```
-
-
-
-**Đánh Giá Hệ Thống:**
-
-Để kiểm tra hệ thống của bạn trên LongMemEval, bạn có thể sử dụng các tập lệnh đánh giá được cung cấp. Lưu đầu ra của hệ thống vào tệp JSONL với mỗi dòng chứa hai trường: `question_id` và `hypothesis`. Sau đó, chạy tập lệnh đánh giá:
-
-```bash
-export OPENAI_API_KEY=YOUR_API_KEY
-cd src/evaluation
-python3 evaluate_qa.py gpt-4o your_hypothesis_file ../../data/longmemeval_oracle.json
-```
-
-
-
-Tập lệnh này sẽ lưu nhật ký đánh giá vào tệp `[your_hypothesis_file].log`. Bạn có thể tổng hợp các điểm số từ nhật ký bằng lệnh:
-
-```bash
-python3 print_qa_metrics.py gpt-4o your_hypothesis_file.log ../../data/longmemeval_oracle.json
-```
-
-
-
-**Tạo Lịch Sử Trò Chuyện Tùy Chỉnh:**
-
-LongMemEval hỗ trợ biên soạn lịch sử trò chuyện với độ dài tùy ý cho mỗi trường hợp câu hỏi, cho phép bạn dễ dàng tăng độ khó. Để tạo lịch sử tùy chỉnh, bạn có thể làm theo định dạng trong `2_questions` và `6_session_cache` để tạo câu hỏi và các phiên bằng chứng, sau đó chạy tập lệnh `sample_haystack_and_timestamp.py` với các tham số phù hợp.
-
-**Chạy Thử Nghiệm Hệ Thống Ghi Nhớ:**
-
-Chúng tôi cung cấp mã thử nghiệm cho việc truy xuất bộ nhớ và tạo câu trả lời có hỗ trợ truy xuất dưới các thư mục `src/retrieval
-
-
----
 Long-TermMemoryMethods Toequipchatassistantswithlong-termmemorycapabilities, three major techniques are commonly explored. The first approach involves directly adapting LLMs to process extensive history information as long-context inputs (Beltagy et al., 2020; Kitaev et al., 2020; Fu et al., 2024; An et al., 2024). While this method avoids the need for complex architectures, it is inefficient and susceptible to the “lost-in-the-middle” phenomenon, where the ability of LLMs to utilize contextual information weakens as the input length grows (Shi et al., 2023; Liu et al., 2024). A second line of research integrates differentiable memory modules into language models, proposing specialized architectural designs and training strategies to enhance memory capabilities (Weston et al., 2014; Wu et al., 2022; Zhong et al., 2022; Wang et al., 2023). Lastly, several studies approach long-term memory from the perspective of context compression, developing techniques 3 Published as a conference paper at ICLR 2025 to condense lengthy histories into compact representations, whether in the form of LLM internal representations (Mu et al., 2023; Chevalier et al., 2023), discrete tokens (Jiang et al., 2023; Xu et al., 2024), or retrievable text segments via retrieval-augmented generation (RAG, Shi et al. (2024); Wang et al. (2023); Sarthi et al. (2024); Chen et al. (2023a); Guti´ errez et al. (2024)). Although LONGMEMEVAL can evaluate any memory system, we will take an online context compression perspective, where each history interaction session is sequentially processed, stored, and accessed on-demand through indexing and retrieval mechanisms (§4). This formulation aligns with current literature (Zhong et al., 2024; Guti´ errez et al., 2024) and commercial systems (OpenAI, 2024; Coze, 2024). Its plug-and-play nature also facilitates the integration into existing chat assistant systems
+```
+
+```
+Memory-based Personalized Dialogue Agents. The development of memory-based personalized dialogue agents has further enhanced long-term interactions by enabling systems to retain and utilize information from past conversations (Bae et al., 2022). Early approaches, such as CoMemNN (Pei et al., 2021), introduce mechanisms to incrementally enrich user profiles during dialogues. However, collecting substantial annotations for training a personalized system for long-term use is hard (Tseng et al., 2024). Recent advancements focus on integrating LLMs with memory modules. For instance, the LD-Agent framework (Li et al., 2024b) employs long-, short-term memory banks to manage conversational history for retrieval. MemoryBank (Zhong et al., 2024) incorporates a memory updating mechanism inspired by the Ebbinghaus Forgetting Curve, enabling models to retrieve relevant memories considering recency. Theanine (Kim et al., 2024) introduces timeline-based retrieval and utilizes an additional LLM for refinement. These methods typically deploy fixed retrievers with a pre-defined granularity. In contrast, the proposed RMM approach facilitates adaptive retrieval with a revised retrieval granularity
+```
 
 
-Dưới đây là bản dịch tiếng Việt đoạn văn bạn cung cấp:
+
+
+Trong các tài liệu bạn đã đọc, “thủy tổ” (người đầu tiên đặt nền móng) cho **Long-Term Memory AI** trong bối cảnh hệ thống hội thoại có thể truy hồi và ghi nhớ thông tin qua nhiều lượt tương tác – thường được gọi là **Memory-Augmented Conversational Systems** – không được nêu rõ một cá nhân cụ thể, nhưng có thể tạm chia lịch sử hình thành thành 3 cột mốc lớn:
 
 ---
 
-### **Các phương pháp trí nhớ dài hạn (Long-Term Memory Methods)**
+### 🧠 **1. Giai đoạn đặt nền móng: QA có trí nhớ ngắn hạn (trước 2019)**
 
-Để trang bị khả năng ghi nhớ dài hạn cho các trợ lý hội thoại, hiện có ba kỹ thuật chính thường được nghiên cứu:
-
-1. **Phương pháp thứ nhất** là điều chỉnh trực tiếp các mô hình ngôn ngữ lớn (LLMs) để xử lý lượng lớn thông tin lịch sử dưới dạng đầu vào dài (long-context input)  
-    _(Beltagy et al., 2020; Kitaev et al., 2020; Fu et al., 2024; An et al., 2024)_.  
-    Phương pháp này giúp tránh việc phải thiết kế kiến trúc phức tạp,  
-    tuy nhiên lại **kém hiệu quả** và dễ gặp hiện tượng **"mất thông tin ở giữa" (lost-in-the-middle)** –  
-    khi mà khả năng của LLM trong việc tận dụng thông tin ngữ cảnh suy giảm theo độ dài đầu vào tăng lên _(Shi et al., 2023; Liu et al., 2024)_.
+- Các hệ thống hồi đáp dựa trên **single-turn QA**, tức chỉ trả lời từng câu hỏi độc lập, không “nhớ” lịch sử hội thoại.
     
-2. **Hướng nghiên cứu thứ hai** là tích hợp các **module bộ nhớ phân biệt được (differentiable memory modules)** vào trong mô hình ngôn ngữ.  
-    Các nghiên cứu này đề xuất các thiết kế kiến trúc chuyên biệt và chiến lược huấn luyện nhằm tăng cường khả năng ghi nhớ của mô hình  
-    _(Weston et al., 2014; Wu et al., 2022; Zhong et al., 2022; Wang et al., 2023)_.
+- Ví dụ như các mô hình như BiDAF++, BERT-QA hay DrQA.
     
-3. **Cuối cùng**, nhiều nghiên cứu tiếp cận trí nhớ dài hạn từ góc độ **nén ngữ cảnh (context compression)**, phát triển các kỹ thuật nhằm **tinh gọn lịch sử hội thoại dài** thành các biểu diễn nhỏ gọn hơn –  
-    có thể dưới dạng biểu diễn nội tại trong LLM _(Mu et al., 2023; Chevalier et al., 2023)_,  
-    các token rời rạc _(Jiang et al., 2023; Xu et al., 2024)_,  
-    hoặc các đoạn văn bản có thể truy xuất được thông qua kỹ thuật sinh có hỗ trợ truy hồi (Retrieval-Augmented Generation - RAG)  
-    _(Shi et al., 2024; Wang et al., 2023; Sarthi et al., 2024; Chen et al., 2023a; Gutiérrez et al., 2024)_.
+- Hệ thống bắt đầu sử dụng embedding để mã hóa ngữ cảnh, nhưng chưa có khả năng lưu và truy hồi thông tin từ các phiên hội thoại cũ.
     
 
-Mặc dù **LONGMEMEVAL** có thể được dùng để đánh giá bất kỳ hệ thống trí nhớ nào,  
-trong bài này chúng tôi chọn cách tiếp cận theo hướng **nén ngữ cảnh trực tuyến (online context compression)**,  
-nơi mà mỗi phiên tương tác trong lịch sử sẽ được **xử lý tuần tự, lưu trữ và truy xuất theo yêu cầu** thông qua các cơ chế đánh chỉ mục (indexing) và truy hồi (retrieval) (§4).
-
-Cách tiếp cận này phù hợp với các công trình hiện tại _(Zhong et al., 2024; Gutiérrez et al., 2024)_  
-cũng như các hệ thống thương mại như **OpenAI (2024)** và **Coze (2024)**.  
-Đặc biệt, nhờ vào tính **"plug-and-play"** (cắm vào là chạy), phương pháp này có thể dễ dàng tích hợp vào các hệ thống trợ lý hội thoại hiện có.
-
 ---
 
-Nếu bạn muốn mình tóm lại thành bảng so sánh 3 hướng tiếp cận hoặc biểu đồ sơ đồ hóa thì mình có thể vẽ liền nhé!
+### 🧠 **2. Giai đoạn tích hợp trí nhớ: Conversational Memory (2019–2022)**
 
-## 1.4 Đóng góp của đồ án
-Đồ án này có 2 đóng góp chính như sau:
-1. Đồ án đề xuất giải pháp kết hợp các kỹ thuật phân đoạn khác nhau nhằm tăng
-hiệu suất của hệ thống truy xuất thông tin.
-2. Thực hiện thử nghiệm kết hợp các kỹ thuật truy xuất nhằm cải thiện kết quả
-đầu ra.
-## 1.5 Bố cục đồ án
-Toàn bộ báo cáo đồ án tốt nghiệp được triển khai trong 5 chương. Các chương
-còn lại của báo cáo có nội dung như sau.
-Chương 2 đề cập đến các nội dung lý thuyết nhằm phục vụ việc nghiên cứu, xây
-dựng thử nghiệm và đánh giá giải pháp đề xuất. Trong chương này, tôi sẽ trình bày
-tổng quan về mô hình ngôn ngữ lớn, các ứng dụng, hạn chế và một số dòng mô
-hình ngôn ngữ lớn phổ biến. Kỹ thuật RAG với các thành phần và các giải pháp
-hiện có cũng sẽ được phân tích chi tiết ở chương này.
-Chương 3 trình bày chi tiết về giải pháp đề xuất. Trước hết, tôi mô tả tổng quan
-về luồng xử lý, sau đó là đi sâu vào từng mô-đun. Trong mô-đun phân đoạn, tôi
-trình bày hai kỹ thuật phân đoạn tôi lấy làm ý tưởng đó là phân đoạn sử dụng mô
-hình ngôn ngữ lớn và RAPTOR. Sau đó, tôi đề xuất việc kết hợp hai kỹ thuật này
-để bổ trợ cho nhau. Trong mô-đun truy xuất, tôi trình bày việc kết hợp hai kỹ thuật
-đó là: i) tìm kiếm mức ngữ nghĩa và ii) tìm kiếm mức từ vựng nhằm cải thiện mức
-độ phù hợp của các tài liệu tìm kiếm được.
-Chương 4 trình bày cụ thể về các kịch bản thử nghiệm, thông số cấu hình thử
-nghiệm, kết quả thực nghiệm và các đánh giá, nhận xét về các phương pháp thử
-nghiệm. Trong chương này, tôi sử dụng một số độ đo tự động thường được sử dụng
-cho hỏi đáp và đánh giá bằng mô hình ngôn ngữ lớn. Những nhận xét và đánh giá
-hiệu năng của phương pháp đề xuất so với các phương pháp tham chiếu cũng được
-trình bày tại chương này.
-Chương 5 là chương cuối cùng. Trong chương này, tôi nêu ra kết luận về phương
-pháp đề xuất, những ưu điểm cũng như những hạn chế còn tồn tại cũng như đề ra
-các hướng phát triển trong tương lai.
-
----
-
-## **📌 2. Tổng quan nghiên cứu (Related Work)**
-
-### **2.1. Hạn chế của LLMs về trí nhớ**
-
-- LLMs hiện nay **chỉ có trí nhớ ngắn hạn**, bị giới hạn bởi context window (128K tokens với GPT-4-turbo, 1M tokens với Claude 3). - 2M rất to
-- Các mô hình không thể duy trì bối cảnh hội thoại **qua nhiều phiên làm việc**.
-
-### **2.2. Các phương pháp hiện tại**
-
-#### **(1) LLMs lưu trữ ngắn hạn
-
-
-
-#### **(2) Retrieval-Augmented Generation (RAG)**
-
-- **Ưu điểm**: LLM có thể truy xuất dữ liệu từ nguồn ngoài khi cần.
-- **Nhược điểm**: Không nhớ thông tin theo thời gian, chỉ hoạt động khi có truy vấn tìm kiếm.
-
-#### **(3) Các nghiên cứu trước đây**
-
-- OpenAI đang phát triển **tác nhân có trí nhớ** nhưng chưa công bố chi tiết.
-- Meta AI thử nghiệm chatbot có khả năng **nhớ sở thích người dùng** nhưng gặp thách thức về quyền riêng tư.
-![[Pasted image 20250322054143.png]]
-
-📌 **Điểm khác biệt của nghiên cứu này:**  
-✅ Đề xuất mô hình **Memory-Augmented AI** tối ưu hơn, có thể **học hỏi theo thời gian mà không bị quá tải dữ liệu**.  
-✅ Kết hợp giữa **Memory-Augmented Learning & RAG** để tối ưu hóa bộ nhớ.
-
----
-
-## **📌 3. Phương pháp nghiên cứu (Methodology)**
-
-### **3.1. Kiến trúc đề xuất**
-
-Mô hình **Memory-Augmented AI Agent** gồm các thành phần chính:  
-1️⃣ **Short-Term Memory (STM)**: Lưu trữ thông tin trong phạm vi cửa sổ ngữ cảnh hiện tại.  
-2️⃣ **Long-Term Memory (LTM)**: Lưu trữ thông tin quan trọng vào **Vector Database**.  
-3️⃣ **Memory Management Algorithm**: Quyết định **nên nhớ gì, quên gì**.  (lưu tất thì bị phìng bộ nhớ? )
--bỏ:  Trí nhớ về sở thích 
-- bỏ: Trí nhớ về các sự kiện đã qua 
-- Trí nhớ về các lịch sắp tới
-- 
-4️⃣ **Knowledge Update Mechanism**: Cập nhật và quên thông tin cũ khi cần.
-- Cập nhật dựa trên thời gian (User ngày xưa thích chơi đá bóng.Gẫy chân => Hiện tại thì không). 
-
-- 
-📌 **Mô hình sử dụng các công nghệ:**
-
-- **LLM (GPT-4, Claude 3, Llama 2)**.
-- **Vector Database (FAISS, Pinecone, Weaviate)** để lưu trí nhớ dài hạn.
-- **LangChain / LlamaIndex** để quản lý truy xuất thông tin.
-
----
-
-## **📌 4. Thực nghiệm & Kết quả (Experiments & Results)**
-
-### **4.1. Thiết lập thử nghiệm**
-
-**Bài toán:** So sánh hiệu suất giữa **Memory-Augmented AI Agent** và **LLM thông thường** trong hội thoại dài hạn.
-
-🔹 **Dữ liệu thử nghiệm:**
-
-- **Tập hội thoại thực tế** (chăm sóc khách hàng, trợ lý ảo).
-- **Tập hội thoại tổng hợp** (hội thoại kéo dài > 10,000 tokens).
-## 4. Thực nghiệm và đánh giá
-
-### 4.1 Deep Memory Retrieval (DMR)
-
-- **DMR** (giới thiệu trong MemGPT) có 500 cuộc hội thoại nhiều phiên (multi-session).
-- Zep đạt **94.8%** độ chính xác khi dùng GPT-4-turbo (và 98.2% khi dùng một biến thể GPT-4o-mini), nhỉnh hơn so với MemGPT (93.4%).
-- Tuy nhiên, bộ DMR chỉ có hội thoại khá ngắn (khoảng 60 tin nhắn mỗi cuộc), chưa thực sự kiểm tra khả năng “siêu dài hạn”.
-
-### 4.2 LongMemEval (LME)
-
-- **LongMemEval** có các đoạn hội thoại dài hơn nhiều (trung bình 115.000 tokens), mô phỏng tình huống doanh nghiệp thực tế phức tạp.
-
-Các hệ thống trợ lý trò chuyện ngôn ngữ lớn gần đây (LLM) có các thành phần bộ nhớ tích hợp để theo dõi lịch sử trò chuyện có sự hỗ trợ của người dùng, cho phép các phản hồi chính xác và cá nhân hóa hơn. Tuy nhiên, khả năng bộ nhớ dài hạn của họ trong các tương tác bền vững vẫn chưa được khai thác. Bài viết này giới thiệu Longmemeval, một điểm chuẩn toàn diện được thiết kế để đánh giá năm khả năng bộ nhớ dài hạn cốt lõi của các trợ lý trò chuyện: trích xuất thông tin, lý luận đa phiên, lý luận thời gian, cập nhật kiến ​​thức và kiêng khem. Với 500 câu hỏi được quản lý tỉ mỉ được nhúng trong lịch sử trò chuyện hỗ trợ người dùng có thể mở rộng, Longmemeval đưa ra một thách thức đáng kể đối với các hệ thống bộ nhớ dài hạn hiện có, với các trợ lý trò chuyện thương mại và LLM bối cảnh dài cho thấy độ chính xác giảm 30% khi ghi nhớ thông tin qua các tương tác được duy trì. Sau đó, chúng tôi trình bày một khung thống nhất phân chia thiết kế bộ nhớ dài hạn thành bốn lựa chọn thiết kế trên các giai đoạn lập chỉ mục, truy xuất và đọc. Được xây dựng dựa trên những hiểu biết thử nghiệm quan trọng, chúng tôi đề xuất một số thiết kế bộ nhớ bao gồm phân tách phiên để tối ưu hóa mức độ chi tiết giá trị, mở rộng chính được thực hiện để tăng cường cấu trúc chỉ số và mở rộng truy vấn thời gian để tinh chỉnh phạm vi tìm kiếm. Kết quả thử nghiệm cho thấy các tối ưu hóa này cải thiện đáng kể cả việc thu hồi bộ nhớ và trả lời câu hỏi hạ nguồn trên longmemeval. Nhìn chung, nghiên cứu của chúng tôi cung cấp các nguồn lực và hướng dẫn có giá trị để thúc đẩy khả năng bộ nhớ dài hạn của các trợ lý trò chuyện dựa trên LLM, mở đường cho AI trò chuyện cá nhân hóa và đáng tin cậy hơn.
-
-- Zep cải thiện kết quả so với baseline (dùng toàn bộ hội thoại) ở hầu hết các loại câu hỏi, đặc biệt:
-    - Loại câu “multi-session,” “preference,” “temporal reasoning” tăng đáng kể.
-    - Độ trễ (latency) giảm đến 90% so với việc nhét toàn bộ hội thoại vào prompt (vì prompt của Zep ngắn gọn hơn).
-🔹 **Tiêu chí đánh giá:**
-
-| **Tiêu chí**                  | **Memory-Augmented AI**          | **LLM thông thường**     |
-| ----------------------------- | -------------------------------- | ------------------------ |
-| **Khả năng duy trì bối cảnh** | ✅ Tốt                            | ❌ Kém                    |
-| **Độ chính xác phản hồi**     | ✅ Cao hơn                        | ❌ Giảm khi hội thoại dài |
-| **Tốc độ phản hồi**           | ❌ Chậm hơn                       | ✅ Nhanh hơn              |
-| **Khả năng cá nhân hóa**      | ✅ Có thể nhớ sở thích người dùng | ❌ Không nhớ thông tin cũ |
-
-Chi tiết các tiêu chí đánh giá: 
-
-- **Trích xuất thông tin (Information Extraction)**: Khả năng nhớ lại thông tin cụ thể từ lịch sử tương tác dài, bao gồm cả chi tiết được đề cập bởi người dùng hoặc trợ lý.​[Di Wu](https://xiaowu0162.github.io/long-mem-eval/?utm_source=chatgpt.com)
+- Bắt đầu xuất hiện các mô hình như:
     
-- **Suy luận đa phiên (Multi-Session Reasoning)**: Khả năng tổng hợp thông tin từ nhiều phiên lịch sử để trả lời các câu hỏi phức tạp liên quan đến việc tổng hợp và so sánh.​
+    - **ORConvQA** (Open-Retrieval Conversational QA) – kết hợp cơ chế hồi tưởng dữ liệu từ các phiên trước.
+        
+    - **History Selection Module** trong các hệ CMRC (Conversational Machine Reading Comprehension) – lựa chọn các đoạn lịch sử hội thoại liên quan để giúp mô hình hiểu ngữ cảnh của câu hỏi hiện tại.
+        
+- Đây là giai đoạn các nhà nghiên cứu thấy rõ **vấn đề co-reference**, cập nhật thông tin theo thời gian, và sự phức tạp của hội thoại đa lượt.
     
-- **Suy luận thời gian (Temporal Reasoning)**: Nhận thức về các khía cạnh thời gian của thông tin người dùng, bao gồm cả các đề cập thời gian rõ ràng và siêu dữ liệu dấu thời gian trong các tương tác.​
-    
-- **Cập nhật kiến thức (Knowledge Updates)**: Khả năng nhận biết các thay đổi trong thông tin cá nhân của người dùng và cập nhật kiến thức về người dùng một cách động theo thời gian.​
-    
-- **Từ chối trả lời (Abstention)**: Khả năng từ chối trả lời các câu hỏi liên quan đến thông tin không được đề cập trong lịch sử tương tác, tức là thông tin không được nhắc đến trong lịch sử tương tác.
-### **4.2. Kết quả thực nghiệm**
-
-📌 **Memory-Augmented AI cải thiện 38% khả năng duy trì bối cảnh hội thoại so với LLM thông thường.**  
-📌 **Tốc độ phản hồi chậm hơn ~10% nhưng độ chính xác tăng 25%.**
 
 ---
 
-## **📌 5. Kết luận & Hướng phát triển (Conclusion & Future Work)**
+### 🧠 **3. Giai đoạn hiện đại: Memory-Augmented Chat Assistants (2023–nay)**
 
-### **5.1. Kết luận**
-
-- **Memory-Augmented AI Agents có thể cải thiện đáng kể khả năng duy trì hội thoại dài hạn.**
-- **Hạn chế của mô hình là tốc độ phản hồi, nhưng có thể tối ưu hóa.**
-
-### **5.2. Hướng phát triển**
-
-✅ **Tối ưu thuật toán quản lý bộ nhớ** để cải thiện tốc độ.  
-✅ **Kết hợp với RAG** để AI có thể truy xuất thông tin từ dữ liệu ngoài.  
-✅ **Mở rộng thử nghiệm trên nhiều lĩnh vực** như giáo dục, chăm sóc sức khỏe.
+- Các hệ thống như:
+    
+    - **MemoryBank** (Zhong et al., 2024)
+        
+    - **PerLTQA** (Du et al., 2024)
+        
+    - **LoCoMo** (Maharana, 2024)
+        
+    - Và **LongMemEval** – được phát triển bởi Di Wu et al., là benchmark mạnh nhất hiện nay cho khả năng ghi nhớ dài hạn.
+        
+- Các hệ thống bắt đầu áp dụng:
+    
+    - Chia nhỏ phiên hội thoại (session decomposition)
+        
+    - Tăng cường key-value store
+        
+    - Nhận diện sự kiện có thời gian để reasoning chính xác
+        
 
 ---
 
-## **📌 6. Tài liệu tham khảo (References)**
+### 📌 Gợi ý: Ai là "thủy tổ"?
 
-- [KARMA: Memory-Augmented AI Research](https://arxiv.org/abs/2409.14908)
-- [AriGraph: Knowledge Memory for LLMs](https://arxiv.org/abs/2407.04363)
-- [Meta AI’s Memory-Augmented Chatbot](https://www.theverge.com/2025/1/27/24352992/meta-ai-memory-personalization)
+Nếu phải chọn một “thủy tổ” tiêu biểu cho giai đoạn hiện đại, có thể nhắc đến:
 
+- **Zhong et al. (2024)** với **MemoryBank** – hệ thống đầu tiên thiết kế cụ thể cho trí nhớ dài hạn cá nhân hóa trong hội thoại.
+    
+- Hoặc **Di Wu et al. (2024)** – với **LongMemEval**, benchmark đầu tiên đưa ra tiêu chuẩn rõ ràng và toàn diện cho việc đánh giá trí nhớ hội thoại dài hạn.
+    
 
 ---
 
-25/03/2025
+Quốc có muốn mình tóm tắt các mốc này dưới dạng infographic đơn giản không? Hoặc viết lại thành ngôn ngữ lớp 8 dễ hiểu hơn?
 
+
+---
+Dưới đây là phần **tổng hợp hai đoạn** bạn cung cấp, được dịch tiếng Việt đầy đủ, logic, và dễ hiểu — dùng được luôn cho mục **Related Work** hoặc mở đầu phần tổng quan:
+
+---
+
+## 🧠 Các hướng tiếp cận hệ thống hội thoại có trí nhớ dài hạn
+
+### 1. **Ba hướng chính để trang bị trí nhớ dài hạn cho trợ lý hội thoại**
+
+Để giúp các trợ lý hội thoại ghi nhớ và xử lý các tương tác dài hạn với người dùng, hiện nay có ba hướng nghiên cứu chính:
+
+#### 📌 **(1) Long-context input trực tiếp**
+
+Cách tiếp cận đầu tiên là **đưa toàn bộ lịch sử hội thoại dài vào LLM** như một đầu vào duy nhất (long-context input), cho phép mô hình xử lý tất cả thông tin một lượt  
+→ Ưu điểm: đơn giản, không cần thiết kế lại kiến trúc.  
+→ Nhược điểm: **tốn tài nguyên**, và dễ gặp hiện tượng **“lost-in-the-middle”** – mô hình **quên mất phần giữa** khi độ dài đầu vào vượt quá giới hạn xử lý hiệu quả _(Beltagy et al., 2020; Shi et al., 2023)_.
+
+#### 📌 **(2) Tích hợp mô-đun trí nhớ (differentiable memory modules)**
+
+Cách tiếp cận thứ hai là **thay đổi kiến trúc mô hình**, tích hợp thêm các **bộ nhớ học được (learnable memory modules)** như trong Memory Networks, MemGPT…  
+→ Mô hình có khả năng lưu trữ, cập nhật và sử dụng lại các thông tin đã ghi nhớ.  
+→ Tuy nhiên, cách này **cần huấn luyện lại từ đầu** và **khó triển khai với các API LLM thương mại** _(Weston et al., 2014; Wu et al., 2022)_.
+
+#### 📌 **(3) Nén ngữ cảnh & truy xuất theo nhu cầu (Context Compression & Retrieval)**
+
+Cách thứ ba là **nén hội thoại dài thành các đoạn ngắn dễ truy xuất**, thông qua:
+
+- Tóm tắt (summary)
+    
+- Trích xuất facts hoặc keyphrase
+    
+- Chia đoạn logic theo topic  
+    Sau đó sử dụng các kỹ thuật **Retrieval-Augmented Generation (RAG)** để tìm và đưa lại các đoạn cần thiết khi có câu hỏi.  
+    → Đây là cách tiếp cận **phù hợp với LLM hiện đại (GPT-4, Claude, v.v.) vì có thể áp dụng dưới dạng plug-and-play**  
+    → Cũng là cách tiếp cận chính được sử dụng trong **LONGMEMEVAL** và nhiều hệ thống thương mại hiện nay _(OpenAI, Coze, Gutiérrez et al., 2024)_.
+    
+
+---
+
+### 2. **Trợ lý hội thoại cá nhân hóa có trí nhớ (Memory-based Personalized Dialogue Agents)**
+
+Song song với các kỹ thuật ghi nhớ tổng quát, một nhánh quan trọng khác là phát triển các **trợ lý hội thoại cá nhân hóa**, có khả năng lưu giữ và sử dụng thông tin riêng biệt của từng người dùng trong các tương tác dài hạn.
+
+- 🔹 **CoMemNN (Pei et al., 2021)**: một trong những mô hình đầu tiên **cập nhật hồ sơ người dùng dần theo hội thoại**.
+    
+- 🔹 **LD-Agent (Li et al., 2024b)**: sử dụng **bộ nhớ ngắn hạn – dài hạn** để lưu lại các thông tin hội thoại và truy xuất khi cần.
+    
+- 🔹 **MemoryBank (Zhong et al., 2024)**: mô hình cập nhật trí nhớ dựa trên **đường cong quên Ebbinghaus**, ưu tiên thông tin gần đây.
+    
+- 🔹 **Theanine (Kim et al., 2024)**: mô hình **truy xuất theo dòng thời gian**, có dùng **LLM phụ trợ để làm sạch** dữ liệu trước khi dùng.
+    
+
+🧩 Tuy nhiên, các phương pháp này thường dùng **retriever cố định**, với cách chia nhỏ (granularity) không thay đổi. Điều này **giới hạn khả năng thích ứng** với các dạng hội thoại khác nhau.
+
+👉 Vì vậy, các nghiên cứu gần đây như **RMM** đề xuất cơ chế **retrieval thích ứng (adaptive)**, cho phép thay đổi cách chia nhỏ và truy xuất tuỳ vào ngữ cảnh câu hỏi – mở ra hướng mới trong hệ thống cá nhân hóa dài hạn.
+
+---
+
+Nếu bạn cần:
+
+- Mình tóm phần này lại thành **1 slide PowerPoint** hoặc **mở đầu bài nghiên cứu**.
+    
+- Viết lại phần này theo **academic English chuẩn để đưa vào section “Related Work”**
+    
+- Vẽ sơ đồ so sánh 3 hướng tiếp cận + danh sách các mô hình tiêu biểu
+    
+
+👉 Mình làm ngay nha!
+
+
+
+
+
+Tuyệt Quốc ơi! Hai bài này là **những baseline rất phù hợp** nếu bạn muốn tập trung vào hướng **"trợ lý hội thoại cá nhân hóa có trí nhớ" (Memory-based Personalized Dialogue Agents)**. Mình sẽ giúp bạn phát biểu rõ ràng lại **cách chọn và sử dụng 2 baseline này trong research**, và gợi ý hướng mở rộng trên từng cái.
+
+---
+
+## 🧱 **Baseline: Personalized Memory in Dialogue Agents**
+
+Trong nhánh nghiên cứu về **ghi nhớ dài hạn theo từng người dùng**, chúng tôi chọn hai công trình nền tảng làm baseline:
+
+---
+
+### **1. CoMemNN – Cooperative Memory Network (Pei et al., 2021)**
+
+📌 Link: [doi.org/10.1145/3442381.3449843](https://doi.org/10.1145/3442381.3449843)
+
+**Ý tưởng chính**:  
+CoMemNN là một trong những hệ thống đầu tiên đưa ra **hồ sơ người dùng động (incremental user profile)**, được cập nhật dần dần qua các lượt hội thoại.
+
+- **Cơ chế ghi nhớ**: Tự động trích xuất thông tin cá nhân từ lời thoại và thêm vào "User Profile".
+    
+- **Cơ chế sử dụng**: Mỗi lần trò chuyện mới, hệ thống sử dụng profile để tạo ngữ cảnh và đưa ra phản hồi phù hợp.
+    
+- **Dữ liệu sử dụng**: Cần có annotation thủ công về persona/fact, phù hợp với hệ thống quy mô nhỏ.
+    
+
+🧩 **Điểm mạnh**:
+
+- Là baseline tiêu biểu cho các hệ thống “ghi nhớ người dùng” không cần mô hình lớn.
+    
+- Có thể dễ dàng tích hợp vào pipeline hiện tại như một module tách riêng.
+    
+
+🧠 **Hướng mở rộng** bạn có thể làm:
+
+- Dùng LLM để **tự động tạo profile** thay vì cần nhãn.
+    
+- Kết hợp profile với hệ thống RAG: truy xuất đoạn liên quan **+ thêm thông tin người dùng** → tăng cá nhân hóa.
+    
+
+---
+
+### **2. Keep Me Updated! (Bae et al., 2022)**
+
+📌 Link: [aclanthology.org/2022.findings-emnlp.276](https://aclanthology.org/2022.findings-emnlp.276)
+
+**Ý tưởng chính**:  
+Tác giả đề xuất một hệ thống có khả năng **cập nhật thông tin người dùng theo thời gian**, để phản hồi không bị lỗi thời.
+
+- **Cơ chế**: Mỗi khi người dùng nói điều gì mới (ví dụ "giờ tôi sống ở Hà Nội"), hệ thống sẽ ghi đè/sửa thông tin cũ ("trước ở Đà Nẵng") trong profile.
+    
+- Hệ thống cũng có thể phản hồi như người thật: “Ồ, bạn chuyển nhà rồi à?”
+    
+
+🧩 **Điểm mạnh**:
+
+- Là baseline hiếm hoi giải quyết bài toán **Knowledge Update** trong hội thoại.
+    
+- Hữu ích trong các hệ thống cần cập nhật liên tục (ngân hàng, bác sĩ ảo, trợ lý cá nhân...).
+    
+
+🧠 **Hướng mở rộng** bạn có thể làm:
+
+- Kết hợp với LongMemEval – nhóm câu hỏi **Knowledge Update** là phù hợp nhất.
+    
+- Thay vì rule-based update → dùng LLM để phát hiện mâu thuẫn và sửa tự động.
+    
+
+---
+
+## 🧠 Tổng kết cách dùng hai baseline này:
+
+|Baseline|Điểm mạnh|Dùng cho năng lực nào trong LongMemEval|Cách bạn có thể mở rộng|
+|---|---|---|---|
+|**CoMemNN**|Xây dựng user profile qua hội thoại|Single-session-user, multi-session|Tự động hoá tạo profile bằng LLM|
+|**Keep Me Updated**|Cập nhật hồ sơ người dùng theo thời gian|Knowledge Update, Temporal Reasoning|Phát hiện mâu thuẫn bằng LLM|
+
+---
+
+👉 Nếu Quốc muốn:
+
+- Viết phần _Baseline_ này bằng tiếng Anh học thuật
+    
+- Tích hợp vào phần “Related Work” hoặc làm slide trình bày
+    
+- Viết lại hệ thống này bằng code LLM / LangChain demo
+    
+
+Mình triển khai ngay nhé!
+
+
+---
 Tuyệt vời. Mình sẽ viết một survey thật chi tiết về các hướng nghiên cứu Long-Term Memory trong hệ thống hội thoại, từ giai đoạn sơ khai đến các kỹ thuật hiện đại như memory modules, context compression, và các hệ personalized memory. Bài viết sẽ phân tích các cột mốc quan trọng, các baseline nổi bật, và những benchmark mới nhất như LongMemEval, nhằm giúp bạn có nền tảng vững chắc để phát triển thành một bài báo khoa học.
 
 Mình sẽ trình bày lại theo dạng academic report chuẩn, bao gồm các mục tiêu khảo sát, phân loại các phương pháp, so sánh, và gợi ý hướng mở rộng. Mình sẽ gửi lại bản đầy đủ sau khi hoàn tất.
@@ -749,3 +377,388 @@ Tóm lại, **hệ thống đối thoại tích hợp trí nhớ dài hạn** đ
 9. Seo, M. _et al._ (2017). _Bidirectional Attention Flow for Machine Comprehension (BiDAF)_. **ICLR 2017** ([BERT with History Answer Embedding for Conversational Question Answering](https://arxiv.org/pdf/1905.05412#:~:text=4,representation%20generated%20when%20answering%20previous)).
     
 10. Chen, D. _et al._ (2017). _Reading Wikipedia to Answer Open-Domain Questions (DrQA)_. **ACL 2017** ([BERT with History Answer Embedding for Conversational Question Answering](https://arxiv.org/pdf/1905.05412#:~:text=,JASIS%2C%2038%3A389%E2%80%93404%2C%201987)).
+
+
+
+
+```
+Trích dẫn
+
+[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+BERT with History Answer Embedding for Conversational Question Answering
+
+4.2.1 Competing Methods. We consider all the methods on the QuAC leaderboard as baselines. The competing methods are: • BiDAF++ [3]: BiDAF++ augments BiDAF [14] with self-attention and contextualized embeddings. • BiDAF++ w/ 2-Context [3]: It incorporates 2 history turns in BiDAF++ by encoding the dialog turn # in question embeddings and concatenating marker embeddings to passage embeddings. • FlowQA [7]: It considers conversation history by integrating intermediate representation generated when answering previous
+
+](https://arxiv.org/pdf/1905.05412#:~:text=4,representation%20generated%20when%20answering%20previous)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+BERT with History Answer Embedding for Conversational Question Answering
+
+[2] D. Chen, A. Fisch, J. Weston, and A. Bordes. Reading Wikipedia to Answer Open-Domain Questions. In ACL, 2017. [3] E. Choi, H. He, M. Iyyer, M. Yatskar, W. Yih, Y. Choi, P. Liang, and L. S. Zettlemoyer. QuAC: Question Answering in Context. In EMNLP, 2018. [4] W. B. Croft and R. H. Thompson. I3R: A new approach to the design of document retrieval systems. JASIS, 38:389–404, 1987.
+
+](https://arxiv.org/pdf/1905.05412#:~:text=,JASIS%2C%2038%3A389%E2%80%93404%2C%201987)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2410.10813] LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory
+
+integrated memory components to track user-assistant chat histories, enabling more accurate and personalized responses. However, their long-term memory capabilities in sustained interactions remain underexplored. We introduce LongMemEval, a comprehensive benchmark designed to evaluate five core long-term memory abilities of chat assistants: information extraction, multi-session reasoning, temporal reasoning, knowledge updates, and abstention. With 500 meticulously curated questions embedded within freely scalable user-assistant chat histories, LongMemEval presents a significant challenge to existing long- term memory systems, with commercial chat assistants and long-context LLMs
+
+](https://arxiv.org/abs/2410.10813#:~:text=integrated%20memory%20components%20to%20track,context%20LLMs)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2410.10813] LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory
+
+meticulously curated questions embedded within freely scalable user-assistant chat histories, LongMemEval presents a significant challenge to existing long- term memory systems, with commercial chat assistants and long-context LLMs showing a 30% accuracy drop on memorizing information across sustained interactions. We then present a unified framework that breaks down the long-term memory design into three stages: indexing, retrieval, and reading. Built upon key experimental insights, we propose several memory design optimizations including session decomposition for value granularity, fact-augmented key
+
+](https://arxiv.org/abs/2410.10813#:~:text=meticulously%20curated%20questions%20embedded%20within,augmented%20key)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[1410.3916] Memory Networks
+
+> Abstract:We describe a new class of learning models called memory networks. Memory networks reason with inference components combined with a long-term memory component; they learn how to use these jointly. The long-term memory can be read and written to, with the goal of using it for prediction. We investigate these models in the context of question answering (QA) where the long-term memory effectively acts as a (dynamic) knowledge base, and the output is a textual response. We evaluate them on a large-scale QA task, and a smaller, but more complex, toy task generated from a simulated world. In the latter, we show the reasoning power of such models by chaining multiple supporting sentences to
+
+](https://arxiv.org/abs/1410.3916#:~:text=,chaining%20multiple%20supporting%20sentences%20to)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[1410.3916] Memory Networks
+
+these models in the context of question answering (QA) where the long-term memory effectively acts as a (dynamic) knowledge base, and the output is a textual response. We evaluate them on a large-scale QA task, and a smaller, but more complex, toy task generated from a simulated world. In the latter, we show the reasoning power of such models by chaining multiple supporting sentences to answer questions that require understanding the intension of verbs.
+
+](https://arxiv.org/abs/1410.3916#:~:text=these%20models%20in%20the%20context,understanding%20the%20intension%20of%20verbs)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://en.wikipedia.org&sz=32)en.wikipedia.org
+
+Differentiable neural computer - Wikipedia
+
+In artificial intelligence , a differentiable neural computer (DNC) is a memory augmented 47 architecture (MANN), which is typically (but not by definition) recurrent in its implementation. The model was published in 2016 by Alex Graves et al. of 49.[ 1 ]
+
+](https://en.wikipedia.org/wiki/Differentiable_neural_computer#:~:text=In%20artificial%20intelligence%20%2C%20a,1)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://en.wikipedia.org&sz=32)en.wikipedia.org
+
+Differentiable neural computer - Wikipedia
+
+DNC indirectly takes inspiration from Von-Neumann architecture , making it likely to outperform conventional architectures in tasks that are fundamentally algorithmic that cannot be learned by finding a 52.
+
+](https://en.wikipedia.org/wiki/Differentiable_neural_computer#:~:text=DNC%20indirectly%20takes%20inspiration%20from,by%20finding%20a%20%2052)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://en.wikipedia.org&sz=32)en.wikipedia.org
+
+Differentiable neural computer - Wikipedia
+
+So far, DNCs have been demonstrated to handle only relatively simple tasks, which can be solved using conventional programming. But DNCs don't need to be programmed for each problem, but can instead be trained. This attention span allows the user to feed complex data structures such as 54 sequentially, and recall them for later use. Furthermore, they can learn aspects of symbolic reasoning and apply it to working memory. The researchers who published the method see promise that DNCs can be trained to perform complex, structured tasks[ 1 ][ 2 ] and address big-data applications that require some sort of reasoning, such as generating video commentaries or semantic text
+
+](https://en.wikipedia.org/wiki/Differentiable_neural_computer#:~:text=So%20far%2C%20DNCs%20have%20been,video%20commentaries%20or%20semantic%20text)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[1410.3916] Memory Networks
+
+memory component; they learn how to use these jointly. The long-term memory can be read and written to, with the goal of using it for prediction. We investigate these models in the context of question answering (QA) where the long-term memory effectively acts as a (dynamic) knowledge base, and the output is a textual response. We evaluate them on a large-scale QA task, and a smaller, but more complex, toy task generated from a simulated world. In the latter, we show the reasoning power of such models by chaining multiple supporting sentences to
+
+](https://arxiv.org/abs/1410.3916#:~:text=memory%20component%3B%20they%20learn%20how,chaining%20multiple%20supporting%20sentences%20to)[
+
+openreview.net
+
+Language model with Plug-in Knowldge Memory | OpenReview
+
+of knowledge PLM needs to solve certain task. In this paper, we introduce PlugLM, a pre-training model with differentiable plug-in memory(DPM). The key intuition behind is to decouple the knowledge storage from model parameters with an editable and scalable key-value memory and leverage knowledge in an explainable manner by knowledge retrieval in the DPM. We conduct extensive experiments under various settings to justify this design choice. In domain adaptation setting, PlugLM could be easily adapted to different domains with plugable in-domain memory---obtaining 3.95 F1 improvements across four domains, without any in-domain training. PlugLM could also keep absorbing new knowledge
+
+](https://openreview.net/forum?id=Plr5l7r0jY6#:~:text=of%20knowledge%20PLM%20needs%20to,also%20keep%20absorbing%20new%20knowledge)[
+
+openreview.net
+
+Language model with Plug-in Knowldge Memory | OpenReview
+
+adaptation setting, PlugLM could be easily adapted to different domains with plugable in-domain memory---obtaining 3.95 F1 improvements across four domains, without any in-domain training. PlugLM could also keep absorbing new knowledge after pre-training is done by knowledge updating operation in the DPM without re-training. Finally, we show that by incorporating training samples into DPM with knowledge prompting, PlugLM could further be improved by the instruction of in-task knowledge.
+
+](https://openreview.net/forum?id=Plr5l7r0jY6#:~:text=adaptation%20setting%2C%20PlugLM%20could%20be,task%20knowledge)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2005.11364] Open-Retrieval Conversational Question Answering
+
+retrieval conversational question answering (ORConvQA) setting, where we learn to retrieve evidence from a large collection before extracting answers, as a further step towards building functional conversational search systems. We create a dataset, OR-QuAC, to facilitate research on ORConvQA. We build an end- to-end system for ORConvQA, featuring a retriever, a reranker, and a reader that are all based on Transformers. Our extensive experiments on OR-QuAC demonstrate that a learnable retriever is crucial for ORConvQA. We further show that our system can make a substantial improvement when we enable history modeling in all system components. Moreover, we show that the reranker component contributes to
+
+](https://arxiv.org/abs/2005.11364#:~:text=retrieval%20conversational%20question%20answering%20,the%20reranker%20component%20contributes%20to)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2005.11364] Open-Retrieval Conversational Question Answering
+
+passage. These simplifications neglect the fundamental role of retrieval in conversational search. To address this limitation, we introduce an open- retrieval conversational question answering (ORConvQA) setting, where we learn to retrieve evidence from a large collection before extracting answers, as a further step towards building functional conversational search systems. We create a dataset, OR-QuAC, to facilitate research on ORConvQA. We build an end- to-end system for ORConvQA, featuring a retriever, a reranker, and a reader that are all based on Transformers. Our extensive experiments on OR-QuAC demonstrate that a learnable retriever is crucial for ORConvQA. We further show that our
+
+](https://arxiv.org/abs/2005.11364#:~:text=passage,We%20further%20show%20that%20our)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2005.11364] Open-Retrieval Conversational Question Answering
+
+to-end system for ORConvQA, featuring a retriever, a reranker, and a reader that are all based on Transformers. Our extensive experiments on OR-QuAC demonstrate that a learnable retriever is crucial for ORConvQA. We further show that our system can make a substantial improvement when we enable history modeling in all system components. Moreover, we show that the reranker component contributes to
+
+](https://arxiv.org/abs/2005.11364#:~:text=to,the%20reranker%20component%20contributes%20to)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://aclanthology.org&sz=32)aclanthology.org
+
+interlocutors revealed in the previous conversation is abstractively summarized and stored in memory. Specifically, the memory management mechanism decides which information to keep in memory. For this purpose, we define four pairwise operations (PASS, REPLACE, APPEND, and DELETE) to find and eliminate the information that can cause confusion or redundancy in later conversations. For example, if the previous memory sentence is “Haven’t got COVID tested yet” and the new incoming summary is “Just got
+
+](https://aclanthology.org/2022.findings-emnlp.276.pdf#:~:text=interlocutors%20revealed%20in%20the%20previous,in%02coming%20summary%20is%20%E2%80%9CJust%20got)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://aclanthology.org&sz=32)aclanthology.org
+
+For example, if the previous memory sentence is “Haven’t got COVID tested yet” and the new incoming summary is “Just got positive results from COVID test”, the two sentences are contradictory, in which the former needs to be replaced in memory by the latter. Through this process, only valid information remains in new memory. Then, in subsequent sessions, a relevant information from this memory is retrieved and given as additional condition for generating chatbot
+
+](https://aclanthology.org/2022.findings-emnlp.276.pdf#:~:text=For%20example%2C%20if%20the%20previous,additional%20condi%02tion%20for%20generating%20chatbot)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://aclanthology.org&sz=32)aclanthology.org
+
+Specifically, the memory management mechanism decides which information to keep in memory. For this purpose, we define four pairwise operations (PASS, REPLACE, APPEND, and DELETE) to find and eliminate the information that can cause confusion or redundancy in later conversations. For example, if the previous memory sentence is “Haven’t got COVID tested yet” and the new incoming summary is “Just got positive results from
+
+](https://aclanthology.org/2022.findings-emnlp.276.pdf#:~:text=Specifically%2C%20the%20memory%20management%20mechanism,%E2%80%9CJust%20got%20positive%20results%20from)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://aclanthology.org&sz=32)aclanthology.org
+
+find and eliminate the information that can cause confusion or redundancy in later conversations. For example, if the previous memory sentence is “Haven’t got COVID tested yet” and the new incoming summary is “Just got positive results from COVID test”, the two sentences are contradictory, in which the former needs to be replaced in memory by the latter. Through this process, only valid information remains in new memory. Then, in subsequent sessions, a relevant
+
+](https://aclanthology.org/2022.findings-emnlp.276.pdf#:~:text=find%20and%20eliminate%20the%20information,in%20sub%02sequent%20sessions%2C%20a%20relevant)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://aclanthology.org&sz=32)aclanthology.org
+
+With extensive experiments and ablations, we show that the proposed memory management mechanism becomes more advantageous in terms of memorability as the sessions proceed, leading to better engagingness and humanness in multisession dialogues. Our contributions are as follows: 1. We make a step towards long-term conversations with dynamic memory that must be kept up-to-date.
+
+](https://aclanthology.org/2022.findings-emnlp.276.pdf#:~:text=With%20extensive%20experiments%20and%20ablations%2C,date)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2308.15022] Recursively Summarizing Enables Long-Term Dialogue Memory in Large Language Models
+
+long conversation, these chatbots fail to recall past information and tend to generate inconsistent responses. To address this, we propose to recursively generate summaries/ memory using large language models (LLMs) to enhance long- term memory ability. Specifically, our method first stimulates LLMs to memorize small dialogue contexts and then recursively produce new memory using previous memory and following contexts. Finally, the chatbot can easily generate a highly consistent response with the help of the latest memory. We evaluate our method on both open and closed LLMs, and the experiments on the widely-used public dataset show that our method can generate more consistent responses in a long-
+
+](https://arxiv.org/abs/2308.15022#:~:text=long%20conversation%2C%20these%20chatbots%20fail,consistent%20responses%20in%20a%20long)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2308.15022] Recursively Summarizing Enables Long-Term Dialogue Memory in Large Language Models
+
+consistent response with the help of the latest memory. We evaluate our method on both open and closed LLMs, and the experiments on the widely-used public dataset show that our method can generate more consistent responses in a long- context conversation. Also, we show that our strategy could nicely complement both long-context (e.g., 8K and 16K) and retrieval-enhanced LLMs, bringing further long-term dialogue performance. Notably, our method is a potential solution to enable the LLM to model the extremely long context. The code and scripts will be released later.
+
+](https://arxiv.org/abs/2308.15022#:~:text=consistent%20response%20with%20the%20help,scripts%20will%20be%20released%20later)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+On Memory Construction and Retrieval for Personalized Conversational Agents
+
+To deliver coherent and personalized experiences in long-term conversations, existing approaches typically perform retrieval augmented response generation by constructing memory banks from conversation history at either the turn-level, session-level, or through summarization techniques. In this paper, we present two key findings: (1) The granularity of memory unit matters: Turn-level, session-level, and summarization-based methods each exhibit limitations in both memory retrieval accuracy and the semantic quality of the retrieved content. (2) Prompt compression methods, such as LLMLingua-2, can effectively serve as a denoising mechanism, enhancing memory retrieval accuracy across different granularities.
+
+](https://arxiv.org/html/2502.05589v2#:~:text=To%20deliver%20coherent%20and%20personalized,retrieval%20accuracy%20across%20different%20granularities)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+On Memory Construction and Retrieval for Personalized Conversational Agents
+
+Building on these insights, we propose SeCom, a method that constructs the memory bank at segment level by introducing a conversation Se gmentation model that partitions long-term conversations into topically coherent segments, while applying Com pression based denoising on memory units to enhance memory retrieval. Experimental results show that SeCom exhibits a significant performance advantage over baselines on long-term conversation benchmarks LOCOMO and Long-MT-Bench+. Additionally, the proposed conversation segmentation method demonstrates superior performance on dialogue segmentation datasets such as DialSeg711, TIAGE, and SuperDialSeg.
+
+](https://arxiv.org/html/2502.05589v2#:~:text=Building%20on%20these%20insights%2C%20we,as%20DialSeg711%2C%20TIAGE%2C%20and%20SuperDialSeg)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2410.10813] LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory
+
+showing a 30% accuracy drop on memorizing information across sustained interactions. We then present a unified framework that breaks down the long-term memory design into three stages: indexing, retrieval, and reading. Built upon key experimental insights, we propose several memory design optimizations including session decomposition for value granularity, fact-augmented key expansion for indexing, and time-aware query expansion for refining the search scope. Extensive experiments show that these optimizations greatly improve both memory recall and downstream question answering on LongMemEval. Overall, our study provides valuable resources and guidance for advancing the long-term
+
+](https://arxiv.org/abs/2410.10813#:~:text=showing%20a%2030,term)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://ar5iv.labs.arxiv.org&sz=32)ar5iv.labs.arxiv.org
+
+[2305.10250] MemoryBank: Enhancing Large Language Models with Long-Term Memory
+
+personality over time by synthesizing information from previous interactions. To mimic anthropomorphic behaviors and selectively preserve memory, MemoryBank incorporates a memory updating mechanism, inspired by the Ebbinghaus Forgetting Curve theory. This mechanism permits the AI to forget and reinforce memory based on time elapsed and the relative significance of the memory, thereby offering a more human-like memory mechanism and enriched user experience. MemoryBank is versatile in accommodating both closed-source models like ChatGPT and open- source models such as ChatGLM. To validate MemoryBank’s effectiveness, we exemplify its application through the creation of an LLM-based chatbot named
+
+](https://ar5iv.labs.arxiv.org/html/2305.10250#:~:text=personality%20over%20time%20by%20synthesizing,based%20chatbot%20named)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://medium.com&sz=32)medium.com
+
+Augmenting LLMs with Retrieval, Tools, and Long-term Memory | by Alaa Dania Adimi | InfinitGraph | Mar, 2025 | Medium
+
+Memory Updating
+
+](https://medium.com/@ja_adimi/augmenting-llms-with-retrieval-tools-and-long-term-memory-b9e1e6b2fc28#:~:text=Memory%20Updating)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://ar5iv.labs.arxiv.org&sz=32)ar5iv.labs.arxiv.org
+
+[2305.10250] MemoryBank: Enhancing Large Language Models with Long-Term Memory
+
+psychological counseling, and secretarial assistance. Recognizing the necessity for long-term memory, we propose MemoryBank, a novel memory mechanism tailored for LLMs. MemoryBank enables the models to summon relevant memories, continually evolve through continuous memory updates, comprehend, and adapt to a user’s personality over time by synthesizing information from previous interactions. To mimic anthropomorphic behaviors and selectively preserve memory, MemoryBank incorporates a memory updating mechanism, inspired by the Ebbinghaus Forgetting Curve theory. This mechanism permits the AI to forget and reinforce memory based on time elapsed and the relative significance of the memory, thereby offering a
+
+](https://ar5iv.labs.arxiv.org/html/2305.10250#:~:text=psychological%20counseling%2C%20and%20secretarial%20assistance,the%20memory%2C%20thereby%20offering%20a)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://medium.com&sz=32)medium.com
+
+Augmenting LLMs with Retrieval, Tools, and Long-term Memory | by Alaa Dania Adimi | InfinitGraph | Mar, 2025 | Medium
+
+* Selective Forgetting: Drawing inspiration from the Ebbinghaus Forgetting Curve, MemoryBank ensures that not all stored memories remain equally strong. Over time, if a memory isn’t recalled or reinforced, its strength decays and it may eventually be pruned from active storage. This selective forgetting keeps the memory bank relevant and uncluttered. * Reinforcement of Key Memories: Conversely, memories that are frequently accessed are reinforced. Each time a memory is recalled, its “strength” is boosted, ensuring that important details persist over longer periods — mirroring how human memory works through repeated retrieval.
+
+](https://medium.com/@ja_adimi/augmenting-llms-with-retrieval-tools-and-long-term-memory-b9e1e6b2fc28#:~:text=,memory%20works%20through%20repeated%20retrieval)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2406.10996] Towards Lifelong Dialogue Agents via Timeline-based Memory Management
+
+to improve retrieval quality, we argue that such memories provide rich, important contextual cues for RG (e.g., changes in user behaviors) in long-term conversations. We present THEANINE, a framework for LLM-based lifelong dialogue agents. THEANINE discards memory removal and manages large-scale memories by linking them based on their temporal and cause-effect relation. Enabled by this linking structure, THEANINE augments RG with memory timelines - series of memories representing the evolution or causality of relevant past events. Along with THEANINE, we introduce TeaFarm, a counterfactual-driven evaluation scheme, addressing the limitation of G-Eval and human efforts when assessing agent
+
+](https://arxiv.org/abs/2406.10996#:~:text=to%20improve%20retrieval%20quality%2C%20we,human%20efforts%20when%20assessing%20agent)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2406.10996] Towards Lifelong Dialogue Agents via Timeline-based Memory Management
+
+constantly memorize perceived information and properly retrieve it for response generation (RG). While prior studies focus on getting rid of outdated memories to improve retrieval quality, we argue that such memories provide rich, important contextual cues for RG (e.g., changes in user behaviors) in long-term conversations. We present THEANINE, a framework for LLM-based lifelong dialogue agents. THEANINE discards memory removal and manages large-scale memories by linking them based on their temporal and cause-effect relation. Enabled by this linking structure, THEANINE augments RG with memory timelines - series of memories representing the evolution or causality of relevant past events. Along
+
+](https://arxiv.org/abs/2406.10996#:~:text=constantly%20memorize%20perceived%20information%20and,Along)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2406.10996] Towards Lifelong Dialogue Agents via Timeline-based Memory Management
+
+conversations. We present THEANINE, a framework for LLM-based lifelong dialogue agents. THEANINE discards memory removal and manages large-scale memories by linking them based on their temporal and cause-effect relation. Enabled by this linking structure, THEANINE augments RG with memory timelines - series of memories representing the evolution or causality of relevant past events. Along with THEANINE, we introduce TeaFarm, a counterfactual-driven evaluation scheme, addressing the limitation of G-Eval and human efforts when assessing agent
+
+](https://arxiv.org/abs/2406.10996#:~:text=conversations,human%20efforts%20when%20assessing%20agent)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2406.05925] Hello Again! LLM-powered Personalized Agent for Long-term Dialogue
+
+the Long-term Dialogue Agent (LD-Agent), which incorporates three independently tunable modules dedicated to event perception, persona extraction, and response generation. For the event memory module, long and short-term memory banks are employed to separately focus on historical and ongoing sessions, while a topic- based retrieval mechanism is introduced to enhance the accuracy of memory retrieval. Furthermore, the persona module conducts dynamic persona modeling for both users and agents. The integration of retrieved memories and extracted personas is subsequently fed into the generator to induce appropriate responses. The effectiveness, generality, and cross-domain capabilities of LD-Agent are
+
+](https://arxiv.org/abs/2406.05925#:~:text=the%20Long,Agent%20are)[
+
+openreview.net
+
+200 The event memory module is designed to perceive 201 historical events to generate coherent responses 202 across interval time. As shown in Figure 2, this 203 event memory module is segmented into two major 204 sub-modules that focus separately on long-term 205 and short-term memory. 206 2.2.1 Long-term Memory 207 Memory Storage. The long-term memory mod208 ule aims to extract and encode events from past 209 sessions. Specifically, this involves recording
+
+](https://openreview.net/pdf?id=lwCxVgVYoK#:~:text=200%20The%20event%20memory%20module,Specifically%2C%20this%20involves%20recording)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2406.05925] Hello Again! LLM-powered Personalized Agent for Long-term Dialogue
+
+generation. For the event memory module, long and short-term memory banks are employed to separately focus on historical and ongoing sessions, while a topic- based retrieval mechanism is introduced to enhance the accuracy of memory retrieval. Furthermore, the persona module conducts dynamic persona modeling for both users and agents. The integration of retrieved memories and extracted personas is subsequently fed into the generator to induce appropriate responses. The effectiveness, generality, and cross-domain capabilities of LD-Agent are empirically demonstrated across various illustrative benchmarks, models, and
+
+](https://arxiv.org/abs/2406.05925#:~:text=generation,various%20illustrative%20benchmarks%2C%20models%2C%20and)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://medium.com&sz=32)medium.com
+
+Augmenting LLMs with Retrieval, Tools, and Long-term Memory | by Alaa Dania Adimi | InfinitGraph | Mar, 2025 | Medium
+
+Memory Storage: The Warehouse of Memories
+
+](https://medium.com/@ja_adimi/augmenting-llms-with-retrieval-tools-and-long-term-memory-b9e1e6b2fc28#:~:text=Memory%20Storage%3A%20The%20Warehouse%20of,Memories)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://medium.com&sz=32)medium.com
+
+Augmenting LLMs with Retrieval, Tools, and Long-term Memory | by Alaa Dania Adimi | InfinitGraph | Mar, 2025 | Medium
+
+level overviews of daily events and key interactions, much like how humans remember “the gist” of an experience rather than every minute detail. * User Portraits: Beyond mere conversation logs, MemoryBank constructs dynamic user portraits. These profiles encapsulate a user’s personality traits, recurring preferences, and evolving interests, enabling the LLM to tailor its responses over time.
+
+](https://medium.com/@ja_adimi/augmenting-llms-with-retrieval-tools-and-long-term-memory-b9e1e6b2fc28#:~:text=level%20overviews%20of%20daily%20events,tailor%20its%20responses%20over%20time)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://medium.com&sz=32)medium.com
+
+Augmenting LLMs with Retrieval, Tools, and Long-term Memory | by Alaa Dania Adimi | InfinitGraph | Mar, 2025 | Medium
+
+* User Portraits: Beyond mere conversation logs, MemoryBank constructs dynamic user portraits. These profiles encapsulate a user’s personality traits, recurring preferences, and evolving interests, enabling the LLM to tailor its responses over time.
+
+](https://medium.com/@ja_adimi/augmenting-llms-with-retrieval-tools-and-long-term-memory-b9e1e6b2fc28#:~:text=,tailor%20its%20responses%20over%20time)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2410.10813] LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory
+
+capabilities in sustained interactions remain underexplored. We introduce LongMemEval, a comprehensive benchmark designed to evaluate five core long-term memory abilities of chat assistants: information extraction, multi-session reasoning, temporal reasoning, knowledge updates, and abstention. With 500 meticulously curated questions embedded within freely scalable user-assistant chat histories, LongMemEval presents a significant challenge to existing long- term memory systems, with commercial chat assistants and long-context LLMs showing a 30% accuracy drop on memorizing information across sustained
+
+](https://arxiv.org/abs/2410.10813#:~:text=capabilities%20in%20sustained%20interactions%20remain,on%20memorizing%20information%20across%20sustained)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2410.10813] LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory
+
+capabilities in sustained interactions remain underexplored. We introduce LongMemEval, a comprehensive benchmark designed to evaluate five core long-term memory abilities of chat assistants: information extraction, multi-session reasoning, temporal reasoning, knowledge updates, and abstention. With 500 meticulously curated questions embedded within freely scalable user-assistant chat histories, LongMemEval presents a significant challenge to existing long- term memory systems, with commercial chat assistants and long-context LLMs showing a 30% accuracy drop on memorizing information across sustained interactions. We then present a unified framework that breaks down the long-term
+
+](https://arxiv.org/abs/2410.10813#:~:text=capabilities%20in%20sustained%20interactions%20remain,term)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+[2410.10813] LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory
+
+interactions. We then present a unified framework that breaks down the long-term memory design into three stages: indexing, retrieval, and reading. Built upon key experimental insights, we propose several memory design optimizations including session decomposition for value granularity, fact-augmented key expansion for indexing, and time-aware query expansion for refining the search scope. Extensive experiments show that these optimizations greatly improve both memory recall and downstream question answering on LongMemEval. Overall, our study provides valuable resources and guidance for advancing the long-term
+
+](https://arxiv.org/abs/2410.10813#:~:text=interactions,term)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+On Memory Construction and Retrieval for Personalized Conversational Agents
+
+(i) LOCOMO (Maharana et al., 2024), which is the longest conversation dataset to date, with an average of 300 turns with 9K tokens per sample. For the test set, we prompt GPT-4 to generate QA pairs for each session as in Alonso et al. (2024). We also conduct evaluation on the recently released official
+
+](https://arxiv.org/html/2502.05589v2#:~:text=%28i%29%20LOCOMO%C2%A0%28Maharana%20et%C2%A0al,on%20the%20recently%20released%20official)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+On Memory Construction and Retrieval for Personalized Conversational Agents
+
+long-conversation benchmark LOCOMO. Interestingly, there is a significant performance disparity in Turn-Level and Session-Level methods when using different retrieval models. For instance, switching from the MPNet-based retriever to the BM25-based retriever results in performance improvements up to
+
+](https://arxiv.org/html/2502.05589v2#:~:text=long,in%20performance%20improvements%20up%20to)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+On Memory Construction and Retrieval for Personalized Conversational Agents
+
+Methods LOCOMO Long-MT-Bench+ GPT4Score BLEU Rouge2 BERTScore GPT4Score BLEU Rouge2 BERTScore SeCom 69.33 7.19 13.74 88.60 88.81 13.80 19.21 87.72 Denoise 59.87 6.49 12.11 88.16 87.51 12.94 18.73 87.44
+
+](https://arxiv.org/html/2502.05589v2#:~:text=Methods%20LOCOMO%20Long,44)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+On Memory Construction and Retrieval for Personalized Conversational Agents
+
+match at L389 LOCOMO Zero History 24.86 1.94 17.36 3.72 13.24 85.83 0.00 0 Full History 54.15 6.26 27.20 12.07 22.39 88.06 210.34 13,330 Turn-Level (MPNet) 57.99 6.07 26.61 11.38 21.60 88.01 54.77 3,288
+
+](https://arxiv.org/html/2502.05589v2#:~:text=match%20at%20L389%20LOCOMO%20Zero,77%203%2C288)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://arxiv.org&sz=32)arxiv.org
+
+On Memory Construction and Retrieval for Personalized Conversational Agents
+
+LOCOMO Zero History 24.86 1.94 17.36 3.72 13.24 85.83 0.00 0 Full History 54.15 6.26 27.20 12.07 22.39 88.06 210.34 13,330 Turn-Level (MPNet) 57.99 6.07 26.61 11.38 21.60 88.01 54.77 3,288
+
+](https://arxiv.org/html/2502.05589v2#:~:text=LOCOMO%20Zero%20History%2024,77%203%2C288)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://aclanthology.org&sz=32)aclanthology.org
+
+3.2 Dataset Construction To study this task, we build a new dataset based on CareCall dataset2(Bae et al., 2022), which consists of single sessions of open-domain dialogues between bots and users. We choose this dataset because the sessions contain various topics that are likely to change in a short period of time, such as user’s health, sleep, and diet, as well as those in a relatively longer period of time, such as family, pets, and frequently visited places. We extend this
+
+](https://aclanthology.org/2022.findings-emnlp.276.pdf#:~:text=3,We%20extend%20this)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://aclanthology.org&sz=32)aclanthology.org
+
+single-session dataset to a multi-session setting, which is a similar procedure presented in MSC (Xu et al., 2022a). Our resulting dataset contains more persona updates than other datasets (Xu et al., 2 https://github.com/naver-ai/carecall-corpus Statistics Sessions 7,665 Session 1 2,812
+
+](https://aclanthology.org/2022.findings-emnlp.276.pdf#:~:text=single,Sessions%207%2C665%20Session%201%202%2C812)[
+
+![Favicon](https://www.google.com/s2/favicons?domain=https://medium.com&sz=32)medium.com
+
+Augmenting LLMs with Retrieval, Tools, and Long-term Memory | by Alaa Dania Adimi | InfinitGraph | Mar, 2025 | Medium
+
+Query Rewriting
+
+](https://medium.com/@ja_adimi/augmenting-llms-with-retrieval-tools-and-long-term-memory-b9e1e6b2fc28#:~:text=Query%20Rewriting)
+```

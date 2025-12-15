@@ -246,5 +246,5 @@ Phán đoán:
 Update: => Em gom lại thành 1-2 nodes (bên trong 1-2 nodes là sự kết hợp của nhiều hàm (vẫn tracing được như bình thường mà tốc độ luồng lại có thể giảm 0.5s )) ạ.
 ```
 
-![](../../5.3%20AI%20Agent/04-ai-agents/image/image%20(4).png)
+![](../../../AI%20Agents/5.3%20AI%20Agent/04-ai-agents/image/image%20(4).png)
 
