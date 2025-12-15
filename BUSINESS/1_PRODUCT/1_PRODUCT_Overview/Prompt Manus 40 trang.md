@@ -3,7 +3,7 @@
 Xem hết các link tài liệu tôi gửi trong file pasted_content_3.txt Hoàn thiện check list sau: 1. Vẽ luồng mô tả 1 hệ thống Agent đơn giản nhưng được sử dụng trong các bài toán thực tế 2. Vẽ luồng mô tả 1 hệ thống Agent siêu phức tạp được dùng bởi các công ty lớn trong bài toán thực tế. Agent system design 3. 1 road giải thích chi tiết toàn bộ về Agent System Design từ đơn giản đến phức tạp bằng tiếng việt output: 40 trang siêu chi tiết từng phần (Đếm đủ 40 trang chi tiết chưa nhé) MECE TOÀN BỘ CÁC VẤN ĐỀ QUAN TRỌNG NHẤT CỦA AGENT SYSTEM DESIGN hãy giải đáp hết.
 ```
 
-
+D:\vip_DOCUMENTS_OBS\learning\DATA_SCIENCE_AND_AI\Domain8AdvancedAIApplications\NLP_LLMs_RAG\04-ai-agents\01-architecture\Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md
 # 2. 2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus
 
 ```
@@ -17,6 +17,9 @@ Bạn cần hoàn thành checklist sau:
 3. VIết chi tiết để ra tài liệu final => Output là 1 tài liệu markdown chi tiết và siêu chi tiết lên tới 100 trang, được coi là cuốn ALL IN ONE cho việc thiết kế sản phẩm produciton quality về mặt Engineer. 
 ```
 
+D:\vip_DOCUMENTS_OBS\learning\BUSINESS\1_PRODUCT\2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical\2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md
+
+---
 
 
 
