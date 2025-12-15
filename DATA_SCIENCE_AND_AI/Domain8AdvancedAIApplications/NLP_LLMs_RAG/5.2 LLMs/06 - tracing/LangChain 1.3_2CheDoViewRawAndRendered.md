@@ -1,6 +1,6 @@
-![1758766753473](image/LangChain_LangGraph/1758766753473.png)
+![1758766753473](../../5.3%20AI%20Agent/04-ai-agents/image/LangChain_LangGraph/1758766753473.png)
 
-![1758766782601](image/LangChain_LangGraph/1758766782601.png)
+![1758766782601](../../5.3%20AI%20Agent/04-ai-agents/image/LangChain_LangGraph/1758766782601.png)
 
 # 2 chế độ view trong Langgraph => Làm mình cứ tưởng do code lỗi nên đi fix trong code
 

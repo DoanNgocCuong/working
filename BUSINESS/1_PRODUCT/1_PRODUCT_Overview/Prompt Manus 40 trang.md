@@ -1,3 +1,20 @@
+
+# Template a Hiệp 
+
+```bash
+[1. Brief Dự Án]
+- Mô tả tổng quan về dự án hoặc tác vụ, cung cấp bối cảnh cần thiết.
+[2. Nguyên Lý Xử Lý]
+- Các quy tắc, ràng buộc, tiêu chuẩn và thực hành tốt nhất cần tuân thủ.
+[3. Reasoning]
+- Yêu cầu AI xây dựng một chuỗi lý luận tường minh, giải thích các bước suy
+nghĩ để đi đến kết quả.
+[4. Danh Mục Todo]
+- Một checklist cụ thể về các hạng mục cần hoàn thành và định dạng đầu ra
+mong muốn.
+```
+
+
 # 1. Output : Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ  -
 ```
 Xem hết các link tài liệu tôi gửi trong file pasted_content_3.txt Hoàn thiện check list sau: 1. Vẽ luồng mô tả 1 hệ thống Agent đơn giản nhưng được sử dụng trong các bài toán thực tế 2. Vẽ luồng mô tả 1 hệ thống Agent siêu phức tạp được dùng bởi các công ty lớn trong bài toán thực tế. Agent system design 3. 1 road giải thích chi tiết toàn bộ về Agent System Design từ đơn giản đến phức tạp bằng tiếng việt output: 40 trang siêu chi tiết từng phần (Đếm đủ 40 trang chi tiết chưa nhé) MECE TOÀN BỘ CÁC VẤN ĐỀ QUAN TRỌNG NHẤT CỦA AGENT SYSTEM DESIGN hãy giải đáp hết.
