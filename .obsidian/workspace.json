@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - Claude.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document"
+              "title": "3.0 Step 2 - Output 3 - Claude"
             }
           },
           {
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - Claude.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document"
+              "title": "Outline of 3.0 Step 2 - Output 3 - Claude"
             }
           }
         ],
@@ -199,11 +199,17 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "a52a8bdd882d870d",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Processing 1 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 1 - Output 1- PRD (Product Requirements Document) base on Phân tích đối thủ.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 2 - Genspark.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - Claude.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Processing 1 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 1.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/11122025.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled 11.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - OFTWARE DESIGN DOCUMENT (SDD) - finAI FINANCE AGENT WEB BROWSER.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 1 - Output 1- PRD (Product Requirements Document) base on Phân tích đối thủ.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 1 - Processing - (Gemini, Perflexity, Genspark tổng hợp nguồn) - Manus tổng hợp và deep research - 14122025  - Manus lite - 100 token.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Processing 3 - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v3 - TECHNICAL DEEP DIVE - genspark.md",
@@ -221,12 +227,6 @@
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Processing 2 - SDD and TDD and Production Quality - Software Design Document (SDD) (base on TDD + Production Quality docs) - Step 2 (Manus mạnh và Cursor gộp).md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.2 LLMs/(Eng)VLLMs - Production Quality for vLLM-Based LLM Serving - A World-Class Guide.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Processing 1 - Gen SDD - (TDD) - Software Design Document (SDD) (base on TDD + Production Quality docs) (step 1 Gemini + Perflexity + Manus để deep research + Genspark tư duy).md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025.md",
-    "Untitled 1.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus 1.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v1 - TECHNICAL DEEP DIVE DESIGN DOCS (HIGH LEVEL DESIGN AND LOW LEVEL DESIGN) - (TDD) - Example Summary Template - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Perflexity Deep Research.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Step 3 - Áp dụng vào bài toán thực tế.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766782601.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766753473.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/Pasted image 20251106141322.png",
