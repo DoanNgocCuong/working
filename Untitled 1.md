@@ -1402,6 +1402,3 @@ spec:
 *(Sơ đồ Kiến trúc Tổng thể (C4 Model - Level 2: Container Diagram) sẽ được đặt tại đây. Sơ đồ này mô tả các thành phần chính (Container) và mối quan hệ giữa chúng trong môi trường triển khai.)*
 
 *(Việc bổ sung các chi tiết này, cùng với các bảng và sơ đồ, sẽ mở rộng tài liệu Markdown lên một độ dài đáng kể, mô phỏng một bản SDD siêu chi tiết, có thể dễ dàng đạt 100 trang khi được điền đầy đủ dữ liệu thực tế của dự án.)*
-
-
----
