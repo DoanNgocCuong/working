@@ -960,3 +960,373 @@ Vì việc gửi lại toàn bộ mô tả tool mỗi lần rất tốn kém (co
 * **Hệ thống → LLM:** Phải gửi mô tả tool (Schema) **mỗi lần**.
 * **LLM → Hệ thống:** Chỉ gửi tên tool và tham số (Arguments).
 
+
+
+
+
+
+# 5. Demo 
+
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+
+## Mô tả Dự án: Cursor-style Coding Agent Demo
+
+#### 1. Tổng quan dự án
+
+**Tên dự án:** Cursor-style Coding Agent Demo (4-Layer Architecture)
+
+**Mục tiêu:**
+Xây dựng một coding agent tự động sửa bug trong code repository, minh họa kiến trúc 4-layer (0–3) cho agentic AI systems.
+
+**Quadrant:** **Q3 (Autonomy)** - Single agent với high autonomy qua ReAct loop.
+
+*(Không dùng Q4 vì đây là single agent, không có multi-agent P2P collaboration)*
+
+***
+
+#### 2. Use Case Demo
+
+**Input:** User prompt: `"Fix the failing tests in this repo"`
+
+**Output:** Agent tự động:
+
+1. ✅ Chạy test → phát hiện fail
+2. 🔍 Đọc code → tìm bug
+3. 🔧 Đề xuất fix → apply patch
+4. ✅ Chạy test lại → verify pass
+5. 📝 Trả kết quả có reasoning steps
+
+**Demo repo:**
+
+```python
+## Bug cố tình
+def add(a, b):
+    return a - b  ## ❌ Sai
+
+## Test fail
+assert add(1, 2) == 3  ## ❌ FAILED
+```
+
+
+***
+
+#### 3. Kiến trúc 4-Layer (0–3)
+
+###### Sơ đồ tổng quan
+
+```
+User: "Fix failing tests"
+         ↓
+┌────────────────────────────────────┐
+│ LAYER 0: GOVERNANCE                │
+│ Phase 1: Input Gate                │
+│ - Chặn prompt nguy hiểm            │
+│ - PII detection                    │
+│ - Rate limiting                    │
+└────────────────────────────────────┘
+         ↓
+┌────────────────────────────────────┐
+│ LAYER 1: PERCEPTION                │
+│ - Parse intent: "fix_tests"       │
+│ - Build context: repo_path         │
+│ - Goal: "Sửa bug để test pass"    │
+└────────────────────────────────────┘
+         ↓
+┌────────────────────────────────────┐
+│ LAYER 2: COGNITION (ReAct Loop)   │
+│ LangGraph StateGraph:              │
+│   1. Perceive Node                 │
+│   2. Planner Node → plan steps     │
+│   3. Executor Node → call tools    │ ←─┐
+│   4. Verifier Node → check result  │   │
+│   5. Synthesize Node → final       │   │
+│                                    │   │
+│ Loop: Reason → Act → Observe       │   │
+└────────────────────────────────────┘   │
+         ↓                               │
+┌────────────────────────────────────┐   │
+│ LAYER 3: ACTION (Tools)            │ ──┘
+│ - read_file(path)                  │
+│ - write_file(path, content)        │
+│ - run_tests()                      │
+│ - [future] browser_navigate(url)  │
+└────────────────────────────────────┘
+         ↓
+┌────────────────────────────────────┐
+│ LAYER 0: GOVERNANCE                │
+│ Phase 3: Output Gate               │
+│ - Validate result quality          │
+│ - Audit log                        │
+│ - Add disclaimer                   │
+└────────────────────────────────────┘
+         ↓
+Result: "✓ Bug fixed, tests pass"
+```
+
+
+***
+
+#### 4. Tại sao chọn Q3 (Autonomy) thay vì Q4?
+
+###### So sánh Q3 vs Q4
+
+|  | Q3 (Autonomy) | Q4 (Choreography) |
+| :-- | :-- | :-- |
+| **Số agents** | 1 agent | 3+ agents |
+| **Coordination** | Không cần | P2P hoặc Chief |
+| **Phức tạp** | Trung bình | Cao |
+| **Time to build** | 4–6 giờ | 8–12 giờ |
+| **Phù hợp cho demo** | ✅ | ⚠️ (overkill) |
+
+###### Lý do chọn Q3:
+
+1. **Use case đơn giản:** Sửa bug trong 1 repo → 1 agent đủ
+2. **Dễ debug:** Single agent = dễ trace reasoning flow
+3. **Dễ giải thích:** ReAct loop rõ ràng, không có emergent behavior
+4. **Production-ready:** LangGraph + 4-layer đã đủ robust
+
+###### Khi nào cần Q4?
+
+- Có nhiều domain khác nhau (e.g., Coder + Tester + Reviewer + Security Auditor)
+- Cần parallel execution (4 agents làm 4 việc cùng lúc)
+- Cần P2P negotiation (agents tranh luận về solution)
+
+→ **Với demo coding agent đơn giản, Q3 là lựa chọn tối ưu.**
+
+***
+
+#### 5. Deliverables (Demo artifacts)
+
+###### 5.1. Code structure
+
+```
+app/module/finai_agent/
+├── agent_entrypoint.py          ## Main entry point
+│
+├── layer_0_governance/
+│   ├── phase_1_input_gate/
+│   │   └── input_gate.py        ## Chặn prompt nguy hiểm
+│   └── phase_3_output_gate/
+│       └── result_validator.py  ## Validate kết quả
+│
+├── layer_1_perception/
+│   └── input_processor.py       ## Parse intent
+│
+├── layer_2_cognition/
+│   ├── graph.py                 ## LangGraph StateGraph
+│   ├── state.py                 ## AgentState schema
+│   └── nodes/
+│       ├── perceive_node.py
+│       ├── planner_node.py      ## Tạo plan
+│       ├── executor_node.py     ## Gọi tools
+│       ├── verifier_node.py     ## Check kết quả
+│       └── synthesize_node.py   ## Final answer
+│
+├── layer_3_action/
+│   └── tools/
+│       ├── file_tools.py        ## read/write file
+│       └── execution_tools.py   ## run_tests
+│
+└── tests/
+    ├── fixtures/
+    │   └── repo_demo/           ## Repo có bug
+    │       ├── math_utils.py
+    │       └── tests.py
+    └── integration/
+        └── test_full_flow.py    ## E2E test
+```
+
+**Tổng:** ~500 lines code (không tính comments/tests)
+
+###### 5.2. Documents
+
+1. **README.md:** Quick start, usage
+2. **ARCHITECTURE.md:** Chi tiết 4 layers
+3. **ADR-001:** Tại sao chọn Q3 thay vì Q4
+4. **DEMO.md:** Kịch bản demo 3 phút
+
+###### 5.3. Demo flow (3 phút)
+
+**Slide 1: Problem (30s)**
+
+- Show `math_utils.py` có bug
+- Chạy test → ❌ FAILED
+
+**Slide 2: Architecture (1 phút)**
+
+- Vẽ 4 layers trên whiteboard
+- Giải thích flow: 0→1→2(loop)→3→0
+
+**Slide 3: Live Demo (1.5 phút)**
+
+```bash
+python -m app.module.finai_agent.agent_entrypoint \
+  --prompt "Fix failing tests"
+```
+
+- Console in từng bước:
+    - `[L0] ✓ Input gate passed`
+    - `[L1] Intent: fix_tests`
+    - `[L2] Plan: [run_tests, read_file, write_file, run_tests]`
+    - `[L2→L3] run_tests() → FAILED`
+    - `[L2→L3] read_file(math_utils.py) → bug found`
+    - `[L2→L3] write_file(...) → fixed`
+    - `[L2→L3] run_tests() → ✓ PASSED`
+    - `[L0] ✓ Output validated`
+
+**Slide 4: Mapping to Architecture (30s)**
+
+- Point vào diagram: "Vừa rồi là L2 Executor Node gọi L3 tools"
+
+***
+
+#### 6. Tech Stack
+
+| Layer | Technologies |
+| :-- | :-- |
+| Framework | FastAPI, Python 3.11+ |
+| Layer 2 | LangGraph (StateGraph), OpenAI/Anthropic |
+| Layer 3 | Subprocess, file I/O |
+| Testing | Pytest, pytest-asyncio |
+| DI | Dependency Injector |
+| Observability | Langfuse (optional) |
+
+
+***
+
+#### 7. Implementation Plan
+
+###### Phase 1: MVP (4–6 giờ)
+
+**Hour 1–2: Layer 3 (Tools)**
+
+- [x] `read_file()`
+- [x] `write_file()`
+- [x] `run_tests()`
+
+**Hour 3: Layer 1 (Perception)**
+
+- [x] Parse intent từ prompt
+- [x] Build context (repo_path)
+
+**Hour 4–5: Layer 2 (Cognition)**
+
+- [x] LangGraph với 5 nodes
+- [x] Fake LLM (rule-based) cho demo nhanh
+- [ ] *Optional:* Real LLM (GPT-4)
+
+**Hour 6: Layer 0 (Governance)**
+
+- [x] Input gate (forbidden keywords)
+- [x] Output validator
+
+**Hour 7: Integration + Tests**
+
+- [x] `test_full_flow.py`
+- [x] Repo demo với bug
+
+***
+
+###### Phase 2: Production-ready (+4 giờ)
+
+**Feature 1: Real LLM**
+
+- Thay fake LLM bằng OpenAI function calling
+- Dynamic planning thay vì hardcoded rules
+
+**Feature 2: HITL (Human-in-the-loop)**
+
+- Trước `write_file()`, hỏi user: "Apply patch? (y/n)"
+- Implement trong Layer 0 Phase 2 (in-flight guards)
+
+**Feature 3: Better Tools**
+
+- `search_in_files(pattern)`
+- `git_diff()`
+- `run_linter()`
+
+**Feature 4: Observability**
+
+- Integrate Langfuse
+- Log mỗi bước trong ReAct loop
+- Track cost (tokens used)
+
+***
+
+#### 8. Demo Scenarios (Tùy thời gian)
+
+###### Scenario A: Basic (3 phút)
+
+- Fix 1 bug đơn giản trong `add(a, b)`
+
+
+###### Scenario B: Multi-step (5 phút)
+
+- Fix 2 bugs: `add()` và `subtract()`
+- Agent phải tự detect cả 2
+
+
+###### Scenario C: Governance Demo (2 phút)
+
+- Show Layer 0 chặn prompt: `"Delete database"`
+- Show Layer 0 validate output thiếu source
+
+***
+
+#### 9. Success Criteria
+
+✅ **Functional:**
+
+1. Agent tự sửa bug đúng (test pass)
+2. Reasoning steps rõ ràng
+3. Layer 0 chặn được dangerous prompts
+
+✅ **Non-functional:**
+
+1. Code < 500 lines (readable)
+2. E2E test pass
+3. Demo chạy mượt trong 3 phút
+
+✅ **Educational:**
+
+1. Audience hiểu 4 layers
+2. Code đủ đơn giản để fork \& extend
+
+***
+
+#### 10. Kết luận
+
+###### Tóm tắt
+
+- **Architecture:** 4-layer (0–3)
+- **Quadrant:** Q3 (Autonomy, single agent)
+- **Time:** 4–6 giờ MVP, +4 giờ polished
+- **Output:** Working agent + demo + docs
+
+
+###### Tại sao KHÔNG dùng Q4?
+
+| Lý do | Q3 đủ | Q4 overkill |
+| :-- | :-- | :-- |
+| Use case | Sửa 1 bug | ✅ |
+| Complexity | Medium | ✅ |
+| Demo time | 3 phút | ✅ |
+| Audience | Beginners OK | ✅ |
+
+###### Next Steps (Nếu muốn mở rộng sang Q4)
+
+1. **Split thành 3 agents:**
+    - **CoderAgent:** Chỉ viết code
+    - **TesterAgent:** Chỉ chạy test
+    - **ReviewerAgent:** Review code quality
+2. **Add Chief Agent (Hierarchical Q4):**
+    - Chief phân công: "Coder fix bug, Tester verify, Reviewer approve"
+3. **P2P Communication:**
+    - Tester phát hiện bug → gửi trực tiếp cho Coder (không qua Chief)
+
+→ **Nhưng với demo coding agent đơn giản, Q3 (single ReAct loop) là sweet spot giữa đơn giản và mạnh mẽ.**
+
+***
+
+**Ready to build? Let's code! 🚀**
+
