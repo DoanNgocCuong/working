@@ -107,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 293.5
+    "width": 391.5
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -199,12 +199,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "7bbd2100f0471588",
+  "active": "a52a8bdd882d870d",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 2 - Genspark.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - Claude.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - Claude.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Processing 1 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 2 - Genspark.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 1.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/11122025.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled 11.md",
