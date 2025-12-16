@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long term Memory Architechture - T6_2025/0.2 Đồ án tiếp CƠ CHẾ QUẢN LÝ BỘ NHỚ - report 3_12032025 -.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025"
+              "title": "0.2 Đồ án tiếp CƠ CHẾ QUẢN LÝ BỘ NHỚ - report 3_12032025 -"
             }
           },
           {
@@ -27,15 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot/Step 1 - Deep Research Perflexity + Gemini + Manus Lite = Mục đích vét cạn và lấy thật nhiều nguồn.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ"
+              "title": "Step 1 - Deep Research Perflexity + Gemini + Manus Lite = Mục đích vét cạn và lấy thật nhiều nguồn"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -67,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: TDD",
+                "query": "file: memo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,8 +89,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot/Step 1 - Deep Research Perflexity + Gemini + Manus Lite = Mục đích vét cạn và lấy thật nhiều nguồn.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025"
+              "title": "Outline of Step 1 - Deep Research Perflexity + Gemini + Manus Lite = Mục đích vét cạn và lấy thật nhiều nguồn"
             }
           }
         ],
@@ -185,44 +185,44 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "713cd6b2a5063e31",
+  "active": "a52a8bdd882d870d",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v1 - TECHNICAL DEEP DIVE DESIGN DOCS (HIGH LEVEL DESIGN AND LOW LEVEL DESIGN) - (TDD) - Example Summary Template - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Perflexity Deep Research.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/___.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0.2 Manus tổng hợp và deep research - 14122025  - Manus lite - 100 token mà ra tài liệu ngon vãi.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0.1.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0.0 DRAFT Manus tổng hợp và deep research - 14122025 - Manus 500 tokens mà tệ (prompt tệ thua manus lite).md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/Bonus.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Mem0 - Implement Mem0 selfhost.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Robot - Memory.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Memory - Giải pháp Memory cho AI Agents (MECE Framework).md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/AI_RAG_RecommendSystem_with_AI_RAG_Mem0.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot/Step 1 - Deep Research Perflexity + Gemini + Manus Lite = Mục đích vét cạn và lấy thật nhiều nguồn.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long term Memory Architechture - T6_2025/0.1 Đồ Án Tiếp - Long Memory.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.1 RAG/Dùng LLM mạnh hơn để đánh giá RAG.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.1 RAG/Hello.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.1 RAG/Chunking cải tiến bằng train Contrative Learning.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.1 RAG/3. Metrics.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.1 RAG/1. Tài liệu RAG tiếng việt.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.1 RAG/1. Raptor RAG.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.1 RAG/1. Các chiến lược tối ưu.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.1 RAG/RAG MỞ RỘNG/1. HIPPO RAG và LongMemEval.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/NLP_LLMs_RAG/5.1 RAG/RAG MỞ RỘNG/codetask_cl and SAPT (Sentence-level Adapter Prompt Tuning).md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/2.3 STAGE 3 - Web Browser Architecture – Deep Research & Browser Agent Case Study.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.1 - Step 2 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect).md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long term Memory Architechture - T6_2025/0.2 Đồ án tiếp CƠ CHẾ QUẢN LÝ BỘ NHỚ - report 3_12032025 -.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long term Memory Architechture - T6_2025/0. Đồ Án.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long Term Memory User - T6_2025/Read 2.2  Relaited của LongMemEval và Reflective Memory Manager RMM.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long Term Memory User - T6_2025/Read 2.0 CompAct Compressing Retrieved Documents Actively for Question Answering.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long Term Memory User - T6_2025/Read 1 -  Zep - A Temporal Knowledge Graph Architecture for Agent Memory - 2501.13956.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long Term Memory User - T6_2025/Read 0. Reference.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Bài 1 - 6 Steps Cú pháp - Check Metadata Table Col - Hash text Chiến lược trong Memory -.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v3 (TDD) - Software Design Document (SDD).md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v1 - TECHNICAL DEEP DIVE DESIGN DOCS (HIGH LEVEL DESIGN AND LOW LEVEL DESIGN) - (TDD) - Example Summary Template - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Perflexity Deep Research.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766782601.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766753473.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/Pasted image 20251106141322.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/repo/MVP_Multi-Agent-Financial-Platform_LangchainLanggraph_T9_2025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/image (4).png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/02-multi-agent/KIRO.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/repo",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/Prompt Agent.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/Agent_Rag.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/2025-09-08.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/04-ai-agents.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/02-multi-agent",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Untitled",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Robot - Memory.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/_init_ architect - NLP - AI Agents.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Usecase1 - A Tale of Two Agents - A Deep Dive into State-of-the-Art Architectures for Self-Healing Infrastructure and Visually-Grounded Web Automation - 800 credits.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Untitled 5.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Untitled 4.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/2_MEMORY/1. Long Term Memory User/attachments/Pasted image 20250322071142.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/2_MEMORY/1. Long Term Memory User/attachments/Pasted image 20250322054315.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/5.3 AI Agent/2_MEMORY/1. Long Term Memory User/attachments/Pasted image 20250322063052.png",
