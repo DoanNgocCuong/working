@@ -860,3 +860,103 @@ Cần thay đổi:
 
 ---
 
+
+# 4. Mỗi lần check xem dùng tools gì có phải cung cấp danh sách tools không? 
+=> có chứ 
+
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+
+Câu trả lời ngắn gọn là: **CÓ và KHÔNG** (tùy vào chiều dữ liệu bạn đang nói đến).
+
+Chính xác là: **Hệ thống (Orchestrator) PHẢI gửi mô tả tool cho LLM trong mỗi request**, nhưng **LLM KHÔNG gửi lại mô tả tool** khi nó gọi tool.
+
+Hãy đi sâu vào cơ chế này để bạn hiểu rõ luồng dữ liệu:
+
+### 1. Chiều đi: Orchestrator → LLM (CÓ gửi mô tả)
+
+Vì các model LLM (như GPT-4, Claude 3.5) là **stateless** (không lưu trạng thái giữa các request), nên **mỗi lần** bạn gửi một prompt mới cho nó, bạn **bắt buộc** phải gửi kèm danh sách "Thực đơn" (Tool Definitions/Schemas).
+
+Nếu không gửi kèm, LLM sẽ "quên sạch" là nó có khả năng dùng tool gì.
+
+**Dữ liệu gửi đi (Request) trông như thế nào?**
+
+```json
+{
+  "model": "gpt-4",
+  "messages": [
+    {"role": "user", "content": "Đọc file main.py giúp tôi"}
+  ],
+  // PHẦN NÀY PHẢI GỬI LẠI MỖI LẦN GỌI API 👇
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "read_file",
+        "description": "Read content of a file in the repository",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "path": {"type": "string", "description": "Relative path to file"}
+          },
+          "required": ["path"]
+        }
+      }
+    },
+    { "name": "run_test", ... }, 
+    { "name": "search_code", ... }
+  ]
+}
+```
+
+👉 **Hệ quả:** Nếu bạn định nghĩa quá nhiều tools (ví dụ 100 tools), prompt của bạn sẽ rất dài và tốn token (tiền) cho phần input này ở **mỗi lượt gọi**.
+
+***
+
+### 2. Chiều về: LLM → Orchestrator (KHÔNG gửi mô tả)
+
+Khi LLM quyết định gọi tool, nó **không** copy lại cái mô tả dài dòng kia. Nó chỉ trả về **Tên tool** và **Tham số (Arguments)** mà thôi.
+
+**Dữ liệu trả về (Response) trông như thế nào?**
+
+```json
+{
+  "role": "assistant",
+  "content": null,
+  "tool_calls": [
+    {
+      "id": "call_12345",
+      "type": "function",
+      "function": {
+        "name": "read_file",  // Chỉ cần tên
+        "arguments": "{\"path\": \"src/main.py\"}" // Và tham số
+      }
+    }
+  ]
+}
+```
+
+
+***
+
+### 3. Tại sao lại thiết kế như vậy?
+
+Hãy tưởng tượng **LLM là một người thợ mắc chứng mất trí nhớ tạm thời (Amnesia)**.
+
+1. **Mỗi lần bạn nhờ việc (Request):** Bạn phải đưa cho anh ta một cái **hộp đồ nghề (Tools Definitions)** và nói: "Trong hộp này có cái búa (để đóng đinh), cái kìm (để cắt dây). Giờ hãy sửa cái quạt cho tôi."
+2. **Người thợ suy nghĩ (Reasoning):** "Sửa quạt cần cắt dây điện. Mình nhìn vào hộp thấy có cái kìm."
+3. **Người thợ ra lệnh (Tool Call):** Anh ta **không** đưa lại cả cái kìm cho bạn. Anh ta chỉ viết ra giấy: "Hãy dùng **cái kìm** cắt **dây màu đỏ**."
+4. **Bạn (Orchestrator) thực thi:** Bạn lấy kìm thật, cắt dây, rồi báo lại kết quả cho thợ.
+5. **Lượt tiếp theo:** Người thợ lại quên hết. Bạn lại phải đưa hộp đồ nghề ra lần nữa: "Đây là cái búa, đây là cái kìm..."
+
+### 4. Giải pháp tối ưu (Advance)
+
+Vì việc gửi lại toàn bộ mô tả tool mỗi lần rất tốn kém (context window consumption), các hệ thống Agent hiện đại (như Cursor hay các framework cao cấp) thường dùng các kỹ thuật sau:
+
+1. **Context Caching (Mới):** Các provider như Anthropic hay Google Gemini cho phép "cache" (lưu tạm) phần system prompt và tool definitions. Bạn gửi 1 lần, các lần sau chỉ gửi tham chiếu, giúp tiết kiệm chi phí và tăng tốc độ.
+2. **Dynamic Tool Selection:** Thay vì gửi 100 tools, Orchestrator dùng một LLM nhỏ/nhanh (hoặc vector search) để đoán xem user đang cần làm gì, lọc ra khoảng 5-10 tools liên quan nhất, và chỉ gửi định nghĩa của 5-10 tools đó cho LLM chính.
+
+### Tóm lại:
+
+* **Hệ thống → LLM:** Phải gửi mô tả tool (Schema) **mỗi lần**.
+* **LLM → Hệ thống:** Chỉ gửi tên tool và tham số (Arguments).
+
