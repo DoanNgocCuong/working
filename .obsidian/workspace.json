@@ -35,7 +35,8 @@
               "title": "2.0 v3 SDD - (TDD) - Software Design Document (SDD)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -156,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Step 2 - Manu 1000 trang.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v3 SDD - (TDD) - Software Design Document (SDD).md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Step 2 - Manu 1000 trang"
+              "title": "Outline of 2.0 v3 SDD - (TDD) - Software Design Document (SDD)"
             }
           }
         ],
@@ -184,20 +185,20 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "713cd6b2a5063e31",
+  "active": "a52a8bdd882d870d",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Step 2 - Manu 1000 trang.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Step 3 - Áp dụng vào bài toán thực tế.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v3 SDD - (TDD) - Software Design Document (SDD).md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long term Memory Architechture - T6_2025/0.1 Đồ Án Tiếp - Long Memory.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Step 1 - Deep Research Perflexity + Gemini + Manus Lite = Mục đích vét cạn và lấy thật nhiều nguồn.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v3 SDD - (TDD) - Software Design Document (SDD).md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long Term Memory User - T6_2025/ROBOT - Long term memory -.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long term Memory Architechture - T6_2025/0.2 Đồ án tiếp CƠ CHẾ QUẢN LÝ BỘ NHỚ - report 3_12032025 -.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v3 - TECHNICAL DEEP DIVE - genspark.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled 6.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Step 4 - Vẽ Software Design Document (SDD).md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Step 3 - Áp dụng vào bài toán thực tế.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Note - Brainstorm use Perflexity.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Step 2 - Manu 1000 trang.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Robot - Memory.md",
     "BUSINESS/0_100M$GlobalMoneyModel/BlackBook/Closing - Summary - Sơ Đồ Hoá.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Long term Memory Architechture - T6_2025/0. Đồ Án.md",
