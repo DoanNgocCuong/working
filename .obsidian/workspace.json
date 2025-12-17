@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: claude",
+                "query": "file: finAI",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -117,12 +117,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 391.5
+    "width": 399.5
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -217,12 +216,24 @@
   "active": "a52a8bdd882d870d",
   "lastOpenFiles": [
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - Claude.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - OFTWARE DESIGN DOCUMENT (SDD) - finAI FINANCE AGENT WEB BROWSER.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - Claude - updated.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Processing 1 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Mini Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus -.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1.1 - Understanding.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1.2 - Tài liệu đọc thêm -  Lớp học Chuyên sâu về Kiến trúc Hệ thống Agent.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1.2 Tài liệu đọc thêm - 15122025 - 2 bài toán khó.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP(bản cũ)/ké tài liệu agent.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.4.2 Output 1 = Tài liệu Thiết kế Toàn diện finAI Agentic Browser.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.8 Tài liệu Thiết kế Toàn diện - finAI Agentic Browser.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - OFTWARE DESIGN DOCUMENT (SDD) - finAI FINANCE AGENT WEB BROWSER.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/2.0 Overview 6 Modules - v2.2 - 10122025 - Manus 300 tín dụng - 07122025.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.5 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/2.3 STAGE 3 - tool xử lý web - Spec MVP Trích xuất A11y or AX Tree → SnapshotV1  Context cho Agent.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.4.2 Output 1 = Tài liệu Thiết kế Toàn diện finAI Agentic Browser.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/Manus 15122025.md",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/2.4 Luồng MANUS - Phương Pháp Xác Định Tiêu Chí Thành Công Cho Bài Toán Không Rõ Ràng.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Output Travel Demo.md",
@@ -230,18 +241,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Processing Demo Travel.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/ckp/0_architecture/Usecase1 - A Tale of Two Agents - A Deep Dive into State-of-the-Art Architectures for Self-Healing Infrastructure and Visually-Grounded Web Automation - 800 credits.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.2 - Tài liệu đọc thêm -  Lớp học Chuyên sâu về Kiến trúc Hệ thống Agent.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - Claude - updated.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Understanding Câu hỏi đơn giản và Demo Cursor.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Output Cursor Demo.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Processing Cursor Demo.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Processing 3 - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.2 v2 - (Dashboard) - Phần TRACING - FALLBACK, TIMEOUT,  (Observabilit Instrumentation Standard Tracing - Collection Platform - Visulize (Dashboard, Alerts) - Analysis + Xử lý Fallback, Timeout 1.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.1 v2 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY 1.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/3 - SLM P2 RISK MANAGEMENT - RỦI RO TOÀN DIỆN CHO Serving SLM - 15122025.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.8 Tài liệu Thiết kế Toàn diện - finAI Agentic Browser.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_monitoring-observability/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
     "Untitled",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766782601.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766753473.png",
