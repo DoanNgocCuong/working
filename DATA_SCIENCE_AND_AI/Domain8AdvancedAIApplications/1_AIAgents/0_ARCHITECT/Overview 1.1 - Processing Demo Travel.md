@@ -5465,3 +5465,14 @@ Demo Cursor đơn giản nhé
 ```
 
 
+
+
+---
+# Câu hỏi 
+```
+Bài Planing Traveling
+
+Con nào đã lên todo ? Lúc lên todo nó có thông tin của các con tools không ? cách code đã thể hiện điều đó chưa, UI thể hiện điều đó chưa.
+
+Các con agent chạy song song/lần lượt như nào trong todo?
+```

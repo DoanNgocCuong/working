@@ -1125,10 +1125,10 @@ Dựa trên các nghiên cứu và thực tiễn từ các công ty hàng đầu
 
 Khi kết hợp hai trục này, chúng ta có một ma trận 2x2 mạnh mẽ, tạo ra bốn loại kiến trúc agent cơ bản. Ma trận này là một công cụ tư duy cực kỳ hữu ích để phân tích và thiết kế hệ thống.
 
-| | **Thấp Agency** (Xác định, Hướng tác vụ) | **Cao Agency** (Tự chủ, Hướng mục tiêu) |
-| :--- | :--- | :--- |
-| **Thấp Coordination** (Đơn agent) | **Quadrant 1: Instruction**<br>_"RPA được tăng cường LLM"_ | **Quadrant 3: Autonomy**<br>_"Người giải quyết vấn đề độc lập"_ |
-| **Cao Coordination** (Đa agent) | **Quadrant 2: Orchestration**<br>_"Dây chuyền lắp ráp thông minh"_ | **Quadrant 4: Choreography**<br>_"Đội ngũ chuyên gia tự quản"_ |
+|                                   | **Thấp Agency** (Xác định, Hướng tác vụ)                           | **Cao Agency** (Tự chủ, Hướng mục tiêu)                         |
+| :-------------------------------- | :----------------------------------------------------------------- | :-------------------------------------------------------------- |
+| **Thấp Coordination** (Đơn agent) | **Quadrant 1: Instruction**<br>_"RPA được tăng cường LLM"_         | **Quadrant 3: Autonomy**<br>_"Người giải quyết vấn đề độc lập"_ |
+| **Cao Coordination** (Đa agent)   | **Quadrant 2: Orchestration**<br>_"Dây chuyền lắp ráp thông minh"_ | **Quadrant 4: Choreography**<br>_"Đội ngũ chuyên gia tự quản"_  |
 
 Bốn quadrant này không chỉ là lý thuyết. Chúng đại diện cho các mẫu kiến trúc (architectural patterns) phổ biến nhất trong thực tế. Trong các chương tiếp theo, chúng ta sẽ đi sâu vào từng quadrant, phân tích kiến trúc, ví dụ, và các trường hợp nên/không nên sử dụng.
 
