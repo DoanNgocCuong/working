@@ -1,4 +1,4 @@
-![[Pasted image 20250519155653.png]]
+![[attachments/Pasted image 20250519155653.png]]
 
 ```bash
 from sentence_transformers import SentenceTransformer

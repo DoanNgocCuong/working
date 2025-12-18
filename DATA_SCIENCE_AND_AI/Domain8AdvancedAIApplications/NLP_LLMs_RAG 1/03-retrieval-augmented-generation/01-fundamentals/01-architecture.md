@@ -1,4 +1,4 @@
-![[Pasted image 20241219220354.png]]
+![[../../5.1 RAG/attachments/Pasted image 20241219220354.png]]
 
 Prompting vs. RAG vs. Finetuning, which one is best for you, clearly explained:  
   

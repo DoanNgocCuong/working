@@ -10,6 +10,6 @@ MỘT CÁCH TỔNG QUAN NHẤT VỀ LANGCHAIN - 1 Framework phổ biến trong p
 [hashtag#langchain](https://www.linkedin.com/search/results/all/?keywords=%23langchain&origin=HASH_TAG_FROM_FEED) [hashtag#langgraph](https://www.linkedin.com/search/results/all/?keywords=%23langgraph&origin=HASH_TAG_FROM_FEED) [hashtag#ai_agents](https://www.linkedin.com/search/results/all/?keywords=%23ai_agents&origin=HASH_TAG_FROM_FEED) [hashtag#llms](https://www.linkedin.com/search/results/all/?keywords=%23llms&origin=HASH_TAG_FROM_FEED)  
 Nguồn: AI Việt Nam - AIO
 
-![[Pasted image 20250711170208.png]]
-![attachments](./attachments/Pasted%20image%2020250711170208.png)
+![[attachments/Pasted image 20250711170208.png]]
+![attachments](attachments/Pasted%20image%2020250711170208.png)
 

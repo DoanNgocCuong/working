@@ -33,7 +33,7 @@ Bash
 The generated answer is regarded as faithful if all the claims made in the answer can be inferred from the given context. To calculate this, a set of claims from the generated answer is first identified. Then each of these claims is cross-checked with the given context to determine if it can be inferred from the context. The faithfulness score is given by:
 
 
-![[Pasted image 20250103155417.png]]
+![[attachments/Pasted image 20250103155417.png]]
 # Đánh giá: 
 - Độ chính xác 
 - 

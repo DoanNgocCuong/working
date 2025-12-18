@@ -5,7 +5,7 @@
 
 
 ---
-![[Pasted image 20241220153048.png]]
+![[attachments/Pasted image 20241220153048.png]]
 
 
 
