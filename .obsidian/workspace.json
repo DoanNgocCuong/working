@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - finAI - Claude.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.0 Step 2 - Output 3 - finAI - Claude"
+              "title": "1.2 PYTHON OPTIMIZATION"
             }
           },
           {
@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: CLAUDE",
+                "query": "file: python",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - finAI - Claude.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 3.0 Step 2 - Output 3 - finAI - Claude"
+              "title": "Outline of 1.2 PYTHON OPTIMIZATION"
             }
           }
         ],
@@ -187,8 +187,8 @@
   },
   "active": "ab2e90a8a1a904b5",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - finAI 0 Claude - updated.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - finAI - Claude.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - finAI 0 Claude - updated.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Tối ưu Vector DB - 18122025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_monitoring-observability/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.2 v2 - (Dashboard) - Phần TRACING - FALLBACK, TIMEOUT,  (Observabilit Instrumentation Standard Tracing - Collection Platform - Visulize (Dashboard, Alerts) - Analysis + Xử lý Fallback, Timeout 1.md",
