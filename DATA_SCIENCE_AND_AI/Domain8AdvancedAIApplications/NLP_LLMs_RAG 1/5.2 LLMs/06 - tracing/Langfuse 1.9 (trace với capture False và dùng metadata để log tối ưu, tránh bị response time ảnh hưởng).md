@@ -1,0 +1,2 @@
+ "[PRODUCTION STAGE: OPTIMIZE LANGFUSE: USE: capture_input=False, capture_output=False, nếu log thì dùng metadata log thay vì log full input hoặc output
+>> REDIS: 0.3-0.7s ?? (giảm xuống 0.01-0.03s) chủ yếu do: Langfuse trace với capture_input=False, capture_output=False. Bên cạnh đó là do dùng orjson + tối ưu: cache riêng scenario và ko cần cache history (do nó dùng CUR_ACTION chứ có dùng History để gen intent llms méo đâu)"

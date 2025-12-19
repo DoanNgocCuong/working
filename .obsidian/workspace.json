@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Output - 19122025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai)"
+              "title": "2. Mem0 - Output - 19122025"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: python",
+                "query": "file: mem",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -143,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Output - 19122025.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai)"
+              "title": "Outline of 2. Mem0 - Output - 19122025"
             }
           }
         ],
@@ -173,6 +172,17 @@
   },
   "active": "71f84bdae828c99b",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Processing - 19122025.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Output - 19122025.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Processing 3 - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/1. Mem0 - Implement Mem0 selfhost.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Processing 2 - SDD and TDD and Production Quality - Software Design Document (SDD) (base on TDD + Production Quality docs) - Step 2 (Manus mạnh và Cursor gộp).md",
+    "Phần Cứng/1 - OTA.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Robot - Memory.md",
+    "Phần Cứng",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.9 (trace với capture False và dùng metadata để log tối ưu, tránh bị response time ảnh hưởng).md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langchain 1.8 - Langfuse for Visulize (Fallback, Timeout, Alert - Visulize).md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langchain 1.7 - Report langchain langgraph - Langfuse tracing - overhead 1-6ms - dự án robot workflow - 14122025.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251219141837.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.18_DockerErrorKyTuLaTrongEnv.md",
@@ -192,16 +202,7 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.15 Vấn đề load .env.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.14 LỖI VERSION LIBRARY.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.13 VẤN ĐỀ API KEY BỊ CHỒNG LẤN TRONG DOCKER.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.10 NETWORK.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.2.10 DOcker - Uvicorn.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.2.9 Docker Network is till - Docker Network bị sử dụng.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.2.8 Summary export PORT Docker.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Deploy - Docker Logs.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - finAI - Claude.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - finAI 0 Claude - updated.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Tối ưu Vector DB - 18122025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Untitled",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Untitled 1",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251218180832.png",
@@ -213,7 +214,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/image",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/New folder",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/OTHER/mcp/image/Pasted image 20251218072458.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766782601.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766753473.png",
