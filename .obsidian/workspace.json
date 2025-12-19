@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "21bedb0a7bddf609",
+        "id": "4bbfc4e8998ccb51",
         "type": "tabs",
         "children": [
           {
-            "id": "ab2e90a8a1a904b5",
+            "id": "71f84bdae828c99b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "1.2 PYTHON OPTIMIZATION"
             }
-          },
-          {
-            "id": "dccbff8efce64575",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.18_DockerErrorKyTuLaTrongEnv.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2.18_DockerErrorKyTuLaTrongEnv"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: docker",
+                "query": "file: python",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -157,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.18_DockerErrorKyTuLaTrongEnv.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.18_DockerErrorKyTuLaTrongEnv"
+              "title": "Outline of 1.2 PYTHON OPTIMIZATION"
             }
           }
         ],
@@ -185,10 +171,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "dccbff8efce64575",
+  "active": "71f84bdae828c99b",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251219141837.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.18_DockerErrorKyTuLaTrongEnv.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Compose.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.18_DockerErrorKyTuLaTrongEnv.txt",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/New Text Document.txt",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.2.7 Docker networks bridge và networks và network_mode host.md",
@@ -211,11 +199,9 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.3 Dọn docker - kill process - port server.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2.1.2 Docker Deploy - Docker Logs.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - finAI - Claude.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3 - finAI 0 Claude - updated.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Tối ưu Vector DB - 18122025.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_monitoring-observability/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Untitled",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Untitled 1",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251218180832.png",
@@ -232,7 +218,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766782601.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/LangChain_LangGraph/1758766753473.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/Pasted image 20251106141322.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents/image/image (4).png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/RAG 1/Search/Untitled.canvas",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
