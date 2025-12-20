@@ -13,40 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Memory - Output - 19122025 - 60 trang pdf - 25K tokens - 100K characters.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/0. Prompting Builder.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Mem0 - Memory - Output - 19122025 - 60 trang pdf - 25K tokens - 100K characters"
+              "title": "0. Prompting Builder"
             }
           },
           {
             "id": "347b234b14dc1ab2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/Onboarding Model Context Protocol (MCP) - 115 trang PDF - 18122025.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Onboarding Model Context Protocol (MCP) - 115 trang PDF - 18122025"
+              "title": "New tab"
             }
           },
           {
             "id": "57e772a0fb898e51",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/AI_RAG_RecommendSystem_with_AI_RAG_Mem0.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "AI_RAG_RecommendSystem_with_AI_RAG_Mem0"
+              "title": "New tab"
             }
           },
           {
@@ -55,16 +47,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/Product Flow.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/tài liệu MLOps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Product Flow"
+              "title": "tài liệu MLOps"
+            }
+          },
+          {
+            "id": "065f8d5e7c0e8340",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - SDD - HLD - LLD.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Step 2 - SDD - HLD - LLD"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -96,7 +102,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: SDD",
+                "query": "file: mem0",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -185,13 +191,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/Product Flow.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - SDD - HLD - LLD.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Product Flow"
+              "title": "Outline of Step 2 - SDD - HLD - LLD"
             }
           }
         ],
@@ -213,44 +219,44 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "9648d7bc7a2c1c92",
+  "active": "065f8d5e7c0e8340",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/Kể về cách dùng MANUS để giải bài kĩ thuật.md",
-    "BUSINESS/1_PRODUCT/Product Flow.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled 2.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Untitled 3.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 2 - INPUT - Tạo SDD chi tiết cho bài.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/Step3-Output-High Level Design.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/CKP 2.0 v4 Processing 2 - SDD and TDD and Production Quality - Software Design Document (SDD) (base on TDD + Production Quality docs) - Step 2 (Manus mạnh và Cursor gộp).md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Mem0 - Implement Mem0 selfhost.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/0. Prompting Builder.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/0. Prompting Builder Simple Role Play - HỘI THOẠI.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/0. Prompting Builder NHÂN VẬT CỤ THỂ - ĐoànCường.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/So sánh Models.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1.1 - Understanding.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Mini Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus -.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Model Compare GPT OSS 20B vs GPT-4o mini Comprehensive side-by-side LLM comparison.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - SDD - HLD - LLD.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - SDD.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 1 - OUTPUT 1 - Manu 60 trang PDF = gần 28K tokens = 93K characters.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 2 - Output 1 - SDD (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 2 - Output 2 - SDD OPTIMIZE 1 - (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP - Manus - PIKA Memory System - Mem0 Open Source Integration Guide.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP - Mem0 - Implement Mem0 selfhost.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/tài liệu MLOps.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Step 2 - SDD.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 2.2 - Output 2 - SDD OPTIMIZE 1 - (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 2.1 - Output 1 - SDD (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 2 - INPUT - Tạo SDD chi tiết cho bài.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.8 Tài liệu Thiết kế Toàn diện - finAI Agentic Browser.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 3 - Output 3 - Vẽ Software Design Document (SDD) - 12.5K từ (tokens) = 30 pages PDF.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 3 - Output 3 - Vẽ HIGH-LEVEL DESIGN (HLD) - 12.5K từ (tokens) = 30 pages PDF.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 4 - Review Nhìn lại Quá trình 10h sáng - 12h trưa, 1h rưỡi - 3h chiều.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Robot - Memory.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 3 - INPUT - Tạo HDL.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 1 - OUTPUT 1 - Manu 60 trang PDF = gần 28K tokens = 93K characters.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP",
+    "BUSINESS/1_PRODUCT/Untitled.md",
+    "BUSINESS/1_PRODUCT/Product Flow.md",
+    "BUSINESS/1_PRODUCT/Kể về cách dùng MANUS để giải bài kĩ thuật.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Mem0 - selfhost.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Phần A - Mem0 và Robot Pika",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/CKP - Step 1 - INPUT - Deep Research Perflexity + Gemini + Manus Lite = Mục đích vét cạn và lấy thật nhiều nguồn.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/2. Mem0 - Processing Step 2 - Create SDD (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP - Mem0",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Untitled",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP - Memory",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/AI_RAG_RecommendSystem_with_AI_RAG_Mem0.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/Memory - Step 1 - Deep Research - Input - Memory - Giải pháp Memory cho AI Agents (MECE Framework).md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Usecase1 - A Tale of Two Agents - A Deep Dive into State-of-the-Art Architectures for Self-Healing Infrastructure and Visually-Grounded Web Automation - 800 credits.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/Draft",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251219141837.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251218180832.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251218180801.png",
