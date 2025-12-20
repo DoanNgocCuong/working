@@ -4,6 +4,8 @@
 
 # HIGH-LEVEL DESIGN (HLD)
 
+# HIGH-LEVEL DESIGN (HLD)
+
 # PIKA Mem0 Long-Term Memory System - Self-Hosted Solution
 
 **Phiên bản: 2.0 | Ngày: 2025-12-20**
@@ -166,6 +168,15 @@ Thiết kế dữ liệu ở mức high-level tập trung vào việc lựa ch�
 | **Metadata Store** | **PostgreSQL** | **Relational Tables**: Lưu dữ liệu có cấu trúc như thông tin user, lịch sử conversation, metadata của facts (ID, source, timestamp). | ACID, ổn định, quen thuộc. Phù hợp cho các dữ liệu cần tính toàn vẹn cao. |
 | **Cache & Queue** | **Redis** | **Key-Value & Pub/Sub**: Lớp L2 caching cho kết quả search. Dùng làm message broker đơn giản cho tác vụ `extract_facts` bất đồng bộ. | Tốc độ cực nhanh, đa dụng (caching, queueing, pub/sub), hệ sinh thái mạnh. |
 
+### 4.2. Database Trade-offs & Scalability Limits
+
+| Database | Ưu điểm | Nhược điểm | Giới hạn Scalability & Giải pháp |
+| :--- | :--- | :--- | :--- |
+| **Milvus** | - Hiệu năng cực cao cho vector search.<br>- Hỗ trợ nhiều loại index (HNSW, CAGRA).<br>- Khả năng scale ngang tốt. | - Phức tạp trong vận hành.<br>- Không hỗ trợ transaction ACID.<br>- Query language hạn chế. | - **Giới hạn**: Số lượng vector trong một collection. Hiệu năng giảm khi dữ liệu quá lớn.<br>- **Giải pháp**: Partition collection theo `user_id`. Sử dụng các node truy vấn (query nodes) và node dữ liệu (data nodes) mạnh mẽ hơn. Áp dụng L3 caching để giảm tải. |
+| **Neo4j** | - Tối ưu cho việc truy vấn mối quan hệ phức tạp.<br>- Ngôn ngữ truy vấn Cypher mạnh mẽ, dễ hiểu.<br>- Hỗ trợ transaction ACID. | - Khó scale ghi (write).<br>- Hiệu năng kém với các truy vấn full-scan.<br>- Yêu cầu nhiều bộ nhớ. | - **Giới hạn**: Hiệu năng ghi bị giới hạn bởi một node leader trong Causal Cluster.<br>- **Giải pháp**: Sử dụng Causal Cluster với nhiều read replica để scale đọc. Tối ưu hóa các truy vấn Cypher. Tránh các "supernodes" (node có quá nhiều mối quan hệ). |
+| **PostgreSQL** | - Ổn định, tin cậy, hỗ trợ ACID.<br>- Hệ sinh thái mạnh, nhiều extension (vd: pgvector).<br>- Linh hoạt, có thể lưu metadata, cache, và cả vector. | - Hiệu năng vector search không bằng Milvus.<br>- Scale ghi phức tạp hơn (yêu cầu sharding thủ công). | - **Giới hạn**: Hiệu năng giảm khi bảng quá lớn (hàng tỷ dòng).<br>- **Giải pháp**: Partition bảng `facts` theo `user_id` hoặc `created_at`. Sử dụng read replicas để scale đọc. Áp dụng connection pooling (PgBouncer). |
+| **Redis** | - Độ trễ cực thấp (<1ms).<br>- Cấu trúc dữ liệu đa dạng.<br>- Dễ sử dụng. | - Dữ liệu lưu trong RAM, chi phí cao.<br>- Không đảm bảo bền vững (persistence) nếu không cấu hình đúng. | - **Giới hạn**: Dung lượng bị giới hạn bởi RAM.<br>- **Giải pháp**: Sử dụng Redis Cluster để scale ngang. Áp dụng các chính sách eviction (vd: allkeys-lru) để quản lý bộ nhớ. Chỉ cache các dữ liệu "nóng". |
+
 ### 4.1. Conceptual Data Model
 
 *   **Fact**: Đơn vị thông tin cơ bản (e.g., "Sở thích của user là bơi lội"). Mỗi fact có một vector embedding, ID, nội dung text, và các metadata khác.
@@ -227,6 +238,11 @@ Hệ thống sẽ được triển khai trên **Kubernetes (K8s)** để đảm 
 
 ## 7. CROSS-CUTTING CONCERNS (CÁC VẤN ĐỀ XUYÊN SUỐT)
 
+### 7.5. Rate Limiting & Backpressure
+
+*   **Rate Limiting**: Để bảo vệ hệ thống khỏi bị quá tải và lạm dụng, một cơ chế rate limiting sẽ được áp dụng tại API Gateway (hoặc middleware trong FastAPI). Sử dụng thuật toán **Token Bucket** hoặc **Fixed Window Counter** lưu trên Redis để giới hạn số lượng request mỗi user có thể thực hiện trong một khoảng thời gian (vd: 100 requests/phút).
+*   **Backpressure**: Khi hệ thống bị quá tải (vd: message queue đầy, worker xử lý không kịp), nó cần có khả năng "đẩy ngược" áp lực lại cho client. API `extract_facts` sẽ trả về lỗi `HTTP 429 Too Many Requests` hoặc `HTTP 503 Service Unavailable` nếu message queue đã đầy, yêu cầu client thử lại sau.
+
 ### 7.1. Performance & Scalability
 
 *   **Latency**: Mục tiêu P95 < 200ms cho `search_facts` và P99 < 1s cho `extract_facts` (nhờ async). Điều này đạt được qua:
@@ -243,11 +259,15 @@ Hệ thống sẽ được triển khai trên **Kubernetes (K8s)** để đảm 
 *   **Network Security**: Sử dụng K8s Network Policies để giới hạn traffic giữa các pod, chỉ cho phép các kết nối cần thiết.
 *   **Input Validation**: Sử dụng Pydantic để validate tất cả dữ liệu đầu vào, chống lại các tấn công injection.
 
-### 7.3. Availability & Reliability
+### 7.3. Availability & Resiliency
 
 *   **High Availability**: Triển khai nhiều replica cho mỗi service trên K8s để tránh SPOF (Single Point of Failure).
 *   **Health Checks**: Cung cấp endpoint `/health` để K8s có thể tự động phát hiện và khởi động lại các pod bị lỗi.
-*   **Retry & Fallback**: Implement cơ chế retry với exponential backoff cho các cuộc gọi đến external services (OpenAI). Nếu một service phụ thuộc (vd: Neo4j) bị lỗi, hệ thống có thể hoạt động ở chế độ "degraded" (ví dụ: trả về kết quả search mà không có thông tin ngữ cảnh).
+*   **Resiliency Patterns**:
+    *   **Retry & Timeouts**: Implement cơ chế retry với exponential backoff và jitter cho các cuộc gọi đến external services (OpenAI, Milvus). Mỗi request phải có một timeout chặt chẽ để tránh bị treo.
+    *   **Circuit Breaker**: Sử dụng thư viện như `resilience4py` để implement mẫu Circuit Breaker. Nếu một service phụ thuộc (vd: Neo4j) có tỷ lệ lỗi cao, circuit sẽ "mở", và các request sẽ thất bại ngay lập tức (fail-fast) hoặc được chuyển hướng đến fallback, tránh làm quá tải service đang gặp sự cố.
+    *   **Bulkhead**: Phân bổ tài nguyên (connection pools, thread pools) riêng cho các cuộc gọi đến từng service phụ thuộc. Điều này ngăn chặn việc một service chậm làm ảnh hưởng đến toàn bộ hệ thống (vd: connection pool riêng cho Milvus và Neo4j).
+    *   **Fallback**: Nếu một service phụ thuộc bị lỗi, hệ thống có thể hoạt động ở chế độ "degraded". Ví dụ, nếu Neo4j lỗi, API search vẫn trả về kết quả từ Milvus và PostgreSQL mà không có dữ liệu ngữ cảnh từ graph.
 
 ### 7.4. Observability
 
@@ -315,14 +335,16 @@ Luồng này được tối ưu hóa để đạt P95 latency < 200ms thông qua
 
 **L1 Cache (In-Memory)**
 
-*   Kiểm tra một `@lru_cache` hoặc `functools.cache` trên hàm search. Nếu cache hit, trả về ngay lập tức (<1ms).
-*   Nhược điểm: Chỉ hiệu quả cho các query rất hot và không chia sẻ giữa các process.
+*   Kiểm tra `@lru_cache` trên hàm search. Nếu cache hit, trả về ngay lập tức (<1ms).
 
 **L2 Cache (Redis Semantic Cache)**
 
-*   Kiểm tra Redis với `cache_key`.
-*   Nếu có giá trị, deserialize và trả về (<5-20ms).
-*   Nếu không, tiếp tục.
+*   Nếu L1 miss, kiểm tra Redis với `cache_key`. Nếu cache hit, deserialize và trả về (5-20ms).
+
+**L3 Cache (PostgreSQL Persistent Cache)**
+
+*   Nếu L2 miss, kiểm tra bảng `search_result_cache` trong PostgreSQL với `query_hash`. Nếu cache hit, trả về kết quả (50-100ms) và "làm ấm" L2 cache bằng cách ghi lại kết quả vào Redis.
+*   Nếu L3 miss, tiếp tục.
 
 **Bước 3: Query Embedding (nếu cache miss)**
 
