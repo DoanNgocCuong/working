@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Memory - Output - 19122025 - 60 trang pdf - 25K tokens - 100K characters.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Mem0 - Memory - Output - 19122025 - 60 trang pdf - 25K tokens - 100K characters"
+              "title": "2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE"
             }
           },
           {
@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/2.0 v4 Processing 3 - High Architect - Folder Structure - Data Flows+ Source Codes.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Processing Step 2 - Create SDD (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.0 v4 Processing 3 - High Architect - Folder Structure - Data Flows+ Source Codes"
+              "title": "2. Mem0 - Processing Step 2 - Create SDD (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025"
             }
           },
           {
@@ -69,16 +69,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - HIGH LEVEL DESIGN.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Architect - Folder Structure - Data Flows+ Source Codes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.0 v4 Output - HIGH LEVEL DESIGN"
+              "title": "2.0 v4 Output - High Architect - Folder Structure - Data Flows+ Source Codes"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,7 +110,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: folder",
+                "query": "file: output",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -136,7 +136,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.51240158081055
+    "width": 440.50418853759766
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -200,13 +200,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - HIGH LEVEL DESIGN.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.0 v4 Output - HIGH LEVEL DESIGN"
+              "title": "Outline of 2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE"
             }
           }
         ],
@@ -228,34 +228,34 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "7e3ab869dbe24dd6",
+  "active": "9eecb7a9b99e0720",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/2.0 v4 Processing 3 - High Architect - Folder Structure - Data Flows+ Source Codes.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - HIGH LEVEL DESIGN.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Output SDD Optimization - 20122025.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Output 2 - SDD (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Output 2 - SDD OPTIMIZE 1 - (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/2.0 v4 Processing 2 - SDD and TDD and Production Quality - Software Design Document (SDD) (base on TDD + Production Quality docs) - Step 2 (Manus mạnh và Cursor gộp).md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Processing Step 2 - Create SDD (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/2.0 v4 Processing 1 - Gen SDD - (TDD) - Software Design Document (SDD) (base on TDD + Production Quality docs) (step 1 Gemini + Perflexity + Manus để deep research + Genspark tư duy).md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Step 4 - Vẽ Software Design Document (SDD).md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0 Step 2 - OFTWARE DESIGN DOCUMENT (SDD) - finAI FINANCE AGENT WEB BROWSER.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Memory - Output - 19122025 - 60 trang pdf - 25K tokens - 100K characters.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Architect - Folder Structure - Data Flows+ Source Codes.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - HIGH LEVEL DESIGN - High Architect - Folder Structure - Data Flows+ Source Codes.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/2.0 v4 Processing 3 - Bonus - HIGH LEVEL DESIGN - High Architect - Folder Structure - Data Flows+ Source Codes 1.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Use Case 1 - 1.1 Context Handling_Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Python serve FOLDER.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v1/2.0 Folder Structure.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/2.0 v4 Processing 2 - SDD and TDD and Production Quality - Software Design Document (SDD) (base on TDD + Production Quality docs) - Step 2 (Manus mạnh và Cursor gộp).md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/2.0 v4 Processing 1 - Gen SDD - (TDD) - Software Design Document (SDD) (base on TDD + Production Quality docs) (step 1 Gemini + Perflexity + Manus để deep research + Genspark tư duy).md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Output SDD- 19122025.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Processing - 19122025.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3.3 - finAI 0 Claude - Fix Bug and Hoàn thiện code.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3.2 - finAI 0 Claude - updated.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3.1 - finAI - Claude.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/GPT5 vs Claude.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Long Term Memory New robot - T12_2025/Step 4 - Vẽ Software Design Document (SDD).md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0 Step 2 - OFTWARE DESIGN DOCUMENT (SDD) - finAI FINANCE AGENT WEB BROWSER.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/1.1 Kafka - Spark - Apache - Hadoop.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/3. Strategic Approaches to Understanding GitHub Repositories - Genspark 20250626.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/2.1 Python programming language - Spark Programming (PySpark and Spark API, Dataframe API, Spark SQL).md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Use Case 1 - 1.1 Context Handling_Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output -.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025.md",
-    "Untitled 2.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/2. Mem0 - Memory - Output - 19122025 - 60 trang pdf - 25K tokens - 100K characters.md",
     "Phần Cứng",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251219141837.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.18_DockerErrorKyTuLaTrongEnv.txt",
