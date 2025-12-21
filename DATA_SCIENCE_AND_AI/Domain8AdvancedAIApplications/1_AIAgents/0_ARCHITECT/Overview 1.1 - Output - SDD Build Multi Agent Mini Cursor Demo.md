@@ -1,42 +1,42 @@
-# SOFTWARE DESIGN DOCUMENT (SDD)
+## SOFTWARE DESIGN DOCUMENT (SDD)
 
-## Multi-Agent Coding System - Cursor Demo
+### Multi-Agent Coding System - Cursor Demo
 
 **Version 1.0 | Production Quality Standard**
 
 ---
 
-## DOCUMENT METADATA
+### DOCUMENT METADATA
 
 ```yaml
 Title: "Multi-Agent Coding System - Cursor Demo"
 Document_ID: "SDD-FINAI-CURSOR-DEMO-v1.0"
 
-# Ownership
+## Ownership
 Author: "AI Architecture Team"
 Co_Authors:
   - "Backend Development Team"
   - "DevOps Team"
 
-# Review & Approval
+## Review & Approval
 Reviewers:
   Technical_Lead: "To Be Assigned"
   Product_Manager: "To Be Assigned"
   QA_Lead: "To Be Assigned"
 
-# Status Tracking
+## Status Tracking
 Status: "Draft"
 Priority: "P1-High"
 
-# Timeline
+## Timeline
 Created_Date: "2025-12-17"
 Last_Updated: "2025-12-17"
 Target_Release: "Q1 2025"
 
-# Versioning
+## Versioning
 Version: "1.0.0"
 
-# Related Documents
+## Related Documents
 Related_Docs:
   HLD: "utils/docs/HLD_.md"
   Architecture_Guide: "docs/HUONG_DAN_KHOI_TAO_AGENT.md"
@@ -44,44 +44,44 @@ Related_Docs:
 
 ---
 
-## MỤC LỤC
+### MỤC LỤC
 
 **Phần I: Nền Tảng & Kiến Trúc**
-1. [Tóm Tắt Điều Hành (TL;DR)](#1-tóm-tắt-điều-hành-tldr)
-2. [Giới Thiệu](#2-giới-thiệu)
-3. [Mục Tiêu, Phạm Vi & Ràng Buộc](#3-mục-tiêu-phạm-vi--ràng-buộc)
-4. [Tổng Quan Hệ Thống](#4-tổng-quan-hệ-thống)
-5. [Thiết Kế Cấp Cao (HLD)](#5-thiết-kế-cấp-cao-hld)
-6. [Thiết Kế Cấp Thấp (LLD)](#6-thiết-kế-cấp-thấp-lld)
+1. [Tóm Tắt Điều Hành (TL;DR)](##1-tóm-tắt-điều-hành-tldr)
+2. [Giới Thiệu](##2-giới-thiệu)
+3. [Mục Tiêu, Phạm Vi & Ràng Buộc](##3-mục-tiêu-phạm-vi--ràng-buộc)
+4. [Tổng Quan Hệ Thống](##4-tổng-quan-hệ-thống)
+5. [Thiết Kế Cấp Cao (HLD)](##5-thiết-kế-cấp-cao-hld)
+6. [Thiết Kế Cấp Thấp (LLD)](##6-thiết-kế-cấp-thấp-lld)
 
 **Phần II: Chi Tiết Triển Khai**
-7. [Thiết Kế API & Contracts](#7-thiết-kế-api--contracts)
-8. [Thiết Kế Dữ Liệu](#8-thiết-kế-dữ-liệu)
-9. [Thiết Kế Bảo Mật](#9-thiết-kế-bảo-mật)
+7. [Thiết Kế API & Contracts](##7-thiết-kế-api--contracts)
+8. [Thiết Kế Dữ Liệu](##8-thiết-kế-dữ-liệu)
+9. [Thiết Kế Bảo Mật](##9-thiết-kế-bảo-mật)
 
 **Phần III: Production Readiness**
-10. [Resilience & Reliability](#10-resilience--reliability)
-11. [Observability & Monitoring](#11-observability--monitoring)
-12. [Deployment & Operations](#12-deployment--operations)
-13. [Testing Strategy](#13-testing-strategy)
+10. [Resilience & Reliability](##10-resilience--reliability)
+11. [Observability & Monitoring](##11-observability--monitoring)
+12. [Deployment & Operations](##12-deployment--operations)
+13. [Testing Strategy](##13-testing-strategy)
 
 **Phần IV: Phân Tích Kiến Trúc**
-14. [Brainstorm Kiến Trúc MECE](#14-brainstorm-kiến-trúc-mece)
-15. [Trade-offs & Architecture Decisions](#15-trade-offs--architecture-decisions)
+14. [Brainstorm Kiến Trúc MECE](##14-brainstorm-kiến-trúc-mece)
+15. [Trade-offs & Architecture Decisions](##15-trade-offs--architecture-decisions)
 
 **Phần V: Roadmap & Checklist**
-16. [Implementation Roadmap](#16-implementation-roadmap)
-17. [Production Readiness Checklist](#17-production-readiness-checklist)
+16. [Implementation Roadmap](##16-implementation-roadmap)
+17. [Production Readiness Checklist](##17-production-readiness-checklist)
 
 ---
 
-# PHẦN I: NỀN TẢNG & KIẾN TRÚC
+## PHẦN I: NỀN TẢNG & KIẾN TRÚC
 
 ---
 
-## 1. TÓM TẮT ĐIỀU HÀNH (TL;DR)
+### 1. TÓM TẮT ĐIỀU HÀNH (TL;DR)
 
-### 1.1 Summary Table
+#### 1.1 Summary Table
 
 | Khía Cạnh | Chi Tiết |
 |-----------|----------|
@@ -95,7 +95,7 @@ Related_Docs:
 | **Timeline** | MVP: 2 tuần, Production: 4 tuần |
 | **Key Stakeholders** | AI Team, Backend Team, DevOps |
 
-### 1.2 Architecture Overview
+#### 1.2 Architecture Overview
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -146,7 +146,7 @@ Related_Docs:
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 1.3 Key Metrics & Success Criteria
+#### 1.3 Key Metrics & Success Criteria
 
 | KPI | Hiện Tại | Mục Tiêu | Phương Pháp Đo |
 |-----|----------|----------|----------------|
@@ -156,7 +156,7 @@ Related_Docs:
 | Error Rate | N/A | <2% | Prometheus |
 | P95 Latency | N/A | <30s | Datadog APM |
 
-### 1.4 Risk Summary
+#### 1.4 Risk Summary
 
 | Risk | Xác Suất | Impact | Mitigation |
 |------|----------|--------|------------|
@@ -167,9 +167,9 @@ Related_Docs:
 
 ---
 
-## 2. GIỚI THIỆU
+### 2. GIỚI THIỆU
 
-### 2.1 Mục Đích Tài Liệu
+#### 2.1 Mục Đích Tài Liệu
 
 Tài liệu này cung cấp **bản thiết kế chi tiết production-ready** cho **Multi-Agent Coding System** (Cursor Demo):
 
@@ -179,7 +179,7 @@ Tài liệu này cung cấp **bản thiết kế chi tiết production-ready** c
 - **Production Standards**: Security, Observability, Reliability
 - **Operations**: Runbooks, Testing Strategy, Deployment
 
-### 2.2 Đối Tượng Đọc
+#### 2.2 Đối Tượng Đọc
 
 | Đối Tượng | Mục Đích Sử Dụng | Sections Chính |
 |-----------|------------------|----------------|
@@ -189,7 +189,7 @@ Tài liệu này cung cấp **bản thiết kế chi tiết production-ready** c
 | **QA** | Test Design | 13 |
 | **Product** | Scope/Timeline | 1, 3, 16 |
 
-### 2.3 Định Nghĩa & Từ Viết Tắt
+#### 2.3 Định Nghĩa & Từ Viết Tắt
 
 | Thuật Ngữ | Định Nghĩa |
 |-----------|------------|
@@ -200,25 +200,25 @@ Tài liệu này cung cấp **bản thiết kế chi tiết production-ready** c
 | **LangGraph** | Framework để xây dựng stateful, multi-actor applications với LLMs |
 | **Choreography** | Pattern coordination nơi agents tự quyết định hành động |
 
-### 2.4 Tham Chiếu Code Base Hiện Tại
+#### 2.4 Tham Chiếu Code Base Hiện Tại
 
 Dự án được xây dựng trên nền tảng **SpecialProd Agent FinAI WebBrowser** với các components chính:
 
 ```
 app/
-├── common/agent/           # Base agent framework (BaseAgent, Registry, Factory)
-├── module/agent/           # Specific agents (talk_agent, demo_agent, etc.)
-├── api/services/           # Application services
-└── common/                 # Infrastructure (Redis, Kafka, MySQL, etc.)
+├── common/agent/           ## Base agent framework (BaseAgent, Registry, Factory)
+├── module/agent/           ## Specific agents (talk_agent, demo_agent, etc.)
+├── api/services/           ## Application services
+└── common/                 ## Infrastructure (Redis, Kafka, MySQL, etc.)
 ```
 
 ---
 
-## 3. MỤC TIÊU, PHẠM VI & RÀNG BUỘC
+### 3. MỤC TIÊU, PHẠM VI & RÀNG BUỘC
 
-### 3.1 Mục Tiêu
+#### 3.1 Mục Tiêu
 
-#### Business Goals
+###### Business Goals
 
 | Mục Tiêu | Metric | Target | Timeline |
 |----------|--------|--------|----------|
@@ -226,7 +226,7 @@ app/
 | Giảm manual review | Review time | -70% | Sprint 4 |
 | Demo Cursor-style | Working demo | 100% | Sprint 2 |
 
-#### Technical Goals
+###### Technical Goals
 
 | Mục Tiêu | Metric | Target | Timeline |
 |----------|--------|--------|----------|
@@ -235,7 +235,7 @@ app/
 | Fault isolation | Recovery time | <10s | Sprint 3 |
 | Scalability | Agents | 10+ concurrent | Sprint 4 |
 
-### 3.2 Trong Phạm Vi ✅
+#### 3.2 Trong Phạm Vi ✅
 
 **MVP (Must Have)**:
 - ✅ 4 Agents: Chief, Coder, Tester, Reviewer
@@ -254,7 +254,7 @@ app/
 - 💡 A/B testing framework
 - 💡 Custom agent builder
 
-### 3.3 Ngoài Phạm Vi ❌
+#### 3.3 Ngoài Phạm Vi ❌
 
 | Non-Goal | Lý Do | Tương Lai? |
 |----------|-------|-----------|
@@ -262,7 +262,7 @@ app/
 | Multi-language support | Focus Python first | Phase 3 |
 | Real-time collaboration | Complexity | Phase 4 |
 
-### 3.4 Assumptions
+#### 3.4 Assumptions
 
 | ID | Assumption | Impact nếu Sai | Validation |
 |----|------------|-----------------|------------|
@@ -270,9 +270,9 @@ app/
 | A2 | LLM API stable | Medium - fallback needed | Monitor API |
 | A3 | Team familiar với LangGraph | Low - training | Training plan |
 
-### 3.5 Constraints
+#### 3.5 Constraints
 
-#### Technical Constraints
+###### Technical Constraints
 
 | Constraint | Lý Do | Workaround |
 |------------|-------|------------|
@@ -280,14 +280,14 @@ app/
 | Redis 7+ | PubSub features | N/A |
 | LangGraph 0.2+ | State management | N/A |
 
-#### Business Constraints
+###### Business Constraints
 
 | Constraint | Impact | Mitigation |
 |------------|--------|------------|
 | 2 week MVP timeline | Limited features | Reduce MVP scope |
 | Budget for LLM calls | Rate limiting | Caching + batching |
 
-### 3.6 Dependencies
+#### 3.6 Dependencies
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -323,9 +323,9 @@ app/
 
 ---
 
-## 4. TỔNG QUAN HỆ THỐNG
+### 4. TỔNG QUAN HỆ THỐNG
 
-### 4.1 Business Context
+#### 4.1 Business Context
 
 **Vấn Đề**: 
 Các coding assistant hiện tại (như Cursor) thường sử dụng single agent approach, dẫn đến:
@@ -344,7 +344,7 @@ Multi-Agent System với Hierarchical Choreography (Q4):
 - Fault isolation: Agent failure không ảnh hưởng toàn hệ thống
 - Scalability: Dễ dàng thêm agents mới
 
-### 4.2 Stakeholders
+#### 4.2 Stakeholders
 
 | Stakeholder | Interest | Communication |
 |-------------|----------|---------------|
@@ -353,7 +353,7 @@ Multi-Agent System với Hierarchical Choreography (Q4):
 | DevOps | Deployment | Weekly sync |
 | Product | Demo quality | Bi-weekly demo |
 
-### 4.3 Functional Requirements
+#### 4.3 Functional Requirements
 
 | ID | Module | Mô Tả | Priority | Acceptance Criteria |
 |----|--------|-------|----------|---------------------|
@@ -364,7 +364,7 @@ Multi-Agent System với Hierarchical Choreography (Q4):
 | FR-005 | Message Bus | P2P communication | P0 | Message delivery 99.9% |
 | FR-006 | Tools | File operations | P0 | CRUD operations work |
 
-### 4.4 User Stories (Gherkin)
+#### 4.4 User Stories (Gherkin)
 
 ```gherkin
 Feature: Multi-Agent Bug Fixing
@@ -401,9 +401,9 @@ Feature: Multi-Agent Bug Fixing
 
 ---
 
-## 5. THIẾT KẾ CẤP CAO (HLD)
+### 5. THIẾT KẾ CẤP CAO (HLD)
 
-### 5.1 Architecture Pattern
+#### 5.1 Architecture Pattern
 
 **Selected**: Q4 - Hierarchical Choreography (Multi-Agent với High Autonomy)
 
@@ -420,7 +420,7 @@ Feature: Multi-Agent Bug Fixing
 - **Message-Driven**: Communication qua Message Bus
 - **Stateless Agents**: State lưu trong shared store
 
-### 5.2 System Context (C4 Level 1)
+#### 5.2 System Context (C4 Level 1)
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -456,7 +456,7 @@ Feature: Multi-Agent Bug Fixing
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 5.3 Container Diagram (C4 Level 2)
+#### 5.3 Container Diagram (C4 Level 2)
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
@@ -533,7 +533,7 @@ Feature: Multi-Agent Bug Fixing
 └────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 5.4 Technology Stack
+#### 5.4 Technology Stack
 
 | Layer | Technology | Lý Do Chọn |
 |-------|------------|------------|
@@ -548,7 +548,7 @@ Feature: Multi-Agent Bug Fixing
 | **Container** | Docker | Consistency |
 | **Orchestration** | Kubernetes | Production scaling |
 
-### 5.5 Communication Patterns
+#### 5.5 Communication Patterns
 
 | Pattern | Use Case | Protocol | Implementation |
 |---------|----------|----------|----------------|
@@ -557,7 +557,7 @@ Feature: Multi-Agent Bug Fixing
 | **Request/Response** | API calls | REST | FastAPI |
 | **Streaming** | Real-time updates | WebSocket | Agent events |
 
-### 5.6 Agent Roles Summary
+#### 5.6 Agent Roles Summary
 
 | Agent | Role | Subscribe Topics | Publish Topics | Tools |
 |-------|------|------------------|----------------|-------|
@@ -568,22 +568,22 @@ Feature: Multi-Agent Bug Fixing
 
 ---
 
-## 6. THIẾT KẾ CẤP THẤP (LLD)
+### 6. THIẾT KẾ CẤP THẤP (LLD)
 
-### 6.1 File Structure
+#### 6.1 File Structure
 
 ```bash
 app/module/finai_agent/
 ├── __init__.py
-├── agent_entrypoint.py              # Entry point - spawn all agents
+├── agent_entrypoint.py              ## Entry point - spawn all agents
 │
 ├── layer_0_governance/
 │   ├── __init__.py
 │   ├── phase_1_input_gate/
 │   │   ├── __init__.py
-│   │   ├── input_gate.py           # Input validation
-│   │   ├── pii_detector.py         # PII detection
-│   │   ├── injection_detector.py   # Injection detection
+│   │   ├── input_gate.py           ## Input validation
+│   │   ├── pii_detector.py         ## PII detection
+│   │   ├── injection_detector.py   ## Injection detection
 │   │   ├── models.py
 │   │   └── exceptions.py
 │   │
@@ -603,35 +603,35 @@ app/module/finai_agent/
 │
 ├── layer_1_perception/
 │   ├── __init__.py
-│   ├── input_processor.py          # Parse user input
-│   ├── context_builder.py          # Build context for agents
+│   ├── input_processor.py          ## Parse user input
+│   ├── context_builder.py          ## Build context for agents
 │   ├── state.py
 │   ├── models.py
 │   └── exceptions.py
 │
 ├── layer_2_cognition/
 │   ├── __init__.py
-│   ├── message_bus.py              # 🆕 Redis PubSub wrapper
-│   ├── base_agent.py               # 🆕 Base P2P agent class
-│   ├── state.py                    # Shared state schema
+│   ├── message_bus.py              ## 🆕 Redis PubSub wrapper
+│   ├── base_agent.py               ## 🆕 Base P2P agent class
+│   ├── state.py                    ## Shared state schema
 │   │
-│   ├── chief_agent/                # Chief Agent
+│   ├── chief_agent/                ## Chief Agent
 │   │   ├── __init__.py
-│   │   ├── chief.py               # Main chief logic
-│   │   ├── graph.py               # LangGraph definition
+│   │   ├── chief.py               ## Main chief logic
+│   │   ├── graph.py               ## LangGraph definition
 │   │   └── prompts.py
 │   │
-│   ├── coder_agent/                # Coder Agent
+│   ├── coder_agent/                ## Coder Agent
 │   │   ├── __init__.py
 │   │   ├── coder.py
 │   │   └── prompts.py
 │   │
-│   ├── tester_agent/               # Tester Agent
+│   ├── tester_agent/               ## Tester Agent
 │   │   ├── __init__.py
 │   │   ├── tester.py
 │   │   └── prompts.py
 │   │
-│   ├── reviewer_agent/             # Reviewer Agent
+│   ├── reviewer_agent/             ## Reviewer Agent
 │   │   ├── __init__.py
 │   │   ├── reviewer.py
 │   │   └── prompts.py
@@ -642,7 +642,7 @@ app/module/finai_agent/
 │   │
 │   ├── llm/
 │   │   ├── __init__.py
-│   │   ├── router.py              # LLM provider router
+│   │   ├── router.py              ## LLM provider router
 │   │   └── prompts.py
 │   │
 │   └── exceptions.py
@@ -654,8 +654,8 @@ app/module/finai_agent/
 │   ├── tools/
 │   │   ├── __init__.py
 │   │   ├── base_tool.py
-│   │   ├── file_tools.py          # read_file, write_file, list_files
-│   │   ├── execution_tools.py     # run_tests
+│   │   ├── file_tools.py          ## read_file, write_file, list_files
+│   │   ├── execution_tools.py     ## run_tests
 │   │   └── models.py
 │   └── exceptions.py
 │
@@ -680,9 +680,9 @@ app/module/finai_agent/
 └── ARCHITECTURE.md
 ```
 
-### 6.2 Core Components Detail
+#### 6.2 Core Components Detail
 
-#### 6.2.1 Message Bus (message_bus.py)
+###### 6.2.1 Message Bus (message_bus.py)
 
 ```python
 """
@@ -729,7 +729,7 @@ class Message:
         message_id: Unique ID cho tracing
     """
     from_agent: str
-    to_agent: str  # "broadcast" hoặc agent name
+    to_agent: str  ## "broadcast" hoặc agent name
     topic: str
     payload: Dict[str, Any]
     timestamp: float = None
@@ -790,7 +790,7 @@ class MessageBus:
             f"{msg.topic} | ID: {msg.message_id}"
         )
         
-        # Notify all subscribers
+        ## Notify all subscribers
         tasks = []
         for callback in self.subscribers.get(msg.topic, []):
             tasks.append(asyncio.create_task(callback(msg)))
@@ -809,7 +809,7 @@ class MessageBus:
         self.message_history.clear()
 
 
-# Global bus instance - singleton pattern
+## Global bus instance - singleton pattern
 _bus_instance: Optional[MessageBus] = None
 
 
@@ -821,7 +821,7 @@ def get_message_bus() -> MessageBus:
     return _bus_instance
 ```
 
-#### 6.2.2 Base P2P Agent (base_agent.py)
+###### 6.2.2 Base P2P Agent (base_agent.py)
 
 ```python
 """
@@ -876,7 +876,7 @@ class P2PAgent(ABC):
         self.bus = bus or get_message_bus()
         self._running = False
         
-        # Subscribe to topics
+        ## Subscribe to topics
         for topic in subscribed_topics:
             self.bus.subscribe(topic, self._on_message)
             
@@ -959,30 +959,30 @@ class P2PAgent(ABC):
         
         try:
             while self._running:
-                # Check timeout
+                ## Check timeout
                 if asyncio.get_event_loop().time() - start_time > timeout:
                     logger.warning(f"[{self.name}] ⏰ Timeout reached")
                     break
                     
                 try:
-                    # Wait for message with timeout
+                    ## Wait for message with timeout
                     msg = await asyncio.wait_for(
                         self.inbox.get(), 
                         timeout=5.0
                     )
                     
-                    # Decide action
+                    ## Decide action
                     action = await self.decide_next_action(msg)
                     
                     if action == "STOP":
                         logger.info(f"[{self.name}] 🛑 Stopping")
                         break
                         
-                    # Execute action
+                    ## Execute action
                     await self.execute_action(action, msg)
                     
                 except asyncio.TimeoutError:
-                    # No message, continue waiting
+                    ## No message, continue waiting
                     continue
                     
         except Exception as e:
@@ -997,7 +997,7 @@ class P2PAgent(ABC):
         self._running = False
 ```
 
-#### 6.2.3 Chief Agent (chief.py)
+###### 6.2.3 Chief Agent (chief.py)
 
 ```python
 """
@@ -1068,15 +1068,15 @@ class ChiefAgent(P2PAgent):
     async def decide_next_action(self, msg: Message) -> str:
         """Chief quyết định action dựa trên message nhận được."""
         
-        # Nếu nhận được review_done → có thể synthesize
+        ## Nếu nhận được review_done → có thể synthesize
         if msg.topic == "review_done":
             self.results_collected.append(msg)
             if msg.payload.get("status") == "approved":
                 return "synthesize"
-            # Nếu chưa approved, chờ thêm
+            ## Nếu chưa approved, chờ thêm
             return "wait"
             
-        # Nếu nhận được test_result hoặc code_ready → log và chờ
+        ## Nếu nhận được test_result hoặc code_ready → log và chờ
         if msg.topic in ["test_result", "code_ready"]:
             self.results_collected.append(msg)
             return "wait"
@@ -1110,7 +1110,7 @@ class ChiefAgent(P2PAgent):
         final_report = "\n".join(report_lines)
         logger.info(f"[{self.name}] Final Report:\n{final_report}")
         
-        # Publish final report
+        ## Publish final report
         await self.send(
             to_agent="broadcast",
             topic="final_report",
@@ -1121,7 +1121,7 @@ class ChiefAgent(P2PAgent):
             }
         )
         
-        # Clear state
+        ## Clear state
         self.results_collected.clear()
         self.current_task = None
         
@@ -1148,7 +1148,7 @@ class ChiefAgent(P2PAgent):
         )
 ```
 
-#### 6.2.4 Coder Agent (coder.py)
+###### 6.2.4 Coder Agent (coder.py)
 
 ```python
 """
@@ -1231,18 +1231,18 @@ class CoderAgent(P2PAgent):
         
         logger.info(f"[{self.name}] 🔍 Analyzing task: {goal}")
         
-        # List files trong repo
+        ## List files trong repo
         files = list_files(repo_path)
         logger.info(f"[{self.name}] Files found: {files}")
         
-        # Đọc file chính (demo: math_utils.py)
+        ## Đọc file chính (demo: math_utils.py)
         target_file = f"{repo_path}/math_utils.py"
         try:
             code = read_file(target_file)
             self.current_file = target_file
             logger.info(f"[{self.name}] ✍️ Current code:\n{code}")
             
-            # Gửi code cho Tester
+            ## Gửi code cho Tester
             await self.send(
                 to_agent="Tester",
                 topic="code_ready",
@@ -1262,18 +1262,18 @@ class CoderAgent(P2PAgent):
         
         logger.info(f"[{self.name}] 🔧 Fixing bug: {error}")
         
-        # Demo fix: thay a - b thành a + b
+        ## Demo fix: thay a - b thành a + b
         fixed_code = '''def add(a, b):
     """Add two numbers and return result."""
-    return a + b  # Fixed by CoderAgent
+    return a + b  ## Fixed by CoderAgent
 '''
         
-        # Write fixed code
+        ## Write fixed code
         if self.current_file:
             write_file(self.current_file, fixed_code)
             logger.info(f"[{self.name}] ✅ Code fixed and saved")
             
-            # Gửi lại cho Tester verify
+            ## Gửi lại cho Tester verify
             await self.send(
                 to_agent="Tester",
                 topic="code_ready",
@@ -1285,7 +1285,7 @@ class CoderAgent(P2PAgent):
             )
 ```
 
-#### 6.2.5 Tester Agent (tester.py)
+###### 6.2.5 Tester Agent (tester.py)
 
 ```python
 """
@@ -1341,7 +1341,7 @@ class TesterAgent(P2PAgent):
         
         logger.info(f"[{self.name}] 🧪 Running tests for: {file_path}")
         
-        # Run tests
+        ## Run tests
         output = run_tests()
         passed = "passed" in output.lower() or "ok" in output.lower()
         
@@ -1352,7 +1352,7 @@ class TesterAgent(P2PAgent):
             logger.info(f"[{self.name}] ❌ Tests FAILED")
             status = "failed"
             
-        # Send result to Reviewer
+        ## Send result to Reviewer
         await self.send(
             to_agent="Reviewer",
             topic="test_result",
@@ -1364,7 +1364,7 @@ class TesterAgent(P2PAgent):
         )
 ```
 
-#### 6.2.6 Reviewer Agent (reviewer.py)
+###### 6.2.6 Reviewer Agent (reviewer.py)
 
 ```python
 """
@@ -1428,10 +1428,10 @@ class ReviewerAgent(P2PAgent):
         """Approve code sau khi tests pass."""
         logger.info(f"[{self.name}] ✅ Code APPROVED")
         
-        # Reset fix attempts
+        ## Reset fix attempts
         self._fix_attempts = 0
         
-        # Report to Chief
+        ## Report to Chief
         await self.send(
             to_agent="Chief",
             topic="review_done",
@@ -1466,7 +1466,7 @@ class ReviewerAgent(P2PAgent):
             f"(attempt {self._fix_attempts}/{self._max_fix_attempts})"
         )
         
-        # Send fix request to Coder
+        ## Send fix request to Coder
         await self.send(
             to_agent="Coder",
             topic="fix_request",
@@ -1478,7 +1478,7 @@ class ReviewerAgent(P2PAgent):
         )
 ```
 
-#### 6.2.7 Entry Point (agent_entrypoint.py)
+###### 6.2.7 Entry Point (agent_entrypoint.py)
 
 ```python
 """
@@ -1517,11 +1517,11 @@ async def run_multi_agent_system(goal: str, repo_path: str = "."):
     logger.info("Q4 Hierarchical Choreography: Multi-Agent System")
     logger.info("=" * 60)
     
-    # Get message bus
+    ## Get message bus
     bus = get_message_bus()
-    bus.clear_history()  # Clear previous history
+    bus.clear_history()  ## Clear previous history
     
-    # Spawn agents
+    ## Spawn agents
     chief = ChiefAgent(bus=bus)
     coder = CoderAgent(bus=bus)
     tester = TesterAgent(bus=bus)
@@ -1530,7 +1530,7 @@ async def run_multi_agent_system(goal: str, repo_path: str = "."):
     agents = [chief, coder, tester, reviewer]
     logger.info(f"Spawned {len(agents)} agents: {[a.name for a in agents]}")
     
-    # Run agents in parallel
+    ## Run agents in parallel
     agent_tasks = [
         asyncio.create_task(chief.run_loop(timeout=120)),
         asyncio.create_task(coder.run_loop(timeout=120)),
@@ -1538,13 +1538,13 @@ async def run_multi_agent_system(goal: str, repo_path: str = "."):
         asyncio.create_task(reviewer.run_loop(timeout=120)),
     ]
     
-    # Wait for agents to initialize
+    ## Wait for agents to initialize
     await asyncio.sleep(1)
     
-    # Chief kicks off task
+    ## Chief kicks off task
     await chief.broadcast_task(goal, repo_path)
     
-    # Wait for completion or timeout
+    ## Wait for completion or timeout
     try:
         done, pending = await asyncio.wait(
             agent_tasks,
@@ -1552,11 +1552,11 @@ async def run_multi_agent_system(goal: str, repo_path: str = "."):
             return_when=asyncio.FIRST_COMPLETED
         )
         
-        # Stop all agents
+        ## Stop all agents
         for agent in agents:
             agent.stop()
             
-        # Cancel pending tasks
+        ## Cancel pending tasks
         for task in pending:
             task.cancel()
             
@@ -1565,7 +1565,7 @@ async def run_multi_agent_system(goal: str, repo_path: str = "."):
         for agent in agents:
             agent.stop()
             
-    # Get final result from message history
+    ## Get final result from message history
     history = bus.get_history(topic="final_report")
     if history:
         final_msg = history[-1]
@@ -1586,7 +1586,7 @@ async def run_multi_agent_system(goal: str, repo_path: str = "."):
     return result
 
 
-# CLI entry point
+## CLI entry point
 if __name__ == "__main__":
     result = asyncio.run(
         run_multi_agent_system(
@@ -1597,9 +1597,9 @@ if __name__ == "__main__":
     print(f"\nFinal Result: {result}")
 ```
 
-### 6.3 Layer 3: Action Tools
+#### 6.3 Layer 3: Action Tools
 
-#### 6.3.1 File Tools (file_tools.py)
+###### 6.3.1 File Tools (file_tools.py)
 
 ```python
 """
@@ -1647,7 +1647,7 @@ def write_file(path: str, content: str) -> None:
     """
     logger.debug(f"Writing to file: {path}")
     
-    # Ensure directory exists
+    ## Ensure directory exists
     os.makedirs(os.path.dirname(path) or '.', exist_ok=True)
     
     with open(path, 'w', encoding='utf-8') as f:
@@ -1682,7 +1682,7 @@ def list_files(directory: str = ".") -> List[str]:
     return files
 ```
 
-#### 6.3.2 Execution Tools (execution_tools.py)
+###### 6.3.2 Execution Tools (execution_tools.py)
 
 ```python
 """
@@ -1781,9 +1781,9 @@ def run_command(
 
 ---
 
-## 7. THIẾT KẾ API & CONTRACTS
+### 7. THIẾT KẾ API & CONTRACTS
 
-### 7.1 API Endpoints
+#### 7.1 API Endpoints
 
 ```yaml
 openapi: 3.0.3
@@ -1809,18 +1809,18 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RunAgentRequest'
+              $ref: '##/components/schemas/RunAgentRequest'
       responses:
         '200':
           description: Task completed
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RunAgentResponse'
+                $ref: '##/components/schemas/RunAgentResponse'
         '400':
-          $ref: '#/components/responses/BadRequest'
+          $ref: '##/components/responses/BadRequest'
         '500':
-          $ref: '#/components/responses/InternalError'
+          $ref: '##/components/responses/InternalError'
 
   /agent/status/{task_id}:
     get:
@@ -1839,7 +1839,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TaskStatus'
+                $ref: '##/components/schemas/TaskStatus'
 
   /agent/history:
     get:
@@ -1862,7 +1862,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MessageHistory'
+                $ref: '##/components/schemas/MessageHistory'
 
 components:
   schemas:
@@ -1915,7 +1915,7 @@ components:
         messages:
           type: array
           items:
-            $ref: '#/components/schemas/Message'
+            $ref: '##/components/schemas/Message'
         total:
           type: integer
 
@@ -1961,25 +1961,25 @@ components:
                 type: string
 ```
 
-### 7.2 WebSocket Protocol
+#### 7.2 WebSocket Protocol
 
 ```python
 """
 WebSocket Protocol cho real-time agent updates.
 """
 
-# Connection
+## Connection
 ws://localhost:8000/ws/agent/{task_id}
 
-# Client -> Server Messages
+## Client -> Server Messages
 {
     "type": "subscribe",
     "topics": ["agent_status", "message_bus"]
 }
 
-# Server -> Client Messages
+## Server -> Client Messages
 
-# Agent Status Update
+## Agent Status Update
 {
     "type": "agent_status",
     "data": {
@@ -1989,7 +1989,7 @@ ws://localhost:8000/ws/agent/{task_id}
     }
 }
 
-# Message Bus Event
+## Message Bus Event
 {
     "type": "message_bus",
     "data": {
@@ -2000,7 +2000,7 @@ ws://localhost:8000/ws/agent/{task_id}
     }
 }
 
-# Task Complete
+## Task Complete
 {
     "type": "task_complete",
     "data": {
@@ -2012,9 +2012,9 @@ ws://localhost:8000/ws/agent/{task_id}
 
 ---
 
-## 8. THIẾT KẾ DỮ LIỆU
+### 8. THIẾT KẾ DỮ LIỆU
 
-### 8.1 State Schema
+#### 8.1 State Schema
 
 ```python
 """
@@ -2060,7 +2060,7 @@ class TaskState:
     repo_path: str
     status: TaskStatus = TaskStatus.PENDING
     agents: Dict[str, AgentState] = field(default_factory=dict)
-    messages: List[str] = field(default_factory=list)  # Message IDs
+    messages: List[str] = field(default_factory=list)  ## Message IDs
     created_at: datetime = field(default_factory=datetime.utcnow)
     updated_at: datetime = field(default_factory=datetime.utcnow)
     completed_at: Optional[datetime] = None
@@ -2075,10 +2075,10 @@ class SystemState:
     message_count: int = 0
 ```
 
-### 8.2 Redis Data Structure
+#### 8.2 Redis Data Structure
 
 ```
-# Task State
+## Task State
 task:{task_id} -> Hash
   - goal: string
   - repo_path: string
@@ -2086,17 +2086,17 @@ task:{task_id} -> Hash
   - created_at: timestamp
   - updated_at: timestamp
 
-# Agent State  
+## Agent State  
 task:{task_id}:agent:{agent_name} -> Hash
   - status: string (idle|running|completed|failed)
   - current_action: string
   - last_message_id: string
 
-# Message History
+## Message History
 task:{task_id}:messages -> List
   - [message_id_1, message_id_2, ...]
 
-# Message Detail
+## Message Detail
 message:{message_id} -> Hash
   - from_agent: string
   - to_agent: string
@@ -2104,7 +2104,7 @@ message:{message_id} -> Hash
   - payload: json string
   - timestamp: float
 
-# PubSub Channels
+## PubSub Channels
 channel:task_available
 channel:code_ready
 channel:test_result
@@ -2113,7 +2113,7 @@ channel:fix_request
 channel:final_report
 ```
 
-### 8.3 Data Retention Policy
+#### 8.3 Data Retention Policy
 
 | Data Type | Retention | Strategy |
 |-----------|-----------|----------|
@@ -2124,9 +2124,9 @@ channel:final_report
 
 ---
 
-## 9. THIẾT KẾ BẢO MẬT
+### 9. THIẾT KẾ BẢO MẬT
 
-### 9.1 Threat Model (STRIDE)
+#### 9.1 Threat Model (STRIDE)
 
 | Threat | Mô Tả | Mitigation |
 |--------|-------|------------|
@@ -2137,7 +2137,7 @@ channel:final_report
 | **Denial of Service** | Flood message bus | Rate limiting |
 | **Elevation of Privilege** | Agent escalation | Role-based permissions |
 
-### 9.2 Input Validation
+#### 9.2 Input Validation
 
 ```python
 """
@@ -2159,14 +2159,14 @@ class RunAgentRequest(BaseModel):
             raise ValueError('Goal too short')
         if len(v) > 1000:
             raise ValueError('Goal too long')
-        # Check for injection patterns
+        ## Check for injection patterns
         if re.search(r'[<>{};\|&]', v):
             raise ValueError('Invalid characters in goal')
         return v
         
     @validator('repo_path')
     def validate_repo_path(cls, v):
-        # Prevent path traversal
+        ## Prevent path traversal
         if '..' in v or v.startswith('/'):
             raise ValueError('Invalid repo path')
         return v
@@ -2178,7 +2178,7 @@ class RunAgentRequest(BaseModel):
         return v
 ```
 
-### 9.3 Rate Limiting
+#### 9.3 Rate Limiting
 
 ```python
 """
@@ -2188,24 +2188,24 @@ Rate limiting configuration.
 RATE_LIMITS = {
     "api_requests": {
         "requests": 60,
-        "window": 60,  # 60 requests per minute
+        "window": 60,  ## 60 requests per minute
     },
     "agent_tasks": {
         "requests": 10,
-        "window": 60,  # 10 tasks per minute
+        "window": 60,  ## 10 tasks per minute
     },
     "message_bus": {
         "requests": 1000,
-        "window": 60,  # 1000 messages per minute
+        "window": 60,  ## 1000 messages per minute
     }
 }
 ```
 
 ---
 
-## 10. RESILIENCE & RELIABILITY
+### 10. RESILIENCE & RELIABILITY
 
-### 10.1 Retry Strategy
+#### 10.1 Retry Strategy
 
 ```python
 """
@@ -2229,7 +2229,7 @@ async def publish_with_retry(bus, msg):
     await bus.publish(msg)
 ```
 
-### 10.2 Circuit Breaker
+#### 10.2 Circuit Breaker
 
 ```python
 """
@@ -2248,7 +2248,7 @@ async def call_llm(prompt: str):
     return await llm_client.generate(prompt)
 ```
 
-### 10.3 Health Checks
+#### 10.3 Health Checks
 
 ```python
 """
@@ -2279,7 +2279,7 @@ async def readiness():
     return {"status": "not_ready", "checks": checks}, 503
 ```
 
-### 10.4 Graceful Shutdown
+#### 10.4 Graceful Shutdown
 
 ```python
 """
@@ -2310,9 +2310,9 @@ class GracefulShutdown:
 
 ---
 
-## 11. OBSERVABILITY & MONITORING
+### 11. OBSERVABILITY & MONITORING
 
-### 11.1 Metrics (Prometheus)
+#### 11.1 Metrics (Prometheus)
 
 ```python
 """
@@ -2321,7 +2321,7 @@ Prometheus metrics cho Multi-Agent System.
 
 from prometheus_client import Counter, Histogram, Gauge
 
-# Agent metrics
+## Agent metrics
 AGENT_MESSAGES_TOTAL = Counter(
     'agent_messages_total',
     'Total messages sent by agents',
@@ -2340,7 +2340,7 @@ ACTIVE_AGENTS = Gauge(
     'Number of currently active agents'
 )
 
-# Task metrics
+## Task metrics
 TASK_TOTAL = Counter(
     'task_total',
     'Total tasks processed',
@@ -2355,7 +2355,7 @@ TASK_DURATION = Histogram(
 )
 ```
 
-### 11.2 Structured Logging
+#### 11.2 Structured Logging
 
 ```python
 """
@@ -2377,7 +2377,7 @@ structlog.configure(
     logger_factory=structlog.stdlib.LoggerFactory(),
 )
 
-# Usage
+## Usage
 logger = structlog.get_logger()
 
 logger.info(
@@ -2389,7 +2389,7 @@ logger.info(
 )
 ```
 
-### 11.3 Distributed Tracing (LangFuse)
+#### 11.3 Distributed Tracing (LangFuse)
 
 ```python
 """
@@ -2408,10 +2408,10 @@ async def analyze_task(goal: str):
     return response
 ```
 
-### 11.4 Alerting Rules
+#### 11.4 Alerting Rules
 
 ```yaml
-# Prometheus alerting rules
+## Prometheus alerting rules
 groups:
   - name: multi-agent-alerts
     rules:
@@ -2442,39 +2442,39 @@ groups:
 
 ---
 
-## 12. DEPLOYMENT & OPERATIONS
+### 12. DEPLOYMENT & OPERATIONS
 
-### 12.1 Docker Configuration
+#### 12.1 Docker Configuration
 
 ```dockerfile
-# Dockerfile
+## Dockerfile
 FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install dependencies
+## Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application
+## Copy application
 COPY app/ ./app/
 
-# Environment
+## Environment
 ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
 
-# Health check
+## Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8000/health/live || exit 1
 
-# Run
+## Run
 CMD ["uvicorn", "app.server:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
-### 12.2 Docker Compose (Development)
+#### 12.2 Docker Compose (Development)
 
 ```yaml
-# docker-compose.yml
+## docker-compose.yml
 version: '3.8'
 
 services:
@@ -2513,10 +2513,10 @@ volumes:
   mysql_data:
 ```
 
-### 12.3 Kubernetes Deployment
+#### 12.3 Kubernetes Deployment
 
 ```yaml
-# k8s/deployment.yaml
+## k8s/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -2567,9 +2567,9 @@ spec:
 
 ---
 
-## 13. TESTING STRATEGY
+### 13. TESTING STRATEGY
 
-### 13.1 Test Pyramid
+#### 13.1 Test Pyramid
 
 ```
                     ┌─────────┐
@@ -2583,7 +2583,7 @@ spec:
                ─┴─────────────────┴─
 ```
 
-### 13.2 Unit Tests
+#### 13.2 Unit Tests
 
 ```python
 """
@@ -2635,7 +2635,7 @@ class TestCoderAgent:
         assert action == "fix_bug"
 ```
 
-### 13.3 Integration Tests
+#### 13.3 Integration Tests
 
 ```python
 """
@@ -2653,14 +2653,14 @@ class TestMultiAgentFlow:
     @pytest.fixture
     def setup_test_repo(self, tmp_path):
         """Create test repository with failing tests."""
-        # Create math_utils.py with bug
+        ## Create math_utils.py with bug
         math_file = tmp_path / "math_utils.py"
         math_file.write_text('''
 def add(a, b):
-    return a - b  # Bug: should be a + b
+    return a - b  ## Bug: should be a + b
 ''')
         
-        # Create test file
+        ## Create test file
         test_file = tmp_path / "test_math.py"
         test_file.write_text('''
 from math_utils import add
@@ -2695,7 +2695,7 @@ def test_add():
         
         history = bus.get_history()
         
-        # Verify message sequence
+        ## Verify message sequence
         topics = [m.topic for m in history]
         assert "task_available" in topics
         assert "code_ready" in topics
@@ -2703,19 +2703,19 @@ def test_add():
         assert "review_done" in topics
 ```
 
-### 13.4 Test Fixtures
+#### 13.4 Test Fixtures
 
 ```python
 """
 Test fixtures for demo repository.
 """
 
-# tests/fixtures/repo_demo/math_utils.py
+## tests/fixtures/repo_demo/math_utils.py
 def add(a, b):
     """Add two numbers - Bug: returns subtraction instead."""
-    return a - b  # Intentional bug for demo
+    return a - b  ## Intentional bug for demo
 
-# tests/fixtures/repo_demo/test_math.py
+## tests/fixtures/repo_demo/test_math.py
 import pytest
 from math_utils import add
 
@@ -2731,9 +2731,9 @@ def test_add_zero():
 
 ---
 
-## 14. BRAINSTORM KIẾN TRÚC MECE
+### 14. BRAINSTORM KIẾN TRÚC MECE
 
-### 14.1 Các Kiến Trúc Được Phân Tích
+#### 14.1 Các Kiến Trúc Được Phân Tích
 
 Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng tôi phân tích 4 quadrants của Multi-Agent Architecture:
 
@@ -2753,7 +2753,7 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
                     Low Autonomy
 ```
 
-### 14.2 Comparison Matrix
+#### 14.2 Comparison Matrix
 
 | Aspect | Q1: Simple | Q2: Multi-Orch | Q3: Single-Auto | Q4: Multi-Choreo |
 |--------|------------|----------------|-----------------|------------------|
@@ -2765,7 +2765,7 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 | **Fault Tolerance** | Low | Medium | Medium | High |
 | **Use Case** | Simple tasks | Workflow | Smart assistant | Complex collab |
 
-### 14.3 ADR: Chọn Q4 - Hierarchical Choreography
+#### 14.3 ADR: Chọn Q4 - Hierarchical Choreography
 
 **Decision**: Chọn Q4 - Multi-Agent với Hierarchical Choreography
 
@@ -2792,9 +2792,9 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 
 ---
 
-## 15. TRADE-OFFS & ARCHITECTURE DECISIONS
+### 15. TRADE-OFFS & ARCHITECTURE DECISIONS
 
-### 15.1 ADR-001: Message Bus Selection
+#### 15.1 ADR-001: Message Bus Selection
 
 | Attribute | Value |
 |-----------|-------|
@@ -2803,7 +2803,7 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 | **Rationale** | Simpler setup, lower latency, sufficient for demo scale |
 | **Consequences** | ✅ Fast, ✅ Simple; ⚠️ Less durable than RabbitMQ |
 
-### 15.2 ADR-002: Agent State Management
+#### 15.2 ADR-002: Agent State Management
 
 | Attribute | Value |
 |-----------|-------|
@@ -2812,7 +2812,7 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 | **Rationale** | Easier to scale, recover from failures |
 | **Consequences** | ✅ Scalable, ✅ Recoverable; ⚠️ Redis dependency |
 
-### 15.3 ADR-003: P2P vs Centralized Communication
+#### 15.3 ADR-003: P2P vs Centralized Communication
 
 | Attribute | Value |
 |-----------|-------|
@@ -2821,7 +2821,7 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 | **Rationale** | Lower latency, agents can communicate directly |
 | **Consequences** | ✅ Faster, ✅ Flexible; ⚠️ Harder to trace |
 
-### 15.4 Trade-off Analysis
+#### 15.4 Trade-off Analysis
 
 | Trade-off | Option A | Option B | Decision | Reason |
 |-----------|----------|----------|----------|--------|
@@ -2831,9 +2831,9 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 
 ---
 
-## 16. IMPLEMENTATION ROADMAP
+### 16. IMPLEMENTATION ROADMAP
 
-### 16.1 Phase Overview
+#### 16.1 Phase Overview
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -2858,9 +2858,9 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 16.2 Sprint Details
+#### 16.2 Sprint Details
 
-#### Sprint 1: Foundation (Week 1)
+###### Sprint 1: Foundation (Week 1)
 
 | Task | Owner | Effort | Priority |
 |------|-------|--------|----------|
@@ -2877,7 +2877,7 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 - [ ] File tools tested
 - [ ] Unit tests setup
 
-#### Sprint 2: Core Agents (Week 2)
+###### Sprint 2: Core Agents (Week 2)
 
 | Task | Owner | Effort | Priority |
 |------|-------|--------|----------|
@@ -2892,7 +2892,7 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 - [ ] Agents can communicate via Message Bus
 - [ ] Unit tests passing
 
-#### Sprint 3: Integration (Week 3)
+###### Sprint 3: Integration (Week 3)
 
 | Task | Owner | Effort | Priority |
 |------|-------|--------|----------|
@@ -2907,7 +2907,7 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 - [ ] API documentation complete
 - [ ] Performance baseline established
 
-#### Sprint 4: Production (Week 4)
+###### Sprint 4: Production (Week 4)
 
 | Task | Owner | Effort | Priority |
 |------|-------|--------|----------|
@@ -2924,72 +2924,72 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 
 ---
 
-## 17. PRODUCTION READINESS CHECKLIST
+### 17. PRODUCTION READINESS CHECKLIST
 
-### 17.1 Pre-Launch Checklist
+#### 17.1 Pre-Launch Checklist
 
-#### Architecture ✅
+###### Architecture ✅
 - [ ] 4-layer architecture implemented
 - [ ] Message Bus working
 - [ ] All 4 agents functional
 - [ ] P2P communication verified
 
-#### Reliability ✅
+###### Reliability ✅
 - [ ] Retry logic implemented
 - [ ] Circuit breaker for LLM calls
 - [ ] Timeout handling
 - [ ] Graceful shutdown
 
-#### Observability ✅
+###### Observability ✅
 - [ ] Prometheus metrics
 - [ ] Structured logging
 - [ ] LangFuse tracing
 - [ ] Alerting rules
 
-#### Security ✅
+###### Security ✅
 - [ ] Input validation
 - [ ] Rate limiting
 - [ ] Audit logging
 
-#### Testing ✅
+###### Testing ✅
 - [ ] Unit tests >75% coverage
 - [ ] Integration tests passing
 - [ ] Load testing completed
 
-#### Deployment ✅
+###### Deployment ✅
 - [ ] Docker image built
 - [ ] K8s manifests ready
 - [ ] Health checks working
 
-### 17.2 Launch Day Checklist
+#### 17.2 Launch Day Checklist
 
-#### T-24 Hours
+###### T-24 Hours
 - [ ] Final deployment to staging
 - [ ] Smoke tests passed
 - [ ] Monitoring verified
 - [ ] On-call team confirmed
 
-#### T-1 Hour
+###### T-1 Hour
 - [ ] All systems green
 - [ ] Rollback plan reviewed
 - [ ] Stakeholders notified
 
-#### Launch
+###### Launch
 - [ ] Deploy to production
 - [ ] Monitor error rates
 - [ ] Monitor latency
 - [ ] Ready to rollback
 
-#### T+1 Hour
+###### T+1 Hour
 - [ ] Metrics within SLO
 - [ ] No critical bugs
 - [ ] Demo successful 🎉
 
 ---
 
-## APPENDIX
+### APPENDIX
 
-### A. Glossary
+#### A. Glossary
 
 | Term | Definition |
 |------|------------|
@@ -2998,14 +2998,14 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 | Message Bus | Central message routing system |
 | LangGraph | Framework for multi-agent applications |
 
-### B. References
+#### B. References
 
 - LangGraph Documentation: https://langchain-ai.github.io/langgraph/
 - Redis PubSub: https://redis.io/docs/manual/pubsub/
 - FastAPI: https://fastapi.tiangolo.com/
 - LangFuse: https://langfuse.com/docs
 
-### C. Document History
+#### C. Document History
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
@@ -3026,15 +3026,15 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 ---
 Đã hoàn thành **Software Design Document (SDD)** chi tiết cho dự án **Multi-Agent Coding System - Cursor Demo**. Tài liệu bao gồm khoảng **30+ trang** với các nội dung chính:
 
-## 📋 Tóm Tắt Nội Dung SDD
+### 📋 Tóm Tắt Nội Dung SDD
 
-### Phần I: Nền Tảng & Kiến Trúc
+#### Phần I: Nền Tảng & Kiến Trúc
 
 - **Executive Summary**: Tổng quan hệ thống Multi-Agent với Q4 Hierarchical Choreography
 - **Architecture**: 4-Layer Architecture (Governance → Perception → Cognition → Action)
 - **Agent Design**: 4 agents chuyên biệt (Chief, Coder, Tester, Reviewer) + Message Bus
 
-### Phần II: Chi Tiết Triển Khai
+#### Phần II: Chi Tiết Triển Khai
 
 - **LLD chi tiết**: Code mẫu cho từng component
     - `message_bus.py` - Redis PubSub wrapper
@@ -3044,26 +3044,1029 @@ Sử dụng framework MECE (Mutually Exclusive, Collectively Exhaustive), chúng
 - **API Design**: OpenAPI spec cho REST endpoints
 - **Data Design**: Redis data structures cho state management
 
-### Phần III: Production Readiness
+#### Phần III: Production Readiness
 
 - **Resilience**: Retry strategy, Circuit breaker, Health checks
 - **Observability**: Prometheus metrics, Structured logging, LangFuse tracing
 - **Deployment**: Docker, Kubernetes configs
 
-### Phần IV: Phân Tích Kiến Trúc
+#### Phần IV: Phân Tích Kiến Trúc
 
 - **MECE Brainstorm**: So sánh 4 quadrants (Q1-Q4)
 - **ADRs**: Architecture Decision Records cho các lựa chọn quan trọng
 - **Trade-offs**: Phân tích đánh đổi giữa các options
 
-### Phần V: Roadmap
+#### Phần V: Roadmap
 
 - **4 Sprints** trong 4 tuần
 - **Production Checklist** đầy đủ
 
-## 🔑 Highlights
+### 🔑 Highlights
 
 - **Kiến trúc Q4** được chọn vì: Parallel execution, Fault isolation, Scalability
 - **P2P Communication** qua Redis PubSub cho low latency
 - **4 Agents** với roles rõ ràng và topics subscribe/publish được định nghĩa
 - **Code mẫu** chi tiết có thể implement ngay
+
+---
+# BẢN CẬP NHẬT: SDD Multi-Agent Coding System - UPDATE NOTES
+
+## Tài Liệu Cập Nhật Để Mapping Với Source Code FinAI
+
+**Version**: 1.0  
+**Date**: 2025-12-17  
+**Status**: Required Updates Identified
+
+---
+
+## 📋 TÓM TẮT THAY ĐỔI
+
+| # | Hạng Mục | SDD Hiện Tại | Cần Update Thành | Priority |
+|---|----------|--------------|------------------|----------|
+| 1 | File Structure | `app/module/finai_agent/` | `app/module/agent/multi_agent_coding/` | P0 |
+| 2 | Base Class | Custom `P2PAgent` | Extend `BaseAgent` + Mixin | P0 |
+| 3 | Agent Registration | Không có | Dùng `@agent` decorator | P0 |
+| 4 | Dependency Injection | Không có | Dùng `DependencyResolver` | P0 |
+| 5 | State Model | Custom state | Extend `BaseState` | P0 |
+| 6 | Kafka Integration | Manual | Tự động từ `BaseAgent` | P1 |
+| 7 | LangFuse Tracing | Custom setup | Đã có sẵn trong `BaseAgent` | P1 |
+| 8 | Auto-discovery | Không đề cập | Factory auto-discover | P1 |
+| 9 | Message Bus | In-memory only | Tích hợp `graph_pub_sub.py` | P1 |
+| 10 | Input Validation | Custom | Dùng Pydantic + `input_model` | P2 |
+
+---
+
+## 1. CẬP NHẬT FILE STRUCTURE
+
+### ❌ SDD Hiện Tại
+
+```
+app/module/finai_agent/
+├── layer_0_governance/
+├── layer_1_perception/
+├── layer_2_cognition/
+│   ├── message_bus.py
+│   ├── base_agent.py          # Custom P2PAgent
+│   ├── chief_agent/
+│   ├── coder_agent/
+│   └── ...
+└── layer_3_action/
+```
+
+### ✅ Nên Update Thành
+
+```
+app/module/agent/multi_agent_coding/
+├── __init__.py
+├── agent.py                    # Main entry + @agent decorator (REQUIRED for auto-discovery)
+├── models.py                   # Input models + State models
+├── config.py                   # Configuration
+│
+├── message_bus/
+│   ├── __init__.py
+│   ├── bus.py                  # MessageBus class (extend from graph_pub_sub pattern)
+│   ├── topics.py               # MessageTopic enum
+│   └── models.py               # Message dataclass
+│
+├── agents/                     # Individual agents (NOT separate folders)
+│   ├── __init__.py
+│   ├── base_p2p_agent.py       # P2PMixin class
+│   ├── chief.py
+│   ├── coder.py
+│   ├── tester.py
+│   └── reviewer.py
+│
+├── tools/
+│   ├── __init__.py
+│   ├── file_tools.py
+│   └── execution_tools.py
+│
+├── governance/                 # Optional: Keep governance layer
+│   ├── input_gate.py
+│   └── output_gate.py
+│
+└── tests/
+    ├── __init__.py
+    ├── conftest.py
+    └── test_multi_agent.py
+```
+
+### 📝 Lý Do
+
+- `AgentFactory` auto-discover từ `app.module.agent` package
+- Cần có file `agent.py` để trigger registration
+- Flatten structure để dễ maintain
+
+---
+
+## 2. CẬP NHẬT BASE AGENT PATTERN
+
+### ❌ SDD Hiện Tại - Custom P2PAgent
+
+```python
+# SDD định nghĩa class mới hoàn toàn
+class P2PAgent(ABC):
+    def __init__(self, name: str, subscribed_topics: List[str], bus: MessageBus = None):
+        self.name = name
+        self.inbox = asyncio.Queue()
+        self.bus = bus or get_message_bus()
+        # ...
+```
+
+### ✅ Nên Update - Extend BaseAgent + Mixin
+
+```python
+# app/module/agent/multi_agent_coding/agents/base_p2p_agent.py
+
+from typing import List, Dict, Any
+from abc import abstractmethod
+import asyncio
+
+from app.common.agent.base import BaseAgent
+from app.common.agent.models import BaseState
+from app.common.log import setup_logger
+
+from ..message_bus.bus import MessageBus, get_message_bus
+from ..message_bus.models import Message
+
+logger = setup_logger(__name__)
+
+
+class P2PMixin:
+    """
+    Mixin để thêm P2P communication capabilities vào BaseAgent.
+    
+    Mixin này KHÔNG replace BaseAgent mà BỔ SUNG thêm:
+    - Subscribe/Publish qua Message Bus
+    - Autonomous run loop
+    - P2P messaging
+    
+    Usage:
+        class MyAgent(P2PMixin, BaseAgent):
+            subscribed_topics = ["task_available", "fix_request"]
+            # ...
+    """
+    
+    # Class attributes - override trong subclass
+    subscribed_topics: List[str] = []
+    agent_name: str = "unnamed"
+    
+    def __init__(self, **kwargs):
+        # Call BaseAgent.__init__ first
+        super().__init__(**kwargs)
+        
+        # P2P specific initialization
+        self.inbox: asyncio.Queue = asyncio.Queue()
+        self._bus: MessageBus = None
+        self._running = False
+        
+    @property
+    def bus(self) -> MessageBus:
+        """Lazy load message bus."""
+        if self._bus is None:
+            self._bus = get_message_bus()
+            # Subscribe to topics
+            for topic in self.subscribed_topics:
+                self._bus.subscribe(topic, self._on_message)
+        return self._bus
+        
+    async def _on_message(self, msg: Message):
+        """Callback khi nhận message từ bus."""
+        if msg.to_agent in ["broadcast", self.agent_name]:
+            await self.inbox.put(msg)
+            logger.debug(f"[{self.agent_name}] 📬 Received: {msg.topic}")
+            
+    async def send_p2p(self, to_agent: str, topic: str, payload: Dict[str, Any]):
+        """Send P2P message qua Message Bus."""
+        msg = Message(
+            from_agent=self.agent_name,
+            to_agent=to_agent,
+            topic=topic,
+            payload=payload,
+        )
+        await self.bus.publish(msg)
+        
+    @abstractmethod
+    async def decide_next_action(self, msg: Message) -> str:
+        """Agent tự quyết định action tiếp theo."""
+        pass
+        
+    @abstractmethod
+    async def execute_action(self, action: str, msg: Message):
+        """Execute action đã quyết định."""
+        pass
+        
+    async def p2p_run_loop(self, timeout: float = 300):
+        """
+        Autonomous P2P run loop.
+        
+        Note: Đây là THÊM vào, không thay thế BaseAgent.run_async()
+        """
+        self._running = True
+        logger.info(f"[{self.agent_name}] 🚀 P2P loop started")
+        
+        start_time = asyncio.get_event_loop().time()
+        
+        try:
+            while self._running:
+                if asyncio.get_event_loop().time() - start_time > timeout:
+                    logger.warning(f"[{self.agent_name}] ⏰ Timeout")
+                    break
+                    
+                try:
+                    msg = await asyncio.wait_for(self.inbox.get(), timeout=5.0)
+                    action = await self.decide_next_action(msg)
+                    
+                    if action == "STOP":
+                        break
+                        
+                    await self.execute_action(action, msg)
+                    
+                except asyncio.TimeoutError:
+                    continue
+                    
+        finally:
+            self._running = False
+            logger.info(f"[{self.agent_name}] Stopped")
+            
+    def stop_p2p(self):
+        """Signal agent to stop P2P loop."""
+        self._running = False
+```
+
+### 📝 Key Changes
+
+| Aspect | SDD Hiện Tại | Sau Update |
+|--------|--------------|------------|
+| Inheritance | `P2PAgent(ABC)` | `P2PMixin + BaseAgent` |
+| LangGraph | Không có | Kế thừa từ `BaseAgent.graph` |
+| Kafka | Không có | Kế thừa từ `BaseAgent.send_kafka_one()` |
+| Tracing | Không có | Kế thừa `@observe` decorator |
+
+---
+
+## 3. CẬP NHẬT AGENT REGISTRATION
+
+### ❌ SDD Hiện Tại - Không Có Registration
+
+```python
+# SDD không sử dụng registry
+class ChiefAgent(P2PAgent):
+    def __init__(self, llm=None, **kwargs):
+        super().__init__(
+            name="Chief",
+            subscribed_topics=["code_ready", "test_result", "review_done"],
+            **kwargs
+        )
+```
+
+### ✅ Nên Update - Dùng @agent Decorator
+
+```python
+# app/module/agent/multi_agent_coding/agent.py
+"""
+Multi-Agent Coding System - Main Entry Point.
+
+File này PHẢI có để AgentFactory auto-discover.
+"""
+
+from pydantic import BaseModel, Field
+from typing import Optional, List, Literal
+
+from app.common.agent.base import BaseAgent
+from app.common.agent.decorators import agent
+from app.common.agent.models import BaseState
+from app.common.log import setup_logger
+
+from .agents.chief import ChiefAgentLogic
+from .agents.base_p2p_agent import P2PMixin
+from .message_bus.bus import get_message_bus
+
+logger = setup_logger(__name__)
+
+
+# ══════════════════════════════════════════════════════════════
+# INPUT MODELS (API Input)
+# ══════════════════════════════════════════════════════════════
+
+class MultiAgentInput(BaseModel):
+    """Input model cho API endpoint."""
+    goal: str = Field(..., min_length=5, max_length=1000, description="Task goal")
+    repo_path: str = Field(default=".", description="Repository path")
+    timeout: int = Field(default=120, ge=10, le=600, description="Timeout in seconds")
+    
+
+# ══════════════════════════════════════════════════════════════
+# STATE MODEL (Internal State)
+# ══════════════════════════════════════════════════════════════
+
+class MultiAgentState(BaseState):
+    """State model cho LangGraph."""
+    # Input
+    goal: str = ""
+    repo_path: str = "."
+    timeout: int = 120
+    
+    # Progress
+    current_phase: str = "init"
+    agents_status: dict = {}
+    messages_processed: int = 0
+    
+    # Results
+    final_report: Optional[str] = None
+    error: Optional[str] = None
+
+
+def convert_input_to_state(input_model: MultiAgentInput) -> MultiAgentState:
+    """Convert API input to internal state."""
+    return MultiAgentState(
+        goal=input_model.goal,
+        repo_path=input_model.repo_path,
+        timeout=input_model.timeout,
+    )
+
+
+# ══════════════════════════════════════════════════════════════
+# MAIN AGENT (Registered with @agent decorator)
+# ══════════════════════════════════════════════════════════════
+
+@agent(
+    agent_id="multi_agent_coding",
+    name="Multi-Agent Coding System",
+    description="Q4 Hierarchical Choreography system with Chief, Coder, Tester, Reviewer agents",
+    input_model=MultiAgentInput,
+    state_model=MultiAgentState,
+    input_to_state=convert_input_to_state,
+    kafka_topic="multi_agent_coding_events",
+    dependency_specs={
+        "kafka": "kafka_producer",      # Inject Kafka producer
+        "redis": "redis_client",        # Inject Redis client
+        # Thêm dependencies khác nếu cần
+    }
+)
+class MultiAgentCodingSystem(P2PMixin, BaseAgent[MultiAgentState]):
+    """
+    Multi-Agent Coding System - Cursor Demo.
+    
+    Đây là ORCHESTRATOR agent, quản lý các sub-agents:
+    - ChiefAgent
+    - CoderAgent
+    - TesterAgent
+    - ReviewerAgent
+    
+    Flow:
+    1. API call → MultiAgentCodingSystem.run_async()
+    2. Spawn sub-agents
+    3. Chief broadcasts task
+    4. Sub-agents communicate via Message Bus
+    5. Collect results → Return
+    """
+    
+    agent_name = "Orchestrator"
+    subscribed_topics = ["final_report"]  # Only listen for final results
+    
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        
+        # Build LangGraph for orchestration
+        from langgraph.graph import StateGraph, START, END
+        
+        builder = StateGraph(MultiAgentState)
+        
+        # Nodes
+        builder.add_node("spawn_agents", self._spawn_agents)
+        builder.add_node("wait_for_completion", self._wait_for_completion)
+        builder.add_node("collect_results", self._collect_results)
+        
+        # Edges
+        builder.add_edge(START, "spawn_agents")
+        builder.add_edge("spawn_agents", "wait_for_completion")
+        builder.add_edge("wait_for_completion", "collect_results")
+        builder.add_edge("collect_results", END)
+        
+        self.graph = builder.compile()
+        
+    async def _spawn_agents(self, state: MultiAgentState) -> dict:
+        """Spawn all sub-agents."""
+        logger.info("[Orchestrator] Spawning sub-agents...")
+        
+        # Import and create sub-agents
+        from .agents.chief import ChiefAgent
+        from .agents.coder import CoderAgent
+        from .agents.tester import TesterAgent
+        from .agents.reviewer import ReviewerAgent
+        
+        bus = get_message_bus()
+        
+        self.chief = ChiefAgent(bus=bus)
+        self.coder = CoderAgent(bus=bus)
+        self.tester = TesterAgent(bus=bus)
+        self.reviewer = ReviewerAgent(bus=bus)
+        
+        return {"current_phase": "agents_spawned"}
+        
+    async def _wait_for_completion(self, state: MultiAgentState) -> dict:
+        """Run agents and wait for completion."""
+        import asyncio
+        
+        # Start all agent loops
+        tasks = [
+            asyncio.create_task(self.chief.p2p_run_loop(state.timeout)),
+            asyncio.create_task(self.coder.p2p_run_loop(state.timeout)),
+            asyncio.create_task(self.tester.p2p_run_loop(state.timeout)),
+            asyncio.create_task(self.reviewer.p2p_run_loop(state.timeout)),
+        ]
+        
+        # Wait a bit for agents to initialize
+        await asyncio.sleep(1)
+        
+        # Chief kicks off task
+        await self.chief.broadcast_task(state.goal, state.repo_path)
+        
+        # Wait for completion
+        try:
+            await asyncio.wait(tasks, timeout=state.timeout)
+        except asyncio.TimeoutError:
+            logger.warning("[Orchestrator] Timeout reached")
+            
+        # Stop all agents
+        self.chief.stop_p2p()
+        self.coder.stop_p2p()
+        self.tester.stop_p2p()
+        self.reviewer.stop_p2p()
+        
+        return {"current_phase": "completed"}
+        
+    async def _collect_results(self, state: MultiAgentState) -> dict:
+        """Collect final results from message bus."""
+        history = self.bus.get_history(topic="final_report")
+        
+        if history:
+            final_msg = history[-1]
+            return {
+                "final_report": final_msg.payload.get("report", ""),
+                "status": "success",
+            }
+        else:
+            return {
+                "final_report": "No report generated",
+                "status": "error",
+                "error": "Agents did not produce final report",
+            }
+```
+
+### 📝 Key Points
+
+1. **File `agent.py` là BẮT BUỘC** - Factory auto-discover từ đây
+2. **Dùng `@agent` decorator** thay vì manual registration
+3. **`input_model`** cho API validation
+4. **`state_model`** extend từ `BaseState`
+5. **`dependency_specs`** để inject dependencies
+
+---
+
+## 4. CẬP NHẬT SUB-AGENTS
+
+### ❌ SDD Hiện Tại
+
+```python
+class CoderAgent(P2PAgent):
+    def __init__(self, llm=None, **kwargs):
+        super().__init__(
+            name="Coder",
+            subscribed_topics=["task_available", "fix_request"],
+            **kwargs
+        )
+        self.llm = llm
+```
+
+### ✅ Nên Update
+
+```python
+# app/module/agent/multi_agent_coding/agents/coder.py
+
+from typing import Dict, Any
+
+from app.common.log import setup_logger
+from .base_p2p_agent import P2PMixin
+from ..message_bus.models import Message
+from ..tools.file_tools import read_file, write_file, list_files
+
+logger = setup_logger(__name__)
+
+
+class CoderAgent(P2PMixin):
+    """
+    Coder Agent - Chuyên viết và sửa code.
+    
+    Note: KHÔNG cần @agent decorator vì đây là sub-agent,
+    được quản lý bởi MultiAgentCodingSystem.
+    """
+    
+    agent_name = "Coder"
+    subscribed_topics = ["task_available", "fix_request"]
+    
+    def __init__(self, bus=None, llm=None, **kwargs):
+        self._bus = bus
+        self.llm = llm
+        self.inbox = __import__('asyncio').Queue()
+        self._running = False
+        self.current_file = None
+        
+    async def decide_next_action(self, msg: Message) -> str:
+        if msg.topic == "task_available":
+            return "analyze_and_code"
+        elif msg.topic == "fix_request":
+            return "fix_bug"
+        return "idle"
+        
+    async def execute_action(self, action: str, msg: Message):
+        if action == "analyze_and_code":
+            await self._analyze_and_code(msg)
+        elif action == "fix_bug":
+            await self._fix_bug(msg)
+            
+    async def _analyze_and_code(self, msg: Message):
+        """Phân tích và sửa code."""
+        repo_path = msg.payload.get("repo_path", ".")
+        goal = msg.payload.get("goal", "")
+        
+        logger.info(f"[{self.agent_name}] 🔍 Analyzing: {goal}")
+        
+        files = list_files(repo_path)
+        logger.info(f"[{self.agent_name}] Files: {files}")
+        
+        # Find and read main file
+        target_file = f"{repo_path}/math_utils.py"
+        try:
+            code = read_file(target_file)
+            self.current_file = target_file
+            
+            await self.send_p2p(
+                to_agent="Tester",
+                topic="code_ready",
+                payload={"file": target_file, "code": code, "action": "initial_read"}
+            )
+        except FileNotFoundError:
+            logger.error(f"[{self.agent_name}] File not found: {target_file}")
+            
+    async def _fix_bug(self, msg: Message):
+        """Fix bug dựa trên error report."""
+        error = msg.payload.get("error", "")
+        logger.info(f"[{self.agent_name}] 🔧 Fixing: {error}")
+        
+        fixed_code = '''def add(a, b):
+    """Add two numbers."""
+    return a + b  # Fixed by CoderAgent
+'''
+        
+        if self.current_file:
+            write_file(self.current_file, fixed_code)
+            logger.info(f"[{self.agent_name}] ✅ Fixed")
+            
+            await self.send_p2p(
+                to_agent="Tester",
+                topic="code_ready",
+                payload={"file": self.current_file, "code": fixed_code, "action": "fix_applied"}
+            )
+```
+
+---
+
+## 5. CẬP NHẬT MESSAGE BUS
+
+### ❌ SDD Hiện Tại
+
+```python
+# In-memory only
+class MessageBus:
+    def __init__(self):
+        self.subscribers = {}
+        self.message_history = []
+```
+
+### ✅ Nên Update - Tích Hợp Redis PubSub
+
+```python
+# app/module/agent/multi_agent_coding/message_bus/bus.py
+
+"""
+Message Bus với Redis PubSub support.
+
+Tham khảo: app/common/redis/graph_pub_sub.py
+"""
+
+import asyncio
+import json
+from typing import Dict, List, Callable, Optional
+from dataclasses import dataclass, field
+from datetime import datetime
+
+import redis.asyncio as redis
+
+from app.common.log import setup_logger
+from app.common.config import settings
+
+logger = setup_logger(__name__)
+
+
+@dataclass
+class Message:
+    """Message schema cho inter-agent communication."""
+    from_agent: str
+    to_agent: str
+    topic: str
+    payload: Dict
+    timestamp: float = field(default_factory=lambda: datetime.now().timestamp())
+    message_id: str = field(default_factory=lambda: __import__('uuid').uuid4().hex[:8])
+
+
+class MessageBus:
+    """
+    Message Bus với dual-mode:
+    - In-memory: Cho development/testing
+    - Redis PubSub: Cho production (multi-worker support)
+    """
+    
+    def __init__(self, redis_url: Optional[str] = None):
+        self.subscribers: Dict[str, List[Callable]] = {}
+        self.message_history: List[Message] = []
+        self._lock = asyncio.Lock()
+        
+        # Redis support
+        self.redis_url = redis_url or getattr(settings, 'REDIS_URL', None)
+        self.redis_client: Optional[redis.Redis] = None
+        self._pubsub = None
+        self._listener_task = None
+        
+    async def connect_redis(self):
+        """Connect to Redis for production mode."""
+        if self.redis_url:
+            self.redis_client = redis.from_url(self.redis_url, decode_responses=True)
+            self._pubsub = self.redis_client.pubsub()
+            logger.info("[MessageBus] Connected to Redis")
+            
+    async def disconnect_redis(self):
+        """Disconnect from Redis."""
+        if self._listener_task:
+            self._listener_task.cancel()
+        if self._pubsub:
+            await self._pubsub.close()
+        if self.redis_client:
+            await self.redis_client.close()
+            
+    def subscribe(self, topic: str, callback: Callable):
+        """Subscribe to topic."""
+        if topic not in self.subscribers:
+            self.subscribers[topic] = []
+        self.subscribers[topic].append(callback)
+        logger.debug(f"[MessageBus] Subscribed to '{topic}'")
+        
+    async def publish(self, msg: Message):
+        """Publish message to all subscribers."""
+        async with self._lock:
+            self.message_history.append(msg)
+            
+        logger.info(f"[MessageBus] 📨 {msg.from_agent} → {msg.to_agent} | {msg.topic}")
+        
+        # Local subscribers
+        tasks = []
+        for callback in self.subscribers.get(msg.topic, []):
+            tasks.append(asyncio.create_task(callback(msg)))
+            
+        if tasks:
+            await asyncio.gather(*tasks, return_exceptions=True)
+            
+        # Redis publish (for multi-worker)
+        if self.redis_client:
+            await self.redis_client.publish(
+                f"multi_agent:{msg.topic}",
+                json.dumps({
+                    "from_agent": msg.from_agent,
+                    "to_agent": msg.to_agent,
+                    "topic": msg.topic,
+                    "payload": msg.payload,
+                    "timestamp": msg.timestamp,
+                    "message_id": msg.message_id,
+                })
+            )
+            
+    def get_history(self, topic: str = None, limit: int = 100) -> List[Message]:
+        """Get message history."""
+        if topic:
+            return [m for m in self.message_history if m.topic == topic][-limit:]
+        return self.message_history[-limit:]
+        
+    def clear_history(self):
+        """Clear message history."""
+        self.message_history.clear()
+
+
+# Singleton instance
+_bus_instance: Optional[MessageBus] = None
+
+
+def get_message_bus() -> MessageBus:
+    """Get or create MessageBus singleton."""
+    global _bus_instance
+    if _bus_instance is None:
+        _bus_instance = MessageBus()
+    return _bus_instance
+
+
+def reset_message_bus():
+    """Reset message bus (for testing)."""
+    global _bus_instance
+    if _bus_instance:
+        _bus_instance.clear_history()
+    _bus_instance = None
+```
+
+---
+
+## 6. CẬP NHẬT API ENDPOINT
+
+### ❌ SDD Hiện Tại
+
+```python
+@router.post("/agent/run")
+async def run_agent(request: RunAgentRequest):
+    result = await run_multi_agent_system(request.goal, request.repo_path)
+    return result
+```
+
+### ✅ Nên Update - Dùng Factory Pattern
+
+```python
+# app/api/routes/multi_agent.py
+
+from fastapi import APIRouter, Depends, HTTPException
+from typing import Dict, Any
+
+from app.common.agent.factory import AgentFactory
+from app.common.dependency_resolver import DependencyResolver
+from app.common.log import setup_logger
+
+logger = setup_logger(__name__)
+
+router = APIRouter(prefix="/multi-agent", tags=["Multi-Agent Coding"])
+
+
+def get_agent_factory() -> AgentFactory:
+    """Dependency injection for AgentFactory."""
+    resolver = DependencyResolver()
+    # Register dependencies
+    # resolver.register("kafka_producer", singleton=kafka_producer)
+    # resolver.register("redis_client", singleton=redis_client)
+    return AgentFactory(resolver)
+
+
+@router.post("/run")
+async def run_multi_agent_system(
+    goal: str,
+    repo_path: str = ".",
+    timeout: int = 120,
+    factory: AgentFactory = Depends(get_agent_factory)
+) -> Dict[str, Any]:
+    """
+    Chạy Multi-Agent Coding System.
+    
+    Flow:
+    1. Factory.get_agent() → Get registered agent
+    2. agent.run_async() → Execute LangGraph
+    3. Return results
+    """
+    try:
+        # Get agent from factory (auto-discovered and cached)
+        agent = factory.get_agent("multi_agent_coding")
+        
+        # Get config for input conversion
+        config = factory.get_agent_config("multi_agent_coding")
+        
+        # Create input model
+        input_data = config.input_model(
+            goal=goal,
+            repo_path=repo_path,
+            timeout=timeout
+        )
+        
+        # Convert to state
+        state = config.input_to_state(input_data)
+        
+        # Run agent
+        result = await agent.run_async(state)
+        
+        return result
+        
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.error(f"Multi-agent system error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+```
+
+---
+
+## 7. CẬP NHẬT DEPENDENCIES
+
+### ❌ SDD Hiện Tại
+
+```python
+# Không đề cập dependency injection
+class ChiefAgent:
+    def __init__(self, llm=None):
+        self.llm = llm
+```
+
+### ✅ Nên Update
+
+```python
+# Trong @agent decorator
+@agent(
+    agent_id="multi_agent_coding",
+    # ...
+    dependency_specs={
+        "kafka": "kafka_producer",
+        "redis": "redis_client",
+        "llm": "openai_client",
+        "db": "database_manager",
+    }
+)
+
+# Dependencies được inject tự động qua **kwargs
+class MultiAgentCodingSystem(BaseAgent):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        # self.kafka, self.redis, self.llm, self.db đã được set
+```
+
+### 📝 Cách Register Dependencies
+
+```python
+# app/common/lifespans.py hoặc app/container.py
+
+from app.common.dependency_resolver import DependencyResolver
+
+resolver = DependencyResolver()
+
+# Register singletons
+resolver.register("kafka_producer", singleton=kafka_producer_instance)
+resolver.register("redis_client", singleton=redis_client_instance)
+
+# Register factories (lazy creation)
+resolver.register("database_manager", factory=lambda: DatabaseManager())
+resolver.register("openai_client", factory=lambda: OpenAIClient(api_key=settings.OPENAI_API_KEY))
+```
+
+---
+
+## 8. CẬP NHẬT TESTING
+
+### ❌ SDD Hiện Tại
+
+```python
+# Test không sử dụng fixtures của project
+def test_coder_agent():
+    coder = CoderAgent()
+    # ...
+```
+
+### ✅ Nên Update
+
+```python
+# app/module/agent/multi_agent_coding/tests/conftest.py
+
+import pytest
+from unittest.mock import MagicMock, AsyncMock
+
+from app.common.agent.registry import AgentRegistry
+
+
+@pytest.fixture(autouse=True)
+def clear_registry():
+    """Clear registry before each test."""
+    AgentRegistry.clear_registry()
+    yield
+    AgentRegistry.clear_registry()
+
+
+@pytest.fixture
+def mock_bus():
+    """Mock MessageBus."""
+    bus = MagicMock()
+    bus.publish = AsyncMock()
+    bus.subscribe = MagicMock()
+    bus.get_history = MagicMock(return_value=[])
+    return bus
+
+
+@pytest.fixture
+def mock_dependencies():
+    """Mock dependencies for agents."""
+    return {
+        "kafka": MagicMock(),
+        "redis": MagicMock(),
+        "llm": MagicMock(),
+    }
+
+
+# app/module/agent/multi_agent_coding/tests/test_coder.py
+
+import pytest
+from ..agents.coder import CoderAgent
+from ..message_bus.models import Message
+
+
+class TestCoderAgent:
+    @pytest.fixture
+    def coder(self, mock_bus):
+        return CoderAgent(bus=mock_bus)
+        
+    @pytest.mark.asyncio
+    async def test_decide_action_task_available(self, coder):
+        msg = Message(
+            from_agent="Chief",
+            to_agent="broadcast",
+            topic="task_available",
+            payload={"goal": "Fix tests"}
+        )
+        
+        action = await coder.decide_next_action(msg)
+        assert action == "analyze_and_code"
+        
+    @pytest.mark.asyncio
+    async def test_decide_action_fix_request(self, coder):
+        msg = Message(
+            from_agent="Reviewer",
+            to_agent="Coder",
+            topic="fix_request",
+            payload={"error": "Test failed"}
+        )
+        
+        action = await coder.decide_next_action(msg)
+        assert action == "fix_bug"
+```
+
+---
+
+## 9. CHECKLIST IMPLEMENTATION
+
+### Phase 1: Setup (Day 1-2)
+
+- [ ] Tạo folder structure mới: `app/module/agent/multi_agent_coding/`
+- [ ] Tạo `agent.py` với `@agent` decorator
+- [ ] Tạo `models.py` với Input/State models
+- [ ] Tạo `message_bus/` package
+
+### Phase 2: Agents (Day 3-4)
+
+- [ ] Implement `P2PMixin` trong `base_p2p_agent.py`
+- [ ] Migrate `ChiefAgent` sang pattern mới
+- [ ] Migrate `CoderAgent`
+- [ ] Migrate `TesterAgent`
+- [ ] Migrate `ReviewerAgent`
+
+### Phase 3: Integration (Day 5)
+
+- [ ] Implement `MultiAgentCodingSystem` orchestrator
+- [ ] Setup API route với Factory pattern
+- [ ] Test auto-discovery
+- [ ] Integration tests
+
+### Phase 4: Polish (Day 6-7)
+
+- [ ] Add Redis PubSub support
+- [ ] Add Kafka event logging
+- [ ] Documentation
+- [ ] Demo preparation
+
+---
+
+## 10. TÓM TẮT THAY ĐỔI QUAN TRỌNG
+
+| Component | Thay Đổi | Lý Do |
+|-----------|----------|-------|
+| **File Structure** | Đặt trong `app/module/agent/` | Auto-discovery |
+| **Base Class** | Dùng `P2PMixin + BaseAgent` | Tái sử dụng framework |
+| **Registration** | Dùng `@agent` decorator | Consistency |
+| **Dependencies** | Dùng `dependency_specs` | DI pattern |
+| **State** | Extend `BaseState` | Compatibility |
+| **Message Bus** | Thêm Redis support | Multi-worker |
+| **API** | Dùng `AgentFactory` | Factory pattern |
+
+---
+
+## 📎 REFERENCES
+
+- `app/common/agent/base.py` - BaseAgent class
+- `app/common/agent/registry.py` - AgentRegistry
+- `app/common/agent/factory.py` - AgentFactory
+- `app/common/agent/decorators.py` - @agent decorator
+- `app/common/dependency_resolver.py` - DependencyResolver
+- `app/common/redis/graph_pub_sub.py` - Redis PubSub pattern
+- `app/module/agent/talk_agent/agent.py` - Reference implementation
+
+---
+
+*Document Version: 1.0*  
+*Last Updated: 2025-12-17*
