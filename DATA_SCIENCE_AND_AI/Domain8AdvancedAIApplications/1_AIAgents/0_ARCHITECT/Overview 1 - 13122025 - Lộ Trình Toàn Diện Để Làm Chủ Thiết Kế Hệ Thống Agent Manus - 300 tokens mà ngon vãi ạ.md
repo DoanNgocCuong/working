@@ -631,7 +631,8 @@ graph TD
 
 ---
 
-
+--- 
+# OUTPUT
 # P2 : MANUS - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent
 
 **Tác giả:** Manus AI
@@ -1072,7 +1073,7 @@ Nếu Lớp Nhận thức là tai và mắt, Lớp Nhận thức là bộ não, 
     *   **Phân tích và Chuẩn hóa Kết quả (Result Parsing & Normalization):** Kết quả trả về từ một công cụ (ví dụ: một chuỗi JSON lớn từ API của hãng hàng không) cần được phân tích, trích xuất thông tin quan trọng, và chuyển đổi thành một định dạng đơn giản để Lớp Nhận thức có thể "tiêu hóa" và sử dụng cho bước lập kế hoạch tiếp theo.
 *   **Tầm quan trọng:** Execution Engine đảm bảo rằng các hành động của agent được thực hiện một cách đáng tin cậy và hiệu quả. Nó là cầu nối vững chắc giữa thế giới trừu tượng của việc lập kế hoạch và thế giới hỗn loạn của việc thực thi trong thực tế.
 
-#### 2.4. Lớp 4: Quản trị (Governance Layer)
+#### 2.0. Lớp 0: Quản trị (Governance Layer)
 
 Đây là lớp giám sát và kiểm soát, đảm bảo rằng agent hoạt động trong các giới hạn an toàn, có đạo đức, và có thể kiểm soát được. Trong các hệ thống sản xuất, đây là lớp quan trọng nhất để xây dựng lòng tin và tránh các hậu quả không mong muốn.
 
@@ -1586,6 +1587,48 @@ graph TB
     style Q3_Loop fill:#ff5722,color:#fff
     style Q4_Chief fill:#e91e63,color:#fff
 ```
+
+
+#### Hệ thống Đa Agent Hướng Sự kiện (Event-Driven Coordination)
+
+Đây là mô hình hiện đại cho các hệ thống lớn (Scalable Agent Systems), nơi các Agent không gọi nhau trực tiếp mà giao tiếp qua Event Bus để đảm bảo tính "Decoupled" và "Resilience".
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant EventBus as Event Bus / Message Broker
+    participant AgentA as Agent A (Triager)
+    participant AgentB as Agent B (Researcher)
+    participant AgentC as Agent C (Writer)
+
+    User->>EventBus: Event: New_Request_Received
+    
+    rect rgb(240, 248, 255)
+        Note over EventBus, AgentA: Decoupled Coordination
+        EventBus->>AgentA: Consume: New_Request
+        AgentA->>AgentA: Analyze Intent
+        AgentA->>EventBus: Publish: Intent_Classified (Research_Needed)
+    end
+    
+    rect rgb(255, 240, 245)
+        Note over EventBus, AgentB: Parallel Processing capability
+        EventBus->>AgentB: Consume: Intent_Classified
+        AgentB->>AgentB: Search Web / Query DB
+        AgentB->>EventBus: Publish: Data_Gathered
+    end
+
+    rect rgb(230, 255, 230)
+        EventBus->>AgentC: Consume: Data_Gathered
+        AgentC->>AgentC: Draft Content
+        AgentC->>EventBus: Publish: Task_Completed
+    end
+
+    EventBus->>User: Final Response
+```
+
+#### Demo Mini Cursor - 17/12/2025
+
+
 
 ## PHẦN III: LỘ TRÌNH LÀM CHỦ THIẾT KẾ HỆ THỐNG AGENT
 
