@@ -257,3 +257,4 @@ Người dùng Web2, lần đầu tiếp xúc Web3 (DeFi, NFT, GameFi), vốn nh
 
 **Giải pháp & metrics:** MetaMask có thể làm **Beginner mode** với luồng "tạo ví → backup → nhận token đầu tiên" cực rõ, đo **wallet creation**, **backup completion** và **funded wallet rate** trong 7 ngày. Thứ hai, thêm **flow testnet/demo** cho user thử transaction bằng test token trước, rồi theo dõi **install → first test tx** và **chuyển đổi sang mainnet tx**. Cuối cùng, tăng lớp **safety + dApp gợi ý cho F0** để cải thiện **first transaction rate**, **số dApp kết nối** và **30-day active wallet**.
 
+
