@@ -1,4 +1,6 @@
 
+- 300 tokens quá ngon
+
 ```
 1. MECE TOÀN BỘ CÁC PHẦN CỦA AGENT 2. MECE TOÀN BỘ CÁC KIỂU ỨNG DỤNG CỦA NÓ => Cần tập trung vào việc demo 1 luồng AI Agent cho 1 bài toán từ dễ đến khó => Cần chuẩn bị ít nhất 3 demo về Agent System Design 3. ĐÚC KẾT THE ROAD để master Agent system design
    
@@ -501,12 +503,13 @@ flowchart TB
     subgraph Pattern2 [2. Single-Agent System]
         direction TB
         SA_Input(Task) --> SA_Reason[LLM Reasoning]
-        SA_Reason -- "Decide Tool" --> SA_Tool[Execute Tool]
-        SA_Tool -- "Observation" --> SA_Reason
-        SA_Reason -- "Complete" --> SA_Output(Final Answer)
+        SA_Reason -->|Decide Tool| SA_Tool[Execute Tool]
+        SA_Tool -->|Observation| SA_Reason
+        SA_Reason -->|Complete| SA_Output(Final Answer)
     end
 
-    subgraph Pattern3 [3. Multi-Agent System (Orchestrator)]
+    %% Remove parentheses from this subgraph title
+    subgraph Pattern3 [3. Multi-Agent System Orchestrator]
         direction TB
         MA_Input(Complex Goal) --> Router{Orchestrator / Router}
         
@@ -518,13 +521,16 @@ flowchart TB
         AgentB <--> ToolsB[SQL / Python]
         AgentC <--> ToolsC[APIs]
         
-        AgentA & AgentB & AgentC -->|Result| Router
+        AgentA -->|Result| Router
+        AgentB -->|Result| Router
+        AgentC -->|Result| Router
         Router --> MA_Output(Synthesized Response)
     end
 
     %% Connect patterns logically (conceptual flow)
     Pattern1 -.->|Complexity Increases| Pattern2
     Pattern2 -.->|Scale Increases| Pattern3
+
 ```
 
 ---
@@ -632,7 +638,8 @@ graph TD
 ---
 
 --- 
-# OUTPUT
+---
+
 # P2 : MANUS - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent
 
 **Tác giả:** Manus AI
