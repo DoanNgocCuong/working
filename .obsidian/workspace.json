@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Demo 1 - Lên sóng.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Demo 1 - Lên sóng"
+              "title": "2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE"
             }
           }
         ],
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: mem0",
+                "query": "file: SDD",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 471.5
+    "width": 289.5
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Demo 1 - Lên sóng.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Demo 1 - Lên sóng"
+              "title": "Outline of 2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE"
             }
           }
         ],
@@ -199,8 +199,25 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "9648d7bc7a2c1c92",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/UseCases/Robot Agents.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/UseCases/Output - Low Level Desgin Agent Lesson.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/_init_ architect - NLP - AI Agents.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/UseCases",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/_init_ architect - NLP - AI Agents.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/04-ai-agents.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/2.3 STAGE 3 - Web Browser Architecture – Deep Research & Browser Agent Case Study.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/2.3 STAGE 3 - tool xử lý web - Spec MVP Trích xuất A11y or AX Tree → SnapshotV1  Context cho Agent.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.8 Tài liệu Thiết kế Toàn diện - finAI Agentic Browser.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.5 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.3 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.2 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v2/2.4 STAGE 4 - Tool Registry Spec (User cá nhân) — Agentic Comet-like Browser (v2).md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Demo 1 - Lên sóng.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1 - Road Map AI Agents - Manus  13122025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Output - SDD Build Multi Agent Mini Cursor Demo.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.2 Tài liệu đọc thêm -  Lớp học Chuyên sâu về Kiến trúc Hệ thống Agent.md",
@@ -211,22 +228,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Output - SDD - Travel Demo.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Output Cursor Demo note.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 3 - Caching 5 lớp.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 2 - SDD - HLD - LLD có cả Optimize Response Time.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 1 - SDD.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 3 - Optimize Response Time.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MECE toàn bộ vấn đề MEMORY.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 2.2 - Output 2 - SDD OPTIMIZE 1 - (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 2.1 - Output 1 - SDD (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Mem0 - Implement Mem0 selfhost.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Untitled 3.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/5. Langflow và AWS Bedrock.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4. ML Architecture và System Design.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Server Operations.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. Docker và Container.md",
-    "CÁC SAI LẦM THƯỜNG GẶP/PRODUCT/Example 1 - Binance, Coinbase, ATX, Metamask Web3 wallet.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/1. Links và Resources.md",
-    "CÁC SAI LẦM THƯỜNG GẶP/PRODUCT/3. Product Management Framework - MECE.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Stack",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Untitled",
@@ -236,7 +237,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Phần A - Mem0 và Robot Pika",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251219141837.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251218180832.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251218180801.png",
