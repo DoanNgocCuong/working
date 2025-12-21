@@ -1635,7 +1635,20 @@ sequenceDiagram
 
 #### Demo Mini Cursor - 17/12/2025
 
+```
+class MessageBus:
+    """
+    Central PubSub for P2P communication using Redis.
 
+    Features:
+    - Redis PubSub for distributed messaging
+    - Subscribe/Publish pattern
+    - Message history for debugging
+    - Async handlers
+    - Non-blocking publish (fire-and-forget)
+    - Auto-fallback to in-memory if Redis fails
+    """
+```
 
 ## PHẦN III: LỘ TRÌNH LÀM CHỦ THIẾT KẾ HỆ THỐNG AGENT
 

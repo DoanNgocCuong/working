@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/0. Prompting Builder.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1 - Road Map AI Agents - Manus  13122025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0. Prompting Builder"
+              "title": "Overview 1 - Road Map AI Agents - Manus  13122025"
             }
           },
           {
@@ -63,8 +63,7 @@
               "title": "Overview 1.1 - Output - SDD - Travel Demo"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,13 +184,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Playwright - trong bài toán Web Browser Agent.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1 - Road Map AI Agents - Manus  13122025.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Playwright - trong bài toán Web Browser Agent"
+              "title": "Outline of Overview 1 - Road Map AI Agents - Manus  13122025"
             }
           }
         ],
@@ -213,17 +212,19 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "57e772a0fb898e51",
+  "active": "71f84bdae828c99b",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Output - SDD Build Multi Agent Mini Cursor Demo.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.2 Tài liệu đọc thêm - 15122025 - 2 bài toán khó.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/0. Prompting Builder.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0 Step 2 - Processing 1 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Output - SDD - Travel Demo.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Output - SDD Build Multi Agent Mini Cursor Demo.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Playwright - trong bài toán Web Browser Agent.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1 - Road Map AI Agents - Manus  13122025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/MECE toàn bộ yếu tố ảnh hưởng đến Agent.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/2.4 Luồng MANUS - Phương Pháp Xác Định Tiêu Chí Thành Công Cho Bài Toán Không Rõ Ràng.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Playwright - trong bài toán Web Browser Agent.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/ckp/0_architecture/Usecase1 - 2 SOTA Agents - A Deep Dive into State-of-the-Art Architectures for Self-Healing Infrastructure and Visually-Grounded Web Automation.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM DESIGN",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.2 Đóng gói package.json, pyproject.toml - NỬA DOCKER.md",
@@ -241,8 +242,6 @@
     "BUSINESS/1_PRODUCT/4_FinAI/1.8 Tài liệu Thiết kế Toàn diện - finAI Agentic Browser.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.5 - V2 (Step Up Template) finAI Finance Agent Web Browser – Chiến lược toàn diện (CEO + PM).md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.3 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Stack",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Untitled",
