@@ -1587,6 +1587,25 @@ graph TB
     style Q4_Chief fill:#e91e63,color:#fff
 ```
 
+#### Demo tại buổi Agent Roadmap Wecommit100x
+
+```python
+class MessageBus:
+    """
+    Central PubSub for P2P communication using Redis.
+
+    Features:
+    - Redis PubSub for distributed messaging
+    - Subscribe/Publish pattern
+    - Message history for debugging
+    - Async handlers
+    - Non-blocking publish (fire-and-forget)
+    - Auto-fallback to in-memory if Redis fails
+    """
+```
+
+
+
 ## PHẦN III: LỘ TRÌNH LÀM CHỦ THIẾT KẾ HỆ THỐNG AGENT
 
 Phần này là trái tim của toàn bộ tài liệu. Chúng tôi sẽ cung cấp một lộ trình chi tiết, gồm 5 cấp độ, để đưa bạn từ một người mới bắt đầu trở thành một chuyên gia về hệ thống agent. Mỗi cấp độ sẽ bao gồm lý thuyết cốt lõi và một dự án thực hành cụ thể, với code mẫu và giải thích chi tiết, giúp bạn áp dụng ngay những gì đã học.
