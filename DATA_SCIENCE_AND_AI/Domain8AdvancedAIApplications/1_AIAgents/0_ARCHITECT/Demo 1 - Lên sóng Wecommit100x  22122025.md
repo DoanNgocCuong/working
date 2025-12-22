@@ -972,7 +972,9 @@ sequenceDiagram
     EventBus->>User: Final Response
 ```
 
-#### Demo Mini Cursor - 17/12/2025
+#### Demo Mini Cursor - Message Bus Multi Agents - 17/12/2025
+> 1. [https://www.hivemq.com/blog/benefits-of-event-driven-architecture-scale-agentic-ai-collaboration-part-2/](https://www.hivemq.com/blog/benefits-of-event-driven-architecture-scale-agentic-ai-collaboration-part-2/)  
+2. [https://www.confluent.io/blog/the-future-of-ai-agents-is-event-driven/](https://www.confluent.io/blog/the-future-of-ai-agents-is-event-driven/)
 
 ```
 class MessageBus:
