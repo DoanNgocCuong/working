@@ -1205,3 +1205,205 @@ Tóm lại: pipeline online dùng **STM + L1/L2** làm “first line”, còn **
 1. [https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)
 
 
+Short‑term ở đây không phải “sống vài phút” mà là **ngữ nghĩa**: nó chỉ giữ được _context hội thoại gần đây_, dù TTL là 24h.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+
+## STM 24h dùng để làm gì
+
+- **Giữ nguyên văn cuộc hội thoại**: tất cả turns, phrasing, joke, tham chiếu kiểu “như mình nói ở trên”, “cái lúc nãy” vẫn còn trong 1 ngày, nên:
+    
+    - Hỏi lại “Hồi nãy tớ bảo gì về công việc?” vẫn trả lời được từ STM, không cần LTM.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+        
+- **Tách vai trò với LTM**:
+    
+    - LTM lưu facts đã extract, dạng chuẩn hóa, dùng lâu dài.
+        
+    - STM lưu raw context, rất hữu ích cho follow‑up trong cùng ngày nhưng **KHÔNG dùng làm source sự thật lâu dài**.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+        
+
+## Vì sao 24h vẫn gọi là short‑term
+
+- **Scope**:
+    
+    - STM gắn với `session_id` / conversation trong 1 ngày → mang tính “phiên làm việc”, chứ không cross‑day, cross‑device mạnh như LTM.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+        
+- **Lifecycle**:
+    
+    - Sau 24h, session hết hạn, dữ liệu hội thoại bị xóa → chỉ còn LTM giữ lại các facts đã extract.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+        
+
+Nếu muốn “short” đúng nghĩa hơn, có thể giảm TTL STM‑L1 xuống 2–4h, nhưng việc để 24h chủ yếu để UX tốt hơn cho user quay lại trong cùng ngày mà không mất mạch hội thoại; LTM vẫn là nơi duy nhất giữ ký ức dài hạn.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+
+1. [https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)
+
+
+Không nhất thiết phải “full toàn bộ từ A→Z” theo nghĩa log từng token, mà STM nên lưu **đủ context hội thoại gần đây trong 1 ngày**, dưới dạng đã được nén/hợp lý hóa.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+
+## Lưu gì trong STM 24h
+
+- Thực tế nên lưu:
+    
+    - Các turn quan trọng: user message + assistant reply, đã **truncate** bớt history quá xa.
+        
+    - Hoặc lưu 1 bản **summary ngắn theo session** + một phần raw gần nhất (ví dụ 10–30 turn cuối).[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+        
+- Mục tiêu:
+    
+    - Hỗ trợ câu hỏi kiểu “hồi nãy tớ nói gì”, “tiếp tục đoạn lúc nãy”, “như plan trước đó…” trong cùng ngày.
+        
+    - Không dùng STM làm “data warehouse”; chỉ là **working set** cho conversation.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+        
+
+## Vì sao TTL 24h vẫn ok
+
+- “Short‑term” ở đây là theo **ngữ nghĩa thời gian sử dụng**:
+    
+    - Nó phục vụ mạch hội thoại **trong ngày** (1–2 phiên gần nhau).
+        
+    - Sau 24h, hệ thống coi như context cũ, chỉ còn LTM (facts đã extract) là giữ lâu dài.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+        
+- Nếu sợ phình Redis, có thể:
+    
+    - Giảm TTL STM‑L1 xuống 4–8h.
+        
+    - Hoặc giới hạn tối đa số turn/session được lưu (ví dụ 100–200) rồi cắt bớt.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+        
+
+## Tóm gọn
+
+- STM‑L1 **không bắt buộc** phải lưu “full 100% mọi message”, mà là “đủ để tiếp tục hội thoại”, trong khoảng 1 ngày.
+    
+- LTM (L1/L2/L3/L4) mới là nơi giữ lâu dài các facts quan trọng sau khi extract xong.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+    
+
+1. [https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)
+
+
+
+---
+
+# Chốt 
+
+
+```bash
+User Query: "What do I like?"
+    ↓
+┌─────────────────────────────────────────────────────────┐
+│         PARALLEL EXECUTION (asyncio.gather)             │
+│                                                         │
+│  ┌──────────────────┐        ┌──────────────────┐     │
+│  │   Query STM      │        │   Query LTM      │     │
+│  │   (async)        │  +     │   (async)        │     │
+│  └──────────────────┘        └──────────────────┘     │
+│          │                            │                │
+│          │ (5ms)                      │ (5-20ms)       │
+│          │                            │                │
+│          ↓                            ↓                │
+│  ┌──────────────────┐        ┌──────────────────┐     │
+│  │  STM Results:    │        │  LTM Results:    │     │
+│  │  - "You just     │        │  - "User likes   │     │
+│  │    said pizza"   │        │    pizza" (90%)  │     │
+│  │  - Context from  │        │  - "User likes   │     │
+│  │    current conv  │        │    sushi" (85%)  │     │
+│  └──────────────────┘        └──────────────────┘     │
+└─────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────┐
+│              MERGE & RANK RESULTS                       │
+│                                                         │
+│  1. Deduplicate (same facts from both sources)         │
+│  2. Rank by:                                            │
+│     - Relevance score                                   │
+│     - Recency (STM gets bonus)                         │
+│     - Confidence                                        │
+│  3. Format final response                               │
+└─────────────────────────────────────────────────────────┘
+    ↓
+Response to User (Total latency: ~20ms)
+
+```
+
+
+Đúng, thiết kế đẹp nhất là **query chạy song song STM và LTM**, rồi merge kết quả.[](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+
+## Tại sao nên chạy song song
+
+- Thời gian thực thi là **max(latency STM, latency LTM)** chứ không phải cộng dồn, nên tổng vẫn ~20ms nếu cả hai đều cache tốt.[](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+    
+- STM trả lời được mạch hội thoại “vừa nói gì / tiếp tục câu chuyện”, LTM trả lời được profile, sở thích lâu dài; merge lại thì câu trả lời vừa **đúng hiện tại** vừa **không quên lịch sử**
+
+## Rule routing đơn giản
+
+- Mỗi query:
+    
+    - Bắn **2 task async**:
+        
+        - `STM.search(session_id, query)`
+            
+        - `LTM.search(user_id, query)`
+            
+    - `await asyncio.gather(...)` để nhận hai bộ kết quả.[](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+
+
+## 📊 **PROBLEM: STM CONTEXT EXPLOSION**
+
+```
+Vấn đề:
+┌──────────────────────────────────────────────────────────┐
+│  Session dài → STM phình to → Chậm + Tốn tiền           │
+│                                                          │
+│  Turn 1:  "Hello" → 10 tokens                           │
+│  Turn 2:  "What's my name?" → 20 tokens                 │
+│  ...                                                      │
+│  Turn 50: "Tell me about..." → 2000 tokens              │
+│  Turn 51: "And also..." → 2500 tokens                   │
+│                                                          │
+│  Total: 50,000 tokens                                   │
+│  Cost: $0.50 per API call (for context)                │
+│  Latency: 5+ seconds                                     │
+└──────────────────────────────────────────────────────────┘
+
+Giải pháp:
+- Sliding Window (giữ N turns gần nhất)
+- Hierarchical Summarization (tóm tắt context cũ)
+- Smart Compression (giữ important facts, drop chitchat)
+```
+
+
+***
+
+## 🏗️ **ARCHITECTURE: 3-TIER STM COMPRESSION**
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│              STM WITH HIERARCHICAL SUMMARIZATION                 │
+│                                                                  │
+│  ┌────────────────────────────────────────────────────────────┐ │
+│  │  TIER 1: Active Window (Last 10 turns)                    │ │
+│  │  • Full conversation history                              │ │
+│  │  • No compression                                          │ │
+│  │  • Use: Current context                                    │ │
+│  │  • Size: ~2,000 tokens                                     │ │
+│  └────────────────────────────────────────────────────────────┘ │
+│                            ↓ (every 10 turns)                   │
+│  ┌────────────────────────────────────────────────────────────┐ │
+│  │  TIER 2: Recent Summary (Turns 11-50)                     │ │
+│  │  • LLM-generated summary                                   │ │
+│  │  • Key facts extracted                                     │ │
+│  │  • Use: Medium-term context                                │ │
+│  │  • Size: ~500 tokens (compressed from 8,000)              │ │
+│  └────────────────────────────────────────────────────────────┘ │
+│                            ↓ (every 50 turns)                   │
+│  ┌────────────────────────────────────────────────────────────┐ │
+│  │  TIER 3: Session Summary (Turns 51+)                      │ │
+│  │  • Ultra-compressed summary                                │ │
+│  │  • Only critical facts                                     │ │
+│  │  • Use: Long-term session context                          │ │
+│  │  • Size: ~200 tokens (compressed from 40,000+)            │ │
+│  └────────────────────────────────────────────────────────────┘ │
+│                                                                  │
+│  Final Context Sent to LLM:                                     │
+│  = Tier 3 (200) + Tier 2 (500) + Tier 1 (2,000) = 2,700 tokens │
+│  vs Original: 50,000 tokens                                     │
+│  → 95% compression! 🎉                                          │
+└──────────────────────────────────────────────────────────────────┘
+```
