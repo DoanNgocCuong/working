@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Untitled.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 3 - Caching Updated - Genspark siêu thông minh.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Step 2 - Output 3 - Caching Updated - Genspark siêu thông minh"
             }
           },
           {
@@ -117,8 +117,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 377.5
   },
   "right": {
     "id": "93619ec895a045a7",
@@ -182,13 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Untitled.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 3 - Caching Updated - Genspark siêu thông minh.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline of Step 2 - Output 3 - Caching Updated - Genspark siêu thông minh"
             }
           }
         ],
@@ -212,9 +211,11 @@
   },
   "active": "b2538287720317e2",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 3 - Cursor lên Plan and Coding.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 2 - SDD - HLD - LLD có cả Optimize Response Time.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 3 - Caching Updated - Genspark siêu thông minh.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MECE toàn bộ vấn đề MEMORY.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 3 - Caching 5 lớp.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 3 - Cursor lên Plan and Coding.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 2 - INPUT - Tạo SDD chi tiết cho bài.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 2 - HLD.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Step 2 - Input dùng mem0 Perflexity.md",
@@ -232,11 +233,9 @@
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Untitled.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0 Step 2 - Processing 1 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MECE toàn bộ vấn đề MEMORY.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Manus - PIKA Memory System - Mem0 Open Source Integration Guide.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 1 - SDD - Claude đẹp nhất.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 2 - SDD - HLD - LLD có cả Optimize Response Time.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Một số repo github có thể tham khảo.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/0. Prompting Builder.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM DESIGN",
