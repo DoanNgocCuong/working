@@ -60,6 +60,21 @@ So sánh 3 cách tiếp cận này
 - Tổ chức có DevOps/SRE mạnh, quen microservice.
 - Muốn Mem0 như 1 “internal product” dùng cross-project.
 
+
+Hiện trạng với Mem0 chạy như service đóng gói sẵn:
+
+- Bạn KHÔNG chỉnh được: prompt/logic nội bộ, pipeline extraction/ranking, schema vector store/graph store, embedder bên trong… trừ khi chủ service cho phép cấu hình và redeploy.
+- Bạn CÓ thể làm ở tầng của bạn (bao ngoài):
+  - Tiền xử lý request: lọc/chuẩn hóa messages, cắt bớt turns, gắn metadata giàu ngữ nghĩa.
+  - Orchestrate STM nội bộ + L1/L2 cache + gọi LTM (Mem0 service) rồi merge & rank kết quả.
+  - Hậu xử lý: re-rank, dedup, filter, đặt threshold, fallback khi Mem0 lỗi.
+  - Observability: log/trace/metrics, retry/backoff, circuit breaker.
+
+Muốn đổi prompt thực sự:
+1) Nhờ chủ service expose cấu hình prompt/instructions và redeploy.
+2) Hoặc chuyển về dùng Mem0 SDK nhúng trong code (phương án 2) để set prompt/instructions trong config LLM.
+
+
 ---
 
 #### (2) Call/Import Mem0 qua SDK (`mem0ai`) + API service phủ ngoài (CÁCH HIỆN TẠI)
@@ -644,3 +659,143 @@ locust -f loadtest/locustfile.py --host=http://localhost:8001
 
 [^20]: https://ieeexplore.ieee.org/iel8/6287639/10820123/11146751.pdf
 
+
+
+
+
+
+---
+# 1. Nếu muốn chỉnh prompt 
+
+
+## 1. Cách chỉnh prompt với Mem0 OSS REST server
+
+REST server của bạn có endpoint:
+
+- `POST /configure` – Configure Mem0[^3][^4]
+- `POST /memories` – Add memories (dùng config hiện tại)[^4][^5]
+
+Flow đúng:
+
+1. Gửi **custom prompt** vào `/configure`
+2. Từ đó trở đi, mọi `POST /memories` sẽ dùng prompt mới để extract fact
+
+### Ví dụ: Set custom fact extraction prompt (tiếng Việt)
+
+Giả sử bạn muốn prompt kiểu atomic fact tiếng Việt (giống mình đã design):
+
+```bash
+curl --location 'http://124.197.21.40:8888/configure' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "llm": {
+      "provider": "openai",
+      "config": {
+        "model": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_tokens": 2000
+      },
+      "custom_fact_extraction_prompt": "Bạn là một trợ lý AI chuyên trích xuất fact NGẮN, ĐƠN, RÕ RÀNG từ hội thoại tiếng Việt.\n\nQUY TẮC:\n1. Mỗi fact CHỈ chứa MỘT thông tin.\n2. Tách riêng: Tên, Địa điểm, Sở thích, Công việc, Mối quan hệ.\n3. Format: \"Loại: Giá trị\" (vd: \"Tên: Nguyễn Văn A\").\n4. Nếu không có thông tin quan trọng → trả về []\n\nVÍ DỤ:\nInput: \"Tôi tên là Nguyễn Văn A\"\nOutput: {\"facts\": [\"Tên: Nguyễn Văn A\"]}\n\nInput: \"Tôi sống ở Hà Nội và thích đọc sách\"\nOutput: {\"facts\": [\"Địa chỉ: Hà Nội\", \"Sở thích: đọc sách\"]}\n\nInput: \"Xin chào\"\nOutput: {\"facts\": []}\n\nCHỈ trả về JSON với key \"facts\".\n"
+    }
+  }'
+```
+
+- Field `custom_fact_extraction_prompt` chính là thứ Mem0 docs nói đến.[^1]
+- Lưu ý: Cấu trúc JSON cụ thể của `/configure` có thể là `config` root hoặc trực tiếp là `llm`; check lại schema trong `/docs#/default/set_config_configure_post`.[^4]
+
+Nếu schema yêu cầu dạng:
+
+```json
+{
+  "config": {
+    "llm": { ... }
+  }
+}
+```
+
+thì bạn chỉ cần thêm `config` bọc ngoài.
+
+## 2. Sau khi config prompt xong, gọi `/memories` như bình thường
+
+Payload bạn đang dùng là **chuẩn**:
+
+```bash
+curl --location 'http://124.197.21.40:8888/memories' \
+  --header 'accept: application/json' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "messages": [ ... hội thoại ... ],
+    "user_id": "Nguyễn Minh Phúc",
+    "agent_id": "agent_conv_456",
+    "run_id": "run_1",
+    "metadata": {
+      "source": "test",
+      "timestamp": "2024-01-01T00:00:00Z"
+    }
+  }'
+```
+
+Lúc này Mem0 sẽ:
+
+- Dùng **custom prompt** vừa set để extract facts từ toàn bộ `messages`.[^1]
+- Tạo nhiều memories atomic kiểu:
+    - `"Nhà: có chuột đột nhập"`
+    - `"Đã bắt được: 3 con chuột"`
+    - `"Sở thích: nuôi chó"`
+    - `"Sở thích: nuôi mèo"`
+    - `"Sở thích: nuôi chuột hamster"`
+    - `"Mơ ước: nhà màu hồng cho thú cưng"`
+
+Thay vì 1 fact dài như trước.
+
+## 3. Nếu muốn “add lên memory chủ động” (bỏ qua LLM)
+
+Có 2 cách:
+
+### Cách A – Vẫn dùng `/memories`, nhưng tự chuẩn hóa messages
+
+Bạn có thể **tự build messages đã tóm tắt** rồi gửi vào Mem0, để LLM làm ít việc nhất:
+
+```bash
+curl --location 'http://124.197.21.40:8888/memories' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "messages": [
+      {"role": "assistant", "content": "Tóm tắt: Người dùng nhà hay bị chuột đột nhập và đã bắt được 3 con."},
+      {"role": "assistant", "content": "Tóm tắt: Người dùng thích nuôi chó, mèo, chuột hamster và mơ ước có nhà màu hồng cho thú cưng."}
+    ],
+    "user_id": "Nguyễn Minh Phúc",
+    "agent_id": "agent_conv_456"
+  }'
+```
+
+Prompt của bạn nên hướng Mem0 hiểu: chỉ convert “Tóm tắt: ...” thành facts.[^1]
+
+
+### Cách B – Dùng mode “manual facts” (SDK tốt hơn REST)
+
+Nếu dùng SDK Python (`Memory.add(memories=[...])`), có mode truyền **facts thẳng**.[^6]
+REST server hiện tại chủ yếu expose `/memories` dựa trên `messages`; interface “add raw facts” thường có dạng riêng trong SDK, không luôn lộ ra REST.[^5][^7]
+
+Nếu rất cần API “add fact thẳng, không qua LLM”, bạn có thể:
+
+- Thêm 1 endpoint riêng trong **API wrapper của bạn** (không phải Mem0 REST OSS):
+    - `POST /pika/ltm/add_facts`
+    - Body: `facts: [string]`
+    - Trong backend: bỏ qua Mem0 extraction, chỉ gọi Mem0 ở mức vector store (hoặc tự push vào Mem0 SDK theo schema `memory.text`, `memory.event="ADD"`).
+
+
+## 4. Nhắc lại giới hạn hiện tại của REST `/configure`
+
+- `/configure` của REST OSS **map gần 1-1** với `Memory.from_config(config)` trong SDK.[^8][^2]
+- Nghĩa là: bất cứ thứ gì config được trong Python:
+    - `llm.custom_fact_extraction_prompt`
+    - `llm.custom_update_memory_prompt`
+    - etc.
+
+→ đều có thể set qua `/configure`, miễn là payload JSON đúng schema.
+
+Nên pattern chuẩn với Mem0 REST OSS:
+
+1. Boot lên → gọi `POST /configure` một lần với custom prompt + model + vector_store.
+2. Sau đó mọi `POST /memories` dùng đúng behavior bạn define.
