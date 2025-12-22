@@ -1033,62 +1033,175 @@ L1: Redis (1 hour TTL)
 ### **LONG-TERM MEMORY (LTM) - 4 Layers (CRITICAL!)**
 
 ```
-L0: Redis Hot Facts (top 10, 5 min)
-    └─ <2ms, 75% hit rate
-    └─ "What do I like?" → instant
+L0: IN-MEMORY (Python @lru_cache)
+    ├─ Latency: <1ms
+    ├─ Hit Rate: 10-20%
+    ├─ Scope: Per request
+    └─ Use: Repeated queries in same request
 
-L1: Redis Search Results (smart TTL)
-    └─ 5ms, 40% hit rate
-    └─ "User favorite?" → cached
+L1: EMBEDDING CACHE (Redis)
+    ├─ Latency: 5ms
+    ├─ Hit Rate: 60-70%
+    ├─ TTL: 24 hours
+    └─ Use: Avoid OpenAI API calls (100-200ms saved!)
 
-L2: PostgreSQL Metadata (24 hours)
-    └─ 20ms, 30% hit rate
-    └─ For filtering/ranking
+L2: RESULT CACHE (Redis)
+    ├─ Latency: 5-20ms
+    ├─ Hit Rate: 40%
+    ├─ TTL: Smart (based on confidence)
+    └─ Use: Cache full search results
 
-L3: Mem0 Vector DB (NO CACHE)
-    └─ 50-150ms, always fresh
-    └─ Primary source
+L3: MATERIALIZED VIEW (PostgreSQL)
+    ├─ Latency: 20-50ms
+    ├─ Hit Rate: 20-30% (for favorites)
+    ├─ TTL: Proactive worker updates
+    └─ Use: Pre-computed user favorites
 
-L4: Neo4j Graph (NO CACHE)
-    └─ 50-100ms, always fresh
-    └─ Relationships
+L4: VECTOR SEARCH (Mem0 + Milvus)
+    ├─ Latency: 100-300ms
+    ├─ Hit Rate: N/A (always fresh)
+    ├─ TTL: No cache (primary source)
+    └─ Use: Fallback when all caches miss
+
 ```
 
 
 ***
 
-## 🔑 **KEY INSIGHT: Tại Sao LTM Cũng Cần Caching?**
 
-```
-Nếu KHÔNG cache LTM:
-  User hỏi "What do I like?" lần 1 → 150ms (Mem0 search)
-  User hỏi "What do I like?" lần 2 (1 phút sau) → 150ms (SAME QUERY!)
+---
+
+# Sau khi kết thúc 1 cuộc hội thoại -> được bắn đi xử lý extract các kiểu -> save memory  
++, L4 thực hiện ngay query user_favorite_summary => đẩy xuống L3  
++, L3 thực hiện ngay để lưu vào DB Postgres  
+=> L2 thực hiện ngay để cache vào trong Redis  
   
-  Problem: Tốn tiền OpenAI API lại chậm
+----  
+trong lúc quá trình này chưa thực hiện xong thì nếu user hỏi sẽ dùng short term memory
 
-Nếu cache LTM (chiến lược của chúng ta):
-  User hỏi "What do I like?" lần 1 → 150ms (Mem0 search)
-  User hỏi "What do I like?" lần 2 (1 phút sau) → 5ms (CACHED!) ⚡
+
+| Aspect          | **Milvus**                      | **Neo4j**                  |
+| --------------- | ------------------------------- | -------------------------- |
+| **Type**        | Vector Database                 | Graph Database             |
+| **Primary Use** | Semantic similarity search      | Relationship traversal     |
+| **Data Stored** | Embeddings (vectors 1536-dim)   | Entities + Relationships   |
+| **Query Type**  | "Find similar memories"         | "Who owns what?"           |
+| **Latency**     | 50-150ms                        | 50-100ms                   |
+| **Best For**    | Fuzzy matching, semantic search | Structured knowledge graph |
+
+
+Khi end cuộc hội thoại, bên BE chủ động bắn end cho bên phía AI thực hiện extract (ở Module Context Handling rồi).  
   
-  Benefit: Nhanh gấp 30x + tiết kiệm API cost
++, Trong Module Memory này chỉ cần:  
+1. Thực hiện extract xong thì lưu vào Long Term Memory  
+2. Thực hiện query L4 (Vector Search: Milvus, và Graph Search: Neo4J được tích hợp sẵn trong Mem0 OSS
+
+
+```
+┌──────────────────────────────────────────────────────┐
+│          CONTEXT HANDLING MODULE                     │
+│  (Already handles conversation end & extraction)     │
+└────────────────────┬─────────────────────────────────┘
+                     │
+                     │ Triggers extraction job
+                     ↓
+┌──────────────────────────────────────────────────────┐
+│          MEMORY MODULE (Your focus)                  │
+│                                                      │
+│  ✅ 1. Receive extraction results                   │
+│  ✅ 2. Save to Long-Term Memory (L4)                │
+│        ├─ Vector Search (Milvus)                    │
+│        └─ Graph Search (Neo4j)                      │
+│        → Both handled by Mem0 OSS                   │
+│                                                      │
+│  ✅ 3. Proactive Cache Warming (After save)         │
+│        ├─ Query L4 (user_favorite_summary)          │
+│        ├─ Save to L3 (PostgreSQL)                   │
+│        └─ Warm L2 (Redis)                           │
+└──────────────────────────────────────────────────────┘
+
 ```
 
+## Flow sau khi end conversation
 
-***
+- BE báo end → Context Handling chạy extract, rồi gửi `extracted_facts` sang Memory Module.[](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+    
+- Memory Module làm 3 bước nối tiếp (background, async):
+    
+    1. **Save LTM (L4)**: dùng Mem0 OSS để lưu facts vào Milvus + Neo4j.
+        
+    2. **Query L4 cho `user_favorite_summary`**: gọi một query canonical để gom đủ “favorite (movie, character, pet, activity, friend, music, travel, toy)”.
+        
+    3. **Đẩy xuống các tầng cache**:
+        
+        - L3: ghi summary vào Postgres (`user_favorite_summary`).
+            
+        - L2: cache ngay 1–2 response canonical trong Redis cho các câu favorite phổ biến.[](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
 
-## 🎯 **VÀI ĐIỂM QUAN TRỌNG**
-
-| Aspect | STM | LTM |
-| :-- | :-- | :-- |
-| **Scope** | Per session | Per user (cross-session) |
-| **Lifetime** | 1 hour | Days/months (configurable) |
-| **Invalidation** | Session end | Granular (affected queries) |
-| **Mem0 Role** | None | Primary source (L3+L4) |
-| **Cache Benefit** | Avoid re-reading conversation | Avoid re-searching vector DB |
-| **TTL Strategy** | Fixed (1h) | Smart (based on confidence) |
+Trong lúc pipeline này chưa xong  
+Nếu user hỏi lại ngay sau khi end:  
+Front/Context Handling dùng short‑term memory + L1/L2 như bình thường để trả lời, không đợi job nền.  
+​  
+Khi job nền hoàn tất:  
+L4 sẽ có  
+L3 đã có profile dài hạn.  
+L2 đã được warm sẵn cho các favorite query → lần sau user hỏi sẽ hit cache nhanh.​
 
 
-***
+Ý này hợp lý, và có thể rút lại thành rule đơn giản cho pipeline trong‑ngày:
 
-**File đã sẵn sàng cho implementation! Bạn muốn detail thêm phần nào không? 🚀**
+## 1. Online path trong ngày
+
+- Với các câu hỏi “bình thường” trong 1 ngày đó:
+    
+    - Ưu tiên dùng **Short‑Term Memory** (STM) làm nguồn chính vì:
+        
+        - Đã chứa full lịch sử các cuộc hội thoại gần đây.
+            
+        - Được lưu Redis 1 ngày nên coi như “short‑term nhưng đủ dài”.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+            
+- Khi cần LTM trong pipeline:
+    - Check L0 **L0 – In‑memory (per request / per process)**
+		- Python dict / nhỏ gọn, latency <1ms.
+		    
+		- Dùng để tránh lặp lại cùng một phép tính trong cùng request hoặc rất ngắn hạn. 
+    - **Check L1 (embedding cache)** để tránh gọi embedding.
+        
+    - **Check L2 (result cache)** cho các query LTM đã warm.
+        
+    - Nếu cả L1/L2 đều ổn thì **thường không cần chạm L3/L4** trong đa số case trong ngày.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+        
+
+## 2. L3/L4 như fallback & offline source
+
+- **L3 (Postgres summary)**: chỉ dùng khi:
+    
+    - L2 gặp lỗi / miss mà cần profile ổn định, hoặc trong các job offline build/cập nhật profile.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+        
+- **L4 (Mem0 – Milvus + Neo4j)**: giữ vai trò:
+    
+    - Source of truth để:
+        
+        - Build / rebuild L3.
+            
+        - Serve các query LTM “kỳ lạ”, ít gặp, hoặc khi STM + L2/L3 không đủ thông tin.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+            
+
+## 3. Tối ưu thực tế
+
+- Vì STM đã giữ được 1 ngày, nên với user hoạt động nhiều trong ngày:
+    
+    - 90%+ câu trả lời sẽ đến từ **STM + L1/L2**.
+        
+    - L3/L4 gần như chỉ chạy:
+        
+        - Khi kết thúc hội thoại (pipeline nền).
+            
+        - Hoặc cho các truy vấn “rất lâu rồi không đụng tới”.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+            
+
+Tóm lại: pipeline online dùng **STM + L1/L2** làm “first line”, còn **L3/L4 là long‑term backup + offline computation layer**, đúng với cách bạn đang nghĩ.[perplexity](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+
+1. [https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)
+
 
