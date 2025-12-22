@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 0 - 2 cách tiếp cận.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 6 - Lỗi vòng lặp vô hạn trong RabbitMQ.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Step 0 - 2 cách tiếp cận"
+              "title": "RabbitMQ 6 - Lỗi vòng lặp vô hạn trong RabbitMQ"
             }
           },
           {
@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: software",
+                "query": "file: worker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 0 - 2 cách tiếp cận.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 6 - Lỗi vòng lặp vô hạn trong RabbitMQ.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Step 0 - 2 cách tiếp cận"
+              "title": "Outline of RabbitMQ 6 - Lỗi vòng lặp vô hạn trong RabbitMQ"
             }
           }
         ],
@@ -215,33 +215,34 @@
   },
   "active": "b2538287720317e2",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Untitled 1.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 6 - Lỗi vòng lặp vô hạn trong RabbitMQ.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 4 - Xử lý vấn đề chồng lấn dữ liệu khi chạy nhiều THREAD (WORKER_CONCURRENCY_PER_WORKER) của 1 WORKER.   (WORKER_REPLICAS là số lượng  worker).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Locust/Số CCU 50 - thì để 50 worker nó mới chuẩn bài - số worker tối đa có được là 2xN (với N là số core CPU).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 2 - Tối Ưu Hóa Concurrency và Số Lượng Worker (RabbitMQ).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 1 - worker.py - Phương Án Kỹ Thuật Chi Tiết Triển Khai RabbitMQ.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 3 - Mem0 is remote services/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 3 - Cursor lên Plan and Coding.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 3 - Mem0 is remote services",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 3 - SDD Optimization.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Một số repo github có thể tham khảo.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Step 2 - Input dùng mem0 Perflexity.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 0 - 2 cách tiếp cận.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Step 2 - Output 3 - Caching Updated - Genspark siêu thông minh.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 2 - SDD - HLD - LLD có cả Optimize Response Time.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MECE toàn bộ vấn đề MEMORY.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 3 - Cursor lên Plan and Coding.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 2 - INPUT - Tạo SDD chi tiết cho bài.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 2 - HLD.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Step 2 - Input dùng mem0 Perflexity.md",
     "SHARING/Demo 1 - Lên sóng Wecommit100x  17122025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM_DESIGN/Playwright - trong bài toán Web Browser Agent.md",
     "PEOPLE/THE_ROAD/07122025_So Sánh AI vs Finance - Lựa Chọn Lõi Chiến Lược.md",
     "SHARING",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Demo 1 - Lên sóng Wecommit100x  22122025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1 - Road Map AI Agents - Manus  13122025.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Output - SDD Build Multi Agent Mini Cursor Demo.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.2 Tài liệu đọc thêm - 15122025 - 2 bài toán khó.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1 - Output - SDD - Travel Demo.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/DEMO 1 - BE bắn thông tin đến AI - AI trả về 202 luôn và đẩy TASK vào Queue.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP/CKP 1.1 - Processing Cursor Demo.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Untitled.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0 Step 2 - Processing 1 - Bản System Architect - High level design - Technical Deep Dive (Manus phân tích đối thủ - Perflexity brainstorm - Genspark tổng hợp final High Architect) 1.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Manus - PIKA Memory System - Mem0 Open Source Integration Guide.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/SYSTEM DESIGN",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/UseCases",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP",
@@ -250,7 +251,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Untitled 3",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/HYPERFORMANCE PYTHON",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251219141837.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251218180832.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251218180801.png",

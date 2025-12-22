@@ -699,3 +699,8 @@ System Metrics:
 ---
 
 *Tài liệu này được cập nhật lần cuối vào ngày 2025-12-22. Để báo cáo các thay đổi hoặc đề xuất cải tiến, vui lòng liên hệ với Manus AI.*
+
+
+
+---
+
