@@ -205,14 +205,14 @@ channel.basic_qos(prefetch_count=1)
 
 ### RabbitMQ vs Kafka
 
-| Feature | RabbitMQ | Kafka |
-| :-- | :-- | :-- |
-| Throughput | 4K-10K msg/s | 1M+ msg/s |
-| Model | Smart broker, dumb consumer | Dumb broker, smart consumer |
-| Retention | Xóa sau consume | Giữ theo retention policy |
-| Latency | Very low (ms) | Low (cao hơn RabbitMQ một chút) |
-| Scaling | Vertical primarily | Horizontal (partitions) |
-| Best for | Task queues, microservices | Event streaming, log aggregation |
+| Feature    | RabbitMQ                    | Kafka                            |
+| :--------- | :-------------------------- | :------------------------------- |
+| Throughput | 4K-10K msg/s                | 1M+ msg/s                        |
+| Model      | Smart broker, dumb consumer | Dumb broker, smart consumer      |
+| Retention  | Xóa sau consume             | Giữ theo retention policy        |
+| Latency    | Very low (ms)               | Low (cao hơn RabbitMQ một chút)  |
+| Scaling    | Vertical primarily          | Horizontal (partitions)          |
+| Best for   | Task queues, microservices  | Event streaming, log aggregation |
 
 RabbitMQ phù hợp hơn cho **task queues** và **request-response messaging**, trong khi Kafka optimize cho **event streaming** và **high-throughput data pipelines**.[^33][^34][^18]
 
