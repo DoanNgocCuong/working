@@ -9,7 +9,14 @@
 
 ## 📋 EXECUTIVE SUMMARY
 
-PIKA Memory System là một hệ thống memory tự chủ (self-hosted) được xây dựng dựa trên **Mem0 Open Source**, nhằm thay thế giải pháp Mem0 Enterprise với chi phí cao. Hệ thống cung cấp khả năng ghi nhớ và truy xuất thông tin theo ngữ cảnh từ các cuộc hội thoại, giúp PIKA AI Companion tạo ra những trải nghiệm cá nhân hóa sâu sắc cho trẻ em.
+PIKA Memory System là một hệ thống memory tự chủ (self-hosted) được xây dựng dựa trên **Mem0 Open Source (OSS)**, nhằm thay thế giải pháp Mem0 Enterprise với chi phí cao. Hệ thống cung cấp khả năng ghi nhớ và truy xuất thông tin theo ngữ cảnh từ các cuộc hội thoại, giúp PIKA AI Companion tạo ra những trải nghiệm cá nhân hóa sâu sắc cho trẻ em.
+
+**⚠️ Lưu ý quan trọng:** Hệ thống sử dụng **Mem0 OSS** (thư viện Python `mem0ai` - mã nguồn mở), **KHÔNG phải** Mem0 Enterprise SDK. Mem0 OSS cho phép:
+
+- ✅ **Self-hosted hoàn toàn** - không cần API key
+- ✅ **Full control** - tự quản lý vector stores (Milvus/Qdrant) và LLM providers
+- ✅ **Chi phí thấp** - chỉ trả phí cho infrastructure và LLM APIs
+- ✅ **Tùy biến cao** - có thể modify source code theo nhu cầu
 
 **Key Highlights:**
 
@@ -91,7 +98,7 @@ graph TD
 
     subgraph "PIKA Memory System (Self-Hosted)"
         B -- HTTPS/gRPC --> C[API Gateway: FastAPI]
-        C -- Async Calls --> D[Mem0 Python SDK]
+        C -- Async Calls --> D[Mem0 OSS Client<br/>mem0ai Python Library]
         D -- CRUD Ops --> E[Data Stores]
         C -- Async Jobs --> F[Message Queue: RabbitMQ]
         F --> G[Workers]
@@ -159,13 +166,21 @@ graph TD
 
 ### 2.4 Technology Stack
 
-| Component                 | Chosen Technology          | Alternatives Considered | Justification                                                                                                                                    |
-| ------------------------- | -------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **API Framework**   | **FastAPI**          | Flask, Django           | FastAPI's native `asyncio` support is perfect for I/O-bound tasks. Its Pydantic integration provides excellent data validation out-of-the-box. |
-| **Vector Database** | **Milvus/Qdrant**    | Weaviate                | Milvus/Qdrant offer superior performance and memory safety. Simpler to deploy and manage for a self-hosted scenario.                             |
-| **Graph Database**  | **Neo4j**            | Memgraph, NebulaGraph   | Neo4j is the most mature and widely-adopted graph database with a rich ecosystem and powerful Cypher query language.                             |
-| **Message Queue**   | **RabbitMQ**         | Kafka, Redis Streams    | RabbitMQ is robust, mature, and feature-rich. Simpler to set up and manage than Kafka for this use case.                                         |
-| **Orchestration**   | **Kubernetes (EKS)** | Docker Swarm, Nomad     | Kubernetes is the industry standard for container orchestration, offering unparalleled scalability and resilience.                               |
+| Component                  | Chosen Technology           | Alternatives Considered                    | Justification                                                                                                                                                                        |
+| -------------------------- | --------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Memory Framework** | **Mem0 OSS (mem0ai)** | Mem0 Enterprise API, Custom implementation | Mem0 OSS là thư viện Python mã nguồn mở (`mem0ai`), cho phép self-hosted với full control. Không cần API key, tích hợp với vector stores và LLM providers tự chọn. |
+| **API Framework**    | **FastAPI**           | Flask, Django                              | FastAPI's native `asyncio` support is perfect for I/O-bound tasks. Its Pydantic integration provides excellent data validation out-of-the-box.                                     |
+| **Vector Database**  | **Milvus/Qdrant**     | Weaviate                                   | Milvus/Qdrant offer superior performance and memory safety. Simpler to deploy and manage for a self-hosted scenario.                                                                 |
+| **Graph Database**   | **Neo4j**             | Memgraph, NebulaGraph                      | Neo4j is the most mature and widely-adopted graph database with a rich ecosystem and powerful Cypher query language.                                                                 |
+| **Message Queue**    | **RabbitMQ**          | Kafka, Redis Streams                       | RabbitMQ is robust, mature, and feature-rich. Simpler to set up and manage than Kafka for this use case.                                                                             |
+| **Orchestration**    | **Kubernetes (EKS)**  | Docker Swarm, Nomad                        | Kubernetes is the industry standard for container orchestration, offering unparalleled scalability and resilience.                                                                   |
+
+**Lưu ý quan trọng về Mem0 OSS:**
+
+- **Package:** `mem0ai` (PyPI) - Open Source version
+- **Không cần API key:** Self-hosted hoàn toàn
+- **Tích hợp:** Sử dụng `Memory.from_config()` với config cho vector stores (Milvus/Qdrant) và LLM providers (OpenAI)
+- **Khác với Enterprise:** Mem0 Enterprise SDK (`MemoryClient`) yêu cầu API key và kết nối đến Mem0 cloud service
 
 ### 2.5 Data Flow Architecture
 
@@ -176,7 +191,7 @@ sequenceDiagram
     participant C as Client
     participant API as API Gateway
     participant Cache as Cache Service
-    participant Mem0 as Mem0 SDK
+    participant Mem0 as Mem0 OSS Client
     participant VDB as Vector DB
     participant GDB as Graph DB
 
@@ -205,7 +220,7 @@ sequenceDiagram
     participant API as API Gateway
     participant MQ as RabbitMQ
     participant W as Worker
-    participant Mem0 as Mem0 SDK
+    participant Mem0 as Mem0 OSS Client
     participant DB as Data Stores
 
     C->>API: POST /extract_facts
@@ -438,13 +453,15 @@ CREATE INDEX idx_user_favorite_summary_user_id ON user_favorite_summary(user_id)
 
 | Aspect                    | Details                                              |
 | ------------------------- | ---------------------------------------------------- |
-| **Technology**      | Milvus/Qdrant + Mem0 SDK                             |
+| **Technology**      | Milvus/Qdrant + Mem0 OSS (mem0ai library)            |
 | **Scope**           | Primary data source, fallback when all caches miss   |
 | **Latency**         | **100-300ms** (vector search + LLM re-ranking) |
 | **TTL**             | N/A (primary source)                                 |
 | **Use Case**        | Full semantic search when cache misses               |
 | **Hit Rate Target** | N/A (this is the fallback)                           |
 | **Implementation**  | `app/infrastructure/mem0/mem0_client.py`           |
+
+**Note:** Mem0 OSS là thư viện Python **`mem0ai`** (Open Source), không phải Mem0 Enterprise SDK. Hệ thống sử dụng `Memory.from_config()` để khởi tạo client với self-hosted vector stores (Milvus/Qdrant) và LLM providers (OpenAI).
 
 **Key Features:**
 
@@ -486,7 +503,7 @@ Proactive caching là một chiến lược **"chủ động"** để tính toá
 **Service:** `app/infrastructure/cache/proactive_cache.py`
 
 - Business logic for cache computation
-- Integration with Mem0 SDK
+- Integration with Mem0 OSS client (`mem0ai` library)
 - Cache invalidation logic
 
 ### 3.4 Cache Invalidation Strategy
@@ -732,7 +749,7 @@ Secondary Region (eu-central-1, Frankfurt) - For GDPR compliance
 - ✅ Implement `/search_facts` API
 - ✅ Implement `/extract_facts` API
 - ✅ Implement job status polling
-- ✅ Implement Mem0 SDK integration
+- ✅ Implement Mem0 OSS integration (mem0ai library)
 
 ### Phase 3: Caching (Weeks 5-6) 🟡
 
