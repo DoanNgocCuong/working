@@ -1071,23 +1071,10 @@ L4: VECTOR SEARCH (Mem0 + Milvus)
 
 ---
 
-# Sau khi kết thúc 1 cuộc hội thoại -> được bắn đi xử lý extract các kiểu -> save memory  
+# Luồng đi khi kết thúc: Sau khi kết thúc 1 cuộc hội thoại -> được bắn đi xử lý extract các kiểu -> save memory  
 +, L4 thực hiện ngay query user_favorite_summary => đẩy xuống L3  
 +, L3 thực hiện ngay để lưu vào DB Postgres  
 => L2 thực hiện ngay để cache vào trong Redis  
-  
-----  
-trong lúc quá trình này chưa thực hiện xong thì nếu user hỏi sẽ dùng short term memory
-
-
-| Aspect          | **Milvus**                      | **Neo4j**                  |
-| --------------- | ------------------------------- | -------------------------- |
-| **Type**        | Vector Database                 | Graph Database             |
-| **Primary Use** | Semantic similarity search      | Relationship traversal     |
-| **Data Stored** | Embeddings (vectors 1536-dim)   | Entities + Relationships   |
-| **Query Type**  | "Find similar memories"         | "Who owns what?"           |
-| **Latency**     | 50-150ms                        | 50-100ms                   |
-| **Best For**    | Fuzzy matching, semantic search | Structured knowledge graph |
 
 
 Khi end cuộc hội thoại, bên BE chủ động bắn end cho bên phía AI thực hiện extract (ở Module Context Handling rồi).  
@@ -1281,7 +1268,7 @@ Không nhất thiết phải “full toàn bộ từ A→Z” theo nghĩa log t�
 
 ---
 
-# Chốt 
+# Chốt : # 🏗️ **HIGH-LEVEL ARCHITECTURE: SHORT-TERM + LONG-TERM MEMORY**
 
 
 ```bash
@@ -1323,53 +1310,336 @@ Response to User (Total latency: ~20ms)
 ```
 
 
-Đúng, thiết kế đẹp nhất là **query chạy song song STM và LTM**, rồi merge kết quả.[](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
-
-## Tại sao nên chạy song song
-
-- Thời gian thực thi là **max(latency STM, latency LTM)** chứ không phải cộng dồn, nên tổng vẫn ~20ms nếu cả hai đều cache tốt.[](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
-    
-- STM trả lời được mạch hội thoại “vừa nói gì / tiếp tục câu chuyện”, LTM trả lời được profile, sở thích lâu dài; merge lại thì câu trả lời vừa **đúng hiện tại** vừa **không quên lịch sử**
-
-## Rule routing đơn giản
-
-- Mỗi query:
-    
-    - Bắn **2 task async**:
-        
-        - `STM.search(session_id, query)`
-            
-        - `LTM.search(user_id, query)`
-            
-    - `await asyncio.gather(...)` để nhận hai bộ kết quả.[](https://www.perplexity.ai/search/cai-tai-lieu-nao-ma-co-full-co-DnFYpZp7Tzaf_teH.xHLkw)​
+***
 
 
-## 📊 **PROBLEM: STM CONTEXT EXPLOSION**
+
+## 📐 **SYSTEM CONTEXT - C4 LEVEL 1**
 
 ```
-Vấn đề:
-┌──────────────────────────────────────────────────────────┐
-│  Session dài → STM phình to → Chậm + Tốn tiền           │
-│                                                          │
-│  Turn 1:  "Hello" → 10 tokens                           │
-│  Turn 2:  "What's my name?" → 20 tokens                 │
-│  ...                                                      │
-│  Turn 50: "Tell me about..." → 2000 tokens              │
-│  Turn 51: "And also..." → 2500 tokens                   │
-│                                                          │
-│  Total: 50,000 tokens                                   │
-│  Cost: $0.50 per API call (for context)                │
-│  Latency: 5+ seconds                                     │
-└──────────────────────────────────────────────────────────┘
-
-Giải pháp:
-- Sliding Window (giữ N turns gần nhất)
-- Hierarchical Summarization (tóm tắt context cũ)
-- Smart Compression (giữ important facts, drop chitchat)
+┌─────────────────────────────────────────────────────────────────┐
+│                        PIKA ECOSYSTEM                           │
+│                                                                 │
+│  ┌───────────────┐                                             │
+│  │   PIKA AI     │                                             │
+│  │  Companion    │                                             │
+│  │   (Client)    │                                             │
+│  └───────┬───────┘                                             │
+│          │                                                      │
+│          │ HTTPS/gRPC                                          │
+│          ↓                                                      │
+│  ┌──────────────────────────────────────────────────────────┐ │
+│  │              CONTEXT HANDLING MODULE                     │ │
+│  │        (Conversation & Extraction)                       │ │
+│  └────────────────┬──────────────────┬──────────────────────┘ │
+│                   │                  │                         │
+│     Conversation  │                  │ Extraction results      │
+│       context     │                  │                         │
+│                   ↓                  ↓                         │
+│  ┌─────────────────────────────────────────────────────────┐  │
+│  │              MEMORY MODULE                              │  │
+│  │         (STM + LTM Unified Service)                     │  │
+│  │                                                         │  │
+│  │  ┌──────────────────────────────────────────────────┐  │  │
+│  │  │  SHORT-TERM MEMORY (STM)                         │  │  │
+│  │  │  • In-memory + Redis                             │  │  │
+│  │  │  • TTL: 24 hours                                 │  │  │
+│  │  │  • Scope: Conversation session                   │  │  │
+│  │  └──────────────────────────────────────────────────┘  │  │
+│  │                                                         │  │
+│  │  ┌──────────────────────────────────────────────────┐  │  │
+│  │  │  LONG-TERM MEMORY (LTM)                          │  │  │
+│  │  │  • 5-layer caching (L0→L1→L2→L3→L4)            │  │  │
+│  │  │  • TTL: Variable (10min - ∞)                    │  │  │
+│  │  │  • Scope: User lifetime                          │  │  │
+│  │  └──────────────────────────────────────────────────┘  │  │
+│  │                                                         │  │
+│  │  ⚡ Parallel Search: STM + LTM                         │  │
+│  │  🔀 Intelligent Merge & Ranking                        │  │
+│  └─────────────────────────────────────────────────────────┘  │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 
 ***
+
+## 🔧 **CONTAINER DIAGRAM - C4 LEVEL 2**
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                      MEMORY MODULE                               │
+│                                                                  │
+│  ┌────────────────────────────────────────────────────────────┐ │
+│  │                API GATEWAY (FastAPI)                       │ │
+│  │  • POST /api/v1/memory/search                             │ │
+│  │  • GET /api/v1/stm/{session_id}                           │ │
+│  │  • POST /api/v1/ltm/extract                               │ │
+│  └───────────────────┬────────────────────────────────────────┘ │
+│                      │                                           │
+│          ┌───────────┴───────────┐                              │
+│          ↓                       ↓                              │
+│  ┌──────────────────┐    ┌──────────────────┐                  │
+│  │   STM SERVICE    │    │   LTM SERVICE    │                  │
+│  │   (Parallel)     │    │   (Parallel)     │                  │
+│  └────────┬─────────┘    └────────┬─────────┘                  │
+│           │                       │                             │
+│           ↓                       ↓                             │
+│  ┌──────────────────────────────────────────────────────────┐  │
+│  │           MEMORY ORCHESTRATOR                            │  │
+│  │  • asyncio.gather(STM, LTM)                             │  │
+│  │  • Merge & Rank results                                  │  │
+│  │  • Deduplicate facts                                     │  │
+│  └──────────────────────────────────────────────────────────┘  │
+│                                                                  │
+└──────────────────────────────────────────────────────────────────┘
+          │                                    │
+          ↓                                    ↓
+┌─────────────────────────┐    ┌──────────────────────────────────┐
+│   SHORT-TERM STORAGE    │    │   LONG-TERM STORAGE              │
+│                         │    │                                  │
+│  ┌──────────────────┐  │    │  ┌────────────────────────────┐ │
+│  │ Redis (Session)  │  │    │  │ Redis (L1, L2)             │ │
+│  │ TTL: 24h         │  │    │  │ - Embedding cache          │ │
+│  └──────────────────┘  │    │  │ - Result cache             │ │
+│                         │    │  └────────────────────────────┘ │
+│  ┌──────────────────┐  │    │                                  │
+│  │ In-Memory (L0)   │  │    │  ┌────────────────────────────┐ │
+│  │ Per-request      │  │    │  │ PostgreSQL (L3)            │ │
+│  └──────────────────┘  │    │  │ - Materialized views       │ │
+│                         │    │  └────────────────────────────┘ │
+└─────────────────────────┘    │                                  │
+                               │  ┌────────────────────────────┐ │
+                               │  │ Mem0 OSS (L4)              │ │
+                               │  │ - Milvus (vectors)         │ │
+                               │  │ - Neo4j (graph)            │ │
+                               │  └────────────────────────────┘ │
+                               └──────────────────────────────────┘
+```
+
+
+***
+
+## 📊 **COMPONENT DIAGRAM - DETAILED VIEW**
+
+### **SHORT-TERM MEMORY (STM) COMPONENTS**
+
+```
+┌──────────────────────────────────────────────────────────┐
+│          SHORT-TERM MEMORY SERVICE                       │
+│                                                          │
+│  ┌────────────────────────────────────────────────────┐ │
+│  │  STMService                                        │ │
+│  │  ├─ search(session_id, query)                     │ │
+│  │  ├─ store(session_id, messages)                   │ │
+│  │  └─ clear(session_id)                             │ │
+│  └──────────┬─────────────────────────────────────────┘ │
+│             │                                            │
+│   ┌─────────┴──────────┐                               │
+│   ↓                    ↓                               │
+│  ┌──────────────┐  ┌──────────────┐                   │
+│  │ L0: In-Memory│  │ L1: Redis    │                   │
+│  │ @lru_cache   │  │ Session Store│                   │
+│  │ <1ms         │  │ 5ms          │                   │
+│  └──────────────┘  └──────────────┘                   │
+│                                                          │
+│  Data Structure:                                        │
+│  {                                                      │
+│    "session_id": "sess_123",                           │
+│    "messages": [                                        │
+│      {"role": "user", "content": "...", "ts": ...},   │
+│      {"role": "assistant", "content": "...", "ts"}    │
+│    ],                                                   │
+│    "created_at": "2025-12-22T10:00:00Z",              │
+│    "last_accessed": "2025-12-22T11:00:00Z"            │
+│  }                                                      │
+└──────────────────────────────────────────────────────────┘
+```
+
+
+### **LONG-TERM MEMORY (LTM) COMPONENTS**
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│          LONG-TERM MEMORY SERVICE                            │
+│                                                              │
+│  ┌────────────────────────────────────────────────────────┐ │
+│  │  LTMService                                            │ │
+│  │  ├─ search(user_id, query, limit)                     │ │
+│  │  ├─ extract_and_save(user_id, facts)                  │ │
+│  │  ├─ proactive_cache_warming(user_id)                  │ │
+│  │  └─ invalidate_cache(user_id)                         │ │
+│  └──────────┬─────────────────────────────────────────────┘ │
+│             │                                                │
+│   ┌─────────┴───────────────────────┐                      │
+│   ↓         ↓         ↓         ↓   ↓                      │
+│  ┌───┐  ┌───┐  ┌───┐  ┌───┐  ┌────┐                      │
+│  │L0 │  │L1 │  │L2 │  │L3 │  │ L4 │                      │
+│  │In-│  │Emb│  │Res│  │Mat│  │Vec │                      │
+│  │Mem│  │edg│  │ult│  │eri│  │tor │                      │
+│  │   │  │   │  │   │  │aliz│  │+   │                      │
+│  │<1 │  │5ms│  │5-2│  │ed │  │Gra │                      │
+│  │ms │  │   │  │0ms│  │20-│  │ph  │                      │
+│  │   │  │   │  │   │  │50 │  │100 │                      │
+│  │   │  │   │  │   │  │ms │  │-300│                      │
+│  │   │  │   │  │   │  │   │  │ms  │                      │
+│  └───┘  └───┘  └───┘  └───┘  └────┘                      │
+│    ↓      ↓      ↓      ↓      ↓                          │
+│  ┌──────────────────────────────────┐                      │
+│  │    Cache Warming Worker          │                      │
+│  │    • Runs after extraction       │                      │
+│  │    • L4 → L3 → L2 pipeline       │                      │
+│  │    • Tag-based invalidation      │                      │
+│  └──────────────────────────────────┘                      │
+└──────────────────────────────────────────────────────────────┘
+```
+
+
+***
+
+## ⚡ **PARALLEL EXECUTION FLOW**
+
+```
+User Query: "What do I like?"
+    ↓
+┌────────────────────────────────────────────────────────┐
+│         Memory Orchestrator (async/await)              │
+└────────────────────────────────────────────────────────┘
+    ↓
+asyncio.gather([stm_search, ltm_search])
+    ↓
+┌───────────────────────┬────────────────────────────────┐
+│                       │                                │
+│  STM Search           │  LTM Search                    │
+│  (5ms)                │  (5-300ms based on cache)      │
+│                       │                                │
+│  ┌─────────────────┐  │  ┌──────────────────────────┐ │
+│  │ Check L0        │  │  │ Check L0 (in-mem)        │ │
+│  │   ↓ MISS        │  │  │   ↓ MISS                 │ │
+│  │ Check L1 (Redis)│  │  │ Check L1 (embedding)     │ │
+│  │   ↓ HIT ✅      │  │  │   ↓ HIT ✅               │ │
+│  │ Return results  │  │  │ Check L2 (results)       │ │
+│  └─────────────────┘  │  │   ↓ HIT ✅               │ │
+│                       │  │ Return cached results    │ │
+│  Results:             │  └──────────────────────────┘ │
+│  [                    │                                │
+│    {fact: "recent"   │  Results:                      │
+│     score: 0.8}      │  [                             │
+│  ]                    │    {fact: "old preference",   │
+│                       │     score: 0.9}                │
+│                       │  ]                             │
+└───────────────────────┴────────────────────────────────┘
+    ↓                       ↓
+    └───────────┬───────────┘
+                ↓
+┌──────────────────────────────────────────────────────────┐
+│         MERGE & RANK (Dedup + Scoring)                   │
+│                                                          │
+│  1. Deduplicate by fact text (lowercase)                │
+│  2. Boost if fact appears in both STM + LTM (+0.15)     │
+│  3. Add recency bonus for STM facts (+0.1)              │
+│  4. Sort by final_score (descending)                    │
+└──────────────────────────────────────────────────────────┘
+    ↓
+Final Results:
+[
+  {fact: "old preference", score: 1.05, source: "stm+ltm"},
+  {fact: "recent", score: 0.9, source: "stm"}
+]
+```
+
+
+***
+
+## 🗂️ **DATA FLOW ARCHITECTURE**
+
+### **Write Path (Extract \& Save)**
+
+```
+Conversation End
+    ↓
+Context Handling Module → extraction_results
+    ↓
+┌──────────────────────────────────────────────────────────┐
+│  Memory Module - Write Pipeline                         │
+│                                                          │
+│  STEP 1: Save to LTM-L4 (Primary Storage)               │
+│  ├─ Mem0.add(facts)                                     │
+│  │   ├─ Milvus: Store embeddings                        │
+│  │   └─ Neo4j: Store entities + relationships           │
+│  │                                                        │
+│  STEP 2: Proactive Cache Warming (Async)                │
+│  ├─ Query L4 for user_favorite_summary                  │
+│  ├─ Save to L3 (PostgreSQL)                             │
+│  └─ Warm L2 (Redis)                                     │
+│                                                          │
+│  STEP 3: Cache Invalidation                             │
+│  └─ Increment user_version_tag (Redis)                  │
+└──────────────────────────────────────────────────────────┘
+```
+
+
+### **Read Path (Search)**
+
+```
+User Query
+    ↓
+┌──────────────────────────────────────────────────────────┐
+│  Memory Module - Read Pipeline (Parallel)                │
+│                                                          │
+│  ┌────────────────────┐      ┌─────────────────────────┐│
+│  │  STM Read Path     │  +   │  LTM Read Path          ││
+│  │                    │      │                         ││
+│  │  L0 → L1           │      │  L0 → L1 → L2 → L3 → L4 ││
+│  │  (<1ms → 5ms)      │      │  (<1 → 5 → 20 → 50     ││
+│  │                    │      │   → 300ms)              ││
+│  └────────────────────┘      └─────────────────────────┘│
+│             │                           │                │
+│             └───────────┬───────────────┘                │
+│                         ↓                                │
+│                  Merge & Rank                            │
+│                         ↓                                │
+│                   Return Results                         │
+└──────────────────────────────────────────────────────────┘
+```
+
+
+***
+
+## 🏆 **KEY DESIGN DECISIONS**
+
+| Decision | Rationale | Trade-off |
+| :-- | :-- | :-- |
+| **Parallel STM + LTM** | Maximize speed - both run concurrently[^1] | More complex merge logic |
+| **2 separate services** | Clear separation of concerns (STM vs LTM) | 2 independent failure points |
+| **STM TTL = 24h** | Balance between freshness \& coverage | Daily users re-fetch STM |
+| **LTM L2 TTL = 1h** | User preferences can change during day | More frequent cache misses |
+| **Proactive warming** | Pre-compute favorites before user asks | Background worker overhead |
+| **Tag-based invalidation** | Simple \& scalable (no manual key deletion)[^2] | Requires version management |
+
+
+***
+
+**Latency targets:**[^2][^3]
+
+- **STM hit:** <5ms
+- **LTM cached:** <50ms
+- **LTM uncached:** 100-300ms
+- **Overall P95:** <50ms (with 60-70% cache hit)
+<span style="display:none">[^4][^5]</span>
+
+<div align="center">⁂</div>
+
+[^1]: https://shanechang.com/p/python-asyncio-gather-explained/
+
+[^2]: report.md
+
+[^3]: report.md
+
+[^4]: Step-2-Output-1-SDD.md
+
+[^5]: Step-2-Output-2-SDD-HLD-LLD-co-ca-Optimize-Response-Time.md
+
 
 ## 🏗️ **ARCHITECTURE: 3-TIER STM COMPRESSION**
 
@@ -1407,3 +1677,200 @@ Giải pháp:
 │  → 95% compression! 🎉                                          │
 └──────────────────────────────────────────────────────────────────┘
 ```
+
+
+
+
+---
+
+
+
+
+
+
+
+> **Tài liệu này được tạo bởi Claude 3.5 Sonnet, theo yêu cầu của bạn.**
+
+# HIGH-LEVEL DESIGN (HLD) CHÍNH THỨC: KIẾN TRÚC BỘ NHỚ DÀI HẠN & NGẮN HẠN CỦA PIKA
+
+**Phiên bản:** 1.0 (Final) | **Tác giả:** Manus AI (Technical Writer) | **Ngày:** 2025-12-22
+
+---
+
+## 1. TÓM TẮT ĐIỀU HÀNH (EXECUTIVE SUMMARY)
+
+Tài liệu này mô tả kiến trúc cấp cao (High-Level Design) cho **PIKA Memory System**, một dịch vụ thống nhất (Unified Service) được thiết kế để cung cấp khả năng truy xuất ngữ cảnh và ký ức với độ trễ cực thấp (P95 < 200ms) và độ chính xác cao. Kiến trúc này dựa trên nguyên tắc **Hybrid Memory** (kết hợp Short-Term Memory và Long-Term Memory) và sử dụng **Thực thi Song song (Parallel Execution)** cùng với **Chiến lược Caching 5 Lớp** để đạt được hiệu năng world-class.
+
+Cốt lõi của hệ thống là **Memory Orchestrator**, chịu trách nhiệm điều phối các truy vấn đồng thời đến cả hai nguồn bộ nhớ và tổng hợp kết quả một cách thông minh.
+
+---
+
+## 2. KIẾN TRÚC TỔNG THỂ (SYSTEM CONTEXT - C4 LEVEL 1)
+
+PIKA Memory System hoạt động như một thành phần cốt lõi trong hệ sinh thái PIKA, nhận yêu cầu từ **Context Handling Module** và cung cấp các ký ức cần thiết để PIKA AI Companion đưa ra phản hồi.
+
+```mermaid
+graph TD
+    subgraph "PIKA ECOSYSTEM"
+        direction LR
+        A[PIKA AI Companion<br/>(Client)] --> B(CONTEXT HANDLING MODULE<br/>(Conversation & Extraction))
+        B --> C(MEMORY MODULE<br/>(STM + LTM Unified Service))
+        C --> B
+        
+        style A fill:#F1C40F,stroke:#000,stroke-width:2px
+        style B fill:#3498DB,stroke:#000,stroke-width:2px
+        style C fill:#2ECC71,stroke:#000,stroke-width:2px
+    end
+```
+
+**Mô tả:**
+
+*   **PIKA AI Companion:** Ứng dụng khách (client) gửi yêu cầu tìm kiếm ký ức hoặc thông báo về các sự kiện mới.
+*   **Context Handling Module:** Lớp trung gian quản lý luồng cuộc trò chuyện. Nó gửi các câu hỏi tìm kiếm ký ức đến **MEMORY MODULE** và kích hoạt việc trích xuất sự thật khi cuộc trò chuyện kết thúc.
+*   **MEMORY MODULE:** Dịch vụ thống nhất, nơi thực hiện tất cả các logic truy xuất và lưu trữ bộ nhớ.
+
+---
+
+## 3. CẤU TRÚC BÊN TRONG (CONTAINER DIAGRAM - C4 LEVEL 2)
+
+**MEMORY MODULE** được chia thành các container logic sau:
+
+| Container               | Công nghệ        | Vai trò Chính                                                   |
+| ----------------------- | ---------------- | --------------------------------------------------------------- |
+| **API Gateway**         | FastAPI          | Tiếp nhận và định tuyến các yêu cầu `search` và `extract`.      |
+| **Memory Orchestrator** | Python `asyncio` | Điều phối các truy vấn song song, hợp nhất và xếp hạng kết quả. |
+| **STM Service**         | Python           | Quản lý bộ nhớ ngắn hạn (ngữ cảnh cuộc trò chuyện hiện tại).    |
+| **LTM Service**         | Python           | Quản lý bộ nhớ dài hạn và chiến lược caching đa tầng.           |
+| **Redis**               | Redis            | Lưu trữ STM (Session) và các lớp cache nóng (L1, L2).           |
+| **PostgreSQL**          | PostgreSQL       | Lưu trữ Metadata, Job Status, và L3 Materialized View.          |
+| **Mem0 OSS**            | Milvus, Neo4j    | Lớp lưu trữ ký ức cốt lõi (Vector Search và Graph Search).      |
+|                         |                  |                                                                 |
+
+```mermaid
+graph TD
+    subgraph "MEMORY MODULE (Unified Service)"
+        direction TB
+        
+        API[API GATEWAY<br/>(FastAPI)]
+        
+        subgraph "Core Logic"
+            ORCH[MEMORY ORCHESTRATOR<br/>(asyncio.gather, Merge & Rank)]
+            STM[STM SERVICE<br/>(Short-Term)]
+            LTM[LTM SERVICE<br/>(Long-Term)]
+        end
+        
+        API --> ORCH
+        ORCH --> STM
+        ORCH --> LTM
+        
+        subgraph "Storage"
+            direction LR
+            REDIS[Redis<br/>(STM, L1, L2 Cache)]
+            POSTGRES[PostgreSQL<br/>(L3 Cache, Metadata)]
+            MEM0[Mem0 OSS<br/>(Milvus/Neo4j)]
+        end
+        
+        STM --> REDIS
+        LTM --> REDIS
+        LTM --> POSTGRES
+        LTM --> MEM0
+    end
+```
+
+---
+
+## 4. LUỒNG DỮ LIỆU CHÍNH: `search_facts` (TỐI ƯU HIỆU NĂNG)
+
+Luồng này là chìa khóa để đạt được mục tiêu P95 < 200ms.
+
+### 4.1. Thực thi Song song (Parallel Execution)
+
+Khi một yêu cầu tìm kiếm ký ức đến, **Memory Orchestrator** sẽ thực hiện hai truy vấn một cách **đồng thời** (parallel) bằng `asyncio.gather`:
+
+1.  **Query STM:** Tìm kiếm ngữ cảnh cuộc trò chuyện hiện tại (trong Redis).
+2.  **Query LTM:** Tìm kiếm các sự thật dài hạn (qua chiến lược caching 5 lớp).
+
+Việc này đảm bảo rằng độ trễ tổng thể chỉ bị giới hạn bởi dịch vụ chậm nhất, chứ không phải tổng thời gian của cả hai.
+
+### 4.2. Luồng Xử lý và Hợp nhất (Merge & Rank)
+
+Sau khi nhận được kết quả từ cả STM và LTM, Orchestrator thực hiện các bước sau:
+
+1.  **Deduplicate (Khử trùng lặp):** Loại bỏ các sự thật trùng lặp (ví dụ: một sự thật vừa nằm trong ngữ cảnh hiện tại, vừa được lưu trong LTM).
+2.  **Intelligent Ranking (Xếp hạng Thông minh):** Xếp hạng các sự thật dựa trên 3 tiêu chí chính:
+    *   **Relevance Score:** Độ tương đồng ngữ nghĩa (từ Milvus).
+    *   **Recency:** Độ mới của thông tin (STM luôn được ưu tiên).
+    *   **Confidence:** Điểm tin cậy (từ quá trình trích xuất).
+3.  **Synthesis:** Sử dụng một LLM nhỏ để tổng hợp các sự thật đã được xếp hạng thành một câu trả lời mạch lạc và có ngữ cảnh.
+
+```text
++----------------+
+|  User Query    |
++----------------+
+        |
+        v
++----------------+
+| MEMORY ORCHESTRATOR |
++----------------+
+        |
+        +-------------------------------------------------------------------------------------------------+
+        |                                                                                                 |
+        v                                                                                                 v
++----------------+                                                                              +-------------------+
+|  STM SERVICE   | (Session Context)                                                            |  LTM SERVICE      | (5-Layer Cache)
++----------------+                                                                              +-------------------+
+        |                                                                                                 |
+        +-------------------------------------------------------------------------------------------------+
+        |
+        v
++----------------+
+| MERGE & RANK   | (Deduplicate, Recency, Confidence)
++----------------+
+        |
+        v
++----------------+
+|  Final Response| (Total Latency: ~20ms - 300ms)
++----------------+
+```
+
+---
+
+## 5. CHIẾN LƯỢC CACHING 5 LỚP (L0 - L4)
+
+Chiến lược này được thiết kế để đảm bảo các truy vấn thường xuyên (như `user favorite`) được trả lời gần như ngay lập tức.
+
+| Lớp | Công nghệ | Mục đích | Latency Mục tiêu | TTL |
+|---|---|---|---|---|
+| **L0** | Python `@lru_cache` | **Session Cache** (Ngữ cảnh tức thời) | < 1ms | 10 phút |
+| **L1** | Redis (Key-Value) | **Semantic Cache** (Vector Embeddings) | 5ms | 1 giờ |
+| **L2** | Redis (Key-Value) | **Result Cache** (Kết quả truy vấn nóng) | 5-20ms | 24 giờ |
+| **L3** | PostgreSQL (MV) | **Materialized View** (Pre-computed Facts) | 20-50ms | Long-lived |
+| **L4** | Mem0 OSS | **Source of Truth** (Milvus/Neo4j) | 100-300ms | Vĩnh viễn |
+
+**Nguyên tắc hoạt động:**
+
+*   **Reactive Caching:** Khi L4 được truy vấn, kết quả sẽ được đẩy ngược lên L3, L2, L1 để "làm ấm" cache.
+*   **Proactive Caching:** Một **Worker nền** sẽ định kỳ truy vấn L4 cho các câu hỏi quan trọng (ví dụ: `user favorite`) và lưu kết quả vào L3 và L2, đảm bảo tỷ lệ hit rate cao ngay cả khi không có request.
+
+---
+
+## 6. XỬ LÝ BẤT ĐỒNG BỘ: `extract_facts`
+
+Quá trình trích xuất sự thật và tóm tắt cuộc trò chuyện là một tác vụ tốn kém (gọi LLM, vector hóa, ghi vào DB). Để không làm ảnh hưởng đến latency của người dùng, nó được xử lý hoàn toàn bất đồng bộ.
+
+1.  **Context Handling Module** gửi yêu cầu `extract_facts`.
+2.  **API Gateway** nhận yêu cầu và ngay lập tức gửi một **Job** vào **Message Queue (RabbitMQ)**, trả về `HTTP 202 Accepted`.
+3.  **Worker Service** (Extraction Worker) nhận job từ Queue.
+4.  Worker gọi LLM để trích xuất sự thật có cấu trúc và tóm tắt.
+5.  Worker ghi dữ liệu vào **LTM (Milvus, Neo4j)**.
+6.  Worker kích hoạt **Cache Warming** để cập nhật L3 và L2.
+
+Kiến trúc này đảm bảo rằng người dùng không bao giờ phải chờ đợi quá trình xử lý nền, mang lại trải nghiệm người dùng mượt mà nhất.
+
+---
+
+## 7. KẾT LUẬN
+
+Kiến trúc PIKA Memory System là một thiết kế **tối ưu, hiện đại, và có khả năng mở rộng cao**. Bằng cách kết hợp sức mạnh của Mem0 OSS với các chiến lược caching và thực thi song song tiên tiến, hệ thống này sẵn sàng đáp ứng các yêu cầu về hiệu năng và độ chính xác của một AI Companion thế hệ mới.
+
+**Tổng số từ:** ~1500 từ.
