@@ -1572,7 +1572,7 @@ Comet có khả năng "đọc" đồng thời nhiều tab. Về mặt kỹ thu�
 
 DOM nguyên bản của các trang web hiện đại (như Facebook, Amazon) chứa hàng nghìn nút (nodes) vô nghĩa (div lồng nhau, script, style). Gửi toàn bộ DOM này cho LLM là lãng phí và gây nhiễu.
 
-- Pruning (Cắt tỉa): Comet loại bỏ các thẻ <script>, <style>, <svg> (trừ khi có nhãn), và các phần tử bị ẩn (display: none, visibility: hidden).
+- Pruning (Cắt tỉa): Comet loại bỏ các thẻ `<script>`, `<style>`, `<svg>` (trừ khi có nhãn), và các phần tử bị ẩn (display: none, visibility: hidden).
     
 - Accessibility Tree Integration: Comet sử dụng Accessibility Tree (cấu trúc dữ liệu trình duyệt tạo ra cho các trình đọc màn hình của người khiếm thị) làm nguồn dữ liệu chính. Cây này chứa thông tin ngữ nghĩa (semantic) như "Nút này là nút Đăng nhập" thay vì "Thẻ div có class.xyz". Điều này giúp Agent hiểu được chức năng của phần tử bất kể CSS class bị thay đổi (obfuscation).13
     
@@ -1921,3 +1921,622 @@ Lưu ý: Tất cả các trích dẫn dữ liệu kỹ thuật được tổng h
     
 
 **
+
+
+---
+
+
+---
+
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+
+## 1. Điểm mạnh của từng tool – Hỗ trợ tốt cho task nào?
+
+### Playwright MCP – Mạnh về “lái” và tương tác UI ổn định
+
+**Điểm mạnh chính**
+
+- **UI automation ổn định, thân thiện với LLM**
+    - Dựa trên **accessibility tree** chứ không dựa vào ảnh → LLM thấy được cấu trúc semantic (role, name, label) nên dễ hiểu và dễ hành động.[^1]
+    - Auto-wait + locators thông minh (role, text, test-id) giúp giảm flaky khi click/điền form.[^2][^3]
+- **Multi-browser, multi-platform**
+    - Playwright hỗ trợ Chromium, Firefox, WebKit; Playwright MCP kế thừa điều này → cùng một bộ tool có thể chạy trên nhiều browser/OS.[^4][^2]
+    - Hỗ trợ headless/headful, emulation thiết bị, viewport, geo, v.v..[^2][^4]
+- **Bộ công cụ giàu cho web interactions**
+    - Điều hướng, click, type, chọn dropdown, scroll, upload/download file, xử lý auth/cookies, chặn/bắt network requests….[^4][^2]
+    - Nhiều implementation MCP (Microsoft + community) expose tools sẵn như: open page, follow link, click selector, type text, evaluate script, screenshot, trace,….[^3][^4]
+- **LLM-friendly \& “deterministic”**
+    - Thiết kế để LLM dùng: MCP server map các tool name rõ ràng sang hành động Playwright, trả về kết quả dạng JSON/A11y tree thay vì raw CDP events.[^1][^4]
+    - Ít mơ hồ hơn so với cách dùng screenshot + vision model.
+
+**Task nào Playwright MCP làm rất tốt?**
+
+- Tự động hóa UI như người dùng:
+    - Login, điền form, click nút, điều hướng multi-step trên web app.
+- E2E test / regression check:
+    - Kiểm tra flow “đặt lệnh”, “tạo tài khoản”, “upload chứng từ”,…
+- Web scraping / data extraction trên site tương tác (SPA, JS nặng):
+    - Lấy bảng giá, thông tin cổ phiếu, số liệu dashboard.
+- Multi-browser compatibility testing:
+    - Chạy cùng test trên Chrome/Firefox/WebKit.
+
+***
+
+### CDP MCP (Chrome DevTools MCP) – Mạnh về “soi” và chẩn đoán sâu
+
+**Điểm mạnh chính**
+
+- **Deep DevTools-level access**
+    - MCP server này cho agent truy cập **full Chrome DevTools Protocol**: Network, Performance, Console, Sources, Application, v.v..[^5][^6]
+    - Dùng được như một “Chrome DevTools cho AI coding agent” – phù hợp cho debugging và phân tích sâu.[^5]
+- **Kiến trúc mỏng, latency thấp**
+    - Flow: `MCP client → chrome-devtools-mcp → CDP → Chrome` → không cần extension trung gian.[^7][^8]
+    - So với Playwright MCP (thường phải đi qua Playwright + đôi khi extension) thì ít tầng hơn → giảm latency, giảm điểm hỏng.[^7]
+- **Tính năng độc mà Playwright khó có được**[^8][^7]
+    - **Performance tracing \& analysis**: record trace, phân tích LCP/CLS/FID, CPU flame, long tasks,…
+    - **Network analysis chi tiết**: full headers, payload, timing cho từng request/response.
+    - **Native debugging**: console logs, JS exceptions, stack traces, breakpoints.
+- **Attach live Chrome**
+    - Cho phép control/inspect **Chrome đang chạy** (với remote debugging bật) → cực hữu dụng cho:
+        - Debug app thật của dev.
+        - Làm việc với phiên đã login sẵn (cho coding/debugging workflows).[^6][^5]
+
+**Task nào CDP MCP làm rất tốt?**
+
+- Debug web/app:
+    - Tìm vì sao request bị 4xx/5xx, CORS fail, redirect loop, v.v.
+- Performance profiling:
+    - Tối ưu trang tài chính nặng JS, phân tích chỗ nghẽn.
+- Coding assistant scenario:
+    - Dev hỏi “vì sao trang React này trắng?”, agent dùng CDP để xem console error, network, source map.
+- Attach vào Chrome thật:
+    - Kiểm tra, quan sát, chẩn đoán trên phiên người đang dùng.
+
+***
+
+## 2. Điểm yếu của từng tool – Không phù hợp / thiếu gì?
+
+### Playwright MCP – Yếu ở phần “soi sâu” \& attach
+
+**Điểm yếu chính / không hỗ trợ tốt**
+
+- **Observability \& profiling không sâu bằng DevTools**
+    - Có thể monitor network/request basic, nhưng không đầy đủ/bén như Chrome DevTools MCP:
+        - Không mạnh bằng ở performance tracing chi tiết, breakdown metrics như DevTools Performance tab.[^7]
+        - Không tối ưu cho debug network/protocol-level như CDP-native.
+- **Attach vào browser đang chạy kém natural hơn**
+    - Có hỗ trợ `--extension` + `--user-data-dir` để nối vào Chrome profile có cài extension MCP bridge, nhưng:
+        - Cần extension + đúng profile path → dễ lỗi, phức tạp.[^9]
+        - Bản chất vẫn “driving” qua Playwright, không deep-integrated như DevTools MCP.[^9][^7]
+- **Chromium-biased khi MCP**
+    - Dù Playwright core support multi-browser, nhưng nhiều scenario MCP hiện tại chủ yếu target Chromium, cross-browser trong MCP context vẫn hạn chế hơn so với trong test-runner truyền thống.
+
+**Hệ quả:**
+
+- Không phải lựa chọn tối ưu để:
+    - Làm analytic sâu: tìm bottleneck performance, tối ưu Web Vitals.
+    - Dùng như DevTools-as-a-service cho coding agent.
+    - Control Chrome đang chạy phục vụ debugging real session.
+
+***
+
+### CDP MCP – Yếu ở phần “lái mượt” UI như Playwright
+
+**Điểm yếu chính / không hỗ trợ tốt**
+
+- **Không có auto-wait \& smart locators “baked-in” như Playwright**
+    - CDP làm việc với DOM, events, network,… ở level thấp; không tự động:
+        - Chờ element visible, enabled, không bị overlay.
+        - Tìm element theo role, text, a11y semantics.
+    - Nếu dùng nó làm engine chính cho click/type, bạn phải tự viết logic wait, retry, overlay detection → dễ flaky.
+- **Không cross-browser**
+    - CDP là protocol của Chromium; Chrome DevTools MCP tập trung hẳn vào Chrome/Chromium.[^8]
+    - Không điều khiển được Firefox/WebKit → không phù hợp nếu bạn cần test đa trình duyệt.
+- **Design target là “coding agent + debugging” hơn là “UI agent dành cho end-user”**
+    - README nhấn mạnh use case: coding assistants (Gemini, Claude, Cursor, Copilot) để debug web/app, chứ không phải automation E2E cross-browser.[^6][^5]
+    - Không cung cấp abstraction cao kiểu “click by role”, “fill form by label” như Playwright MCP.
+
+**Hệ quả:**
+
+- Không phải lựa chọn tốt nếu:
+    - Mục tiêu chính là **làm việc như người dùng trên UI** (đặt lệnh, điền form, thao tác dashboard).
+    - Bạn cần **độ ổn định cao** trong môi trường web phức tạp, nhiều SPA, nhiều overlay.
+    - Bạn muốn cross-browser automation/testing.
+
+***
+
+## 3. Khi kết hợp 2 tool – Bù trừ điểm mạnh/điểm yếu
+
+### Cách bù trừ tự nhiên nhất cho bài toán của bạn
+
+- **Playwright MCP bù điểm yếu automation của CDP MCP**
+    - Cho mọi tác vụ “tay lái UI”: navigate, click, type, form, scroll, scraping → luôn route qua Playwright MCP.
+    - Dùng A11y tree + auto-wait để **giảm flaky**, tránh phải tự viết chờ/timing/overlay.
+- **CDP MCP bù điểm yếu observability/attach của Playwright MCP**
+    - Khi cần:
+        - Hiểu vì sao flow fail (timeout, chậm, lỗi JS).
+        - Tối ưu hiệu năng trang (performance trace).
+        - Làm việc với Chrome đang chạy thật (attach).
+    - Route các tool như `get_network_log`, `get_performance_profile`, `attach_session`, `get_console_errors` qua CDP MCP.
+
+
+### Tóm lại theo đúng câu hỏi của bạn
+
+1. **Playwright MCP – mạnh**
+    - Mạnh: UI automation, ổn định, cross-browser, LLM-friendly, tasks kiểu “lái web như user”.
+    - Yếu: Observability sâu, attach real Chrome, DevTools-level profiling.
+2. **CDP MCP – mạnh**
+    - Mạnh: Deep DevTools access (network/perf/console), attach live Chrome, coding/debugging scenarios.
+    - Yếu: Không có lớp ổn định UI, dễ flaky nếu dùng trực tiếp để click/type, không cross-browser.
+3. **Khi kết hợp**
+    - Playwright MCP = **driver chính** (Action engine).
+    - CDP MCP = **diagnostic/attach engine** (Insight engine).
+    - Hai bên bù nhau: một bên lái mượt, một bên soi sâu.
+<span style="display:none">[^10][^11]</span>
+
+<div align="center">⁂</div>
+
+[^1]: https://github.com/microsoft/playwright-mcp
+
+[^2]: https://www.qatouch.com/blog/playwright-mcp-server/
+
+[^3]: https://executeautomation.github.io/mcp-playwright/docs/playwright-web/Supported-Tools
+
+[^4]: https://skywork.ai/blog/playwright-mcp-mcp-server-overview/
+
+[^5]: https://github.com/ChromeDevTools/chrome-devtools-mcp
+
+[^6]: https://github.com/ChromeDevTools/chrome-devtools-mcp/
+
+[^7]: https://goonnguyen.substack.com/p/chrome-devtools-mcp-google-co-ve
+
+[^8]: https://developer.chrome.com/blog/chrome-devtools-mcp
+
+[^9]: https://github.com/microsoft/playwright-mcp/issues/921
+
+[^10]: https://developer.microsoft.com/blog/the-complete-playwright-end-to-end-story-tools-ai-and-real-world-workflows
+
+[^11]: https://blog.nashtechglobal.com/how-playwright-mcp-server-improve-the-ai-capabilities-for-automation-testing/
+
+
+
+
+---
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+
+# Cho bài toán của tớ, đâu phải coder dùng đâu, thế thì cần gì CDP tool nhỉ
+
+Đúng rồi! Câu hỏi rất sắc bén. Để mình phân tích lại cho **bài toán finAI của bạn** (không phải coding agent):
+
+***
+
+## Bài Toán finAI ≠ Coding Agent
+
+### finAI là gì?
+
+- **Web Browser Agent cho fintech**: Agent duyệt web, lấy dữ liệu tài chính, tương tác với dashboard, điền form
+- **User = analysts, traders, operations**: Không phải dev đang debug code
+- **Task = automation + data extraction**: Không phải debug frontend bug
+
+
+### CDP MCP được thiết kế cho ai?
+
+- **Target user = coding agents** (Gemini, Claude, Cursor, Copilot)[^1][^2]
+- **Use case chính = debug web/app**: Console errors, network issues, performance bottlenecks[^3]
+
+***
+
+## Vậy finAI Có Cần CDP Không?
+
+### TL;DR: **10% cần, 90% không cần**
+
+Hãy xem các scenario thực tế:
+
+### ❌ Không cần CDP cho các task chính (90%)
+
+```
+Task 1: "Lấy giá cổ phiếu AAPL từ TradingView"
+  → Playwright: navigate, extract_text
+  → Không cần CDP gì cả
+
+Task 2: "Điền form mở tài khoản chứng khoán"
+  → Playwright: fill_form, click, upload_file
+  → Không cần CDP
+
+Task 3: "Scrape 100 công ty trong Fortune 500"
+  → Playwright: batch automation
+  → Không cần CDP
+
+Task 4: "Login vào Bloomberg, export báo cáo"
+  → Playwright: authentication, download
+  → Không cần CDP
+
+Task 5: "So sánh giá vàng trên 5 sàn"
+  → Playwright: multi-tab extraction
+  → Không cần CDP
+```
+
+**Kết luận**: 90% tasks của finAI = automation UI + data extraction. Playwright làm tất, không cần DevTools.
+
+***
+
+### ✅ Có thể cần CDP (10% edge cases)
+
+Nhưng ngay cả "cần" cũng là **nice-to-have**, không phải **must-have**:
+
+#### Scenario 1: Debugging flaky automation
+
+```
+Vấn đề: Agent click nút "Submit" nhưng không thấy phản hồi
+  
+Playwright alone:
+  → Thử retry, chụp screenshot, xem DOM
+  → 80% case đủ để fix
+
+WITH CDP:
+  → Network trace → thấy request 500 Internal Server Error
+  → Console log → thấy JS error: "Cannot read property 'x'"
+  → Biết chính xác nguyên nhân: backend lỗi, không phải automation lỗi
+  
+Value: Tiết kiệm 30 phút debug
+But: Không phải production requirement, chỉ là dev convenience
+```
+
+
+#### Scenario 2: Performance optimization
+
+```
+Vấn đề: Trang dashboard tài chính load chậm (10s+)
+  
+Playwright alone:
+  → Chỉ biết "chậm", không biết tại sao
+  
+WITH CDP:
+  → Performance trace → thấy:
+    - 5s chờ API call (network bottleneck)
+    - 3s render large table (JS execution)
+    - 2s load fonts/images
+  → Biết đâu là bottleneck, tối ưu đúng chỗ
+  
+Value: Tối ưu được 5-7s
+But: Chỉ cần khi scale lớn, MVP không cần
+```
+
+
+#### Scenario 3: Monitoring production issues
+
+```
+Vấn đề: 5% tasks fail, không rõ lý do
+  
+Playwright alone:
+  → Log: "Timeout waiting for selector"
+  → Không biết tại sao timeout
+  
+WITH CDP:
+  → Network log tự động capture → thấy:
+    - CDN down → ảnh không load → overlay không mất
+    - Auth token expired → 401 → redirect loop
+  → Root cause analysis nhanh
+  
+Value: Giảm MTTR (Mean Time To Resolution)
+But: Có thể dùng external monitoring (Sentry, Datadog)
+```
+
+
+***
+
+## Vậy Nên Thiết Kế Thế Nào?
+
+### Khuyến nghị cho finAI: **"Playwright-first, CDP Optional"**
+
+```
+┌────────────────────────────────────────┐
+│ PHASE 1 (MVP - Week 1-4)               │
+├────────────────────────────────────────┤
+│ Engine: Playwright ONLY                │
+│ Tools: 8 core tools (all Playwright)   │
+│ Observability: Langfuse + screenshots  │
+│                                        │
+│ Decision: Ship without CDP             │
+│ Reason: 90% use cases covered          │
+└────────────────────────────────────────┘
+             ↓
+┌────────────────────────────────────────┐
+│ PHASE 2 (Validation - Month 2)         │
+├────────────────────────────────────────┤
+│ Gather data:                           │
+│ • What % tasks fail?                   │
+│ • Why do they fail?                    │
+│ • Is "network trace" needed?           │
+│                                        │
+│ Decision gate:                         │
+│ IF failure rate > 10%                  │
+│ AND root cause unclear                 │
+│ → Add CDP diagnostic tools             │
+│                                        │
+│ ELSE → Stay Playwright, optimize       │
+└────────────────────────────────────────┘
+             ↓
+┌────────────────────────────────────────┐
+│ PHASE 3 (Scale - Month 3+)             │
+├────────────────────────────────────────┤
+│ IF data shows need:                    │
+│ • Add 2-3 CDP tools (network, console) │
+│ • Use ONLY when Playwright fails       │
+│ • Keep Playwright as 95% engine        │
+│                                        │
+│ Architecture:                          │
+│ Router → Playwright (default)          │
+│       → CDP (on-demand diagnostic)     │
+└────────────────────────────────────────┘
+```
+
+
+***
+
+## So Sánh: finAI vs Coding Agent
+
+| Tiêu chí | finAI (Your case) | Coding Agent | CDP Value |
+| :-- | :-- | :-- | :-- |
+| **Primary task** | UI automation + data extraction | Debug frontend code | Low vs **High** |
+| **User** | Analysts, traders | Developers | Low vs **High** |
+| **Need console logs?** | No | **Yes** (to find bugs) | ❌ vs ✅ |
+| **Need network trace?** | Rarely (only debug) | **Often** (API issues) | ⚠️ vs ✅ |
+| **Need performance profiling?** | Nice-to-have | **Must** (optimize app) | ⚠️ vs ✅ |
+| **Need attach live Chrome?** | No | **Yes** (debug user's env) | ❌ vs ✅ |
+
+**Verdict**: CDP value cho finAI = **20%** của value cho coding agent.
+
+***
+
+## Kết Luận: Đơn Giản Hóa HLD
+
+### Cho bài toán finAI, thiết kế tối ưu:
+
+```
+┌──────────────────────────────────────┐
+│ Recommended Architecture (Simplified) │
+├──────────────────────────────────────┤
+│                                      │
+│ Agent                                │
+│   ↓                                  │
+│ MCP Router (FastAPI)                 │
+│   ↓                                  │
+│ Playwright Engine (100%)             │
+│   ↓                                  │
+│ Chrome/Chromium                      │
+│                                      │
+└──────────────────────────────────────┘
+
+NO CDP needed for MVP.
+Consider adding IF data shows clear need.
+```
+
+
+### Lý do bỏ CDP khỏi MVP:
+
+1. **Không match use case**: finAI không phải coding agent
+2. **Complexity không justify**: Thêm CDP = thêm engine, thêm tools, thêm routing logic
+3. **Alternative solutions tốt hơn**:
+    - Debug → screenshot + DOM snapshot + Langfuse trace
+    - Monitoring → external tools (Sentry, Datadog)
+    - Performance → Playwright có basic network monitoring đủ dùng
+4. **YAGNI principle**: "You Aren't Gonna Need It" - đừng build cho "có thể cần"
+
+***
+
+## Final Answer
+
+**Q: "Cho bài toán của tớ, đâu phải coder dùng đâu, thế thì cần gì CDP tool nhỉ?"**
+
+**A: Đúng, không cần CDP cho MVP.**
+
+- Playwright đủ cho 90-95% use cases của finAI
+- CDP là "nice-to-have" cho debugging, không phải core requirement
+- Nếu sau này metrics show failure rate cao + không rõ nguyên nhân → lúc đó mới add CDP diagnostic tools
+- Đơn giản hóa HLD = ship nhanh hơn, ít bug hơn, maintain dễ hơn
+
+**Revised HLD**: **Playwright-only architecture** cho Phase 1-2. CDP optional cho Phase 3+ nếu data justify.
+
+<div align="center">⁂</div>
+
+[^1]: https://github.com/ChromeDevTools/chrome-devtools-mcp
+
+[^2]: https://github.com/ChromeDevTools/chrome-devtools-mcp/
+
+[^3]: https://developer.chrome.com/blog/chrome-devtools-mcp
+
+
+
+---
+
+# Có hai lớp lý do khác nhau: **bối cảnh** của Browser Use / Comet và **mục tiêu** họ tối ưu không giống bài toán finAI của bạn.
+
+---
+
+## 1. Browser Use: vì sao chuyển hẳn sang CDP?
+
+Các bằng chứng bạn đã trích trong báo cáo cho thấy: Browser Use ban đầu dùng Playwright wrapper, sau đó **chuyển sang pure CDP** qua thư viện `cdp-use`.paste.txt​
+
+## Lý do chính của Browser Use
+
+- Muốn **“xuống gần kim loại” (closer to the metal)**:
+    
+    - Bỏ lớp wrapper Playwright để điều khiển Chrome thẳng bằng CDP → ít overhead hơn, ít abstraction hơn.paste.txt​
+        
+- Tối ưu cho **speed + reliability ở scale rất lớn**:
+    
+    - Khi chạy hàng trăm / hàng ngàn browser song song, họ muốn:
+        
+        - Kiểm soát chi tiết mọi thứ (network, perf, event) qua CDP.
+            
+        - Tự build logic auto-wait, retry, vision-hybrid, Set-of-Marks, v.v. ở layer của họ.paste.txt​
+            
+- Họ là **thư viện cho coder**, không phải product non-tech:
+    
+    - Target user của Browser Use là **developer** muốn build agent của riêng mình, chấp nhận complexity cao hơn để lấy control cao hơn.paste.txt​
+        
+- Họ đã đầu tư mạnh vào **in-house abstractions**:
+    
+    - Tự xây Perception (DOM + screenshot + SoM), Cognitive, Execution layer, self-correction, v.v. trên CDP.paste.txt​
+        
+    - Tức là: họ đã “tự xây lại phần hay nhất của Playwright” ở tầng của họ.
+        
+
+**Tóm tắt**: Browser Use bỏ Playwright vì họ **đã đủ lớn + đủ deep** để tự bọc CDP theo cách riêng của họ, và họ tối ưu cho **library cho dev + scale lớn + kiểm soát chi tiết**, không phải cho một app fintech đơn lẻ như finAI.paste.txt​
+
+---
+
+## 2. Comet: vì sao CDP là mặc định?
+
+Comet là **fork Chromium** (browser riêng), nên:
+
+- CDP là **giao thức gốc** của Chromium:
+    
+    - Mọi thứ trong engine này đều có thể điều khiển bằng CDP, không cần thêm lớp Playwright ở giữa.paste.txt​
+        
+- Comet control browser **từ bên trong**:
+    
+    - AI được nhúng vào ngay trong engine, có quyền đọc DOM, Accessibility Tree, Shadow DOM, iframes, v.v. trực tiếp.paste.txt​
+        
+    - Ở level đó, Playwright thêm gần như không giá trị:
+        
+        - Không cần cross-browser.
+            
+        - Không cần generic test-runner abstraction.
+            
+- Mục tiêu của Comet:
+    
+    - Tối ưu trải nghiệm trình duyệt AI-native, sâu vào kiến trúc Chromium, memory, process model, RAG multi-tab,….paste.txt​
+        
+    - Đây là **browser product**, không phải service nhỏ build trên Chrome từ bên ngoài.
+        
+
+**Tóm tắt**: Comet chọn CDP vì họ **là chính “cái browser”** (Chromium fork). Ở level này, CDP là “native API”, Playwright chỉ là một thư viện bên ngoài, không phù hợp.paste.txt​
+
+---
+
+## 3. Khác biệt bối cảnh với finAI của bạn
+
+Đặt 3 ông lên một trục:
+
+|Hệ thống|Vị trí trong stack|Mục tiêu tối ưu|
+|---|---|---|
+|**Browser Use**|Thư viện cho dev, chạy ngoài Chrome|Control sâu, performance, extensibility paste.txt​|
+|**Comet**|Chính là browser (Chromium fork)|Native integration, UX, local-first, privacy paste.txt​|
+|**finAI (bạn)**|Service/agent chạy _trên_ Chrome/Edge hiện có|UI automation ổn định cho user tài chính|
+
+Điểm mấu chốt:
+
+- Browser Use / Comet chơi ở **“tầng hạ tầng browser”**.
+    
+- finAI của bạn chơi ở **“tầng ứng dụng dùng browser”**.
+    
+
+Ở tầng hạ tầng:
+
+- CDP là **chuẩn vàng**: mọi Chromium tool (Selenium CDP, Puppeteer, Playwright chính nó ở dưới) đều dựa trên CDP.paste.txt​
+    
+- Họ có team lớn, đủ sức:
+    
+    - Tự build auto-wait, flaky-handling, vision-hybrid, stealth, anti-bot, v.v. trên CDP.paste.txt​
+        
+
+Ở tầng ứng dụng:
+
+- Playwright MCP cho bạn:
+    
+    - Sẵn auto-wait, locators, BrowserContext, A11y snapshot, MCP tools được thiết kế cho LLM.agentic_browser_report.md​
+        
+    - Không cần tự xây lại từ CDP.
+        
+
+---
+
+## 4. Vậy quan điểm “Browser Use/Comet dùng CDP, nên CDP tốt hơn” sai ở đâu với bạn?
+
+Quan điểm đó **đúng trong bối cảnh của họ**, nhưng **không chuyển nguyên xi** sang bài toán của bạn:
+
+- Họ:
+    
+    - Là **hạ tầng / nền tảng**, tối ưu cho scale, performance, độ sâu control, coding agent, hoặc tự build product browser.
+        
+    - Có **nhiều engineer**, chấp nhận complexity để đạt lợi ích dài hạn.
+        
+- Bạn:
+    
+    - Đang build **một sản phẩm fintech dùng browser như công cụ**, không phải xây browser mới.
+        
+    - Team nhỏ, cần:
+        
+        - Ship nhanh.
+            
+        - UI automation ổn định.
+            
+        - Dễ maintain.
+            
+
+Với constraints của bạn, **Playwright MCP** cho:
+
+- 90–95% value cần thiết (navigate, click, form, scrape, multi-step workflow).agentic_browser_report.md​
+    
+- Với cost complexity cực thấp so với tự ôm raw CDP.
+    
+
+CDP chỉ thêm giá trị thực sự nếu:
+
+- Bạn lên giai đoạn:
+    
+    - Cần tối ưu performance đến mức “vắt từng ms”.
+        
+    - Hoặc làm coding/devtools agent.
+        
+    - Hoặc xây thứ rất giống Browser Use/Comet (hạ tầng, không phải app fintech).paste.txt​
+        
+
+---
+
+## 5. Câu trả lời ngắn gọn
+
+- Browser Use và Comet dùng CDP vì:
+    
+    - Họ ở **tầng hạ tầng**, cần **control tối đa** và đã đầu tư để bù hết nhược điểm của CDP.paste.txt​
+        
+    - Comet là Chromium fork, CDP là API tự nhiên nhất.paste.txt​
+        
+- Bài toán finAI của bạn ở **tầng ứng dụng**, cần:
+    
+    - UI automation ổn định, dev nhanh, maintenance dễ → Playwright MCP là công cụ hợp lý hơn.
+        
+- Không nên “copy kiến trúc của hạ tầng” cho một **product domain-specific** nếu không có cùng constraints.
+    
+
+Nói ngắn:  
+**Họ dùng CDP vì họ xây “động cơ máy bay”. Bạn đang cần “mua vé máy bay để bay”. Không cần tự xây động cơ làm gì.**
+
+1. [https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/78f25d46-cce5-427e-963d-298d9e520905/paste.txt](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/78f25d46-cce5-427e-963d-298d9e520905/paste.txt)
+2. [https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/211e8aa6-59c9-4ab9-996f-25c62284e9c7/agentic_browser_report.md](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/211e8aa6-59c9-4ab9-996f-25c62284e9c7/agentic_browser_report.md)
+3. [https://www.perplexity.ai/search/doc-tfai-lieu-nay-It3T4VGmSOm20ceMUXZe.Q](https://www.perplexity.ai/search/doc-tfai-lieu-nay-It3T4VGmSOm20ceMUXZe.Q)
+4. [https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/fecae811-04af-422a-802d-43a44478b0f8/paste.txt](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/fecae811-04af-422a-802d-43a44478b0f8/paste.txt)
+
+
+## Chrome DevTools MCP là gì?
+
+- Là **một MCP server cụ thể** do team Chrome DevTools làm ra, tên repo `chrome-devtools-mcp`.​
+    
+- Nó **bọc CDP** lại thành một tập hợp **MCP tools** để AI agent có thể:
+    
+    - Mở trang, click, điền form, điều hướng.​[](https://www.youtube.com/watch?v=q1vlGUKjfeY)​
+        
+    - Đọc DOM, CSS, accessibility tree.​
+        
+    - Lấy network log, console log, performance trace, đo Web Vitals.​[](https://www.youtube.com/watch?v=q1vlGUKjfeY)​
+        
+
+Nói dễ hiểu:
+
+- CDP = ổ cắm kỹ thuật của Chrome.
+    
+- MCP = chuẩn dây cáp cho LLM dùng tool.
+    
+- **Chrome DevTools MCP** = cái “adapter” biến ổ CDP của Chrome thành một bộ tool chuẩn MCP để agent (Claude, Cursor, Gemini, v.v.) cắm vào và điều khiển/quan sát browser
