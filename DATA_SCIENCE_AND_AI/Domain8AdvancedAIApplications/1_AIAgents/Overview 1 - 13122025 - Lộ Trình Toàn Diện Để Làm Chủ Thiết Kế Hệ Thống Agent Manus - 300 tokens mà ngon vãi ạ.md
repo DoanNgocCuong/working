@@ -1589,7 +1589,48 @@ graph TB
 
 #### Demo tại buổi Agent Roadmap Wecommit100x
 
-```python
+#### Hệ thống Đa Agent Hướng Sự kiện (Event-Driven Coordination)
+
+Đây là mô hình hiện đại cho các hệ thống lớn (Scalable Agent Systems), nơi các Agent không gọi nhau trực tiếp mà giao tiếp qua Event Bus để đảm bảo tính "Decoupled" và "Resilience".
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant EventBus as Event Bus / Message Broker
+    participant AgentA as Agent A (Triager)
+    participant AgentB as Agent B (Researcher)
+    participant AgentC as Agent C (Writer)
+
+    User->>EventBus: Event: New_Request_Received
+    
+    rect rgb(240, 248, 255)
+        Note over EventBus, AgentA: Decoupled Coordination
+        EventBus->>AgentA: Consume: New_Request
+        AgentA->>AgentA: Analyze Intent
+        AgentA->>EventBus: Publish: Intent_Classified (Research_Needed)
+    end
+    
+    rect rgb(255, 240, 245)
+        Note over EventBus, AgentB: Parallel Processing capability
+        EventBus->>AgentB: Consume: Intent_Classified
+        AgentB->>AgentB: Search Web / Query DB
+        AgentB->>EventBus: Publish: Data_Gathered
+    end
+
+    rect rgb(230, 255, 230)
+        EventBus->>AgentC: Consume: Data_Gathered
+        AgentC->>AgentC: Draft Content
+        AgentC->>EventBus: Publish: Task_Completed
+    end
+
+    EventBus->>User: Final Response
+```
+
+#### Demo Mini Cursor - Message Bus Multi Agents - 17/12/2025
+> 1. [https://www.hivemq.com/blog/benefits-of-event-driven-architecture-scale-agentic-ai-collaboration-part-2/](https://www.hivemq.com/blog/benefits-of-event-driven-architecture-scale-agentic-ai-collaboration-part-2/)  
+2. [https://www.confluent.io/blog/the-future-of-ai-agents-is-event-driven/](https://www.confluent.io/blog/the-future-of-ai-agents-is-event-driven/)
+
+```
 class MessageBus:
     """
     Central PubSub for P2P communication using Redis.
@@ -1603,6 +1644,14 @@ class MessageBus:
     - Auto-fallback to in-memory if Redis fails
     """
 ```
+
+Share 1: https://github.com/DoanNgocCuong/working/blob/main/SHARING/Demo%201%20-%20L%C3%AAn%20s%C3%B3ng%20Wecommit100x%20%2017122025.md
+Share 2 - Sub stack 
+Share 3 Facebook 
+Share 4 Linkedin 
+Share 5 FSDS
+Share 3: https://fullstackdatascience.com/forum?postId=e0ee305a-3128-401c-8e39-3430aea67946&name=ai-data-engineering&groupId=ungrouped&channelId=39e81d82-19f9-43d0-86b0-15fad1c5222f
+
 
 
 
