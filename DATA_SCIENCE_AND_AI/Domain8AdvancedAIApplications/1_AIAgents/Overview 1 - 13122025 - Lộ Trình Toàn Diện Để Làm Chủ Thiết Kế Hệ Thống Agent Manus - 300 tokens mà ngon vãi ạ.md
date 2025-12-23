@@ -2749,3 +2749,51 @@ Giờ đây, bạn đã có một "bản đồ" chi tiết. Phần còn lại ph
 
 ```
 
+
+
+
+---
+Link: 
+
+[^1]: https://blog.continue.dev/parallel-tool-calling/
+
+[^2]: https://docs.letta.com/guides/agents/parallel-tool-calling/
+
+[^3]: https://www.augmentcode.com/changelog/parallel-tool-calls
+
+[^4]: https://community.openai.com/t/parallel-tool-calling-where-there-is-an-ordering-dependency/1086995
+
+[^5]: https://aiproduct.engineer/tutorials/langgraph-tutorial-parallel-tool-execution-state-management-unit-23-exercise-1
+
+[^6]: https://github.com/langchain-ai/langgraph/issues/45
+
+[^7]: https://docs.langchain.com/oss/python/langchain/multi-agent
+
+[^8]: https://dev.to/aws/build-multi-agent-systems-using-the-agents-as-tools-pattern-jce
+
+[^9]: https://github.com/pydantic/pydantic-ai/issues/1096
+
+[^10]: https://www.reddit.com/r/LangChain/comments/1mzuytq/1_tool_called_multiple_times_vs_calling_multiple/
+
+[^1]: https://www.anthropic.com/engineering/multi-agent-research-system
+
+[^2]: https://arxiv.org/html/2506.12508v1
+
+[^3]: https://alhena.ai/blog/why-a-planner-led-multi-agent-system-leaves-the-one-agent-model-behind/
+
+[^4]: https://langchain-ai.github.io/langgraph/tutorials/plan-and-execute/plan-and-execute/
+
+[^5]: https://techcommunity.microsoft.com/blog/educatordeveloperblog/ai-agents-planning-and-orchestration-with-the-planning-design-pattern---part-7/4399204
+
+[^6]: https://developer.microsoft.com/blog/designing-multi-agent-intelligence
+
+[^7]: https://langchain-ai.github.io/langgraph/concepts/multi_agent/
+
+[^8]: https://developers.googleblog.com/architecting-efficient-context-aware-multi-agent-framework-for-production/
+
+[^9]: https://www.geeksforgeeks.org/artificial-intelligence/multiagent-planning-in-ai/
+
+[^10]: https://galileo.ai/blog/architectures-for-multi-agent-systems
+
+
+
