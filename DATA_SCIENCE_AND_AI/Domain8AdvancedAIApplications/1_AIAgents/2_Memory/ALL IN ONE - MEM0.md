@@ -2896,6 +2896,16 @@ optimized_latency = {
 **Source:** [Paper: Table 2, Section 4.4] - https://arxiv.org/html/2504.19413v1
 
 
+https://mem0.ai/blog/benchmarked-openai-memory-vs-langmem-vs-memgpt-vs-mem0-for-long-term-memory-here-s-how-they-stacked-up
+
+
+| Engine        | p95 search | p95 total  |
+| ------------- | ---------- | ---------- |
+| **Mem0**      | **0.20 s** | **1.40 s** |
+| Mem0ᵍ         | 0.66 s     | 2.59 s     |
+| OpenAI Memory | —          | 0.89 s     |
+| LangMem       | 59 s       | 60 s       |
+
 
 ```bash
 === Mem0 Base (p95: 1.44s) ===  
