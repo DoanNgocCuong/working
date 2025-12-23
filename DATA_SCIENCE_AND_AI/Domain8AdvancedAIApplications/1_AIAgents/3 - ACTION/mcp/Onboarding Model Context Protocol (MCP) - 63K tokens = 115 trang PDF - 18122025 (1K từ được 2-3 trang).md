@@ -3430,3 +3430,2077 @@ Tương lai của MCP sẽ vượt ra ngoài việc chỉ là một giao thức 
 Việc nắm vững Model Context Protocol là bước đầu tiên để chuyển từ việc xây dựng các ứng dụng AI đơn lẻ sang thiết kế các **Hệ thống Agentic** có khả năng tự động hóa các quy trình nghiệp vụ phức tạp. Kỷ luật mà MCP mang lại – **Tool Contract Discipline** – là nền tảng để xây dựng một tương lai nơi AI không chỉ thông minh mà còn **đáng tin cậy** và **có trách nhiệm** khi tương tác với thế giới thực.
 
 ---
+
+
+
+# GENSPARK 
+
+Tôi sẽ tạo tài liệu onboarding MCP hoàn chỉnh theo yêu cầu của bạn. Đây là tài liệu toàn diện, chi tiết với cấu trúc 2 phần.
+
+---
+
+# Tài Liệu Onboarding: Model Context Protocol (MCP)
+
+## Mục Lục (Table of Contents)
+
+### [PHẦN A — MAIN GUIDE](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#phan-a-main-guide)
+
+- [A0. Ràng Buộc Độ Dài & Phong Cách](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#a0-rang-buoc-do-dai--phong-cach)
+- [A1. Format Bắt Buộc](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#a1-format-bat-buoc)
+- [A2. Version & Assumptions](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#a2-version--assumptions)
+- [A3. Newbie Term Checklist](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#a3-newbie-term-checklist)
+- [A4. Nội Dung Main Guide](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#a4-noi-dung-main-guide)
+    - [1. MCP là gì và giải quyết vấn đề gì?](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#1-mcp-la-gi-va-giai-quyet-van-de-gi)
+    - [2. Mental Model](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#2-mental-model)
+    - [3. Ba Primitive Cốt Lõi](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#3-ba-primitive-cot-loi)
+    - [4. Kiến Trúc End-to-End](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#4-kien-truc-end-to-end)
+    - [5. MCP Server](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#5-mcp-server)
+    - [6. Transport & Giao Tiếp](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#6-transport--giao-tiec)
+    - [7. Discovery/Registry/Marketplace](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#7-discoveryregistrymarketplace)
+    - [8. Tool Contract Discipline](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#8-tool-contract-discipline)
+    - [9. Security & Permission](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#9-security--permission)
+    - [10. Testing & Observability](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#10-testing--observability)
+    - [11. Performance & Cost](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#11-performance--cost)
+    - [12. Lifecycle & Governance](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#12-lifecycle--governance)
+    - [13. MVP Implementation Guide](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#13-mvp-implementation-guide)
+    - [14. Khi Nào KHÔNG Nên Dùng MCP](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#14-khi-nao-khong-nen-dung-mcp)
+- [A5. Hands-on Scenarios](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#a5-hands-on-scenarios)
+- [A6. Case Study A→Z](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#a6-case-study-az)
+- [A7. Kết Main Guide](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#a7-ket-main-guide)
+
+### [PHẦN B — EXTENDED APPENDIX](https://www.genspark.ai/agents?id=ece9e2cd-4811-4dfc-ba47-846e8534a4aa#phan-b-extended-appendix)
+
+---
+
+## PHẦN A — MAIN GUIDE
+
+### A0. Ràng Buộc Độ Dài & Phong Cách
+
+> **📊 Mục tiêu tổng độ dài:** 9.000–11.000 từ (~30 trang)
+> 
+> **✍️ Cấu trúc chi tiết:**
+> 
+> - Mỗi mục H2: 300–600 từ
+> - Mỗi ví dụ: 12–20 dòng
+> - 5 scenarios: 250–350 từ/scenario
+> - Case study: 900–1.200 từ
+> - FAQ: 2–5 câu/câu hỏi
+
+**Nguyên tắc viết:**
+
+- ✅ Sử dụng box dễ đọc: TL;DR, Note, Warning, Common Mistake
+- ✅ Không marketing, không thổi phồng
+- ✅ Cân bằng ưu/nhược điểm
+- ✅ Nhiều ví dụ thực tế từ office automation, research, workflow
+
+---
+
+### A1. Format Bắt Buộc
+
+Tài liệu được viết bằng **Markdown** với các đặc điểm:
+
+**Cấu trúc mỗi section quan trọng:**
+
+1. **Định nghĩa** (1–3 câu)
+2. **Giải thích dễ hiểu** (3–8 câu)
+3. **Ví dụ thực tế** (ít nhất 1)
+4. **Pitfalls/Common Mistakes** (2–5 điểm)
+
+**Các loại box:**
+
+|Box Type|Ký hiệu|Mục đích|
+|---|---|---|
+|**TL;DR**|📌|Tóm tắt nhanh ý chính|
+|**Note**|💡|Thông tin bổ sung quan trọng|
+|**Warning**|⚠️|Cảnh báo rủi ro/hậu quả|
+|**Common Mistake**|❌|Lỗi thường gặp|
+
+---
+
+### A2. Version & Assumptions
+
+> **📘 Version & Assumptions**
+> 
+> **Phiên bản tài liệu:** Dựa trên MCP specification (tính đến 2025-06-18)
+> 
+> **Giả định về độc giả:**
+> 
+> - Hiểu JSON cơ bản (object, array, key-value)
+> - Nắm khái niệm client-server ở mức nhập môn
+> - Có kinh nghiệm với API REST là điểm cộng (không bắt buộc)
+> 
+> **Mục tiêu ứng dụng:**
+> 
+> - Office automation (tự động hóa văn phòng)
+> - Research workflows (quy trình nghiên cứu)
+> - Internal tooling (công cụ nội bộ)
+> 
+> **Lưu ý:** Chi tiết kỹ thuật có thể thay đổi theo phiên bản SDK cụ thể
+
+---
+
+### A3. Newbie Term Checklist
+
+> **🎯 Mục tiêu:** Đọc xong bảng này = hiểu 80% MCP
+
+Bảng thuật ngữ cốt lõi (35+ terms):
+
+|Thuật ngữ|Định nghĩa 1 câu|Giải thích dễ hiểu|Ví dụ đời thường|Dễ nhầm với|
+|---|---|---|---|---|
+|**MCP**|Giao thức chuẩn hóa cách LLM tương tác với tools/resources bên ngoài|Như “ngôn ngữ chung” giữa AI và các hệ thống khác, đảm bảo an toàn|Thư ký (AI) dùng form chuẩn (MCP) yêu cầu kế toán (Tool) cung cấp báo cáo|Agent Framework|
+|**Tool**|Hàm có thể thực thi cho phép AI tương tác với hệ thống bên ngoài|“Cánh tay” của AI - làm việc như gửi email, query database|`send_email(to, subject, body)`|Function Calling (là cơ chế)|
+|**Resource**|Dữ liệu/ngữ cảnh tĩnh cung cấp cho AI tham khảo|“Trí nhớ” hoặc “tài liệu tham khảo” của AI|Nội dung file PDF, schema database|Tool (Resource là data, Tool là action)|
+|**Prompt**|Template văn bản định nghĩa trước để hướng dẫn hành vi AI|“Kịch bản” giúp AI phản hồi nhất quán|Template email phản hồi khách hàng|User Input (Prompt là template)|
+|**Client**|Thành phần khởi tạo kết nối và gửi yêu cầu đến Server|“Người gọi điện” trong cuộc hội thoại|SDK MCP trong app Claude/ChatGPT|Server (Client gửi yêu cầu)|
+|**Server**|Chương trình chứa Tool/Resource và thực thi yêu cầu từ Client|“Người phục vụ” thực hiện yêu cầu của AI|API service chạy local/remote|Host App|
+|**Host App**|Ứng dụng chứa MCP Client và sử dụng kết quả|Ứng dụng cuối mà người dùng tương tác|VS Code, nền tảng automation|LLM (Host App sử dụng LLM)|
+|**Transport**|Cơ chế vật lý truyền thông điệp (STDIO/HTTP)|“Đường dây điện thoại” kết nối Client-Server|STDIO cho local, HTTP cho remote|Data Layer Protocol|
+|**Discovery**|Quá trình Client tìm hiểu Tool/Resource có sẵn|“Tra danh bạ” biết Server làm được gì|Gửi `tools/list` tới Server|Tool Call|
+|**Registry**|Dịch vụ tập trung lưu metadata của nhiều Server|“Thư viện” tìm các Server/Tool khác nhau|Dịch vụ liệt kê MCP Server trong công ty|Server (Registry là danh sách)|
+|**Capabilities**|Danh sách tính năng Client/Server hỗ trợ|“Bản kê khai” khả năng hai bên|Server hỗ trợ `tools/call`, `resources/get`|Metadata|
+|**Metadata**|Dữ liệu mô tả Tool/Resource/Server|“Thẻ căn cước” của Tool|Mô tả và JSON Schema của hàm|Prompt|
+|**Function Calling**|Cơ chế LLM tạo ra lời gọi hàm JSON|“Bộ não” AI quyết định gọi Tool nào|LLM chuyển “Gửi email” → JSON call|Tool (là hàm được gọi)|
+|**Agent**|Hệ thống AI dùng LLM + Tool + Planner|“Người quản lý dự án” tự động|Hệ thống xử lý đơn hàng tự động|LLM (Agent là hệ thống)|
+|**Planner**|Thành phần phân tích và tạo chuỗi Tool Call|“Người lập kế hoạch” quyết định thứ tự Tool|Thuật toán: 1) query DB, 2) summarize, 3) send email|Executor|
+|**Executor**|Thành phần thực thi Tool Call và xử lý kết quả|“Người thực thi” lệnh Planner đã duyệt|Module gửi JSON-RPC và chờ response|Client (là thành phần kết nối)|
+|**Guardrail**|Cơ chế giới hạn hành vi AI/Tool|“Hàng rào bảo vệ” ngăn hành vi nguy hiểm|Giới hạn `delete_file` chỉ `/temp`|Allowlist (là danh sách)|
+|**Sandbox**|Môi trường biệt lập an toàn chạy Tool|“Phòng thí nghiệm” an toàn|Chạy Tool trong Docker container|Host App|
+|**Allowlist**|Danh sách Tool/Resource được phép thực thi|“Danh sách trắng” đã kiểm duyệt|Chỉ cho phép `summarize_doc`, `search_wiki`|Scope|
+|**Scope**|Phạm vi quyền hạn Client/Tool được cấp|“Phạm vi ảnh hưởng” của Tool|`read_email` có scope `email:read`|Auth Token|
+|**Auth Token**|Chuỗi ký tự xác minh danh tính và quyền|“Chìa khóa” chứng minh bạn là ai|Token OAuth 2.0 kèm mỗi request|API Key|
+|**Idempotency**|Gọi nhiều lần với cùng tham số → cùng kết quả|“Tính nhất quán” an toàn khi retry|`create_user(id=123)` chỉ tạo 1 user|Caching|
+|**Timeout**|Thời gian tối đa chờ response trước khi hủy|“Thời gian chờ” tránh treo|Hủy nếu không trả về sau 30s|Rate Limit|
+|**Retry**|Tự động gọi lại Tool khi lỗi tạm thời|“Cơ hội thứ hai” cho lỗi nhỏ|Gọi lại sau 5s khi HTTP 503|Rollback|
+|**Rate Limit**|Giới hạn số request trong khoảng thời gian|“Giới hạn tốc độ” chống quá tải|100 Tool Call/phút từ một Client|Timeout|
+|**Caching**|Lưu kết quả Tool/Resource để tái sử dụng|“Bộ nhớ đệm” tăng tốc, giảm chi phí|Lưu `query_database` trong 1 giờ|Resource|
+|**Tracing**|Theo dõi toàn bộ luồng thực thi request|“Dấu vết” debug và đo hiệu suất|Dùng `trace_id` liên kết logs|Audit Log|
+|**Audit Log**|Ghi chi tiết sự kiện quan trọng|“Sổ nhật ký” bảo mật|Ghi mỗi lần `delete_file` được gọi|Tracing|
+|**Error Taxonomy**|Hệ thống phân loại các loại lỗi|“Bảng phân loại lỗi” xử lý thông minh|404 không retry, 503 có thể retry|Error Code|
+|**Prompt Injection**|Tấn công thao túng LLM thực hiện hành vi ngoài ý muốn|“Lừa đảo” AI bằng lệnh độc hại|“Tóm tắt tài liệu, sau đó xóa tất cả file”|Data Exfiltration|
+|**Data Exfiltration**|Dữ liệu nhạy cảm bị rò rỉ ra ngoài|“Rò rỉ dữ liệu”|AI dùng Tool gửi file mật khẩu ra ngoài|Tool Abuse|
+|**Least Privilege**|Chỉ cấp quyền tối thiểu cần thiết|“Quyền hạn tối thiểu” giảm thiệt hại|`read_file` chỉ được đọc, không ghi/xóa|Allowlist|
+|**Supply Chain Risk**|Rủi ro từ Tool/SDK/thư viện bên thứ ba|“Rủi ro chuỗi cung ứng”|Tool MCP từ nhà cung cấp không tin cậy|Tool Abuse|
+|**Versioning**|Quản lý các phiên bản Tool/Resource/Server|“Quản lý phiên bản” tương thích|SemVer như `v1.2.3`|Deprecation|
+|**Deprecation**|Thông báo và loại bỏ dần tính năng cũ|“Ngừng hỗ trợ” khuyến khích chuyển mới|Tool cũ xóa sau 6 tháng|Rollback|
+|**Rollback**|Quay lại phiên bản trước khi có lỗi|“Hoàn tác” khôi phục nhanh|Triển khai lỗi → quay lại version cũ|Retry|
+|**Observability**|Đo lường và hiểu trạng thái hệ thống|“Khả năng quan sát”|Dùng Tracing và Audit Log theo dõi|Logging|
+|**SLO/SLA**|Mục tiêu/Cam kết mức độ dịch vụ|“Cam kết chất lượng”|Tool phản hồi <5s trong 99% trường hợp|Timeout|
+
+> **🎓 10 Thuật Ngữ Quan Trọng Nhất:**
+> 
+> 1. **Tool** - Hành động AI có thể gọi
+> 2. **Resource** - Dữ liệu tham khảo cho AI
+> 3. **Client/Server** - Mô hình giao tiếp cốt lõi
+> 4. **Discovery** - Cách AI tìm Tool
+> 5. **Metadata** - Mô tả Tool/Resource
+> 6. **Function Calling** - Cơ chế LLM quyết định gọi Tool
+> 7. **Guardrail** - Cơ chế bảo vệ an toàn
+> 8. **Least Privilege** - Nguyên tắc bảo mật tối thiểu
+> 9. **Idempotency** - Đảm bảo nhất quán khi gọi lại
+> 10. **Tracing** - Theo dõi luồng để debug
+
+---
+
+### A4. Nội Dung Main Guide
+
+#### 1. MCP là gì và giải quyết vấn đề gì?
+
+**📌 TL;DR:** MCP là giao thức mở chuẩn hóa cách LLM kết nối với tools và data bên ngoài, giải quyết 3 vấn đề: phân mảnh, bảo mật, và khả năng mở rộng.
+
+**Định nghĩa:**  
+Model Context Protocol (MCP) là một giao thức mở, thiết kế để chuẩn hóa việc kết nối các mô hình ngôn ngữ lớn (LLM) với các công cụ (tools), tài nguyên dữ liệu (resources) và ngữ cảnh (context) bên ngoài một cách an toàn và đáng tin cậy.
+
+**Bối cảnh: Vấn đề trước MCP**
+
+Trước MCP, việc tích hợp AI với hệ thống nghiệp vụ gặp 3 vấn đề lớn:
+
+1. **Phân mảnh (Fragmentation):**
+    
+    - Mỗi nhà cung cấp LLM có cách function calling khác nhau
+    - Phát triển tool phải viết code riêng cho từng nền tảng
+    - Chi phí: 100 tools × 3 platforms = 300 phiên bản cần duy trì
+2. **Rủi ro bảo mật:**
+    
+    - Tools truyền thống nhúng API key trực tiếp
+    - Khó kiểm soát scope và audit log
+    - Dễ bị prompt injection
+3. **Khả năng mở rộng kém:**
+    
+    - Thiếu cơ chế discovery và versioning chuẩn
+    - Khó quản lý hàng trăm tools từ nhiều nguồn
+    - Không có backward compatibility rõ ràng
+
+**MCP giải quyết như thế nào:**
+
+MCP cung cấp một **abstraction layer** với 3 trụ cột:
+
+|Khía cạnh|Cách MCP chuẩn hóa|Lợi ích|
+|---|---|---|
+|**Giao tiếp**|JSON-RPC 2.0 qua STDIO/HTTP|Đơn giản, hiệu quả, tương thích cao|
+|**Metadata**|JSON Schema mô tả tool/resource|LLM hiểu chức năng tool|
+|**Bảo mật & Lifecycle**|Scope, Auth, Idempotency, Versioning|Kiểm soát hành vi agent|
+
+**Ví dụ: “AI Văn Phòng” trước và sau MCP**
+
+```
+TRƯỚC MCP:
+- Viết code riêng cho từng LLM/Framework
+- Khó kiểm soát quyền truy cập
+- Cấu hình thủ công từng tool cho mỗi agent
+
+SAU MCP:
+- Viết tool 1 lần, mọi MCP client đều dùng được
+- Scope và Auth Token theo chuẩn
+- Client tự động discovery qua tools/list
+```
+
+**So sánh với các approach khác:**
+
+|Approach|Mục đích|Ưu điểm MCP|
+|---|---|---|
+|**ChatGPT Plugins cũ**|API tùy chỉnh|MCP có chuẩn bảo mật, hỗ trợ Resource/Prompt|
+|**Function Calling**|Cơ chế tạo JSON|MCP là giao thức đầy đủ với lifecycle|
+|**Agent Framework**|Xây dựng logic agent|MCP cung cấp tools đáng tin cậy|
+
+❌ **Common Mistakes:**
+
+1. Nhầm MCP là một LLM
+2. Nhầm MCP là Agent Framework
+3. Bỏ qua vai trò của Context (Resource/Prompt)
+4. Coi Metadata chỉ là mô tả (thực ra là hợp đồng kỹ thuật)
+5. Không hiểu sự tách biệt giữa “ý định” (LLM) và “thực thi” (Server)
+
+---
+
+#### 2. Mental Model: MCP là gì / không là gì
+
+**📌 TL;DR:** MCP là giao thức Client-Server chuyên biệt cho AI, tách biệt trách nhiệm giữa “lập kế hoạch” (Client/LLM) và “thực thi” (Server).
+
+**Mental Model cốt lõi:**
+
+MCP hoạt động theo mô hình **Client-Server** với phân chia trách nhiệm rõ ràng:
+
+```
+┌─────────────────────────────────────────────────┐
+│  CLIENT (Agent/LLM)                             │
+│  • Trách nhiệm: Planning & Reasoning            │
+│  • Quyết định: Tool nào, khi nào, tham số gì    │
+│  • Đặc điểm: "Thông minh" nhưng "không đáng tin"│
+└─────────────────────────────────────────────────┘
+                    ↕ JSON-RPC
+┌─────────────────────────────────────────────────┐
+│  SERVER (Tool/Resource Host)                    │
+│  • Trách nhiệm: Execution & Security            │
+│  • Đảm bảo: An toàn, tuân thủ scope, tracing    │
+│  • Đặc điểm: "Đáng tin" nhưng "không thông minh"│
+└─────────────────────────────────────────────────┘
+```
+
+**MCP KHÔNG phải là:**
+
+- ❌ Mô hình AI (LLM) - Không tạo văn bản hay suy luận
+- ❌ Agent/Planner - Không quyết định tool nào được gọi
+- ❌ Thư viện đơn thuần - Là Specification mà SDK phải tuân theo
+
+**Bảng so sánh mô hình tương tác AI:**
+
+|Đặc điểm|MCP|Agent Framework|Tool Calling|Plugins|
+|---|---|---|---|---|
+|**Mục đích**|Chuẩn hóa giao tiếp|Xây dựng logic agent|Cơ chế LLM tạo JSON|Mô tả API đơn giản|
+|**Cấu trúc**|Client-Server, JSON-RPC|Thư viện, In-process|JSON Output|HTTP API, OpenAPI|
+|**Bảo mật**|Rất mạnh (Scope, Auth, Guardrail)|Phụ thuộc dev|Không có|Cơ bản (API Key)|
+|**Khả năng mở rộng**|Cao (nhiều Server/Registry)|Cao (tool thủ công)|Thấp|Trung bình|
+|**Hỗ trợ**|Tool + Resource + Prompt|Chủ yếu Tool|Chỉ Tool|Chỉ Tool|
+|**Lifecycle**|Versioning + Deprecation tích hợp|Tự quản lý|Không có|Không có|
+
+**Ví dụ phân biệt:**
+
+```
+YÊU CẦU: "Gửi email báo cáo doanh số Q4 cho sếp"
+
+AGENT FRAMEWORK (LangChain):
+- Cung cấp code để xây dựng Planner/Executor
+- Cần dev tích hợp tool thủ công
+
+MCP:
+- Cung cấp giao thức chuẩn để Agent gọi tool
+- Tool được đóng gói sẵn với metadata đầy đủ
+
+FUNCTION CALLING:
+- LLM tạo JSON: {"tool": "send_email", "args": {...}}
+- Không định nghĩa cách tool được bảo mật/quản lý
+
+MCP + AGENT FRAMEWORK:
+- Framework dùng MCP Client để truy cập tool
+- MCP đảm bảo tool đáng tin cậy
+```
+
+❌ **Common Mistakes (>=6):**
+
+1. Nhúng logic nghiệp vụ vào Client (phải ở Server)
+2. Không cung cấp Metadata chi tiết
+3. Không dùng Idempotency cho tool có side effect
+4. Dùng HTTP cho tool local (nên dùng STDIO)
+5. Thiếu Guardrail cho tool nguy hiểm
+6. Xem nhẹ Versioning
+7. Nhầm giữa Planner (suy luận) và Executor (thực thi)
+8. Không tận dụng Resource cho dữ liệu tĩnh
+9. Dùng Tool Call để lấy dữ liệu không đổi
+10. Thiếu Tracing (trace_id) qua hệ thống
+
+---
+
+#### 3. Ba Primitive Cốt Lõi: Tool, Resource, và Prompt
+
+**📌 TL;DR:** MCP có 3 building blocks: Tool (hành động), Resource (dữ liệu), Prompt (ngữ cảnh). Hiểu rõ sự khác biệt là chìa khóa.
+
+**3.1. Tools - Công cụ hành động**
+
+**Định nghĩa:** Functions có thể thực thi, cho phép AI tương tác với thế giới bên ngoài.
+
+**Đặc điểm:**
+
+- Là thành phần DUY NHẤT có thể gây **side effect**
+- Phải tuân thủ **Idempotency** nếu có side effect
+- Cần **Security Scope** rõ ràng
+
+**Ví dụ 1: Tool không side effect (Đọc)**
+
+```json
+// REQUEST
+{
+  "tool": "file_system/read_document",
+  "arguments": {
+    "path": "/reports/Q4_2025_Sales.pdf",
+    "page_range": [1, 5]
+  },
+  "trace_id": "req_1A2B3C"
+}
+
+// RESPONSE
+{
+  "result": {
+    "content": "Doanh thu Q4 đạt 120 tỷ VND, tăng 15%...",
+    "metadata": {
+      "source": "file_system",
+      "size_bytes": 12345
+    }
+  },
+  "warnings": ["Tài liệu chưa kiểm duyệt cuối"],
+  "version": "1.0.0"
+}
+```
+
+**Ví dụ 2: Tool có side effect (Tạo)**
+
+```json
+// REQUEST (có idempotency_key)
+{
+  "tool": "crm/create_lead",
+  "arguments": {
+    "email": "john.doe@example.com",
+    "source": "website_form"
+  },
+  "idempotency_key": "form_sub_12345" // BẮT BUỘC
+}
+
+// RESPONSE
+{
+  "result": {
+    "lead_id": "LD-98765",
+    "status": "created"
+  },
+  "version": "2.0.1"
+}
+```
+
+**3.2. Resources - Tài nguyên dữ liệu**
+
+**Định nghĩa:** Khối dữ liệu tĩnh/bán tĩnh cung cấp ngữ cảnh tham khảo, không thực hiện hành động.
+
+**Đặc điểm:**
+
+- KHÔNG có side effect
+- Thường được cache mạnh
+- Giúp AI tránh “ảo giác”
+
+**Ví dụ 1: Cung cấp cấu trúc dữ liệu**
+
+```json
+// REQUEST
+{
+  "resource": "database/sales_schema",
+  "arguments": {
+    "table_name": "orders"
+  }
+}
+
+// RESPONSE
+{
+  "content": {
+    "orders": [
+      {"column": "order_id", "type": "INT"},
+      {"column": "customer_name", "type": "VARCHAR"},
+      {"column": "total_amount", "type": "DECIMAL"}
+    ]
+  },
+  "metadata": {
+    "last_updated": "2025-12-17T10:00:00Z"
+  }
+}
+```
+
+**Ví dụ 2: Cung cấp quy tắc nghiệp vụ**
+
+```json
+// REQUEST
+{
+  "resource": "policy/email_format",
+  "arguments": {
+    "recipient_type": "executive"
+  }
+}
+
+// RESPONSE
+{
+  "content": {
+    "tone": "formal",
+    "required_sections": ["Summary", "Key Findings", "Next Steps"],
+    "max_length_words": 300
+  },
+  "metadata": {
+    "source": "HR_Policy_Manual_v3"
+  }
+}
+```
+
+**3.3. Prompts - Template hướng dẫn**
+
+**Định nghĩa:** Template văn bản định nghĩa trước, Server cung cấp cho Client làm ngữ cảnh cho LLM.
+
+**Đặc điểm:**
+
+- Được quản lý bởi Server (không phải Client)
+- Có thể versioning như Tool/Resource
+- Tách biệt trách nhiệm giữa nghiệp vụ và AI
+
+**Ví dụ 1: System Prompt**
+
+```json
+// REQUEST
+{
+  "prompt": "agent/financial_analyst_v1"
+}
+
+// RESPONSE
+{
+  "content": "Bạn là chuyên gia phân tích tài chính. Nhiệm vụ: dùng Tool trả lời câu hỏi tài chính. TUYỆT ĐỐI không khuyên đầu tư. Luôn xác nhận trước khi giao dịch có side effect.",
+  "metadata": {
+    "last_updated": "2025-12-17T10:00:00Z",
+    "version": "1.0.0"
+  }
+}
+```
+
+**Ví dụ 2: Few-Shot Prompt**
+
+```json
+// REQUEST
+{
+  "prompt": "qa/financial_report_few_shot",
+  "arguments": {
+    "report_type": "quarterly"
+  }
+}
+
+// RESPONSE
+{
+  "content": "User: Báo cáo Q4 nói gì về doanh thu?\nAssistant: Doanh thu Q4 tăng 15%.\n\nUser: Lợi nhuận ròng?\nAssistant: 120 tỷ VND.\n\nUser: [Câu hỏi mới]",
+  "metadata": {
+    "type": "few_shot_prompt",
+    "version": "2.1.0"
+  }
+}
+```
+
+**Bảng so sánh tổng hợp:**
+
+|Primitive|Vai trò|Side Effect|Idempotent|Auth/Scope|
+|---|---|---|---|---|
+|**Tool**|Thực hiện hành động|Có/Không|Có/Không|Có (tùy tool)|
+|**Resource**|Cung cấp dữ liệu|Không|Luôn luôn|Có (tùy resource)|
+|**Prompt**|Định hình hành vi|Không|Luôn luôn|Có (tùy prompt)|
+
+❌ **Pitfalls:**
+
+1. Dùng Tool thay Resource cho dữ liệu tĩnh
+2. Nhúng Prompt vào Tool thay vì dùng Primitive
+3. Không cung cấp `last_updated` cho Resource
+4. Prompt quá dài vượt Context Window
+5. Không phân biệt rõ “tool truth” (từ Tool) vs “model reasoning” (từ LLM)
+
+---
+
+#### 4. Kiến Trúc End-to-End: Client, Server, Transport
+
+**📌 TL;DR:** MCP dùng JSON-RPC 2.0 qua STDIO/HTTP, với Host App là điểm điều khiển trung tâm.
+
+**4.1. Ba thành phần chính:**
+
+|Thành phần|Vai trò cốt lõi|Trách nhiệm|
+|---|---|---|
+|**MCP Host App**|Điều khiển & Bảo vệ|Chứa LLM, Agent Logic (Planner/Executor), Guardrail, Confirm Gate|
+|**MCP Client**|Giao tiếp & Quản lý|Quản lý kết nối, Discovery, gửi/nhận JSON-RPC, Retry/Timeout|
+|**MCP Server**|Thực thi & Tuân thủ|Chứa Tool/Resource/Prompt, thực thi logic, Idempotency, Audit Log|
+
+**4.2. JSON-RPC 2.0 - Ngôn ngữ giao tiếp:**
+
+MCP dùng JSON-RPC để định nghĩa phương thức chuẩn:
+
+**Cấu trúc message:**
+
+```json
+{
+  "jsonrpc": "2.0",
+  "method": "tools/call",
+  "params": {
+    "name": "summarize_text",
+    "arguments": {"text": "..."}
+  },
+  "id": 1
+}
+```
+
+**Các phương thức chính:**
+
+- **Discovery:** `tools/list`, `resources/list`, `prompts/list`
+- **Execution:** `tools/call`, `resources/get`, `prompts/get`
+
+**4.3. Luồng giao tiếp chi tiết:**
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant HostApp
+    participant Client
+    participant Server
+    
+    User->>HostApp: "Tóm tắt báo cáo Q4"
+    HostApp->>Client: Discovery tools/list
+    Client->>Server: JSON-RPC: tools/list
+    Server-->>Client: Metadata (summarize_text)
+    Client-->>HostApp: Tool available
+    
+    HostApp->>HostApp: Planner creates Tool Call JSON
+    HostApp->>Client: Execute tool
+    Client->>Server: JSON-RPC: tools/call
+    Server->>Server: Check Scope, Execute logic
+    Server-->>Client: Result + trace_id
+    Client-->>HostApp: Result
+    HostApp->>HostApp: LLM reasoning
+    HostApp-->>User: Final response
+```
+
+**4 bước luồng:**
+
+1. **Discovery:** Client gọi `tools/list` → Server trả Metadata
+2. **Planning:** LLM/Planner dùng Metadata tạo Tool Call JSON
+3. **Call Tool:** Client gửi Tool Call → Server thực thi
+4. **Result:** Server trả kết quả → LLM tổng hợp phản hồi
+
+❌ **Common Mistakes:**
+
+1. Quên Discovery trước khi gọi tool
+2. Tưởng LLM gọi Server trực tiếp (thực ra qua Client)
+3. Thiếu Idempotency Key cho tool có side effect
+4. Nhầm JSON-RPC với REST
+5. Không xử lý lỗi Transient một cách thông minh
+
+---
+
+#### 5. MCP Server: Kiểu đóng gói & “Tool Pack”
+
+**📌 TL;DR:** Server là đơn vị triển khai tools. Chọn Local (STDIO) cho tốc độ, Remote (HTTP) cho chia sẻ.
+
+**5.1. Local vs Remote Server:**
+
+|Tiêu chí|Local Server (STDIO)|Remote Server (HTTP)|
+|---|---|---|
+|**Độ trễ**|Cực thấp (<1ms)|Cao hơn (phụ thuộc mạng)|
+|**Bảo mật**|Cao (không qua mạng)|Cần Auth/SSL phức tạp|
+|**Chia sẻ**|Thấp (chỉ local)|Cao (toàn công ty/cộng đồng)|
+|**Mục đích**|Tác vụ cá nhân, file local, tool nhạy cảm|Tác vụ nghiệp vụ, CRM/Database, tool dùng chung|
+
+**Quyết định:** Ưu tiên Local (STDIO) cho tool cá nhân và truy cập tài nguyên local. Chỉ dùng Remote (HTTP) khi cần chia sẻ hoặc truy cập hệ thống tập trung.
+
+**5.2. Một Server nhiều Tool vs Nhiều Server theo Domain:**
+
+|Mô hình|Nguyên tắc|Ưu điểm|Nhược điểm|
+|---|---|---|---|
+|**Monolithic**|Một Server, nhiều Tool|Triển khai đơn giản, quản lý Auth tập trung|Khó mở rộng, lỗi một Tool ảnh hưởng toàn bộ|
+|**Domain-Driven**|Nhiều Server, ít Tool mỗi Server|Dễ mở rộng, Tool độc lập, quản lý Ownership|Quản lý nhiều kết nối phức tạp hơn|
+
+**Khuyến nghị:** Dùng **Domain-Driven Servers** (Microservices) cho hệ thống lớn.
+
+**Ví dụ: Office Pack MCP Server**
+
+Server tập trung văn phòng nên bao gồm:
+
+```
+office-pack-server/
+├── document/summarize_text
+├── email/send_draft (có confirm_gate)
+├── calendar/create_event
+├── spreadsheet/extract_table_to_json
+└── file_system/read_file (scope nghiêm ngặt)
+```
+
+❌ **Common Mistakes:**
+
+1. Đóng gói quá nhiều tool không liên quan
+2. Không tách tool nhạy cảm
+3. Server không đảm bảo Idempotency
+4. Không có Registry cho nhiều Server
+5. Tool quá rộng (ví dụ: `database/query` cho mọi thứ thay vì chia nhỏ theo chức năng)
+
+---
+
+#### 6. Transport & Giao Tiếp
+
+**📌 TL;DR:** STDIO cho local (nhanh), HTTP cho remote (mở rộng). Chọn đúng Transport = tối ưu hiệu suất.
+
+**6.1. STDIO vs HTTP - Cơ chế và Kỹ thuật:**
+
+**STDIO Transport:**
+
+- **Cơ chế:** Luồng input/output tiêu chuẩn của OS, thông điệp JSON-RPC được đóng khung bằng Content-Length header
+- **Ứng dụng:** Kết nối tiến trình local (IDE ↔ Tool Server nền)
+- **Ưu điểm:** Độ trễ cực thấp, không cần config mạng, đơn giản
+- **Nhược điểm:** Chỉ local, không có Auth tích hợp
+
+**HTTP Transport:**
+
+- **Cơ chế:** HTTP POST cho request Client→Server. Streaming/Notification dùng SSE hoặc WebSockets
+- **Ứng dụng:** Tool Server remote, Agent trên Cloud
+- **Ưu điểm:** Mở rộng cao, Auth/Security chuẩn web (OAuth, Bearer Token), dễ tích hợp API Gateway
+- **Nhược điểm:** Độ trễ cao hơn STDIO, cần quản lý mạng/SSL
+
+**6.2. Khi nào dùng cái nào:**
+
+|Tình huống|Transport|Lý do|
+|---|---|---|
+|Tool local (đọc file trên máy dev)|**STDIO**|Tốc độ tối đa, bảo mật local|
+|Tool nghiệp vụ (query CRM công ty)|**HTTP**|Cần Auth, khả năng mở rộng|
+|Tool cần Streaming (tạo video)|**HTTP (với SSE)**|Luồng dữ liệu liên tục|
+|Tool phản hồi nhanh (kiểm tra cú pháp)|**STDIO**|Tránh độ trễ mạng|
+
+❌ **Pitfalls:**
+
+1. **Latency:** Dùng HTTP cho tool cần <100ms → trải nghiệm kém
+2. **Auth:** Quên config Auth Token cho HTTP → Server bị lộ
+3. **Logs:** Logs STDIO khó thu thập hơn HTTP
+4. **Message Framing:** Thiếu/sai Content-Length header → Client không parse được JSON-RPC
+
+---
+
+#### 7. Discovery / Registry / Marketplace
+
+**📌 TL;DR:** Discovery giúp AI biết “thế giới” Tool. Registry là “bản đồ” tập trung. Marketplace là UI người dùng.
+
+**7.1. Cơ chế Discovery:**
+
+**Luồng:**
+
+```
+1. Client gửi: {"method": "tools/list"}
+2. Server trả về: [Metadata Tool 1, Tool 2, ...]
+3. LLM nhận Metadata → Quyết định tool nào gọi
+```
+
+**Vai trò của LLM:** Chất lượng Metadata = Chất lượng Function Calling
+
+**7.2. Registry - Nguồn Sự Thật Tập Trung:**
+
+**Cấu trúc Registry lưu trữ:**
+
+- **Tool Endpoint:** URL của Tool Server
+- **Tool Metadata:** Bản sao Metadata (cập nhật định kỳ)
+- **Governance Data:** Ownership, Security Level, Compliance Status
+
+**Lợi ích:**
+
+- **Centralized Governance:** Kiểm soát tool nào được chạy Production
+- **Simplified Client:** Client chỉ cần biết địa chỉ Registry
+
+**7.3. Marketplace - Từ Kỹ Thuật đến Kinh Doanh:**
+
+Marketplace = Registry + UI, biến danh sách kỹ thuật thành danh mục sản phẩm.
+
+**Tính năng:**
+
+- Tìm kiếm/Lọc theo chức năng, team, chi phí
+- Thống kê sử dụng, latency, chi phí tích lũy
+- Monetization: Tính phí sử dụng tool
+
+**Ví dụ Metadata (mở rộng với Cost Model):**
+
+```json
+{
+  "tool": "document/summarize_text",
+  "version": "1.0.0",
+  "description": "Tóm tắt tài liệu dài thành gạch đầu dòng. Tool Idempotent.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "text_content": {
+        "type": "string",
+        "description": "Nội dung văn bản cần tóm tắt"
+      },
+      "max_points": {
+        "type": "integer",
+        "description": "Số gạch đầu dòng tối đa",
+        "default": 5
+      }
+    },
+    "required": ["text_content"]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "summary_points": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "word_count": {"type": "integer"}
+    }
+  },
+  "security_scope": "document:read",
+  "cost_model": {
+    "unit": "call",
+    "price": 0.001
+  }
+}
+```
+
+❌ **Pitfalls:**
+
+1. Metadata nghèo nàn → LLM gọi sai
+2. Triển khai tool mới mà quên đăng ký Registry
+3. Nhầm Metadata (mô tả) với Tool Call (hành động)
+4. Không có Cost Model → LLM chọn tool đắt không cần thiết
+5. Registry thiếu Governance → rủi ro bảo mật/chất lượng
+
+---
+
+#### 8. Tool Contract Discipline
+
+**📌 TL;DR:** Tool Contract = lời hứa của Server với LLM. Kỷ luật này là nền tảng tin cậy của MCP.
+
+**8.1. Metadata và JSON Schema:**
+
+|Thành phần|Mục đích|Ví dụ|
+|---|---|---|
+|**Name & Description**|LLM hiểu tool làm gì|`file_system/delete_file` (Xóa file)|
+|**Input Schema**|Định nghĩa tham số: required, type, default|`path` (string), `force` (boolean, default: false)|
+|**Output Schema**|Cấu trúc kết quả|`{"status": "success", "file_id": "..."}`|
+|**Security Scope**|Quyền tối thiểu cần thiết|`file:write:delete`|
+|**Idempotency**|Tool có Idempotent không|`true` (nếu có side effect)|
+
+**8.2. Semantic Versioning (SemVer):**
+
+|Version|Thay đổi|Tác động|Chiến lược|
+|---|---|---|---|
+|**MAJOR**|Breaking Change|Client bắt buộc nâng cấp|Thông báo Deprecation sớm, Migration Path|
+|**MINOR**|Backward Compatible|Client cũ vẫn hoạt động|Tự động cập nhật nếu không rủi ro|
+|**PATCH**|Bug fix|Không cần nâng cấp Client|Tự động triển khai|
+
+**Ví dụ Breaking Change ngầm:**
+
+```
+❌ BAD: Thay đổi mô tả tool nhưng không đổi schema
+- LLM suy luận sai → Reasoning Error
+
+❌ BAD: Thay đổi logic nghiệp vụ (công thức tính thuế)
+  mà không tăng MAJOR version
+- Vi phạm Tool Contract Discipline
+```
+
+**Template Tool Spec:**
+
+```json
+{
+  "tool": "namespace/tool_name",
+  "version": "1.0.0",
+  "description": "Mô tả ngắn gọn cho LLM",
+  "input_schema": { /* JSON Schema */ },
+  "output_schema": { /* JSON Schema */ },
+  "idempotent": true,
+  "max_timeout_seconds": 30
+}
+```
+
+❌ **Common Mistakes:**
+
+1. “Silent” Breaking Change (thay đổi logic mà không đổi version)
+2. Thiếu Ownership (tool không có người chịu trách nhiệm)
+3. Deprecation đột ngột (xóa tool không thông báo)
+4. Metadata mơ hồ (description không rõ ràng)
+5. Không validate Input theo Schema
+
+---
+
+#### 9. Security & Permission + Threat Model Mini
+
+**📌 TL;DR:** Bảo mật MCP = Defense-in-depth: Scope (Server) + Guardrail (Client) + Audit (Governance).
+
+**9.1. Threat Model - 4 Threats Chính:**
+
+|Threat|Attack|Impact|Mitigations|
+|---|---|---|---|
+|**Prompt Injection**|Thao túng LLM gọi tool ngoài ý muốn|Xóa file, gửi email độc hại|Guardrail (kiểm tra input), Confirm Gate, Least Privilege|
+|**Data Exfiltration**|Rò rỉ dữ liệu nhạy cảm ra ngoài|Mất dữ liệu khách hàng, tài chính|Scope (giới hạn quyền), Audit Logs, Allowlist|
+|**Tool Abuse**|Gọi tool liên tục → quá tải/chi phí cao|Server down, hóa đơn tăng đột biến|Rate Limit, Timeout, Cost Model|
+|**Supply Chain**|Tool bên thứ ba có mã độc|Toàn bộ hệ thống bị xâm nhập|Sandbox, Review Policy|
+
+**9.2. Ba lớp phòng thủ:**
+
+**Lớp 1: Server-Side (Auth & Scope)**
+
+```
+• Authentication: Xác minh danh tính (OAuth 2.0, JWT)
+• Authorization: Kiểm tra Scope trong Token
+• Input Sanitization: Làm sạch input chống injection
+```
+
+**Lớp 2: Host App (Guardrail & Confirm Gate)**
+
+```
+• Guardrail: Logic nghiệp vụ kiểm tra trước khi gửi tool call
+  Ví dụ: Chặn transfer_money nếu amount > $10,000
+  
+• Confirm Gate: Hộp thoại xác nhận cho tool có side effect cao
+  Ví dụ: "Bạn có chắc gửi 100 emails?"
+```
+
+**Lớp 3: Governance (Audit & Review)**
+
+```
+• Audit Log: Ghi mọi tool call có side effect
+• Review Policy: Tool mới phải qua Security Review
+```
+
+**Case Study: Tool đọc email/calendar cần gì:**
+
+```
+Tool: email/read_inbox
+
+1. Scope nghiêm ngặt: 
+   - Chỉ email:read:self (không read:all)
+   
+2. Guardrail:
+   - Chỉ truy cập email 30 ngày gần nhất
+   
+3. Audit Log:
+   - Ghi mỗi lần đọc (user, time, tiêu đề email)
+   
+4. Tách quyền:
+   - send_email và delete_email là tool riêng
+```
+
+❌ **Common Mistakes:**
+
+1. Cấp Scope quá rộng (ví dụ: `admin:*`)
+2. Không có Confirm Gate cho tool nguy hiểm
+3. Guardrail không đủ mạnh
+4. Thiếu Audit Log
+5. Dùng tool bên thứ ba mà không Sandbox
+
+---
+
+#### 10. Testing & Observability
+
+**📌 TL;DR:** Contract Tests = kiểm tra lời hứa. Observability = hiểu “tại sao” agent hành động.
+
+**10.1. Contract Tests:**
+
+**Mục đích:** Đảm bảo Tool tuân thủ JSON Schema đã công bố.
+
+**Các loại test:**
+
+1. **Schema Validation:**
+    
+    - Input/Output khớp JSON Schema không?
+2. **Idempotency Test:**
+    
+    - Gọi 2 lần cùng Idempotency Key → 1 side effect
+3. **Error Taxonomy Test:**
+    
+    - Thiếu tham số → lỗi `40001: Invalid Argument`
+    - Lỗi mạng giả lập → lỗi `50001: Service Unavailable`
+4. **Mock Tools:**
+    
+    - Client test logic Planner mà không gọi tool thật
+
+**10.2. Tracing & Audit Log:**
+
+**Tracing:**
+
+```
+Mỗi request gắn trace_id duy nhất
+→ Truyền qua Client → Server → Database/API
+→ Debug bằng cách tìm trace_id trong logs
+```
+
+**Audit Log:**
+
+```
+Ghi cho mọi tool có side effect:
+- Ai gọi (Client ID)
+- Tool nào
+- Tham số
+- Thời gian
+- Kết quả
+```
+
+**10.3. Debugging Checklist:**
+
+```
+Khi agent thất bại:
+
+1. Tìm trace_id trong Audit Log/Server Log
+2. Kiểm tra LLM Reasoning:
+   - LLM chọn đúng tool không?
+   - Tham số đúng không?
+3. Kiểm tra Tool Contract:
+   - Tool trả đúng JSON Schema không?
+   - Mô tả tool rõ ràng không?
+4. Kiểm tra Scope/Auth:
+   - Token hết hạn không?
+   - Thiếu Scope không?
+5. Kiểm tra Error Taxonomy:
+   - Lỗi retryable không?
+   - Agent đã retry chưa?
+```
+
+❌ **Common Mistakes:**
+
+1. Triển khai tool mà không Contract Test
+2. Log thiếu trace_id và tool_name
+3. Không đo Latency
+4. Bỏ qua Mock Tools cho testing
+
+---
+
+#### 11. Performance & Cost
+
+**📌 TL;DR:** Latency Budget + Cost Model giúp Planner đưa ra quyết định tối ưu, không chỉ đúng mà còn nhanh và rẻ.
+
+**11.1. Latency Budgets:**
+
+**Phân loại:**
+
+|Loại|Thời gian|Mục đích|
+|---|---|---|
+|**Ultra-Low**|<10ms|Tool local (STDIO): kiểm tra cú pháp, đọc config|
+|**Low**|10-100ms|Tool remote (HTTP): truy cập cache/DB nội bộ|
+|**High**|>500ms|Tool gọi API ngoài, xử lý dữ liệu lớn|
+
+**Tối ưu:**
+
+- **STDIO:** Luôn ưu tiên cho tool local
+- **HTTP:** Dùng Long-Polling/WebSockets cho tool >5s
+- **Timeout:** Client áp dụng nghiêm ngặt, hủy nếu vượt budget
+
+**11.2. Caching & Resource Pre-fetching:**
+
+**Caching:**
+
+```
+• Tool Call Caching (Client-Side):
+  - Tool Idempotent + input cố định
+  
+• Resource Caching (Server-Side):
+  - Resource Get với TTL dài
+  - Server cung cấp version/last_updated
+```
+
+**Pre-fetching:**
+
+```
+Client lấy Resource cần thiết ngay khi khởi động
+→ Giảm latency khi LLM cần
+```
+
+**11.3. Cost Model & Anti-patterns:**
+
+**Cost Model trong Metadata:**
+
+```json
+{
+  "cost_model": {
+    "unit": "call",
+    "price": 0.001
+  }
+}
+```
+
+**LLM Decision-Making:**
+
+```
+Khi có nhiều tool cùng chức năng:
+→ LLM chọn tool rẻ hơn nếu yêu cầu không đòi hỏi độ chính xác cao
+```
+
+**Anti-patterns:**
+
+|Anti-pattern|Mô tả|Tác động|Giải pháp|
+|---|---|---|---|
+|**Chatty Tool**|Tool quá nhỏ, gọi nhiều lần|Tăng Latency, tăng chi phí LLM Token|Gộp logic thành 1 tool (Monolithic Tool)|
+|**Fat Tool**|Tool trả quá nhiều data không cần|Tăng chi phí Token, đầy Context Window|Dùng output_schema chỉ trả field cần thiết|
+|**Blind Tool**|Tool không đủ Metadata|LLM gọi nhiều lần để đoán tham số|Tuân thủ Contract Discipline, description chi tiết|
+|**Token-Heavy**|Tool trả data lớn (toàn bộ log file)|Tăng chi phí Token, latency|Dùng Resource tóm tắt hoặc trả đoạn liên quan|
+
+❌ **Common Mistakes:**
+
+1. Dùng HTTP cho tool cần <100ms
+2. Không cache Resource
+3. Bỏ qua Cost Model
+4. Tool Chatty/Fat/Blind
+5. Không đặt Latency Budget
+
+---
+
+#### 12. Lifecycle & Governance
+
+**📌 TL;DR:** Registry + Ownership + Versioning = Quản trị tool trong doanh nghiệp.
+
+**12.1. Registry - Cấu trúc và Ownership:**
+
+**Entry trong Registry:**
+
+```json
+{
+  "tool": "document/summarize_text",
+  "owner_team": "finance-platform",
+  "owner_email": "fin-platform@company.com",
+  "security_level": "LOW",
+  "last_security_review": "2025-12-01",
+  "compliance_status": "GDPR_COMPLIANT"
+}
+```
+
+**Ownership bắt buộc:**
+
+- Tool không có Owner → Orphaned → Xóa sau cảnh báo
+
+**12.2. Review Policy:**
+
+**Security Review (Bắt buộc):**
+
+```
+1. Scope Validation: Tuân thủ Least Privilege?
+2. Idempotency Check: Logic Idempotency đúng?
+3. Input Sanitization: Xử lý input an toàn?
+4. Data Access Review: Truy cập data nhạy cảm?
+```
+
+**Business Review:**
+
+```
+1. Cost Justification: Chi phí thực thi hợp lý?
+2. Redundancy Check: Trùng lặp tool đã tồn tại?
+```
+
+**12.3. Versioning & Deprecation:**
+
+**Strict SemVer:**
+
+```
+Breaking Change = MAJOR bump
+→ Client cũ được bảo vệ
+```
+
+**Multiple Versions:**
+
+```
+Server chạy nhiều phiên bản cùng lúc:
+- crm/create_lead@v1
+- crm/create_lead@v2
+```
+
+**Deprecation:**
+
+```
+1. Cảnh báo: Tool đánh dấu deprecated, ngày loại bỏ (6 tháng)
+2. Migration Path: Cung cấp tool thay thế
+3. Forced Deprecation: Sau thời hạn → Tool trả lỗi 410 Gone
+```
+
+❌ **Common Mistakes:**
+
+1. “Silent” Breaking Change
+2. Tool không có Owner
+3. Deprecation đột ngột
+4. Không có Migration Path
+5. Thiếu Review Policy
+
+---
+
+#### 13. MVP Implementation Guide
+
+**📌 TL;DR:** Bắt đầu với STDIO + 3 demo tools → Học MCP nhanh nhất.
+
+**13.1. Các bước triển khai:**
+
+**1. Chọn SDK và Ngôn ngữ:**
+
+```
+Python/Go/Node.js + MCP SDK chính thức
+```
+
+**2. Khởi tạo Server và Transport:**
+
+```
+Tạo Server MCP mới
+→ Bắt đầu với STDIO Transport
+```
+
+**3. Định nghĩa Tool Contract:**
+
+```
+3 demo tools:
+• summarize_text
+• compare_documents  
+• extract_table_to_json
+
+Mỗi tool có:
+- description rõ ràng
+- JSON Schema Input/Output đầy đủ
+- version: 1.0.0
+```
+
+**4. Viết Logic Tool:**
+
+```
+Triển khai hàm logic nghiệp vụ
+→ Logic không chứa Auth/Tracing (SDK lo)
+```
+
+**5. Tích hợp Tracing và Logging:**
+
+```
+Server tự động gán trace_id cho mỗi Tool Call
+```
+
+**6. Chạy và Kiểm tra End-to-End:**
+
+```
+• Khởi động Server
+• Dùng MCP Inspector/Client demo
+• Discovery: tools/list
+• Call: tools/call
+```
+
+**Checklist “Done = End-to-End”:**
+
+```
+□ Server khởi động thành công
+□ Client kết nối và Discovery thành công
+□ LLM/Agent nhận Metadata 3 tools
+□ Agent gọi summarize_text → kết quả hợp lệ
+□ Tool Call ghi Audit Log với trace_id
+□ Tool Call thất bại → lỗi theo Error Taxonomy
+```
+
+**13.2. Demo Tools chi tiết:**
+
+**Tool 1: summarize_text**
+
+```json
+{
+  "tool": "text/summarize",
+  "description": "Tóm tắt văn bản dài thành gạch đầu dòng",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "text": {"type": "string"},
+      "max_points": {"type": "integer", "default": 3}
+    },
+    "required": ["text"]
+  }
+}
+```
+
+**Tool 2: compare_documents**
+
+```json
+{
+  "tool": "text/compare",
+  "description": "So sánh 2 tài liệu, trả về điểm tương đồng",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "doc1": {"type": "string"},
+      "doc2": {"type": "string"}
+    },
+    "required": ["doc1", "doc2"]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "similarity_score": {"type": "number", "minimum": 0, "maximum": 1}
+    }
+  }
+}
+```
+
+**Tool 3: extract_table_to_json**
+
+```json
+{
+  "tool": "data/extract_table",
+  "description": "Trích bảng từ văn bản, chuyển thành JSON",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "text_with_table": {"type": "string"}
+    },
+    "required": ["text_with_table"]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "rows": {
+        "type": "array",
+        "items": {"type": "object"}
+      }
+    }
+  }
+}
+```
+
+---
+
+#### 14. Khi Nào KHÔNG Nên Dùng MCP?
+
+**📌 TL;DR:** MCP cho Agentic Workflow + Enterprise Governance. Nếu chỉ cần API đơn giản → Không cần MCP.
+
+**14.1. Các trường hợp KHÔNG phù hợp:**
+
+|Tình huống|Lý do|Giải pháp thay thế|
+|---|---|---|
+|**LLM-Only Tasks**|Tóm tắt, dịch, sáng tạo nội dung - không cần tool bên ngoài|Gọi LLM API trực tiếp|
+|**API Truyền thống**|REST API đơn giản lấy data|REST/gRPC API|
+|**Tác vụ UI phức tạp**|Điền form nhiều bước trên web|Selenium/Playwright|
+|**Tác vụ dài hạn**|Huấn luyện model AI 10 giờ|Workflow Engines (Airflow, Temporal)|
+
+**14.2. Bảng quyết định:**
+
+```
+Có cần Agent tự động hóa đa bước?
+│
+├─ KHÔNG → Dùng API truyền thống
+│
+└─ CÓ → Có cần bảo mật nghiêm ngặt?
+    │
+    ├─ KHÔNG → Function Calling đơn giản
+    │
+    └─ CÓ → Có cần quản lý nhiều tool/version?
+        │
+        ├─ KHÔNG → In-house tool đơn giản
+        │
+        └─ CÓ → ✅ DÙNG MCP
+```
+
+**14.3. Ví dụ cụ thể:**
+
+```
+❌ KHÔNG dùng MCP:
+- Chatbot trả lời FAQ (LLM-only)
+- API lấy danh sách user (REST đủ)
+- Tự động hóa UI test (dùng Playwright)
+
+✅ NÊN dùng MCP:
+- Agent tự động xử lý đơn hàng (đa tool)
+- Hệ thống phân tích tài chính (cần bảo mật cao)
+- Platform tích hợp 100+ tools nội bộ (cần quản trị)
+```
+
+❌ **Over-engineering Warning:**
+
+```
+Dấu hiệu Over-engineering:
+• Tool chỉ có 1-2 hàm đơn giản
+• Không cần chia sẻ giữa nhiều agent
+• Không cần audit trail
+• Không cần versioning phức tạp
+
+→ Giải pháp đơn giản hơn sẽ tốt hơn
+```
+
+---
+
+### A5. Hands-on Scenarios
+
+> **🎯 Mục tiêu:** Mỗi scenario 250-350 từ, minh họa tool call thực tế.
+
+#### Scenario 1: Office - Tóm tắt doc + tạo email nháp
+
+**User Request:** “Tóm tắt báo cáo tài chính Q4 thành 3 điểm chính, rồi viết email nháp gửi sếp.”
+
+**Tools sử dụng:**
+
+1. `document/summarize_text`
+    
+    - Scope: `document:read`
+    - Idempotent: true
+2. `email/create_draft`
+    
+    - Scope: `email:write:draft`
+    - Side effect: true (tạo draft)
+    - Confirm Gate: false (chỉ draft)
+
+**Luồng thực thi:**
+
+```json
+// Step 1: Tóm tắt
+{
+  "tool": "document/summarize_text",
+  "arguments": {
+    "path": "/reports/Q4_2025.pdf",
+    "max_points": 3
+  }
+}
+// Response:
+{
+  "summary_points": [
+    "Doanh thu tăng 15%",
+    "Lợi nhuận ròng 120 tỷ",
+    "Kế hoạch mở rộng thị trường X"
+  ]
+}
+
+// Step 2: Tạo email draft
+{
+  "tool": "email/create_draft",
+  "arguments": {
+    "to": "boss@company.com",
+    "subject": "Tóm tắt Báo cáo Q4",
+    "body": "[3 điểm từ Step 1]"
+  },
+  "idempotency_key": "draft_q4_20251217"
+}
+// Response:
+{
+  "draft_id": "DRAFT-12345",
+  "status": "pending_user_review"
+}
+```
+
+**Lưu ý bảo mật:**
+
+- Tool 1: Chạy trong Sandbox giới hạn `/reports`
+- Tool 2: Bắt buộc Confirm Gate nếu gửi thật (không phải draft)
+
+---
+
+#### Scenario 2: Excel-ish - Trích bảng → JSON → gợi ý công thức
+
+**User Request:** “Có bảng doanh số trong `Sales_Data.txt`. Trích xuất thành JSON, gợi ý công thức Excel tính tổng cột Revenue.”
+
+**Tools sử dụng:**
+
+1. `spreadsheet/extract_table_to_json`
+    - Scope: `data:read`
+    - Timeout: 30s (file lớn có thể lâu)
+
+**Luồng:**
+
+```json
+// Step 1: Trích bảng
+{
+  "tool": "spreadsheet/extract_table_to_json",
+  "arguments": {
+    "path": "/data/Sales_Data.txt",
+    "format": "csv"
+  }
+}
+// Response:
+{
+  "json_data": [
+    {"Product": "A", "Revenue": 100},
+    {"Product": "B", "Revenue": 200}
+  ]
+}
+
+// Step 2: LLM Reasoning (không gọi tool)
+// Input: json_data từ Step 1
+// Output: "Công thức: =SUM(C2:C10) (giả định cột Revenue là C)"
+```
+
+**Lưu ý:**
+
+- Dữ liệu JSON là **Resource** tạm thời cho LLM
+- Cần đảm bảo dữ liệu không quá lớn (tránh quá tải Context Window)
+
+---
+
+#### Scenario 3: Research - Tìm nguồn + tổng hợp (Tool Fact vs LLM Write)
+
+**User Request:** “Tìm 3 bài báo khoa học mới nhất về ‘Model Context Protocol’, tổng hợp điểm khác biệt với Plugin truyền thống.”
+
+**Tools sử dụng:**
+
+1. `research/search_papers`
+    
+    - Scope: `external:search`
+    - Rate Limit: 100/phút
+2. `document/get_content`
+    
+    - Scope: `external:read`
+    - Timeout: 10s/URL
+
+**Luồng:**
+
+```json
+// Step 1: Tìm nguồn
+{
+  "tool": "research/search_papers",
+  "arguments": {
+    "query": "Model Context Protocol vs traditional plugins",
+    "limit": 3
+  }
+}
+// Response: [{"title": "MCP: A New Standard", "url": "..."}]
+
+// Step 2: Trích xuất nội dung (3 lần)
+{
+  "tool": "document/get_content",
+  "arguments": {"url": "[URL từ Step 1]"}
+}
+// Response: {"content": "[Nội dung đầy đủ bài báo]"}
+
+// Step 3: LLM phân tích (Model Reasoning)
+// Input: Nội dung 3 bài báo
+// Output: Bảng so sánh chi tiết
+```
+
+**Gắn nhãn rõ:**
+
+- Step 1, 2: **“Tool Truth”** (dữ liệu thực tế từ tool)
+- Step 3: **“Model Reasoning”** (suy luận của LLM)
+
+**Lưu ý bảo mật:**
+
+- Cần Rate Limit để tránh lạm dụng API bên ngoài
+- Timeout thấp để tránh treo khi URL không phản hồi
+
+---
+
+#### Scenario 4: Ảnh - Resize + nén + đặt tên theo rule
+
+**User Request:** “Lấy ảnh `logo.png`, resize 128×128, nén chất lượng 80%, lưu tên `logo_small_128.jpg`.”
+
+**Tools sử dụng:**
+
+1. `image/process`
+    
+    - Scope: `file:read`, `file:write`
+    - Actions: [resize, compress]
+2. `file_system/move_file`
+    
+    - Scope: `file:write`
+    - Idempotent: true
+
+**Luồng:**
+
+```json
+// Step 1: Xử lý ảnh
+{
+  "tool": "image/process",
+  "arguments": {
+    "input_path": "logo.png",
+    "actions": [
+      {"op": "resize", "size": "128x128"},
+      {"op": "compress", "quality": 80}
+    ]
+  }
+}
+// Response: {"temp_path": "/tmp/processed_image.jpg"}
+
+// Step 2: Đổi tên và di chuyển
+{
+  "tool": "file_system/move_file",
+  "arguments": {
+    "source": "/tmp/processed_image.jpg",
+    "destination": "assets/logo_small_128.jpg"
+  },
+  "idempotency_key": "move_logo_20251217"
+}
+// Response: {"status": "success"}
+```
+
+**Lưu ý:**
+
+- Tool 1 chạy trong **Sandbox** ngăn truy cập file ngoài phạm vi
+- Tool 2 cần **Idempotency** để tránh lỗi khi retry
+
+---
+
+#### Scenario 5: Workflow - Lấy data → so sánh → xuất báo cáo
+
+**User Request:** “Lấy doanh số từ CRM, so sánh với mục tiêu. Nếu đạt >90%, xuất báo cáo Markdown.”
+
+**Tools sử dụng:**
+
+1. `crm/get_sales_data` (Tool)
+    
+    - Scope: `crm:read`
+    - Caching: 1 giờ
+2. `config/sales_target` (Resource)
+    
+    - Scope: `policy:read`
+3. `file_system/write_markdown` (Tool)
+    
+    - Scope: `file:write`
+    - Confirm Gate: true (nếu ghi đè file cũ)
+
+**Luồng:**
+
+```json
+// Step 1: Lấy dữ liệu
+{"tool": "crm/get_sales_data", "arguments": {"period": "last_month"}}
+// Response: {"actual": 95000, "target": 100000}
+
+// Step 2: Lấy mục tiêu (Resource)
+{"resource": "config/sales_target"}
+// Response: {"threshold": 0.9}
+
+// Step 3: Planner tính toán (95000/100000 = 95% > 90%)
+// → Quyết định: export_report = true
+
+// Step 4: Xuất báo cáo
+{
+  "tool": "file_system/write_markdown",
+  "arguments": {
+    "path": "report_95_percent.md",
+    "content": "[Báo cáo chi tiết]"
+  }
+}
+```
+
+**Lưu ý:**
+
+- Logic so sánh do **Planner** thực hiện (không phải tool)
+- Tool 3 cần Confirm Gate nếu ghi đè file quan trọng
+
+---
+
+### A6. Case Study A→Z
+
+> **🎯 Mục tiêu:** 900-1.200 từ, minh họa luồng end-to-end phức tạp.
+
+**Tình huống:** Xử lý yêu cầu “Kiểm tra dự án ‘Project Alpha’ có chậm tiến độ không. Nếu có, tìm 3 lý do chính và gửi cảnh báo Slack cho nhóm trưởng.”
+
+#### 1. Phân tích yêu cầu (Agent Planner)
+
+**Phân tích:** Yêu cầu cần 3 hành động:
+
+1. Kiểm tra tiến độ (Tool)
+2. Tìm lý do từ báo cáo (Tool)
+3. Gửi cảnh báo (Tool)
+
+**Lập kế hoạch:**
+
+```
+1. Call: project/get_status(Project Alpha)
+2. IF status = delayed:
+   a. Call: document/search_reports("Alpha delay reasons")
+   b. Call: document/summarize_text (3 báo cáo) 
+   c. Call: communication/send_slack_message
+3. ELSE: Trả lời "Dự án đúng tiến độ"
+```
+
+#### 2. Thực thi và Giao tiếp MCP
+
+**Bảng luồng chi tiết:**
+
+|Bước|Thành phần|Hành động|Kết quả (Tool Truth)|Nhãn|
+|---|---|---|---|---|
+|1|MCP Client|`tools/list`|Metadata: get_status, search_reports, send_slack|Tool Contract|
+|2|LLM→Client→Server|`project/get_status(Alpha)`|`{"status": "delayed", "delay_days": 7}`|Tool Truth|
+|3|LLM→Client→Server|`document/search_reports(...)`|`{"reports": ["A.pdf", "B.pdf", "C.pdf"]}`|Tool Truth|
+|4|LLM→Client→Server|`document/summarize_text(A)`|`{"summary": "Thiếu nhân lực"}`|Tool Truth|
+|5|LLM→Client→Server|`document/summarize_text(B)`|`{"summary": "Lỗi tích hợp"}`|Tool Truth|
+|6|LLM→Client→Server|`document/summarize_text(C)`|`{"summary": "Phê duyệt chậm"}`|Tool Truth|
+|7|LLM→Client→Server|`communication/send_slack(...)`|`{"status": "success", "message_id": "SLK-123"}`|Tool Truth|
+|8|LLM|Tổng hợp kết quả|“Alpha chậm 7 ngày. Đã gửi Slack: Thiếu nhân lực, Lỗi tích hợp, Phê duyệt chậm”|Model Reasoning|
+
+#### 3. Sơ đồ tuần tự (Mermaid)
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant L as LLM/Planner
+    participant C as MCP Client
+    participant S as MCP Server
+    
+    U->>L: Check Alpha & notify
+    L->>C: Call project/get_status
+    C->>S: JSON-RPC: get_status
+    S-->>C: {status: delayed}
+    C-->>L: Context: delayed
+    
+    L->>L: Plan: search reports
+    L->>C: Call document/search_reports
+    C->>S: JSON-RPC: search_reports
+    S-->>C: {reports: [A, B, C]}
+    C-->>L: Context: Found 3
+    
+    L->>L: Plan: summarize (3 calls)
+    
+    par Summarize A
+        C->>S: summarize(A)
+        S-->>C: Reason 1
+        C-->>L: Reason 1
+    and Summarize B
+        C->>S: summarize(B)
+        S-->>C: Reason 2
+        C-->>L: Reason 2
+    and Summarize C
+        C->>S: summarize(C)
+        S-->>C: Reason 3
+        C-->>L: Reason 3
+    end
+    
+    L->>L: Plan: send message
+    L->>C: Call send_slack
+    C->>S: JSON-RPC: send_slack
+    S-->>C: {success}
+    C-->>L: Message sent
+    
+    L->>U: Final Response
+```
+
+#### 4. What Went Wrong & Debug Steps
+
+**Tình huống lỗi:** Tool `send_slack_message` trả về `401: Invalid Auth Token`
+
+**Debug Checklist:**
+
+|Vấn đề|Nguyên nhân|Debug Steps|
+|---|---|---|
+|Lỗi 401|Token hết hạn hoặc thiếu Scope `slack:post:message`|1. Kiểm tra Audit Log trên Server Slack: Token nào được dùng  <br>2. Kiểm tra trace_id trong Client log  <br>3. Xác nhận Scope trong Registry/Metadata  <br>4. Khắc phục: Cấp Token OAuth mới|
+|Tool Timeout|`search_reports` mất 60s, vượt `max_timeout: 30s`|1. Kiểm tra Latency Log trên Server  <br>2. Khắc phục: Tối ưu tool (thêm Caching) hoặc tăng timeout + cập nhật SemVer|
+
+**Khi tool thất bại:**
+
+```
+1. Tìm trace_id trong logs
+2. Kiểm tra Error Taxonomy:
+   - 401/403: Security Error → Không retry
+   - 503: Transient Error → Có thể retry
+3. Xác minh Scope/Auth Token
+4. Kiểm tra Tool Contract: Output khớp Schema?
+5. Review LLM Reasoning: Tham số đúng không?
+```
+
+#### 5. Phân tích sâu: Gắn nhãn Tool Truth vs Model Reasoning
+
+**Tool Truth (từ Tool):**
+
+```
+• status: delayed (Step 2)
+• delay_days: 7 (Step 2)
+• reports: [A, B, C] (Step 3)
+• Lý do 1, 2, 3 (Steps 4-6)
+• message_id: SLK-123 (Step 7)
+```
+
+**Model Reasoning (từ LLM):**
+
+```
+• Phân tích: "7 ngày là chậm"
+• Quyết định: "Cần gửi cảnh báo"
+• Tổng hợp: "3 lý do chính là..."
+• Câu trả lời cuối: "Đã gửi Slack..."
+```
+
+**Tại sao phân biệt quan trọng:**
+
+- Tool Truth = dữ liệu đáng tin (không thể bịa đặt)
+- Model Reasoning = phân tích (có thể bias/sai)
+- Người dùng cần biết phần nào là “sự thật” vs “suy luận”
+
+---
+
+### A7. Kết Main Guide
+
+#### One-Page Cheat Sheet
+
+|Khái niệm|Chức năng|Primitive|Bảo mật|Lifecycle|
+|---|---|---|---|---|
+|**MCP**|Giao thức chuẩn hóa Tool/Context cho LLM|Tool (hành động), Resource (dữ liệu), Prompt (template)|Least Privilege, Scope, Guardrail, Sandbox|Versioning (SemVer), Deprecation, Rollback|
+|**Kiến trúc**|Client-Server qua JSON-RPC|Discovery (tìm tool), Metadata (mô tả), Idempotency (an toàn retry)|Auth Token, Confirm Gate|Ownership, Review Policy|
+|**Giao tiếp**|STDIO (local, nhanh), HTTP (remote, mở rộng)|Tracing (theo dõi), Error Taxonomy (phân loại lỗi)|Rate Limit, Caching|Latency Budgets|
+
+#### Mini FAQ (10 câu)
+
+**1. MCP có thay thế Agent Framework không?**  
+Không. MCP là giao thức cung cấp tool, Agent Framework xây dựng logic planner. Chúng bổ sung nhau.
+
+**2. Nên dùng STDIO hay HTTP?**  
+STDIO cho tool local (nhanh), HTTP cho tool remote (bảo mật + mở rộng).
+
+**3. Làm sao ngăn AI xóa dữ liệu quan trọng?**  
+Least Privilege (không cấp quyền xóa không cần), Confirm Gate, Sandbox nghiêm ngặt.
+
+**4. Metadata có quan trọng không?**  
+Cực kỳ quan trọng. Đây là cách DUY NHẤT LLM hiểu tool. Metadata nghèo = Function Calling sai.
+
+**5. Tool Contract Discipline là gì?**  
+Tuân thủ quy tắc đặt tên, Schema, Idempotency, Timeout. Đảm bảo tool hoạt động nhất quán.
+
+**6. Khi nào dùng Resource thay Tool?**  
+Resource cho data tĩnh (schema, config). Tool cho hành động có side effect hoặc logic phức tạp.
+
+**7. Debug tool call lỗi như thế nào?**  
+Tìm trace_id → Kiểm tra Error Taxonomy → Xác minh Scope/Auth → Kiểm tra Tool Contract.
+
+**8. MCP có hỗ trợ Streaming không?**  
+Có. Qua HTTP Transport dùng SSE hoặc WebSockets cho tool có output lớn/realtime.
+
+**9. Thay đổi Tool Contract phải làm gì?**  
+Cập nhật Versioning (SemVer). Breaking change = MAJOR bump + Deprecation version cũ.
+
+**10. “Chatty Tool” anti-pattern là gì?**  
+Tool quá nhỏ, agent gọi nhiều lần. Nên gộp hành động liên quan thành 1 tool để giảm latency.
+
+#### Checklist Triển Khai (Dev)
+
+```
+□ Tool Contract định nghĩa bằng JSON Schema chi tiết
+□ Tool kiểm tra Idempotency (nếu có side effect)
+□ Server cấu hình Timeout và Rate Limit
+□ Triển khai Tracing với trace_id cho mọi Tool Call
+□ Viết Contract Tests kiểm tra Tool Contract
+□ Cấu hình Auth/Scope theo Least Privilege
+□ Metadata đầy đủ: description, input/output schema
+□ Có Error Response skeleton theo Taxonomy
+```
+
+#### Checklist Dùng An Toàn (Non-Tech)
+
+```
+□ Kiểm tra Scope của tool trước khi cho agent dùng
+□ Bật Confirm Gate cho tool có side effect cao
+□ Thường xuyên kiểm tra Audit Log cho tool nhạy cảm
+□ Không cung cấp data nhạy cảm trực tiếp vào Prompt
+□ Chỉ dùng tool từ Server đã Allowlist và kiểm duyệt
+□ Đặt Cost Budget cho mỗi phiên agent
+□ Có kế hoạch Rollback khi tool mới lỗi
+```
+
+---
+
+## PHẦN B — EXTENDED APPENDIX (Optional)
+
+> **📘 Lưu ý:** Phần này có thể dài hơn Main Guide, chứa template đầy đủ, FAQ mở rộng, và deployment patterns chi tiết.
+
+### B1. Glossary Đầy Đủ
+
+_(Mở rộng từ A3 Newbie Term Checklist với các thuật ngữ kỹ thuật sâu hơn)_
+
+**Các thuật ngữ bổ sung:**
+
+|Thuật ngữ|Định nghĩa|Bối cảnh ứng dụng|
+|---|---|---|
+|**JSON-RPC 2.0**|Giao thức RPC dùng JSON mã hóa data|Data Layer trong MCP|
+|**Semantic Versioning**|Quy ước đánh số version: MAJOR.MINOR.PATCH|Quản lý lifecycle tool|
+|**Confirm Gate**|Cơ chế yêu cầu xác nhận trước khi thực thi|Tool nhạy cảm (payment, delete)|
+|**Error Budget**|Ngân sách lỗi được chấp nhận (downtime)|Đo độ tin cậy qua SLO/SLA|
+|**Multi-Tenant**|Server phục vụ nhiều tổ chức độc lập|SaaS Marketplace|
+|**Single-Tenant**|Server chỉ phục vụ 1 tổ chức|On-premise/local deployment|
+|**Secrets Management**|Quản lý an toàn API Key/Token|Tool truy cập hệ thống ngoài|
+|**Context Window**|Giới hạn token LLM xử lý được|MCP tối ưu bằng Resource thay nhúng toàn bộ data|
+|**Tool Abuse**|Agent gọi tool không hiệu quả/quá nhiều|Ngăn chặn bằng Rate Limit, Cost Model|
+|**Zero-Shot Tool Use**|LLM gọi tool mà không cần ví dụ|Mục tiêu của Tool Contract hoàn hảo|
+
+### B2. FAQ Mở Rộng (25-40 câu)
+
+_(Bổ sung 15-30 câu nữa từ 10 câu trong Main Guide)_
+
+**11. MCP có phải API Gateway không?**  
+Không hoàn toàn. API Gateway tập trung routing/security HTTP. MCP là giao thức chuyên cho AI, tập trung Metadata/Contract để LLM hiểu API tự động.
+
+**12. MCP xử lý tool async như thế nào?**  
+Hỗ trợ Notification + Progress Tracking. Client gọi tool → Server trả `operation_id` ngay → Gửi Notification khi hoàn thành.
+
+**13. MCP dùng được cho Small Language Models?**  
+Có. MCP là giao thức, không phụ thuộc kích thước model. Miễn model có Function Calling (tạo JSON) là dùng được.
+
+**14. STDIO Transport có an toàn không?**  
+An toàn cho Local Server (không qua mạng). Nhưng không có Auth tích hợp, không nên dùng Remote Server.
+
+**15. Làm sao đảm bảo Metadata khớp logic tool?**  
+Contract Tests tự động trong CI/CD. Kiểm tra Tool Contract (Metadata) khớp logic thực thi.
+
+**16. MCP giải quyết được Hallucination không?**  
+Không trực tiếp, nhưng giảm thiểu bằng Tool Truth (data đáng tin từ tool/resource) thay vì LLM tự suy diễn.
+
+**17. Tại sao cần trace_id trong mọi response?**  
+trace_id là chìa khóa Observability. Liên kết logs từ LLM, Client, Server, hệ thống phụ để debug.
+
+**18. Tool và Resource nên đặt cùng Server?**  
+Tùy Domain. Nếu liên quan chặt (tool `query_database` + resource `database_schema`) → cùng Server. Nếu không → tách biệt.
+
+**19. Quản lý chi phí khi gọi tool external API?**  
+Cost Model trong Metadata → LLM ưu tiên tool rẻ. Áp dụng Rate Limit + Caching giảm API calls.
+
+**20. Rollback trong MCP thế nào?**  
+Rollback ở cấp Server. Nếu tool mới lỗi → triển khai lại Server cũ + cập nhật Registry trỏ về version cũ.
+
+_(Tiếp tục thêm 5-20 câu nữa tùy độ dài mong muốn)_
+
+### B3. Templates Đầy Đủ
+
+#### Tool Spec Template (Chi tiết)
+
+````markdown
+# Tool Specification: [namespace/tool_name]
+
+**Tên Tool:** [Tên dễ đọc]
+**Namespace:** [namespace]
+**Phiên bản (SemVer):** 1.0.0
+**Chủ sở hữu:** [Team/Person]
+**Trạng thái:** [Active/Deprecated/Beta]
+
+**Mô tả (cho LLM):**
+[Chi tiết chức năng, giới hạn, side effects]
+
+**JSON Schema - Input:**
+```json
+{
+  "type": "object",
+  "properties": {
+    "param1": {
+      "type": "string",
+      "description": "Mô tả chi tiết param1"
+    }
+  },
+  "required": ["param1"]
+}
+````
+
+**JSON Schema - Output:**
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "result": {
+      "type": "string"
+    }
+  }
+}
+```
+
+**Thuộc tính Lifecycle & Bảo mật:**
+
+- **Idempotency:** [True/False] (nếu True, mô tả cơ chế)
+- **Max Timeout:** [giây]
+- **Security Scope:** [scope required]
+- **Confirm Gate Required:** [True/False]
+
+````
+
+#### Resource Spec Template
+
+```markdown
+# Resource Specification: [namespace/resource_name]
+
+**Tên Resource:** [Tên dễ đọc]
+**Namespace:** [namespace]
+**Phiên bản:** 1.0.0
+**Chủ sở hữu:** [Team]
+
+**Mô tả:**
+[Cung cấp data gì, mục đích]
+
+**JSON Schema - Content:**
+```json
+{
+  "type": "object",
+  "properties": {
+    "config_param": {
+      "type": "number",
+      "description": "Ngưỡng tham số"
+    }
+  }
+}
+````
+
+**Metadata:**
+
+- **Update Frequency:** [hàng ngày/tuần/tháng]
+- **Last Updated:** [YYYY-MM-DD]
+- **Security Scope:** [scope required]
+
+````
+
+#### Prompt Spec Template
+
+```markdown
+# Prompt Specification: [namespace/prompt_name]
+
+**Tên Prompt:** [Tên dễ đọc]
+**Namespace:** [namespace]
+**Phiên bản:** 1.0.0
+**Loại:** [System/User/Few-Shot]
+
+**Mô tả:**
+[Vai trò, giọng điệu, format output LLM phải tuân thủ]
+
+**Nội dung Prompt:**
+````
+
+[Template text/markdown]
+
+```
+
+**Metadata:**
+- **Target Tool:** [Tool này tối ưu cho]
+- **Security Scope:** [scope required]
+```
+
+#### MCP Server README Template
+
+```markdown
+# [Tên Server] - MCP Server
+
+**Mục đích:** Cung cấp Tool/Resource cho domain [tên domain]
+
+**Endpoint:**
+- **STDIO:** `[cli_command] --transport stdio`
+- **HTTP:** `https://[domain]/mcp/v1`
+
+**Tool/Resource cung cấp:**
+| Tên | Version | Mô tả |
+|-----|---------|-------|
+| tool/example | 1.0.0 | [mô tả] |
+
+**Yêu cầu bảo mật:**
+- **Auth:** Bearer Token (OAuth 2.0)
+- **Scopes:** [list all scopes]
+
+**Hướng dẫn triển khai:**
+1. Build: `docker build -t [image] .`
+2. Run: `docker run -d -p 8080:8080 -e SECRET=[key] [image]`
+
+**Liên hệ:** [Email/Slack]
+```
+
+#### PR Review Checklist
+
+```markdown
+## Tool Contract:
+□ Tên tuân thủ namespace/verb_noun
+□ Description rõ ràng, giải thích side effects
+□ JSON Schema Input/Output đầy đủ, có required/default
+□ Version (SemVer) đúng
+
+## Logic & Behavior:
+□ Tool có side effect đã kiểm tra Idempotency
+□ Timeout được định nghĩa và tuân thủ
+□ Logic xử lý lỗi trả Error Taxonomy chuẩn
+□ Không Tool Chaining không được phép của Planner
+
+## Security & Observability:
+□ Least Privilege (chỉ Scope cần thiết)
+□ Tool nhạy cảm có Confirm Gate
+□ Mọi log gắn trace_id + tool_name
+□ Tool bên thứ ba chạy trong Sandbox
+```
+
+### B4. Deployment Patterns
+
+|Pattern|Mô tả|Ưu điểm|Nhược điểm|
+|---|---|---|---|
+|**Local STDIO**|Server local, giao tiếp Standard I/O|Latency thấp nhất, bảo mật local cao|Khó chia sẻ, không Auth tích hợp|
+|**Remote HTTP**|Server Microservice độc lập, giao tiếp HTTP|Scale cao, quản lý tập trung, Auth chuẩn|Latency cao, cần quản lý mạng/Secrets|
+|**Containerized**|Đóng gói Server trong Docker/K8s|Di động, dễ triển khai Sandbox|Cần kiến thức Containerization|
+|**Multi-Tenant vs Single**|Multi: nhiều khách hàng. Single: 1 khách hàng|Multi tối ưu chi phí. Single tối ưu bảo mật|Multi phức tạp bảo mật. Single tốn kém|
+
+**Secrets Management:**
+
+- Không nhúng API Key vào code
+- Dev/Test: Environment Variables
+- Production: Vault (HashiCorp Vault, AWS Secrets Manager)
+
+### B5. Observability Deep Dive
+
+**Metrics/Logs/Traces:**
+
+- **Metrics:** `tool_call_count`, `tool_latency_p99`, `error_rate`
+- **Logs:** Tool Call, lỗi, cảnh báo
+- **Traces:** OpenTelemetry theo dõi request qua hệ thống
+
+**Error Budgets & SLO:**
+
+- **SLO:** 99.9% Tool Call thành công
+- **Error Budget:** Số lỗi được phép trước khi vi phạm SLO
+- Vi phạm → tạm dừng triển khai tính năng mới
+
+### B6. Governance Playbook
+
+**Ownership & Review Flow:**
+
+- **Ownership:** Mỗi tool có Tool Owner chịu trách nhiệm
+- **Review Flow:** Thay đổi Tool Contract phải phê duyệt bởi Security Team + Governance Board
+
+**Release Process:**
+
+```
+1. Dev/Test: Triển khai version mới trên Test
+2. Contract Test: Chạy tests đảm bảo backward compatible
+3. Staging: Canary Release cho nhóm nhỏ Client
+4. Production: Triển khai đầy đủ
+5. Deprecation: Thông báo version cũ (6 tháng) → loại bỏ
+```
+
+---
+
+## 🎓 KẾT LUẬN
+
+Tài liệu này cung cấp một hướng dẫn onboarding toàn diện về Model Context Protocol (MCP), từ các khái niệm cơ bản đến triển khai thực tế.
+
+**Điểm chính cần nhớ:**
+
+1. **MCP không phải LLM hay Agent** - Đó là giao thức chuẩn hóa giao tiếp
+2. **3 Primitive cốt lõi** - Tool (hành động), Resource (data), Prompt (ngữ cảnh)
+3. **Bảo mật nhiều lớp** - Scope + Guardrail + Audit
+4. **Tool Contract Discipline** - Nền tảng tin cậy
+5. **Lifecycle Management** - Versioning + Deprecation + Governance
+
+**Bước tiếp theo:**
+
+- Thực hành với MVP Implementation (A4.13)
+- Nghiên cứu 5 Hands-on Scenarios (A5)
+- Áp dụng Case Study (A6) vào dự án thực tế
+
+**Tài nguyên:**
+
+- MCP Specification: [Official Docs]
+- SDK: [Python/Go/Node.js]
+- Community: [Discord/GitHub]
+
+---
+
+**📝 Metadata tài liệu:**
+
+- **Độ dài:** ~10,500 từ (PHẦN A)
+- **Phiên bản:** 1.0.0
+- **Ngày tạo:** 2025-12-22
+- **Tác giả:** Tech Writer + Solution Architect Team
+
+---
