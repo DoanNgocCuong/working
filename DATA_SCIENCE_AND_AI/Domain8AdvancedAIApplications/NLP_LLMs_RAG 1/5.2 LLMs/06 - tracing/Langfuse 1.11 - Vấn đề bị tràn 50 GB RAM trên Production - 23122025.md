@@ -225,3 +225,54 @@ Nếu mục tiêu chỉ là trace dạng đồ thị trong Langfuse thì:
 18. [https://www.kaggle.com/code/markishere/day-3-building-an-agent-with-langgraph](https://www.kaggle.com/code/markishere/day-3-building-an-agent-with-langgraph)
 19. [https://towardsdatascience.com/langgraph-101-lets-build-a-deep-research-agent/](https://towardsdatascience.com/langgraph-101-lets-build-a-deep-research-agent/)
 20. [https://langchain-ai.github.io/langgraphjs/reference/classes/langgraph.StateGraph.html](https://langchain-ai.github.io/langgraphjs/reference/classes/langgraph.StateGraph.html)
+
+
+
+---
+# REPORT - 23/12/2025
+
+github: [https://github.com/IsProjectX/robot-lesson](https://github.com/IsProjectX/robot-lesson)
+
+# 1. Dưới đây là các điểm nghi ngờ ưu tiên theo khả năng gây phìng RAM
+
+- tracemalloc.start() đang bật ngay cả ở production. Tracemalloc giữ trace mọi allocation nên càng chạy lâu càng ngốn RAM (đặc biệt với lưu lượng lớn)
+    
+
+`# Start tracing Python memory allocations tracemalloc.start()`
+
+→ Tắt ở prod hoặc chỉ bật khi debug ngắn hạn; nếu cần debug, thêm endpoint/switch để bật/tắt tạm thời.
+
+- Graph được compile ở chế độ debug: builder.compile(debug=True) giữ thêm metadata/trace cho mỗi lần chạy, có thể tăng RAM đáng kể khi lưu lượng cao.
+    
+
+`# compile self.graph = builder.compile(debug=True)`
+
+→ Đặt debug=False cho production.
+
+- Logging body request: middleware đọc toàn bộ body vào RAM và format chuỗi log; nếu request lớn hoặc nhiều, sẽ tốn RAM và tăng GC pressure.
+    
+
+`body = await request.body() body_str = f"...{body.decode('utf-8')}..." if body else ""`
+
+→ Tắt middleware ở prod (hiện đang comment trong make_middleware, giữ nguyên), hoặc giới hạn kích thước/ẩn bớt nội dung.
+
+# 2. Các yếu tố khác:
+
+- Nhân bản tiến trình: docker-compose.yml chạy uvicorn ... --workers ${WORKERS}. Mỗi worker load toàn bộ LangChain/LangGraph. Nếu WORKERS cao (≥8) thì RAM nhân lên tuyến tính. → Kiểm tra giá trị ${WORKERS} trên prod, giảm về 2–4 nếu không thực sự cần.
+    
+- Double khởi tạo agent: một instance qua DI container và một global SERVICE_POLICY = GraphPolicyLessonAgent() trong api/routes/ai_service.py. Mỗi worker sẽ giữ hai graph + resource. RAM tăng gấp đôi không cần thiết. → Dùng instance từ container, bỏ global.
+    
+- Tồn tại cache theo conversation không có TTL (vd. TextFilter.user_input_history và incorrect_input_count giữ lại mọi conversation, dù mỗi conversation chỉ 10 entry). Với rất nhiều conversation lâu dài, dict này sẽ phình. → Thêm TTL/cleanup định kỳ.
+    
+- Các node dùng global LOOP = asyncio.get_event_loop() + TrackerStore() tạo kết nối/phiên DB/Redis; nếu bị rò hoặc không đóng đúng cách có thể tích tụ. Kiểm tra metric connection pool/Redis.
+    
+
+---
+
+# Phía AI đã update:
+
+1. tracemalloc.start() đã comment (không thu trace allocation ở prod).
+    
+2. GraphPolicyLessonAgent: builder.compile(debug=False).
+    
+3. Request logging middleware đang để comment trong server.py (không log body).
