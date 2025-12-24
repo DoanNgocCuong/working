@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/IDE.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.2 - PRODUCTION RISK.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IDE"
+              "title": "2.0.2 - PRODUCTION RISK"
             }
           }
         ],
@@ -152,7 +152,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: bất đồn",
+                "query": "file: production",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -241,13 +241,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/IDE.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.2 - PRODUCTION RISK.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of IDE"
+              "title": "Outline of 2.0.2 - PRODUCTION RISK"
             }
           }
         ],
@@ -271,8 +271,25 @@
   },
   "active": "bee7200a010f70fd",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Ngôn ngữ lập trình.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.3 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.2 PHÂN TÍCH THỊ TRƯỜNG AGENTIC WEB BROWSER.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.1 Báo cáo Nghiên cứu Kỹ thuật Chuyên sâu - Kiến trúc Tác nhân AI Trình duyệt và Tính khả thi của Mô hình Hybrid Extension trên nền tảng Chromium.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 2 - Output 3.1 - finAI - Claude.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.1 v2 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY 1.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.1 Các tài liệu trong thiết kế Software Engineer.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Use Case 1 - 1.1 Context Handling_Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Note - 2K tokens = 5 trang PDF = 8K Characters.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.2 v2 - (Dashboard) - Phần TRACING - FALLBACK, TIMEOUT,  (Observabilit Instrumentation Standard Tracing - Collection Platform - Visulize (Dashboard, Alerts) - Analysis + Xử lý Fallback, Timeout 1.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/CKP 2.0 v1 - TECHNICAL DEEP DIVE DESIGN DOCS (HIGH LEVEL DESIGN AND LOW LEVEL DESIGN) - (TDD) - Example Summary Template - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Perflexity Deep Research.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/CKP 2.0 v2 - TECHNICAL DEEP-DIVE SPECIFICATION (TDD) - Claude Opus - 11122025.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/CKP 2.0 v4 Processing 1 - Gen SDD - (TDD) - Software Design Document (SDD).md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/IDE.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Ngôn ngữ lập trình.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Giải thuật thi đấu.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7. Coding lower cases, uncases - format viết hoa viết thường.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/4. Gihub - Tổng kết Năm.md",
@@ -280,25 +297,8 @@
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Simple/5. Cài C++.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/6. Cấu trúc thư mục - 20250701.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - ALL IN ONE - LẬP TRÌNH ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Simple/3. Python cơ bản.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Simple/3. Đường dẫn trong lập trình.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Simple/2. BẢO MẬT API Keys.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Simple/1. Cách code với tham số Augument.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Simple",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP/Draft embedding models.md",
-    "DATA_SCIENCE_AND_AI/Domain0_Package/CKP/Draft bất đồng bộ và đồng bộ.md",
-    "DATA_SCIENCE_AND_AI/Domain0_Package/Operating System - Python 3.12.4 Installation Report - 10032025.md",
     "DATA_SCIENCE_AND_AI/Domain0_Package/CKP",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_monitoring-observability/Robot - Context Handling - Bug treo 504 services.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 Use Case 1 - 1.1 Context Handling_Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/CKP 2.0.1.1 v1 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/1 - Lý thuyết - MCP for AI Engineer.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.9 (trace với capture False và dùng metadata để log tối ưu, tránh bị response time ảnh hưởng).md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.10 - Các cách trace - MECE.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.11 - Vấn đề bị tràn 50 GB RAM trên Production - 23122025.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_monitoring-observability/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104501.png",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104440.png",
