@@ -265,6 +265,8 @@ def calculate_sum(numbers):
 - Web servers, APIs
 - Real-time applications
 
+> `await` chỉ dùng được bên trong hàm được khai báo với `async` (hoặc coroutine tương đương)
+
 ```python
 # Async phù hợp
 async def fetch_user_data(user_id):
@@ -313,3 +315,7 @@ async def predict(messages, params):
 | **Performance** | Kém với I/O | Tốt với I/O |
 
 Trong code của bạn, dùng async là hợp lý vì có nhiều I/O operations (LLM API calls) cần chạy song song để tăng tốc độ.
+
+
+---
+
