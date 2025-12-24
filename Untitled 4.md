@@ -62,26 +62,192 @@ sequenceDiagram
     API->>User: Stream response: "## Math Results:\n- **sum**: 6.0"
 ```
 
-## Message Flow (Topics)
+## Message Flow với MessageBus (Redis) - Current Implementation
 
 ```mermaid
 graph TD
-    A[User Query: tinh 2+4 = ??] --> B[Chief: task_available]
-    B --> C[Planner: plan_ready]
-    C --> D[Router: math_task]
-    D --> E[MathAgentSum: tool_request]
-    E --> F[MathAgentSum: tool_response]
-    F --> G[MathAgentSum: math_result]
-    G --> H[Synthesizer: final_report]
-    H --> I[Chief: Return to User]
+    A[User Query: tinh 2+4 = ??] --> Chief[MultiAgents_Chief]
+  
+    Chief -->|publish| MB[MessageBus<br/>Redis PubSub]
+    MB -->|subscribe: task_available| Planner[MultiAgents_Planner]
+  
+    Planner -->|publish plan_ready| MB
+    MB -->|subscribe: plan_ready| Chief2[Chief<br/>monitoring]
+    MB -->|subscribe: plan_ready| Router[MultiAgents_RouterAgent]
+  
+    Router -->|publish math_task| MB
+    MB -->|subscribe: math_task| MathSum[MultiAgents_MathAgentSum]
+    MB -->|subscribe: math_task| MathSub[MultiAgents_MathAgentSubtract<br/>skip]
+  
+    MathSum -->|publish tool_request| MB
+    MB -.->|no subscribers| ToolReq[⚠️ tool_request]
+  
+    MathSum -->|execute MCP| MCP[MCPToolAdapter]
+    MCP -->|call_tool| MathServer[Math MCP Server<br/>mcp_sum 2+4=6.0]
+  
+    MCP -->|publish tool_response| MB
+    MB -.->|no subscribers| ToolResp[⚠️ tool_response]
+  
+    MathSum -->|publish math_result| MB
+    MB -->|subscribe: math_result| Synthesizer[MultiAgents_Synthesizer]
+  
+    Synthesizer -->|publish final_report| MB
+    MB -->|subscribe: final_report| Chief3[Chief<br/>return to user]
+  
+    Chief3 --> I[Return to User<br/>## Math Results: - sum: 6.0]
   
     style A fill:#e1f5ff
+    style MB fill:#ff9800,color:#fff
     style I fill:#c8e6c9
-    style D fill:#fff9c4
-    style G fill:#fff9c4
-    style H fill:#f3e5f5
+    style MathSum fill:#fff9c4
+    style Synthesizer fill:#f3e5f5
+    style ToolReq fill:#ffebee
+    style ToolResp fill:#ffebee
+    style MathSub fill:#e0e0e0
+```
+
+### MessageBus Topics Flow
+
+```mermaid
+graph LR
+    subgraph "MessageBus Topics"
+        T1[task_available]
+        T2[plan_ready]
+        T3[math_task]
+        T4[tool_request]
+        T5[tool_response]
+        T6[math_result]
+        T7[final_report]
+    end
+  
+    T1 --> T2
+    T2 --> T3
+    T3 --> T4
+    T4 --> T5
+    T5 --> T6
+    T6 --> T7
+  
+    style T1 fill:#e3f2fd
+    style T2 fill:#e3f2fd
+    style T3 fill:#fff9c4
+    style T4 fill:#ffebee
+    style T5 fill:#ffebee
+    style T6 fill:#fff9c4
+    style T7 fill:#f3e5f5
+```
+
+## MessageBus Architecture
+
+### Subscribe/Publish Pattern
+
+Tất cả agents giao tiếp qua **MessageBus (Redis PubSub)** với pattern:
+
+1. **Subscribe**: Agents đăng ký lắng nghe các topics
+
+   ```python
+   # Ví dụ: Planner subscribe task_available
+   bus.subscribe("task_available", callback_handler)
+   ```
+2. **Publish**: Agents gửi messages vào topics
+
+   ```python
+   # Ví dụ: Chief publish task_available
+   await bus.publish(Message(
+       from_agent="MultiAgents_Chief",
+       to_agent="broadcast",
+       topic="task_available",
+       payload={...}
+   ))
+   ```
+3. **Broadcast**: `to_agent="broadcast"` → tất cả subscribers nhận message
+
+### Agent Subscriptions
+
+| Agent                       | Subscribed Topics                                                             |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| **Chief**             | `plan_ready`, `final_report`, `verification_done`, `navigation_error` |
+| **Planner**           | `task_available`, `renavigate_request`, `navigation_error`              |
+| **Router**            | `plan_ready`                                                                |
+| **MathAgentSum**      | `math_task`                                                                 |
+| **MathAgentSubtract** | `math_task`                                                                 |
+| **Synthesizer**       | `math_result`, `date_result`, `verification_done`                       |
+
+### Message Topics Flow
 
 ```
+task_available → plan_ready → math_task → tool_request → tool_response → math_result → final_report
+```
+
+### Flow Details (Based on Current Code)
+
+**Step-by-step flow với MessageBus topics:**
+
+1. **User Query** → `A`
+
+   - User gửi: `"tinh 2+4 = ??"`
+   - API nhận và gọi `agent.execute(query)`
+2. **Chief: task_available** → `B`
+
+   - Chief broadcast `task_available` với payload:
+     ```json
+     {
+       "financial_query": {"query": "tinh 2+4 = ??"},
+       "context": {...}
+     }
+     ```
+3. **Planner: plan_ready** → `C`
+
+   - Planner nhận `task_available`
+   - Heuristic detect: "tính 2+4" → math query
+   - Extract operands: `a=2, b=4, op=+`
+   - Tạo plan step: `{agent_pool: "math", agent_type: "sum", arguments: {a: 2, b: 4}}`
+   - Publish `plan_ready` với plan
+4. **Router: math_task** → `D`
+
+   - Router nhận `plan_ready`
+   - Route step → publish `math_task` với payload:
+     ```json
+     {
+       "step": {...},
+       "agent_pool": "math",
+       "agent_type": "sum",
+       "tool_server": "math",
+       "tool_name": "mcp_sum",
+       "arguments": {"a": 2, "b": 4}
+     }
+     ```
+5. **MathAgentSum: tool_request** → `E`
+
+   - MathAgentSum nhận `math_task` (MathAgentSubtract cũng nhận nhưng skip)
+   - Filter: `agent_type == "sum"` → match
+   - Gọi MCPToolAdapter.execute()
+   - MCPToolAdapter publish `tool_request` (⚠️ no subscribers)
+6. **MathAgentSum: tool_response** → `F`
+
+   - MCPToolAdapter execute `mcp_sum(2, 4)` → result: `6.0`
+   - Publish `tool_response` (⚠️ no subscribers)
+7. **MathAgentSum: math_result** → `G`
+
+   - MathAgentSum publish `math_result` với payload:
+     ```json
+     {
+       "agent_type": "sum",
+       "success": true,
+       "result": 6.0,
+       "step": {...}
+     }
+     ```
+8. **Synthesizer: final_report** → `H`
+
+   - Synthesizer nhận `math_result`
+   - Collect result vào `collected_results["math_results"]`
+   - Generate final report: `"## Math Results:\n- **sum**: 6.0"`
+   - Publish `final_report`
+9. **Chief: Return to User** → `I`
+
+   - Chief nhận `final_report`
+   - Return report cho user qua API stream
+   - Task completed, agents stopped
 
 ## Agent Responsibilities
 
