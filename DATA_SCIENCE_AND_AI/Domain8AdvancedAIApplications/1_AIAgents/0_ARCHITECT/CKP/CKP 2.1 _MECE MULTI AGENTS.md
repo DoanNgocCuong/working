@@ -4845,3 +4845,45 @@ Bạn có muốn mình viết **full implementation code** cho kiến trúc impr
 
 [^25]: https://firstwave.com/tag/message-bus/
 
+
+---
+
+```bash
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                                          │
+│   PHỔ BIẾN NHẤT → ÍT PHỔ BIẾN                                                                            │
+│                                                                                                          │
+│   ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   │
+│   │                                                                                                  │   │
+│   │   1. ORCHESTRATOR ████████████████████████████████████████  (phổ biến nhất)                     │   │
+│   │      • Dùng trong: LangGraph, OpenAI, Microservices                                              │   │
+│   │      • Ý nghĩa: Điều phối toàn bộ workflow                                                       │   │
+│   │                                                                                                  │   │
+│   │   2. SUPERVISOR   ████████████████████████████              (rất phổ biến)                       │   │
+│   │      • Dùng trong: LangGraph Supervisor pattern                                                  │   │
+│   │      • Ý nghĩa: Giám sát và điều phối các agents                                                 │   │
+│   │                                                                                                  │   │
+│   │   3. COORDINATOR  ██████████████████████                    (phổ biến)                           │   │
+│   │      • Dùng trong: General distributed systems                                                   │   │
+│   │      • Ý nghĩa: Phối hợp hoạt động giữa các components                                           │   │
+│   │                                                                                                  │   │
+│   │   4. MANAGER      ████████████████                          (khá phổ biến)                       │   │
+│   │      • Dùng trong: CrewAI, AutoGen                                                               │   │
+│   │      • Ý nghĩa: Quản lý nhóm agents                                                              │   │
+│   │                                                                                                  │   │
+│   │   5. PLANNER      ██████████████                            (khá phổ biến)                       │   │
+│   │      • Dùng trong: Microsoft Semantic Kernel, ReAct                                              │   │
+│   │      • Ý nghĩa: Lập kế hoạch và điều phối                                                        │   │
+│   │                                                                                                  │   │
+│   │   6. HOST         ████████████                              (ít phổ biến)                        │   │
+│   │      • Dùng trong: Anthropic MCP                                                                 │   │
+│   │      • Ý nghĩa: Máy chủ điều khiển các MCP servers                                               │   │
+│   │                                                                                                  │   │
+│   │   7. CHIEF        ████                                      (hiếm)                               │   │
+│   │      • Không thấy trong major frameworks                                                         │   │
+│   │      • Có thể gây confuse với ChiefExecutive (CEO) concept                                       │   │
+│   │                                                                                                  │   │
+│   └─────────────────────────────────────────────────────────────────────────────────────────────────┘   │
+│                                                                                                          │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
