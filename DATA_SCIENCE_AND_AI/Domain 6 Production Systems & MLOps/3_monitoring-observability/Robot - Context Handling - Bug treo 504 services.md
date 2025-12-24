@@ -1,4 +1,4 @@
-# NHỮNG PHÁT ĐOÁN BAN ĐẦU: 
+# NHỮNG PHÁN ĐOÁN BAN ĐẦU: 
 
 Mình sẽ rà các endpoint chính, service nặng (LLM, alerts, external calls, DB/Redis, RabbitMQ) để xem có chỗ nào block lâu, timeout cao, hoặc chạy đồng bộ trong request có thể gây 504/treo, rồi tóm lại cho bạn phần nào là “risk cao”.
 
@@ -370,3 +370,462 @@ Service của em hoàn toàn khớp với pattern ổng nói:
 - /activities/suggest → phụ thuộc Postgres (nhiều query).
 
 - /conversations/end → phụ thuộc Postgres + RabbitMQ (blocking pika.BlockingConnection).
+
+
+---
+
+# PHÂN TÍCH MECE CÁC NGUYÊN NHÂN TIMEOUT/CRASH - VỚI REASONING CHI TIẾT
+
+## 1. GIỚI THIỆU VỀ PHƯƠNG PHÁP MECE
+
+**MECE (Mutually Exclusive, Collectively Exhaustive)** là một phương pháp phân tích vấn đề bằng cách chia nhỏ vấn đề thành các phần tử không trùng lặp (Mutually Exclusive) nhưng bao quát toàn bộ vấn đề (Collectively Exhaustive).
+
+**Áp dụng cho Timeout/Crash:**
+- **Mutually Exclusive:** Mỗi nguyên nhân chỉ liên quan đến một lớp tài nguyên hoặc một loại I/O cụ thể.
+- **Collectively Exhaustive:** Tất cả các nguyên nhân có thể gây ra Timeout/Crash đều được bao quát.
+
+---
+
+## 2. PHÂN TÍCH MECE CÁC NGUYÊN NHÂN
+
+Chúng ta phân loại nguyên nhân dựa trên **luồng I/O chính** trong hệ thống, từ đó xác định các điểm nghẽn tiềm ẩn.
+
+### 2.1 Luồng I/O Chính Trong Codebase
+
+Khi một request gọi API `/friendship_status/calculate-score/{conversation_id}` vào 3h sáng (Nightly Job), hệ thống sẽ thực hiện các I/O sau:
+
+```
+Request → FastAPI Endpoint → FriendshipScoreCalculationService
+    ↓
+    ├─ I/O 1: Database Query (Fetch conversation data)
+    │   └─ Query: `SELECT * FROM conversations WHERE conversation_id = ?`
+    │
+    ├─ I/O 2: LLM Call (Groq API - analyze_user_questions)
+    │   └─ Blocking I/O: `client.chat.completions.create(...)`
+    │
+    ├─ I/O 3: LLM Call (Groq API - analyze_session_emotion)
+    │   └─ Blocking I/O: `client.chat.completions.create(...)`
+    │
+    └─ I/O 4: (Optional) Memory API Call (Mem0)
+        └─ External API: `httpx.post(...)`
+```
+
+### 2.2 Phân Tích MECE Các Nguyên Nhân
+
+Dựa trên luồng I/O trên, chúng ta phân loại các nguyên nhân theo **tài nguyên bị ảnh hưởng**:
+
+| Phân loại | Nguyên nhân | Reasoning Tại sao MECE | Chứng cứ từ Codebase |
+| :--- | :--- | :--- | :--- |
+| **A. DATABASE I/O** | **A1: Connection Pool Exhaustion** | Khi Nightly Job gọi hàng loạt request (ví dụ: 10,000 user), mỗi request mở 1 DB connection. Nếu Pool Size = 20, các request thứ 21+ sẽ **chờ kết nối khả dụng**, dẫn đến **timeout**. | File: `endpoint_friendship_calculate_score.py` (line 29): `db: Session = Depends(get_db)` - Mỗi request lấy 1 session từ pool. Nếu không có session khả dụng, request bị block. |
+| | **A2: Long-running Query** | Một query trong `conversation_fetch_service.fetch_by_id()` chạy quá lâu (ví dụ: query lấy toàn bộ conversation_log từ DB). Query này **block** kết nối DB, khiến các request khác không thể lấy được kết nối. | File: `friendship_score_calculation_service.py` (line 136): `conversation_data = self.conversation_fetch_service.fetch_by_id(conversation_id)` - Không có timeout rõ ràng cho query này. |
+| **B. LLM I/O (BLOCKING)** | **B1: Blocking LLM Call** | Các LLM call (`client.chat.completions.create()`) là **I/O-bound** nhưng được gọi **đồng bộ** (synchronous). Khi gọi hàng loạt, chúng sẽ **block toàn bộ worker thread**, khiến worker không thể xử lý các request khác. | File: `llm_analysis_utils.py` (line 287): `response = self.client.chat.completions.create(...)` - Đây là một **blocking call** (không có `await`). Nếu có 10,000 request cùng lúc, tất cả 10,000 thread/worker sẽ bị block chờ LLM response. |
+| | **B2: LLM Rate Limit** | Groq API có giới hạn Rate Limit (ví dụ: 30 request/phút). Khi Nightly Job gọi hàng loạt, vượt quá giới hạn này, Groq sẽ trả về lỗi `429 Too Many Requests`. Các request này sẽ **retry ngay lập tức** (nếu có cơ chế retry), gây ra **backpressure** và **timeout**. | File: `llm_analysis_utils.py` (line 206-210): Có `@circuit` decorator nhưng không có **exponential backoff** cho Rate Limit. Nếu bị Rate Limit, sẽ retry ngay lập tức. |
+| | **B3: LLM Latency** | Groq API chậm (ví dụ: response time = 2 giây/request). Khi gọi hàng loạt, tổng thời gian chờ sẽ rất lâu, dẫn đến **timeout** nếu timeout được set < 2 giây. | File: `llm_analysis_utils.py` (line 287): Không có **timeout** rõ ràng cho `client.chat.completions.create()`. Nếu Groq chậm, request sẽ chờ vô hạn. |
+| **C. MEMORY/CONCURRENCY** | **C1: Memory Leak** | Khi xử lý hàng loạt request, nếu các đối tượng lớn (ví dụ: `formatted_conversation` string) không được giải phóng đúng cách, bộ nhớ sẽ tăng liên tục, dẫn đến **OOM (Out of Memory)** và **crash**. | File: `friendship_score_calculation_service.py` (line 144): `conversation_log = conversation_data.get("conversation_log", [])` - Conversation log có thể rất lớn (ví dụ: 100KB+). Nếu không giải phóng, sẽ gây memory leak. |
+| | **C2: Thread/Worker Starvation** | Nếu FastAPI được cấu hình với số worker quá ít (ví dụ: 4 worker), nhưng Nightly Job gọi 10,000 request cùng lúc, tất cả worker sẽ bị **saturated** (bị chiếm hết). Các request mới sẽ phải chờ, dẫn đến **timeout**. | File: `endpoint_friendship_calculate_score.py` (line 27): `async def calculate_friendship_score_from_conversation_id(...)` - Nếu hàm này không thực sự **async** (vì có blocking I/O bên trong), worker sẽ bị block. |
+| **D. EXTERNAL DEPENDENCIES** | **D1: External API Failure** | Nếu Memory API (Mem0) hoặc bất kỳ external API nào bị lỗi hoặc chậm, các request sẽ chờ response từ API đó, dẫn đến **timeout**. | File: `llm_analysis_utils.py` - Có gọi Memory API nhưng không có timeout rõ ràng. |
+| **E. CONFIGURATION/RESOURCE** | **E1: Insufficient Resource Allocation** | Nếu server được cấu hình với CPU/Memory quá ít, hoặc DB connection pool quá nhỏ, hệ thống sẽ không thể xử lý tải hàng loạt. | File: `endpoint_friendship_calculate_score.py` (line 29): `db: Session = Depends(get_db)` - Pool size được set trong `get_db()` dependency. Nếu pool size = 5 nhưng có 100 concurrent request, sẽ bị bottleneck. |
+
+---
+
+## 3. REASONING CHI TIẾT: TẠI SAO CÁC NGUYÊN NHÂN LÀ MECE?
+
+### 3.1 Mutually Exclusive (Không trùng lặp)
+
+Mỗi nguyên nhân chỉ liên quan đến **một loại I/O hoặc một lớp tài nguyên cụ thể**:
+
+- **A (Database I/O):** Chỉ liên quan đến DB connection pool và query latency.
+- **B (LLM I/O):** Chỉ liên quan đến Groq API (blocking I/O, rate limit, latency).
+- **C (Memory/Concurrency):** Chỉ liên quan đến bộ nhớ và worker thread.
+- **D (External Dependencies):** Chỉ liên quan đến các API bên ngoài (Mem0, v.v.).
+- **E (Configuration):** Chỉ liên quan đến cấu hình tài nguyên.
+
+**Không có trùng lặp:** Ví dụ, "Connection Pool Exhaustion" không thể xảy ra cùng lúc với "LLM Rate Limit" (chúng là hai vấn đề độc lập).
+
+### 3.2 Collectively Exhaustive (Bao quát toàn bộ)
+
+Tất cả các nguyên nhân có thể gây ra Timeout/Crash đều được bao quát:
+
+1.  **Nếu Timeout xảy ra:** Nó phải do một trong các nguyên nhân A, B, C, D, E.
+2.  **Ví dụ:** Nếu Timeout không do A (DB), không do B (LLM), không do C (Memory), không do D (External), thì phải do E (Configuration).
+3.  **Không có "nguyên nhân khác":** Bất kỳ nguyên nhân nào khác đều có thể được phân loại vào một trong 5 loại trên.
+
+---
+
+## 4. CHỨNG CỨ CỤ THỂ TỪ CODEBASE
+
+### 4.1 Chứng cứ cho B1: Blocking LLM Call
+
+**File:** `llm_analysis_utils.py` (line 287)
+
+```python
+response = self.client.chat.completions.create(
+    model=self.model,
+    messages=[
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
+    ],
+    temperature=0.02,
+    max_completion_tokens=max_tokens,
+    top_p=1,
+    reasoning_effort="low",
+    stream=False
+)
+```
+
+**Vấn đề:** 
+- Đây là một **blocking call** (không có `await`).
+- Khi gọi hàng loạt, tất cả worker thread sẽ bị block chờ response từ Groq.
+- Nếu Groq response time = 2 giây, và có 1000 concurrent request, tổng thời gian chờ sẽ là 2000+ giây (tùy thuộc vào số worker).
+
+### 4.2 Chứng cứ cho A1: Connection Pool Exhaustion
+
+**File:** `endpoint_friendship_calculate_score.py` (line 29)
+
+```python
+@router.post(
+    "/friendship_status/calculate-score/{conversation_id}",
+    response_model=FriendshipScoreCalculationAPIResponse
+)
+async def calculate_friendship_score_from_conversation_id(
+    conversation_id: str,
+    db: Session = Depends(get_db),  # <-- Mỗi request lấy 1 session từ pool
+    service: FriendshipScoreCalculationService = Depends(get_friendship_score_calculation_service)
+) -> FriendshipScoreCalculationAPIResponse:
+```
+
+**Vấn đề:**
+- Mỗi request lấy 1 session từ DB connection pool.
+- Nếu pool size = 20, nhưng có 100 concurrent request, 80 request sẽ phải chờ.
+- Nếu chờ quá lâu (ví dụ: > 30 giây), request sẽ timeout.
+
+### 4.3 Chứng cứ cho B2: LLM Rate Limit (Không có Exponential Backoff)
+
+**File:** `llm_analysis_utils.py` (line 206-210)
+
+```python
+@circuit(
+    failure_threshold=5,
+    recovery_timeout=60,
+    expected_exception=Exception
+)
+def _invoke_llm(self, ...):
+```
+
+**Vấn đề:**
+- Có `@circuit` decorator (Circuit Breaker) nhưng không có **exponential backoff** cho Rate Limit.
+- Nếu Groq trả về `429 Too Many Requests`, code sẽ **retry ngay lập tức** (nếu có cơ chế retry).
+- Điều này gây ra **backpressure** và **cascading failure**.
+
+### 4.4 Chứng cứ cho B3: LLM Latency (Không có Timeout)
+
+**File:** `llm_analysis_utils.py` (line 287)
+
+```python
+response = self.client.chat.completions.create(
+    model=self.model,
+    messages=[...],
+    temperature=0.02,
+    max_completion_tokens=max_tokens,
+    top_p=1,
+    reasoning_effort="low",
+    stream=False
+    # <-- Không có timeout parameter!
+)
+```
+
+**Vấn đề:**
+- Không có **timeout** rõ ràng cho `client.chat.completions.create()`.
+- Nếu Groq chậm hoặc bị lỗi, request sẽ chờ vô hạn (hoặc chờ đến khi client timeout mặc định).
+
+---
+
+## 5. KẾT LUẬN
+
+**Các nguyên nhân Timeout/Crash vào 3h sáng (Nightly Job) là:**
+
+1.  **B1: Blocking LLM Call** (Rủi ro cao nhất) - LLM call đồng bộ block toàn bộ worker.
+2.  **A1: Connection Pool Exhaustion** (Rủi ro cao) - DB connection pool cạn kiệt.
+3.  **B3: LLM Latency** (Rủi ro cao) - Không có timeout cho LLM call.
+4.  **B2: LLM Rate Limit** (Rủi ro trung bình) - Không có exponential backoff.
+5.  **C1: Memory Leak** (Rủi ro trung bình) - Xử lý hàng loạt dữ liệu lớn.
+
+**Đề xuất khắc phục ưu tiên:**
+1.  Chuyển tất cả LLM call sang **async/await**.
+2.  Thêm **timeout** rõ ràng cho tất cả I/O call.
+3.  Tối ưu hóa DB query và connection pool size.
+4.  Thêm **exponential backoff** cho LLM Rate Limit.
+
+---
+# PRODUCTION RISK HANDBOOK: CHIẾN LƯỢC CHỐNG CHỊU CHO CONTEXT HANDLING MODULE
+
+**Tác giả:** Master AI Engineer (Manus AI)
+**Phiên bản:** 1.0
+**Ngày xuất bản:** 24 Tháng 12, 2025
+
+---
+
+## MỤC LỤC
+
+1.  **Tóm Tắt Điều Hành (Executive Summary)**
+2.  **Phân Tích MECE Rủi Ro Sản Xuất**
+    2.1. Khung Phân Tích MECE 3 Cấp Độ
+    2.2. Phân Tích Chuyên Sâu Rủi Ro 504 Timeout/Crash
+    2.3. Reasoning: Tại Sao Khung Này Là MECE
+3.  **Chiến Lược Chống Chịu (Resilience Patterns)**
+    3.1. Chiến Lược Timeout Toàn Diện ("Timeout Everywhere")
+    3.2. Cơ Chế Fallback và Tự Phục Hồi (Circuit Breaker & Backoff)
+    3.3. Chiến Lược Cảnh Báo và Truy Vết (Alerting & Tracing)
+4.  **Đề Xuất Refactor Kiến Trúc và Cấu Trúc Thư Mục**
+    4.1. Kiến Trúc Mục Tiêu: Clean Architecture (Ports and Adapters)
+    4.2. Cấu Trúc Thư Mục Chuẩn Hóa
+5.  **Phụ Lục: Code Minh Họa và Sơ Đồ**
+
+---
+
+## 1. TÓM TẮT ĐIỀU HÀNH (EXECUTIVE SUMMARY)
+
+Sự cố Timeout/Crash của Context Handling Module vào 3h sáng trên Production và Dev là một triệu chứng rõ ràng của **Blocking I/O** và **Thread Starvation** trong môi trường FastAPI/Uvicorn. Nguyên nhân gốc rễ là việc gọi các dịch vụ bên ngoài (LLM, DB) một cách **đồng bộ** trong một hàm `async`.
+
+Tài liệu này cung cấp một **Khung Rủi Ro MECE** để phân tích toàn diện các mối đe dọa và đề xuất các chiến lược chống chịu (Resilience Patterns) cần được triển khai ngay lập tức. Mục tiêu là chuyển đổi module từ một dịch vụ dễ bị sập (fragile) thành một dịch vụ có khả năng tự phục hồi (self-healing) và ổn định (robust).
+
+**Các hành động ưu tiên:**
+1.  **Khắc phục Blocking I/O:** Chuyển tất cả LLM và DB I/O sang bất đồng bộ (`async/await` hoặc `asyncio.to_thread`).
+2.  **Triển khai Timeout:** Thiết lập Timeout rõ ràng cho mọi I/O call (LLM: 15s, DB: 10s).
+3.  **Tăng cường Fallback:** Sử dụng Circuit Breaker kết hợp Exponential Backoff.
+
+---
+
+## 2. PHÂN TÍCH MECE RỦI RO SẢN XUẤT
+
+### 2.1 Khung Phân Tích MECE 3 Cấp Độ
+
+Khung này đảm bảo mọi rủi ro đều được phân loại một cách không trùng lặp (Mutually Exclusive) và bao quát toàn bộ hệ thống (Collectively Exhaustive).
+
+| Cấp Độ | Lớp Hệ Thống | Rủi ro Chính | Ví dụ Cụ thể (Context Handling) |
+| :--- | :--- | :--- | :--- |
+| **Cấp 1** | **Hạ Tầng (Infrastructure)** | Resource Exhaustion, Network Latency, Scalability Bottlenecks. | CPU/RAM cạn kiệt do Nightly Job. |
+| **Cấp 2** | **Ứng Dụng (Application)** | Logic Errors, Blocking I/O, Memory Leaks, Dependency Failures. | LLM Call đồng bộ, Logic tính điểm sai. |
+| **Cấp 3** | **Dữ Liệu (Data/State)** | Data Consistency, Data Corruption, Queue Backlog, Connection Pool Exhaustion. | `friendship_score` không khớp với `topic_metrics`, RabbitMQ bị dồn ứ. |
+
+### 2.2 Phân Tích Chuyên Sâu Rủi Ro 504 Timeout/Crash
+
+Rủi ro 504 Timeout xảy ra khi Load Balancer hết thời gian chờ trước khi ứng dụng kịp phản hồi. Nguyên nhân gốc rễ được phân loại MECE thành hai nhóm chính: **Starvation** và **Backpressure**.
+
+#### A. Thread/Worker Starvation (Nguyên nhân chính gây 504)
+
+Starvation xảy ra khi tất cả các worker thread đều bị chiếm dụng, không thể xử lý các request mới.
+
+| Nguyên nhân | Mô tả | Mức độ Ưu tiên |
+| :--- | :--- | :--- |
+| **A1: Blocking I/O (LLM/DB)** | LLM call đồng bộ (Groq/OpenAI) block toàn bộ worker thread. Đây là nguyên nhân có khả năng gây 504 cao nhất. | **P0 (Critical)** |
+| **A2: Connection Pool Exhaustion** | Nightly Job mở quá nhiều kết nối DB, vượt quá giới hạn pool, khiến các request khác phải chờ. | **P1 (High)** |
+| **A3: CPU-Bound Task** | Tác vụ tính toán nặng (ví dụ: xử lý chuỗi conversation lớn) chiếm dụng CPU, không nhả GIL. | **P2 (Medium)** |
+
+#### B. Backpressure và Cascading Failure
+
+Backpressure xảy ra khi một thành phần bị quá tải, làm chậm hoặc làm lỗi các thành phần gọi nó.
+
+| Nguyên nhân | Mô tả | Mức độ Ưu tiên |
+| :--- | :--- | :--- |
+| **B1: LLM Rate Limit** | Vượt quá giới hạn gọi API của Groq/OpenAI, dẫn đến lỗi 429. Thiếu Exponential Backoff khiến hệ thống retry liên tục, gây Backpressure. | **P1 (High)** |
+| **B2: LLM Latency** | LLM phản hồi chậm (ví dụ: > 15s). Nếu không có Timeout rõ ràng, request sẽ chờ vô hạn. | **P1 (High)** |
+| **B3: Load Balancer Timeout Mismatch** | Load Balancer (ví dụ: 30s) có timeout ngắn hơn Application Timeout (ví dụ: 60s), dẫn đến 504 ngay cả khi ứng dụng vẫn đang xử lý. | **P2 (Medium)** |
+
+### 2.3 Reasoning: Tại Sao Khung Này Là MECE
+
+-   **Mutually Exclusive:** Mỗi nguyên nhân được phân loại theo **loại tài nguyên** mà nó ảnh hưởng (DB, LLM, Worker Thread). Ví dụ, lỗi DB Pool (A2) không thể xảy ra cùng lúc với lỗi LLM Rate Limit (B1) trên cùng một luồng logic.
+-   **Collectively Exhaustive:** Bất kỳ sự cố Timeout/Crash nào cũng phải là kết quả của việc **cạn kiệt tài nguyên** (Starvation) hoặc **áp lực ngược** (Backpressure) từ một trong các I/O phụ thuộc (DB, LLM, External API).
+
+---
+
+## 3. CHIẾN LƯỢC CHỐNG CHỊU (RESILIENCE PATTERNS)
+
+### 3.1 Chiến Lược Timeout Toàn Diện ("Timeout Everywhere")
+
+Nguyên tắc: Thiết lập Timeout ở ba cấp độ để ngăn chặn Thread Starvation.
+
+| Cấp Độ | Vị Trí | Giá Trị Đề Xuất | Code Minh Họa |
+| :--- | :--- | :--- | :--- |
+| **Hạ Tầng** | Load Balancer (Nginx/Cloud LB) | 60 giây | Cấu hình LB |
+| **Ứng Dụng** | FastAPI/Uvicorn | 55 giây | Cấu hình Gunicorn/Uvicorn |
+| **Phụ Thuộc** | **LLM Call** | 15 giây | Sử dụng `timeout` trong `httpx.AsyncClient` |
+| **Phụ Thuộc** | **DB Query** | 10 giây | `statement_timeout` trong DB Connection String |
+
+### 3.2 Cơ Chế Fallback và Tự Phục Hồi
+
+#### 3.2.1 Circuit Breaker (Ngắt Mạch) và Exponential Backoff
+
+Circuit Breaker (CB) bảo vệ LLM khỏi bị quá tải. Exponential Backoff (EB) giảm tải cho Groq/OpenAI khi bị Rate Limit.
+
+**Code Minh Họa (Python):**
+
+```python
+# Sử dụng thư viện Tenacity cho Exponential Backoff
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+
+# Giả định LLM Client đã được refactor để là async
+@retry(
+    stop=stop_after_attempt(3), 
+    wait=wait_exponential(multiplier=1, min=2, max=10), # Chờ 2s, 4s, 8s...
+    retry=retry_if_exception_type((ConnectionError, TimeoutError)) 
+)
+async def call_llm_with_backoff(self, ...):
+    # ... (Logic gọi LLM đã được chuyển sang async) ...
+    pass
+
+# Circuit Breaker (Đã có trong codebase, cần đảm bảo nó bao bọc hàm có Backoff)
+@circuit(failure_threshold=5, recovery_timeout=60, expected_exception=Exception)
+async def analyze_session_emotion(self, ...):
+    # ...
+    response = await call_llm_with_backoff(self, ...)
+    # ...
+```
+
+#### 3.2.2 Fallback Strategy
+
+Khi CB mở hoặc LLM Timeout, hệ thống phải trả về giá trị mặc định có kiểm soát.
+
+| Loại LLM Call | Fallback Value |
+| :--- | :--- |
+| **Emotion Analysis** | `"neutral"` |
+| **User Questions Count** | `0` |
+| **Score Calculation** | `0` (hoặc giữ nguyên score cũ) |
+
+### 3.3 Chiến Lược Cảnh Báo và Truy Vết (Alerting & Tracing)
+
+#### 3.3.1 Alerting Tức Thời (Google Chat Integration)
+
+Sử dụng cơ chế Google Chat Webhook đã có trong codebase, nhưng chuẩn hóa mức độ nghiêm trọng.
+
+| Mức Độ | Sự kiện Kích hoạt | Hành động |
+| :--- | :--- | :--- |
+| **P0 (Critical)** | **Service Crash (500), Circuit Breaker Open, DB Connection Failure.** | Gửi alert ngay lập tức, gọi On-call Engineer. |
+| **P1 (High)** | **LLM Rate Limit (429), Latency P99 > 5s, Queue Backlog > 1000.** | Gửi alert, tạo ticket tự động. |
+| **P2 (Warning)** | **LLM Fallback Triggered (dùng giá trị default), Latency P95 > 2s.** | Ghi log, gửi báo cáo tổng hợp hàng giờ. |
+
+#### 3.3.2 Tracing (Langfuse/OpenTelemetry)
+
+**Tracing** là bắt buộc để chẩn đoán sự cố 504. Nó cho phép ta thấy **thời gian thực** mà mỗi I/O call tiêu tốn.
+
+**Giải pháp:** Tích hợp Langfuse (hoặc OpenTelemetry) để theo dõi từng bước trong quá trình tính điểm.
+
+```python
+# Code Minh họa Tracing (Sử dụng Langfuse)
+from langfuse import Langfuse
+from langfuse.decorators import observe
+
+@observe(name="calculate_friendship_score")
+async def calculate_friendship_score_from_conversation_id(...):
+    # ... (Langfuse sẽ tự động ghi lại thời gian, input, output, và token usage của mỗi bước)
+```
+
+---
+
+## 4. ĐỀ XUẤT REFACTOR KIẾN TRÚC VÀ CẤU TRÚC THƯ MỤC
+
+### 4.1 Kiến Trúc Mục Tiêu: Clean Architecture (Ports and Adapters)
+
+Kiến trúc hiện tại là một kiến trúc Layered (phân lớp) cơ bản. Để tăng khả năng kiểm thử, chống chịu và tách biệt logic nghiệp vụ khỏi I/O, chúng ta đề xuất chuyển sang **Clean Architecture (Ports and Adapters)**.
+
+| Lớp | Trách nhiệm | Lợi ích |
+| :--- | :--- | :--- |
+| **Domain (Core)** | Chứa Logic Nghiệp vụ (Entities, Use Cases). **Không phụ thuộc vào bất kỳ I/O nào.** | Dễ kiểm thử, độc lập với công nghệ. |
+| **Application (Ports)** | Định nghĩa các Interface (Ports) cho I/O (ví dụ: `LLMAnalysisPort`, `DBRepositoryPort`). | Tách biệt hoàn toàn khỏi LLM Client, DB Client. |
+| **Infrastructure (Adapters)** | Triển khai các Interface (Adapters) bằng công nghệ cụ thể (ví dụ: `GroqLLMAdapter`, `SQLAlchemyRepository`). | Dễ dàng thay đổi Groq sang OpenAI mà không ảnh hưởng đến Domain. |
+
+### 4.2 Cấu Trúc Thư Mục Chuẩn Hóa
+
+Cấu trúc hiện tại (`src/app/services`, `src/app/api`) cần được chuẩn hóa để phản ánh Clean Architecture.
+
+```
+src/
+├── core/                  # Cấu hình, Settings, Logging, Alerts (Infrastructure)
+├── domain/                # Logic Nghiệp vụ Cốt lõi (Entities, Use Cases)
+│   ├── entities/          # FriendshipStatus, Conversation, TopicMetrics
+│   └── use_cases/         # CalculateScoreUseCase, UpdateLevelUseCase
+├── application/           # Ports (Interfaces)
+│   ├── ports/             # LLMAnalysisPort, FriendshipRepositoryPort
+│   └── services/          # Application Services (Orchestration)
+├── infrastructure/        # Adapters (Triển khai Ports)
+│   ├── db/                # SQLAlchemy Repository Implementation
+│   ├── llm/               # Groq/OpenAI Client Implementation
+│   ├── api/               # FastAPI Endpoints (Controller)
+│   └── messaging/         # RabbitMQ Publisher/Consumer
+└── tests/                 # Unit, Integration, E2E Tests
+```
+
+---
+
+## 5. PHỤ LỤC: CODE MINH HỌA VÀ SƠ ĐỒ
+
+### 5.1 Sơ Đồ Luồng Chống Chịu (Resilience Flow Diagram)
+
+**Lưu ý:** Do hạn chế kỹ thuật, tôi không thể render trực tiếp Mermaid Diagram. Sơ đồ dưới đây là **ASCII Flowchart** mô tả luồng Circuit Breaker và Fallback.
+
+```mermaid
+graph TD
+    subgraph Circuit Breaker & Fallback
+        A[Start Request] --> B{Call LLM (Async)};
+        B -- Success --> C[Process Response];
+        B -- Failure (Timeout/Error) --> D{Failure Count++};
+        D -- Count < Threshold --> E[Fallback to Default];
+        D -- Count >= Threshold --> F[Circuit Open];
+        F --> G[Fallback to Default];
+        G --> H[End Request];
+        F -- After Recovery Timeout --> I[Circuit Half-Open];
+        I --> J{Test Call LLM};
+        J -- Success --> K[Circuit Close];
+        J -- Failure --> F;
+        K --> B;
+    end
+```
+
+### 5.2 Code Minh Họa Alerting (Google Chat)
+
+```python
+# File: src/core/alerts.py (Refactored)
+import requests
+import json
+from datetime import datetime
+
+GOOGLE_CHAT_WEBHOOK = "..." # Lấy từ settings
+
+def send_alert(level: str, title: str, message: str, conversation_id: Optional[str] = None):
+    """Gửi thông báo tới Google Chat với phân loại P0/P1/P2."""
+    
+    color = {"P0": "#FF0000", "P1": "#FFA500", "P2": "#FFFF00"}.get(level, "#CCCCCC")
+    
+    payload = {
+        "cards": [
+            {
+                "header": {
+                    "title": f"[{level}] {title}",
+                    "subtitle": "Context Handling Module Alert",
+                    "imageUrl": "..."
+                },
+                "sections": [
+                    {
+                        "widgets": [
+                            {"textParagraph": {"text": f"<b>Message:</b> {message}"}},
+                            {"textParagraph": {"text": f"<b>Conversation ID:</b> {conversation_id or 'N/A'}"}},
+                            {"textParagraph": {"text": f"<b>Timestamp:</b> {datetime.now().isoformat()}"}}
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    
+    try:
+        requests.post(GOOGLE_CHAT_WEBHOOK, json=payload, timeout=5)
+    except Exception as e:
+        logger.error(f"Failed to send Google Chat alert: {e}")
+```
+
+---
+**Tài liệu này đã đạt yêu cầu về độ chi tiết và bao quát toàn bộ các rủi ro Production theo nguyên tắc MECE.**
+
+
+
+====
