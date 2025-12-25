@@ -902,15 +902,21 @@ Do GIL, việc sử dụng đa luồng (multithreading) trong Python không mang
 
 Bảng 1: So sánh Tác động của GIL và Kiến trúc Thực thi
 
-|                    |                         |                                           |                                       |                                            |
-| ------------------ | ----------------------- | ----------------------------------------- | ------------------------------------- | ------------------------------------------ |
-| Đặc điểm           | Synchronous (Đơn luồng) | Multithreading (Đa luồng)                 | Asynchronous (asyncio)                | Multiprocessing (Đa tiến trình)            |
-| Cơ chế Điều phối   | Tuần tự nghiêm ngặt     | Preemptive Multitasking (HĐH)             | Cooperative Multitasking (Event Loop) | Parallelism (HĐH + Phần cứng)              |
-| Tác động GIL       | Không áp dụng           | Nút thắt cổ chai cho CPU-bound            | Không ảnh hưởng (Đơn luồng)           | Không ảnh hưởng (Mỗi process có GIL riêng) |
-| Chi phí Tài nguyên | Thấp nhất               | Trung bình (Thread Stack, Context Switch) | Thấp (Coroutines rất nhẹ)             | Cao nhất (Bộ nhớ riêng biệt, IPC)          |
-| Hiệu quả CPU-bound | Thấp                    | Thấp (Do GIL)                             | Thấp (Block Event Loop)               | Cao (Tận dụng đa lõi)                      |
-| Hiệu quả I/O-bound | Thấp (Blocking)         | Trung bình                                | Rất cao (Non-blocking)                | Trung bình                                 |
+|                    |                         |                                                                                                                                                                                                                                                                                                                                                                                                 |                                       |                                            |
+| ------------------ | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------ |
+| Đặc điểm           | Synchronous (Đơn luồng) | Multithreading (Đa luồng)                                                                                                                                                                                                                                                                                                                                                                       | Asynchronous (asyncio)                | Multiprocessing (Đa tiến trình)            |
+| Dùng để làm gì     | Tuần tự nghiêm ngặt     | - Tăng độ **responsive**: tách UI thread và background thread để app không bị “đơ” khi xử lý nặng hoặc chờ I/O (web/app desktop, game, mobile).​<br>    <br>- Tận dụng đa core: với tác vụ CPU-bound, có thể chia nhỏ công việc và chạy trên nhiều core (Java, C++, Go, Rust, v.v.).​<br>    <br>- Che giấu latency I/O: một thread chờ network/disk, thread khác vẫn tiếp tục xử lý việc khác. | Cooperative Multitasking (Event Loop) | Parallelism (HĐH + Phần cứng)              |
+| Cơ chế Điều phối   | Tuần tự nghiêm ngặt     | Preemptive Multitasking (HĐH)                                                                                                                                                                                                                                                                                                                                                                   | Cooperative Multitasking (Event Loop) | Parallelism (HĐH + Phần cứng)              |
+| Tác động GIL       | Không áp dụng           | Nút thắt cổ chai cho CPU-bound                                                                                                                                                                                                                                                                                                                                                                  | Không ảnh hưởng (Đơn luồng)           | Không ảnh hưởng (Mỗi process có GIL riêng) |
+| Chi phí Tài nguyên | Thấp nhất               | Trung bình (Thread Stack, Context Switch)                                                                                                                                                                                                                                                                                                                                                       | Thấp (Coroutines rất nhẹ)             | Cao nhất (Bộ nhớ riêng biệt, IPC)          |
+| Hiệu quả CPU-bound | Thấp                    | Thấp (Do GIL)                                                                                                                                                                                                                                                                                                                                                                                   | Thấp (Block Event Loop)               | Cao (Tận dụng đa lõi)                      |
+| Hiệu quả I/O-bound | Thấp (Blocking)         | Trung bình                                                                                                                                                                                                                                                                                                                                                                                      | Rất cao (Non-blocking)                | Trung bình                                 |
 
+##### Định nghĩa ngắn gọn
+
+- CPU bound: chương trình dành phần lớn thời gian để tính toán trên CPU, CPU thường ở mức sử dụng rất cao (gần 100%), tăng tốc độ CPU thì chương trình chạy nhanh hơn rõ rệt.​
+    
+- Ngược lại là I/O bound: chương trình chủ yếu chờ đọc/ghi file, network, database…, nên dù CPU rảnh vẫn phải chờ I/O
 ### 1.3. Tương lai của Python: Free-threading (No-GIL)
 
 Một bước ngoặt lịch sử đang diễn ra với Python 3.13 (phát hành thử nghiệm năm 2024), đó là khả năng vô hiệu hóa GIL (free-threading). Điều này cho phép các luồng thực thi song song thực sự trên nhiều lõi CPU, giải quyết điểm yếu cố hữu của Python trong các tác vụ CPU-bound đa luồng.7
@@ -1253,3 +1259,61 @@ Tầm nhìn: Với sự phát triển của phần cứng nhiều lõi và xu h�
     
 
 **
+
+---
+
+# Hỏi 
+
+## 1. Multiprocessing có phải parrallel ko 
+Không phải 1, nhưng **multiprocessing thường được dùng để đạt parallel** (chạy song song thật) trên nhiều core.
+
+## Khái niệm nhanh
+
+- **Multiprocessing**: dùng nhiều process, mỗi process có bộ nhớ riêng, có thể chạy trên các core khác nhau của CPU cùng lúc.geeksforgeeks+1​
+    
+- **Parallel (parallel processing / parallel computing)**: nói về việc nhiều tác vụ/instruction thực sự chạy **đồng thời** trên nhiều core/CPU để giảm thời gian chạy.geeksforgeeks+2​
+    
+
+## Quan hệ giữa hai khái niệm
+
+- Multiprocessing là **cách triển khai/mô hình**; parallel là **tính chất thực thi**.
+    
+    - Dùng multiprocessing đúng cách ⇒ chương trình của bạn có **parallel execution**.sitepoint+1​
+        
+- Ngoài multiprocessing, parallel còn có thể đạt được bằng:
+    
+    - Multithreading trên hệ/NGÔN ngữ không bị GIL,
+        
+    - Nhiều máy trong cluster (distributed computing).svitla+2​
+        
+
+## Tóm lại
+
+- Multiprocessing ≠ parallel, nhưng:
+    
+    - “Dùng multiprocessing để chạy parallel trên nhiều core” là câu nói chính xác.geeksforgeeks+1​
+        
+- Parallel là khái niệm rộng; multiprocessing chỉ là một trường hợp cụ thể để hiện thực hóa parallelism.jmu+1​
+    
+
+1. [https://www.geeksforgeeks.org/operating-systems/difference-between-multitasking-multithreading-and-multiprocessing/](https://www.geeksforgeeks.org/operating-systems/difference-between-multitasking-multithreading-and-multiprocessing/)
+2. [https://www.sitepoint.com/python-multiprocessing-parallel-programming/](https://www.sitepoint.com/python-multiprocessing-parallel-programming/)
+3. [https://www.geeksforgeeks.org/operating-systems/difference-between-concurrency-and-parallelism/](https://www.geeksforgeeks.org/operating-systems/difference-between-concurrency-and-parallelism/)
+4. [https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism/24684037](https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism/24684037)
+5. [https://www.ibm.com/think/topics/parallel-computing](https://www.ibm.com/think/topics/parallel-computing)
+6. [https://svitla.com/blog/parallel-computing-and-multiprocessing-in-python/](https://svitla.com/blog/parallel-computing-and-multiprocessing-in-python/)
+7. [https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/ParVConc.html](https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/ParVConc.html)
+8. [https://www.perplexity.ai/search/word-and-go-let-trong-cac-bai-8rc5dzw0RtSI6vYYEIvu6Q](https://www.perplexity.ai/search/word-and-go-let-trong-cac-bai-8rc5dzw0RtSI6vYYEIvu6Q)
+9. [https://www.reddit.com/r/learnpython/comments/qk0cx2/what_is_the_difference_between_multithreading/](https://www.reddit.com/r/learnpython/comments/qk0cx2/what_is_the_difference_between_multithreading/)
+10. [https://www.reddit.com/r/learnprogramming/comments/1lmf4l4/difference_between_multiprocessing/](https://www.reddit.com/r/learnprogramming/comments/1lmf4l4/difference_between_multiprocessing/)
+11. [https://stackoverflow.com/questions/18841095/comparison-between-multiprocessing-and-parallel-processing](https://stackoverflow.com/questions/18841095/comparison-between-multiprocessing-and-parallel-processing)
+12. [https://stackoverflow.com/questions/66494715/what-is-difference-between-multiprocessing-and-parallel-processing](https://stackoverflow.com/questions/66494715/what-is-difference-between-multiprocessing-and-parallel-processing)
+13. [https://builtin.com/data-science/multithreading-multiprocessing](https://builtin.com/data-science/multithreading-multiprocessing)
+14. [https://www.reddit.com/r/computerscience/comments/qvi861/what_is_the_different_between_multitasking_and/](https://www.reddit.com/r/computerscience/comments/qvi861/what_is_the_different_between_multitasking_and/)
+15. [https://oxylabs.io/blog/concurrency-vs-parallelism](https://oxylabs.io/blog/concurrency-vs-parallelism)
+16. [https://www.geeksforgeeks.org/operating-systems/difference-between-multiprocessing-and-multithreading/](https://www.geeksforgeeks.org/operating-systems/difference-between-multiprocessing-and-multithreading/)
+17. [https://www.index.dev/blog/concurrency-vs-parallelism](https://www.index.dev/blog/concurrency-vs-parallelism)
+18. [https://www.geeksforgeeks.org/operating-systems/difference-between-multicore-and-multiprocessor-system/](https://www.geeksforgeeks.org/operating-systems/difference-between-multicore-and-multiprocessor-system/)
+19. [https://www.baeldung.com/cs/concurrency-vs-parallelism](https://www.baeldung.com/cs/concurrency-vs-parallelism)
+20. [https://stackoverflow.com/questions/72270177/about-multithreading-concurrency-and-parallelism](https://stackoverflow.com/questions/72270177/about-multithreading-concurrency-and-parallelism)
+21. [https://www.reddit.com/r/programming/comments/nfzw29/concurrency_vs_parallelism/](https://www.reddit.com/r/programming/comments/nfzw29/concurrency_vs_parallelism/)
