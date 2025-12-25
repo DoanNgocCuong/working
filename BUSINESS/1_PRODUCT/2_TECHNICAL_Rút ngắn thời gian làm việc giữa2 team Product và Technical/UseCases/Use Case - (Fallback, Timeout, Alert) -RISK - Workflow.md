@@ -33,17 +33,18 @@ This document provides a comprehensive analysis of all risks in the Robot Workfl
 
 The risk landscape is systematically decomposed into eight mutually exclusive and collectively exhaustive domains:
 
-| Domain | Count | Primary Concern |
-|--------|-------|-----------------|
-| **API Layer Risks** | 7 | Request handling, authentication, validation |
-| **Agent Execution Risks** | 8 | Graph execution, state management, node failures |
-| **LLM Integration Risks** | 9 | Model availability, cost, latency, token limits |
-| **External Service Risks** | 7 | Kafka, Redis, Langfuse, file system |
-| **Data Processing Risks** | 6 | Document conversion, image processing, table parsing |
-| **Infrastructure Risks** | 5 | Memory, CPU, disk, network, container |
-| **Security Risks** | 3 | Authentication, authorization, data leakage |
-| **Operational Risks** | 2 | Monitoring, incident response |
-| **TOTAL** | **47** | Complete risk coverage |
+| Domain                     | Count  | Primary Concern                                      |
+| -------------------------- | ------ | ---------------------------------------------------- |
+| **API Layer Risks**        | 7      | Request handling, authentication, validation         |
+| **Agent Execution Risks**  | 8      | Graph execution, state management, node failures     |
+| **LLM Integration Risks**  | 9      | Model availability, cost, latency, token limits      |
+| **External Service Risks** | 7      | Kafka, Redis, Langfuse, file system                  |
+| **Data Processing Risks**  | 6      | Document conversion, image processing, table parsing |
+| **Infrastructure Risks**   | 5      | Memory, CPU, disk, network, container                |
+| **Security Risks**         | 3      | Authentication, authorization, data leakage          |
+| **Operational Risks**      | 2      | Monitoring, incident response                        |
+| **TOTAL**                  | **47** | Complete risk coverage                               |
+|                            |        |                                                      |
 
 ---
 
@@ -7230,3 +7231,45 @@ Báo cáo gồm 18 phần:
 - Ready for production
 
 File đã được lưu tại: `utils/docs/Stage3_12122025_PRODUCTION/alerts/FINAL_REPORT.md`
+
+
+
+---
+
+# PRODUCTON RISK HANDBOOK đã cover hết các lỗi trong workflow chưa???
+
+Chưa thể kết luận “đã cover **hết 47 risks** trong bảng” chỉ từ 1 lần search nhanh, nhưng có thể trả lời chắc theo hướng: **Handbook cover được phần lớn domain ở mức nguyên lý + pattern**, còn một số domain “đặc thù hệ thống Agent/Graph + Data Processing chi tiết” có thể **chưa map 1-1** theo checklist/risk item của bảng bạn đưa.paste.txt​
+
+## Những domain Handbook cover rõ (high confidence)
+
+- **API Layer Risks**: trong handbook có section rất rõ về API design, error handling, HTTP status, REST anti-pattern, rate limiting, authn/authz (BOLA),…paste.txt​
+    
+- **Infrastructure Risks**: có nhiều phần về downtime, resource exhaustion/hiệu năng, DR/Backup, các rủi ro vận hành và failure patterns (cascading failures, SPOF).paste.txt​
+    
+- **Security Risks**: có chương riêng về Authentication/Authorization, data leakage, case study Peloton BOLA…paste.txt​
+    
+- **Operational Risks**: có nhắc mạnh về Observability/Incident Response, monitoring, runbook, SRE workbook references, cảnh báo “blind spots”…paste.txt​
+    
+- **External Service Risks** (một phần): có các risk kiểu “third-party/supply chain”, tích hợp tool/dịch vụ (ví dụ case Salesloft–Drift), và gợi ý tool ecosystem (Prometheus/Grafana/Datadog, feature flags, v.v.).paste.txt​
+    
+
+## Những domain có khả năng chưa cover đủ “đúng theo bảng 47”
+
+- **Agent Execution Risks**: nếu hệ của bạn có “graph execution/state machine/node failures” (kiểu LangGraph/LangChain agents), handbook dạng tổng quát sẽ **không chắc** có các failure modes chuyên biệt như: node retry semantics, state checkpointing, tool-call partial failure, idempotency của node, compensation, deterministic replay… (search snippet hiện tại chưa thấy rõ phần này).paste.txt​
+    
+- **Data Processing Risks**: bảng của bạn có các hạng mục rất cụ thể như document conversion, image processing, table parsing; handbook có nói về data/model risks khá nhiều nhưng không đảm bảo có “conversion pipeline failure modes” chi tiết theo từng loại media.paste.txt​
+    
+- **LLM Integration Risks**: handbook có phần về MLOps/drift/training-serving skew và supply chain, nhưng “LLM-specific” như token limit, cost spike, model availability/SLA, prompt injection, tool hijacking… có thể có nhưng cần đối chiếu kỹ hơn để khẳng định “đủ 9/9”.paste.txt​
+    
+
+## Kết luận thực dụng
+
+- Nếu câu hỏi là “handbook có bao phủ _các nhóm rủi ro production_ tương ứng các domain không?” → **có, phần lớn** (API/Infra/Security/Operational/DB/Deployment rất đầy).paste.txt​
+    
+- Nếu câu hỏi là “handbook cover **đúng đủ 47 item** theo taxonomy bảng bạn đưa (1-1 mapping) không?” → **chưa chứng minh được** từ nội dung hiện tại; cần làm bước mapping explicit.paste.txt​
+    
+
+Muốn mình làm bước “audit mapping” thật sự: bạn gửi/đính kèm danh sách **47 risk items** chi tiết (tên từng risk), mình sẽ map: “có chương nào cover / cover một phần / chưa cover”, và đề xuất phần thiếu để bổ sung.
+
+1. [https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/e51365b4-3477-4891-9009-3d4d2114a7fc/paste.txt](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/e51365b4-3477-4891-9009-3d4d2114a7fc/paste.txt)
+2. [https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/d89a4a2b-63a2-437e-97ba-df72a26b313e/paste.txt](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/d89a4a2b-63a2-437e-97ba-df72a26b313e/paste.txt)

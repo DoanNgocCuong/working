@@ -153,12 +153,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.2 - PRODUCTION RISK.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus"
+              "title": "2.0.2 - PRODUCTION RISK"
             }
           },
           {
@@ -167,22 +167,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/Bug Network 1 - Transport Session TCP - connection leak dẫn đến cạn tài nguyên..md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.2 - PRODUCTION RISK.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bug Network 1 - Transport Session TCP - connection leak dẫn đến cạn tài nguyên."
-            }
-          },
-          {
-            "id": "8772706eae78875f",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2.0.2 - PRODUCTION RISK"
             }
           }
         ],
@@ -239,7 +229,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -307,13 +298,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/Bug Network 1 - Transport Session TCP - connection leak dẫn đến cạn tài nguyên..md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.2 - PRODUCTION RISK.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Bug Network 1 - Transport Session TCP - connection leak dẫn đến cạn tài nguyên."
+              "title": "Outline of 2.0.2 - PRODUCTION RISK"
             }
           }
         ],
@@ -335,18 +326,23 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "7bbd2100f0471588",
+  "active": "6ea7603ab5ac2f1f",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/Use Case - (Fallback, Timeout, Alert) -RISK - Workflow.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.2 - PRODUCTION RISK.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/3 - SLM P2 RISK MANAGEMENT - RỦI RO TOÀN DIỆN CHO Serving SLM - 15122025.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/CKP 2.0.1.1 v1 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 7 - Lỗi - RabbitMQ fire-and-forget.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 6 - Lỗi vòng lặp vô hạn trong RabbitMQ.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.2.10 DOcker - Uvicorn.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/Bug Network 1 - Transport Session TCP - connection leak dẫn đến cạn tài nguyên..md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/Untitled.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/TIME OUT, RETRY, FALLBACK/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/Use Cases khả năng gây treo kinh điển của hệ thống.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/1 - NETWORK 7 LAYER Client không đóng connection đúng cách.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/Use Case - Context Handling.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/Use Case - (Fallback, Timeout, Alert) -RISK - Workflow.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.2 - PRODUCTION RISK.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP/CKP 2.0.1.1 v1 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/3 - SLM P2 RISK MANAGEMENT - RỦI RO TOÀN DIỆN CHO Serving SLM - 15122025.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Untitled",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - ALL IN ONE - LẬP TRÌNH ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ.md",
@@ -354,7 +350,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP/Draft embedding models.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP/CKP 2.2 - MECE Multi Agents.md",
     "Untitled 7.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1 - PRODUCTION QUALITY - P2 - Detail - Hướng Dẫn Toàn Diện Cho AI Engineer - 100 trang Manus.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0.1.2 v2 - (Dashboard) - Phần TRACING - FALLBACK, TIMEOUT,  (Observabilit Instrumentation Standard Tracing - Collection Platform - Visulize (Dashboard, Alerts) - Analysis + Xử lý Fallback, Timeout 1.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
@@ -363,9 +358,6 @@
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/2.0 Use Case 1 - 1.1 Context Handling_Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP/CKP 2.1 _MECE MULTI AGENTS.md",
-    "Untitled 6.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 2 - Multi Agent - ALL IN ONE.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/Overview 1.1.3 - Multi Agent thì 1 agent 1 tool hay 1 agent nhiều tools.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Simple",
     "DATA_SCIENCE_AND_AI/Domain0_Package/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP",
@@ -378,7 +370,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung 1/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322060614.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung 1/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung 1/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung 1/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long term Memory Architechture - T6_2025",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251219141837.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251218180832.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/image/Pasted image 20251218180801.png",
