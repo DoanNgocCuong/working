@@ -139,12 +139,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled 7.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP/CKP 2.2 - MECE Multi Agents.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled 7"
+              "title": "CKP 2.2 - MECE Multi Agents"
             }
           }
         ],
@@ -180,7 +180,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: production ",
+                "query": "file: agent",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -269,13 +269,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/Use Case - Context Handling - Manus.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP/CKP 2.2 - MECE Multi Agents.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Use Case - Context Handling - Manus"
+              "title": "Outline of CKP 2.2 - MECE Multi Agents"
             }
           }
         ],
@@ -297,8 +297,10 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "7bbd2100f0471588",
+  "active": "c8be1c3cd07e9c84",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain0_Package/CKP/Draft bất đồng bộ và đồng bộ.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/Use Case - Context Handling - Manus.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/Workflow_FallbackTimeoutAlert_RISK.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/ContextHandling_Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/ContextHandling_P1.md",
@@ -323,9 +325,7 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 6 - Lỗi vòng lặp vô hạn trong RabbitMQ.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.2.10 DOcker - Uvicorn.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/Bug Network 1 - Transport Session TCP - connection leak dẫn đến cạn tài nguyên..md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/Untitled.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/Untitled",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/TIME OUT, RETRY, FALLBACK/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/Untitled",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases",
