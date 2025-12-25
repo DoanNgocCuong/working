@@ -1,3 +1,4 @@
+
 Dưới đây là nội dung tài liệu "Cursor mechanism overview" được chuyển đổi sang định dạng Markdown, giữ nguyên nội dung gốc:
 
 [cite_start]Báo cáo này đi sâu vào cơ chế hoạt động nội bộ của Cursor, một trình soạn thảo mã nguồn ưu tiên AI, để làm rõ cách nó xử lý các lệnh từ các chỉ thị cụ thể đến các thiết kế cấp cao (HLD)[cite: 1]. [cite_start]Bằng cách phân tích kiến trúc, hệ thống lệnh và các mô hình xử lý đầu vào, chúng tôi đặt mục tiêu cung cấp một sự hiểu biết toàn diện về khả năng và giới hạn của Cursor[cite: 2].
@@ -110,3 +111,160 @@ Khi người dùng đặt một câu hỏi, chẳng hạn như "Tìm tất cả 
   * [5] BitPeak. (2025). [cite_start]How Cursor works - Deep dive into vibe coding. [cite: 79]
   * [6] ByteByteGo. (2025). [cite_start]How Cursor Serves Billions of AI Code Completions Every Day. [cite: 80]
   * [7] Cursor. (n.d.). Overview | [cite_start]Cursor Docs. [cite: 81]
+
+
+---
+
+## (3) Thiết kế Sub-Agent trong Cursor (đội 5 vai)
+
+### Sub-agent trong Cursor: làm “thật” như thế nào?
+
+Tuỳ phiên bản Cursor, bạn có thể có/không có UI “Sub Agents”. Có report là đôi lúc mục này biến mất theo bản cập nhật. [Cursor - Community Forum+1](https://forum.cursor.com/t/sub-agents-section-missing-in-cursor-2-2-7-on-macos/145721?utm_source=chatgpt.com)  
+Cách ổn định nhất: bạn tạo **Slash Commands** bằng file Markdown trong `.cursor/commands/`, rồi gọi nhanh bằng gõ `/` trong Agent chat. [Cursor+2ezablocki.com+2](https://cursor.com/docs/agent/chat/commands?utm_source=chatgpt.com)
+
+**Cấu trúc gợi ý**
+
+`.cursor/   commands/     planner.md     implementer.md     debugger.md     reviewer.md     test-writer.md`
+
+---
+
+### 1) Planner
+
+**System intent (1–2 câu)**: Biến yêu cầu thành kế hoạch nhỏ, rõ file nào cần đọc/sửa, có tiêu chí hoàn thành.
+
+**Prompt gọi (đặt trong `planner.md`)**
+
+`Bạn là Planner. Nhiệm vụ: tạo kế hoạch nhỏ, không code vội. Input: <GOAL>, <CONSTRAINTS>, <FILES>. Output đúng format: - Summary (<=5 dòng) - Plan checklist (5–10 bước, mỗi bước có file + verify) - Assumptions (nếu thiếu info) - Risks Chỉ hỏi tối đa 3 câu nếu thiếu dữ kiện.`
+
+**Output format chuẩn**
+
+- Summary
+    
+- Plan checklist (Step 1…)
+    
+- Assumptions / Risks / Verify commands
+    
+
+---
+
+### 2) Implementer
+
+**System intent**: Viết code theo plan, **minimal diff**, không tự ý mở rộng phạm vi.
+
+**Prompt mẫu**
+
+`Bạn là Implementer. Làm theo Plan đã duyệt. Luật: minimal diff, chỉ sửa các file được liệt kê; không refactor ngoài scope. Trước khi viết code: nhắc lại files sẽ sửa + lý do. Output: - Patch đề xuất (mô tả thay đổi theo file) - Lệnh chạy verify - “What I did NOT change”`
+
+---
+
+### 3) Debugger
+
+**System intent**: Đọc error/log, khoanh vùng nguyên nhân, đề xuất cách kiểm tra nhanh và fix nhỏ.
+
+**Prompt mẫu**
+
+`Bạn là Debugger. Dựa trên <ERROR_LOG> và <FILES>. Output: 1) Chẩn đoán: lỗi thuộc loại gì (config/runtime/type/logic) 2) Vị trí nghi ngờ (file + dòng/khối code) 3) 3 bước kiểm tra để xác nhận 4) Fix minimal diff + cách verify Không đoán mò nếu thiếu log.`
+
+---
+
+### 4) Reviewer
+
+**System intent**: Review chất lượng, edge cases, clean code, security cơ bản (input validation, auth, secrets).
+
+**Prompt mẫu**
+
+`Bạn là Reviewer. Review theo checklist: - Đúng yêu cầu? Có phá backward compatibility? - Edge cases quan trọng? - Security cơ bản: validate input, tránh leak secrets, tránh unsafe eval - DX: tên hàm rõ, comment đúng chỗ Output: - Review comments theo mức: Blocker / Should / Nice - Đề xuất patch nhỏ (nếu cần)`
+
+---
+
+### 5) Test Writer
+
+**System intent**: Viết test đúng trọng tâm, dễ chạy, lock bug/feature.
+
+**Prompt mẫu**
+
+`Bạn là Test Writer. Input: <GOAL> + <FILES> + (nếu có) patch. Output: - Danh sách test cases (3–6 cases) - Test code đề xuất (theo framework hiện có) - Lệnh chạy test Ưu tiên 1 happy path + 1 edge case quan trọng.`
+
+---
+
+## (4) Tip & Trick nâng cao cho nontech
+
+### 1) Prompt patterns để AI không vòng vo
+
+Công thức 1 câu: **Goal + Constraints + Context + Output format + Stop condition**
+
+**Mẫu**
+
+`<GOAL> <CONSTRAINTS> minimal diff, không bịa API, không đổi style <CONTEXT> @file... @folder... <OUTPUT> checklist + patch + test plan <STOP> nếu thiếu dữ kiện thì hỏi trước khi code`
+
+### 2) Bắt AI “chỉ sửa đúng phần cần sửa” (minimal diff)
+
+Dùng câu thần chú:
+
+- “Chỉ sửa trong các file: …”
+    
+- “Không đổi format/lint nếu không bắt buộc”
+    
+- “Nếu cần đổi nhiều file: giải thích vì sao từng file”
+    
+
+**Prompt mini**
+
+`Chỉ sửa: <FILES> Không được sửa: mọi file khác Minimal diff: không rename/format hàng loạt Trả về: danh sách thay đổi theo file + lý do`
+
+### 3) Bắt AI tự kiểm tra (assumptions, constraints, test plan)
+
+**Prompt mini**
+
+`Trước khi code: - Liệt kê assumptions (tối đa 5) - Liệt kê constraints (tối đa 5) - Viết test plan (lệnh chạy + expected result) Nếu assumptions sai, hãy dừng và hỏi tôi.`
+
+### 4) Dùng AI để đọc code nhanh
+
+Các lệnh “đọc hiểu” siêu hợp nontech:
+
+- “Explain like I’m 12” (giải thích như cho học sinh lớp 6–7)
+    
+- “Map luồng chạy” (từ entrypoint tới output)
+    
+- “Tóm tắt file” (mục đích + hàm chính + dữ liệu vào/ra)
+    
+
+**Prompt mini**
+
+`Giải thích như mình 12 tuổi: - File này làm gì (<=5 dòng) - Luồng chạy: A -> B -> C - 3 điểm dễ bug nhất - Nếu muốn sửa X thì sửa chỗ nào?`
+
+### 5) Khi AI sai: rollback + checkpoints (cứu bạn khỏi “toang”)
+
+Tư duy: **checkpoint thường xuyên**.
+
+**Checklist**
+
+-  Tạo branch mới trước khi làm lớn
+    
+-  Commit nhỏ sau mỗi bước chạy được
+    
+-  Nếu AI làm bậy: quay lại commit trước
+    
+
+**Lệnh git cơ bản (copy)**
+
+`git checkout -b fix/your-task git status git add -A git commit -m "checkpoint: step 1" git restore --staged . git restore . git log --oneline --max-count=10`
+
+---
+
+## Sai lầm phổ biến của nontech khi dùng AI trong Cursor (và cách tránh)
+
+1. **Đưa yêu cầu mơ hồ** → AI đoán bừa  
+    → Cách tránh: luôn viết `<GOAL>` + ví dụ input/output + “không được làm gì”.
+    
+2. **Cho AI sửa quá rộng ngay từ đầu**  
+    → Cách tránh: ép **minimal diff**, giới hạn file, bắt plan trước.
+    
+3. **Không đính kèm context (file/log)**  
+    → Cách tránh: dùng `@Files & Folders` để attach đúng file. [Cursor](https://cursor.com/docs/context/mentions?utm_source=chatgpt.com)
+    
+4. **Không có cách verify** (xong rồi… không biết đúng chưa)  
+    → Cách tránh: bắt AI đưa **test plan + lệnh chạy** trước khi code.
+    
+5. **Không lưu plan/checkpoint**  
+    → Cách tránh: plan lưu vào workspace (nếu dùng plan mode) và commit checkpoint. [Cursor - Community Forum+1](https://forum.cursor.com/t/what-happens-when-plan-file-is-saved/135261?utm_source=chatgpt.com)
