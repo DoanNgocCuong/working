@@ -4887,3 +4887,18 @@ Bạn có muốn mình viết **full implementation code** cho kiến trúc impr
 │                                                                                                          │
 └─────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
+
+
+
+---
+# PROMPT 
+
+```
+Mình cần nghiên cứu về: 
+DEEP RESEARCH MECE TOÀN BỘ CÁC CÁCH THIẾT KẾ CỦA MULTI AGENTS (chẳng hạn theo mình biết thì Pub Sub là 1 kiểu trong số đó, thế còn các kiểu khác đâu???)
+
+---
+OUTPUT: Bạn cần hoàn thiện checklist sau
+1. return in ra màn hình cho mình toàn bộ tất cả tài liệu liên quan 100-1000 tài liệu liên quan để mình đọc
+2. Tổng hợp cho mình báo cáo 30 trang về MECE toàn bộ các cách thiết kế của Multi Agents
+```
