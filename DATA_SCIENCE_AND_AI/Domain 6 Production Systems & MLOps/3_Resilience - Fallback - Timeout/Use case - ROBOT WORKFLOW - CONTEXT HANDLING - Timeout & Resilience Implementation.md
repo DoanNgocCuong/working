@@ -6,6 +6,28 @@
 **Status:** ✅ All Implemented
 
 ---
+## Resilience pattern là gì?
+
+- Là nhóm design pattern tập trung vào fault tolerance, graceful degradation và tự phục hồi (self-healing) của hệ thống phân tán, đặc biệt là microservices.​
+    
+- Mục tiêu: tránh “cascading failure”, giảm downtime, giữ trải nghiệm người dùng chấp nhận được dù một số phần hệ thống hỏng.​
+    
+
+## Một số pattern phổ biến
+
+- **Retry**: Thử gọi lại khi lỗi tạm thời, thường kết hợp exponential backoff.​
+    
+- **Timeout**: Đặt thời gian chờ tối đa, tránh treo request vô thời hạn.​
+    
+- **Circuit Breaker**: Ngắt dòng gọi tới service đang lỗi nhiều, fail fast và chỉ “thử mở” lại sau một thời gian.​
+    
+- **Fallback**: Khi service chính lỗi, trả về dữ liệu mặc định/đã cache/thông tin rút gọn.​
+    
+- **Bulkhead**: Cô lập tài nguyên (thread pool, connection pool, queue) để một service không kéo sập cả hệ thống khi quá tải.​
+    
+- **Rate Limiter**: Giới hạn số request để bảo vệ service khỏi bị quá tải/DoS.
+
+---
 
 ## 📋 TỔNG QUAN
 
