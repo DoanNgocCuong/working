@@ -1,3 +1,5 @@
+# GOM TOÀN BỘ NGUỒN
+
 ```
 Deep research về master đồng bộ và bất đồng bộ trong python
 ```

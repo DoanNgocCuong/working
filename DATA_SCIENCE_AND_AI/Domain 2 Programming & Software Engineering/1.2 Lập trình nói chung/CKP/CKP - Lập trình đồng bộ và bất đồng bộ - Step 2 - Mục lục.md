@@ -1,3 +1,6 @@
+
+# MỤC LỤC 
+
 <think_tool_example_1>  
 Dưới đây là Table of Contents (Mục lục) **đầy đủ** cho cuốn “Comprehensive Handbook: **Synchronous vs. Asynchronous Programming in Python – Deep-dive ALL IN ONE**”.  
 Mục lục được phân cấp 6 cấp độ (Phần → Chương → Mục → Tiểu mục → Điểm → Điểm con) và đã bao quát toàn bộ nội dung bạn yêu cầu (lý thuyết, kiến trúc OS, Python internals, thư viện, patterns, testing, case-studies, migration, roadmap). Bạn có thể dùng trực tiếp cho LaTeX, Word, hay Markdown.
