@@ -319,3 +319,69 @@ Trong code của bạn, dùng async là hợp lý vì có nhiều I/O operations
 
 ---
 
+# 2 cách dùng 
+
+| Tiêu chí | **httpx.AsyncClient** | **aiohttp.ClientSession** | **Khi nào nên chọn** | **Ghi chú / Lựa chọn khác** |
+| :-- | :-- | :-- | :-- | :-- |
+| **Thư viện gốc** | Thuộc **HTTPX** (bởi team `encode`, cùng hệ sinh thái với FastAPI/Starlette). | Thuộc **aiohttp** (ecosystem cũ, bền, từ aio-libs). | — | Cả hai đều async-native. |
+| **Kiến trúc** | Kết hợp sync \& async (có `Client` và `AsyncClient`). | Thuần async. | Khi muốn code sync/async unified API. | HTTPX hướng “modern HTTP client” như Requests 3.0. |
+| **API thiết kế** | Giống `requests`: dễ migrate, familiar syntax. | Riêng biệt: `session.get()` + nhiều helper async. | Khi muốn code đồng bộ hoá với `requests`. | Cộng đồng dùng rộng trong web frameworks. |
+| **HTTP Protocol** | Hỗ trợ **HTTP/1.1 + HTTP/2** natively. | Mặc định chỉ HTTP/1.1 (HTTP/2 cần custom transport). | Khi cần HTTP/2, gRPC-Web, streaming modern APIs. | HTTPX hỗ trợ `h2` qua `httpcore`. |
+| **Connection Pool / Reuse** | Có pool với `Limits()`, dễ reuse bằng 1 client cố định. | Có pool qua `TCPConnector`, cấu hình chi tiết hơn. | Dùng lâu dài trong service hoặc worker. | Cả 2 nên giữ client persistent thay vì tái tạo. |
+| **Tự động đóng** | `async with` đóng client sau block (`client.aclose()`). | `async with` đóng session sau block (`session.close()`). | Khi viết script ngắn hoặc test. | Cần tránh tạo mỗi request. |
+| **Streaming Response** | Response không cần context manager (auto close khi đọc hết). | Response là async context manager (`async with response`). | Khi muốn code ngắn, tự đóng body. | `aiohttp` dễ kiểm soát manual stream. |
+| **Performance / Concurrency** | Rất tốt cho hầu hết service, hơi yếu hơn ở extreme concurrency. | Tối ưu tốt hơn cho hàng nghìn concurrent connections. | Dùng HTTPX cho web-service, Aiohttp cho crawler. | Benchmarks: aiohttp ổn định hơn ở high load. |
+| **Integration với framework khác** | Native ASGI client: test FastAPI, Starlette cực tiện. | Không gắn ASGI, nhưng có `aiohttp.web` web server. | Dùng HTTPX trong microservice, test API. | Có thể thay requests hoàn toàn. |
+| **Scaling trong FastAPI** | Tích hợp tốt (shared client, dependency injection). | Cần setup thủ công (session global). | HTTPX được ưu tiên trong FastAPI ecosystem. | Có `AsyncClient` fixture sẵn cho test. |
+| **Middleware / Retry / Hooks** | Có retry, event hooks, custom transports, proxies built-in. | Cần tự cài thêm library bên ngoài. | Khi cần robust API client. | HTTPX = modern feature-rich wrapper. |
+| **Ecosystem mở rộng** | Dùng trong OpenAI SDK, Supabase, Stripe SDK, v.v. | Thường thấy trong scraping, internal infra. | HTTPX nếu app backend/API; Aiohttp nếu crawler/scraper. | — |
+| **Khi nào nên chọn** | - Web service (FastAPI, async microservice)  <br> - Need HTTP/2, request hooks, retry <br> - Code clean \& modern | - High concurrency crawler, consumer app <br> - Khi đã dùng `aiohttp.web` server <br> - Muốn manual control pool/stream | — | — |
+| **Lựa chọn khác** | `requests` (sync), `treq`, `httpcore`, SDK wrapper (`openai`, `slack_sdk`, ...). | Hầu hết async libraries khác build dựa trên `aiohttp`. | Tùy dự án — cả hai đều production-ready. | Có thể mix 2 lib trong hệ thống. |
+
+
+***
+
+[^1]: https://stackoverflow.com/questions/46991562/how-to-reuse-aiohttp-clientsession-pool
+
+[^2]: https://stackoverflow.com/questions/76331280/aiohttp-should-a-clientsession-be-re-used-or-created-newly-foreach-request
+
+[^3]: https://www.python-httpx.org/async/
+
+[^4]: https://dev.to/leapcell/comparing-requests-aiohttp-and-httpx-which-http-client-should-you-use-3784
+
+[^5]: https://stackoverflow.com/questions/71031816/how-do-you-properly-reuse-an-httpx-asyncclient-within-a-fastapi-application
+
+[^6]: https://www.python-httpx.org
+
+[^7]: https://betterstack.com/community/guides/scaling-python/httpx-explained/
+
+[^8]: https://www.speakeasy.com/blog/python-http-clients-requests-vs-httpx-vs-aiohttp
+
+[^9]: https://oxylabs.io/blog/httpx-vs-requests-vs-aiohttp
+
+[^10]: https://github.com/oxylabs/httpx-vs-requests-vs-aiohttp
+
+[^11]: https://stackoverflow.com/questions/78516655/why-is-httpx-so-much-worse-than-aiohttp-when-facing-high-concurrent-requests
+
+[^12]: https://miguel-mendez-ai.com/2024/10/20/aiohttp-vs-httpx
+
+[^13]: https://groups.google.com/g/aio-libs/c/iosyHm0CaDU
+
+[^14]: https://github.com/encode/httpx/issues/393
+
+[^15]: https://proxiesapi.com/articles/using-httpx-s-asyncclient-for-asynchronous-http-post-requests
+
+[^16]: https://brightdata.com/blog/web-data/requests-vs-httpx-vs-aiohttp
+
+[^17]: https://www.reddit.com/r/Python/comments/ig8f3o/httpx_vs_aiohttp/
+
+[^18]: https://www.reddit.com/r/learnpython/comments/12ershy/how_to_maintain_a_single_aiohttp_session_for_all/
+
+[^19]: https://www.youtube.com/watch?v=qAh5dDODJ5k
+
+[^20]: https://github.com/aio-libs/aiohttp-session
+
+[^21]: https://stackoverflow.com/questions/65425003/how-to-use-httpx-asyncclient-as-class-member-and-close-asynchronously
+
+[^22]: https://apidog.com/blog/aiohttp-vs-httpx/
+
