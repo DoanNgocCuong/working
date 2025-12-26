@@ -162,20 +162,6 @@
             }
           },
           {
-            "id": "83dcce81eea82e06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang"
-            }
-          },
-          {
             "id": "36c9c86598fe86d1",
             "type": "leaf",
             "state": {
@@ -188,23 +174,9 @@
               "icon": "lucide-file",
               "title": "Untitled 11"
             }
-          },
-          {
-            "id": "ab9f5cdb89b4e396",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang"
-            }
           }
         ],
-        "currentTab": 12
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -325,13 +297,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled 11.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Cursor/md.md",
                 "followCursor": true,
                 "showSearch": true,
-                "searchQuery": "Resilience"
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled 11"
+              "title": "Outline of md"
             }
           }
         ],
@@ -353,11 +325,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "36c9c86598fe86d1",
+  "active": "0304f1b167286829",
   "lastOpenFiles": [
+    "PEOPLE/THE_ROAD/Agentic AI for Finance - 26122025.md",
+    "Untitled 11.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
-    "Untitled 11.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality - Production Risk/CKP - PRODUCTION RISK - version thiếu - 400 trang 200.000 từ -.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.1 PRODUCTION QUALITY Handbook - AI Engineer - 100 trang Manus.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.1.3 Dọn docker - kill process - port server.md",
@@ -374,7 +347,6 @@
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 4 - Processing.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.4 MECE TỪ PRODUCT TỚI TECH - TOÀN BỘ CÁC BẢN THIẾT KẾ ĐỂ TRIỂN KHAI 100 phan tram DỰ ÁN.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Untitled 1.md",
-    "PEOPLE/THE_ROAD/Agentic AI for Finance - 26122025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/Draft/Draft - Prompting Manus - Step 1 Deep Research - Input.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Untitled.md",
