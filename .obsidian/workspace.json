@@ -195,30 +195,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/ALL IN ONE - Lập trình đồng bộ và bất đồng bộ HANDBOOK - Python - 26122025.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 - PRODUCTION RISK - 400 trang 200.000 từ.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ALL IN ONE - Lập trình đồng bộ và bất đồng bộ HANDBOOK - Python - 26122025"
+              "title": "3.2 - PRODUCTION RISK - 400 trang 200.000 từ"
             }
           },
           {
-            "id": "543c56044812e001",
+            "id": "2f87d4663901b506",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 4 - Processing.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 - PRODUCTION RISK - 400 trang 200.000 từ.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CKP - Lập trình đồng bộ và bất đồng bộ - Step 4 - Processing"
+              "title": "3.2 - PRODUCTION RISK - 400 trang 200.000 từ"
+            }
+          },
+          {
+            "id": "14f2936c00b17d0c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_monitoring-observability/Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation"
             }
           }
         ],
-        "currentTab": 13
+        "currentTab": 15
       }
     ],
     "direction": "vertical"
@@ -250,7 +264,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: món",
+                "query": "file: use",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -339,13 +353,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/ALL IN ONE - Lập trình đồng bộ và bất đồng bộ HANDBOOK - Python - 26122025.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_monitoring-observability/Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ALL IN ONE - Lập trình đồng bộ và bất đồng bộ HANDBOOK - Python - 26122025"
+              "title": "Outline of Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation"
             }
           }
         ],
@@ -367,9 +381,14 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "0229fa9943b78232",
+  "active": "14f2936c00b17d0c",
   "lastOpenFiles": [
+    "Untitled 10.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 - PRODUCTION RISK - 400 trang 200.000 từ.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 4 - Processing.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/3 - SLM P2 RISK MANAGEMENT - RỦI RO TOÀN DIỆN CHO Serving SLM - 15122025.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_monitoring-observability/Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_monitoring-observability/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/ALL IN ONE - Lập trình đồng bộ và bất đồng bộ HANDBOOK - Python - 26122025.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
@@ -393,11 +412,6 @@
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/1 - NETWORK 7 LAYER Client không đóng connection đúng cách.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/Bug Network 1 - Transport Session TCP - connection leak dẫn đến cạn tài nguyên..md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/Use Cases khả năng gây treo kinh điển của hệ thống.md",
-    "PEOPLE/THE_ROAD/07122025_So Sánh AI vs Finance - Lựa Chọn Lõi Chiến Lược.md",
-    "BUSINESS/2_FINANCE/FINTECH/5. Đánh giá 1 số Job - DNSE - MSB - Domain Tài chính DNSE vs Giáo dục Step Up Education Chiến lược 40-50 năm.md",
-    "DATA_SCIENCE_AND_AI/2_English/1_thi VSTEP/5. Bộ đề và chiến lược.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Cursor",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - SDD - Technical Design Docs/CKP example",
