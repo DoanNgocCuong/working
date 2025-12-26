@@ -36,34 +36,6 @@
             }
           },
           {
-            "id": "368700d3157a8c48",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/7. Prompating Manus - Step 1 Deep Research - Output.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "7. Prompating Manus - Step 1 Deep Research - Output"
-            }
-          },
-          {
-            "id": "7b97f42097c50d19",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ"
-            }
-          },
-          {
             "id": "ece74d9c08c59fef",
             "type": "leaf",
             "state": {
@@ -190,59 +162,17 @@
             }
           },
           {
-            "id": "0229fa9943b78232",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 - PRODUCTION RISK - 400 trang 200.000 từ.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.2 - PRODUCTION RISK - 400 trang 200.000 từ"
-            }
-          },
-          {
-            "id": "2f87d4663901b506",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 - PRODUCTION RISK - 400 trang 200.000 từ.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.2 - PRODUCTION RISK - 400 trang 200.000 từ"
-            }
-          },
-          {
-            "id": "14f2936c00b17d0c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025"
-            }
-          },
-          {
             "id": "83dcce81eea82e06",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/Untitled 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation"
+              "title": "Untitled 1"
             }
           },
           {
@@ -260,7 +190,7 @@
             }
           }
         ],
-        "currentTab": 17
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -292,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: port",
+                "query": "file: finAI",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -313,8 +243,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -382,13 +311,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.1.3 Dọn docker - kill process - port server.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/Draft/Draft - Prompting Manus - Step 1 Deep Research - Input.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2.1.3 Dọn docker - kill process - port server"
+              "title": "Outline of Draft - Prompting Manus - Step 1 Deep Research - Input"
             }
           }
         ],
@@ -410,15 +339,28 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "96c47a0d75cdf88f",
+  "active": "ece74d9c08c59fef",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/2.3 Các port.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Untitled 1.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Untitled.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/___.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/Step3-Output-High Level Design.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0.1.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/2.1 Tài liệu summary giai đoạn 1.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Draft Pika.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 4 - Review Quá trình mình làm.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 - PRODUCTION RISK - 400 trang 200.000 từ.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.1.3 Dọn docker - kill process - port server.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/2.3 Các port.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/CKP - Use case - Robot Workflow- Context Handling - Bug treo 504 services.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP",
     "Untitled 10.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 - PRODUCTION RISK - 400 trang 200.000 từ.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 4 - Processing.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/3 - SLM P2 RISK MANAGEMENT - RỦI RO TOÀN DIỆN CHO Serving SLM - 15122025.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/ALL IN ONE - Lập trình đồng bộ và bất đồng bộ HANDBOOK - Python - 26122025.md",
@@ -426,21 +368,8 @@
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/4. Gihub - Tổng kết Năm.md",
     "PEOPLE/THE_ROAD/Agentic AI for Finance - 26122025.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/Untitled.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Cursor/md.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/image/Pasted image 20251226104642.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/image",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 2 - Mục lục.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 3 - Prompt.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trìn.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - LẬP TRÌNH ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ - Step 1 - Gom nguồn.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/6. Các vấn đề Prompting.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/3. Cách điều chỉnh Prompt để kết quả trả ra được Consistency.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/4. Prompt Template - giải word count và Agenda trải nghiệm ko mượt (tìm many options for Agenda) - 25112025.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/5. Prompt - Prompt Tuning.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/7. Template.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/Draft/Draft - Prompting Manus - Step 1 Deep Research - Input.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Cursor",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality",
