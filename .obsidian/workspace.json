@@ -167,30 +167,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/Untitled 1.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled 1"
+              "title": "3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang"
             }
           },
           {
-            "id": "96c47a0d75cdf88f",
+            "id": "36c9c86598fe86d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.1.3 Dọn docker - kill process - port server.md",
+                "file": "Untitled 11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.1.3 Dọn docker - kill process - port server"
+              "title": "Untitled 11"
+            }
+          },
+          {
+            "id": "ab9f5cdb89b4e396",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 12
       }
     ],
     "direction": "vertical"
@@ -222,7 +236,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: finAI",
+                "query": "file: prompt",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -311,13 +325,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/Draft/Draft - Prompting Manus - Step 1 Deep Research - Input.md",
+                "file": "Untitled 11.md",
                 "followCursor": true,
                 "showSearch": true,
-                "searchQuery": ""
+                "searchQuery": "Resilience"
               },
               "icon": "lucide-list",
-              "title": "Outline of Draft - Prompting Manus - Step 1 Deep Research - Input"
+              "title": "Outline of Untitled 11"
             }
           }
         ],
@@ -339,40 +353,40 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "ece74d9c08c59fef",
+  "active": "36c9c86598fe86d1",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
+    "Untitled 11.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality - Production Risk/CKP - PRODUCTION RISK - version thiếu - 400 trang 200.000 từ -.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.1 PRODUCTION QUALITY Handbook - AI Engineer - 100 trang Manus.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.1.3 Dọn docker - kill process - port server.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/Prompting Tuning.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Prompt/Prompt Kiểm Tra System Design.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/0. Prompting Builder Simple Role Play - HỘI THOẠI.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality - Production Risk/CKP 3.0 - PRODUCTION QUALITY - P1 - Core.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality - Production Risk/CKP - Production Risk - Step 1 Nguồn - Step 2 Mục lục - Step 3 Prompting.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality - Production Risk/CKP 3.0.1 v1 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality - Production Risk/3.0.1.2 v2 - (Dashboard) - Phần TRACING - FALLBACK, TIMEOUT,  (Observabilit Instrumentation Standard Tracing - Collection Platform - Visulize (Dashboard, Alerts) - Analysis + Xử lý Fallback, Timeout 1.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/ALL IN ONE - Lập trình đồng bộ và bất đồng bộ HANDBOOK - Python - 26122025.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 4 - Processing.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.4 MECE TỪ PRODUCT TỚI TECH - TOÀN BỘ CÁC BẢN THIẾT KẾ ĐỂ TRIỂN KHAI 100 phan tram DỰ ÁN.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Untitled 1.md",
+    "PEOPLE/THE_ROAD/Agentic AI for Finance - 26122025.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/Draft/Draft - Prompting Manus - Step 1 Deep Research - Input.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Overview 1 - 13122025 - Lộ Trình Toàn Diện Để Làm Chủ Thiết Kế Hệ Thống Agent Manus - 300 tokens mà ngon vãi ạ.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Untitled.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/___.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/Step3-Output-High Level Design.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0.1.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v3 - 16122025/3.0 Step 2 - Procssing 2 - Sử dụng (Bài toán Product, Technical các đối thủ, Kiến trúc dự kiến, Template SDD) - Output 2 Software Design Document.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/2.1 Tài liệu summary giai đoạn 1.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - vn - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/Draft Pika.md",
-    "BUSINESS/1_PRODUCT/4_FinAI/Technical/3.0 Step 4 - Review Quá trình mình làm.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 - PRODUCTION RISK - 400 trang 200.000 từ.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.1.3 Dọn docker - kill process - port server.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/2. Big Data/2.3 Các port.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/CKP - Use case - Robot Workflow- Context Handling - Bug treo 504 services.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP",
-    "Untitled 10.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 4 - Processing.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/3 - SLM P2 RISK MANAGEMENT - RỦI RO TOÀN DIỆN CHO Serving SLM - 15122025.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/ALL IN ONE - Lập trình đồng bộ và bất đồng bộ HANDBOOK - Python - 26122025.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/4. Gihub - Tổng kết Năm.md",
-    "PEOPLE/THE_ROAD/Agentic AI for Finance - 26122025.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/image/Pasted image 20251226104642.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/image",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Cursor",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality - Production Risk",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - SDD - Technical Design Docs/CKP example",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104501.png",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104440.png",
