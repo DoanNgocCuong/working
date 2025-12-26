@@ -250,7 +250,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: python",
+                "query": "file: món",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -271,7 +271,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -367,7 +368,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "0229fa9943b78232",
+  "active": "db02c5a91e7f8e1e",
   "lastOpenFiles": [
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/ALL IN ONE - Lập trình đồng bộ và bất đồng bộ HANDBOOK - Python - 26122025.md",
