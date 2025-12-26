@@ -2539,3 +2539,449 @@ _[Tiếp tục với 70+ nguồn tham khảo bổ sung trong bản đầy đủ]
 **📢 Đây là bản báo cáo PREVIEW với 25+ nguồn chính. Bản đầy đủ với 100-200 nguồn chi tiết sẽ được hoàn thiện trong nghiên cứu tiếp theo.**
 
 _Bạn có muốn tôi tiếp tục deep research và tạo báo cáo đầy đủ với toàn bộ 100-200 nguồn tham khảo không?_
+
+
+---
+
+# GPT: Deep dive “đồng bộ vs bất đồng bộ” trong Python: khung tư duy từ CPU/OS → CPython → asyncio → production
+## Deep dive “đồng bộ vs bất đồng bộ” trong Python: khung tư duy từ CPU/OS → CPython → asyncio → production
+
+Bạn muốn “master” async/sync trong Python thì cần nhìn theo **3 tầng** (và vì sao async tồn tại):
+
+1. **Tầng máy + OS**: CPU thực thi tuần tự; “đồng thời” phần lớn đến từ **OS scheduler** (chuyển ngữ cảnh giữa thread/process) và từ các cơ chế I/O của kernel.
+    
+2. **Tầng runtime (CPython)**: cách Python quản lý object/memory + **GIL** (ở build mặc định) quyết định thread có “song song thật” hay không.
+    
+3. **Tầng mô hình lập trình**:
+    
+    - **Sync/Blocking**: đơn giản, tuyến tính; khi gặp I/O thì **block** thread.
+        
+    - **Async/Non-blocking (asyncio)**: 1 thread + **event loop** điều phối nhiều coroutine; khi `await` I/O thì nhả quyền chạy để làm việc khác.
+        
+
+### Các khái niệm “xương sống” cần nắm (để không bị rối)
+
+- **Concurrency vs Parallelism**:
+    
+    - _Concurrency_: xử lý nhiều “việc đang dang dở” (có thể trên 1 core).
+        
+    - _Parallelism_: chạy thật sự đồng thời trên nhiều core.
+        
+- **Preemptive vs Cooperative scheduling**:
+    
+    - Thread/process: OS **preempt** (cướp CPU theo time-slice).
+        
+    - Coroutine (asyncio): **cooperative** (chỉ nhường khi `await`).
+        
+
+### Vì sao event loop “thắng” ở I/O-bound
+
+Event loop dựa vào **I/O multiplexing** (select/poll/epoll/kqueue/IOCP) để theo dõi nhiều socket/file descriptor mà không cần tạo 1 thread/connection.
+
+- Linux thường dùng **epoll** (một trong các primitive quan trọng).
+    
+- Windows dùng **IOCP**.
+    
+
+### Python 2025+: ngoài `threading/multiprocessing/asyncio` còn có gì mới?
+
+- **Free-threading build (GIL disabled)**: bắt đầu từ **Python 3.13**, CPython có build “free threading” để threads có thể chạy song song trên nhiều core.
+    
+- **Subinterpreters & `concurrent.interpreters`**: Python **3.14** thêm `concurrent.interpreters` để quản lý “nhiều interpreter trong 1 process” (một hướng concurrency/parallelism khác).
+    
+- **Structured concurrency trong asyncio**: `asyncio.TaskGroup` (và `ExceptionGroup/except*`) giúp quản lý vòng đời task rõ ràng, tránh “task mồ côi”.
+    
+
+### Những “điểm chết” khi master asyncio
+
+- **Blocking call trong coroutine = block cả event loop** (VD: `time.sleep()`, `requests.get()` sync). Giải quyết: dùng async-native libs hoặc offload qua thread/process (`asyncio.to_thread()` / `run_in_executor`).
+    
+- **Debug async phải bật đúng công cụ**: asyncio có **debug mode** (ví dụ qua `PYTHONASYNCIODEBUG`).
+    
+- **Hiểu internals để debug “hóc búa”**: CPython có ghi chú nội bộ về asyncio; các thay đổi như việc quản lý task nội bộ cũng đã evolve theo phiên bản.
+    
+
+Ghi chú hệ sinh thái: **Curio** rất đáng đọc để học tư duy thiết kế async, nhưng repo đã được tác giả đánh dấu **abandoned (Dec 21, 2025)**, nên xem như “tài liệu lịch sử/ý tưởng”.
+
+---
+
+## Bộ “ALL IN ONE” 180 nguồn tham khảo (100–200 links) – đã chia theo lớp nền tảng → Python → asyncio → production
+
+> Tất cả URL nằm trong code block để bạn copy/paste nhanh.
+
+### A. Nền tảng máy tính: từ mã máy đến hệ điều hành
+
+```text
+1. Nand2Tetris (course + materials) — https://www.nand2tetris.org/
+2. Coursera: Build a Modern Computer from First Principles (Part 1) — https://www.coursera.org/learn/build-a-computer
+3. Coursera: Build a Modern Computer from First Principles (Part 2) — https://www.coursera.org/learn/nand2tetris2
+4. MIT OCW 6.004 Computation Structures — https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/
+5. Computer Systems: A Programmer's Perspective (CS:APP) – book site — https://csapp.cs.cmu.edu/
+6. Operating Systems: Three Easy Pieces (OSTEP) – free book — https://pages.cs.wisc.edu/~remzi/OSTEP/
+7. xv6 (RISC-V) book PDF (MIT) — https://pdos.csail.mit.edu/6.S081/2020/xv6/book-riscv-rev1.pdf
+8. Intel® 64 and IA-32 Architectures Software Developer Manuals — https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
+9. RISC-V Technical Specifications (ISA specs) — https://riscv.org/technical/specifications/
+10. What Every Programmer Should Know About Memory (Ulrich Drepper) – PDF — https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
+11. Linux Insides (OS internals, free) — https://github.com/0xAX/linux-insides
+12. OSDev Wiki (low-level OS, interrupts, scheduling, etc.) — https://wiki.osdev.org/Main_Page
+13. C memory model / atomics (cppreference): memory_order — https://en.cppreference.com/w/c/atomic/memory_order
+14. The Open Group Base Specifications (POSIX) – index — https://pubs.opengroup.org/onlinepubs/9699919799/
+15. Computerphile: Context Switching (video, conceptual) — https://www.youtube.com/watch?v=YSn8_XdGH7c
+```
+
+### B. OS fundamentals: process, thread, scheduler, syscalls, locking
+
+```text
+1. Linux kernel docs: CFS scheduler design — https://www.kernel.org/doc/html/latest/scheduler/sched-design-CFS.html
+2. man7: fork(2) — https://man7.org/linux/man-pages/man2/fork.2.html
+3. man7: execve(2) — https://man7.org/linux/man-pages/man2/execve.2.html
+4. man7: wait(2) — https://man7.org/linux/man-pages/man2/wait.2.html
+5. man7: clone(2) (Linux threads/process creation primitive) — https://man7.org/linux/man-pages/man2/clone.2.html
+6. man7: sched(7) (scheduling overview) — https://man7.org/linux/man-pages/man7/sched.7.html
+7. man7: pthreads(7) (POSIX threads overview) — https://man7.org/linux/man-pages/man7/pthreads.7.html
+8. man7: pthread_create(3) — https://man7.org/linux/man-pages/man3/pthread_create.3.html
+9. man7: mutexes and condition variables (pthreads) — https://man7.org/linux/man-pages/man7/pthreads.7.html#SYNCHRONIZATION_PRIMITIVES
+10. man7: futex(2) (fast userspace mutex) — https://man7.org/linux/man-pages/man2/futex.2.html
+11. man7: signal(7) (signals overview) — https://man7.org/linux/man-pages/man7/signal.7.html
+12. man7: pipe(2) — https://man7.org/linux/man-pages/man2/pipe.2.html
+13. man7: open(2) — https://man7.org/linux/man-pages/man2/open.2.html
+14. man7: read(2) — https://man7.org/linux/man-pages/man2/read.2.html
+15. man7: write(2) — https://man7.org/linux/man-pages/man2/write.2.html
+16. MIT 6.S081 Operating System Engineering (xv6 labs) — https://pdos.csail.mit.edu/6.S081/
+17. OSDev Wiki: context switching — https://wiki.osdev.org/Context_Switching
+18. OSDev Wiki: interrupts — https://wiki.osdev.org/Interrupts
+19. Microsoft Learn: Processes and Threads (Win32) — https://learn.microsoft.com/en-us/windows/win32/procthread/processes-and-threads
+20. Microsoft Learn: Thread Local Storage (Win32) — https://learn.microsoft.com/en-us/windows/win32/procthread/thread-local-storage
+```
+
+### C. I/O & networking primitives: blocking vs non-blocking, multiplexing
+
+```text
+1. man7: select(2) — https://man7.org/linux/man-pages/man2/select.2.html
+2. man7: pselect(2) — https://man7.org/linux/man-pages/man2/pselect.2.html
+3. man7: poll(2) — https://man7.org/linux/man-pages/man2/poll.2.html
+4. man7: epoll(7) — https://man7.org/linux/man-pages/man7/epoll.7.html
+5. man7: epoll_ctl(2) — https://man7.org/linux/man-pages/man2/epoll_ctl.2.html
+6. FreeBSD man: kqueue(2) — https://man.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2
+7. FreeBSD man: kevent(2) — https://man.freebsd.org/cgi/man.cgi?query=kevent&sektion=2
+8. Microsoft Learn: I/O Completion Ports (IOCP) — https://learn.microsoft.com/en-us/windows/win32/fileio/i-o-completion-ports
+9. Microsoft Learn: CreateIoCompletionPort function — https://learn.microsoft.com/en-us/windows/win32/api/ioapiset/nf-ioapiset-createiocompletionport
+10. libuv design overview (event loop + I/O) — https://docs.libuv.org/en/v1.x/design.html
+11. Node.js: Event loop, timers, and process.nextTick() — https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick
+12. man7: socket(7) — https://man7.org/linux/man-pages/man7/socket.7.html
+13. man7: connect(2) — https://man7.org/linux/man-pages/man2/connect.2.html
+14. man7: accept(2) — https://man7.org/linux/man-pages/man2/accept.2.html
+15. RFC 6455: The WebSocket Protocol — https://www.rfc-editor.org/rfc/rfc6455
+```
+
+### D. Concurrency/Parallelism: theory + patterns (language-agnostic)
+
+```text
+1. Rob Pike: Concurrency is not Parallelism (talk/video) — https://www.youtube.com/watch?v=oV9rvDllKEg
+2. Go blog: Concurrency is not Parallelism (article) — https://go.dev/blog/waza-talk
+3. Stack Overflow: Concurrency vs Parallelism (classic answer) — https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism/24684037
+4. IBM: Parallel computing (overview) — https://www.ibm.com/think/topics/parallel-computing
+5. The Little Book of Semaphores (Allen B. Downey) – PDF — https://greenteapress.com/semaphores/LittleBookOfSemaphores.pdf
+6. Little Book of Semaphores – site/index — https://greenteapress.com/wp/semaphores/
+7. Structured concurrency notes (Nathaniel J. Smith / Trio) — https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/
+8. Reactive Manifesto (backpressure, reactive systems) — https://www.reactivemanifesto.org/
+9. Reactive Streams specification (backpressure protocol) — https://www.reactive-streams.org/
+10. Wikipedia: Actor model (conceptual background) — https://en.wikipedia.org/wiki/Actor_model
+11. Wikipedia: Communicating sequential processes (CSP) — https://en.wikipedia.org/wiki/Communicating_sequential_processes
+12. Baeldung: Concurrency vs Parallelism (CS explanation) — https://www.baeldung.com/cs/concurrency-vs-parallelism
+```
+
+### E. Python internals: GIL, free-threading, subinterpreters, object model
+
+```text
+1. Python FAQ: What is the GIL? — https://docs.python.org/3/faq/library.html#what-is-the-global-interpreter-lock-gil
+2. Python HOWTO: Free-threading Python (GIL disabled build) (3.13+) — https://docs.python.org/3/howto/free-threading-python.html
+3. PEP 703 – Making the Global Interpreter Lock Optional in CPython — https://peps.python.org/pep-0703/
+4. PEP 684 – A Per-Interpreter GIL — https://peps.python.org/pep-0684/
+5. PEP 734 – Multiple Interpreters in the Stdlib — https://peps.python.org/pep-0734/
+6. PEP 554 – Multiple Interpreters in the Stdlib (historical background) — https://peps.python.org/pep-0554/
+7. Python docs: concurrent.interpreters (added in 3.14) — https://docs.python.org/3/library/concurrent.interpreters.html
+8. CPython InternalDocs: asyncio implementation notes (main branch) — https://github.com/python/cpython/blob/main/InternalDocs/asyncio.md
+9. CPython source: ceval.c (bytecode evaluation loop) — https://github.com/python/cpython/blob/main/Python/ceval.c
+10. CPython source: _asynciomodule.c (asyncio C acceleration) — https://github.com/python/cpython/blob/main/Modules/_asynciomodule.c
+11. CPython source: asyncio/tasks.py — https://github.com/python/cpython/blob/main/Lib/asyncio/tasks.py
+12. Python Reference: Data model (incl. __await__, async iteration hooks) — https://docs.python.org/3/reference/datamodel.html
+13. Python docs: contextvars module (context propagation) — https://docs.python.org/3/library/contextvars.html
+14. PEP 567 – Context Variables — https://peps.python.org/pep-0567/
+15. Python docs: ExceptionGroup / except* (built-in exceptions) — https://docs.python.org/3/library/exceptions.html#ExceptionGroup
+16. PEP 654 – Exception Groups and except* — https://peps.python.org/pep-0654/
+17. Real Python: Python 3.13 Free Threading and a JIT Compiler — https://realpython.com/python313-free-threading-jit/
+```
+
+### F. Concurrency trong stdlib Python (sync + async building blocks)
+
+```text
+1. Python docs: Concurrent Execution (overview chapter) — https://docs.python.org/3/library/concurrency.html
+2. Python docs: threading — https://docs.python.org/3/library/threading.html
+3. Python docs: _thread (low-level threads) — https://docs.python.org/3/library/_thread.html
+4. Python docs: multiprocessing — https://docs.python.org/3/library/multiprocessing.html
+5. Python docs: multiprocessing.pool — https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.pool
+6. Python docs: multiprocessing.shared_memory — https://docs.python.org/3/library/multiprocessing.shared_memory.html
+7. Python docs: queue (thread-safe queue) — https://docs.python.org/3/library/queue.html
+8. Python docs: concurrent.futures — https://docs.python.org/3/library/concurrent.futures.html
+9. Python docs: subprocess — https://docs.python.org/3/library/subprocess.html
+10. Python docs: signal — https://docs.python.org/3/library/signal.html
+11. Python docs: selectors (I/O multiplexing abstraction) — https://docs.python.org/3/library/selectors.html
+12. Python docs: socket (network programming) — https://docs.python.org/3/library/socket.html
+13. Python docs: time.sleep (blocking) vs asyncio.sleep (non-blocking) — https://docs.python.org/3/library/time.html#time.sleep
+14. Python docs: contextlib (incl. asynccontextmanager) — https://docs.python.org/3/library/contextlib.html
+15. Python docs: logging (instrumentation for concurrent programs) — https://docs.python.org/3/library/logging.html
+```
+
+### G. Python async/await + asyncio (deep dive: semantics, APIs, internals)
+
+```text
+1. Python docs: asyncio — Asynchronous I/O (main page) — https://docs.python.org/3/library/asyncio.html
+2. Python HOWTO: A Conceptual Overview of asyncio — https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html
+3. Python docs: High-level asyncio API index — https://docs.python.org/3/library/asyncio-api-index.html
+4. Python docs: Runners (asyncio.run, Runner) — https://docs.python.org/3/library/asyncio-runner.html
+5. Python docs: Coroutines and Tasks (gather, create_task, TaskGroup, cancellation) — https://docs.python.org/3/library/asyncio-task.html
+6. Python docs: Event loop (loop.run_in_executor, add_reader, etc.) — https://docs.python.org/3/library/asyncio-eventloop.html
+7. Python docs: Futures (asyncio.Future) — https://docs.python.org/3/library/asyncio-future.html
+8. Python docs: Queues (asyncio.Queue) — https://docs.python.org/3/library/asyncio-queue.html
+9. Python docs: Streams (StreamReader/Writer) — https://docs.python.org/3/library/asyncio-stream.html
+10. Python docs: Transports and Protocols (low-level networking) — https://docs.python.org/3/library/asyncio-protocol.html
+11. Python docs: Subprocesses (asyncio.create_subprocess_exec) — https://docs.python.org/3/library/asyncio-subprocess.html
+12. Python docs: Synchronization primitives (Lock, Event, Semaphore, etc.) — https://docs.python.org/3/library/asyncio-sync.html
+13. Python docs: Exceptions in asyncio (CancelledError, TimeoutError, etc.) — https://docs.python.org/3/library/asyncio-exceptions.html
+14. Python docs: Developing with asyncio (debug mode, common pitfalls) — https://docs.python.org/3/library/asyncio-dev.html
+15. Python docs: asyncio Platform Support — https://docs.python.org/3/library/asyncio-platforms.html
+16. Python docs: asyncio Policies — https://docs.python.org/3/library/asyncio-policy.html
+17. Python Reference: await expression — https://docs.python.org/3/reference/expressions.html#await
+18. Python Reference: async/await in compound statements — https://docs.python.org/3/reference/compound_stmts.html#async
+19. PEP 3156 – Asynchronous IO Support Rebooted: the 'asyncio' module — https://peps.python.org/pep-3156/
+20. PEP 3153 – Asynchronous IO support (background) — https://peps.python.org/pep-3153/
+21. PEP 492 – Coroutines with async and await syntax — https://peps.python.org/pep-0492/
+22. PEP 342 – Coroutines via Enhanced Generators — https://peps.python.org/pep-0342/
+23. PEP 380 – Syntax for Delegating to a Subgenerator (yield from) — https://peps.python.org/pep-0380/
+24. PEP 525 – Asynchronous Generators — https://peps.python.org/pep-0525/
+25. PEP 530 – Asynchronous Comprehensions — https://peps.python.org/pep-0530/
+26. PEP 479 – Change StopIteration handling inside generators — https://peps.python.org/pep-0479/
+27. Real Python: Async IO in Python (walkthrough) — https://realpython.com/async-io-python/
+28. Python behind the scenes #12: how async/await works in Python — https://tenthousandmeters.com/blog/python-behind-the-scenes-12-how-asyncawait-works-in-python/
+29. Explaining an event loop in 100 lines of code (iximiuz) — https://iximiuz.com/en/posts/explain-event-loop-in-100-lines-of-code/
+30. Reference implementation: simple-event-loop (iximiuz GitHub) — https://github.com/iximiuz/simple-event-loop
+31. 500 Lines or Less: A Web Crawler With asyncio Coroutines (A. Jesse Jiryu Davis, Guido) — https://aosabook.org/en/500L/a-web-crawler-with-asyncio-coroutines.html
+32. asyncio source: Lib/asyncio/base_events.py — https://github.com/python/cpython/blob/main/Lib/asyncio/base_events.py
+33. asyncio source: Lib/asyncio/selector_events.py — https://github.com/python/cpython/blob/main/Lib/asyncio/selector_events.py
+34. asyncio source: Lib/asyncio/sslproto.py — https://github.com/python/cpython/blob/main/Lib/asyncio/sslproto.py
+35. asyncio source: Lib/asyncio/streams.py — https://github.com/python/cpython/blob/main/Lib/asyncio/streams.py
+```
+
+### H. Thư viện async trong ecosystem Python (HTTP, DB, schedulers, greenlets)
+
+```text
+1. aiohttp documentation — https://docs.aiohttp.org/en/stable/
+2. httpx documentation: Async Client — https://www.python-httpx.org/async/
+3. uvloop documentation (high-performance event loop) — https://uvloop.readthedocs.io/
+4. AnyIO documentation (async compatibility layer, structured concurrency) — https://anyio.readthedocs.io/en/stable/
+5. Trio documentation (structured concurrency 'nurseries') — https://trio.readthedocs.io/en/stable/
+6. trio-asyncio (bridge between Trio and asyncio) — https://trio-asyncio.readthedocs.io/en/latest/
+7. gevent documentation — https://www.gevent.org/
+8. greenlet documentation — https://greenlet.readthedocs.io/en/latest/
+9. websockets documentation — https://websockets.readthedocs.io/en/stable/
+10. asyncpg documentation (PostgreSQL async driver) — https://magicstack.github.io/asyncpg/current/
+11. SQLAlchemy asyncio extension docs — https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html
+12. Motor documentation (MongoDB async driver) — https://motor.readthedocs.io/en/stable/
+13. aiosqlite documentation — https://aiosqlite.omnilib.dev/en/stable/
+14. aiomysql documentation — https://aiomysql.readthedocs.io/en/latest/
+15. aiofiles (async file I/O helper) – GitHub — https://github.com/Tinche/aiofiles
+16. async-timeout (timeouts for asyncio) – GitHub — https://github.com/aio-libs/async-timeout
+17. aioredis deprecation notice / redis-py asyncio support — https://github.com/aio-libs/aioredis-py
+18. redis-py asyncio (redis.asyncio) documentation — https://redis-py.readthedocs.io/en/stable/examples/asyncio_examples.html
+19. Curio documentation (historical async library) — https://curio.readthedocs.io/en/latest/
+20. Curio repository (David Beazley) – status/notes — https://github.com/dabeaz/curio
+```
+
+### I. Web servers/frameworks: ASGI, FastAPI, Starlette, deployment
+
+```text
+1. ASGI specification (official docs) — https://asgi.readthedocs.io/en/latest/
+2. Uvicorn documentation (ASGI server) — https://www.uvicorn.org/
+3. Hypercorn documentation (ASGI server) — https://pgjones.gitlab.io/hypercorn/
+4. Gunicorn documentation — https://docs.gunicorn.org/en/stable/
+5. FastAPI documentation — https://fastapi.tiangolo.com/
+6. FastAPI: Async docs (async & await) — https://fastapi.tiangolo.com/async/
+7. Starlette documentation — https://www.starlette.io/
+8. Starlette: Thread Pool (run_in_threadpool) notes — https://www.starlette.io/threadpool/
+9. Django documentation: Asynchronous support — https://docs.djangoproject.com/en/stable/topics/async/
+10. AnyIO in Starlette/FastAPI (background) — https://anyio.readthedocs.io/en/stable/basics.html
+```
+
+### J. Test/Debug/Profiling cho code concurrent/async
+
+```text
+1. pytest-asyncio documentation — https://pytest-asyncio.readthedocs.io/en/latest/
+2. pytest documentation — https://docs.pytest.org/en/stable/
+3. Python docs: unittest.mock.AsyncMock — https://docs.python.org/3/library/unittest.mock.html#unittest.mock.AsyncMock
+4. aiomonitor (inspect running asyncio loop) — https://pypi.org/project/aiomonitor/
+5. yappi profiler — https://pypi.org/project/yappi/
+6. py-spy profiler — https://github.com/benfred/py-spy
+7. Scalene profiler — https://pypi.org/project/scalene/
+8. Python docs: tracemalloc (memory tracing) — https://docs.python.org/3/library/tracemalloc.html
+9. Python docs: cProfile (CPU profiling) — https://docs.python.org/3/library/profile.html
+10. Python docs: faulthandler — https://docs.python.org/3/library/faulthandler.html
+11. Asyncio debug mode (official docs) — https://docs.python.org/3/library/asyncio-dev.html#debug-mode
+```
+
+### K. So sánh đa ngôn ngữ: async/await, event loop, goroutines, futures
+
+```text
+1. MDN: JavaScript async function — https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+2. MDN: JavaScript Promise — https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+3. javascript.info: Event loop (microtasks/macrotasks) — https://javascript.info/event-loop
+4. Microsoft Learn: async/await (C#) — https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-and-await
+5. Oracle Java docs: CompletableFuture — https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html
+6. The Rust Async Book — https://rust-lang.github.io/async-book/
+7. Go blog: Concurrency patterns — https://go.dev/blog/pipelines
+8. The Go Memory Model — https://go.dev/ref/mem
+9. Kotlin coroutines overview — https://kotlinlang.org/docs/coroutines-overview.html
+10. Kotlin structured concurrency (guide) — https://kotlinlang.org/docs/coroutines-basics.html#structured-concurrency
+```
+
+---
+
+## Gợi ý cách học để “master” (không bị loãng)
+
+Nếu bạn muốn dùng bộ link này hiệu quả, tôi khuyến nghị thứ tự:
+
+1. **A → B → C**: hiểu “blocking” là gì ở mức syscall + scheduler + I/O multiplexing.
+    
+2. **D**: nắm đúng từ vựng (concurrency/parallelism/structured concurrency/backpressure).
+    
+3. **E + F**: nắm CPython/GIL + đúng “tooling map” của stdlib.
+    
+4. **G**: học asyncio theo 2 trục:
+    
+    - _API surface_: Task/TaskGroup/cancellation/timeout/queue/streams
+        
+    - _Mental model_: `await` = yield control + event loop + selector
+        
+5. **H + I**: đưa vào thực chiến (HTTP/DB/ASGI), học cách “không block loop”.
+    
+6. **J**: học debug/profiling; đây là thứ tạo khác biệt khi lên senior.
+    
+
+Nếu bạn muốn, tôi có thể chuyển bộ này thành “syllabus 4–6 tuần” (mỗi ngày đọc gì, làm lab gì, checklist tự kiểm) dựa đúng các nguồn ở trên.
+
+
+Pro thinking
+
+Researching synchronous vs. asynchronous programming
+
+Alright, the user’s asking for deep research on both synchronous and asynchronous programming in Python and general computing, covering everything from low-level system functions to modern structures like classes. It’s a big request! I need to gather tons of up-to-date resources, which will likely include a curated bibliography with a lot of technical details. We will organize it by key topics, focusing on 100-200 links!
+
+Handling link formatting and source citation
+
+The user requested 100-200 clickable links, but I'm not supposed to include raw URLs unless they’re in code. However, I can add URLs in code blocks. I'll gather sources by browsing the web, curating the list, and formatting it properly. While direct citation of each link isn’t required, I should still ensure they’re reliable.
+
+Gathering up-to-date resources for programming research
+
+I need to make sure I gather authoritative resources like the official Python docs, PEPs, CPython dev guides, and other foundational materials. It's important to include some classic textbooks and open resources like MIT courses, man pages, and programming history. The goal is to meet the 100-200 links requirement while avoiding duplicates.
+
+Clarifying GIL and free-threading status for Python
+
+I’m looking into the status of PEP 703 (optional GIL) for Python 3.13, which may be experimental. It was accepted in 2023/2024, but I’ll need to confirm if it’s included in the release and check for updates for asyncio and free-threaded builds. I’ll gather current resources and cite them appropriately.
+
+Compiling a curated link list with sources
+
+To meet the user’s request, I need to create a structured list of 100-200 curated links categorizing key topics. We’ll cover Python and general concurrency, asynchronous programming in other languages (JavaScript, Go, etc.), and other established sources like official docs, PEPs, man pages, and educational resources, verifying key entries while avoiding excessive searching.
+
+Curating a Python-focused link list with additional resources
+
+I’ll prioritize Python concurrency topics, async/await, and system design principles like microservices, while including 20-30 general sources. I'll gather authoritative links for Python, OS-level concurrency (epoll, kqueue), and general books/courses (OSTEP, Linux Programming Interface). I'll minimize additional factual details and focus on curated links, ensuring citations for any non-common knowledge.
+
+Creating a detailed resource list for deep dive
+
+I’m planning to organize the content into sections like "Learning Roadmap," "Computer Foundations," "OS & I/O," "Concurrency Concepts," and "Python Runtime." Each section will have 10-40 curated links, focusing on various topics like asyncio, parallelism, and other languages. The main goal is to provide 100-200 accessible sources, with a focus on the user's request for in-depth research. I'll also include general notes, while keeping it in Vietnamese with technical terms in English.
+
+Searching Python concurrency, asyncio, OS-level docs, and more
+
+Expanding category sources and verifying PEPs
+
+I’ve found some sources, but I need more categories. I’ll do additional searches on OS I/O, asyncio PEPs (492, 525, 530, 567), and other high-level concurrency aspects like Python's threading and multiprocessing. I’ll focus on gathering Python docs for key functions like `asyncio.to_thread` and `loop.run_in_executor`.
+
+Searching Python documentation for concurrency and asyncio
+
+Searching for OS-level concurrency and systems documentation
+
+I’ve found Python’s free-threading docs, which are useful for mentioning free-threading in Python starting in version 3.13. Next, I’ll search for OS-level sources, including topics like interrupts, syscalls, context switching, and I/O multiplexing. I’ll also gather information on concurrency theory and related Python libraries like Trio and AnyIO.
+
+Gathering information on async features and concurrency
+
+I’ll cover various asyncio internals, including the `selectors` module, event loop base, and PEP 380. I’ll also explore `asyncio` features like task management, debug mode, and frameworks like FastAPI and Starlette. Additionally, I’ll gather docs on structured concurrency, the GIL, and relevant Python PEPs, like PEP 554 for subinterpreters. Lastly, I'll look into topics like reactive programming.
+
+Breaking down machine code to classes through concurrency
+
+The user’s request is broad, but I can narrow things down by focusing on OOP and Python’s data model—tied to concurrency. I’ll organize the sources into categories: including CPU architecture, OS fundamentals, concurrency theory, and I/O multiplexing. I'll keep key sources light but helpful—like the "What Every Programmer Should Know About Memory" PDF or relevant man pages.
+
+Organizing Python concurrency sources
+
+I'm planning to tackle everything from the Python runtime (CPython, GIL, memory management) to concurrency libraries like asyncio, threading, and async frameworks. I'll also include testing, debugging tools, production patterns, and compare Python's async with other languages. Plus, gathering papers for deeper exploration. I’ll organize by categories and share recommended reading and relevant links.
+
+Searching for OS, concurrency, and Python resources
+
+Looking for I/O multiplexing sources
+
+I’ve gathered some key sources, but now I need to focus on OS-level I/O multiplexing, like select, poll, kqueue, IOCP, and libuv. I'll search for detailed materials on these topics to fill in the gaps and make sure I have all the relevant information.
+
+Searching for OS-level I/O multiplexing documentation
+
+Searching for coroutine history and relevant PEPs
+
+Now, I need sources on coroutine history, including PEP 342, generator semantics, PEP 380's `yield from`, PEP 525, PEP 530, and PEP 567 for contextvars. I should also look into PEP 654 for exception groups. I’ll search for these PEPs and any related concurrency information.
+
+Searching for PEPs related to coroutines and concurrency
+
+Searching for sources on PEP 530 and related PEPs
+
+I need to find sources on PEP 530 for asynchronous comprehensions and PEP 567 for context variables. I’ll also check PEP 525 and 530 again to gather more information. Time to search for these specific PEPs to find relevant data!
+
+Searching for sources on PEPs 530, 567, 525
+
+Looking up sources for exception groups and TaskGroup
+
+I need to find sources for exception groups and TaskGroup in Python, including documentation for `ExceptionGroup`, `except*`, and `asyncio.TaskGroup`. Once I gather all these sources, I’ll have a clearer understanding of the topic to provide more information. Time to search!
+
+Searching Python docs for ExceptionGroup and TaskGroup
+
+Looking up network programming and async models
+
+I need sources on Python’s network programming—specifically `socket`, `selectors`, and `asyncio` low-level concepts. I'll also gather documentation on object models like `__await__`, `__aenter__`, async context managers and iterators, which PEP 492 covers. Let's look for detailed docs to complete this search.
+
+Searching Python documentation for async and networking topics
+
+Looking up concurrency and parallelism resources
+
+Next, I need sources about Python's concurrency and parallelism tools—`threading`, `multiprocessing`, `concurrent.futures`, `queue`, and related topics. Once I gather these, I’ll have a well-rounded set of resources to handle these particular modules. Let's do a quick search for everything I need.
+
+Searching Python documentation on concurrency techniques
+
+Gathering sources on CPython internals and GIL
+
+Now, I need to find authoritative sources on CPython internals, the GIL, and thread states. This means checking the Python C-API docs about the GIL, Python FAQ, the CPython devguide, and possibly PEP 683. I'll also search for terms like “Python GIL FAQ” or “CPython GIL” for more resources.
+
+Searching for CPython GIL documentation and resources
+
+Looking for event loop and concurrency sources in other languages
+
+I've got the threading docs and PEP 703, so next I need sources on event loops and concurrency in other languages like Node.js, Java, C#, and Rust. I’ll gather information on how these languages implement concurrency models and event loops to compare their approaches. Time to search!
+
+Searching for event loop and concurrency documentation
+
+Collecting Go concurrency sources
+
+I've gathered Node.js, Java, C#, and Rust sources, but now need to focus on Go concurrency. I'll look into goroutines, channels, and the scheduler, along with Kotlin coroutines. I already have Rob Pike’s talk, but I should also check out "Effective Go concurrency" and other related resources. Let’s search!
+
+Searching for Go concurrency, Kotlin, and JavaScript async
+
+Searching for sources on low-level programming concepts
+
+I’ve gathered various high-level sources, but now I need to dive deeper into machine code, assembly, compilers, memory models, and more. I'll include classics like CSAPP and Drepper's memory book, plus links to practical resources like “MIT 6.004” and “Nand2Tetris.” I'll also search for concepts like OS scheduling, context switching, and interrupts. Let’s gather those!
+
+Searching sources on machine code, compilers, OS, threads

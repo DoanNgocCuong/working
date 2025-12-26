@@ -195,16 +195,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - LẬP TRÌNH ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ - Step 1 - Gom nguồn.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 3 - Prompt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CKP - LẬP TRÌNH ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ - Step 1 - Gom nguồn"
+              "title": "CKP - Lập trình đồng bộ và bất đồng bộ - Step 3 - Prompt"
             }
           },
           {
-            "id": "1ad3e577c8aa6858",
+            "id": "5085564f29866d9d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -339,13 +339,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - LẬP TRÌNH ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ - Step 1 - Gom nguồn.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 3 - Prompt.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CKP - LẬP TRÌNH ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ - Step 1 - Gom nguồn"
+              "title": "Outline of CKP - Lập trình đồng bộ và bất đồng bộ - Step 3 - Prompt"
             }
           }
         ],
@@ -369,9 +369,15 @@
   },
   "active": "0229fa9943b78232",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 2 - Prompt.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - LẬP TRÌNH ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ - Step 1 - Gom nguồn.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 3 - Prompt.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/6. Các vấn đề Prompting.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/3. Cách điều chỉnh Prompt để kết quả trả ra được Consistency.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/4. Prompt Template - giải word count và Agenda trải nghiệm ko mượt (tìm many options for Agenda) - 25112025.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/5. Prompt - Prompt Tuning.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/7. Template.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình đồng bộ và bất đồng bộ - Step 2 - Mục lục.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - LẬP TRÌNH ĐỒNG BỘ VÀ BẤT ĐỒNG BỘ - Step 1 - Gom nguồn.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/Draft/Draft - Prompting Manus - Step 1 Deep Research - Input.md",
     "PEOPLE/THE_ROAD/Agentic AI for Finance - 26122025.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP",
@@ -390,13 +396,7 @@
     "BUSINESS/1_PRODUCT/4_FinAI/1.6 V1 - finAI Finance Agent Web Browser – Chiến lược CEO + PM.md",
     "Untitled 9.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Cursor/md.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/4. Cursor.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Cursor",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality/CKP 3.0.1 v1 - (Fallback, Timeout, Alert) -RISK - TOÀN BỘ HỆ THỐNG (tạo bởi Cursor đọc source code mà viết tài liệu ngon ơ) - PRODUCTION QUALITY.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/Cursor.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP/CKP 1.1 - Processing Cursor Demo.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/Git Protection - Perflexity support.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 - PRODUCTION RISK - 400 trang 200.000 từ.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - SDD - Technical Design Docs/CKP example",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104501.png",
