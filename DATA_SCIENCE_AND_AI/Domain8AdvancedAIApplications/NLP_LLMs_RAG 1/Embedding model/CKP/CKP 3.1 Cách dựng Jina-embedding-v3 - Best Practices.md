@@ -402,6 +402,104 @@ Caused by:
 
 Nhưng vẫn bug 
 
+
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+
+# Có ai gặp lỗi thế không (năm 2025 nhé - các tháng gần với tháng 12/2025
+
+Có, và đúng **chính xác lỗi của bạn**, trong năm 2025.
+
+***
+
+## Ai đã gặp lỗi này?
+
+- Trên GitHub `huggingface/text-embeddings-inference` có issue:
+**“TEI error for jinaai/jina-embeddings-v3 missing field `model_type` at line 51 column 1”** mở ngày **08/04/2025**.[^1]
+- Log của họ giống hệt log của bạn:
+    - `Error: Failed to parse config.json`
+    - `Caused by: missing field 'model_type' at line 51 column 1`.[^1]
+
+Tức là:
+
+- Đây **không phải vấn đề riêng máy bạn**, mà là **bug/incompatibility chung giữa TEI và `jinaai/jina-embeddings-v3`** trong 2025.
+
+***
+
+## Họ xử lý tạm thời thế nào?
+
+Trong issue đó, 1 người comment:
+
+- Họ **fix tạm** bằng cách:
+    - Thêm `"model_type": "XLMRobertaModel"` (hoặc `"model_type": "xlm-roberta"`) vào `config.json` của model.[^1]
+- Nhưng maintainer TEI trả lời:
+    - Model Jina v3 **không được TEI support native** vì nó phụ thuộc **custom implementation** `jinaai/xlm-roberta-flash-implementation`.[^1]
+    - Nếu ghi `model_type: "xlm-roberta"` thì TEI sẽ dùng implementation mặc định của HF, **không phải implementation tối ưu riêng của Jina**, nên “có thể cho kết quả không như mong đợi”.[^1]
+
+=> Đúng với nhận định trong file của bạn: **TEI + Jina v3 hiện tại là combo “có thể hack cho chạy, nhưng không phải solution sạch cho production”.**[^2][^3]
+
+***
+
+## Vậy tóm lại cho câu hỏi của bạn
+
+- **Có người khác gặp đúng lỗi này, năm 2025**, và đã báo chính thức lên repo TEI.[^1]
+- Maintainer xác nhận:
+    - Jina v3 **chưa được support chính thức** trong TEI.
+    - Lỗi `missing field model_type` là do **config của model** không tương thích schema TEI yêu cầu, chứ không phải lỗi docker hay môi trường của bạn.[^3][^1]
+
+Nên việc bạn bỏ TEI sang vLLM/Infinity là **quyết định đúng**, không phải “do mình làm sai”, mà do **stack đó hiện tại khách quan là chưa mature với Jina v3**.
+<span style="display:none">[^10][^11][^12][^13][^14][^15][^16][^17][^18][^19][^20][^21][^22][^23][^4][^5][^6][^7][^8][^9]</span>
+
+<div align="center">⁂</div>
+
+[^1]: https://github.com/huggingface/text-embeddings-inference/issues/571
+
+[^2]: https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/7ded9919-600a-4a9b-85c7-0cf19cad789a/paste.txt
+
+[^3]: https://github.com/huggingface/text-embeddings-inference/issues/418
+
+[^4]: https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_80af040e-ad3a-47e0-814c-47635ee78939/3408e29a-3318-4d3d-9fae-277b0953bc4e/504-nghen-co-chai-cach-trace-v-RdjiPmJrQme8MgvdKXZOTQ.md
+
+[^5]: https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/eddb45b3-9f96-4f62-a4cd-61b5b8ca1b26/paste.txt
+
+[^6]: https://discuss.huggingface.co/t/inference-endpoints-for-text-embeddings-inference-not-working/102610
+
+[^7]: https://discuss.huggingface.co/t/missing-model-type-key-in-config-json-of-tinybert/2855
+
+[^8]: https://github.com/huggingface/text-embeddings-inference/issues
+
+[^9]: https://huggingface.co/jinaai/jina-embeddings-v3/discussions/80
+
+[^10]: https://huggingface.co/docs/text-embeddings-inference/supported_models
+
+[^11]: https://github.com/huggingface/text-embeddings-inference/issues/152
+
+[^12]: https://huggingface.co/jinaai/jina-embeddings-v3
+
+[^13]: https://inference.readthedocs.io/en/v1.2.2/models/builtin/embedding/jina-embeddings-v3.html
+
+[^14]: https://www.reddit.com/r/huggingface/comments/1eygmsl/missing_configjson/
+
+[^15]: https://jina.ai/models/jina-embeddings-v3/
+
+[^16]: https://github.com/vllm-project/vllm/issues/12154
+
+[^17]: https://www.reddit.com/r/learnmachinelearning/comments/1jv9hpv/project_help/
+
+[^18]: https://docs.pinecone.io/models/jina-embeddings-v3
+
+[^19]: https://github.com/ollama/ollama/issues/6922
+
+[^20]: https://www.reddit.com/r/Oobabooga/comments/16s8uxb/no_such_file_in_directory_configjson/
+
+[^21]: https://jina.ai/embeddings/
+
+[^22]: https://github.com/huggingface/text-embeddings-inference/issues/497
+
+[^23]: https://milvus.io/docs/embed-with-jina.md
+
+
+
+
 ---
 
 ### **Option 2: Fix thủ công config.json (Nếu Option 1 vẫn lỗi)**
