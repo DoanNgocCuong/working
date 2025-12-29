@@ -1,3 +1,6 @@
+- https://arxiv.org/abs/2409.10173
+- 
+
 
 ```
 1. MECE CÁC CÁCH DỰNG 
@@ -827,6 +830,666 @@ docker run --gpus all -p 8080:8000 \
 
 ---
 
+# Jina-Embeddings-V3: Hướng Dẫn Triển Khai Production Tối Ưu
+
+> **Nguồn tham khảo chính thức:** Jina AI Official Documentation, arXiv Paper (2409.10173), HuggingFace Model Card
+
+---
+
+## 1. Tổng Quan Model
+
+|Thông số|Giá trị|
+|---|---|
+|**Parameters**|570M (0.57B)|
+|**Architecture**|Jina-XLM-RoBERTa (24 layers)|
+|**Max Tokens**|8,192 tokens|
+|**Default Dimension**|1024|
+|**Supported Dimensions**|32, 64, 128, 256, 512, 768, 1024|
+|**Languages**|89 ngôn ngữ (30 ngôn ngữ tối ưu, bao gồm Vietnamese)|
+|**License**|CC BY-NC 4.0 (liên hệ Jina AI cho commercial use)|
+
+### So sánh với các model khác (MTEB Benchmark)
+
+- **Outperforms:** OpenAI text-embedding-3-large, Cohere embed-v3
+- **Efficiency:** Đạt 99% performance của e5-mistral-7b-instruct (7.1B params) với chỉ 570M params
+- **MTEB Score:** 65.52 average (Classification: 82.58, Similarity: 85.80)
+
+---
+
+## 2. Task-Specific LoRA Adapters (QUAN TRỌNG!)
+
+Jina-v3 sử dụng **5 LoRA adapters** cho 4 task types. **PHẢI chọn đúng task để đạt hiệu suất tối đa:**
+
+|Task|Khi nào sử dụng|Ví dụ|
+|---|---|---|
+|`retrieval.query`|Embedding cho **câu query** trong search/RAG|User search queries|
+|`retrieval.passage`|Embedding cho **documents/passages** khi indexing|Database documents|
+|`text-matching`|Semantic similarity, symmetric retrieval|STS, sentence similarity|
+|`classification`|Text classification|Sentiment analysis, categorization|
+|`separation`|Clustering, re-ranking|K-means clustering|
+
+### ⚠️ Best Practice cho Retrieval (RAG/Search)
+
+```python
+# ĐÚNG: Sử dụng KHÁC task cho query và passage
+query_embedding = model.encode(query, task="retrieval.query")
+passage_embeddings = model.encode(documents, task="retrieval.passage")
+
+# SAI: Sử dụng cùng task
+# query_embedding = model.encode(query, task="retrieval.passage")  # ❌
+```
+
+**Tại sao?** LoRA adapters được train riêng cho asymmetric retrieval - queries ngắn và documents dài có patterns khác nhau.
+
+---
+
+## 3. Matryoshka Representation Learning (MRL) - Dimension Selection
+
+### Performance vs Dimension Trade-off
+
+|Dimension|% Retrieval Performance|Storage (per vector)|Recommended Use|
+|---|---|---|---|
+|**1024**|100% (baseline)|4KB|Maximum accuracy|
+|**768**|~98%|3KB|V2 compatibility|
+|**512**|~96%|2KB|Good balance|
+|**256**|~93-95%|1KB|**Production recommended**|
+|**128**|~90-92%|512B|Memory-constrained|
+|**64**|~88-92%|256B|Extreme scale|
+|**32**|~80-85%|128B|Prototyping only|
+
+### Best Practice: Dimension Selection
+
+```python
+# Production RAG với balance tốt
+dimensions = 256  # hoặc 512
+
+# Large-scale search (100M+ vectors)
+dimensions = 128  # với Binary Quantization = 32x memory savings
+
+# Maximum accuracy (nhỏ hơn 10M vectors)
+dimensions = 1024
+```
+
+### ⚠️ Lưu ý quan trọng
+
+1. **Query và Passage PHẢI dùng cùng dimension**
+2. **Không thể mix dimensions** - nếu index với dim=512, query cũng phải dim=512
+3. **Binary quantization** có thể combine với MRL để tiết kiệm thêm 8x storage
+
+---
+
+## 4. Late Chunking - Context-Aware RAG (QUAN TRỌNG!)
+
+### Traditional Chunking vs Late Chunking
+
+```
+Traditional: Document → Chunk → Embed each chunk separately
+Late:        Document → Embed entire doc → Extract chunk embeddings
+```
+
+### Tại sao Late Chunking tốt hơn?
+
+- **Preserves context:** "the city" trong chunk 2 vẫn biết refer đến "Berlin" ở chunk 1
+- **Better retrieval:** +10-25% nDCG@10 improvement trên LongEmbed benchmark
+- **No re-training needed:** Works out-of-box với Jina v3
+
+### Implementation với Jina API
+
+```python
+import requests
+
+JINA_API_KEY = "your_api_key"
+
+# Late chunking qua API
+response = requests.post(
+    "https://api.jina.ai/v1/embeddings",
+    headers={
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {JINA_API_KEY}"
+    },
+    json={
+        "model": "jina-embeddings-v3",
+        "task": "retrieval.passage",
+        "dimensions": 256,
+        "late_chunking": True,  # ← Enable late chunking
+        "input": [
+            "Chunk 1: Berlin is the capital of Germany.",
+            "Chunk 2: The city has a population of 3.85 million.",
+            "Chunk 3: It is the EU's most populous city."
+        ]
+    }
+)
+
+# Tất cả chunks sẽ có context từ toàn bộ document
+embeddings = [item["embedding"] for item in response.json()["data"]]
+```
+
+### Self-hosted Late Chunking
+
+```python
+import torch
+from transformers import AutoModel, AutoTokenizer
+
+model = AutoModel.from_pretrained("jinaai/jina-embeddings-v3", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained("jinaai/jina-embeddings-v3")
+
+def late_chunking_embed(document: str, chunk_boundaries: list):
+    """
+    document: Full document text
+    chunk_boundaries: List of (start_char, end_char) tuples
+    """
+    # Step 1: Tokenize entire document
+    inputs = tokenizer(document, return_tensors="pt", truncation=True, max_length=8192)
+    
+    # Step 2: Get token-level embeddings
+    with torch.no_grad():
+        outputs = model(**inputs, adapter_mask=torch.tensor([0]))  # text-matching adapter
+    token_embeddings = outputs.last_hidden_state[0]  # (seq_len, hidden_dim)
+    
+    # Step 3: Map character positions to token positions
+    chunk_embeddings = []
+    for start_char, end_char in chunk_boundaries:
+        # Get token range for this chunk
+        start_token = inputs.char_to_token(start_char)
+        end_token = inputs.char_to_token(end_char - 1)
+        
+        # Mean pooling over chunk's tokens
+        chunk_tokens = token_embeddings[start_token:end_token+1]
+        chunk_embedding = chunk_tokens.mean(dim=0)
+        chunk_embeddings.append(chunk_embedding)
+    
+    return torch.stack(chunk_embeddings)
+```
+
+### Khi nào dùng Late Chunking?
+
+|Scenario|Late Chunking?|
+|---|---|
+|Documents > 1000 tokens|✅ Highly recommended|
+|Documents có nhiều pronouns/references|✅ Strongly recommended|
+|Short independent texts|❌ Không cần thiết|
+|Real-time embedding (latency critical)|⚠️ Trade-off với latency|
+
+---
+
+## 5. Deployment Options
+
+### Option A: Jina AI API (Recommended for quick start)
+
+**Pros:** Zero infrastructure, always latest model, rate limiting handled **Cons:** Network latency, API costs, data privacy concerns
+
+```python
+# API Usage
+import requests
+
+def embed_with_jina_api(texts: list, task: str = "retrieval.passage", dimensions: int = 256):
+    response = requests.post(
+        "https://api.jina.ai/v1/embeddings",
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {JINA_API_KEY}"
+        },
+        json={
+            "model": "jina-embeddings-v3",
+            "task": task,
+            "dimensions": dimensions,
+            "normalized": True,
+            "input": texts
+        }
+    )
+    return [item["embedding"] for item in response.json()["data"]]
+
+# Rate limits: Track RPM (requests/min) và TPM (tokens/min)
+# Max batch: 2048 texts per request
+```
+
+### Option B: Self-Hosted với Transformers (Full Control)
+
+**Pros:** No API costs, full data privacy, customizable **Cons:** GPU required, maintenance overhead
+
+```python
+from transformers import AutoModel, AutoTokenizer
+import torch
+import torch.nn.functional as F
+
+class JinaEmbeddingService:
+    def __init__(self, device: str = "cuda"):
+        self.device = device
+        self.tokenizer = AutoTokenizer.from_pretrained("jinaai/jina-embeddings-v3")
+        self.model = AutoModel.from_pretrained(
+            "jinaai/jina-embeddings-v3",
+            trust_remote_code=True
+        ).to(device)
+        self.model.eval()
+        
+        # Task mapping
+        self._task_map = {
+            "retrieval.query": 0,
+            "retrieval.passage": 1,
+            "separation": 2,
+            "classification": 3,
+            "text-matching": 4
+        }
+    
+    @torch.no_grad()
+    def encode(
+        self,
+        texts: list,
+        task: str = "retrieval.passage",
+        max_length: int = 8192,
+        batch_size: int = 32,
+        normalize: bool = True,
+        truncate_dim: int = None
+    ):
+        all_embeddings = []
+        task_id = self._task_map[task]
+        
+        for i in range(0, len(texts), batch_size):
+            batch_texts = texts[i:i + batch_size]
+            
+            # Tokenize
+            inputs = self.tokenizer(
+                batch_texts,
+                padding=True,
+                truncation=True,
+                max_length=max_length,
+                return_tensors="pt"
+            ).to(self.device)
+            
+            # Create adapter mask
+            adapter_mask = torch.full(
+                (len(batch_texts),),
+                task_id,
+                dtype=torch.int32
+            ).to(self.device)
+            
+            # Forward pass
+            outputs = self.model(**inputs, adapter_mask=adapter_mask)
+            
+            # Mean pooling
+            embeddings = self._mean_pooling(outputs, inputs["attention_mask"])
+            
+            # Optional: Truncate dimensions (Matryoshka)
+            if truncate_dim:
+                embeddings = embeddings[:, :truncate_dim]
+            
+            # Normalize
+            if normalize:
+                embeddings = F.normalize(embeddings, p=2, dim=1)
+            
+            all_embeddings.append(embeddings.cpu())
+        
+        return torch.cat(all_embeddings, dim=0).numpy()
+    
+    def _mean_pooling(self, model_output, attention_mask):
+        token_embeddings = model_output[0]
+        input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
+        return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(
+            input_mask_expanded.sum(1), min=1e-9
+        )
+
+# Usage
+service = JinaEmbeddingService(device="cuda")
+
+# Index documents
+doc_embeddings = service.encode(
+    documents,
+    task="retrieval.passage",
+    truncate_dim=256
+)
+
+# Query
+query_embeddings = service.encode(
+    queries,
+    task="retrieval.query",
+    truncate_dim=256
+)
+```
+
+### Option C: ONNX Runtime (Optimized Inference)
+
+**Pros:** 2-3x faster inference, CPU-friendly **Cons:** Setup complexity, limited to certain tasks
+
+```python
+import onnxruntime
+import numpy as np
+from transformers import AutoTokenizer, PretrainedConfig
+
+class JinaONNXService:
+    def __init__(self, model_path: str = "jina-embeddings-v3/onnx/model.onnx"):
+        self.tokenizer = AutoTokenizer.from_pretrained("jinaai/jina-embeddings-v3")
+        self.config = PretrainedConfig.from_pretrained("jinaai/jina-embeddings-v3")
+        
+        # ONNX session với optimizations
+        sess_options = onnxruntime.SessionOptions()
+        sess_options.graph_optimization_level = onnxruntime.GraphOptimizationLevel.ORT_ENABLE_ALL
+        sess_options.intra_op_num_threads = 4
+        
+        self.session = onnxruntime.InferenceSession(
+            model_path,
+            sess_options,
+            providers=['CUDAExecutionProvider', 'CPUExecutionProvider']
+        )
+    
+    def encode(self, texts: list, task: str = "text-matching"):
+        inputs = self.tokenizer(texts, padding=True, truncation=True, return_tensors="np")
+        task_id = np.array(self.config.lora_adaptations.index(task), dtype=np.int64)
+        
+        outputs = self.session.run(None, {
+            "input_ids": inputs["input_ids"],
+            "attention_mask": inputs["attention_mask"],
+            "task_id": task_id
+        })[0]
+        
+        # Mean pooling
+        embeddings = self._mean_pooling(outputs, inputs["attention_mask"])
+        embeddings = embeddings / np.linalg.norm(embeddings, axis=1, keepdims=True)
+        
+        return embeddings
+    
+    def _mean_pooling(self, embeddings, attention_mask):
+        mask_expanded = np.expand_dims(attention_mask, -1)
+        return np.sum(embeddings * mask_expanded, axis=1) / np.clip(mask_expanded.sum(axis=1), 1e-9, None)
+```
+
+### Option D: vLLM (High-Throughput Serving)
+
+```python
+from vllm import LLM
+
+# vLLM supports jina-embeddings-v3
+model = LLM(
+    model="jinaai/jina-embeddings-v3",
+    task="embed",
+    trust_remote_code=True,
+    gpu_memory_utilization=0.8
+)
+
+# Note: Hiện tại chỉ support text-matching task
+outputs = model.embed(["text to embed"])
+```
+
+---
+
+## 6. Production Performance Optimization
+
+### 6.1 Batching Strategy
+
+```python
+# Optimal batch sizes by hardware
+BATCH_SIZE_MAP = {
+    "A100-80GB": 128,
+    "A100-40GB": 64,
+    "RTX 4090": 32,
+    "RTX 3090": 24,
+    "T4": 16,
+    "CPU": 8
+}
+
+# Dynamic batching for mixed-length inputs
+def dynamic_batch(texts: list, max_tokens_per_batch: int = 32768):
+    """Group texts to maximize throughput while respecting memory limits"""
+    batches = []
+    current_batch = []
+    current_tokens = 0
+    
+    for text in texts:
+        text_tokens = len(text.split()) * 1.3  # Rough estimate
+        if current_tokens + text_tokens > max_tokens_per_batch and current_batch:
+            batches.append(current_batch)
+            current_batch = [text]
+            current_tokens = text_tokens
+        else:
+            current_batch.append(text)
+            current_tokens += text_tokens
+    
+    if current_batch:
+        batches.append(current_batch)
+    
+    return batches
+```
+
+### 6.2 GPU Memory Optimization
+
+```python
+# Enable Flash Attention 2 (required: Ampere/Ada/Hopper GPUs)
+# pip install flash-attn --no-build-isolation
+
+from transformers import AutoModel
+
+model = AutoModel.from_pretrained(
+    "jinaai/jina-embeddings-v3",
+    trust_remote_code=True,
+    torch_dtype=torch.bfloat16,  # Memory savings
+    attn_implementation="flash_attention_2"  # 2x faster attention
+)
+```
+
+### 6.3 Async Processing Pattern
+
+```python
+import asyncio
+from concurrent.futures import ThreadPoolExecutor
+
+class AsyncEmbeddingService:
+    def __init__(self, model_service, max_workers: int = 4):
+        self.model = model_service
+        self.executor = ThreadPoolExecutor(max_workers=max_workers)
+    
+    async def embed_async(self, texts: list, **kwargs):
+        loop = asyncio.get_event_loop()
+        return await loop.run_in_executor(
+            self.executor,
+            lambda: self.model.encode(texts, **kwargs)
+        )
+    
+    async def embed_batch_parallel(self, batches: list, **kwargs):
+        tasks = [self.embed_async(batch, **kwargs) for batch in batches]
+        return await asyncio.gather(*tasks)
+
+# Usage
+async def process_large_dataset(documents: list):
+    service = AsyncEmbeddingService(JinaEmbeddingService())
+    batches = [documents[i:i+32] for i in range(0, len(documents), 32)]
+    
+    all_embeddings = await service.embed_batch_parallel(batches, task="retrieval.passage")
+    return np.vstack(all_embeddings)
+```
+
+### 6.4 Caching Strategy
+
+```python
+import hashlib
+import redis
+import numpy as np
+
+class EmbeddingCache:
+    def __init__(self, redis_client: redis.Redis, ttl: int = 86400):
+        self.redis = redis_client
+        self.ttl = ttl
+    
+    def _make_key(self, text: str, task: str, dim: int) -> str:
+        content = f"{text}:{task}:{dim}"
+        return f"emb:{hashlib.md5(content.encode()).hexdigest()}"
+    
+    def get(self, text: str, task: str, dim: int) -> np.ndarray | None:
+        key = self._make_key(text, task, dim)
+        data = self.redis.get(key)
+        if data:
+            return np.frombuffer(data, dtype=np.float32)
+        return None
+    
+    def set(self, text: str, task: str, dim: int, embedding: np.ndarray):
+        key = self._make_key(text, task, dim)
+        self.redis.setex(key, self.ttl, embedding.astype(np.float32).tobytes())
+    
+    def get_or_compute(self, texts: list, model, task: str, dim: int):
+        results = {}
+        to_compute = []
+        
+        for text in texts:
+            cached = self.get(text, task, dim)
+            if cached is not None:
+                results[text] = cached
+            else:
+                to_compute.append(text)
+        
+        if to_compute:
+            new_embeddings = model.encode(to_compute, task=task, truncate_dim=dim)
+            for text, emb in zip(to_compute, new_embeddings):
+                self.set(text, task, dim, emb)
+                results[text] = emb
+        
+        return np.array([results[t] for t in texts])
+```
+
+---
+
+## 7. Integration với Vector Databases
+
+### 7.1 Milvus/Zilliz
+
+```python
+from pymilvus import MilvusClient, DataType
+
+# Create collection với optimal settings
+client = MilvusClient(uri="http://localhost:19530")
+
+# Schema cho Jina v3
+schema = client.create_schema(auto_id=True, enable_dynamic_field=True)
+schema.add_field("id", DataType.INT64, is_primary=True)
+schema.add_field("embedding", DataType.FLOAT_VECTOR, dim=256)  # Matryoshka dimension
+schema.add_field("text", DataType.VARCHAR, max_length=65535)
+schema.add_field("task_type", DataType.VARCHAR, max_length=32)
+
+# Index với IVF_FLAT cho balance giữa speed và accuracy
+index_params = client.prepare_index_params()
+index_params.add_index(
+    field_name="embedding",
+    index_type="IVF_FLAT",
+    metric_type="COSINE",  # Jina embeddings đã normalized
+    params={"nlist": 1024}
+)
+
+client.create_collection(
+    collection_name="jina_docs",
+    schema=schema,
+    index_params=index_params
+)
+```
+
+### 7.2 Qdrant
+
+```python
+from qdrant_client import QdrantClient
+from qdrant_client.models import Distance, VectorParams, OptimizersConfigDiff
+
+client = QdrantClient(host="localhost", port=6333)
+
+# Create collection với Jina v3 settings
+client.create_collection(
+    collection_name="jina_documents",
+    vectors_config=VectorParams(
+        size=256,  # Matryoshka dimension
+        distance=Distance.COSINE,
+        on_disk=True  # For large collections
+    ),
+    optimizers_config=OptimizersConfigDiff(
+        indexing_threshold=20000,  # Index after 20k vectors
+    )
+)
+```
+
+### 7.3 Pinecone
+
+```python
+from pinecone import Pinecone, ServerlessSpec
+
+pc = Pinecone(api_key="YOUR_KEY")
+
+# Create index
+pc.create_index(
+    name="jina-embeddings-v3",
+    dimension=256,  # Matryoshka dimension
+    metric="cosine",
+    spec=ServerlessSpec(cloud="aws", region="us-east-1")
+)
+
+index = pc.Index("jina-embeddings-v3")
+
+# Upsert with metadata
+index.upsert(vectors=[
+    {
+        "id": "doc_1",
+        "values": embedding.tolist(),
+        "metadata": {"text": "...", "task": "retrieval.passage"}
+    }
+])
+```
+
+---
+
+## 8. Production Checklist
+
+### Pre-deployment
+
+- [ ] **Chọn đúng deployment option** (API vs Self-hosted)
+- [ ] **Test dimension tradeoff** trên dataset của bạn
+- [ ] **Verify task adapter** mapping chính xác
+- [ ] **Setup monitoring** cho latency và throughput
+- [ ] **Configure caching** nếu có repeated queries
+- [ ] **License check** - CC BY-NC 4.0 cho non-commercial
+
+### Runtime
+
+- [ ] **Batch processing** để maximize throughput
+- [ ] **Consistent dimensions** giữa index và query
+- [ ] **Normalize embeddings** trước khi store
+- [ ] **Late chunking** cho documents > 1000 tokens
+- [ ] **Error handling** cho API rate limits
+
+### Monitoring Metrics
+
+```python
+# Key metrics to track
+METRICS = {
+    "embedding_latency_ms": "P50, P95, P99 latency per batch",
+    "tokens_per_second": "Throughput measurement",
+    "cache_hit_rate": "Efficiency of caching layer",
+    "memory_usage_mb": "GPU memory utilization",
+    "error_rate": "API/inference failures"
+}
+```
+
+---
+
+## 9. Common Pitfalls & Solutions
+
+|Issue|Giải pháp|
+|---|---|
+|Query/Passage task mismatch|Luôn dùng `retrieval.query` cho queries, `retrieval.passage` cho docs|
+|Dimension mismatch|Verify cùng dimension khi index và query|
+|OOM trên long documents|Reduce batch size, enable gradient checkpointing|
+|Slow inference|Enable Flash Attention 2, use ONNX, reduce dimensions|
+|Poor retrieval quality|Verify late_chunking enabled, check normalization|
+|API rate limiting|Implement exponential backoff, use caching|
+
+---
+
+## 10. Tài Liệu Tham Khảo
+
+1. **arXiv Paper:** https://arxiv.org/abs/2409.10173
+2. **HuggingFace Model:** https://huggingface.co/jinaai/jina-embeddings-v3
+3. **Jina AI Docs:** https://jina.ai/embeddings/
+4. **Late Chunking Paper:** https://arxiv.org/abs/2409.04701
+5. **Migration Guide (v2→v3):** https://jina.ai/news/migration-from-jina-embeddings-v2-to-v3/
+
+---
+
+_Document version: 1.0 | Last updated: December 2024_ _Tổng hợp từ official sources cho production deployment_
+
+
+----
 # genspark + manus 
 
 ```
@@ -834,6 +1497,8 @@ docker run --gpus all -p 8080:8000 \
 NHIỀU TÀI LIỆU LỘN XỘN TÔI KO BIẾT TIN AI ? 
 => Deep research để đưa tớ cách triển khai best practices về tốc độ và độ chính xác cho : Jina-embedding-v3
 ```
+
+
 
 [jina-embeddings-v3 - Search Foundation Models](https://jina.ai/models/jina-embeddings-v3/)
 
@@ -898,3 +1563,493 @@ We're thinking: The authors' results show that using embeddings that are one-eig
 live
 
 Jump to live
+
+
+---
+
+# Jina-embedding-v3 Best Practices Research
+
+## 1. Model Architecture Overview
+
+### Key Specifications
+- **Parameters**: 570M (559M base + 13M adapters)
+- **Max Input Tokens**: 8192
+- **Max Output Dimension**: 1024 (có thể giảm xuống 32 với MRL)
+- **Layers**: 24
+- **Vocabulary**: 250K
+- **Attention**: FlashAttention2
+- **Pooling**: Mean
+- **Base Architecture**: XLM-RoBERTa với RoPE (Rotary Position Embeddings)
+
+### Task-Specific LoRA Adapters
+1. **retrieval.query** - Cho query trong asymmetric retrieval
+2. **retrieval.passage** - Cho passage/document trong asymmetric retrieval
+3. **separation** - Cho clustering và reranking
+4. **classification** - Cho classification tasks
+5. **text-matching** - Cho STS và symmetric retrieval
+
+## 2. Deployment Options Comparison
+
+### Option A: vLLM (Khuyến nghị cho Production)
+**Ưu điểm:**
+- OpenAI-compatible API
+- PagedAttention cho memory efficiency
+- Continuous batching
+- Flash Attention v2 support
+- Production-ready (Uber, Ant Group đang dùng)
+
+**Benchmark RTX 3090:**
+- Throughput: ~2000-2200 req/s
+- Latency (Batch=1): ~15ms
+- Latency (Batch=32): ~45ms
+- Memory: ~10GB
+
+**Docker Command:**
+```bash
+docker run --gpus all -p 8080:8000 \
+  --restart always \
+  -v ~/.cache/huggingface:/root/.cache/huggingface \
+  --name jina-vllm \
+  vllm/vllm-openai:latest \
+  --model jinaai/jina-embeddings-v3 \
+  --task embed \
+  --dtype float16 \
+  --max-model-len 8192 \
+  --gpu-memory-utilization 0.9 \
+  --enforce-eager \
+  --disable-log-requests
+```
+
+### Option B: Infinity (Dễ dùng, Production-ready)
+**Ưu điểm:**
+- Multi-model support
+- Dynamic batching
+- OpenAI-like API
+- ONNX/TensorRT support
+- FP16 optimization
+
+**Benchmark RTX 3090:**
+- Throughput: ~1800 req/s
+- Latency (Batch=1): ~18ms
+- Memory: ~9GB
+
+**Docker Command:**
+```bash
+docker run --gpus all -p 8080:8080 \
+  -v ~/.cache/huggingface:/app/.cache \
+  --name jina-infinity \
+  michaelf34/infinity:latest \
+  v2 --model-id jinaai/jina-embeddings-v3 \
+  --batch-size 32 \
+  --device cuda
+```
+
+### Option C: FastEmbed (Nhanh nhất cho single request)
+**Ưu điểm:**
+- In-process, không có HTTP overhead
+- ONNX optimized
+- Nhanh nhất cho single request
+
+**Benchmark RTX 3090:**
+- Throughput: ~2500+ req/s
+- Latency (Batch=1): ~10-12ms
+- Memory: ~8GB
+
+**Nhược điểm:**
+- Khó scale
+- Không có automatic batching
+
+### Option D: TEI (Text Embeddings Inference)
+**Lưu ý:** TEI hiện tại KHÔNG hỗ trợ Jina v3 do lỗi `missing field 'model_type'`
+
+## 3. Best Practices cho Tốc độ
+
+### 3.1 Batch Size Optimization
+- **Batch size 32** là tối ưu cho RTX 3090
+- Tăng batch size giảm latency per request nhưng tăng total latency
+- Với vLLM, continuous batching tự động tối ưu
+
+### 3.2 Precision
+- **FP16** (float16) là tối ưu cho inference
+- Giảm 50% memory so với FP32
+- Tốc độ tăng ~2x
+
+### 3.3 Matryoshka Representation Learning (MRL)
+- Có thể giảm dimension từ 1024 xuống 32
+- Giảm dimension = tăng tốc độ search trong vector DB
+- Trade-off:
+  - 1024 dim: 100% performance
+  - 512 dim: ~99.5% performance
+  - 256 dim: ~99% performance
+  - 128 dim: ~97% performance
+  - 64 dim: ~92% performance
+  - 32 dim: ~83% performance
+
+### 3.4 Context Length
+- Max: 8192 tokens
+- Khuyến nghị: 2048-4096 tokens cho optimal performance
+- Dài hơn = chậm hơn (quadratic attention)
+
+### 3.5 GPU Memory Utilization
+- vLLM: `--gpu-memory-utilization 0.9` (90%)
+- Để lại 10% cho overhead
+
+## 4. Best Practices cho Độ Chính xác
+
+### 4.1 Task-Specific Adapters
+- **LUÔN** chọn đúng adapter cho task:
+  - Retrieval (asymmetric): `retrieval.query` + `retrieval.passage`
+  - STS/Symmetric: `text-matching`
+  - Clustering: `separation`
+  - Classification: `classification`
+
+### 4.2 Rotary Base Frequency
+- Training: 10,000
+- Inference: 20,000 (cải thiện long-text performance)
+
+### 4.3 Input Preprocessing
+- Không cần instruction prefix (khác với E5/BGE)
+- Mean pooling được sử dụng
+
+### 4.4 Multilingual Performance
+- Hỗ trợ 89+ ngôn ngữ
+- English: 65.52% MTEB average
+- Multilingual: 64.44% MTEB average
+
+## 5. Production Recommendations
+
+### 5.1 Cho Real-time Search + High Traffic
+**Chọn: vLLM**
+- Lý do: Ổn định khi có 1000+ concurrent users
+- PagedAttention quản lý memory hiệu quả
+- Continuous batching tối ưu throughput
+
+### 5.2 Cho POC/Prototype
+**Chọn: FastEmbed**
+- Setup nhanh
+- Không cần Docker
+- Tích hợp trực tiếp vào Python code
+
+### 5.3 Cho Multi-model Gateway
+**Chọn: Infinity**
+- Hỗ trợ nhiều model cùng lúc
+- A/B testing dễ dàng
+- OpenAI-compatible API
+
+## 6. Benchmarks Summary (RTX 3090)
+
+| Solution | Throughput | Latency (B=1) | Memory | Setup |
+|----------|------------|---------------|--------|-------|
+| vLLM | ~2200 req/s | 15ms | 10GB | Dễ |
+| Infinity | ~1800 req/s | 18ms | 9GB | Rất dễ |
+| FastEmbed | ~2500 req/s | 10-12ms | 8GB | Code thủ công |
+| TEI | ❌ Không chạy | - | - | - |
+
+## 7. Common Issues & Solutions
+
+### Issue 1: TEI không hỗ trợ Jina v3
+**Lỗi:** `missing field 'model_type'`
+**Giải pháp:** Sử dụng vLLM hoặc Infinity thay thế
+
+### Issue 2: OOM (Out of Memory)
+**Giải pháp:**
+- Giảm batch size
+- Sử dụng FP16
+- Giảm max_model_len
+- Sử dụng MRL để giảm output dimension
+
+### Issue 3: Slow inference
+**Giải pháp:**
+- Tăng batch size
+- Sử dụng continuous batching (vLLM)
+- Giảm input length
+- Sử dụng FP16
+
+## 8. Code Examples
+
+### vLLM Embedding
+```python
+import requests
+
+def get_embeddings(texts: list[str]) -> list[list[float]]:
+    response = requests.post(
+        "http://localhost:8080/v1/embeddings",
+        json={
+            "model": "jinaai/jina-embeddings-v3",
+            "input": texts
+        }
+    )
+    return [item['embedding'] for item in response.json()['data']]
+
+# Usage
+embeddings = get_embeddings(["Text 1", "Text 2"])
+```
+
+### FastEmbed
+```python
+from fastembed import TextEmbedding
+
+model = TextEmbedding(
+    model_name="jinaai/jina-embeddings-v3",
+    providers=["CUDAExecutionProvider"]
+)
+
+embeddings = list(model.embed(["Hello world"]))
+```
+
+### Infinity
+```python
+import requests
+
+def get_embeddings(texts: list[str]) -> list[list[float]]:
+    response = requests.post(
+        "http://localhost:8080/embeddings",
+        json={
+            "model": "jinaai/jina-embeddings-v3",
+            "input": texts
+        }
+    )
+    return response.json()['data']
+```
+
+
+
+---
+# VẤN ĐỀ 2: VLLM chỉ hỗ trợ 1 cái text.matching 
+
+### Task-Specific LoRA Adapters
+
+1.retrieval.query - Cho query trong asymmetric retrieval
+
+2.retrieval.passage - Cho passage/document trong asymmetric retrieval
+
+3.separation - Cho clustering và reranking
+
+4.classification - Cho classification tasks
+
+5.text-matching - Cho STS và symmetric retrieval
+
+## ⚠️ vLLM Limitation với Jina v3
+
+Theo documentation hiện tại, **vLLM chỉ support `text-matching` task** - không support đầy đủ 5 LoRA adapters:
+
+python
+
+```python
+# vLLM hiện tại
+# ✅ text-matching (symmetric similarity)
+# ❌ retrieval.query  
+# ❌ retrieval.passage
+# ❌ classification
+# ❌ separation
+```
+
+**Issue:** [https://github.com/vllm-project/vllm/issues/16120](https://github.com/vllm-project/vllm/issues/16120)
+
+
+
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+
+# text-matching chính là 2 cái này à :  retrieval.query vs retrieval.passage
+
+tức là cũng là embedding để dùng search đúng ko
+
+- text input được embedding, so với kho embedding milvus
+
+Không, **`text-matching` khác hẳn cặp `retrieval.query` / `retrieval.passage`**, dù cả 3 đều cho ra embedding dùng được với Milvus.
+
+***
+
+## 1. Khác nhau về bản chất
+
+**`retrieval.query` + `retrieval.passage` = asymmetric retrieval**[^1][^2]
+
+- Hai adapter **khác nhau**:
+    - `retrieval.query`: tối ưu cho **câu hỏi ngắn / query**.
+    - `retrieval.passage`: tối ưu cho **đoạn văn / document**.
+- Mục tiêu: tối ưu **tìm kiếm tài liệu** (RAG, search) khi query và doc có vai trò khác nhau.
+- Pipeline:
+    - Lúc index: doc → `retrieval.passage` → lưu vào Milvus.
+    - Lúc search: query → `retrieval.query` → search trong Milvus.
+
+**`text-matching` = symmetric similarity / STS**[^2][^1]
+
+- **Query và document dùng chung 1 adapter, 1 kiểu embedding.**
+- Mục tiêu: đo **độ giống nhau đối xứng**:
+    - Emb(A) gần Emb(B) ⇔ Emb(B) gần Emb(A).
+- Dùng cho:
+    - So sánh hai câu giống nhau bao nhiêu (STS).
+    - Tìm văn bản trùng/near-duplicate.
+    - Recommendation “văn bản giống văn bản”.
+
+***
+
+## 2. Cả 3 đều là “embedding để search”, nhưng tối ưu cho use case khác
+
+Đúng là trong cả 3 trường hợp, bạn đều làm:
+
+- **Bước 1:** Text input → Embedding vector.
+- **Bước 2:** Milvus lưu vector, search bằng Cosine/Inner Product.
+
+Nhưng:
+
+- Với **search/RAG chuẩn bài**:
+    - Nên dùng **`retrieval.query` + `retrieval.passage`** (asymmetric).
+    - Kết quả: recall tốt hơn, ranking hợp lý hơn cho Q\&A, semantic search.[^1]
+- Với **similarity / dedup / “2 câu giống nhau không?”**:
+    - Dùng **`text-matching`** là đúng bài.[^1]
+
+***
+
+## 3. Trả lời đúng câu hỏi của bạn
+
+> “text-matching chính là 2 cái này à?”
+
+- **Không.** `text-matching` là **một adapter riêng**, khác với `retrieval.query` và `retrieval.passage`.
+- Nó **cũng tạo embedding để search bằng Milvus**, nhưng tối ưu cho **symmetry (so sánh giống nhau)**, không phải **asymmetric retrieval (query vs doc)**.[^2][^1]
+
+# mình sử dụng extract facts
+
+Với use-case **extract facts → lưu làm memory (kiểu Mem0)** thì mô hình Jina v3 + cách host “chuẩn” sẽ khác một chút so với RAG thuần.
+
+***
+
+## 1. Bản chất bài toán của bạn
+
+Trong Mem0:
+
+- LLM sẽ **extract fact** (ví dụ: “User thích đọc sách tài chính”, “User sống ở Hà Nội”) từ cuộc hội thoại.[^1][^2]
+- Mỗi fact này được lưu thành 1 **câu ngắn, rõ nghĩa**.
+- Khi cần nhớ lại, Mem0 sẽ:
+    - Embed **context hiện tại** (câu hỏi + vài tin nhắn gần đây).
+    - Embed các fact đã lưu.
+    - Search các fact **gần ngữ nghĩa nhất** (không phân vai query/document phức tạp như RAG).[^3][^4]
+
+Đây là **symmetric similarity**: tất cả đều là “statement về user / sự kiện”, dài ngắn gần giống nhau.
+
+→ **Không cần asymmetric retrieval kiểu query vs passage.**[^5][^6]
+
+***
+
+## 2. Vậy dùng adapter nào của Jina v3 là hợp lý?
+
+Cho bài toán **memory từ “extract facts”**:
+
+- **Best choice:** `text-matching` (semantic similarity / STS, symmetric retrieval).[^7][^8]
+- Vì:
+    - Fact và query hiện tại đều là “câu/đoạn thông tin” ngang vai nhau.
+    - Hệ thống cần “fact nào giống với ý mà user vừa nói nhất?”, không phải “query vs long doc”.[^9][^3]
+
+Cặp `retrieval.query` / `retrieval.passage` **sinh ra cho RAG / search tài liệu**: query ngắn, passage dài.[^8][^10]
+Trong memory, nếu chỉ lưu fact ngắn → dùng asymmetry là… overkill, thậm chí có thể tệ hơn symmetric.
+
+***
+
+## 3. vLLM + Jina v3 + text-matching: trong bài toán memory là **ĐỦ DÙNG**
+
+Như bạn paste:
+
+- vLLM hiện tại chỉ expose `text-matching` cho Jina v3.[^11][^12]
+- Trong context “extract facts → lưu vào Milvus → truy xuất memory”, đây **không phải hạn chế**, mà còn **khớp đúng loại task cần**.
+
+Pipeline chuẩn:
+
+1. LLM Mem0 extract:
+    - Input: hội thoại.
+    - Output: list `facts`:
+        - “User thích xem video về startup.”
+        - “User đang sống ở Hà Nội.”[^13][^1]
+2. Bạn embed mỗi fact bằng **Jina v3 + text-matching** → lưu vector vào Milvus/Zilliz.[^14][^8]
+3. Khi user nói điều gì mới / hỏi câu mới, bạn embed context hiện tại cũng bằng **text-matching** → search các fact gần nhất.[^4][^15]
+
+Như vậy:
+
+- **Không cần `retrieval.query` / `retrieval.passage`.**
+- vLLM + Jina v3 (`text-matching`) **đủ tốt cho memory**, thậm chí là lựa chọn hợp lý nhất hiện tại cho stack của bạn.
+
+***
+
+## 4. Khi nào mới nên nghĩ tới `retrieval.*` cho memory?
+
+Chỉ khi:
+
+- Bạn bắt đầu trộn **2 tầng**:
+    - Tầng memory (facts ngắn).
+    - Tầng knowledge (docs dài, wiki, spec, pháp lý).
+- Và bạn muốn:
+    - Cùng một Jina v3 phục vụ **vừa memory, vừa RAG**.
+
+Lúc đó:
+
+- Memory short facts vẫn dùng `text-matching`.
+- Knowledge long docs dùng `retrieval.passage`, query dùng `retrieval.query`.
+
+Nhưng đó là **giai đoạn sau**.
+
+***
+
+## 5. Tóm lại cho câu hỏi của bạn
+
+- Bạn đang làm **memory với extract facts** → bài toán = **symmetric semantic similarity** giữa câu/statement.
+- Trong ngữ cảnh này:
+    - **vLLM + Jina v3 + `text-matching` = ĐỦ DÙNG + ĐÚNG BÀI.**
+    - Không cần cố “ép” asymmetric retrieval vào, vì nó sinh ra cho RAG long-doc.
+
+Nếu bạn muốn, câu tiếp theo có thể là:
+
+> “Viết giúp em 1 API nhỏ dùng vLLM + Jina v3 để nhận list facts và trả embedding, em plug thẳng vào Mem0.”
+
+Có thể đưa cho bạn luôn 1 file `server.py` + `docker-compose` tối giản cho use-case này.
+<span style="display:none">[^16][^17][^18][^19][^20][^21][^22][^23]</span>
+
+<div align="center">⁂</div>
+
+[^1]: https://docs.mem0.ai/open-source/features/custom-fact-extraction-prompt
+
+[^2]: https://docs.mem0.ai/core-concepts/memory-operations/add
+
+[^3]: https://www.datacamp.com/tutorial/mem0-tutorial
+
+[^4]: https://mem0.ai/research
+
+[^5]: https://zilliz.com/ai-faq/what-is-the-difference-between-asymmetric-and-symmetric-embedding-architectures
+
+[^6]: https://acedev003.com/rand_bytes/symmetric-vs-asymmetric-semantic-search
+
+[^7]: https://www.x-cmd.com/blog/240922/
+
+[^8]: https://arxiv.org/html/2409.10173v3
+
+[^9]: https://arxiv.org/pdf/2504.19413.pdf
+
+[^10]: https://www.width.ai/post/retrieval-augmented-generation-rag
+
+[^11]: https://docs.vllm.ai/en/v0.8.4/getting_started/examples/embed_jina_embeddings_v3.html
+
+[^12]: https://docs.vllm.ai/en/v0.9.2/examples/offline_inference/embed_jina_embeddings_v3.html
+
+[^13]: https://www.linkedin.com/posts/mem0_how-mem0-works-under-the-hood-1-message-activity-7376713317391896576-ALQP
+
+[^14]: https://jina.ai/models/jina-embeddings-v3/
+
+[^15]: https://mem0.ai/blog/what-are-vector-embeddings
+
+[^16]: https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/eddb45b3-9f96-4f62-a4cd-61b5b8ca1b26/paste.txt
+
+[^17]: https://docs.mem0.ai/core-concepts/memory-types
+
+[^18]: https://github.com/mem0ai/mem0/issues/3009
+
+[^19]: https://arxiv.org/html/2512.06616
+
+[^20]: https://www.zeroentropy.dev/articles/mem0-improves-memory-retrieval-accuracy-with-zeroentropy
+
+[^21]: https://huggingface.co/papers/2409.10173
+
+[^22]: https://www.assistant-ui.com/examples/mem0
+
+[^23]: https://unstructured.io/blog/beyond-retrieval-adding-a-memory-layer-to-rag-with-unstructured-and-mem0
+
+
+
+---
