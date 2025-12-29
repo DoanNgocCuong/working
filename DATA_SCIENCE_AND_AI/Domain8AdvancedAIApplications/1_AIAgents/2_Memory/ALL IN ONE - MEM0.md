@@ -2942,3 +2942,111 @@ Total ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 60.00s ❌
 Cách vẽ này gọi là kiểu vẽ gì
 ```
 
+
+---
+# PHẦN B: 
+
+## 1.1 Data Flow Diagram - Search API
+
+```
+Call song song:  
++, Vector Search: Embedding + Search Mivlus + Tính rerank (code gốc còn đang call lần lượt từng ứng viên để tính rerank)  
++, Graph Search: (đã tắt)  
+  
+---  
+Hiện em đang log thì  
+- Embedding OpenAI : 1s => Dự kiến đổi sang embedding khác sẽ nhanh hơn  
+_ Search Milvus : 70-200ms  
+_ Tính reranks: 500ms * số ứng viên (do code gốc đang để tuần tự) => Dự kiến sẽ bỏ reranks
+```
+
+### Luồng xử lý Search Request
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant FastAPI as FastAPI /search
+    participant Memory as Memory.search()
+    participant Embedder as OpenAI Embedder
+    participant VectorStore as Milvus Vector Store
+    participant Reranker as LLM Reranker
+    participant GraphStore as Graph Store (optional)
+
+    Client->>FastAPI: POST /search<br/>{query, user_id, filters, ...}
+    FastAPI->>Memory: search(query, **params)
+    
+    Note over Memory: Start timing
+    
+    Memory->>Embedder: embed(query) → vector
+    Embedder-->>Memory: embedding vector
+    
+    par Vector Search
+        Memory->>VectorStore: search(query, vectors, filters, limit)
+        VectorStore-->>Memory: candidates[] (top N)
+    and Graph Search (if enabled)
+        Memory->>GraphStore: search(query, filters, limit)
+        GraphStore-->>Memory: relations[]
+    end
+    
+    alt Rerank enabled
+        Note over Memory: Rerank timing start
+        Memory->>Reranker: rerank(query, candidates, limit)
+        loop For each candidate
+            Reranker->>Reranker: LLM call (chat/completions)
+        end
+        Reranker-->>Memory: reranked_results[]
+        Note over Memory: Rerank timing end
+    end
+    
+    Note over Memory: Calculate timings<br/>(vector_ms, rerank_ms, total_ms)
+    
+    Memory-->>FastAPI: {results: [...], relations: [...]}
+    FastAPI-->>Client: HTTP 200 OK + JSON response## Chi tiết từng bước
+
+
+```
+
+
+### 1. Request Parsing (FastAPI)
+- Nhận `SearchRequest` từ client
+- Map `top_k` → `limit` (nếu có)
+- Build params dict
+
+### 2. Embedding Query (~800-1200ms)
+- Gọi OpenAI `/v1/embeddings`
+- Model: `text-embedding-3-small`
+- Output: embedding vector (1536 dims)
+
+### 3. Vector Search (~100-300ms)
+- Query Milvus với embedding + filters
+- Filters: `user_id`, `agent_id`, `run_id`, custom filters
+- Limit: 100 (default) hoặc từ request
+- Output: Top N candidates với scores
+
+### 4. Reranking (~1200-4500ms) - Optional
+- Nếu `rerank=True` và có `reranker` config
+- Gọi LLM reranker (gpt-4.1-mini)
+- Số lượng calls = số candidates (ví dụ: 2 candidates → 2 calls, 7 candidates → 7 calls)
+- Output: Reordered results theo relevance
+
+### 5. Graph Search (~?) - Optional
+- Chạy song song với vector search
+- Query graph store (Neo4j/Memgraph) nếu enabled
+- Output: Relations/entities
+
+### 6. Response Assembly
+- Combine `results` (từ vector/rerank) + `relations` (từ graph)
+- Log timings: `vector_ms`, `rerank_ms`, `total_ms`
+- Return JSON response
+
+## Timing Breakdown (từ log thực tế)
+
+| Query | Candidates | vector_ms | rerank_ms | total_ms | Rerank Calls |
+|-------|------------|-----------|-----------|-----------|--------------|
+| "Thái độ của tôi" | 2 | 1208.14 | 1259.13 | 2484.19 | 2 |
+| "Sở thích" | 7 | 858.74 | 4509.57 | 5391.90 | 7 |
+
+**Nhận xét:**
+- Rerank chiếm ~50-80% tổng thời gian
+- Số lượng rerank calls = số candidates
+- Vector search nhanh và ổn định (~800-1200ms)
