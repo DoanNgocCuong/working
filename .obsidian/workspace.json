@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP/CKP 3.1 Cách dựng Jina-embedding-v3 - Best Practices.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3.1 Cách dựng Jina-embedding-v3 - Best Practices 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CKP 3.1 Cách dựng Jina-embedding-v3 - Best Practices"
+              "title": "3.1 Cách dựng Jina-embedding-v3 - Best Practices 1"
             }
           }
         ],
@@ -311,13 +311,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP/CKP 3.1 Cách dựng Jina-embedding-v3 - Best Practices.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3.1 Cách dựng Jina-embedding-v3 - Best Practices 1.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CKP 3.1 Cách dựng Jina-embedding-v3 - Best Practices"
+              "title": "Outline of 3.1 Cách dựng Jina-embedding-v3 - Best Practices 1"
             }
           }
         ],
@@ -339,13 +339,16 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "7bbd2100f0471588",
+  "active": "bcdb1fae04b21f9d",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3.2 Dựng Full - dựng Jina-embedding-v3.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3.0 Deep research xem hiện tại mem0 cần những task-specific nào.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3.1 Cách dựng Jina-embedding-v3 - Best Practices 1.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3. Embedding song ngữ anh việt cho bài RAG.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3. Embedding song ngữ anh việt cho bài RAG 1.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP/CKP 3. Embedding song ngữ anh việt cho bài RAG.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP/CKP 3.1 Cách dựng Jina-embedding-v3 - Best Practices.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/2. Embedding tiếng việt RAG.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/1. Embedding có sẵn embedding 3768 chiều dựng cho bài search 1000 nghề.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3.2 Dựng Full - dựng Jina-embedding-v3.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Microsoft/Education API Overview - Microsoft Graph.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Microservices.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Microsoft",
@@ -364,13 +367,10 @@
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/8. Git Protection - Perflexity support.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1. Git/1. git, SOLID, Code chuẩn.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP/CKP - cuda 12.2 - vllm openai 0.7.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP/CKP 3.1 Cách dựng Jina-embedding-v3 - Best Practices.md",
     "Untitled 11.md",
     "PEOPLE/THE_ROAD/Agentic AI for Finance - 26122025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3.3 Deep research xem hiện tại mem0 cần những task-specific nào.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEM0.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/Host Embedding Model/19052025  - How to host embedding model.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/image/Pasted image 20251226104642.png",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/image",

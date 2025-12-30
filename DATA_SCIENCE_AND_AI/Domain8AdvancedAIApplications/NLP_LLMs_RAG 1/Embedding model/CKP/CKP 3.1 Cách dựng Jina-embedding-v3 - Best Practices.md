@@ -90,10 +90,10 @@ Với 3090 và bài toán chỉ embed (không generate), có 3 “đường dự
 
 ### Tóm tắt quyết định (gợi ý lựa chọn)
 
-| Ưu tiên chính | Lựa chọn nên dùng |
-| :-- | :-- |
-| Nhanh, đơn giản, production sớm | **TEI + Jina v3 (FP16)** [^1][^2] |
-| Nhiều model embedding, dễ A/B test | **Infinity + Jina v3** [^5] |
+| Ưu tiên chính                              | Lựa chọn nên dùng                                                   |
+| :----------------------------------------- | :------------------------------------------------------------------ |
+| Nhanh, đơn giản, production sớm            | **TEI + Jina v3 (FP16)** [^1][^2]                                   |
+| Nhiều model embedding, dễ A/B test         | **Infinity + Jina v3** [^5]                                         |
 | OpenAI-compatible API, chung stack với LLM | **vLLM pooling + Jina v3** (cần chấp nhận một ít friction) [^6][^8] |
 
 Nếu mục tiêu của bạn là: “Mem0 + Milvus, 3090, cần chạy ổn định trong 1-2 ngày triển khai”, thì **cách 1 (TEI)** là lựa chọn ưu tiên.
@@ -2216,141 +2216,100 @@ python
 
 Nguyên nhân: Jina v3 sử dụng **RoPE (Rotary Position Embedding)**, nhưng v0.7.3 chỉ hỗ trợ absolute position embedding cho XLM-RoBERTa.marketplace.microsoft+1​
 
-## 3. **Giải Pháp Khuyến Nghị**
+---
+# Có, về **mặt lý thuyết** image `opencsghq/vllm:v0.8.5-cu121` **có thể** hỗ trợ Jina v3 embedding, vì:
 
-## **Option 1: Sử dụng v0.6.x (Compromise tốt nhất)**
+- Jina v3 được vLLM hỗ trợ chính thức từ **v0.8.4 trở lên** (có example riêng `embed_jina_embeddings_v3.py`, default `model="jinaai/jina-embeddings-v3", task="embed", trust_remote_code=True`).[vllm](https://docs.vllm.ai/en/v0.8.4/getting_started/examples/embed_jina_embeddings_v3.html)​
+    
+- Docs các bản 0.8.x mô tả rõ Jina v3 là model được hỗ trợ, dù vLLM hiện tại **chỉ hỗ trợ task `text-matching`** bằng cách merge LoRA, không hỗ trợ hết các task LoRA khác của Jina.vllm+1​
+    
+- `opencsghq/vllm:v0.8.5-cu121` thực chất là vLLM **0.8.5 build lại trên CUDA 12.1**, nên logic model support bên trong vẫn là của **0.8.5**, tức là có code path cho Jina v3 giống bản official 0.8.5.vllm+1​
+    
+
+Tuy nhiên, có vài điểm quan trọng:
+
+## 1. Mức độ “hỗ trợ” cụ thể
+
+- vLLM với Jina v3 hiện **chỉ hỗ trợ task `text-matching`**, do cơ chế LoRA của Jina; các task như `retrieval.query`, `retrieval.passage`, `classification` chưa được expose đầy đủ trong vLLM, docs nhấn mạnh điều này.vllm+1​
+    
+- Example Jina v3 trong docs 0.8.x cũng ghi rõ: _“Only text matching task is supported for now. See #16120”_.aidoczh+1​
+    
+
+=> Nếu dùng `opencsghq/vllm:v0.8.5-cu121`, bạn kỳ vọng được mức support **tương đương v0.8.5 official**:
+
+- ✅ Load được `jinaai/jina-embeddings-v3`
+    
+- ✅ Gọi `task="embed"` / OpenAI embeddings API
+    
+- ⚠️ Chỉ task `text-matching`, không đủ toàn bộ task LoRA.
+    
+
+## 2. Rủi ro vì là image third‑party
+
+- Image này **không phải** từ org `vllm/vllm-openai` official, mà là build lại bởi `opencsghq` nên không có bảo chứng về bảo mật, quy trình build, hay mức độ sync với upstream.[hub.docker](https://hub.docker.com/layers/opencsghq/vllm/v0.8.5-cu121/images/sha256-a1848c713a7c6f7fcb29d5c079a761685459679ba57d9c1fd7469e8fdfc22a66)​
+    
+- Nếu có bug liên quan tới CUDA, NCCL hoặc performance, bạn sẽ khó nhận support từ vLLM team, vì environment không phải official.
+    
+
+## 3. Cách test thực tế (đề xuất)
+
+Để xác nhận nhanh trên máy bạn:
 
 bash
 
-`# v0.6.4.post1 - version cuối cùng trước v0.7.0 docker pull vllm/vllm-openai:v0.6.4.post1 # Hoặc cài từ source pip install vllm==0.6.4.post1`
+`docker run --gpus all --rm -p 8000:8000 \   -v ~/.cache/huggingface:/root/.cache/huggingface \  opencsghq/vllm:v0.8.5-cu121 \  --model jinaai/jina-embeddings-v3 \  --task embed \  --trust-remote-code`
 
-**Ưu điểm:**
-
-- ✅ CUDA 12.1 binary chạy tốt trên driver 12.2
-    
-- ✅ Hỗ trợ XLM-RoBERTa embedding models[linkedin](https://www.linkedin.com/posts/embedded-llm_release-v064-vllm-projectvllm-activity-7263554964080209920-IOxN)​
-    
-- ✅ Stable, ít bug hơn v0.7.x
-    
-
-**Nhược điểm:**
-
-- ⚠️ Jina v3 có thể chưa được test kỹ
-    
-- ⚠️ Thiếu một số features của v0.7.x (V1 engine, torch.compile)
-    
-
-**Test Jina v3:**
+Sau đó:
 
 bash
 
-`docker run --gpus all -p 8000:8000 \   -v ~/.cache/huggingface:/root/.cache/huggingface \  vllm/vllm-openai:v0.6.4.post1 \  --model jinaai/jina-embeddings-v3 \  --task embed \  --trust-remote-code`
+`curl http://localhost:8000/v1/embeddings \   -H "Content-Type: application/json" \  -d '{    "input": ["hello world", "xin chào"],    "model": "jinaai/jina-embeddings-v3"  }'`
 
-Nếu gặp lỗi → chuyển sang Option 2.
-
-## **Option 2: Nâng cấp Driver (Khuyến nghị mạnh cho production)**
-
-Đây là giải pháp tốt nhất dài hạn:
-
-bash
-
-`# Bước 1: Kiểm tra driver hiện tại nvidia-smi # Bước 2: Cài driver mới hỗ trợ CUDA 12.4+ sudo apt-get update sudo apt-get install -y nvidia-driver-550  # hoặc 560 # Bước 3: Reboot sudo reboot # Bước 4: Verify nvidia-smi  # Kiểm tra driver version # Bước 5: Sử dụng vLLM v0.8.5+ docker pull vllm/vllm-openai:v0.8.5`
-
-**Tại sao nên nâng cấp:**
-
-- ✅ Jina v3 được hỗ trợ chính thức từ v0.8.4+[vllm](https://docs.vllm.ai/en/v0.8.4/getting_started/examples/embed_jina_embeddings_v3.html)​
+- Nếu trả về vector `embedding` bình thường → image **hoạt động với Jina v3** ở mức tương đương v0.8.5 official.
     
-- ✅ Future-proof cho 2-3 năm tới
-    
-- ✅ Unlock tất cả features mới: V1 engine, torch.compile, FA3
-    
-- ✅ Better performance
+- Nếu báo lỗi kiểu `Only 'absolute' position_embedding_type is supported` thì chứng tỏ build này không đúng 0.8.5 (hoặc dùng code cũ hơn), giống lỗi đã từng được report khi dùng Jina v3 với các bản vLLM cũ.[huggingface](https://huggingface.co/jinaai/jina-embeddings-v3/discussions/112)​
     
 
-**ROI:**
+## 4. Khuyến nghị thực tế
 
-- **Cost**: 10-15 phút downtime để reboot server
+- **Có thể dùng** `opencsghq/vllm:v0.8.5-cu121` để **test/staging** nhằm tận dụng driver CUDA 12.2 hiện tại + Jina v3.
     
-- **Benefit**: Access to latest features + stable Jina v3 support
+- **Không nên** phụ thuộc image này cho **production** vì:
     
+    - Không official.
+        
+    - Bạn đang build fintech (yêu cầu compliance & bảo mật cao).
+        
 
-## **Option 3: Alternative Embedding Model**
+Với production, vẫn nên:
 
-Nếu không thể nâng driver và v0.6.x không work với Jina v3:
-
-**Embedding models tương thích với v0.7.x:**
-
-bash
-
-`# BAAI/bge-large-en-v1.5 (BERT-based) vllm serve BAAI/bge-large-en-v1.5 --task embed # intfloat/e5-mistral-7b-instruct (Mistral-based) vllm serve intfloat/e5-mistral-7b-instruct --task embed # Llama-based embeddings vllm serve Alibaba-NLP/gte-Qwen2-7B-instruct --task embed`
-
-Hoặc dùng **Text Embeddings Inference (TEI)** từ HuggingFace:
-
-bash
-
-`docker run --gpus all -p 8080:80 \   ghcr.io/huggingface/text-embeddings-inference:latest \  --model-id jinaai/jina-embeddings-v3`
-
-TEI được optimize riêng cho embedding models và stable hơn với Jina v3.
-
-## 4. **Decision Matrix**
-
-|Tiêu chí|v0.6.4 + CUDA 12.2|Nâng Driver + v0.8.5+|TEI + Jina v3|
-|---|---|---|---|
-|**Setup time**|⚡ 5 phút|🕐 15 phút (reboot)|⚡ 5 phút|
-|**Jina v3 support**|⚠️ Experimental|✅ Đầy đủ|✅ Đầy đủ|
-|**Future-proof**|⚠️ Limited|✅ Tốt nhất|⚠️ Locked to embedding|
-|**Performance**|🔥 Tốt|🔥🔥 Tốt nhất|🔥 Tốt|
-|**Risk**|🟡 Medium|🟢 Low|🟢 Low|
-|**Khuyến nghị**|Test trước|**Production**|Backup plan|
-
-## 5. **Quyết Định cho Fintech Startup**
-
-Dựa trên profile của bạn (AI Engineer + Fintech), đây là roadmap mình khuyến nghị:
-
-**Tuần này:**
-
-1. **Test nhanh v0.6.4.post1** với Jina v3 trên staging (30 phút)
-    
-2. Nếu work → ship tạm, schedule nâng driver trong 2 tuần
-    
-3. Nếu không work → chuyển ngay sang plan B
+- Nâng driver lên 550+ → dùng `vllm/vllm-openai:v0.8.5+` official với Jina v3.vllm+1​
     
 
-**Plan B (nếu v0.6.4 fail):**
+Nếu bạn muốn, có thể liệt kê log/command bạn đang chạy và mình giúp đọc log + confirm nhanh xem image này có thực sự load được Jina v3 trên máy bạn không.
 
-bash
-
-`# Approach 1: Nâng driver ngay (khuyến nghị) # - Schedule maintenance window vào cuối tuần # - Downtime: 15 phút # - Test thoroughly sau khi nâng # Approach 2: Dùng TEI tạm thời docker run --gpus all -p 8080:80 \   ghcr.io/huggingface/text-embeddings-inference:latest \  --model-id jinaai/jina-embeddings-v3`
-
-**Production long-term (1 tháng tới):**
-
-- ✅ Nâng driver lên 550+
-    
-- ✅ Upgrade vLLM lên v0.8.5+
-    
-- ✅ Full testing với Jina v3
-    
-- ✅ Monitor performance metrics
-    
-
-## 6. **Các Lệnh Kiểm Tra**
-
-bash
-
-`# Kiểm tra driver và CUDA version nvidia-smi nvcc --version  # Nếu có CUDA toolkit # Test vLLM v0.6.4 với Jina v3 docker run --gpus all --rm \   vllm/vllm-openai:v0.6.4.post1 \  --model jinaai/jina-embeddings-v3 \  --task embed \  --trust-remote-code \  --max-model-len 1024 # Nếu thành công, test embedding curl http://localhost:8000/v1/embeddings \   -H "Content-Type: application/json" \  -d '{    "input": "Hello, world!",    "model": "jinaai/jina-embeddings-v3"  }'`
-
-## Kết Luận
-
-**Câu trả lời ngắn gọn:**
-
-- ✅ **v0.7.x CÓ THỂ chạy với CUDA 12.2** (vì compile với 12.1)
-    
-- ❌ **NHƯNG Jina v3 chưa được hỗ trợ đầy đủ** ở v0.7.x
-    
-- 🎯 **Khuyến nghị: Test v0.6.4.post1 trước, nếu fail → nâng driver lên 550+**
-    
-
-Bạn muốn mình chi tiết hóa phần nào thêm không? Ví dụ script automation cho việc test compatibility hoặc migration plan chi tiết?
+1. [https://docs.vllm.ai/en/v0.8.4/getting_started/examples/embed_jina_embeddings_v3.html](https://docs.vllm.ai/en/v0.8.4/getting_started/examples/embed_jina_embeddings_v3.html)
+2. [https://docs.vllm.ai/en/latest/models/supported_models/](https://docs.vllm.ai/en/latest/models/supported_models/)
+3. [https://docs.vllm.ai/en/stable/models/supported_models/](https://docs.vllm.ai/en/stable/models/supported_models/)
+4. [https://docs.vllm.ai/en/v0.8.5/models/supported_models.html](https://docs.vllm.ai/en/v0.8.5/models/supported_models.html)
+5. [https://hub.docker.com/layers/opencsghq/vllm/v0.8.5-cu121/images/sha256-a1848c713a7c6f7fcb29d5c079a761685459679ba57d9c1fd7469e8fdfc22a66](https://hub.docker.com/layers/opencsghq/vllm/v0.8.5-cu121/images/sha256-a1848c713a7c6f7fcb29d5c079a761685459679ba57d9c1fd7469e8fdfc22a66)
+6. [https://www.aidoczh.com/vllm/examples/offline_inference/embed_jina_embeddings_v3.html](https://www.aidoczh.com/vllm/examples/offline_inference/embed_jina_embeddings_v3.html)
+7. [https://huggingface.co/jinaai/jina-embeddings-v3/discussions/112](https://huggingface.co/jinaai/jina-embeddings-v3/discussions/112)
+8. [https://docs.vllm.ai/en/v0.8.0/getting_started/installation/gpu.html](https://docs.vllm.ai/en/v0.8.0/getting_started/installation/gpu.html)
+9. [https://jina.ai/models/jina-embeddings-v3/](https://jina.ai/models/jina-embeddings-v3/)
+10. [https://github.com/vllm-project/vllm/issues/12154](https://github.com/vllm-project/vllm/issues/12154)
+11. [https://marketplace.microsoft.com/vi-vn/product/saas/jinaai.jina-embeddings-v3-vm?tab=overview](https://marketplace.microsoft.com/vi-vn/product/saas/jinaai.jina-embeddings-v3-vm?tab=overview)
+12. [https://huggingface.co/jinaai/jina-embeddings-v3](https://huggingface.co/jinaai/jina-embeddings-v3)
+13. [https://github.com/QwenLM/Qwen3-Embedding](https://github.com/QwenLM/Qwen3-Embedding)
+14. [https://arxiv.org/abs/2409.10173](https://arxiv.org/abs/2409.10173)
+15. [https://docs.vllm.ai/en/v0.10.1/examples/offline_inference/embed_jina_embeddings_v3.html](https://docs.vllm.ai/en/v0.10.1/examples/offline_inference/embed_jina_embeddings_v3.html)
+16. [https://zilliz.com/ai-models/jina-embeddings-v3](https://zilliz.com/ai-models/jina-embeddings-v3)
+17. [https://jina.ai/news/jina-embeddings-v3-a-frontier-multilingual-embedding-model/](https://jina.ai/news/jina-embeddings-v3-a-frontier-multilingual-embedding-model/)
+18. [https://github.com/vllm-project/vllm/releases](https://github.com/vllm-project/vllm/releases)
+19. [https://qdrant.tech/documentation/embeddings/jina-embeddings/](https://qdrant.tech/documentation/embeddings/jina-embeddings/)
+20. [https://github.com/BerriAI/litellm/issues/6337](https://github.com/BerriAI/litellm/issues/6337)
+21. [https://developers.llamaindex.ai/python/examples/embeddings/jinaai_embeddings/](https://developers.llamaindex.ai/python/examples/embeddings/jinaai_embeddings/)
+22. [https://jina.ai/embeddings/](https://jina.ai/embeddings/)
 
 1. [https://www.linkedin.com/posts/embedded-llm_release-v064-vllm-projectvllm-activity-7263554964080209920-IOxN](https://www.linkedin.com/posts/embedded-llm_release-v064-vllm-projectvllm-activity-7263554964080209920-IOxN)
 2. [https://docs.vllm.ai/en/v0.8.0/models/supported_models.html](https://docs.vllm.ai/en/v0.8.0/models/supported_models.html)
@@ -2434,3 +2393,6 @@ Bạn muốn mình chi tiết hóa phần nào thêm không? Ví dụ script aut
 80. [https://huggingface.co/jinaai/models](https://huggingface.co/jinaai/models)
 81. [https://docs.vllm.ai/en/v0.8.4/deployment/docker.html](https://docs.vllm.ai/en/v0.8.4/deployment/docker.html)
 82. [https://huggingface.co/datasets/davanstrien/model_cards_with_metadata/viewer/default/train?p=1](https://huggingface.co/datasets/davanstrien/model_cards_with_metadata/viewer/default/train?p=1)
+
+---
+# 1. Deep research xem cộng đồng có dùng nhiều model embedding jina v3 embedding ko - 2. Nếu có thì mn dùng host như nào ? => đưa ra 3-5 option về cách triển khai
