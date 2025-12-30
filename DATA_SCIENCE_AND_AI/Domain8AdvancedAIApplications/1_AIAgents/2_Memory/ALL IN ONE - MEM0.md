@@ -3039,7 +3039,7 @@ sequenceDiagram
 - Log timings: `vector_ms`, `rerank_ms`, `total_ms`
 - Return JSON response
 
-## Timing Breakdown (từ log thực tế)
+### Timing Breakdown (từ log thực tế)
 
 | Query | Candidates | vector_ms | rerank_ms | total_ms | Rerank Calls |
 |-------|------------|-----------|-----------|-----------|--------------|
@@ -3050,3 +3050,374 @@ sequenceDiagram
 - Rerank chiếm ~50-80% tổng thời gian
 - Số lượng rerank calls = số candidates
 - Vector search nhanh và ổn định (~800-1200ms)
+
+
+## 1.2 Data Flow Extract - memory API 
+
+### 1. Entry Point (`main.py` line 134-146)
+```python
+@app.post("/memories")
+def add_memory(memory_create: MemoryCreate):
+    response = MEMORY_INSTANCE.add(messages=..., **params)
+```
+
+### 2. Memory.add() Method (`mem0/memory/main.py` line 282)
+
+Có 2 modes:
+#### Mode 1: `infer=True` (default) - Dùng LLM để extract facts
+
+Flow:
+1. Parse messages → convert thành text
+2. Tạo prompts:
+   - System prompt: Hướng dẫn extract facts từ conversation
+   - User prompt: Conversation content
+3. Gọi LLM: `self.llm.generate_response()` (line 435)
+   - Endpoint: `/chat/completions`
+   - Purpose: Extract facts từ messages
+4. Parse LLM response → extract facts (JSON format)
+5. Search existing memories → so sánh với facts mới
+6. Gọi LLM lần 2: Decide ADD/UPDATE/DELETE/NONE (line 503)
+7. Generate embeddings cho facts mới
+8. Save vào vector store (Milvus)
+
+#### Mode 2: `infer=False` - Raw storage (không dùng LLM)
+
+Flow:
+1. Loop qua từng message
+2. Generate embedding trực tiếp từ message content (line 410)
+3. Save vào vector store (line 411)
+4. Không extract facts, không dùng LLM
+
+#### Option 2: Tách LLM base URL (đúng cách)
+
+Tách riêng LLM URL và Embedding URL như đã đề xuất trước đó.
+
+Bạn muốn:
+1. Tắt LLM inference (raw storage) - nhanh nhưng mất tính năng extract facts
+2. Fix LLM URL để dùng OpenAI API - giữ nguyên tính năng extract facts
+
+Bạn đang ở ask mode. Nếu muốn tôi implement, hãy chuyển sang agent mode.
+
+## 1.2 Flow Add Memory chi tiết hơn nữa 
+
+
+
+### Flow chi tiết của Add Memory trong Mem0
+
+#### Tổng quan
+
+Mem0 có 2 modes khi add memory:
+- `infer=True` (default): Dùng LLM để extract facts và quyết định ADD/UPDATE/DELETE
+- `infer=False`: Lưu raw messages trực tiếp, không dùng LLM
+
+---
+
+#### Mode 1: `infer=True` - Intelligent Memory Extraction
+
+##### Phase 1: Pre-processing (line 332-368)
+
+```python
+### 1. Build metadata và filters
+processed_metadata, effective_filters = _build_filters_and_metadata(
+    user_id=user_id,
+    agent_id=agent_id,
+    run_id=run_id,
+    input_metadata=metadata,
+)
+### → Tạo metadata với user_id, agent_id, run_id, timestamps
+
+### 2. Normalize messages format
+if isinstance(messages, str):
+    messages = [{"role": "user", "content": messages}]
+elif isinstance(messages, dict):
+    messages = [messages]
+### → Đảm bảo messages là list[dict]
+
+### 3. Parse vision messages (nếu có)
+messages = parse_vision_messages(messages, self.llm, vision_details)
+### → Convert images thành text descriptions nếu có
+```
+
+##### Phase 2: Parallel Processing (line 370-377)
+
+```python
+with ThreadPoolExecutor() as executor:
+    future1 = executor.submit(
+        self._add_to_vector_store,  ### Vector store operations
+        messages, processed_metadata, effective_filters, infer
+    )
+    future2 = executor.submit(
+        self._add_to_graph,  ### Graph store operations (nếu enable)
+        messages, effective_filters
+    )
+    ### → Chạy song song 2 tasks
+```
+
+##### Phase 3: Fact Extraction (line 424-457)
+
+####### Step 3.1: Parse Messages
+```python
+parsed_messages = parse_messages(messages)
+### Input: [{"role": "user", "content": "..."}, {"role": "assistant", "content": "..."}]
+### Output: "user: ...\nassistant: ...\n"
+```
+
+####### Step 3.2: Determine Memory Type
+```python
+is_agent_memory = self._should_use_agent_memory_extraction(messages, metadata)
+### Logic:
+### - True nếu: có agent_id VÀ có assistant messages
+### - False nếu: user memory (default)
+```
+
+####### Step 3.3: Create Prompts
+```python
+if self.config.custom_fact_extraction_prompt:
+    system_prompt = self.config.custom_fact_extraction_prompt
+    user_prompt = f"Input:\n{parsed_messages}"
+else:
+    system_prompt, user_prompt = get_fact_retrieval_messages(
+        parsed_messages, is_agent_memory
+    )
+```
+
+Prompt types:
+- `USER_MEMORY_EXTRACTION_PROMPT`: Extract facts về user (preferences, details, plans...)
+- `AGENT_MEMORY_EXTRACTION_PROMPT`: Extract facts về agent behavior
+
+Example prompt structure:
+```
+System: "You are a Personal Information Organizer. Extract facts from conversation..."
+User: "Input:
+user: Chào Nguyễn Minh Phúc!...
+assistant: chọn gì thì tớ hỏi cậu hôm qua mình đã chơi trò gì"
+```
+
+####### Step 3.4: Call LLM - First Call
+```python
+response = self.llm.generate_response(
+    messages=[
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
+    ],
+    response_format={"type": "json_object"}  ### Force JSON output
+)
+### → Gọi /chat/completions endpoint
+### → LLM trả về JSON: {"facts": ["fact1", "fact2", ...]}
+```
+
+####### Step 3.5: Parse LLM Response
+```python
+response = remove_code_blocks(response)  ### Remove ```json ... ```
+new_retrieved_facts = json.loads(response)["facts"]
+### → Extract list of facts: ["Nguyễn Minh Phúc đã chơi trò gì hôm qua", ...]
+```
+
+##### Phase 4: Search Existing Memories (line 462-488)
+
+```python
+### For each new fact:
+for new_mem in new_retrieved_facts:
+    ### 1. Generate embedding
+    messages_embeddings = self.embedding_model.embed(new_mem, "add")
+    ### → Gọi Infinity: POST /embeddings
+    
+    ### 2. Search similar memories
+    existing_memories = self.vector_store.search(
+        query=new_mem,
+        vectors=messages_embeddings,
+        limit=5,  ### Top 5 similar
+        filters=search_filters  ### Filter by user_id/agent_id/run_id
+    )
+    ### → Search trong Milvus vector store
+    
+    ### 3. Collect existing memories
+    for mem in existing_memories:
+        retrieved_old_memory.append({
+            "id": mem.id,
+            "text": mem.payload.get("data", "")
+        })
+```
+
+##### Phase 5: Decide Actions - Second LLM Call (line 491-522)
+
+####### Step 5.1: Create Update Prompt
+```python
+function_calling_prompt = get_update_memory_messages(
+    retrieved_old_memory,  ### Existing memories
+    new_retrieved_facts,   ### New facts
+    self.config.custom_update_memory_prompt
+)
+```
+
+Prompt structure:
+```
+"You are a smart memory manager. Compare new facts with existing memories.
+For each new fact, decide: ADD, UPDATE, DELETE, or NONE.
+
+Old Memory:
+[{"id": "0", "text": "..."}, ...]
+
+Retrieved facts: ["fact1", "fact2", ...]
+
+Return JSON format:
+{
+  "memory": [
+    {"id": "0", "text": "...", "event": "UPDATE", "old_memory": "..."},
+    {"id": "1", "text": "...", "event": "ADD"}
+  ]
+}
+"
+```
+
+####### Step 5.2: Call LLM - Second Call
+```python
+response = self.llm.generate_response(
+    messages=[{"role": "user", "content": function_calling_prompt}],
+    response_format={"type": "json_object"}
+)
+### → LLM quyết định: ADD/UPDATE/DELETE/NONE cho mỗi fact
+```
+
+####### Step 5.3: Parse Actions
+```python
+new_memories_with_actions = json.loads(response)
+### → {
+###     "memory": [
+###         {"id": "0", "text": "...", "event": "UPDATE"},
+###         {"id": "1", "text": "...", "event": "ADD"}
+###     ]
+### }
+```
+
+##### Phase 6: Execute Actions (line 524-598)
+
+```python
+for resp in new_memories_with_actions.get("memory", []):
+    event_type = resp.get("event")
+    action_text = resp.get("text")
+    
+    if event_type == "ADD":
+        ### Create new memory
+        memory_id = self._create_memory(
+            data=action_text,
+            existing_embeddings=new_message_embeddings,
+            metadata=metadata
+        )
+        ### → Generate embedding → Save to Milvus
+        
+    elif event_type == "UPDATE":
+        ### Update existing memory
+        self._update_memory(
+            memory_id=temp_uuid_mapping[resp.get("id")],
+            data=action_text,
+            existing_embeddings=new_message_embeddings,
+            metadata=metadata
+        )
+        ### → Update embedding + payload in Milvus
+        
+    elif event_type == "DELETE":
+        ### Delete memory
+        self._delete_memory(memory_id=temp_uuid_mapping[resp.get("id")])
+        ### → Remove from Milvus
+        
+    elif event_type == "NONE":
+        ### No change, but update session IDs if needed
+        ### → Update metadata only
+```
+
+##### Phase 7: Graph Store (line 600+)
+
+```python
+def _add_to_graph(self, messages, filters):
+    if self.enable_graph:
+        ### Extract entities và relationships từ messages
+        ### Save vào graph store (Neo4j, Memgraph, etc.)
+        ### → Tạo knowledge graph
+```
+
+---
+
+#### Mode 2: `infer=False` - Raw Storage
+
+##### Flow đơn giản (line 388-422)
+
+```python
+if not infer:
+    for message_dict in messages:
+        ### 1. Skip invalid/system messages
+        if message_dict["role"] == "system":
+            continue
+        
+        ### 2. Generate embedding trực tiếp
+        msg_embeddings = self.embedding_model.embed(msg_content, "add")
+        ### → Gọi Infinity: POST /embeddings
+        
+        ### 3. Save to vector store
+        mem_id = self._create_memory(
+            msg_content, 
+            msg_embeddings, 
+            per_msg_meta
+        )
+        ### → Save vào Milvus
+        
+        ### 4. Return result
+        returned_memories.append({
+            "id": mem_id,
+            "memory": msg_content,
+            "event": "ADD"
+        })
+```
+
+Không có:
+- LLM calls
+- Fact extraction
+- Memory comparison
+- ADD/UPDATE/DELETE logic
+
+---
+
+#### So sánh 2 modes
+
+| Aspect | `infer=True` | `infer=False` |
+|--------|--------------|---------------|
+| LLM Calls | 2 calls (extract + decide) | 0 calls |
+| Embedding Calls | 1-2 per fact | 1 per message |
+| Processing Time | ~2-5s | ~0.5s |
+| Memory Quality | Structured facts | Raw messages |
+| Cost | Higher (LLM usage) | Lower |
+| Use Case | Production, structured memory | Quick storage, testing |
+
+---
+
+#### Tóm tắt flow diagram
+
+```
+Add Memory Request
+    ↓
+[Pre-processing]
+    ↓
+[Parallel: Vector Store + Graph Store]
+    ↓
+┌─────────────────────────────────────┐
+│  infer=True?                         │
+└─────────────────────────────────────┘
+    ↓ Yes                    ↓ No
+[Fact Extraction]        [Raw Storage]
+    ↓                           ↓
+[LLM Call ###1]            [Generate Embedding]
+    ↓                           ↓
+[Parse Facts]            [Save to Milvus]
+    ↓                           ↓
+[Search Existing]        [Return Result]
+    ↓
+[LLM Call ###2]
+    ↓
+[Execute Actions]
+    ↓
+[Save to Milvus]
+    ↓
+[Return Result]
+```
+
+---
