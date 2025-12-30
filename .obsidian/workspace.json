@@ -153,12 +153,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled 11.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEM0 - Use Case.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled 11"
+              "title": "ALL IN ONE - MEM0 - Use Case"
             }
           },
           {
@@ -208,7 +208,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: dC",
+                "query": "file: mem0",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -229,8 +229,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -298,13 +297,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled 11.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEM0 - Use Case.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled 11"
+              "title": "Outline of ALL IN ONE - MEM0 - Use Case"
             }
           }
         ],
@@ -326,11 +325,14 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "db02c5a91e7f8e1e",
+  "active": "36c9c86598fe86d1",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/link - mem0.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEM0 - Use Case.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY.md",
+    "Untitled 11.md",
     "2025-12-30.md",
     "PEOPLE/THE_ROAD/Agentic AI for Finance - 26122025.md",
-    "Untitled 11.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Memory Leak.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/3 - SLM P2 RISK MANAGEMENT - RỦI RO TOÀN DIỆN CHO Serving SLM - 15122025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
@@ -352,9 +354,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Microsoft/Education API Overview - Microsoft Graph.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Microservices.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Microsoft",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/2 - Thực chiến - Coding - Architect.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/AWS Knowledge MCP Server.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/Onboarding Model Context Protocol (MCP) - 63K tokens = 115 trang PDF - 18122025 (1K từ được 2-3 trang).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool/image/Pasted image 20251229202956.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool",
