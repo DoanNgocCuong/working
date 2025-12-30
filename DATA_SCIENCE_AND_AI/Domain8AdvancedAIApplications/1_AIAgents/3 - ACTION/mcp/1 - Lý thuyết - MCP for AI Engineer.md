@@ -1,4 +1,5 @@
 
+
 # 1. MCP Chorm Broswer 
 
 Cách cài rất đơn giản: Trong cursor vào MCP và set up JSON 

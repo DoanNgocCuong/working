@@ -1,4 +1,5 @@
 
+
 |MCP Server|Maintainer|Read|Write/Update|Auto-convert Docs/Sheets|Vị thế|Phù hợp cho bạn|
 |---|---|---|---|---|---|---|
 |**Anthropic Google Drive MCP (reference)**[](https://www.pulsemcp.com/servers/gdrive)​|Anthropic|✅|❌ (chủ yếu read-only)|✅ (Docs/Sheets → text/CSV)[](https://playbooks.com/mcp/modelcontextprotocol-gdrive)​|Reference, rất phổ biến[](https://modelcontextprotocol.io/faqs)​|Safe default, đọc/tóm tắt tài liệu fin, research|
