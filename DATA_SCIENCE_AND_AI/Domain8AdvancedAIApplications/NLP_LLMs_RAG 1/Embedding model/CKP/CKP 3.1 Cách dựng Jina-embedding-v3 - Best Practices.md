@@ -2151,3 +2151,286 @@ Có thể đưa cho bạn luôn 1 file `server.py` + `docker-compose` tối gi�
 
 
 ---
+
+# v0.7.x , v0.6.x là cuda 12.1, còn lại v0.8.x, ... trở lên là 12.4 ?
+
+Được rồi! Giờ mình đã có đủ thông tin để đưa ra câu trả lời chính xác. Dựa trên nghiên cứu:
+
+1. **v0.6.4** đã bắt đầu hỗ trợ XLM-RoBERTa[linkedin](https://www.linkedin.com/posts/embedded-llm_release-v064-vllm-projectvllm-activity-7263554964080209920-IOxN)​
+    
+2. **v0.8.0+** mới hỗ trợ đầy đủ XLM-RoBERTa-based embeddings[vllm](https://docs.vllm.ai/en/v0.8.0/models/supported_models.html)​
+    
+3. **v0.8.4+** mới có ví dụ chính thức về Jina v3[vllm](https://docs.vllm.ai/en/v0.8.4/getting_started/examples/embed_jina_embeddings_v3.html)​
+    
+4. **v0.10.1** ghi chú rõ về hỗ trợ Jina v3 với LoRA[vllm](https://docs.vllm.ai/en/v0.10.1/models/supported_models.html)​
+    
+
+Nhưng có một vấn đề: v0.8.0+ được compile với CUDA 12.4, không phải CUDA 12.2. Vậy giải pháp là gì?
+
+Bây giờ để tìm **phiên bản tối ưu tương thích với CUDA 12.2** của bạn:
+
+Đúng rồi! **Bạn đúng khi nghi ngờ v0.7.0+** có thể tương thích với CUDA 12.2. Dựa trên các thông tin đã thu thập, đây là phân tích chi tiết:
+
+## Kết Luận về Phiên Bản Tương Thích với CUDA 12.2
+
+## 1. **Về CUDA Compatibility**
+
+**vLLM v0.7.x series (v0.7.0, v0.7.1, v0.7.2, v0.7.3):**
+
+- Được compile với **CUDA 12.1**[github](https://github.com/vllm-project/vllm)​
+    
+- Driver của bạn: 535.230.02 hỗ trợ **CUDA 12.2**
+    
+- **Forward compatibility**: CUDA 12.1 binary CÓ THỂ chạy trên CUDA 12.2 driver (vì driver mới hơn)[vllm](https://docs.vllm.ai/en/v0.7.0/getting_started/installation/gpu/)​
+    
+
+**So sánh với các version khác:**
+
+- v0.4.2 - v0.6.x: CUDA 12.1
+    
+- v0.7.0 - v0.7.3: CUDA 12.1 ✅ **Tương thích với driver 12.2 của bạn**
+    
+- v0.8.0+: CUDA 12.4+ ❌ **KHÔNG tương thích** (cần driver 545.23.06+)
+    
+
+## 2. **Về Embedding Model Support**
+
+Đây là điểm quan trọng mà bạn cần lưu ý:
+
+**Timeline hỗ trợ XLM-RoBERTa/Jina v3:**
+
+|Version|XLM-RoBERTa Support|Jina v3 Support|Ghi chú|
+|---|---|---|---|
+|v0.4.2|❌ Không|❌ Không|Chỉ causal LM|
+|v0.5.x|⚠️ Limited|❌ Không|Bắt đầu embedding|
+|v0.6.4|✅ Có|❌ Không|Thêm XLM-RoBERTa[linkedin](https://www.linkedin.com/posts/embedded-llm_release-v064-vllm-projectvllm-activity-7263554964080209920-IOxN)​|
+|v0.7.x|✅ Có|❌ **Không đầy đủ**[github](https://github.com/vllm-project/vllm/issues/12154)​|Lỗi position embedding|
+|v0.8.4+|✅ Đầy đủ|✅ Có ví dụ[vllm](https://docs.vllm.ai/en/v0.8.4/getting_started/examples/embed_jina_embeddings_v3.html)​|Hỗ trợ chính thức|
+|v0.10.1+|✅ Đầy đủ|✅ Đầy đủ[vllm](https://docs.vllm.ai/en/v0.10.1/models/supported_models.html)​|LoRA support|
+
+**Vấn đề với Jina v3 ở v0.7.3:**
+
+python
+
+`# Lỗi bạn gặp phải ValueError: Only 'absolute' position_embedding_type is supported`
+
+Nguyên nhân: Jina v3 sử dụng **RoPE (Rotary Position Embedding)**, nhưng v0.7.3 chỉ hỗ trợ absolute position embedding cho XLM-RoBERTa.marketplace.microsoft+1​
+
+## 3. **Giải Pháp Khuyến Nghị**
+
+## **Option 1: Sử dụng v0.6.x (Compromise tốt nhất)**
+
+bash
+
+`# v0.6.4.post1 - version cuối cùng trước v0.7.0 docker pull vllm/vllm-openai:v0.6.4.post1 # Hoặc cài từ source pip install vllm==0.6.4.post1`
+
+**Ưu điểm:**
+
+- ✅ CUDA 12.1 binary chạy tốt trên driver 12.2
+    
+- ✅ Hỗ trợ XLM-RoBERTa embedding models[linkedin](https://www.linkedin.com/posts/embedded-llm_release-v064-vllm-projectvllm-activity-7263554964080209920-IOxN)​
+    
+- ✅ Stable, ít bug hơn v0.7.x
+    
+
+**Nhược điểm:**
+
+- ⚠️ Jina v3 có thể chưa được test kỹ
+    
+- ⚠️ Thiếu một số features của v0.7.x (V1 engine, torch.compile)
+    
+
+**Test Jina v3:**
+
+bash
+
+`docker run --gpus all -p 8000:8000 \   -v ~/.cache/huggingface:/root/.cache/huggingface \  vllm/vllm-openai:v0.6.4.post1 \  --model jinaai/jina-embeddings-v3 \  --task embed \  --trust-remote-code`
+
+Nếu gặp lỗi → chuyển sang Option 2.
+
+## **Option 2: Nâng cấp Driver (Khuyến nghị mạnh cho production)**
+
+Đây là giải pháp tốt nhất dài hạn:
+
+bash
+
+`# Bước 1: Kiểm tra driver hiện tại nvidia-smi # Bước 2: Cài driver mới hỗ trợ CUDA 12.4+ sudo apt-get update sudo apt-get install -y nvidia-driver-550  # hoặc 560 # Bước 3: Reboot sudo reboot # Bước 4: Verify nvidia-smi  # Kiểm tra driver version # Bước 5: Sử dụng vLLM v0.8.5+ docker pull vllm/vllm-openai:v0.8.5`
+
+**Tại sao nên nâng cấp:**
+
+- ✅ Jina v3 được hỗ trợ chính thức từ v0.8.4+[vllm](https://docs.vllm.ai/en/v0.8.4/getting_started/examples/embed_jina_embeddings_v3.html)​
+    
+- ✅ Future-proof cho 2-3 năm tới
+    
+- ✅ Unlock tất cả features mới: V1 engine, torch.compile, FA3
+    
+- ✅ Better performance
+    
+
+**ROI:**
+
+- **Cost**: 10-15 phút downtime để reboot server
+    
+- **Benefit**: Access to latest features + stable Jina v3 support
+    
+
+## **Option 3: Alternative Embedding Model**
+
+Nếu không thể nâng driver và v0.6.x không work với Jina v3:
+
+**Embedding models tương thích với v0.7.x:**
+
+bash
+
+`# BAAI/bge-large-en-v1.5 (BERT-based) vllm serve BAAI/bge-large-en-v1.5 --task embed # intfloat/e5-mistral-7b-instruct (Mistral-based) vllm serve intfloat/e5-mistral-7b-instruct --task embed # Llama-based embeddings vllm serve Alibaba-NLP/gte-Qwen2-7B-instruct --task embed`
+
+Hoặc dùng **Text Embeddings Inference (TEI)** từ HuggingFace:
+
+bash
+
+`docker run --gpus all -p 8080:80 \   ghcr.io/huggingface/text-embeddings-inference:latest \  --model-id jinaai/jina-embeddings-v3`
+
+TEI được optimize riêng cho embedding models và stable hơn với Jina v3.
+
+## 4. **Decision Matrix**
+
+|Tiêu chí|v0.6.4 + CUDA 12.2|Nâng Driver + v0.8.5+|TEI + Jina v3|
+|---|---|---|---|
+|**Setup time**|⚡ 5 phút|🕐 15 phút (reboot)|⚡ 5 phút|
+|**Jina v3 support**|⚠️ Experimental|✅ Đầy đủ|✅ Đầy đủ|
+|**Future-proof**|⚠️ Limited|✅ Tốt nhất|⚠️ Locked to embedding|
+|**Performance**|🔥 Tốt|🔥🔥 Tốt nhất|🔥 Tốt|
+|**Risk**|🟡 Medium|🟢 Low|🟢 Low|
+|**Khuyến nghị**|Test trước|**Production**|Backup plan|
+
+## 5. **Quyết Định cho Fintech Startup**
+
+Dựa trên profile của bạn (AI Engineer + Fintech), đây là roadmap mình khuyến nghị:
+
+**Tuần này:**
+
+1. **Test nhanh v0.6.4.post1** với Jina v3 trên staging (30 phút)
+    
+2. Nếu work → ship tạm, schedule nâng driver trong 2 tuần
+    
+3. Nếu không work → chuyển ngay sang plan B
+    
+
+**Plan B (nếu v0.6.4 fail):**
+
+bash
+
+`# Approach 1: Nâng driver ngay (khuyến nghị) # - Schedule maintenance window vào cuối tuần # - Downtime: 15 phút # - Test thoroughly sau khi nâng # Approach 2: Dùng TEI tạm thời docker run --gpus all -p 8080:80 \   ghcr.io/huggingface/text-embeddings-inference:latest \  --model-id jinaai/jina-embeddings-v3`
+
+**Production long-term (1 tháng tới):**
+
+- ✅ Nâng driver lên 550+
+    
+- ✅ Upgrade vLLM lên v0.8.5+
+    
+- ✅ Full testing với Jina v3
+    
+- ✅ Monitor performance metrics
+    
+
+## 6. **Các Lệnh Kiểm Tra**
+
+bash
+
+`# Kiểm tra driver và CUDA version nvidia-smi nvcc --version  # Nếu có CUDA toolkit # Test vLLM v0.6.4 với Jina v3 docker run --gpus all --rm \   vllm/vllm-openai:v0.6.4.post1 \  --model jinaai/jina-embeddings-v3 \  --task embed \  --trust-remote-code \  --max-model-len 1024 # Nếu thành công, test embedding curl http://localhost:8000/v1/embeddings \   -H "Content-Type: application/json" \  -d '{    "input": "Hello, world!",    "model": "jinaai/jina-embeddings-v3"  }'`
+
+## Kết Luận
+
+**Câu trả lời ngắn gọn:**
+
+- ✅ **v0.7.x CÓ THỂ chạy với CUDA 12.2** (vì compile với 12.1)
+    
+- ❌ **NHƯNG Jina v3 chưa được hỗ trợ đầy đủ** ở v0.7.x
+    
+- 🎯 **Khuyến nghị: Test v0.6.4.post1 trước, nếu fail → nâng driver lên 550+**
+    
+
+Bạn muốn mình chi tiết hóa phần nào thêm không? Ví dụ script automation cho việc test compatibility hoặc migration plan chi tiết?
+
+1. [https://www.linkedin.com/posts/embedded-llm_release-v064-vllm-projectvllm-activity-7263554964080209920-IOxN](https://www.linkedin.com/posts/embedded-llm_release-v064-vllm-projectvllm-activity-7263554964080209920-IOxN)
+2. [https://docs.vllm.ai/en/v0.8.0/models/supported_models.html](https://docs.vllm.ai/en/v0.8.0/models/supported_models.html)
+3. [https://docs.vllm.ai/en/v0.8.4/getting_started/examples/embed_jina_embeddings_v3.html](https://docs.vllm.ai/en/v0.8.4/getting_started/examples/embed_jina_embeddings_v3.html)
+4. [https://docs.vllm.ai/en/v0.10.1/models/supported_models.html](https://docs.vllm.ai/en/v0.10.1/models/supported_models.html)
+5. [https://github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)
+6. [https://docs.vllm.ai/en/v0.7.0/getting_started/installation/gpu/](https://docs.vllm.ai/en/v0.7.0/getting_started/installation/gpu/)
+7. [https://github.com/vllm-project/vllm/issues/12154](https://github.com/vllm-project/vllm/issues/12154)
+8. [https://marketplace.microsoft.com/vi-vn/product/saas/jinaai.jina-embeddings-v3-vm?tab=overview](https://marketplace.microsoft.com/vi-vn/product/saas/jinaai.jina-embeddings-v3-vm?tab=overview)
+9. [https://jina.ai/models/jina-embeddings-v3/](https://jina.ai/models/jina-embeddings-v3/)
+10. [https://docs.vllm.ai/en/stable/getting_started/installation/gpu.html](https://docs.vllm.ai/en/stable/getting_started/installation/gpu.html)
+11. [https://github.com/vllm-project/vllm/releases](https://github.com/vllm-project/vllm/releases)
+12. [https://github.com/vllm-project/vllm/issues/3786](https://github.com/vllm-project/vllm/issues/3786)
+13. [https://www.runpod.io/articles/guides/best-docker-image-vllm-inference-cuda-12-4](https://www.runpod.io/articles/guides/best-docker-image-vllm-inference-cuda-12-4)
+14. [https://github.com/vllm-project/vllm/issues/19188](https://github.com/vllm-project/vllm/issues/19188)
+15. [https://github.com/vllm-project/vllm/issues/17578](https://github.com/vllm-project/vllm/issues/17578)
+16. [https://vllm.website.cncfstack.com/getting_started/installation/gpu/](https://vllm.website.cncfstack.com/getting_started/installation/gpu/)
+17. [https://hub.docker.com/layers/tytn/vllm-openai/cu12.2/images/sha256-a0a5a0482f6843325a8a21d352b2bab5339f03d3e894a49e288c7879a4d5d166](https://hub.docker.com/layers/tytn/vllm-openai/cu12.2/images/sha256-a0a5a0482f6843325a8a21d352b2bab5339f03d3e894a49e288c7879a4d5d166)
+18. [https://github.com/vllm-project/vllm/issues/1589](https://github.com/vllm-project/vllm/issues/1589)
+19. [https://github.com/vllm-project/vllm/issues/963](https://github.com/vllm-project/vllm/issues/963)
+20. [https://docs.vllm.ai/en/latest/getting_started/installation/gpu/](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/)
+21. [https://docs.vllm.ai/en/v0.9.0/features/compatibility_matrix.html](https://docs.vllm.ai/en/v0.9.0/features/compatibility_matrix.html)
+22. [https://github.com/vllm-project/vllm/issues/14608](https://github.com/vllm-project/vllm/issues/14608)
+23. [https://hub.docker.com/layers/vastai/vllm/v0.8.5-cuda-12.4-pytorch-2.6.0-py312/images/sha256-0c691ab9a000346e3d67c0781363bd9b24a86a0dd5e15e328530235dd63fff89](https://hub.docker.com/layers/vastai/vllm/v0.8.5-cuda-12.4-pytorch-2.6.0-py312/images/sha256-0c691ab9a000346e3d67c0781363bd9b24a86a0dd5e15e328530235dd63fff89)
+24. [https://vllm.hyper.ai/docs/serving/compatibility%20matrix/](https://vllm.hyper.ai/docs/serving/compatibility%20matrix/)
+25. [https://www.reddit.com/r/LocalLLaMA/comments/1lshe4q/build_vllm_on_cuda_129_kernel_6152_nvidia_57564/](https://www.reddit.com/r/LocalLLaMA/comments/1lshe4q/build_vllm_on_cuda_129_kernel_6152_nvidia_57564/)
+26. [https://docs.vllm.ai/en/v0.12.0/getting_started/installation/](https://docs.vllm.ai/en/v0.12.0/getting_started/installation/)
+27. [https://www.reddit.com/r/CUDA/comments/1nbfgqp/cuda_13_compatibility_issue_with_llm/](https://www.reddit.com/r/CUDA/comments/1nbfgqp/cuda_13_compatibility_issue_with_llm/)
+28. [https://github.com/vllm-project/vllm/issues/14452](https://github.com/vllm-project/vllm/issues/14452)
+29. [https://docs.vllm.ai/en/stable/deployment/docker/](https://docs.vllm.ai/en/stable/deployment/docker/)
+30. [https://hub.docker.com/layers/vllm/vllm-openai/v0.7.3/images/sha256-4f4037303e8c7b69439db1077bb849a0823517c0f785b894dc8e96d58ef3a0c2](https://hub.docker.com/layers/vllm/vllm-openai/v0.7.3/images/sha256-4f4037303e8c7b69439db1077bb849a0823517c0f785b894dc8e96d58ef3a0c2)
+31. [https://hub.docker.com/layers/vllm/vllm-openai/v0.7.2/images/sha256-65009b48651a8bc216ab57ed64d7c3d0b0ee8cec77674ccdbcb5f0e8362793a1](https://hub.docker.com/layers/vllm/vllm-openai/v0.7.2/images/sha256-65009b48651a8bc216ab57ed64d7c3d0b0ee8cec77674ccdbcb5f0e8362793a1)
+32. [https://github.com/vllm-project/vllm/issues/16307](https://github.com/vllm-project/vllm/issues/16307)
+33. [https://docs.vllm.ai/en/v0.7.0/deployment/docker.html](https://docs.vllm.ai/en/v0.7.0/deployment/docker.html)
+34. [https://quic.github.io/cloud-ai-sdk-pages/latest/Getting-Started/Installation/vLLM/vLLM/](https://quic.github.io/cloud-ai-sdk-pages/latest/Getting-Started/Installation/vLLM/vLLM/)
+35. [https://hub.docker.com/r/vllm/vllm-openai/tags](https://hub.docker.com/r/vllm/vllm-openai/tags)
+36. [https://docs.vultr.com/how-to-build-a-vllm-container-image](https://docs.vultr.com/how-to-build-a-vllm-container-image)
+37. [https://docs.vllm.ai/en/v0.7.3/deployment/docker.html](https://docs.vllm.ai/en/v0.7.3/deployment/docker.html)
+38. [https://docs.vllm.ai/en/stable/deployment/docker.html](https://docs.vllm.ai/en/stable/deployment/docker.html)
+39. [https://www.devbookmarks.com/p/vllm-answer-docker-install-cat-ai](https://www.devbookmarks.com/p/vllm-answer-docker-install-cat-ai)
+40. [https://hub.docker.com/layers/vllm/vllm-openai/v0.7.0/images/sha256-a43963ed149a7b8b6c8c9dd028d4ab2be9fe804761d41b11cc07043a1edb61a8](https://hub.docker.com/layers/vllm/vllm-openai/v0.7.0/images/sha256-a43963ed149a7b8b6c8c9dd028d4ab2be9fe804761d41b11cc07043a1edb61a8)
+41. [https://vllm.website.cncfstack.com/deployment/docker.html](https://vllm.website.cncfstack.com/deployment/docker.html)
+42. [https://blog.deploif.ai/posts/vllm_openai](https://blog.deploif.ai/posts/vllm_openai)
+43. [https://github.com/vllm-project/vllm/issues/12465](https://github.com/vllm-project/vllm/issues/12465)
+44. [https://www.reddit.com/r/LocalLLaMA/comments/1fvnlpq/vllm_in_docker_why_is_this_so_difficult/](https://www.reddit.com/r/LocalLLaMA/comments/1fvnlpq/vllm_in_docker_why_is_this_so_difficult/)
+45. [https://github.com/vllm-project/vllm/releases/tag/v0.7.0](https://github.com/vllm-project/vllm/releases/tag/v0.7.0)
+46. [https://vllm.ai/releases](https://vllm.ai/releases)
+47. [https://github.com/vllm-project/vllm/releases/tag/v0.7.2](https://github.com/vllm-project/vllm/releases/tag/v0.7.2)
+48. [https://github.com/vllm-project](https://github.com/vllm-project)
+49. [https://github.com/vllm-project/vllm/issues/15435](https://github.com/vllm-project/vllm/issues/15435)
+50. [https://pypi.org/project/vllm/](https://pypi.org/project/vllm/)
+51. [https://github.com/vllm-project/vllm/issues/5635](https://github.com/vllm-project/vllm/issues/5635)
+52. [https://github.com/bowang-lab/vLLM](https://github.com/bowang-lab/vLLM)
+53. [https://github.com/vllm-project/vllm/issues/8532](https://github.com/vllm-project/vllm/issues/8532)
+54. [https://github.com/vllm-project/vllm/issues/2393](https://github.com/vllm-project/vllm/issues/2393)
+55. [https://docs.vllm.ai](https://docs.vllm.ai/)
+56. [https://forums.developer.nvidia.com/t/docker-container-image-for-recent-vllm-release-that-enables-gguf-loading/349106](https://forums.developer.nvidia.com/t/docker-container-image-for-recent-vllm-release-that-enables-gguf-loading/349106)
+57. [https://github.com/SystemPanic/vllm-windows](https://github.com/SystemPanic/vllm-windows)
+58. [https://github.com/IBM/vllm/blob/main/Dockerfile](https://github.com/IBM/vllm/blob/main/Dockerfile)
+59. [https://docs.vllm.ai/en/v0.8.0/getting_started/installation/gpu.html](https://docs.vllm.ai/en/v0.8.0/getting_started/installation/gpu.html)
+60. [https://docs.vllm.ai/en/v0.7.1/models/supported_models.html](https://docs.vllm.ai/en/v0.7.1/models/supported_models.html)
+61. [https://www.reddit.com/r/LocalLLaMA/comments/1da5z08/vllm_released_intial_support_for_embedding_api/](https://www.reddit.com/r/LocalLLaMA/comments/1da5z08/vllm_released_intial_support_for_embedding_api/)
+62. [https://github.com/vllm-project/vllm/issues/1453](https://github.com/vllm-project/vllm/issues/1453)
+63. [https://docs.vllm.ai/en/v0.6.4.post1/models/supported_models.html](https://docs.vllm.ai/en/v0.6.4.post1/models/supported_models.html)
+64. [https://github.com/starvector/vllm/blob/main/Dockerfile](https://github.com/starvector/vllm/blob/main/Dockerfile)
+65. [https://github.com/vllm-project/vllm/issues/15531](https://github.com/vllm-project/vllm/issues/15531)
+66. [https://nm-vllm.readthedocs.io/en/0.4.0/models/supported_models.html](https://nm-vllm.readthedocs.io/en/0.4.0/models/supported_models.html)
+67. [https://docs.vllm.ai/en/latest/models/supported_models/](https://docs.vllm.ai/en/latest/models/supported_models/)
+68. [https://huggingface.co/datasets/Inferencebench/vllm-docker](https://huggingface.co/datasets/Inferencebench/vllm-docker)
+69. [https://docs.vllm.ai/en/v0.8.5/models/supported_models.html](https://docs.vllm.ai/en/v0.8.5/models/supported_models.html)
+70. [https://github.com/vllm-project/vllm/issues/385](https://github.com/vllm-project/vllm/issues/385)
+71. [https://github.com/vllm-project/vllm/issues/5179](https://github.com/vllm-project/vllm/issues/5179)
+72. [https://docs.cloudera.com/machine-learning/1.5.5/ai-inference/topics/ml-caii-supported-models-vllm0-8-4.html](https://docs.cloudera.com/machine-learning/1.5.5/ai-inference/topics/ml-caii-supported-models-vllm0-8-4.html)
+73. [https://www.reddit.com/r/LocalLLaMA/comments/1fkt7oa/which_linux_distro_do_you_use_for_cuda_121_and/](https://www.reddit.com/r/LocalLLaMA/comments/1fkt7oa/which_linux_distro_do_you_use_for_cuda_121_and/)
+74. [https://developers.llamaindex.ai/python/examples/embeddings/jinaai_embeddings/](https://developers.llamaindex.ai/python/examples/embeddings/jinaai_embeddings/)
+75. [https://gist.github.com/rbiswasfc/678e4c78258480dcb6214efeedbe5af8](https://gist.github.com/rbiswasfc/678e4c78258480dcb6214efeedbe5af8)
+76. [https://github.com/vllm-project/vllm/issues/10970](https://github.com/vllm-project/vllm/issues/10970)
+77. [https://docs.rbln.ai/v0.8.0/supports/release_note.html](https://docs.rbln.ai/v0.8.0/supports/release_note.html)
+78. [https://github.com/vllm-project/vllm/issues/5510](https://github.com/vllm-project/vllm/issues/5510)
+79. [https://langcheck.readthedocs.io/_/downloads/en/v0.8.1/pdf/](https://langcheck.readthedocs.io/_/downloads/en/v0.8.1/pdf/)
+80. [https://huggingface.co/jinaai/models](https://huggingface.co/jinaai/models)
+81. [https://docs.vllm.ai/en/v0.8.4/deployment/docker.html](https://docs.vllm.ai/en/v0.8.4/deployment/docker.html)
+82. [https://huggingface.co/datasets/davanstrien/model_cards_with_metadata/viewer/default/train?p=1](https://huggingface.co/datasets/davanstrien/model_cards_with_metadata/viewer/default/train?p=1)
