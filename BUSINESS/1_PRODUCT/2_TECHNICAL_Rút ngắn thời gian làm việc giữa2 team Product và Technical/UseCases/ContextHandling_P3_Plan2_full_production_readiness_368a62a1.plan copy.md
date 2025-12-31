@@ -174,6 +174,8 @@ todos:
     status: pending
 ---
 
+Link: D:\GIT\context-handling-bigmodule_PikaRobot_25112025\docs\4_TimeOut_Fallback_Alert\P3_Plan2_full_production_readiness_368a62a1.plan copy.md
+
 # Full Production Readiness Checklist
 
 ## Tổng quan
