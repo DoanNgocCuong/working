@@ -167,12 +167,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.19 - Docker - Hybrid app with externalized infrastructure.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới"
+              "title": "2.19 - Docker - Hybrid app with externalized infrastructure"
             }
           },
           {
@@ -190,7 +190,7 @@
             }
           }
         ],
-        "currentTab": 12
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: production",
+                "query": "file: network",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -311,13 +311,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/Use case - Pika.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.19 - Docker - Hybrid app with externalized infrastructure.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Use case - Pika"
+              "title": "Outline of 2.19 - Docker - Hybrid app with externalized infrastructure"
             }
           }
         ],
@@ -339,12 +339,19 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "bcdb1fae04b21f9d",
+  "active": "f30291a766340445",
   "lastOpenFiles": [
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
-    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/Use case - Pika.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Memory Leak.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/CKP/2.19 - Docker - Hybrid app with externalized infrastructure.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.19 - Docker - Hybrid app with externalized infrastructure.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.17 Các câu hỏi phụ.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Use case - network docker design.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/CKP",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/03-retrieval-augmented-generation/01-fundamentals/01-architecture.md",
+    "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/Use case - Pika.md",
+    "DATA_SCIENCE_AND_AI/Domain 0 From Mindset chung tới CODING MINDSET/4. AI Engineering_ResearchEngineeringApplicationProduct.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Memory Leak.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.2.7 Docker networks bridge và networks và network_mode host.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Vấn đề 11 - 2 FILE DOCKER COMPOSE VÀ 2 ỨNG DỤNG KHÔNG LIÊN QUAN ĐẾN NHAU, nhưng có bị tự động tạo tên container trùng nhau (do container name được tạo dựa vào thư mục).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Vấn đề 17 Docker.md",
@@ -360,14 +367,8 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/4 - 1 số link về MCP.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.0 Cách lấy thông tin dự án - ingest.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/5. Docs - TÀI LIỆU SOFTWARE ENGINEERING.md",
-    "DATA_SCIENCE_AND_AI/Domain 0 From Mindset chung tới CODING MINDSET/4. AI Engineering_ResearchEngineeringApplicationProduct.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/1 - Lý thuyết - MCP for AI Engineer.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.1 PRODUCTION QUALITY Handbook - AI Engineer - 100 trang Manus.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/3 - Drive MCP.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/7_Multi Tenant/init - Multi -Tenant - 30122025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/7_Multi Tenant",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 8 - Use Case Context Handling - 30122025.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 7 - Lỗi - RabbitMQ fire-and-forget.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Microsoft",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool/image/Pasted image 20251229202956.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool/image",
@@ -378,7 +379,6 @@
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Cursor",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - Production Quality - Production Risk",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/CKP - SDD - Technical Design Docs/CKP example",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104501.png",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104440.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung 1/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322063052.png",
