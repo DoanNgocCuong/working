@@ -167,12 +167,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 9 - Use Case Context Handling - 30122025 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Postgres"
+              "title": "RabbitMQ 9 - Use Case Context Handling - 30122025 1"
             }
           },
           {
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: pos",
+                "query": "file: worker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -311,13 +311,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 9 - Use Case Context Handling - 30122025 1.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1. Postgres"
+              "title": "Outline of RabbitMQ 9 - Use Case Context Handling - 30122025 1"
             }
           }
         ],
@@ -341,6 +341,11 @@
   },
   "active": "f30291a766340445",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 8 - Use Case Context Handling - 30122025.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 9 - Use Case Context Handling - 30122025 1.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 4 - Xử lý vấn đề chồng lấn dữ liệu khi chạy nhiều THREAD (WORKER_CONCURRENCY_PER_WORKER) của 1 WORKER.   (WORKER_REPLICAS là số lượng  worker).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/ContextHandling_P4 - OMM Worker.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/ContextHandling_P3_Plan2_full_production_readiness_368a62a1.plan copy.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/ContextHandling_Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
@@ -363,11 +368,6 @@
     "DATA_SCIENCE_AND_AI/Domain 0 From Mindset chung tới CODING MINDSET/4. AI Engineering_ResearchEngineeringApplicationProduct.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Memory Leak.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.2.7 Docker networks bridge và networks và network_mode host.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Vấn đề 11 - 2 FILE DOCKER COMPOSE VÀ 2 ỨNG DỤNG KHÔNG LIÊN QUAN ĐẾN NHAU, nhưng có bị tự động tạo tên container trùng nhau (do container name được tạo dựa vào thư mục).md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Vấn đề 17 Docker.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Vấn đề 10 - Call Postman tới được 9404. - Run docker compose local 25050 call được 9404 - Nhưng cứ đóng server vào là ko được.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Vấn đề 9 Méo hiểu sao docker compose backend chạy ở backend và docker compose ở src (chạy riêng frontend) được ngon  nhưng khi add thêm backend vào file src dokerc mpose thay vì có mỗi frontend.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/7_Multi Tenant",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Microsoft",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool/image/Pasted image 20251229202956.png",
