@@ -582,3 +582,242 @@ Với prompt này, bạn có thể:
 [^21]: https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agents-overview
 [^22]: https://microsoft.github.io/Agents-for-js/index.html```
 
+```
+---
+Library
+
+[
+
+Recent
+
+](https://www.perplexity.ai/library)
+
+[
+
+image to text
+
+](https://www.perplexity.ai/search/image-to-text-GhEJg_YaR6Wegm2YrMm2lw)
+
+[
+
+Hi mn, anh/em xin gửi một vài khóa học azure basic, cung cấp lượng kiến thức cơ bản, tiếp cận nhanh
+
+](https://www.perplexity.ai/search/hi-mn-anh-em-xin-gui-mot-vai-k-hD7JnPiiSYS4TitWBjq5tw)
+
+[
+
+Chưa hiểu lắm 1. Là check giúp mình các tham số config như vậy đã hoạt động chưa và công dụng của n
+
+](https://www.perplexity.ai/search/chua-hieu-lam-1-la-check-giup-zEKPY_I4QrC5hVRsTP1hiQ)
+
+[
+
+check trang bên trái con Active [robot-context-handling-worker](https://rancher-robot.hacknao.edu.
+
+](https://www.perplexity.ai/search/check-trang-ben-trai-con-activ-1wsICJJmS1GWwFW0jonQBg)
+
+[
+
+Nhập như nào đẻ xem memory
+
+](https://www.perplexity.ai/search/nhap-nhu-nao-de-xem-memory-V10u24RpSaOZq43BlCO_7A)
+
+[
+
+MECE các ban của 1 clb
+
+](https://www.perplexity.ai/search/mece-cac-ban-cua-1-clb-ABoe4L8FQQqGzLPf33tlUg)
+
+[
+
+Cách dùng solar sensor wall light
+
+](https://www.perplexity.ai/search/cach-dung-solar-sensor-wall-li-bNCMtN4bS4SED288vhii.Q)
+
+[
+
+làm sao để đưa những ảnh đã đăng vào 1 album
+
+](https://www.perplexity.ai/search/lam-sao-de-dua-nhung-anh-da-da-iYhaQ8o_Q9y5Y_HX3HOTIw)
+
+[
+
+Zalo đang gặp vấn đề gì mà mn xoá z
+
+](https://www.perplexity.ai/search/zalo-dang-gap-van-de-gi-ma-mn-GczCLT4BTLOFyWJ9u.aG1A)
+
+[
+
+Digo.
+
+](https://www.perplexity.ai/search/digo-h2GPPYamRM.Ilo6HsQipng)
+
+[
+
+Eja.
+
+](https://www.perplexity.ai/search/eja-IvBy7t1xQHipS7skz.ZOUw)
+
+[
+
+Hello
+
+](https://www.perplexity.ai/search/hello-6gMTtZObTEyLYYd8kopZKQ)
+
+[
+
+Ciao!
+
+](https://www.perplexity.ai/search/ciao-vTxAp.lETS24yk1qZbLjEw)
+
+[
+
+singleton bằng ?
+
+](https://www.perplexity.ai/search/singleton-bang-c8dJrS1wReSwBum6bfcA3Q)
+
+[
+
+Impact: Memory spike khi parse large messages Memory leak: Không, nhưng tăng peak memory là cái gì
+
+](https://www.perplexity.ai/search/impact-memory-spike-khi-parse-W769y3LBTvGlykJl3Wi3OQ)
+
+[
+
+MECE toàn bộ cách để triển khai network docker compose
+
+](https://www.perplexity.ai/search/mece-toan-bo-cach-de-trien-kha-VQf3b1G_S9WrNCLk53euKQ)
+
+[
+
+Hato tươi nha.
+
+](https://www.perplexity.ai/search/hato-tuoi-nha-7Zyk28HrRMmo20NuXtEfhA)
+
+[
+
+Làm sao để nhiều tiền mà không phải làm
+
+](https://www.perplexity.ai/search/lam-sao-de-nhieu-tien-ma-khong-ReT8PwXFQEOQiHG5.dpHuQ)
+
+[
+
+Kể từ từ nghe về kế hoạch bến mua.
+
+](https://www.perplexity.ai/search/ke-tu-tu-nghe-ve-ke-hoach-ben-4hQAqTgWSXGQpDmH8E6T4g)
+
+[
+
+phân tích chiến lược
+
+](https://www.perplexity.ai/search/phan-tich-chien-luoc-l0RaHn6HRmCSvkW8Nky4Xw)
+
+[
+
+View All
+
+](https://www.perplexity.ai/library)
+
+[
+
+](https://www.perplexity.ai/)
+
+[
+
+](https://www.perplexity.ai/library)[
+
+](https://www.perplexity.ai/discover)[
+
+](https://www.perplexity.ai/spaces)[
+
+](https://www.perplexity.ai/finance)
+
+Account
+
+# 
+
+image to text
+
+![Attachment](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/760047/40b63f2d-899d-473e-983e-d4526046c5df/image.jpg?AWSAccessKeyId=ASIA2F3EMEYE4UTQKLGB&Signature=M3XAXBXfLyxpROVvYjne%2BQ2cy%2FY%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEB4aCXVzLWVhc3QtMSJHMEUCIFbDFQ54URZQaqju2x1zk9dAlSNlMHJ3muM5aHaFtHkXAiEAxI9Dz%2BlYZU7IaXEqkOraG%2FiQ6n0XvZP4OhSh9qoYntAq%2FAQI5%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDCCDZvezsZpo9R6nFyrQBJsoCz8V8J%2BWJoI0rRgwR%2F2zJYhg6BS4fLZDXC%2BOM2LsxQgQoodOmlHsg6O%2Fq%2B1aYyfDOELR31%2B0vYEv3WFt%2FdQoPOPaY8TAJo9V3ZJUeF3M9UYbe3hl4WwE0qJWD3FWzO4PqDmdB9xByXmmmbLyigfpmud3bpf31n1nK83BBa4k3ohG5Z42GYYKRAOox8BWnuS8ip9uA3t9JwuThr4Jjia4UC6vhFwHUtqfcz0L0sn51HnxFzQpQEgTFVAdn52RGtVnpv3L%2BatZX3jXdd0UriG5683D0CcBFSGnp8jkZuRVEKRdKuuDcJ8vGVjHwcUnFU55sBfjLIMEBxHvSraK4wd8nSjk8LWzFyqOxwD83lsdD3Lw85PBk59mhkZiNo3z527Es7N2xCT4Y94zhgS%2F0bs1Y7ghGQ3YtXYKCaxcluUzHan57dJ2aa%2B1sgFNwi1l9DhfcEzt1ccmL5gkALZZPpa2OIN11vwjM1XH%2FJ7xa6KOxSbWHgN8MzpyMYPE4lQAe%2F9ElptCztd3qiz9HFdMKE1xMUhdbU6BZYc59459MzmTyMuzOmdYDse0DZDnJKZPKgvAe7ThvK4Tm5BPA%2BlDFRFQBVHtcM7YYHd9sDz8RL6QoToe0rKxZ2C4ENlfsYIvOEGNuKFVjW02z3F7FtcTOpDdebqT0Qlct17EKWAxNX1kEzpH%2Fvxnr5XOtjT83LmydQ2tLY7efQyaZ0yqEu7VDXTJnaINBorV3tO7wZdMkgw1IjTg%2BY2sSZR5YahmfTcKIzhfs8d3NOKj2Kx%2B%2BthSBOcw4%2FPZygY6mAFMHiNaiIDjOIM3kaCCfRAzZd6m%2BJe0upCZY0juEh%2BSRjvP9AnQ3x1zLQ0nkPrWd3ywBxS75BQ0GTeQWRQouxX4eZa2jJNsIdmmfwfxkkleLjCAwITpBvfjUjw0GWdxm%2B4xUwWqaH9L9%2BOSttuLHTIFtCQiWiP83J29iCh35Hp2nEFDsMJG4NlFvT%2Bh4Ck75gL9tIhcfM1Ocw%3D%3D&Expires=1767277450)
+
+image.jpg
+
+1 step completed
+
+No | Name | Task  
+1 | Huyền | Tìm hiểu về hệ thống MS Education (Nghiệp vụ)  
+2 | Anh Thuần | Tìm hiểu về hệ thống MS Education (cách tích hợp)  
+3 | Mạnh Duy | Research về MAF, tổng hợp, phân việc chi tiết cho Code Horse và AI Implement  
+4 | Trai | Research về MAF, lên design cho Agent  
+5 | Quang | Keep contact với khách, cấp thêm context về dự án, hỗ trợ chung  
+6 | Hào | Hỗ trợ Research  
+7 | Trung | Code Horse Senior  
+8 | Minh | Code Horse Senior  
+9 | Tiến | Code Horse Junior  
+10 | Cao Duy | Code Horse Junior  
+11 | Thành | AI Implement (Orchestrator)  
+12 | Cường | AI Implement (M365 Agent SDK) [](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/760047/40b63f2d-899d-473e-983e-d4526046c5df/image.jpg?AWSAccessKeyId=ASIA2F3EMEYE4UTQKLGB&Signature=M3XAXBXfLyxpROVvYjne%2BQ2cy%2FY%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEB4aCXVzLWVhc3QtMSJHMEUCIFbDFQ54URZQaqju2x1zk9dAlSNlMHJ3muM5aHaFtHkXAiEAxI9Dz%2BlYZU7IaXEqkOraG%2FiQ6n0XvZP4OhSh9qoYntAq%2FAQI5%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDCCDZvezsZpo9R6nFyrQBJsoCz8V8J%2BWJoI0rRgwR%2F2zJYhg6BS4fLZDXC%2BOM2LsxQgQoodOmlHsg6O%2Fq%2B1aYyfDOELR31%2B0vYEv3WFt%2FdQoPOPaY8TAJo9V3ZJUeF3M9UYbe3hl4WwE0qJWD3FWzO4PqDmdB9xByXmmmbLyigfpmud3bpf31n1nK83BBa4k3ohG5Z42GYYKRAOox8BWnuS8ip9uA3t9JwuThr4Jjia4UC6vhFwHUtqfcz0L0sn51HnxFzQpQEgTFVAdn52RGtVnpv3L%2BatZX3jXdd0UriG5683D0CcBFSGnp8jkZuRVEKRdKuuDcJ8vGVjHwcUnFU55sBfjLIMEBxHvSraK4wd8nSjk8LWzFyqOxwD83lsdD3Lw85PBk59mhkZiNo3z527Es7N2xCT4Y94zhgS%2F0bs1Y7ghGQ3YtXYKCaxcluUzHan57dJ2aa%2B1sgFNwi1l9DhfcEzt1ccmL5gkALZZPpa2OIN11vwjM1XH%2FJ7xa6KOxSbWHgN8MzpyMYPE4lQAe%2F9ElptCztd3qiz9HFdMKE1xMUhdbU6BZYc59459MzmTyMuzOmdYDse0DZDnJKZPKgvAe7ThvK4Tm5BPA%2BlDFRFQBVHtcM7YYHd9sDz8RL6QoToe0rKxZ2C4ENlfsYIvOEGNuKFVjW02z3F7FtcTOpDdebqT0Qlct17EKWAxNX1kEzpH%2Fvxnr5XOtjT83LmydQ2tLY7efQyaZ0yqEu7VDXTJnaINBorV3tO7wZdMkgw1IjTg%2BY2sSZR5YahmfTcKIzhfs8d3NOKj2Kx%2B%2BthSBOcw4%2FPZygY6mAFMHiNaiIDjOIM3kaCCfRAzZd6m%2BJe0upCZY0juEh%2BSRjvP9AnQ3x1zLQ0nkPrWd3ywBxS75BQ0GTeQWRQouxX4eZa2jJNsIdmmfwfxkkleLjCAwITpBvfjUjw0GWdxm%2B4xUwWqaH9L9%2BOSttuLHTIFtCQiWiP83J29iCh35Hp2nEFDsMJG4NlFvT%2Bh4Ck75gL9tIhcfM1Ocw%3D%3D&Expires=1767277450)​
+
+image to text
+
+![Attachment](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/760047/2739ea09-b933-4d9d-a4d1-1f63a51b9ada/image.jpg?AWSAccessKeyId=ASIA2F3EMEYE4UTQKLGB&Signature=Xvp6ROS2y0quggEUOs6SvQqMiCA%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEB4aCXVzLWVhc3QtMSJHMEUCIFbDFQ54URZQaqju2x1zk9dAlSNlMHJ3muM5aHaFtHkXAiEAxI9Dz%2BlYZU7IaXEqkOraG%2FiQ6n0XvZP4OhSh9qoYntAq%2FAQI5%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDCCDZvezsZpo9R6nFyrQBJsoCz8V8J%2BWJoI0rRgwR%2F2zJYhg6BS4fLZDXC%2BOM2LsxQgQoodOmlHsg6O%2Fq%2B1aYyfDOELR31%2B0vYEv3WFt%2FdQoPOPaY8TAJo9V3ZJUeF3M9UYbe3hl4WwE0qJWD3FWzO4PqDmdB9xByXmmmbLyigfpmud3bpf31n1nK83BBa4k3ohG5Z42GYYKRAOox8BWnuS8ip9uA3t9JwuThr4Jjia4UC6vhFwHUtqfcz0L0sn51HnxFzQpQEgTFVAdn52RGtVnpv3L%2BatZX3jXdd0UriG5683D0CcBFSGnp8jkZuRVEKRdKuuDcJ8vGVjHwcUnFU55sBfjLIMEBxHvSraK4wd8nSjk8LWzFyqOxwD83lsdD3Lw85PBk59mhkZiNo3z527Es7N2xCT4Y94zhgS%2F0bs1Y7ghGQ3YtXYKCaxcluUzHan57dJ2aa%2B1sgFNwi1l9DhfcEzt1ccmL5gkALZZPpa2OIN11vwjM1XH%2FJ7xa6KOxSbWHgN8MzpyMYPE4lQAe%2F9ElptCztd3qiz9HFdMKE1xMUhdbU6BZYc59459MzmTyMuzOmdYDse0DZDnJKZPKgvAe7ThvK4Tm5BPA%2BlDFRFQBVHtcM7YYHd9sDz8RL6QoToe0rKxZ2C4ENlfsYIvOEGNuKFVjW02z3F7FtcTOpDdebqT0Qlct17EKWAxNX1kEzpH%2Fvxnr5XOtjT83LmydQ2tLY7efQyaZ0yqEu7VDXTJnaINBorV3tO7wZdMkgw1IjTg%2BY2sSZR5YahmfTcKIzhfs8d3NOKj2Kx%2B%2BthSBOcw4%2FPZygY6mAFMHiNaiIDjOIM3kaCCfRAzZd6m%2BJe0upCZY0juEh%2BSRjvP9AnQ3x1zLQ0nkPrWd3ywBxS75BQ0GTeQWRQouxX4eZa2jJNsIdmmfwfxkkleLjCAwITpBvfjUjw0GWdxm%2B4xUwWqaH9L9%2BOSttuLHTIFtCQiWiP83J29iCh35Hp2nEFDsMJG4NlFvT%2Bh4Ck75gL9tIhcfM1Ocw%3D%3D&Expires=1767277460)
+
+image.jpg
+
+1 step completed
+
+No | Name | Task  
+1 | Huyền | Tìm hiểu về hệ thống MS Education (Nghiệp vụ)  
+2 | Anh Thuần | Tìm hiểu về hệ thống MS Education (cách tích hợp)  
+3 | Mạnh Duy | Research về MAF, tổng hợp, phân việc chi tiết cho Code Horse và AI Implement  
+4 | Trai | Research về MAF, lên design cho Agent  
+5 | Quang | Keep contact với khách, cấp thêm context về dự án, hỗ trợ chung  
+6 | Hào | Hỗ trợ Research  
+7 | Trung | Code Horse Senior  
+8 | Minh | Code Horse Senior  
+9 | Tiến | Code Horse Junior  
+10 | Cao Duy | Code Horse Junior  
+11 | Thành | AI Implement (Orchestrator)  
+12 | Cường | AI Implement (M365 Agent SDK) [](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/760047/2739ea09-b933-4d9d-a4d1-1f63a51b9ada/image.jpg?AWSAccessKeyId=ASIA2F3EMEYE4UTQKLGB&Signature=Xvp6ROS2y0quggEUOs6SvQqMiCA%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEB4aCXVzLWVhc3QtMSJHMEUCIFbDFQ54URZQaqju2x1zk9dAlSNlMHJ3muM5aHaFtHkXAiEAxI9Dz%2BlYZU7IaXEqkOraG%2FiQ6n0XvZP4OhSh9qoYntAq%2FAQI5%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDCCDZvezsZpo9R6nFyrQBJsoCz8V8J%2BWJoI0rRgwR%2F2zJYhg6BS4fLZDXC%2BOM2LsxQgQoodOmlHsg6O%2Fq%2B1aYyfDOELR31%2B0vYEv3WFt%2FdQoPOPaY8TAJo9V3ZJUeF3M9UYbe3hl4WwE0qJWD3FWzO4PqDmdB9xByXmmmbLyigfpmud3bpf31n1nK83BBa4k3ohG5Z42GYYKRAOox8BWnuS8ip9uA3t9JwuThr4Jjia4UC6vhFwHUtqfcz0L0sn51HnxFzQpQEgTFVAdn52RGtVnpv3L%2BatZX3jXdd0UriG5683D0CcBFSGnp8jkZuRVEKRdKuuDcJ8vGVjHwcUnFU55sBfjLIMEBxHvSraK4wd8nSjk8LWzFyqOxwD83lsdD3Lw85PBk59mhkZiNo3z527Es7N2xCT4Y94zhgS%2F0bs1Y7ghGQ3YtXYKCaxcluUzHan57dJ2aa%2B1sgFNwi1l9DhfcEzt1ccmL5gkALZZPpa2OIN11vwjM1XH%2FJ7xa6KOxSbWHgN8MzpyMYPE4lQAe%2F9ElptCztd3qiz9HFdMKE1xMUhdbU6BZYc59459MzmTyMuzOmdYDse0DZDnJKZPKgvAe7ThvK4Tm5BPA%2BlDFRFQBVHtcM7YYHd9sDz8RL6QoToe0rKxZ2C4ENlfsYIvOEGNuKFVjW02z3F7FtcTOpDdebqT0Qlct17EKWAxNX1kEzpH%2Fvxnr5XOtjT83LmydQ2tLY7efQyaZ0yqEu7VDXTJnaINBorV3tO7wZdMkgw1IjTg%2BY2sSZR5YahmfTcKIzhfs8d3NOKj2Kx%2B%2BthSBOcw4%2FPZygY6mAFMHiNaiIDjOIM3kaCCfRAzZd6m%2BJe0upCZY0juEh%2BSRjvP9AnQ3x1zLQ0nkPrWd3ywBxS75BQ0GTeQWRQouxX4eZa2jJNsIdmmfwfxkkleLjCAwITpBvfjUjw0GWdxm%2B4xUwWqaH9L9%2BOSttuLHTIFtCQiWiP83J29iCh35Hp2nEFDsMJG4NlFvT%2Bh4Ck75gL9tIhcfM1Ocw%3D%3D&Expires=1767277460)​
+
+image.jpg
+
+![Attachment](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/760047/85c2a067-e54b-4407-8f87-5deef87ebd01/image.jpg?AWSAccessKeyId=ASIA2F3EMEYEQ6BTZCQ5&Signature=lJVfBwa%2BeP05Ut%2BTZnqS5WsjfGE%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEB4aCXVzLWVhc3QtMSJIMEYCIQCM0HEmaGgyzcg6ARrzp%2FXdxt3DMpcO2%2BwYZQ3TVCzYlAIhANgRTg%2B8aYdOc%2F7hUho5on6cnQtfoJHtrLPedlpkUKJlKvwECOf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNjk5NzUzMzA5NzA1IgxbMUo8Y3ab8s%2B5yMQq0ATS6PacsHw77reyu7uoFqH%2BOeAUyVPktFD2DQ6SK2PWQqpd1qksDwMWU7mRfc3HPYqUDOjYCjUYogsM2GwAbJ94iv06%2BhkQYji300VMzZBTK2%2BeRb%2FLs4P3yn0brzdMFq7r2Xprrpn9%2BKtOocZOtDlZplQV7opaI%2B3oaoDtqd7nN8s77hULDEHgPRUC4a0HzyhszrMt63nH9GKJjqlKotSa6gfSIpbdf%2Faz3NzqZJKXdvywQl%2BfevvnBOOb32V5nhB10EFHkoDjl4djFMIlDbtGZeU5TD1duPNBVnUHR%2B8fNkfTvcSx4NECErJF5ou%2B8guZS2NWxn%2BajuPdLk2uaIrkgteksM9cFFP%2FIJl7rykIg3Ox07YiwCGgYJsP5%2FrzWA8TCNvu20215SJWOURr8KeGaFL0344aMV%2FGxtkxRrVrwXg44c%2B8iybBdBj6IRtOnZNAD6IB3fEoEHqKdogAY6X0VmBDW6ARakur2x%2F7DPuSBwRhRIsN0%2B957lVztOECebllTqYyI%2BOEloNa9OYlwk2t8T5rN9mJ3K%2F%2BgWOV7FL7IV%2BKyjtk8B4Bp7EC3xkAwbdtwH%2Bp95V4DUNEuUN2hbzb%2BrZRmvkrYZSm%2Br8gp%2BktuewkzsO1RcdzDwDM31EolymbmPbcx3aX6zY6PbprfG8hDILajM3Q4to3X2ZmGAleUzcoz8qoY9xG5fHdCnh8126GK9oS1j%2Bx%2Fo27dDS58W32Lmvdxjib4TcPI28pIhytCCdfI1eT%2FJwYKE%2BE2TPlWLOr5xAO4sbIqABXrQDz%2BaA0MKD32coGOpcBFTgXh5BSwJqWckQKeLQlHuaDKHkNmZOlfqYbTGULEgQUxWkeZOA8dvQkFN0c6kr2Y5XCFB5CXlAq46waOI5ntc1cW9hOPF6pPma6vmiCqlAM3ByIpeOjmF8yU7EXDpI3viqLmYa15a4hyEQtJpg%2FJSXIVWLQw4bAD5OfCf1X2Wwsy2Py2ZNNYGa3pviHuoiUAGQEdkODgA%3D%3D&Expires=1767277565)
+
+image.jpg
+
+1 step completed
+
+2. Yêu cầu từ khách hàng (Kush Nguyen)
+    
+
+- Khách hàng là một tập đoàn giáo dục lớn tại Dubai, có hơn 20.000 nhân viên.
+    
+- Họ đang sử dụng **Microsoft** Education nhưng không hài lòng với AI hiện tại (Copalot Studio).
+    
+- Yêu cầu xây dựng AI Agent có thể:
+    
+    - Tích hợp vào hệ thống giáo dục Microsoft.
+        
+    - Hỗ trợ chấm bài, phân tích kết quả học tập.
+        
+    - Có khả năng tự động sửa lỗi, retry, và đưa ra đề xuất.
+        
+    - Hoạt động trong môi trường multi-agent.
+        
+- Khách hàng sẵn sàng đầu tư, thử nghiệm công nghệ mới và không gây áp lực thời gian quá lớn.
+    
+
+3. Thảo luận kỹ thuật
+    
+
+- Kiến trúc hệ thống: Cần hỗ trợ khả năng tự review, tự sửa lỗi, và linh hoạt xử lý nghiệp vụ.
+    
+- Công nghệ: Sử dụng Microsoft AI, có thể kết hợp Azure AI Services.
+    
+- Vấn đề hiện tại:
+    
+    - Khó khăn trong việc truy cập dữ liệu từ hệ thống Microsoft Education.
+        
+    - Cần tìm hiểu sâu về API, quyền truy cập, và cách tích hợp.[](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/760047/85c2a067-e54b-4407-8f87-5deef87ebd01/image.jpg?AWSAccessKeyId=ASIA2F3EMEYEQ6BTZCQ5&Signature=lJVfBwa%2BeP05Ut%2BTZnqS5WsjfGE%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEB4aCXVzLWVhc3QtMSJIMEYCIQCM0HEmaGgyzcg6ARrzp%2FXdxt3DMpcO2%2BwYZQ3TVCzYlAIhANgRTg%2B8aYdOc%2F7hUho5on6cnQtfoJHtrLPedlpkUKJlKvwECOf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNjk5NzUzMzA5NzA1IgxbMUo8Y3ab8s%2B5yMQq0ATS6PacsHw77reyu7uoFqH%2BOeAUyVPktFD2DQ6SK2PWQqpd1qksDwMWU7mRfc3HPYqUDOjYCjUYogsM2GwAbJ94iv06%2BhkQYji300VMzZBTK2%2BeRb%2FLs4P3yn0brzdMFq7r2Xprrpn9%2BKtOocZOtDlZplQV7opaI%2B3oaoDtqd7nN8s77hULDEHgPRUC4a0HzyhszrMt63nH9GKJjqlKotSa6gfSIpbdf%2Faz3NzqZJKXdvywQl%2BfevvnBOOb32V5nhB10EFHkoDjl4djFMIlDbtGZeU5TD1duPNBVnUHR%2B8fNkfTvcSx4NECErJF5ou%2B8guZS2NWxn%2BajuPdLk2uaIrkgteksM9cFFP%2FIJl7rykIg3Ox07YiwCGgYJsP5%2FrzWA8TCNvu20215SJWOURr8KeGaFL0344aMV%2FGxtkxRrVrwXg44c%2B8iybBdBj6IRtOnZNAD6IB3fEoEHqKdogAY6X0VmBDW6ARakur2x%2F7DPuSBwRhRIsN0%2B957lVztOECebllTqYyI%2BOEloNa9OYlwk2t8T5rN9mJ3K%2F%2BgWOV7FL7IV%2BKyjtk8B4Bp7EC3xkAwbdtwH%2Bp95V4DUNEuUN2hbzb%2BrZRmvkrYZSm%2Br8gp%2BktuewkzsO1RcdzDwDM31EolymbmPbcx3aX6zY6PbprfG8hDILajM3Q4to3X2ZmGAleUzcoz8qoY9xG5fHdCnh8126GK9oS1j%2Bx%2Fo27dDS58W32Lmvdxjib4TcPI28pIhytCCdfI1eT%2FJwYKE%2BE2TPlWLOr5xAO4sbIqABXrQDz%2BaA0MKD32coGOpcBFTgXh5BSwJqWckQKeLQlHuaDKHkNmZOlfqYbTGULEgQUxWkeZOA8dvQkFN0c6kr2Y5XCFB5CXlAq46waOI5ntc1cW9hOPF6pPma6vmiCqlAM3ByIpeOjmF8yU7EXDpI3viqLmYa15a4hyEQtJpg%2FJSXIVWLQw4bAD5OfCf1X2Wwsy2Py2ZNNYGa3pviHuoiUAGQEdkODgA%3D%3D&Expires=1767277565)​
+---
