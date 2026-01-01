@@ -821,3 +821,29 @@ image.jpg
         
     - Cần tìm hiểu sâu về API, quyền truy cập, và cách tích hợp.[](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/760047/85c2a067-e54b-4407-8f87-5deef87ebd01/image.jpg?AWSAccessKeyId=ASIA2F3EMEYEQ6BTZCQ5&Signature=lJVfBwa%2BeP05Ut%2BTZnqS5WsjfGE%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEB4aCXVzLWVhc3QtMSJIMEYCIQCM0HEmaGgyzcg6ARrzp%2FXdxt3DMpcO2%2BwYZQ3TVCzYlAIhANgRTg%2B8aYdOc%2F7hUho5on6cnQtfoJHtrLPedlpkUKJlKvwECOf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNjk5NzUzMzA5NzA1IgxbMUo8Y3ab8s%2B5yMQq0ATS6PacsHw77reyu7uoFqH%2BOeAUyVPktFD2DQ6SK2PWQqpd1qksDwMWU7mRfc3HPYqUDOjYCjUYogsM2GwAbJ94iv06%2BhkQYji300VMzZBTK2%2BeRb%2FLs4P3yn0brzdMFq7r2Xprrpn9%2BKtOocZOtDlZplQV7opaI%2B3oaoDtqd7nN8s77hULDEHgPRUC4a0HzyhszrMt63nH9GKJjqlKotSa6gfSIpbdf%2Faz3NzqZJKXdvywQl%2BfevvnBOOb32V5nhB10EFHkoDjl4djFMIlDbtGZeU5TD1duPNBVnUHR%2B8fNkfTvcSx4NECErJF5ou%2B8guZS2NWxn%2BajuPdLk2uaIrkgteksM9cFFP%2FIJl7rykIg3Ox07YiwCGgYJsP5%2FrzWA8TCNvu20215SJWOURr8KeGaFL0344aMV%2FGxtkxRrVrwXg44c%2B8iybBdBj6IRtOnZNAD6IB3fEoEHqKdogAY6X0VmBDW6ARakur2x%2F7DPuSBwRhRIsN0%2B957lVztOECebllTqYyI%2BOEloNa9OYlwk2t8T5rN9mJ3K%2F%2BgWOV7FL7IV%2BKyjtk8B4Bp7EC3xkAwbdtwH%2Bp95V4DUNEuUN2hbzb%2BrZRmvkrYZSm%2Br8gp%2BktuewkzsO1RcdzDwDM31EolymbmPbcx3aX6zY6PbprfG8hDILajM3Q4to3X2ZmGAleUzcoz8qoY9xG5fHdCnh8126GK9oS1j%2Bx%2Fo27dDS58W32Lmvdxjib4TcPI28pIhytCCdfI1eT%2FJwYKE%2BE2TPlWLOr5xAO4sbIqABXrQDz%2BaA0MKD32coGOpcBFTgXh5BSwJqWckQKeLQlHuaDKHkNmZOlfqYbTGULEgQUxWkeZOA8dvQkFN0c6kr2Y5XCFB5CXlAq46waOI5ntc1cW9hOPF6pPma6vmiCqlAM3ByIpeOjmF8yU7EXDpI3viqLmYa15a4hyEQtJpg%2FJSXIVWLQw4bAD5OfCf1X2Wwsy2Py2ZNNYGa3pviHuoiUAGQEdkODgA%3D%3D&Expires=1767277565)​
 ---
+
+# Họp 1/1/2026
+# Step 1: Chọn 1 case
+
+![](image/Pasted%20image%2020260101223455.png)
+
+
+Các thứ mình cần làm sẽ là các task cho user
+
+
+
+---
+
+Agent framework có hỗ trợ chat UI
+
+
+# Voice 
+
+- https://azure.microsoft.com/en-us/products/ai-foundry/tools/speech/?msockid=2feed3b2bbeb684c34acc5cbba8d691c
+- Công ty em thì ban đầu xài Gemini S2S 
+
+(Cơ mà gặp lỗi ko tự ngắt luồng mà bị kéo dài 30min mới ngắt => mất 300 triệu)
+
+---
+
+Sau chuyển về dùng S2T2S (streaming 2 thành phần)
