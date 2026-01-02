@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/4. Cursor.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak"
+              "title": "4. Cursor"
             }
           }
         ],
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: post",
+                "query": "file: ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -263,7 +263,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/4. Cursor.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -273,7 +273,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak"
+              "title": "Backlinks for 4. Cursor"
             }
           },
           {
@@ -282,12 +282,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/4. Cursor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak"
+              "title": "Outgoing links from 4. Cursor"
             }
           },
           {
@@ -311,13 +311,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+                "file": "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/4. Cursor.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": "scal"
               },
               "icon": "lucide-list",
-              "title": "Outline of 3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak"
+              "title": "Outline of 4. Cursor"
             }
           }
         ],
@@ -341,8 +341,13 @@
   },
   "active": "d8f5c87f36e8cf77",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.1 Use case - Connection Leak Fix.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/1 - Lý thuyết - MCP for AI Engineer.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/3 - Drive MCP.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/4 - 1 số link về MCP.md",
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.8 Tài liệu Thiết kế Toàn diện - finAI Agentic Browser.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.1 Use case - Connection Leak Fix.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/1. Postgres.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/5 - Use case Scaling - Worker - Context Handling.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang.md",
@@ -369,11 +374,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/UseCases/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.4.2 Output 1 = Tài liệu Thiết kế Toàn diện finAI Agentic Browser.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 9 - Use Case Context Handling - 30122025 1.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 8 - Use Case Context Handling - 30122025.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 4 - Xử lý vấn đề chồng lấn dữ liệu khi chạy nhiều THREAD (WORKER_CONCURRENCY_PER_WORKER) của 1 WORKER.   (WORKER_REPLICAS là số lượng  worker).md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/7_Multi Tenant",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Microsoft",

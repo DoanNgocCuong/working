@@ -1084,3 +1084,66 @@ npx -y mcp-excalidraw-server
 ```
 npx -y @fromsko/excalidraw-mcp-server
 ```
+
+
+
+---
+
+# Note
+
+
+`@modelcontextprotocol/server-memory` là một MCP server chuyên để cung cấp “memory” dạng knowledge graph cho LLM/assistant, giúp nó nhớ và truy vấn lại thông tin về bạn qua nhiều phiên chat.[](https://www.npmjs.com/package/@modelcontextprotocol/server-memory)​
+
+## Nó làm được gì
+
+- Lưu trữ **persistent memory** trên máy bạn dưới dạng knowledge graph (entities, relations, observations), nên context không mất khi đóng app/mất phiên.[](https://github.com/okooo5km/memory-mcp-server)​
+    
+- Cho phép tạo/đọc/cập nhật/xoá:
+    
+    - Entities: người, tổ chức, dự án, sự kiện, mục tiêu, sở thích, v.v.
+        
+    - Relations: quan hệ giữa các entity (vd: bạn–làm_việc_tại→VPBank, bạn–mục_tiêu→Tự do tài chính).[](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)​
+        
+    - Observations: fact cụ thể gắn với entity (vd: “thích đọc sách về business”, “ưu tiên chiến lược ocean blue”).[](https://github.com/okooo5km/memory-mcp-server)​
+        
+
+## Các tool chính bên trong
+
+- `search_nodes`: tìm node theo từ khoá, search qua tên entity, type và nội dung observation.[](https://www.mcpservers.ai/servers/modelcontextprotocol/Knowledge%20Graph%20Memory)​
+    
+- `open_nodes`: mở chi tiết một hoặc nhiều entity theo tên, kèm các quan hệ liên quan.[](https://www.npmjs.com/package/@modelcontextprotocol/server-memory)​
+    
+- `create_entities`, `update_entities`, `delete_entities`: CRUD entity trong graph.[](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)​
+    
+- `create_relations`, `delete_relations`: thêm/xoá cạnh giữa các entity.[](https://www.mcpservers.ai/servers/modelcontextprotocol/Knowledge%20Graph%20Memory)​
+    
+- `add_observations`, `remove_observations`: thêm/xoá fact gắn với entity.[](https://mcp.so/server/memory/modelcontextprotocol)​
+    
+- `read_graph`: trả về toàn bộ graph, để agent có bức tranh tổng thể về “cuộc đời và hệ sinh thái” của user.[](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)​
+    
+
+## Cách nó lưu & cấu hình
+
+- Mặc định lưu vào file JSON/JSONL local (ví dụ `memory.json` hoặc file tương tự) nên:
+    
+    - Dữ liệu nằm trên máy bạn, không phụ thuộc backend riêng.
+        
+    - Dễ backup, versioning, sync qua git/drive nếu muốn.[](https://skywork.ai/skypage/en/In-Depth-Guide-to-MCP-Knowledge-Graph-Servers:-An-AI-Engineer's-Handbook/1972114406214172672)​
+        
+- Có thể cấu hình path qua env `MEMORY_FILE_PATH` trong config MCP:
+    
+    - `\"env\": { \"MEMORY_FILE_PATH\": \"/path/to/custom/memory.json\" }`.[](https://www.mcpevals.io/blog/setup_mcp_servers)​
+        
+
+## Use case thực tế cho bạn
+
+- Lưu profile dài hạn: mục tiêu 10–20 năm, triết lý đầu tư, các framework bạn hay dùng (DCF, Blue Ocean, Hormozi style, v.v.) để assistant tự lôi ra khi phân tích case mới.[](https://mcpmarket.com/server/memory-5)​
+    
+- Lưu cấu trúc network: dự án, partner, mentor, đội team, startup portfolio, mối quan hệ giữa các công ty, để assistant hỗ trợ mapping chiến lược, deal flow, roadmap sự nghiệp.[](https://block.github.io/goose/docs/mcp/knowledge-graph-mcp/)​
+    
+
+Nếu bạn muốn, có thể hướng dẫn chi tiết cách:
+
+- Chỉnh `MEMORY_FILE_PATH` về một thư mục git (ví dụ `~/aimemory`),
+    
+- Rồi design schema entity/relation cho “sự nghiệp X10 + FinTech + Creator” để tận dụng server-memory như một personal knowledge graph.
