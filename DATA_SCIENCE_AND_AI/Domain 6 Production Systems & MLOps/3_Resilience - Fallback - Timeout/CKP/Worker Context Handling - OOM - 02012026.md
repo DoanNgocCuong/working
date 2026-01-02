@@ -2,9 +2,9 @@
 
 ### 1.1. Sự kiện OOM Kill
 
-**Thời gian**: 11:42:04 AM ngày 1/1/2026  
-**Exit code**: 137 (OOMKilled)  
-**Memory limit**: 3000 MiB (3 GB)  
+**Thời gian**: 11:42:04 AM ngày 1/1/2026
+**Exit code**: 137 (OOMKilled)
+**Memory limit**: 3000 MiB (3 GB)
 **Số lần restart**: 2 lần
 
 ### 1.2. Memory Usage Pattern
@@ -32,6 +32,7 @@ Từ Datadog APM:
   - Max: 60.9s
 
 **Pattern errors**:
+
 - 11:27:08 → 60s timeout → HTTP 500 ❌
 - 11:43:16 → 60s timeout → HTTP 500 ❌
 - Nhiều requests timeout sau 60 giây
@@ -92,18 +93,19 @@ Từ Datadog APM:
 ### 1.5. Vấn đề cụ thể
 
 1. Memory API timeout = 240s (quá cao)
+
    - Mỗi thread block tối đa 240s
    - Throughput: 10 messages / 240s = 0.04 msg/s
-
 2. ThreadPoolExecutor queue không giới hạn
+
    - Messages tích lũy vô hạn trong queue
    - Mỗi message giữ ~3MB (body bytes)
-
 3. Retry vô hạn khi timeout
+
    - NACK với `requeue=True` → RE-DELIVER
    - Messages retry liên tục → Throughput = 0
-
 4. Memory tích lũy khi timeout
+
    - Exception stack traces giữ references
    - Python GC delay → Memory không được giải phóng ngay
    - 50-100 messages timeout → 550-1100MB exception objects
@@ -121,6 +123,7 @@ MEMORY_API_TIMEOUT_SECONDS: int = 240  # 4 phút!
 ```
 
 **Vấn đề**:
+
 - Timeout 240s quá cao so với thực tế (pika-mem0 timeout sau 60s)
 - Mỗi thread block 240s → không thể xử lý messages khác
 - 10 threads × 240s = Memory giữ lâu
@@ -128,11 +131,13 @@ MEMORY_API_TIMEOUT_SECONDS: int = 240  # 4 phút!
 ### 2.2. Secondary Root Cause: pika-mem0 Service Không Response
 
 **Bằng chứng từ APM traces**:
+
 - Requests timeout sau 60 giây
 - HTTP 500 errors với message "Missing error message and stack trace"
 - 99.5% errors đến từ endpoint `/extract_facts`
 
 **Cơ chế**:
+
 ```
 pika-mem0 không response (timeout 60s)
     ↓
@@ -159,6 +164,7 @@ self.executor = ThreadPoolExecutor(max_workers=max_workers)
 ```
 
 **Vấn đề**:
+
 - Queue không giới hạn → Messages tích lũy vô hạn
 - Mỗi message giữ ~3MB (body bytes)
 - 500-1000 messages = 1500-3000MB
@@ -172,9 +178,11 @@ self.channel.basic_nack(delivery_tag=delivery_tag, requeue=True)
 ```
 
 **Vấn đề**:
+
 - Timeout → NACK → RE-DELIVER → Timeout lại → Cycle lặp lại
 - Messages không được xử lý (retry vô hạn)
 - Throughput = 0
+
 #### 2.3.3. Exception Stack Traces Giữ References
 
 **Dẫn chứng code**:
@@ -186,6 +194,7 @@ except httpx.TimeoutException as e:
 ```
 
 **Vấn đề**:
+
 - Exception object giữ references đến:
   - `conversation_log` (~3MB)
   - `formatted_conversation` (~3MB)
@@ -203,10 +212,10 @@ except httpx.TimeoutException as e:
 - Exception stack traces giữ references đến local variables → memory không được giải phóng ngay
 
 ###### Tại sao gây vấn đề trong OOM?
+
 - Nhiều messages timeout cùng lúc → nhiều exception objects tích lũy
 - GC chưa chạy → memory không được giải phóng
 - Memory tích lũy nhanh → vượt 3GB limit → OOM
-
 
 ##### 1. PYTHON GARBAGE COLLECTION LÀ GÌ?
 
@@ -227,17 +236,17 @@ def process_message():
 # - NHƯNG: Không phải ngay lập tức!
 ```
 
-
 ###### 1.2. Reference Counting vs Generational GC
 
 Python dùng 2 cơ chế:
 
 1. Reference Counting (tức thì)
+
    - Đếm số references đến object
    - Khi count = 0 → giải phóng ngay
    - Nhưng không xử lý circular references
-
 2. Generational GC (có delay)
+
    - Xử lý circular references
    - Chạy theo chu kỳ (không liên tục)
    - Có delay trước khi chạy
@@ -258,6 +267,7 @@ Python dùng 2 cơ chế:
 ```
 
 Lý do:
+
 - GC tốn CPU
 - Chạy liên tục sẽ làm chậm ứng dụng
 - Python chạy GC khi cần (threshold-based)
@@ -276,6 +286,7 @@ gc.get_threshold()
 ```
 
 Cơ chế:
+
 - Mỗi lần tạo object → gen0 count++
 - Khi gen0 = 700 → chạy GC gen0
 - Nếu object sống sót → chuyển sang gen1
@@ -357,6 +368,7 @@ T=11s:  GC chạy (threshold đạt hoặc manual trigger)
 ```
 
 **Compound Effect**:
+
 - Nhiều messages timeout cùng lúc (50-100 messages trong 10 giây)
 - Exception stack traces tích lũy: 550-1100MB
 - ThreadPoolExecutor queue tích lũy: 300-600MB
@@ -370,12 +382,26 @@ T=11s:  GC chạy (threshold đạt hoặc manual trigger)
 ### 3.1. Tổng Quan Giải Pháp
 
 **Mục tiêu**:
+
 1. Giảm blocking time từ 240s xuống 60s (giảm 75%)
 2. Tắt LLM calls hoàn toàn (không ảnh hưởng time)
 3. Fail fast → Giải phóng memory ngay khi timeout
 4. Không RE-queue → Tránh retry vô hạn
-5. Mark FAILED trong DB → Cron job retry sau 6h
+5. Mark FAILED trong DB → Cron job retry với exponential backoff + jitter
+6. Context manager cleanup → Guaranteed memory release
+7. Bounded queue với backpressure → Fail-fast khi quá tải (preventive)
 
+**Giải pháp chính (Critical)**:
+
+1. Timeout 60s (fail-fast)
+2. Timeout handling - Mark FAILED và ACK (không RE-queue)
+3. Context manager cleanup (giải phóng memory ngay)
+4. Disable LLM hoàn toàn
+5. Exponential backoff với jitter
+
+**Giải pháp phòng ngừa (Preventive)**:
+
+1. Bounded queue với backpressure (nice-to-have)
 ### 3.2. Implementation Details
 
 #### 3.2.1. Giảm Memory API Timeout: 240s → 60s
@@ -391,9 +417,17 @@ MEMORY_API_TIMEOUT_SECONDS: int = 60  # 1 phút
 ```
 
 **Impact**:
+
 - Blocking time giảm 75% (240s → 60s)
 - Throughput tăng ~4x (0.04 msg/s → 0.17 msg/s)
 - Memory giữ ngắn hơn
+**Thêm MAX_RETRY_ATTEMPTS**:
+
+```python
+MAX_RETRY_ATTEMPTS: int = 5  # Max retry attempts
+```
+
+**Rationale**: Giới hạn retry để tránh infinite loop.
 
 #### 3.2.2. Tắt LLM Calls Hoàn Toàn
 
@@ -418,24 +452,20 @@ if not llm_enabled:
 ```
 
 **Impact**:
+
 - LLM calls return ngay (0s) nếu disabled
 - Không block worker threads
 - Không ảnh hưởng processing time
 
-#### 3.2.3. Timeout → Mark FAILED, Không RE-queue
+#### 3.2.3. Timeout → Mark FAILED vào DB và ACK, Không RE-queue
 
 **File**: `src/app/background/rabbitmq_consumer.py`
 
 **Sửa exception handling**:
 
-```python
-# Trước:
-except Exception as e:
-    error_msg = str(e)
-    logger.error(...)
-    should_nack = True  # → RE-queue
+**File**: `src/app/background/rabbitmq_consumer.py`
 
-# Sau:
+```python
 except httpx.TimeoutException as e:
     # Memory API timeout → Mark FAILED, không RE-queue
     error_msg = f"Memory API timeout after 60s: {str(e)}"
@@ -444,7 +474,34 @@ except httpx.TimeoutException as e:
         f"conversation_id={conversation_id} | "
         f"error={error_msg}"
     )
-    
+  
+    # Alert khi Memory API timeout (rate limit: 1 lần mỗi 5 phút)
+    current_time = time.time()
+    if not hasattr(self, '_last_timeout_alert_time'):
+        self._last_timeout_alert_time = 0
+  
+    if current_time - self._last_timeout_alert_time > 300:  # 5 phút
+        send_alert_safe(
+            alert_type=AlertType.EXTERNAL_API_TIMEOUT,
+            level=AlertLevel.HIGH,
+            message=(
+                f"Worker: Memory API timeout after 60s | "
+                f"conversation_id={conversation_id} | "
+                f"Event marked as FAILED, will retry via cron job"
+            ),
+            context={
+                "timeout_seconds": 60,
+                "conversation_id": conversation_id,
+                "error_code": "MEMORY_API_TIMEOUT",
+                "component": "worker",
+                "action": "marked_failed_no_requeue",
+                "retry_mechanism": "cron_job_6h"
+            },
+            component="worker",
+            conversation_id=conversation_id
+        )
+        self._last_timeout_alert_time = current_time
+  
     # Mark FAILED trong DB
     if event:
         try:
@@ -453,16 +510,23 @@ except httpx.TimeoutException as e:
                 error_code="MEMORY_API_TIMEOUT",
                 error_details=error_msg
             )
+            db.commit()
         except Exception as db_error:
             logger.error(f"❌ Failed to mark event as FAILED: {db_error}")
-    
+            db.rollback()
+  
     # ACK message (không RE-queue)
     should_ack = True
-    
+  
     # Giải phóng memory ngay
     if conversation_log:
         del conversation_log
-    
+    if 'formatted_conversation' in locals():
+        del formatted_conversation
+    if 'payload' in locals():
+        del payload
+    gc.collect()  # Force GC
+
 except Exception as e:
     # Các lỗi khác vẫn NACK (retry)
     error_msg = str(e)
@@ -471,44 +535,222 @@ except Exception as e:
 ```
 
 **Impact**:
+
 - Fail fast → Giải phóng memory ngay
 - Không RE-queue → Tránh retry vô hạn
-- Mark FAILED → Cron job retry sau 6h
-
-#### 3.2.4. Giải Phóng Memory Ngay Khi Timeout
+- Mark FAILED → Cron job retry với exponential backoff
+- Alert để track timeout events
+#### 3.2.4. Giải Phóng Memory Ngay Khi Timeout - Context Manager cho Guaranteed Cleanup
 
 **File**: `src/app/background/rabbitmq_consumer.py`
 
-**Trong `_process_message()`**:
+**Rationale**: Giải phóng memory ngay sau khi xử lý xong, tránh Python GC delay gây memory spike.
+
+**Tạo `conversation_log_context()` Context Manager**:
 
 ```python
-def _process_message(self, delivery_tag: int, message_body: bytes):
-    conversation_log = None
+from contextlib import contextmanager
+import gc
+
+@contextmanager
+def conversation_log_context(conversation_log, formatted_conversation=None, payload=None):
+    """
+    Context manager để guaranteed cleanup của large objects.
+  
+    Usage:
+        with conversation_log_context(conversation_log, formatted_conversation, payload):
+            # Process...
+    """
     try:
-        # Parse message
-        message = json.loads(message_body)
-        conversation_log = message.get("conversation_log", [])
-        
-        # Process...
-        
-    except httpx.TimeoutException as e:
-        # Timeout → Giải phóng memory ngay
-        if conversation_log:
-            del conversation_log
-        # Mark FAILED...
-        
+        yield
     finally:
         # Cleanup
         if conversation_log:
             del conversation_log
-        # DB cleanup...
+        if formatted_conversation:
+            del formatted_conversation
+        if payload:
+            del payload
+        gc.collect()  # Force GC ngay
+```
+
+**Sử dụng trong `_process_message()`**:
+
+```python
+def _process_message(self, delivery_tag: int, body: bytes):
+    conversation_log = None
+    formatted_conversation = None
+    payload = None
+  
+    try:
+        # Parse message
+        message = json.loads(body)
+        conversation_log = message.get("conversation_log", [])
+      
+        # ... process ...
+      
+        # Sử dụng context manager
+        with conversation_log_context(conversation_log, formatted_conversation, payload):
+            # Process event...
+            result = processor.process_single_event_with_log(...)
+          
+    except httpx.TimeoutException:
+        # ... timeout handling ...
+    except Exception:
+        # ... other errors ...
+    finally:
+        # Context manager đã cleanup, nhưng đảm bảo thêm
+        if conversation_log:
+            del conversation_log
+        # ... DB cleanup ...
 ```
 
 **Impact**:
-- Memory được giải phóng ngay khi timeout
-- Không chờ GC
-- Giảm memory spike
 
+- Memory được giải phóng ngay khi xử lý xong (guaranteed)
+- Không chờ GC → Giảm memory spike
+- Context manager đảm bảo cleanup ngay cả khi có exception
+
+#### 3.2.5. Exponential Backoff với Jitter (Critical)
+
+**File**: `src/app/repositories/conversation_event_repository.py`
+
+**Rationale**: Phân tán retry time để tránh thundering herd khi cron job chạy.
+
+**Sửa `mark_failed()` để dùng exponential backoff**:
+
+```python
+import random
+from datetime import datetime, timedelta, timezone
+
+def mark_failed(
+    self,
+    event: ConversationEvent,
+    error_code: str,
+    error_details: str,
+    retry_attempt: Optional[int] = None
+) -> ConversationEvent:
+    """Set status to FAILED và schedule retry với exponential backoff + jitter."""
+    event.status = ConversationEventStatus.FAILED.value
+    event.error_code = error_code
+    event.error_details = error_details
+  
+    # Calculate retry attempt
+    if retry_attempt is None:
+        retry_attempt = 0
+  
+    # Exponential backoff: base_hours * (2 ^ retry_attempt)
+    base_hours = 6  # CONVERSATION_EVENT_RETRY_HOURS
+    backoff_hours = base_hours * (2 ** retry_attempt)
+  
+    # Jitter: ±20% random
+    jitter_percent = random.uniform(-0.2, 0.2)
+    jitter_hours = backoff_hours * jitter_percent
+    total_hours = backoff_hours + jitter_hours
+  
+    # Max 48 hours
+    total_hours = min(total_hours, 48)
+  
+    retry_at = datetime.now(timezone.utc) + timedelta(hours=total_hours)
+    event.next_attempt_at = retry_at
+    event.updated_at = datetime.now(timezone.utc)
+  
+    self.db.commit()
+    self.db.refresh(event)
+    return event
+```
+
+**Ví dụ exponential backoff với jitter**:
+
+```
+Retry attempt 0: 6h × (2^0) = 6h ± 20% = 4.8h - 7.2h
+Retry attempt 1: 6h × (2^1) = 12h ± 20% = 9.6h - 14.4h
+Retry attempt 2: 6h × (2^2) = 24h ± 20% = 19.2h - 28.8h
+Retry attempt 3: 6h × (2^3) = 48h (max)
+```
+
+**Impact**:
+
+- Phân tán retry time → Tránh thundering herd
+- Tăng dần thời gian chờ → Giảm tải server
+- Jitter ±20% → Retry rải rác trong khoảng thời gian
+
+**File**: `src/app/services/conversation_event_processing_service.py`
+
+**Thêm `should_retry()` và `calculate_next_attempt_time()`**:
+
+```python
+MAX_RETRY_ATTEMPTS = 5
+
+def should_retry(event: ConversationEvent) -> bool:
+    """Check xem có nên retry không."""
+    retry_count = getattr(event, 'retry_count', 0)
+    if retry_count >= MAX_RETRY_ATTEMPTS:
+        return False
+  
+    if event.next_attempt_at and event.next_attempt_at > datetime.now(timezone.utc):
+        return False
+  
+    return True
+```
+
+**Update `process_failed_events()` để mark PERMANENTLY_FAILED**:
+
+```python
+def process_failed_events(self) -> Dict[str, int]:
+    """Process failed events với exponential backoff."""
+    stats = {"total": 0, "processed": 0, "failed": 0, "skipped": 0}
+  
+    while True:
+        events = self.repository.fetch_due_events(batch_size=25)
+        if not events:
+            break
+      
+        stats["total"] += len(events)
+      
+        for event in events:
+            # Check should retry
+            if not self.should_retry(event):
+                # Mark PERMANENTLY_FAILED
+                event.status = ConversationEventStatus.PERMANENTLY_FAILED.value
+                self.repository.db.commit()
+              
+                # Alert CRITICAL khi permanently failed
+                send_alert_safe(
+                    alert_type=AlertType.WORKFLOW_EXECUTION_FAILURE,
+                    level=AlertLevel.CRITICAL,
+                    message=(
+                        f"Event permanently failed after {retry_count} retry attempts | "
+                        f"conversation_id={event.conversation_id} | "
+                        f"Manual intervention may be required"
+                    ),
+                    context={
+                        "conversation_id": event.conversation_id,
+                        "retry_count": retry_count,
+                        "error_code": event.error_code,
+                        "max_retry_attempts": MAX_RETRY_ATTEMPTS,
+                        "component": "worker",
+                        "action": "permanently_failed",
+                        "requires_manual_intervention": True
+                    },
+                    component="worker",
+                    conversation_id=event.conversation_id
+                )
+              
+                stats["skipped"] += 1
+                continue
+          
+            # Process event...
+            # ...
+  
+    return stats
+```
+
+**Impact**:
+
+- Giới hạn retry attempts (5 lần) → Tránh infinite loop
+- Mark PERMANENTLY_FAILED → Cần manual intervention
+- Alert CRITICAL → Cảnh báo data loss risk
 ### 3.3. Database Schema
 
 **Cột status trong `conversation_events`**:
@@ -519,6 +761,7 @@ status VARCHAR(50) NOT NULL DEFAULT 'PENDING'
 ```
 
 **Các cột liên quan**:
+
 - `error_code`: Lưu "MEMORY_API_TIMEOUT"
 - `error_details`: Lưu chi tiết lỗi
 - `next_attempt_at`: Set = now + 6 hours (cho cron job)
@@ -526,22 +769,145 @@ status VARCHAR(50) NOT NULL DEFAULT 'PENDING'
 ### 3.4. Cron Job Retry (Đã Code Sẵn)
 
 **Cron job đã có sẵn** sẽ:
+
 1. Query events với `status='FAILED'` và `next_attempt_at <= now`
 2. Retry processing
 3. Nếu vẫn fail → `next_attempt_at += 6 hours`
+### 3.4. Cron Job Retry với Exponential Backoff
 
-### 3.5. So Sánh Trước/Sau
+**Cron job đã có sẵn** sẽ:
 
-| Metric | Trước | Sau |
-|--------|-------|-----|
-| Memory API timeout | 240s | 60s |
-| LLM calls | Chạy (nếu enabled) | Tắt hoàn toàn |
-| Blocking time | 240s+ | 60s |
-| Retry behavior | NACK → RE-queue ngay | Mark FAILED → Cron job 6h sau |
-| Memory cleanup | Chậm (sau timeout) | Ngay (fail fast) |
-| Throughput | 0.04 msg/s | 0.17 msg/s |
-| Memory spike risk | Cao | Thấp |
+1. Query events với `status='FAILED'` và `next_attempt_at <= now`
+2. Check `should_retry()` → Nếu không → Mark PERMANENTLY_FAILED
+3. Retry processing
+4. Nếu vẫn fail → Increment `retry_count` và tính `next_attempt_at` mới với exponential backoff + jitter
 
+### 3.5. Bounded Queue với Backpressure (Preventive)
+
+**File**: `src/app/background/rabbitmq_consumer.py`
+
+**Rationale**: Backpressure mechanism để tránh quá tải khi system không thể xử lý kịp. Lưu ý: Queue chỉ giữ bytes nhỏ (~280 bytes/message), không phải nguyên nhân chính gây OOM, nhưng vẫn hữu ích để fail-fast khi quá tải.
+
+**Configuration**:
+
+```python
+QUEUE_MAX_SIZE: int = 100  # Max queue size
+QUEUE_BACKPRESSURE_THRESHOLD: float = 0.8  # 80% threshold
+```
+
+**Implement `_check_queue_and_backpressure()`**:
+
+```python
+def _check_queue_and_backpressure(
+    self, 
+    delivery_tag: int, 
+    message_body: bytes
+) -> bool:
+    """Check queue size và apply backpressure."""
+    queue_size = self.executor._work_queue.qsize()
+    max_size = settings.QUEUE_MAX_SIZE
+    threshold = int(max_size * settings.QUEUE_BACKPRESSURE_THRESHOLD)
+  
+    if queue_size >= threshold:
+        # Alert khi vượt threshold (rate limit: 1 lần mỗi 5 phút)
+        send_alert_safe(
+            alert_type=AlertType.WORKFLOW_EXECUTION_FAILURE,
+            level=AlertLevel.HIGH,
+            message=(
+                f"Worker queue size exceeded threshold: "
+                f"{queue_size}/{max_size} ({queue_percent:.1f}%)"
+            ),
+            context={
+                "queue_size": queue_size,
+                "max_size": max_size,
+                "threshold": threshold,
+                "component": "worker",
+                "action": "backpressure_triggered"
+            },
+            component="worker"
+        )
+      
+        # Parse message để lấy conversation_id
+        message = json.loads(message_body)
+        conversation_id = message.get('conversation_id')
+      
+        # Mark FAILED trong DB TRƯỚC
+        db = SessionLocal()
+        try:
+            repo = ConversationEventRepository(db)
+            event = repo.get_by_conversation_id(conversation_id)
+            if event:
+                repo.mark_failed(
+                    event=event,
+                    error_code="QUEUE_FULL",
+                    error_details=f"Worker queue full: {queue_size}/{max_size}"
+                )
+                db.commit()
+        finally:
+            db.close()
+      
+        # Sau đó mới NACK với requeue=False
+        self._do_nack_no_requeue(delivery_tag)
+        return False  # Reject message
+  
+    return True  # Queue OK, có thể submit
+```
+
+**Update `callback()` để sử dụng backpressure**:
+
+```python
+def callback(self, ch, method, properties, body):
+    delivery_tag = method.delivery_tag
+    message_body = body
+  
+    # Check backpressure TRƯỚC khi submit
+    if not self._check_queue_and_backpressure(delivery_tag, message_body):
+        # Message đã được reject và mark FAILED
+        return
+  
+    # Submit vào thread pool
+    self.executor.submit(self._process_message, delivery_tag, message_body)
+```
+
+**Impact**:
+
+- Fail-fast khi queue đầy → Tránh quá tải
+- Mark FAILED trong DB trước khi NACK → Không mất message
+- Alert để cảnh báo sớm
+
+### 3.6. So Sánh Trước/Sau
+
+| Metric             | Trước               | Sau                                         |
+| ------------------ | --------------------- | ------------------------------------------- |
+| Memory API timeout | 240s                  | 60s                                         |
+| LLM calls          | Chạy (nếu enabled)  | Tắt hoàn toàn                            |
+| Blocking time      | 240s+                 | 60s                                         |
+| Retry behavior     | NACK → RE-queue ngay | Mark FAILED → Exponential backoff + jitter |
+| Memory cleanup     | Chậm (sau timeout)   | Ngay (context manager)                      |
+| Throughput         | 0.04 msg/s            | 0.17 msg/s                                  |
+| Memory spike risk  | Cao                   | Thấp                                       |
+| Max retry attempts | Vô hạn              | 5 lần → PERMANENTLY_FAILED                |
+| Queue management   | Unbounded             | Bounded với backpressure                   |
+
+### 3.7. Alerts
+
+**3 loại alerts được implement**:
+
+1. **Queue Size Alert** (HIGH):
+
+   - Trigger: Queue size >= 80% threshold
+   - Rate limit: 1 lần mỗi 5 phút
+   - Action: Mark FAILED trong DB, NACK với `requeue=False`
+2. **Memory API Timeout Alert** (HIGH):
+
+   - Trigger: Memory API timeout sau 60s
+   - Rate limit: 1 lần mỗi 5 phút
+   - Action: Mark FAILED trong DB, ACK message (không RE-queue)
+3. **Permanently Failed Alert** (CRITICAL):
+
+   - Trigger: Event retry hết 5 lần
+   - Rate limit: Không (mỗi event là critical)
+   - Action: Mark PERMANENTLY_FAILED, cần manual intervention
 ### 3.6. Kết Quả Mong Đợi
 
 1. Giảm blocking time 75% (240s → 60s)
@@ -552,15 +918,30 @@ status VARCHAR(50) NOT NULL DEFAULT 'PENDING'
 
 ---
 
+### 3.8. Kết Quả Mong Đợi
+
+1. Giảm blocking time 75% (240s → 60s)
+2. Fail fast → Giải phóng memory ngay (context manager)
+3. Không RE-queue → Tránh loop retry
+4. Exponential backoff + jitter → Phân tán retry, tránh thundering herd
+5. Max retry attempts (5 lần) → Tránh infinite loop
+6. Bounded queue với backpressure → Fail-fast khi quá tải
+7. Memory spike giảm đáng kể
+8. Alerts để track và cảnh báo sớm
+
+---
+
 ## 4. TÓM TẮT
 
 ### Vấn đề:
+
 - Worker bị OOM kill (exit code 137) tại 11:42:04 AM
 - Memory tăng đột biến từ 250MB → 3GB
 - Memory API timeout 240s quá cao
 - pika-mem0 service không response (timeout 60s)
 
 ### Nguyên nhân chính:
+
 1. Memory API timeout = 240s (quá cao)
 2. ThreadPoolExecutor queue không giới hạn
 3. NACK với requeue=True → Retry vô hạn
@@ -568,11 +949,18 @@ status VARCHAR(50) NOT NULL DEFAULT 'PENDING'
 5. Python GC delay → Memory không được giải phóng ngay
 
 ### Giải pháp:
+
+**Giải pháp chính (Critical)**:
+
 1. Giảm Memory API timeout: 240s → 60s
 2. Tắt LLM calls hoàn toàn
-3. Timeout → Mark FAILED, không RE-queue
-4. Giải phóng memory ngay khi timeout
-5. Cron job retry sau 6h
+3. Timeout → Mark FAILED, không RE-queue (với alerts)
+4. Context manager cleanup → Giải phóng memory ngay (guaranteed)
+5. Exponential backoff với jitter → Phân tán retry
+6. Max retry attempts (5 lần) → Mark PERMANENTLY_FAILED
+
+**Giải pháp phòng ngừa (Preventive)**:
+7. Bounded queue với backpressure → Fail-fast khi quá tải
 
 ---
 
