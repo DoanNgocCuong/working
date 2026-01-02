@@ -8324,3 +8324,131 @@ Danh sách các PEP quan trọng liên quan đến lập trình đồng bộ và
 
 
 # Toàn bộ nguồn tham khảo
+
+
+
+
+----
+# Ghi chú: 
+
+## 1.1 So sánh Song Song với Bất Đồng Bộ - 02/01/2026
+
+
+|Tiêu chí|Chạy Song Song (Parallelism)|Chạy Bất Đồng Bộ (Asynchrony)|
+|---|---|---|
+|**Bản chất**|Nhiều tác vụ chạy trên **nhiều CPU core** cùng một thời điểm vật lý.|Một luồng (thread) xử lý nhiều tác vụ bằng cách **tận dụng thời gian chờ** (I/O).|
+|**Đại diện Python**|`multiprocessing` (Đa tiến trình).|`asyncio` (Bất đồng bộ), `aio-pika`, `httpx`.|
+|**Phù hợp nhất**|**CPU Bound** (Tính toán nặng: xử lý ảnh, AI training, nén file).|**I/O Bound** (Chờ đợi: gọi API, DB query, đọc ghi file).|
+|**Chi phí (Overhead)**|**Cao:** Tốn RAM (mỗi process có memory riêng), tốn CPU để OS quản lý (context switching).|**Rất thấp:** RAM ít (chung memory), chuyển đổi task cực nhanh (vài microsecond).|
+|**Giới hạn**|Số lượng CPU Core (VD: 8-16 cores).|Bộ nhớ RAM (có thể chạy hàng chục nghìn task trên 1 core).|
+|**Ví dụ thực tế**|10 thợ xây cùng xây 10 bức tường cùng lúc.|1 đầu bếp bật lò nướng, trong khi chờ lò nóng thì đi rửa rau (không đứng nhìn lò).|
+
+## 1.2 Cả song song và bất đồng bộ ? 
+
+
+Có, hoàn toàn có thể vừa song song vừa bất đồng bộ, và thực tế các hệ thống lớn thường làm như vậy.[1][2]
+
+## Ý tưởng cốt lõi
+
+- **Song song (parallelism)**: Dùng nhiều core/CPU để *thực sự* chạy nhiều tác vụ cùng lúc (thường là CPU-bound).[3][4]
+- **Bất đồng bộ (asynchrony)**: Một thread “xoay tua” giữa nhiều I/O task, không chờ blocking, tận dụng thời gian chờ để làm việc khác (I/O-bound).[5][6]
+- Kết hợp: Dùng async để quản lý I/O, và bên dưới dùng nhiều process / thread để xử lý CPU nặng.
+
+## Kịch bản kết hợp điển hình
+
+1. **Web server / API**  
+   - Lớp ngoài: `asyncio` hoặc event-loop để handle hàng nghìn request I/O-bound (HTTP, DB, queue...).[7][5]
+   - Bên trong: Một số request cần xử lý AI, tính toán, encoding video… được đẩy sang `ProcessPoolExecutor` / `multiprocessing` chạy **song song** trên nhiều core.[8][1]
+
+2. **ETL / Data pipeline**  
+   - Async để: tải dữ liệu từ nhiều API / DB / file cùng lúc.  
+   - Parallel để: parse, transform, feature engineering, model inference trên nhiều core.
+
+## Cách làm cụ thể với Python
+
+### 1. Async ở ngoài, multiprocessing ở trong
+
+```python
+import asyncio
+from concurrent.futures import ProcessPoolExecutor
+
+def heavy_cpu_job(x: int) -> int:
+    # CPU-bound: ví dụ tính toán nặng
+    s = 0
+    for i in range(10**7):
+        s += (i * x) % 97
+    return s
+
+async def handle_request(x: int, executor: ProcessPoolExecutor):
+    loop = asyncio.get_running_loop()
+    # offload CPU-bound sang process (song song trên nhiều core)
+    result = await loop.run_in_executor(executor, heavy_cpu_job, x)
+    return result
+
+async def main():
+    with ProcessPoolExecutor() as executor:
+        tasks = [handle_request(i, executor) for i in range(8)]
+        results = await asyncio.gather(*tasks)
+        print(results)
+
+asyncio.run(main())
+```
+
+- `asyncio.gather` quản lý **bất đồng bộ** các request.  
+- `ProcessPoolExecutor` cho phép job CPU chạy **song song** trên nhiều core.[1][7]
+
+### 2. Dùng thư viện tích hợp sẵn
+
+- `aiomultiprocess` gói sẵn việc dùng `multiprocessing` bên trong `asyncio`, giúp chạy coroutine trên nhiều process một cách “native async style”.[2]
+
+Ví dụ ý tưởng (rút gọn từ docs):
+
+```python
+import asyncio
+import aiomultiprocess
+
+async def coro_func(x: int) -> int:
+    # bên trong vẫn là async, nhưng được map lên nhiều process
+    await asyncio.sleep(1)
+    return x * 2
+
+async def main():
+    async with aiomultiprocess.Pool() as pool:
+        results = await pool.map(coro_func, range(10))
+    print(results)
+
+asyncio.run(main())
+```
+
+## Khi nào nên “vừa song song vừa async”?
+
+- Bài toán **mixed**:  
+  - Vừa nhiều I/O (gọi API, DB, message queue)  
+  - Vừa có bước CPU-heavy (ML inference, batch compute, crypto, nén/giải nén).  
+- Mục tiêu:  
+  - Dùng async để scale I/O đến hàng nghìn task trên ít core.  
+  - Dùng parallel (process pool) để tận dụng 100% CPU cho đoạn nặng, tránh bị GIL bóp hiệu năng.
+
+Nếu bro muốn, có thể gửi cụ thể use case (ví dụ hệ thống fintech bên bro đang build), sẽ phác thảo luôn kiến trúc: chỗ nào async, chỗ nào multiprocessing, chỗ nào nên tách thành service riêng.
+
+[1](https://www.dataleadsfuture.com/combining-multiprocessing-and-asyncio-in-python-for-performance-boosts/)
+[2](https://www.dataleadsfuture.com/aiomultiprocess-super-easy-integrate-multiprocessing-asyncio-in-python/)
+[3](https://topdev.vn/blog/dong-thoi-concurrency-va-song-song-parallelism-khac-nhau-nhu-the-nao/)
+[4](https://www.facebook.com/edu.200lab/posts/-processes-threads-concurrent-parallelism-top-c%C3%A1c-c%C3%A2u-h%E1%BB%8Fi-th%C6%B0%E1%BB%9Dng-g%E1%BA%B7p-trong-ph%E1%BB%8Fng/1147399447396925/)
+[5](https://viblo.asia/p/concurrency-and-parallelism-trong-python-suc-manh-cua-asynchronous-obA46v0x4Kv)
+[6](https://stackoverflow.com/questions/6133574/how-to-articulate-the-difference-between-asynchronous-and-parallel-programming)
+[7](https://www.linkedin.com/advice/0/how-do-you-balance-cpu-bound-io-bound-tasks-j7ysc)
+[8](https://stackoverflow.com/questions/21159103/what-kind-of-problems-if-any-would-there-be-combining-asyncio-with-multiproces)
+[9](https://www.perplexity.ai/search/i-o-bound-la-gi-w4Ss19XGQQeIBjTCKJrcgg)
+[10](https://viblo.asia/p/parallel-processing-concurrency-va-async-programming-OeVKBdj0lkW)
+[11](https://www.reddit.com/r/dotnet/comments/1c0hnxe/difference_between_multithread_and_async_tell_me/)
+[12](https://voz.vn/t/concurrency-parallel-asynchronous-multithreading-khac-nhau-nhu-the-nao.715113/page-4)
+[13](https://genzdev.net/posts/multithreading-vs-asynchronous-programming-vs-parallel-programming-trong-c/)
+[14](https://github.com/joaojunior/cpu_bound_and_io_bound_examples)
+[15](https://www.youtube.com/watch?v=_cqNJA1rYfc)
+[16](https://zalopay-oss.github.io/go-advanced/ch1-basic/ch1-05-concurrency-parallelism.html)
+[17](https://www.reddit.com/r/learnpython/comments/188m06s/combination_of_multiprocessing_threading_and/)
+[18](https://stackoverflow.com/questions/45880807/how-to-deal-with-an-io-and-cpu-bound-at-the-same-time-in-the-context-of-parallel)
+[19](https://www.iodigital.com/en/history/foreach/parallel-and-asynchronous-programming-in-java-8)
+[20](https://www.reddit.com/r/learnpython/comments/4p1ybt/cpu_and_io_bound_tasks/)
+[21](https://www.r-bloggers.com/2024/12/parallel-and-asynchronous-programming-in-shiny-with-future-promise-future_promise-and-extendedtask/)
