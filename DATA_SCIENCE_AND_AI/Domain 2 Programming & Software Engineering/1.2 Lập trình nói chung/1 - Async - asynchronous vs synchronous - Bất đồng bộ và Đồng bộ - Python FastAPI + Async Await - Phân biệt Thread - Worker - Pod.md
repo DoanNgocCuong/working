@@ -1,7 +1,10 @@
+
+
 Giải thích cách FastAPI hoạt động với async/await:
 
 
 [3 tools called]
+
 
 
 Giải thích cách FastAPI hoạt động với async/await:
@@ -352,3 +355,60 @@ Nếu bạn gửi cụ thể: `replicas`, `workers`, `threads`, resource (CPU/RA
 19. [https://azureossd.github.io/2023/01/27/Configuring-Gunicorn-worker-classes-and-other-general-settings/](https://azureossd.github.io/2023/01/27/Configuring-Gunicorn-worker-classes-and-other-general-settings/)
 20. [https://github.com/encode/uvicorn/issues/1232](https://github.com/encode/uvicorn/issues/1232)
 21. [https://www.reddit.com/r/django/comments/11ddkag/gunicorn_only_1_simultaneous_connection_per_worker/](https://www.reddit.com/r/django/comments/11ddkag/gunicorn_only_1_simultaneous_connection_per_worker/)
+
+
+----
+
+
+```
+tức là CPU bound thì dùng thread pool
+
+tức là I/O bound thì dùng async
+```
+
+- CPU-bound → Thread Pool (asyncio.to_thread())
+
+- I/O-bound → Async (await với async library)
+
+---
+Đúng. Đây là quy tắc cơ bản:
+
+## Quy tắc: CPU-bound vs I/O-bound
+
+### CPU-bound → Thread Pool
+```python
+# ❌ SAI: Block event loop
+async def process_data():
+    result = heavy_calculation()  # Block 500ms!
+    return result
+
+# ✅ ĐÚNG: Thread pool
+async def process_data():
+    result = await asyncio.to_thread(heavy_calculation)
+    return result
+```
+
+Lý do:
+- Python async không tăng tốc CPU-bound
+- Event loop bị block nếu chạy trực tiếp
+- Thread pool chạy trong thread riêng, event loop tiếp tục
+
+### I/O-bound → Async
+```python
+# ❌ SAI: Block event loop
+async def fetch_data():
+    response = httpx.get("http://api.com")  # Block 1s!
+    return response
+
+# ✅ ĐÚNG: Async
+async def fetch_data():
+    async with httpx.AsyncClient() as client:
+        response = await client.get("http://api.com")
+    return response
+```
+
+Lý do:
+- I/O-bound chờ network/disk
+- Async cho phép chờ mà không block event loop
+- Nhiều I/O operations có thể chạy đồng thời
+

@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/5 - Use case Scaling - Worker - Context Handling.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak"
+              "title": "5 - Use case Scaling - Worker - Context Handling"
             }
           }
         ],
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: postg",
+                "query": "file: python",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -263,7 +263,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/5 - Use case Scaling - Worker - Context Handling.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -273,7 +273,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak"
+              "title": "Backlinks for 5 - Use case Scaling - Worker - Context Handling"
             }
           },
           {
@@ -282,12 +282,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/5 - Use case Scaling - Worker - Context Handling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak"
+              "title": "Outgoing links from 5 - Use case Scaling - Worker - Context Handling"
             }
           },
           {
@@ -311,13 +311,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/5 - Use case Scaling - Worker - Context Handling.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": "scal"
               },
               "icon": "lucide-list",
-              "title": "Outline of 3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak"
+              "title": "Outline of 5 - Use case Scaling - Worker - Context Handling"
             }
           }
         ],
@@ -341,18 +341,19 @@
   },
   "active": "d8f5c87f36e8cf77",
   "lastOpenFiles": [
+    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/5 - Use case Scaling - Worker - Context Handling.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/Worker Context Handling - OOM - 02012026.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Python FastAPI + Async Await - Phân biệt Thread - Worker - Pod.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Use Case - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Không phải lúc nào cũng reuse - Phân biệt connection và session.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/image/Pasted image 20260102174452.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.1 Use case - Connection Leak Fix.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Untitled 1.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/ALL IN ONE - Lập trình đồng bộ và bất đồng bộ HANDBOOK - Python - 26122025.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Use Case - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Không phải lúc nào cũng reuse - Phân biệt connection và session.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Python FastAPI + Async Await - Phân biệt Thread - Worker - Pod.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/3.2 PRODUCTION RISK - full - 500.000 từ - 1250 trang.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/Worker Context Handling - OOM - 02012026.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/CKP - Use case - Robot Workflow- Context Handling - Bug treo 504 services.md",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/Use case - Pika.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
@@ -386,7 +387,6 @@
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104501.png",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104440.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung 1/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322063052.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung 1/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322071142.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/RAG 1/Search/Untitled.canvas",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
