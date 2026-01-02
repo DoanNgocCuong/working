@@ -10,6 +10,84 @@
 **Status:** ✅ Resolved
 
 ---
+## 2 Nguyên nhân gốc rễ 
+
+NÓI 1 CÁCH NGẮN GỌN:
+
+- 1.
+    
+
+### 2.1 Database Connection Pool Exhaustion (Nguyên nhân #1 - HIGH PROBABILITY)
+
+```
+JSONB conversation_log lớn (45KB+)
+  ↓
+INSERT/SELECT chậm (100-500ms mỗi query)
+  ↓
+Giữ DB connection lâu
+  ↓
+Connection pool exhausted nhanh
+  ↓
+Requests mới không lấy được connection
+  ↓
+Đợi pool timeout (30s) > Gateway timeout (10-15s)
+  ↓
+504 Gateway Timeout
+```
+
+```
+T=0s:    Request đến → Cần DB connection
+T=0s:    Pool exhausted (150 connections đều đang dùng)
+T=0-30s: Request đợi connection từ pool (DB_POOL_TIMEOUT = 30s)
+         ↓
+T=10-15s: Gateway timeout (nginx/ingress) → Trả về 504 Gateway Timeout
+         ↓
+T=30s:   DB pool timeout → ConnectionError (nhưng user đã thấy 504 rồi!)
+```
+
+“DB pool exhausted” nghĩa là toàn bộ kết nối trong **connection pool** tới database đã bị dùng hết, không còn slot trống để cấp thêm kết nối mới cho request khác nữa.
+Impact:
+- 60 lỗi timeout trong 1 giờ tại thời điểm incident
+- Cascading failure khi pool exhausted → Tất cả requests bị timeout
+    
+#### Vấn đề (Cách 1 - Hiện tại):
+1. API ghi conversation_log và raw_conversation_log(JSONB lớn) vào DB
+2. Worker lấy conversation_log từ DB ra để tính score
+3. Có thể có thêm lần fetch khác nữa
+→ Nhiều lần đọc/ghi DB với JSONB lớn → Chậm + tốn tài nguyên + tốn connections
+
+Giải pháp đã triển khai:
+
+##### Solution 2: Không ghi vào DB
+- API không ghi conversation_log vào DB (chỉ metadata)
+- Worker dùng conversation_log từ RabbitMQ message
+- Không fetch từ DB nữa
+
+##### Solution 3: Dùng MinIO (Hybrid)
+- API lưu conversation_log vào MinIO
+- DB chỉ lưu storage_ref (pointer)
+- Worker lazy load từ MinIO khi cần
+    
+
+### 2.2 Blocking I/O Operations (Nguyên nhân #2 - HIGH PROBABILITY)
+Theo P1_ContextHandling_ProductionRiskHandbook.md:
+> "Nguyên nhân gốc rễ là việc gọi các dịch vụ bên ngoài (LLM, DB) một cách đồng bộ trong một hàm async."
+Chi tiết:
+2.1. LLM API Calls Blocking Event Loop
+LLM calls không có timeout → Có thể chờ vô hạn
+Blocking event loop → Thread starvation
+Không có retry mechanism cho rate limit (429)
+2.2. RabbitMQ Publish Blocking API Response
+RabbitMQ publish được await → Blocking API response
+Nếu RabbitMQ chậm → API response chậm → Timeout
+2.3. Memory API Calls Blocking
+Memory API dùng httpx.Client (blocking) thay vì AsyncClient
+Blocking event loop → Không thể xử lý requests khác
+
+
+
+
+---
 
 ## 📋 EXECUTIVE SUMMARY
 
@@ -29,6 +107,8 @@
 - ✅ **100%** timeout configurations đã được implement 
 - ✅ **9 alerts** đã được setup để early detection
 - ✅ **Zero 504 errors** sau khi deploy fixes
+
+
 
 ---
 
