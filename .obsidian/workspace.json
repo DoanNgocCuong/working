@@ -167,12 +167,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/CKP - Use case - Robot Workflow- Context Handling - Bug treo 504 services.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/Worker Context Handling - OOM - 02012026.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CKP - Use case - Robot Workflow- Context Handling - Bug treo 504 services"
+              "title": "Worker Context Handling - OOM - 02012026"
             }
           },
           {
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: 504",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -263,7 +263,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FINTECH/Tài liệu.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/Worker Context Handling - OOM - 02012026.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -273,7 +273,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Tài liệu"
+              "title": "Backlinks for Worker Context Handling - OOM - 02012026"
             }
           },
           {
@@ -282,12 +282,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/3_ProductManager_T12_2025/3.2.4.2 Data của FPT Play.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/Worker Context Handling - OOM - 02012026.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 3.2.4.2 Data của FPT Play"
+              "title": "Outgoing links from Worker Context Handling - OOM - 02012026"
             }
           },
           {
@@ -296,7 +296,7 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
+                "sortOrder": "alphabetical",
                 "useHierarchy": true,
                 "showSearch": false,
                 "searchQuery": ""
@@ -311,13 +311,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/CKP - Use case - Robot Workflow- Context Handling - Bug treo 504 services.md",
-                "followCursor": true,
-                "showSearch": true,
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/Worker Context Handling - OOM - 02012026.md",
+                "followCursor": false,
+                "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CKP - Use case - Robot Workflow- Context Handling - Bug treo 504 services"
+              "title": "Outline of Worker Context Handling - OOM - 02012026"
             }
           }
         ],
@@ -339,8 +339,13 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "7bbd2100f0471588",
+  "active": "f30291a766340445",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/CKP - Use case - Robot Workflow- Context Handling - Bug treo 504 services.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Python FastAPI + Async Await.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents/1 - Nháp.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents/Bài toán.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents/image/Pasted image 20260101234825 1.png",
@@ -362,16 +367,12 @@
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/UseCases/ContextHandling_Tài liệu Triển khai Kỹ thuật - Module Context Handling - Friendlyship Management.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Use Case - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Không phải lúc nào cũng reuse - Phân biệt connection và session.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/1 - Client Session đóng ko đúng cách.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/2 - Memory - 31122025.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/1 - NETWORK 7 LAYER Client không đóng connection đúng cách.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. MLOps.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.19 - Docker - Complete Architecture Patterns Taxonomy - Hybrid app with externalized infrastructure 1.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.19 - Docker - Complete Architecture Patterns Taxonomy - Hybrid app with externalized infrastructure.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/CKP/CKP 2.19 - Docker - Hybrid app with externalized infrastructure.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.17 Các câu hỏi phụ.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/7_Multi Tenant",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/Microsoft",
