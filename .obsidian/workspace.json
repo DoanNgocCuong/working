@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/Azure Cloud.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8. MANUS - Prompt Giải bài"
+              "title": "Azure Cloud"
             }
           }
         ],
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: prompt",
+                "query": "file: llm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -243,7 +243,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -311,13 +312,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/Azure Cloud.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": "scal"
               },
               "icon": "lucide-list",
-              "title": "Outline of 8. MANUS - Prompt Giải bài"
+              "title": "Outline of Azure Cloud"
             }
           }
         ],
@@ -339,8 +340,14 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "d8f5c87f36e8cf77",
+  "active": "db02c5a91e7f8e1e",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. MLOps.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/Azure Cloud.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/4. Cursor.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/1 - Lý thuyết - MCP for AI Engineer.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/3 - Drive MCP.md",
@@ -364,15 +371,11 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP/CKP - Use case - Robot Workflow- Context Handling - Bug treo 504 services.md",
     "BUSINESS/1_PRODUCT/1_PRODUCT_Overview/Use case - Pika.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - ROBOT WORKFLOW - CONTEXT HANDLING - Timeout & Resilience Implementation.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents/1 - Nháp.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents/Bài toán.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents/image/Pasted image 20260101234825 1.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents/image/Pasted image 20260101234825.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents/image/Pasted image 20260101232609.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents/image/Pasted image 20260101223455.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents/image",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/UseCases/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/Use Case - Edu Agents",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/7_Multi Tenant",
@@ -382,8 +385,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/image/Pasted image 20251226104642.png",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/image",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104501.png",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104440.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung 1/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322063052.png",
