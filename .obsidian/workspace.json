@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx"
+              "title": "2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới"
             }
           }
         ],
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: MCP",
+                "query": "file: NETWORK",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -243,7 +243,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -311,13 +312,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": "scal"
               },
               "icon": "lucide-list",
-              "title": "Outline of 5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx"
+              "title": "Outline of 2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới"
             }
           }
         ],
@@ -341,8 +342,8 @@
   },
   "active": "d8f5c87f36e8cf77",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5 - Drive - TOÀN BỘ HIỂU NHẦM & SAI LẦM VỀ MCP SERVER.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5 - Drive - TOÀN BỘ HIỂU NHẦM & SAI LẦM VỀ MCP SERVER.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/1 - Lý thuyết - MCP for AI Engineer.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/Azure Cloud.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",
