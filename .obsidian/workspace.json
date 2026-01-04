@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/Azure Cloud.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5 - Drive - TOÀN BỘ HIỂU NHẦM & SAI LẦM VỀ MCP SERVER.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Azure Cloud"
+              "title": "5 - Drive - TOÀN BỘ HIỂU NHẦM & SAI LẦM VỀ MCP SERVER"
             }
           }
         ],
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: llm",
+                "query": "file: MCP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -312,13 +312,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/Azure Cloud.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5 - Drive - TOÀN BỘ HIỂU NHẦM & SAI LẦM VỀ MCP SERVER.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": "scal"
               },
               "icon": "lucide-list",
-              "title": "Outline of Azure Cloud"
+              "title": "Outline of 5 - Drive - TOÀN BỘ HIỂU NHẦM & SAI LẦM VỀ MCP SERVER"
             }
           }
         ],
@@ -340,16 +340,16 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "db02c5a91e7f8e1e",
+  "active": "d8f5c87f36e8cf77",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/1 - Lý thuyết - MCP for AI Engineer.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/Azure Cloud.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. MLOps.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/Azure Cloud.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/4. Cursor.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/1 - Lý thuyết - MCP for AI Engineer.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/3 - Drive MCP.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/4 - 1 số link về MCP.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
@@ -387,7 +387,6 @@
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/image/Pasted image 20251226104642.png",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104501.png",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104440.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung 1/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322063052.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/RAG 1/Search/Untitled.canvas",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
