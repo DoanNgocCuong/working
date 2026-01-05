@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak"
+              "title": "2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới"
             }
           },
           {
@@ -236,7 +236,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: idle",
+                "query": "file: network",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -257,7 +257,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -325,13 +326,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak"
+              "title": "Outline of 2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới"
             }
           }
         ],
@@ -353,8 +354,10 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "7bbd2100f0471588",
+  "active": "d8f5c87f36e8cf77",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.2.9 Docker Network is till - Docker Network bị sử dụng.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/3.2 - Use case -  idle in transaction leak - Mở DB và chờ khi call 1 cái API long time gây idle in transaction leak.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 9 - Use Case Context Handling - 30122025 1.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 8 - Use Case Context Handling - 30122025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 7 - Lỗi - RabbitMQ fire-and-forget.md",
@@ -381,8 +384,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322071142.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/Read 0. Reference.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/Read 1 -  Zep - A Temporal Knowledge Graph Architecture for Agent Memory - 2501.13956.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/Read 2.0 CompAct Compressing Retrieved Documents Actively for Question Answering.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/Read 2.2  Relaited của LongMemEval và Reflective Memory Manager RMM.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud",
