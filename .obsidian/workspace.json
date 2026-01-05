@@ -181,12 +181,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Evaluation Mem0.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Evaluation Memory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Evaluation Mem0"
+              "title": "Evaluation Memory"
             }
           },
           {
@@ -325,13 +325,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Evaluation Mem0.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Evaluation Memory.md",
                 "followCursor": false,
                 "showSearch": true,
-                "searchQuery": "scal"
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Evaluation Mem0"
+              "title": "Outline of Evaluation Memory"
             }
           }
         ],
@@ -353,8 +353,11 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "d8f5c87f36e8cf77",
+  "active": "ab1c80ab6db081da",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - Evaluation Mem0.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Evaluation Memory.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MECE toàn bộ vấn đề MEMORY.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEM0.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY.md",
@@ -375,13 +378,11 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long term Memory Architechture - T6_2025/0.2 Đồ án tiếp CƠ CHẾ QUẢN LÝ BỘ NHỚ - report 3_12032025 -.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long term Memory Architechture - T6_2025/0.1 Đồ Án Tiếp - Long Memory.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long term Memory Architechture - T6_2025/0. Đồ Án.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Evaluation Mem0.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 3 - SDD Optimization.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 3 - Cursor lên Plan and Coding.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 2 - SDD - HLD - LLD có cả Optimize Response Time.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/Step 2 - Output 1 - SDD - Claude đẹp nhất.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Manus - PIKA Memory System - Mem0 Open Source Integration Guide.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/Step 2.2 - Output 2 - SDD OPTIMIZE 1 - (base on Bài toán + High Architect Folder Structure Data Flow and Code Base + Template SDD) - 19122025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud",
@@ -398,7 +399,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool/image/Pasted image 20251229202956.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/CKP",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/image/Pasted image 20251226104642.png",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/image/Pasted image 20251224104501.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/RAG 1/Search/Untitled.canvas",
