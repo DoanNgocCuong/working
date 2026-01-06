@@ -1,4 +1,237 @@
 
+```Makefile
+# Docker Compose Management for Split Architecture
+# Infrastructure: Milvus (etcd, minio, standalone, attu)
+# Models: Embedding services (jina-vllm, infinity-proxy)
+# App: Mem0 application
+# All services use shared network: mem0_network
+
+.PHONY: start-infrastructure stop-infrastructure restart-infrastructure logs-infrastructure
+.PHONY: start-models stop-models restart-models logs-models
+.PHONY: start-app stop-app restart-app logs-app
+.PHONY: start-all stop-all restart-all logs-all
+.PHONY: down-all ps status wait-infinity-proxy
+.PHONY: monitor monitor-quick monitor-all monitor-all-snapshot monitor-summary analyze monitor-stress analyze-csv monitor-install monitor-clean
+.PHONY: setup-scripts
+
+# Infrastructure (Milvus) - Creates shared network
+start-infrastructure:
+	docker compose -f docker-compose-infrastructure.yml up -d
+
+stop-infrastructure:
+	docker compose -f docker-compose-infrastructure.yml down
+
+restart-infrastructure:
+	docker compose -f docker-compose-infrastructure.yml restart
+
+logs-infrastructure:
+	docker compose -f docker-compose-infrastructure.yml logs -f
+
+# Models (Embedding) - Uses shared network
+start-models:
+	docker compose -f docker-compose-models.yml up -d
+
+stop-models:
+	docker compose -f docker-compose-models.yml down
+
+restart-models:
+	docker compose -f docker-compose-models.yml restart
+
+logs-models:
+	docker compose -f docker-compose-models.yml logs -f
+
+# Wait for infinity-proxy to be healthy
+wait-infinity-proxy:
+	@echo "⏳ Waiting for infinity-proxy to be healthy..."
+	@for i in $$(seq 1 90); do \
+		status=$$(docker inspect infinity-proxy --format='{{.State.Health.Status}}' 2>/dev/null || echo "not-found"); \
+		if [ "$$status" = "healthy" ]; then \
+			echo "✅ infinity-proxy is healthy"; \
+			exit 0; \
+		fi; \
+		[ $$((i % 10)) -eq 0 ] && echo "  Still waiting... ($$i/90) - Status: $$status"; \
+		sleep 2; \
+	done; \
+	echo "❌ Timeout waiting for infinity-proxy"; \
+	exit 1
+
+# App (Mem0) - Uses shared network, waits for infinity-proxy
+start-app: wait-infinity-proxy
+	docker compose -f docker-compose-app.yml up -d
+
+stop-app:
+	docker compose -f docker-compose-app.yml down
+
+restart-app:
+	docker compose -f docker-compose-app.yml restart
+
+logs-app:
+	docker compose -f docker-compose-app.yml logs -f
+
+# All services - Auto-setup scripts before starting
+start-all: setup-scripts start-infrastructure start-models start-app
+	@echo "✅ All services started. Checking status..."
+	@sleep 2
+	@docker compose -f docker-compose-infrastructure.yml ps
+	@docker compose -f docker-compose-models.yml ps
+	@docker compose -f docker-compose-app.yml ps
+	@echo ""
+	@echo "💡 Monitoring tools ready! Use:"
+	@echo "   make monitor-all              # Monitor all project containers"
+	@echo "   make monitor c=mem0-server    # Monitor single container (default: 5 min)"
+	@echo "   make monitor-quick            # Quick stats snapshot"
+	@echo "   make analyze                  # Worker recommendations"
+
+stop-all: stop-app stop-models stop-infrastructure
+
+restart-all: restart-infrastructure restart-models restart-app
+
+logs-all:
+	@echo "=== Infrastructure Logs ==="
+	@docker compose -f docker-compose-infrastructure.yml logs --tail=50
+	@echo "\n=== Models Logs ==="
+	@docker compose -f docker-compose-models.yml logs --tail=50
+	@echo "\n=== App Logs ==="
+	@docker compose -f docker-compose-app.yml logs --tail=50
+
+# Utility commands
+down-all: stop-all
+
+ps:
+	@echo "=== Infrastructure Services ==="
+	@docker compose -f docker-compose-infrastructure.yml ps
+	@echo "\n=== Models Services ==="
+	@docker compose -f docker-compose-models.yml ps
+	@echo "\n=== App Services ==="
+	@docker compose -f docker-compose-app.yml ps
+
+status: ps
+
+# ============================================================================
+# Setup - Ensure scripts are executable (auto-run before start-all)
+# ============================================================================
+setup-scripts:
+	@chmod +x scripts/*.sh 2>/dev/null || true
+	@mkdir -p monitoring_results
+	@echo "✅ Scripts ready"
+
+# ============================================================================
+# Resource Monitoring - All-in-one container monitoring
+# ============================================================================
+
+## Monitor container với CSV export (Usage: make monitor [c=container] [d=duration] [i=interval])
+monitor: setup-scripts
+	@bash scripts/monitor-container.sh ${c:-mem0-server} ${d:-300} ${i:-1}
+
+## Quick stats snapshot (no CSV)
+monitor-quick:
+	@echo "📊 Quick stats for ${c:-mem0-server}:"
+	@docker stats ${c:-mem0-server} --no-stream --format "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}\t{{.NetIO}}\t{{.PIDs}}"
+
+## Monitor all project containers (REAL-TIME - runs continuously, Ctrl+C to stop)
+monitor-all:
+	@echo "📊 Real-time stats for project containers (Ctrl+C to stop):"
+	@CONTAINERS=$$(docker compose -f docker-compose-infrastructure.yml ps -q 2>/dev/null && \
+		docker compose -f docker-compose-models.yml ps -q 2>/dev/null && \
+		docker compose -f docker-compose-app.yml ps -q 2>/dev/null); \
+	if [ -n "$$CONTAINERS" ]; then \
+		docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}\t{{.NetIO}}" $$CONTAINERS; \
+	else \
+		echo "⚠️  No project containers running. Start services with: make start-all"; \
+	fi
+
+## Monitor all project containers (SNAPSHOT - one-time check)
+monitor-all-snapshot:
+	@echo "📊 Snapshot stats for project containers:"
+	@CONTAINERS=$$(docker compose -f docker-compose-infrastructure.yml ps -q 2>/dev/null && \
+		docker compose -f docker-compose-models.yml ps -q 2>/dev/null && \
+		docker compose -f docker-compose-app.yml ps -q 2>/dev/null); \
+	if [ -n "$$CONTAINERS" ]; then \
+		docker stats --no-stream --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}\t{{.NetIO}}" $$CONTAINERS; \
+	else \
+		echo "⚠️  No project containers running. Start services with: make start-all"; \
+	fi
+
+## Monitor with summary and recommendations
+monitor-summary: monitor-all
+	@echo ""
+	@echo "📈 Resource Usage Summary:"
+	@CONTAINERS=$$(docker compose -f docker-compose-infrastructure.yml ps -q 2>/dev/null && \
+		docker compose -f docker-compose-models.yml ps -q 2>/dev/null && \
+		docker compose -f docker-compose-app.yml ps -q 2>/dev/null); \
+	if [ -n "$$CONTAINERS" ]; then \
+		docker stats --no-stream --format "{{.Name}}|{{.CPUPerc}}|{{.MemPerc}}" $$CONTAINERS | \
+		awk -F'|' '{ \
+			cpu=$$2; gsub(/%/, "", cpu); \
+			mem=$$3; gsub(/%/, "", mem); \
+			if (cpu > 80) print "⚠️  " $$1 ": High CPU (" cpu "%)"; \
+			if (mem > 80) print "⚠️  " $$1 ": High Memory (" mem "%)"; \
+			cpu_total+=cpu; mem_total+=mem; count++ \
+		} END { \
+			if (count > 0) { \
+				print ""; \
+				print "📊 Average Usage:"; \
+				printf "   CPU: %.1f%%\n", cpu_total/count; \
+				printf "   Memory: %.1f%%\n", mem_total/count; \
+				print ""; \
+				print "💡 Recommendations:"; \
+				avg_cpu=cpu_total/count; avg_mem=mem_total/count; \
+				if (avg_cpu > 80) print "   - High CPU usage. Consider increasing CPU limits or reducing load"; \
+				if (avg_cpu < 50) print "   - Low CPU usage. System can handle more load"; \
+				if (avg_mem > 80) print "   - High Memory usage. Consider increasing memory limits"; \
+				if (avg_mem < 50) print "   - Memory usage is healthy"; \
+			} \
+		}'; \
+	fi
+
+## Stress test: monitor trong background + recommendations
+# Usage: make stress-test [c=container] [d=duration]
+stress-test: monitor
+	@echo ""
+	@echo "💡 Next steps:"
+	@echo "   - Run your stress test now (e.g., locust, k6, curl loop)"
+	@echo "   - Results will be saved to monitoring_results/"
+	@echo "   - Run 'make analyze-csv CSV_FILE=monitoring_results/stress_test_*.csv' to analyze"
+
+## Install monitor script globally for system-wide use
+monitor-install: setup-scripts
+	@echo "📦 Installing monitor script globally..."
+	@sudo install -m 755 scripts/monitor-container.sh /usr/local/bin/monitor-container 2>/dev/null || \
+		install -m 755 scripts/monitor-container.sh /usr/local/bin/monitor-container
+	@echo "✅ Installed to /usr/local/bin/monitor-container"
+	@echo "💡 Usage: monitor-container <container_name> [duration] [interval]"
+
+## Clean monitoring results
+monitor-clean:
+	@echo "🧹 Cleaning monitoring results..."
+	@rm -rf monitoring_results/*
+	@echo "✅ Cleaned"
+
+## Detailed resource analysis and worker recommendations
+analyze: setup-scripts
+	@./scripts/worker_calculator.sh
+
+## Legacy: Old monitor-stress command (redirects to new monitor)
+monitor-stress: monitor
+
+## Analyze CSV from stress test (Usage: make analyze-csv CSV_FILE=monitoring_results/stress_test_*.csv)
+analyze-csv:
+	@if [ -z "${CSV_FILE}" ]; then \
+		echo "❌ Error: CSV_FILE required. Usage: make analyze-csv CSV_FILE=path/to/file.csv"; \
+		exit 1; \
+	fi
+	@python3 scripts/analyze_csv.py ${CSV_FILE} --plot
+
+# Legacy commands (for backward compatibility)
+# build:
+# 	docker build -t mem0-api-server .
+
+# run_local:
+# 	docker run -p 8000:8000 -v $(shell pwd):/app mem0-api-server --env-file .env
+
+
+```
+
 # 1. Makefile for monitor
 
 ## 1.1 monitor-container.sh
