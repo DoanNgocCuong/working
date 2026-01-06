@@ -209,12 +209,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEM0.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production"
+              "title": "ALL IN ONE - MEM0"
             }
           }
         ],
@@ -250,7 +250,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: MCP",
+                "query": "file: mem0",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -339,13 +339,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEM0.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production"
+              "title": "Outline of ALL IN ONE - MEM0"
             }
           }
         ],
@@ -369,8 +369,12 @@
   },
   "active": "b833add28dea802c",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5 - Drive - TOÀN BỘ HIỂU NHẦM & SAI LẦM VỀ MCP SERVER.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY - MECE toàn bộ vấn đề MEMORY.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEM0.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/ALL IN ONE - MEM0 - Use Case.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - ALL IN ONE - MEMORY.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5 - Drive - TOÀN BỘ HIỂU NHẦM & SAI LẦM VỀ MCP SERVER.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/web/Cách thiết kế móc nối Frontend - Backend - 2024 code có Cursor version thời đầu thì AI code sửa lên sửa xuống - 2025 thì ko cần biết gì cứ bảo nó sửa là nó sửa cho luôn.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP/CKP 1.1 - Processing Cursor Demo.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/0_ARCHITECT/CKP/CKP 1.1 - Understanding Câu hỏi đơn giản và Demo Cursor.md",
@@ -391,10 +395,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 6 - Lỗi vòng lặp vô hạn trong RabbitMQ.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Bài 1 - 6 Steps Cú pháp - Check Metadata Table Col - Hash text Chiến lược trong Memory -.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/VẤN ĐỀ DATABASE bị thừa khoảng trắng khi nhập string = Dẫn đến ko query được.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 5 - RABBITMQ IMPLEMENTATION & CONCURRENCY OPTIMIZATION.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 4 - Xử lý vấn đề chồng lấn dữ liệu khi chạy nhiều THREAD (WORKER_CONCURRENCY_PER_WORKER) của 1 WORKER.   (WORKER_REPLICAS là số lượng  worker).md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 3 - Worker - Batch size concurrency - NHIỀU WORKER thì tốn tài nguyên hơn. NHIỀU MESSAGE TRONG 1 WORKER thì bị share tài nguyên nhiều hơn.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Database - Max connection.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322071142.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",

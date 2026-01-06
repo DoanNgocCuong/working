@@ -41,15 +41,15 @@ graph TD
 
 #### 1.1.1 Use Cases - Bộ Nhớ Làm Việc
 
-| # | Use Case | Mô tả Chi tiết | Ví dụ Thực tế | Vấn đề Thường gặp |
-|---|----------|---|---|---|
-| **WM-1** | **Giữ Ngữ cảnh Cuộc trò chuyện Hiện tại** | Lưu trữ tất cả thông tin cần thiết cho câu trả lời ngay lập tức | User hỏi: "Tôi muốn đặt vé máy bay từ Hà Nội đến TP.HCM. Chi phí bao nhiêu?" → Cần giữ: (Hà Nội, TP.HCM, vé máy bay, chi phí) | ❌ Quên mất một phần ngữ cảnh nếu ngữ cảnh dài |
-| **WM-2** | **Theo dõi Trạng thái Tác vụ Đang thực hiện** | Giữ lịch sử bước suy luận tạm thời | User yêu cầu: "Tính tổng 5 + 3, sau đó nhân với 2" → WM giữ: (5, 3, 8, 2, 16) | ❌ Nếu quá nhiều bước, WM bị quá tải |
-| **WM-3** | **Lưu trữ Các điểm Chú ý Hiện tại** | Ghi nhớ những gì hệ thống đang tập trung vào | User nói: "Bây giờ tôi muốn nói về Python, không phải JavaScript" → Focus: Python | ❌ Dễ mất focus nếu có nhiều chủ đề mới |
-| **WM-4** | **Quản lý Trạng thái Đa bước** | Giữ các biến tạm thời trong quá trình xử lý | Tác nhân thực hiện: Bước 1 → tính A=5, Bước 2 → tính B=A+3, Bước 3 → return B | ❌ Không đồng bộ nếu nhiều bước xảy ra song song |
-| **WM-5** | **Xử lý Token Ngữ cảnh** | Quản lý cửa sổ ngữ cảnh của LLM | ChatGPT giữ cuộc trò chuyện 4K tokens, tổng 128K tokens window | ❌ Khi vượt quá context window → mất dữ liệu cũ |
-| **WM-6** | **Giữ Kết quả Trung gian** | Lưu trữ tạm thời kết quả của các bước suy luận | Tính số lớn: AB × CD = (A×C×100 + ...) → giữ kết quả từng phần | ❌ Nếu bộ nhớ bị xóa → phải tính lại từ đầu |
-| **WM-7** | **Chỉ báo Tập trung Chọn lọc** | Biết những yếu tố nào quan trọng trong cuộc trò chuyện | "Tôi bảo tìm vé máy bay, không phải khách sạn" → tập trung vào: máy bay | ❌ Nếu chỉ báo bị lẫn lộn → sai kết quả |
+| #        | Use Case                                      | Mô tả Chi tiết                                                  | Ví dụ Thực tế                                                                                                                 | Vấn đề Thường gặp                               |
+| -------- | --------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| **WM-1** | **Giữ Ngữ cảnh Cuộc trò chuyện Hiện tại**     | Lưu trữ tất cả thông tin cần thiết cho câu trả lời ngay lập tức | User hỏi: "Tôi muốn đặt vé máy bay từ Hà Nội đến TP.HCM. Chi phí bao nhiêu?" → Cần giữ: (Hà Nội, TP.HCM, vé máy bay, chi phí) | ❌ Quên mất một phần ngữ cảnh nếu ngữ cảnh dài   |
+| **WM-2** | **Theo dõi Trạng thái Tác vụ Đang thực hiện** | Giữ lịch sử bước suy luận tạm thời                              | User yêu cầu: "Tính tổng 5 + 3, sau đó nhân với 2" → WM giữ: (5, 3, 8, 2, 16)                                                 | ❌ Nếu quá nhiều bước, WM bị quá tải             |
+| **WM-3** | **Lưu trữ Các điểm Chú ý Hiện tại**           | Ghi nhớ những gì hệ thống đang tập trung vào                    | User nói: "Bây giờ tôi muốn nói về Python, không phải JavaScript" → Focus: Python                                             | ❌ Dễ mất focus nếu có nhiều chủ đề mới          |
+| **WM-4** | **Quản lý Trạng thái Đa bước**                | Giữ các biến tạm thời trong quá trình xử lý                     | Tác nhân thực hiện: Bước 1 → tính A=5, Bước 2 → tính B=A+3, Bước 3 → return B                                                 | ❌ Không đồng bộ nếu nhiều bước xảy ra song song |
+| **WM-5** | **Xử lý Token Ngữ cảnh**                      | Quản lý cửa sổ ngữ cảnh của LLM                                 | ChatGPT giữ cuộc trò chuyện 4K tokens, tổng 128K tokens window                                                                | ❌ Khi vượt quá context window → mất dữ liệu cũ  |
+| **WM-6** | **Giữ Kết quả Trung gian**                    | Lưu trữ tạm thời kết quả của các bước suy luận                  | Tính số lớn: AB × CD = (A×C×100 + ...) → giữ kết quả từng phần                                                                | ❌ Nếu bộ nhớ bị xóa → phải tính lại từ đầu      |
+| **WM-7** | **Chỉ báo Tập trung Chọn lọc**                | Biết những yếu tố nào quan trọng trong cuộc trò chuyện          | "Tôi bảo tìm vé máy bay, không phải khách sạn" → tập trung vào: máy bay                                                       | ❌ Nếu chỉ báo bị lẫn lộn → sai kết quả          |
 
 **Vấn đề Chính trong WM:**
 
