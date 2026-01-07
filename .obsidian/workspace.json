@@ -195,16 +195,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/3 - Drive MCP.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 - Drive MCP"
+              "title": "5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production"
+            }
+          },
+          {
+            "id": "7b929b0df7de1f8c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 13.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 13"
             }
           }
         ],
-        "currentTab": 13
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -236,7 +250,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: Drive",
+                "query": "file: MCP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -326,13 +340,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/3 - Drive MCP.md",
+                "file": "Untitled 13.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 3 - Drive MCP"
+              "title": "Outline of Untitled 13"
             }
           }
         ],
@@ -354,8 +368,11 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "9396bf5584932334",
+  "active": "7b929b0df7de1f8c",
   "lastOpenFiles": [
+    "Untitled 13.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/3 - Drive MCP.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.20 Network - Subdomain free.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.20 Use case docker compose (infrastructure, models, app, worker).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.18_DockerErrorKyTuLaTrongEnv.md",
@@ -367,7 +384,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.19 - Docker - Complete Architecture Patterns Taxonomy - Hybrid app with externalized infrastructure 1.md",
     "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
     "BUSINESS/1_PRODUCT/4_FinAI/Technical/CKP - v1/2.0 Folder Structure.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5 - Drive - TOÀN BỘ HIỂU NHẦM & SAI LẦM VỀ MCP SERVER.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/4. Bash Scripts - Buổi 4 Machine Learning - Bash Script - Makefile - CronJob - Airflow - Dagster - Flyte - Học đến 22h30 - viết Summary Discussion đến 23h30.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3.1 Optimization - Embedding - for tải cao.md",
@@ -380,8 +396,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/CKP/CKP 3.1 Cách dựng Jina-embedding-v3 - Best Practices.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/Use case đánh giá Mem0 - OSS bằng Manus.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/link - mem0.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/8. MANUS - Prompt Giải bài.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/0. Prompting Builder.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322071142.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",
