@@ -209,12 +209,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/CKP - 5.2 - Agent làm sao để biết tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài"
+              "title": "CKP - 5.2 - Agent làm sao để biết tools"
             }
           }
         ],
@@ -250,7 +250,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: vấn ",
+                "query": "file: MCP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -271,8 +271,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -340,13 +339,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/1_PRODUCT/4_FinAI/1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/CKP - 5.2 - Agent làm sao để biết tools.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài"
+              "title": "Outline of CKP - 5.2 - Agent làm sao để biết tools"
             }
           }
         ],
@@ -370,13 +369,15 @@
   },
   "active": "7b929b0df7de1f8c",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/CKP - 5.2 - Agent làm sao để biết tools.md",
+    "BUSINESS/1_PRODUCT/4_FinAI/1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
     "BUSINESS/1_PRODUCT/4_FinAI/1.3 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.13 VẤN ĐỀ API KEY BỊ CHỒNG LẤN TRONG DOCKER.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 10 - Sai lầm không hiểu rõ RabbitMQ, Redis, Worker so với kiến trúc Message Bus.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 9 - Use Case Context Handling - 30122025 1.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Redis.md",
     "Untitled 13.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/3 - Drive MCP.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.20 Network - Subdomain free.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.20 Use case docker compose (infrastructure, models, app, worker).md",
@@ -394,8 +395,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/Embedding model/3.1 Optimization - Embedding - for tải cao.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Evaluation Memory.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY - MECE toàn bộ vấn đề MEMORY.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - Benchmark Memory - Build bộ benchmark.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - Evaluation Mem0.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322071142.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",
