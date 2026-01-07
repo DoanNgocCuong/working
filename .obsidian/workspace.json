@@ -209,12 +209,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 10 - Use Case Context Handling - 30122025 1 1.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RabbitMQ 10 - Use Case Context Handling - 30122025 1 1"
+              "title": "1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài"
             }
           }
         ],
@@ -250,7 +250,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: rab",
+                "query": "file: vấn ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -271,7 +271,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -339,13 +340,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 10 - Use Case Context Handling - 30122025 1 1.md",
+                "file": "BUSINESS/1_PRODUCT/4_FinAI/1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of RabbitMQ 10 - Use Case Context Handling - 30122025 1 1"
+              "title": "Outline of 1.4 CEO - Vấn đề CEO cần nghiên cứu khi xác định sản phẩm đường dài"
             }
           }
         ],
@@ -369,8 +370,10 @@
   },
   "active": "7b929b0df7de1f8c",
   "lastOpenFiles": [
+    "BUSINESS/1_PRODUCT/4_FinAI/1.3 Các vấn đề cần nghiên cứu của Product Manager khi bắt đầu sản phẩm mới (finAI Agentic Browser).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.13 VẤN ĐỀ API KEY BỊ CHỒNG LẤN TRONG DOCKER.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 10 - Sai lầm không hiểu rõ RabbitMQ, Redis, Worker so với kiến trúc Message Bus.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 9 - Use Case Context Handling - 30122025 1.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 10 - Use Case Context Handling - 30122025 1 1.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/Redis.md",
     "Untitled 13.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5.1 - MCP server deploy - Cách hoạt động của các mcp server có sănx - Chi tiết cách best practices deploy MCP server có sẵn lên production.md",
@@ -393,8 +396,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY - MECE toàn bộ vấn đề MEMORY.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - Benchmark Memory - Build bộ benchmark.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - Evaluation Mem0.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEM0.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/ALL IN ONE - MEM0 - Use Case.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322071142.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",

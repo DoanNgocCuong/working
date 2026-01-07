@@ -1,3 +1,10 @@
+
+# Vấn đề: 
+1. Ko hiểu rõ luồng RabbitMQ, Redis, Worker so với kiến trúc Message Bus
+2. Luồng hiện tại ???? hiểu rõ các con trong message bus, nhưng trong code như nào thì lại phải tìm ? 
+
+---
+
 Library
 
 [
