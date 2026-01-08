@@ -278,7 +278,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: worker",
+                "query": "file: prod",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -299,7 +299,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -395,7 +396,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "c71c8e1fe9674f77",
+  "active": "db02c5a91e7f8e1e",
   "lastOpenFiles": [
     "Untitled 15.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.3 worker - Khi nào nên tăng - worker với IO bound và CPU bound.md",
