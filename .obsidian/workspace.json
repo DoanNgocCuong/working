@@ -237,12 +237,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled 15.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.19 - Docker - Complete Architecture Patterns Taxonomy - Hybrid app with externalized infrastructure 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled 15"
+              "title": "2.19 - Docker - Complete Architecture Patterns Taxonomy - Hybrid app with externalized infrastructure 1"
             }
           }
         ],
@@ -278,7 +278,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: prod",
+                "query": "file: infa",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -368,13 +368,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled 15.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.19 - Docker - Complete Architecture Patterns Taxonomy - Hybrid app with externalized infrastructure 1.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled 15"
+              "title": "Outline of 2.19 - Docker - Complete Architecture Patterns Taxonomy - Hybrid app with externalized infrastructure 1"
             }
           }
         ],
@@ -398,6 +398,8 @@
   },
   "active": "db02c5a91e7f8e1e",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.18 Mount Docker.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Use case - network docker design.md",
     "Untitled 15.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.3 worker - Khi nào nên tăng - worker với IO bound và CPU bound.md",
     "Untitled 14.md",
@@ -422,8 +424,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Benchmark Memory.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.16 Docker Hết dải network khả dụng, cần tạo subnet mới và  Pool overlaps with other one on this address space (bị chồng lấn subnet), cần dùng subnet mới.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/DOCKER/2.19 - Docker - Complete Architecture Patterns Taxonomy - Hybrid app with externalized infrastructure.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. FSDS/4 - Use case - Template Monitoring - Makefile.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322071142.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",
