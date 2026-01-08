@@ -1,5 +1,2 @@
-1. Hiện tại: stress test 100 CCU dùng = 100% CPU, use 2.5/4GB => Giảm 4 cores, 6GB => 1 - 2 cores và 4G là ngon.  
-
-2. Hiện tại: Embedding tiêu thụ GPU thấp chỉ khoảng 10% => Tăng batch size tu 64 -> lên 128 và 256
-
-3. I/O-bound hoặc GPU-bound workload (embedding): OMP_NUM_THREADS = CPU cores hoặc ít hơn => Do cores giảm về 2 => OMP_NUM_THREADS từ 4 -> 2
+- 1. Cần tăng độ khó cho các đoạn của cột `message` của file: memories_v2.xlxs 
+- 2. Update: expected_output , update cột này để đưa ra chính xác những phần -> vào memories mà bạn kì vọng kết quả trả ra 
