@@ -133,13 +133,13 @@ All optimizations have been tested and validated. System is production-ready.
 
 ## 🎯 Tổng Quan Evolution
 
-| Version | Mô Tả | Max CCU | RPS | P99 Latency | CPU mem0-server | Status |
-|---------|-------|---------|-----|-------------|-----------------|--------|
-| **CKP2 (Ban đầu)** | Initial setup | ~10-30 | ~6 | N/A | 223% (treo) | 🔴 Unstable |
-| **CKP3.3.1** | Sau fix telemetry | 30+ | ~20-21 | N/A | 118% | 🟡 Stable |
-| **CKP3.3.2** | Telemetry complete disable | 100 | 35 | 2000ms | 110% | 🟡 Stable |
-| **CKP3.4** | 2 workers + batch-size 256 | 100 | 42.5 | 700ms | 158% (2 workers) | 🟢 Optimized |
-| **CKP3.5 (Final)** | Batch-size 128 optimized | 100 | ~42.5 | 700ms | 78.6% (1 worker) | 🟢 Production Ready |
+| Version            | Mô Tả                      | Max CCU | RPS    | P99 Latency | CPU mem0-server  | Status              |
+| ------------------ | -------------------------- | ------- | ------ | ----------- | ---------------- | ------------------- |
+| **CKP2 (Ban đầu)** | Initial setup              | ~10-30  | ~6     | N/A         | 223% (treo)      | 🔴 Unstable         |
+| **CKP3.3.1**       | Sau fix telemetry          | 30+     | ~20-21 | N/A         | 118%             | 🟡 Stable           |
+| **CKP3.3.2**       | Telemetry complete disable | 100     | 35     | 2000ms      | 110%             | 🟡 Stable           |
+| **CKP3.4**         | 2 workers + batch-size 256 | 100     | 42.5   | 700ms       | 158% (2 workers) | 🟢 Optimized        |
+| **CKP3.5 (Final)** | Batch-size 128 optimized   | 100     | ~42.5  | 700ms       | 78.6% (1 worker) | 🟢 Production Ready |
 
 ---
 
