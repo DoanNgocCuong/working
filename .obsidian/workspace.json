@@ -285,7 +285,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -381,7 +382,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "b9faf13133567695",
+  "active": "db02c5a91e7f8e1e",
   "lastOpenFiles": [
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/5. Prompt - Prompt Tuning.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/4.0 Prompting/7. Routing.md",
