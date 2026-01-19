@@ -236,7 +236,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: prompt",
+                "query": "file: lương",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -354,7 +354,7 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "9396bf5584932334",
+  "active": "db02c5a91e7f8e1e",
   "lastOpenFiles": [
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.3 worker - Khi nào nên tăng - worker với IO bound và CPU bound.md",
     "2026-01-16.md",
