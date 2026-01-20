@@ -195,12 +195,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Evaluation Memory.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/6. Câu hỏi về 3B - VRAM của 1 bạn.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Evaluation Memory"
+              "title": "6. Câu hỏi về 3B - VRAM của 1 bạn"
             }
           }
         ],
@@ -236,7 +236,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: mem",
+                "query": "file: vllm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -325,13 +325,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Evaluation Memory.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/6. Câu hỏi về 3B - VRAM của 1 bạn.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Evaluation Memory"
+              "title": "Outline of 6. Câu hỏi về 3B - VRAM của 1 bạn"
             }
           }
         ],
@@ -355,6 +355,10 @@
   },
   "active": "9396bf5584932334",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/6. vllm -kv - cache.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/6. Câu hỏi về 3B - VRAM của 1 bạn.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/LLMs/2. vllm - và vấn đề môi trường.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Evaluation Memory.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/link - mem0.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - ALL IN ONE - MEMORY.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY - MECE toàn bộ vấn đề MEMORY.md",
@@ -377,10 +381,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Use case optimize mem0.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/6 - Ghi chép tay về MCP.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/5 - Drive - TOÀN BỘ HIỂU NHẦM & SAI LẦM VỀ MCP SERVER.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/3 - Drive MCP.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/3 - ACTION/mcp/1 - Lý thuyết - MCP for AI Engineer.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - SOFTWARE DESIGN DOCUMENT (SDD) - ULTIMATE TEMPLATE.md",
-    "BUSINESS/1_PRODUCT/2_TECHNICAL_Rút ngắn thời gian làm việc giữa2 team Product và Technical/2.0 v4 Output - High Level Design High Architect - Folder Structure - Data Flows+ Source Codes.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322071142.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3. Cloud/image/Pasted image 20260103234209.png",
