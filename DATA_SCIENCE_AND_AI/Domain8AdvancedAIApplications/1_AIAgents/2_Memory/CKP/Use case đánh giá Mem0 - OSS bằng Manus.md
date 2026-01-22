@@ -332,7 +332,16 @@ Vui lòng cung cấp đánh giá của bạn theo đúng định dạng JSON dư
 
 1. Extract memories: 
    +, Response Time: P95 12.4s, P99 23.7s (Số turns: P95 21 turns, P99 58.96s)
-   +, Độ chính xác tổng quan. Cho đi qua 1 prompt và đánh giá từng dòng extract. 
+   +, Độ chính xác tổng quan. 
+   Đánh giá dựa trên 5 tiêu chí 
++, 1. Accuracy (Độ chính xác): Memory có khớp 100% với thông tin gốc trong hội thoại không? Không sai lệch về fact, con số, tên riêng, mức độ chắc chắn, hay chủ thể.[^1][^2]
++, 2. Completeness (Độ đầy đủ): Có bỏ sót thông tin quan trọng không? Cần capture đủ: sở thích, mục tiêu, trạng thái hiện tại, kỹ năng, mối quan hệ, constraints, và cả thông tin từ assistant.[^3][^1]
++, 3. Relevance (Độ liên quan): Memory có thực sự hữu ích cho cá nhân hóa trong tương lai không? Phải là chi tiết "đắt giá", không phải câu xã giao vô nghĩa.[^2][^4][^5]
++, 4. Clarity (Độ rõ ràng): Memory có rõ ràng, độc lập, đầy đủ chủ-vị-tân không? Không chứa đại từ mơ hồ ("nó", "cái đó"), tự giải thích được khi đọc đơn lẻ.[^1][^2]
++, 5. No Hallucination (Không bịa đặt): Mọi thông tin phải có nguồn gốc rõ ràng từ conversation log, không suy diễn quá xa hay thêm thắt ý kiến của hệ thống.[^2][^3][^1]
+)
+   
+   Cách làm: Cho đi qua 1 prompt và đánh giá từng dòng extract. 
    (Nếu cẩn thận hơn thì phân loại thành các nhóm rồi xử lý: ví dụ nhóm memories bị rỗng đúng, rỗng sai. memories ko bị rỗng thì dùng prompt đánh giá), .... 
    
 > +, Ngoài chỉ số đánh giá bằng LLM, có thể sử dụng các chỉ số truyền thống khác của NLP 
@@ -340,10 +349,11 @@ Vui lòng cung cấp đánh giá của bạn theo đúng định dạng JSON dư
    
 
 
-2. Search: 
+3. Search: 
    +, Response Time: P95 0.323 s, P99 0.383 s
    +, Độ chính xác: 
    Hiện tại toàn bộ QUERY đều là : `user favorite (movie, character, pet, activity, friend, music, travel, toy)...`
+=> Dùng Prompt để đánh giá kết quả của việc search
 
 Chuẩn xác hơn, riêng phần này 
 
