@@ -211,14 +211,14 @@ Memory Item:
 
 #### A. **Metric Định Lượng**
 
-| Metric | Định Nghĩa | Target | Cách Đo |
-|--------|-----------|--------|---------|
-| **Recall** | % thông tin cần thiết được ghi nhận | >95% | So sánh memory với phân tích thủ công |
-| **Precision** | % thông tin được ghi nhận là chính xác | >95% | Review manual, kiểm tra conflict |
-| **Completeness** | % 7 khía cạnh được ghi nhận đầy đủ | >90% | Kiểm tra từng khía cạnh |
-| **Accuracy** | % thông tin không có conflict/mâu thuẫn | >98% | Kiểm tra logic, xác thực |
-| **Freshness** | % thông tin được cập nhật trong 7 ngày | >80% | Kiểm tra timestamp |
-| **Deduplication** | % items trùng lặp được phát hiện | >95% | Kiểm tra trùng lặp |
+| Metric            | Định Nghĩa                              | Target | Cách Đo                               |
+| ----------------- | --------------------------------------- | ------ | ------------------------------------- |
+| **Recall**        | % thông tin cần thiết được ghi nhận     | >95%   | So sánh memory với phân tích thủ công |
+| **Precision**     | % thông tin được ghi nhận là chính xác  | >95%   | Review manual, kiểm tra conflict      |
+| **Completeness**  | % 7 khía cạnh được ghi nhận đầy đủ      | >90%   | Kiểm tra từng khía cạnh               |
+| **Accuracy**      | % thông tin không có conflict/mâu thuẫn | >98%   | Kiểm tra logic, xác thực              |
+| **Freshness**     | % thông tin được cập nhật trong 7 ngày  | >80%   | Kiểm tra timestamp                    |
+| **Deduplication** | % items trùng lặp được phát hiện        | >95%   | Kiểm tra trùng lặp                    |
 
 #### B. **Metric Định Tính**
 

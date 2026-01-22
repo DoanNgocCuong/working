@@ -388,3 +388,13 @@ https://docs.google.com/spreadsheets/d/1oeyyZmxuy0FahB-yda51YPeK982qZZ65blqJkRFz
 
 ---
 
+
+
+
+---
+
+# Đánh giá sau khi lên production 
+
+
+![](image/Pasted%20image%2020260122184651.png)
+

@@ -22,13 +22,13 @@ Dưới đây là bảng so sánh chi tiết và cách đánh giá trên LongMem
 
 ### 1. Bảng So Sánh Trực Tiếp: LOCOMO vs. LongMemEval
 
-| Tiêu chí | LOCOMO (Mem0 dùng) | LongMemEval (Zep/Mới dùng) |
-| :-- | :-- | :-- |
-| **Độ dài lịch sử** | ~26k tokens (10 hội thoại dài). | **~115k tokens** (LongMemEval_S) đến **1.5M tokens** (LongMemEval_M). |
-| **Độ phức tạp** | Tập trung vào *conversational recall*. Khá "dễ thở" với các LLM cửa sổ context lớn hiện nay. | Rất khó. Thiết kế để **đánh lừa** hệ thống memory bằng thông tin gây nhiễu và khoảng cách thời gian lớn. |
-| **Loại câu hỏi (Tasks)** | 4 loại: Single-hop, Multi-hop, Temporal, Open-domain. | **5 loại chính:** Info Extraction, Multi-session Reasoning, Temporal Reasoning, **Knowledge Updates** (quan trọng!), Abstention (biết nói "không biết"). |
-| **Điểm yếu** | Zep chỉ trích LOCOMO là "quá ngắn" và không đủ để test giới hạn của RAG/Vector DB. | Cấu trúc dữ liệu JSON rất phức tạp (~300MB), khó setup hơn. |
-| **Ai đang dùng?** | Mem0, Cognee. | Zep, MemGPT (Letta), LiCoMemory. |
+| Tiêu chí                 | LOCOMO (Mem0 dùng)                                                                           | LongMemEval (Zep/Mới dùng)                                                                                                                               |
+| :----------------------- | :------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Độ dài lịch sử**       | ~26k tokens (10 hội thoại dài).                                                              | **~115k tokens** (LongMemEval_S) đến **1.5M tokens** (LongMemEval_M).                                                                                    |
+| **Độ phức tạp**          | Tập trung vào *conversational recall*. Khá "dễ thở" với các LLM cửa sổ context lớn hiện nay. | Rất khó. Thiết kế để **đánh lừa** hệ thống memory bằng thông tin gây nhiễu và khoảng cách thời gian lớn.                                                 |
+| **Loại câu hỏi (Tasks)** | 4 loại: Single-hop, Multi-hop, Temporal, Open-domain.                                        | **5 loại chính:** Info Extraction, Multi-session Reasoning, Temporal Reasoning, **Knowledge Updates** (quan trọng!), Abstention (biết nói "không biết"). |
+| **Điểm yếu**             | Zep chỉ trích LOCOMO là "quá ngắn" và không đủ để test giới hạn của RAG/Vector DB.           | Cấu trúc dữ liệu JSON rất phức tạp (~300MB), khó setup hơn.                                                                                              |
+| **Ai đang dùng?**        | Mem0, Cognee.                                                                                | Zep, MemGPT (Letta), LiCoMemory.                                                                                                                         |
 
 **Tóm lại:**
 
