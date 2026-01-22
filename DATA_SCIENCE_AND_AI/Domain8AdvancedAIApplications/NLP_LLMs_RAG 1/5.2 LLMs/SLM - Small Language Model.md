@@ -79,3 +79,10 @@ curl --location 'http://103.253.20.30:30030/v1/chat/completions' \
     "max_tokens": 1, 
     "stop": ["\n", " ", ".", ","]
   }'
+
+---
+# Trên dev con Qwen 2.5 - 1.5B mình host chiếm tới 5GB VRAM => Sau giảm: gpu-memory-utilization 0.2 về 0.1 thì giảm được 1 nửa (CCU sẽ khoảng 15)  
+
+> a Trúc support việc nhắc giảm GPU VRAM chiếm dụng ngày 22/01/2026
+> woa, sao a Trúc tính toán dung lượng VRAM model nhanh phết nhỉ . 
+> Mình có muốn có năng lực đó không và bằng cách nào. 
