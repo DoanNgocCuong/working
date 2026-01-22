@@ -357,10 +357,14 @@ Vui lòng cung cấp đánh giá của bạn theo đúng định dạng JSON dư
 
 Chuẩn xác hơn, riêng phần này 
 
-Cách 1: Tạo ra ground truth trước bằng LLM.  
-So sánh kết quả chạy với ground truth  
-  
-Cách 2: Đem kết quả chạy đánh giá trực tiếp với input bằng LLM
+---
+
+
+Cách 1: Tạo ra ground truth trước bằng human.  
+So sánh kết quả chạy được với ground truth bằng NLP truyền thống/LLM/human
+
+Cách 2: Đem kết quả chạy được -> đánh giá trực tiếp với input bằng LLM
+(ở cách 1: nếu dùng LLM để gen ground truth, xong sau đó đem so sánh ground truth đó với kết quả chạy được thì thà rằng đem kết quả chạy được so sánh với input gốc còn hơn, vì đỡ bị 2 lần LLM) 
 
 
 ---
