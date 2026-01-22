@@ -357,7 +357,10 @@ Vui lòng cung cấp đánh giá của bạn theo đúng định dạng JSON dư
 
 Chuẩn xác hơn, riêng phần này 
 
-
+Cách 1: Tạo ra ground truth trước bằng LLM.  
+So sánh kết quả chạy với ground truth  
+  
+Cách 2: Đem kết quả chạy đánh giá trực tiếp với input bằng LLM
 
 
 ---
@@ -378,3 +381,6 @@ https://docs.google.com/spreadsheets/d/1oeyyZmxuy0FahB-yda51YPeK982qZZ65blqJkRFz
 # Sau khi lên production: 
 
 ![1769051741388](image/README/1769051741388.png)
+
+---
+

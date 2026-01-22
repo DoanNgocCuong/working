@@ -195,12 +195,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/SLM - Small Language Model.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/Use case đánh giá Mem0 - OSS bằng Manus.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SLM - Small Language Model"
+              "title": "Use case đánh giá Mem0 - OSS bằng Manus"
             }
           }
         ],
@@ -236,7 +236,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: SLM",
+                "query": "file: MEM0",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -257,8 +257,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -326,13 +325,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/SLM - Small Language Model.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/Use case đánh giá Mem0 - OSS bằng Manus.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of SLM - Small Language Model"
+              "title": "Outline of Use case đánh giá Mem0 - OSS bằng Manus"
             }
           }
         ],
@@ -356,6 +355,12 @@
   },
   "active": "9396bf5584932334",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - Evaluation Mem0.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - Benchmark Memory - Build bộ benchmark.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Benchmark Memory.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Use Cases - Memory Robot.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Use case optimize mem0.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/SLM - Small Language Model.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/SLM - 1 bài báo về SLM.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/Use case đánh giá Mem0 - OSS bằng Manus.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/image/README/1769051845334.png",
@@ -391,12 +396,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long term Memory Architechture - T6_2025/0. Đồ Án.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long term Memory Architechture - T6_2025",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/CKP - Step 1 - INPUT - Deep Research Perflexity + Gemini + Manus Lite = Mục đích vét cạn và lấy thật nhiều nguồn.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Step 4 - Report.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Step 2 - SDD.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Step 2 - Output 3 - Caching Updated - Genspark siêu thông minh.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Step 2 - Input dùng mem0 Perflexity.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP/CKP - Mem0 - Implement Mem0 selfhost.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP",
