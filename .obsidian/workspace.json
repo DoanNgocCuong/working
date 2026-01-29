@@ -193,14 +193,12 @@
             "id": "9396bf5584932334",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "2026-01-27.md",
-                "mode": "source",
-                "source": false
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/CKP/image/Pasted image 20260129163500.png"
               },
-              "icon": "lucide-file",
-              "title": "2026-01-27"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260129163500"
             }
           }
         ],
@@ -236,7 +234,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: mem0",
+                "query": "file: vllm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -325,13 +323,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2026-01-27.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/CKP/image/Pasted image 20260129163500.png",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-01-27"
+              "title": "Outline of Pasted image 20260129163500"
             }
           }
         ],
@@ -353,10 +351,18 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "9396bf5584932334",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - Evaluation Mem0.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/CKP/Use case.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/CKP/image/Pasted image 20260129163500.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/CKP/image",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/1 - Tối ưu level 1 Serving.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/CKP",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/vLLM Production Stack - Reference Stack cho Production.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/(Vnese)VLLMs - Production Quality for vLLM-Based LLM Serving - A World-Class Guide 1.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/(Eng)VLLMs - Production Quality for vLLM-Based LLM Serving - A World-Class Guide.md",
     "2026-01-27.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/CKP - Evaluation Mem0.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY - MECE toàn bộ vấn đề MEMORY.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/ALL IN ONE - MEMORY - Thực tế từ log.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/ALL IN ONE - MEM0 - Use Case.md",
@@ -385,22 +391,13 @@
     "BUSINESS/0_CON NGƯỜI - BÀI TOÁN QUAN TRỌNG NHẤT CẦN GIẢI/Cấu trúc chuẩn và MECE cho việc check 1 người và phát triển bản thân..md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322071142.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322063052.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments/Pasted image 20250322060614.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/ROBOT - Long term memory -.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/Read 3 - Graph.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/Read 2.2  Relaited của LongMemEval và Reflective Memory Manager RMM.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/Read 2.0 CompAct Compressing Retrieved Documents Actively for Question Answering.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/Read 2' Dataset LongMemEval.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/Read 1 -  Zep - A Temporal Knowledge Graph Architecture for Agent Memory - 2501.13956.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/Read 0. Reference.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025/attachments",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long Term Memory User - T6_2025",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH/1. Long term Memory Architechture - T6_2025",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP/CKP - Step 1 - INPUT - DEEP RESEARCH",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 2 - Mem0/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 1 - Robot Pika/CKP",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 3 - Mem0 is remote services",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory 2/Phần 1 - Memory Chung/Cách 2 - Mem0",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/RAG 1/Search/Untitled.canvas",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]
