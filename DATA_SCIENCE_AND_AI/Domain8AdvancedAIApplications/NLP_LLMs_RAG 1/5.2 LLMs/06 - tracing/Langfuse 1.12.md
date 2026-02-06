@@ -20,17 +20,12 @@ So với cách triển khai siêu đơn giản dùng @observer => Cần bạn gi
 
 ---
 
-# Các sai lầm mình từng mắc phải khi làm việc với Langfuse
+# 1. Các sai lầm mình từng mắc phải khi làm việc với Langfuse
 
 
-## Sai lầm 1: Khởi tạo mới Langfuse mỗi lần dùng => Gây overhead 0.1s  (Khởi tạo trước Langfuse 1 lần các lần sau chỉ việc dùng giúp giảm response time xuống 0.01s)
+## 1.1 Sai lầm 1: Khởi tạo mới Langfuse mỗi lần dùng => Gây overhead 0.1s  (Khởi tạo trước Langfuse 1 lần các lần sau chỉ việc dùng giúp giảm response time xuống 0.002s - 0.01s)
 
-
-#### Kiểm chứng trên app thực tế 
-
-
-
-#### Kiểm chứng độc lập
+### 1.1.1 Kiểm chứng độc lập
 
 1. test_trace_no_create_langfuse_client.py
 
@@ -135,4 +130,34 @@ if __name__ == "__main__":
 
 => Nguyên nhân lớn khiến ban đầu chậm là do không khởi tạo langfuse_client trước, để decorator tự lo client mỗi lần.
 
+### 1.1.2 Kiểm chứng thực tế 
+
 ---
+
+
+## 1.2. SAI LẦM 2: TRACE QUÁ NHIỀU NẤC KHÔNG CẦN THIẾT (nấc lồng nhau)
+
+
+Link chi tiết: D:\GIT\robot-lesson-workflow\utils\docs\Stage1_OverheadOfLangFuse\log_trace_image\log2_Conclusion_0.01s_0.02s_overhead.md  + D:\GIT\robot-lesson-workflow\utils\docs\Stage1_OverheadOfLangFuse\log_trace_image\log3_Deployv1_OverheadLangfuse_20112025.md
+
+![](image/Pasted%20image%2020260206175911.png)
+
+![](image/Pasted%20image%2020260206175920.png)
+
+### 1.2.1 Kiểm tra các nấc lồng nhau ta đưa ra kết luận: 
+
+```
+1. Là trace ở hàm con được trace mỗi hàm dôi lên 0.002s - 0.01s 
+2. Là việc trace ở hàm cha sẽ bị dôi 0.02s so với tổng của việc cộng time của các thành phần con (kể cả con được trace hay không được trace) 
+```
+
+
+## 1.3 Sai lầm 3: Để capture_input=True, capture_input=False với JSON quá dài. 
+
+```
+1. Là trace ở hàm con được trace mỗi hàm dôi lên 0.002s - 0.01s 
+2. Là việc trace ở hàm cha sẽ bị dôi 0.02s so với tổng của việc cộng time của các thành phần con (kể cả con được trace hay không được trace) 
+3. Chỉ load data cần thiết bằng việc tắt capture_input hoặc capture_output = False 
+   Hoặc chỉ load data cần thiết bằng cách dùng ...
+   
+```
