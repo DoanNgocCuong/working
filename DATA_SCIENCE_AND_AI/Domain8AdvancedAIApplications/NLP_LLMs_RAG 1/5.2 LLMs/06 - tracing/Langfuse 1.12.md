@@ -158,6 +158,25 @@ Link chi tiết: D:\GIT\robot-lesson-workflow\utils\docs\Stage1_OverheadOfLangFu
 1. Là trace ở hàm con được trace mỗi hàm dôi lên 0.002s - 0.01s 
 2. Là việc trace ở hàm cha sẽ bị dôi 0.02s so với tổng của việc cộng time của các thành phần con (kể cả con được trace hay không được trace) 
 3. Chỉ load data cần thiết bằng việc tắt capture_input hoặc capture_output = False 
-   Hoặc chỉ load data cần thiết bằng cách dùng ...
+   Hoặc chỉ load data cần thiết bằng cách đặt nó vào metadata
    
 ```
+
+Ví dụ: Trong `robot_v2_services.webhook_service`
+- Ở đầu hàm `webhook_service`, ta sẽ đặt capture_input=False, **ghi metadata theo conversation**:
+
+```1242:1251:app/api/services/robot_v2_services.py
+@observe(name="robot-v2.webhook-service", capture_input=False, capture_output=True)
+async def webhook(self, payload: Dict[str, Any]) -> Dict[str, Any]:
+...
+if langfuse_client:
+    metadata = {
+        "conversation_id": conversation_id,
+        "message": message[:200] if message else "",
+        "has_audio_url": bool(audio_url),
+        "audio_url": audio_url[:100] if audio_url else ""
+    }
+    langfuse_client.update_current_span(metadata=metadata)
+```
+
+→ Ý tưởng: chỉ đính kèm những trường “nhẹ” nhưng đủ để debug (ID + message tóm tắt + thông tin audio), không nhét cả payload to vào trace để tránh overhead & rò rỉ dữ liệu.
