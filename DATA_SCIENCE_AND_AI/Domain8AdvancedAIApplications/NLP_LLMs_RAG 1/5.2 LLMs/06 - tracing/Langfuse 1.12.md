@@ -180,3 +180,24 @@ if langfuse_client:
 ```
 
 → Ý tưởng: chỉ đính kèm những trường “nhẹ” nhưng đủ để debug (ID + message tóm tắt + thông tin audio), không nhét cả payload to vào trace để tránh overhead & rò rỉ dữ liệu.
+
+
+
+
+
+#### Bảng : update_current_trace, update_current_span, update_current_generation
+
+|                | `update_current_trace`                    | `update_current_span`                        | `update_current_generation`              |
+| -------------- | ----------------------------------------- | -------------------------------------------- | ---------------------------------------- |
+| **Cấp**        | Trace (root)                              | Span/Observation (bước con)                  | Generation (LLM call trong span)         |
+| **Hiển thị**   | Metadata của trace trên UI                | Metadata của span/observation                | Model, usage, cost trên Generation       |
+| **Filter**     | Filter theo trace (vd: `conversation_id`) | Xem chi tiết từng bước                       | Xem cost, token theo từng LLM call       |
+| **Vị trí gọi** | Thường ở entry point (API routes)         | Bên trong các hàm `@observe`                 | Trong LLM call (vd: OpenRouter client)   |
+| **Ví dụ**      | `conversation_id`, `bot_id`, `user_id`    | `message`, `next_action`, `messages_summary` | `model`, `usage_details`, `cost_details` |
+| **Cấu trúc**   | Trace (container gốc)                     | Trace → Span                                 | Trace → Span → Generation                |
+
+```
+Trace
+  └── Span (intent.llm)
+        └── Generation (LLM call)  → update_current_generation(...)
+```
