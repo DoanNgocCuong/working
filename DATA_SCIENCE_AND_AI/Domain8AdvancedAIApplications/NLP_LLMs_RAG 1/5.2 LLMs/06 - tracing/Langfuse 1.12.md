@@ -201,12 +201,20 @@ Trace
         └── Generation (LLM call)  → update_current_generation(...)
 ```
 
+### 1.4.0 Case study và ví dụ: 
 
-## SAI LẦM 1.5: 12/02/2026 Sử dụng Langfuse() của version cũ mà không chịu update lên version mới sử dụng get_client()
+ "[PRODUCTION STAGE: OPTIMIZE LANGFUSE: USE: capture_input=False, capture_output=False, nếu log thì dùng metadata log thay vì log full input hoặc output
+>> REDIS: 0.3-0.7s ?? (giảm xuống 0.01-0.03s) chủ yếu do: Langfuse trace với capture_input=False, capture_output=False. Bên cạnh đó là do dùng orjson + tối ưu: cache riêng scenario và ko cần cache history (do nó dùng CUR_ACTION chứ có dùng History để gen intent llms méo đâu)"
 
+https://github.com/IsProjectX/robot-lesson-workflow/commit/07741e2eec5e59c6c67bca4dfae2bc04104bcdf6
+---
+```
+ "[Small Update]: Thêm bot_id và conversation_id vào metadata của observe trace (trace trên Langfuse dùng metadata)
+>> --
+>> Chiến lược: thay vì để capture_in và capture_out True và load data nhiều 
+>> => Thì chỉ log rất ít vào metadata
 
-
-### CÁC VÍ DỤ SAU: 
+```
 
 #### 1. `update_current_trace` — cập nhật metadata ở mức **trace** (cả request)
 
@@ -331,6 +339,195 @@ Trước đó code đã build `usage_details` (input/output tokens) và `cost_de
 | **update_current_generation** | OpenRouter client sau khi gọi LLM | Gắn model, usage, cost cho generation (LLM call). |
 
 Cách dùng chung: **bọc trong try/except**, kiểm tra client tồn tại (`if langfuse_client:` hoặc `if langfuse:`), và không để lỗi Langfuse làm fail logic chính (như comment “không ảnh hưởng logic chính” trong code của bạn).
+
+
+
+
+
+## SAI LẦM 1.5: 12/02/2026 Sử dụng Langfuse() của version cũ mà không chịu update lên version mới sử dụng get_client()
+> https://langfuse.com/changelog/2025-06-05-python-sdk-v3-generally-available
+
+### So sánh: `get_client()` vs `Langfuse()`
+
+Đây là hai phương thức khởi tạo client của Langfuse Python SDK, với sự khác biệt quan trọng giữa các phiên bản SDK:
+
+#### **1. Phiên bản SDK**
+
+**`Langfuse()`**
+- Sử dụng trong cả **SDK v2** (legacy) và **SDK v3** (hiện tại)
+- Trong v2: Là phương thức chính để khởi tạo client
+- Trong v3: Vẫn có thể dùng để tạo client instance mới với cấu hình tùy chỉnh
+
+**`get_client()`**
+- **Chỉ có trong SDK v3** (OpenTelemetry-based)
+- Ra mắt từ tháng 6/2025 khi v3 trở thành Generally Available
+
+[Langfuse](https://langfuse.com/changelog/2025-06-05-python-sdk-v3-generally-available)
+
+https://langfuse.com/docs/observability/sdk/overview
+
+![](image/Pasted%20image%2020260212145214.png)
+
+**Quản lý instance**
+
+| Đặc điểm     | `Langfuse()`                                                                                                                                                                                      | `get_client()`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pattern**  | Tạo instance mới mỗi lần gọi                                                                                                                                                                      | Singleton - trả về cùng 1 instance                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Khởi tạo** | Multiple instances có thể tồn tại                                                                                                                                                                 | Chỉ 1 instance duy nhất (khởi tạo lần đầu)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Cấu hình** | Qua constructor parameters                                                                                                                                                                        | Qua environment variables                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Use case** | Cần nhiều client với cấu hình khác nhau                                                                                                                                                           | Sử dụng chung 1 cấu hình trong toàn app                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|              | "If you create multiple Langfuse instances with the same public_key, the singleton instance is REUSED and new arguments are IGNORED."<br><br>https://langfuse.com/docs/observability/sdk/overview | - Tích hợp tốt với OpenTelemetry context propagation<br>- Tránh duplicate configuration<br>- Quản lý resource tốt hơn (singleton pattern)<br><br>### OpenTelemetry Foundation[](https://langfuse.com/changelog/2025-06-05-python-sdk-v3-generally-available#opentelemetry-foundation)<br><br>The foundation of the v3 SDK is OpenTelemetry, which brings several practical advantages:<br><br>- **Standardized Context Propagation**: OTEL automatically handles the propagation of trace and span context. This means when you create a new span or generation, it correctly nests under the currently active operation.<br>- **Third-Party Library Compatibility**: Libraries already instrumented with OpenTelemetry will integrate with the Langfuse SDK, with their spans being captured and correctly nested within your Langfuse traces. |
+
+
+---
+
+#### **2. Code 
+
+##### 2.1 Cách khởi tạo và cấu hình**
+
+	**`Langfuse()`** - Khởi tạo instance mới
+
+```python
+from langfuse import Langfuse
+
+# Cấu hình qua constructor
+langfuse = Langfuse(
+    public_key="your-public-key",
+    secret_key="your-secret-key",
+    base_url="https://cloud.langfuse.com",
+    debug=True
+)
+```
+
+**`get_client()`** - Truy cập singleton instance
+
+```python
+from langfuse import get_client
+
+# Tự động sử dụng environment variables
+langfuse = get_client()
+
+# Environment variables cần thiết:
+# LANGFUSE_PUBLIC_KEY="your-public-key"
+# LANGFUSE_SECRET_KEY="your-secret-key"
+# LANGFUSE_BASE_URL="https://cloud.langfuse.com"
+```
+
+
+```python
+# Load environment variables và sử dụng
+
+from dotenv import load_dotenv
+from langfuse import get_client
+
+# Load .env file vào environment variables
+load_dotenv()
+
+# get_client() sẽ tự động đọc từ env vars đã được load
+langfuse = get_client()
+
+# Sử dụng bình thường
+@observe()
+def my_function():
+    # ...
+    pass
+```
+
+Thông thường: Các dự án sẽ có 1 file config môi trường riêng - chuẩn best practices folder structure 
+
+```
+my_project/
+├── .env                    # Environment variables
+├── .env.example            # Template
+├── config/
+│   ├── __init__.py
+│   └── settings.py         # ⭐ Config centralized
+├── app/
+│   ├── main.py
+│   ├── api/
+│   └── services/
+└── requirements.txt
+```
+
+[Langfuse](https://langfuse.com/docs/observability/sdk/overview)
+
+##### **2.2. Ví dụ sử dụng trong SDK v3**
+
+**Sử dụng `get_client()` - Recommended approach**
+
+```python
+from langfuse import get_client, observe
+
+# Module A
+@observe()
+def process_data():
+    langfuse = get_client()  # Lấy global client
+    langfuse.update_current_trace(tags=["processing"])
+    # ... xử lý
+
+# Module B
+@observe()
+def analyze_data():
+    langfuse = get_client()  # Cùng 1 client instance
+    langfuse.update_current_trace(user_id="user-123")
+    # ... phân tích
+```
+
+**Sử dụng `Langfuse()` - Multiple clients**
+
+```python
+from langfuse import Langfuse
+
+# Production client - sample 5% traces
+langfuse_prod = Langfuse(
+    sample_rate=0.05,
+    public_key="prod-key"
+)
+
+# Beta client - sample 100% traces
+langfuse_beta = Langfuse(
+    sample_rate=1.0,
+    public_key="beta-key"
+)
+```
+
+[Langfuse](https://langfuse.com/changelog/2025-06-05-python-sdk-v3-generally-available)
+
+
+---
+
+ #### 3. Recommend nên dùng: `get_client()` - BEST PRACTICE dù cả 2 đều singleton?
+
+```
+Lý do 1: INTENT RÕ RÀNG
+─────────────────────────
+  langfuse = get_client()       → "Tôi muốn LẤY client hiện có"  ✅ Rõ
+  langfuse_client = Langfuse()  → "Tôi muốn TẠO client mới"      ❌ Misleading
+                                   (thực tế không tạo mới)
+
+Lý do 2: OVERHEAD NHỎ NHƯNG THẬT
+──────────────────────────────────
+  get_client()    → return _singleton          → ~0.001ms
+  Langfuse()      → check key → lookup → return → ~0.01ms
+                     ↑
+                     10x chậm hơn (dù vẫn rất nhỏ)
+                     × 1000 requests/s = 10ms/s unnecessary
+
+Lý do 3: TRÁNH BẪY "NEW ARGUMENTS ARE IGNORED"
+────────────────────────────────────────────────
+  # File A (load trước)
+  client = Langfuse(host="http://server-1:3009")     # Instance tạo
+
+  # File B (load sau)  
+  client = Langfuse(host="http://server-2:3009")     # ⚠️ BỊ IGNORED!
+                                                       # Vẫn dùng server-1
+  
+  # Với get_client() → không ai bị lừa vì không pass args
+```
+---
+
+
+---
 
 
 
