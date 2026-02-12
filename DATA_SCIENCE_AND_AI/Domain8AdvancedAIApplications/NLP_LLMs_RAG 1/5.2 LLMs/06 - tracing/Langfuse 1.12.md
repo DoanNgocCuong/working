@@ -182,8 +182,7 @@ if langfuse_client:
 → Ý tưởng: chỉ đính kèm những trường “nhẹ” nhưng đủ để debug (ID + message tóm tắt + thông tin audio), không nhét cả payload to vào trace để tránh overhead & rò rỉ dữ liệu.
 
 
-
-
+## 1.4 Sử dụng combo: capture_input, capture_output = False và đẩy ra sử dụng: @observe + update_current_trace, update_current_span, update_current_generation
 
 #### Bảng : update_current_trace, update_current_span, update_current_generation
 
@@ -201,3 +200,144 @@ Trace
   └── Span (intent.llm)
         └── Generation (LLM call)  → update_current_generation(...)
 ```
+
+
+### CÁC VÍ DỤ SAU: 
+
+#### 1. `update_current_trace` — cập nhật metadata ở mức **trace** (cả request)
+
+Dùng ở **route** (trước khi gọi service), vì lúc đó đang ở trace gốc:
+
+**File:** `app/api/routes/robot_v2_routes.py` (khoảng dòng 63–96)
+
+```python
+@router.post("/webhook")
+# @observe(name="robot-v2.webhook-route", ...)
+async def webhook(inputs: RobotV2Input, service: RobotV2Service = Depends(get_robot_v2_service)):
+    conversation_id = inputs.conversation_id
+    user_id = inputs.user_id
+
+    if conversation_id or user_id:
+        try:
+            langfuse = get_client()  # từ langfuse import get_client
+            if langfuse:
+                metadata = {}
+                if conversation_id:
+                    metadata["conversation_id"] = conversation_id
+                if user_id:
+                    metadata["user_id"] = user_id
+                # Update trace metadata - hiển thị trên UI Langfuse
+                langfuse.update_current_trace(metadata=metadata)
+        except Exception as e:
+            pass
+
+    return await service.webhook(inputs.dict())
+```
+
+Tương tự cho `init_conversation`: cũng dùng `get_client()` rồi `langfuse.update_current_trace(metadata=...)` (với `conversation_id`, `bot_id`).
+
+---
+
+#### 2. `update_current_span` — cập nhật metadata cho **span** hiện tại (hàm được @observe)
+
+Dùng **bên trong** các hàm đã được `@observe`, để gắn thêm thông tin cho đúng span đó.
+
+**Ví dụ 1 – trong webhook service (span `robot-v2.webhook-service`):**  
+**File:** `app/api/services/robot_v2_services.py` (khoảng 1343–1354)
+
+```python
+@observe(name="robot-v2.webhook-service", capture_input=False, capture_output=True)
+async def webhook(self, payload: Dict[str, Any]) -> Dict[str, Any]:
+    # ...
+    try:
+        if langfuse_client:
+            metadata = {
+                "conversation_id": conversation_id,
+                "message": message[:200] if message else "",
+                "has_audio_url": bool(audio_url),
+                "audio_url": audio_url[:100] if audio_url else ""
+            }
+            langfuse_client.update_current_span(metadata=metadata)
+    except Exception:
+        pass
+```
+
+**Ví dụ 2 – trong intent phoneme (span `robot-v2.intent.phoneme`):**  
+**File:** `app/module/workflows/v2_robot_workflow/chatbot/policies/utils_conversation_workflow_orchestrator.py` (khoảng 333–341)
+
+```python
+@observe(name="robot-v2.intent.phoneme", capture_input=False, capture_output=True)
+async def classify_by_phoneme(message: str, scenario: dict, next_action: int):
+    try:
+        if langfuse_client:
+            langfuse_client.update_current_span(metadata={"message": message, "next_action": next_action})
+    except Exception:
+        pass
+    return await RegexIntentClassifier().phoneme_classifier(...)
+```
+
+**Ví dụ 3 – trong intent LLM (span `robot-v2.intent.llm`):**  
+Cùng file, khoảng 361–408:
+
+```python
+@observe(name="robot-v2.intent.llm", capture_input=False, capture_output=True)
+async def classify_by_llm(messages: list, llm_base, params: dict, conversation_id: str, **kwargs) -> str:
+    try:
+        if langfuse_client:
+            metadata = {
+                "conversation_id": conversation_id,
+                "messages_count": len(messages) if messages else 0,
+                "model": params.get("model", "unknown") if params else "unknown",
+                "provider_name": getattr(llm_base, 'provider_name', 'unknown'),
+                # ... temperature, top_p, max_tokens, messages summary ...
+            }
+            langfuse_client.update_current_span(metadata=metadata)
+    except Exception:
+        pass
+    return await llm_base.predict(messages=messages, params=params, ...)
+```
+
+---
+
+#### 3. `update_current_generation` — cập nhật **generation** (LLM call: model, usage, cost)
+
+Dùng khi bạn tự tạo/gọi LLM và muốn ghi lại model, token usage và cost lên generation hiện tại của Langfuse.
+
+**File:** `app/common/openrouter_llm/client.py` (khoảng 269–277)
+
+```python
+# Update current generation; if none exists, this call is a no-op
+self.langfuse_client.update_current_generation(
+    model=plain_model,
+    usage_details=usage_details,
+    cost_details=cost_details,
+)
+```
+
+Trước đó code đã build `usage_details` (input/output tokens) và `cost_details` (input/output/total cost). Đây là chỗ bổ sung metadata cho **generation** (một lần gọi LLM), không phải trace hay span chung.
+
+---
+
+#### Tóm tắt cách dùng trong bài của bạn
+
+| API | Chỗ dùng trong project | Mục đích |
+|-----|-------------------------|----------|
+| **update_current_trace** | Route `webhook` và `init_conversation` | Gắn `conversation_id`, `user_id` (hoặc `bot_id`) cho cả trace (một request). |
+| **update_current_span** | Trong các hàm có `@observe` (webhook, classify_by_phoneme, classify_by_llm) | Gắn metadata cho đúng span (message, next_action, model, provider, messages summary, …). |
+| **update_current_generation** | OpenRouter client sau khi gọi LLM | Gắn model, usage, cost cho generation (LLM call). |
+
+Cách dùng chung: **bọc trong try/except**, kiểm tra client tồn tại (`if langfuse_client:` hoặc `if langfuse:`), và không để lỗi Langfuse làm fail logic chính (như comment “không ảnh hưởng logic chính” trong code của bạn).
+
+
+
+# 2. Các cách tracing trong langfuse 
+
+### Trục A — 5 Instrumentation Methods
+
+| #      | Method               | Mô tả                                                                                                               | Overhead trên main thread (lý thuyết)                                                                                                                    |
+| ------ | -------------------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A1** | Low-level SDK API    | `langfuse.trace()`, `.generation()`, `.span()`                                                                      | **0.16–0.27ms** per call. Chỉ enqueue object vào queue, không serialize                                                                                  |
+| **A2** | `@observe` decorator | +, Auto-wrap function, capture input/output<br>+, kết hợp @observe + `langfuse.trace()`, `.generation()`, `.span()` | **5–15ms** per decorated function. Phải: (1) inspect args, (2) deep-copy/serialize input, (3) wrap execution, (4) serialize output, (5) create OTEL span |
+| **A3** | OpenAI drop-in       | `from langfuse.openai import openai`                                                                                | **1–3ms** per LLM call. Chỉ wrap response object, không introspect arbitrary functions                                                                   |
+| **A4** | Framework callback   | LangChain/LlamaIndex callback handler                                                                               | **2–10ms** per step. Phụ thuộc framework serialization overhead                                                                                          |
+| **A5** | Manual OTEL spans    | Dùng trực tiếp `tracer.start_as_current_span()`                                                                     | **0.5–2ms**. Tạo OTEL span thuần, không có Langfuse serialization layer                                                                                  |
