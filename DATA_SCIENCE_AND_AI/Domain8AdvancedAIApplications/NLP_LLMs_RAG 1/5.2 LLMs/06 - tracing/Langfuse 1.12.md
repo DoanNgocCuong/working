@@ -23,7 +23,7 @@ So với cách triển khai siêu đơn giản dùng @observer => Cần bạn gi
 # 1. Các sai lầm mình từng mắc phải khi làm việc với Langfuse
 
 
-## 1.1 Sai lầm 1: Khởi tạo mới Langfuse mỗi lần dùng => Gây overhead 0.1s  (Khởi tạo trước Langfuse 1 lần các lần sau chỉ việc dùng giúp giảm response time xuống 0.002s - 0.01s)
+## 1.1 SAI LẦM 1: Khởi tạo mới Langfuse mỗi lần dùng => Gây overhead 0.1s  (Khởi tạo trước Langfuse 1 lần các lần sau chỉ việc dùng giúp giảm response time xuống 0.002s - 0.01s)
 
 ### 1.1.1 Kiểm chứng độc lập
 
@@ -152,7 +152,7 @@ Link chi tiết: D:\GIT\robot-lesson-workflow\utils\docs\Stage1_OverheadOfLangFu
 ```
 
 
-## 1.3 Sai lầm 3: Để capture_input=True, capture_input=False với JSON quá dài. 
+## 1.3 SAI LẦM 3: Để capture_input=True, capture_input=False với JSON quá dài. 
 
 ```
 1. Là trace ở hàm con được trace mỗi hàm dôi lên 0.002s - 0.01s 
@@ -182,7 +182,7 @@ if langfuse_client:
 → Ý tưởng: chỉ đính kèm những trường “nhẹ” nhưng đủ để debug (ID + message tóm tắt + thông tin audio), không nhét cả payload to vào trace để tránh overhead & rò rỉ dữ liệu.
 
 
-## 1.4 Sử dụng combo: capture_input, capture_output = False và đẩy ra sử dụng: @observe + update_current_trace, update_current_span, update_current_generation
+## 1.4 SAI LẦM 4: Sử dụng combo: capture_input, capture_output = False mà ko biết đẩy ra metadata để sử dụng: @observe + update_current_trace, update_current_span, update_current_generation
 
 #### Bảng : update_current_trace, update_current_span, update_current_generation
 
@@ -200,6 +200,10 @@ Trace
   └── Span (intent.llm)
         └── Generation (LLM call)  → update_current_generation(...)
 ```
+
+
+## SAI LẦM 1.5: 12/02/2026 Sử dụng Langfuse() của version cũ mà không chịu update lên version mới sử dụng get_client()
+
 
 
 ### CÁC VÍ DỤ SAU: 
