@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai)"
-            }
-          },
-          {
-            "id": "cd5e2568c951b70b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langchain 1.6 - Observe - Langfuse.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Langchain 1.6 - Observe - Langfuse"
+              "title": "Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -157,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langchain 1.6 - Observe - Langfuse.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Langchain 1.6 - Observe - Langfuse"
+              "title": "Outline of Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026"
             }
           }
         ],
@@ -185,54 +170,54 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "cd5e2568c951b70b",
+  "active": "cd035786f705afd3",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langchain 1.7 - Bổ sung 2 ngộ nhận về việc overhead về 0ms.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langchain 1.7 - Report langchain langgraph - Langfuse tracing - overhead 1-6ms - dự án robot workflow - 14122025.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langchain 1.8 - Langfuse for Visulize (Fallback, Timeout, Alert - Visulize).md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langfuse 1.10 - Các cách trace - MECE.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/LangChain 1.5 - 5 hàm tuần tự trong 1 node hay 5 nodes tuần tự - Response time - Overhead.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langchain 1.6 - Observe - Langfuse.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/(Published) Langfuse 1.12 - P1 Tổng kết danh sách sai lầm khi làm việc với Langfuse.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.12 - P2 - Đo lường các cách tracing.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.14 - Response time của @observe - vs - Context Manager.md",
-    "BUSINESS/1_PRODUCT/Top 10 Product.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool/3. Dọn dẹp file.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.3 worker - Khi nào nên tăng - worker với IO bound và CPU bound.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình CONCURRENCY - PARALLELISM - SPECIALIZED.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Use Case - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Không phải lúc nào cũng reuse - Phân biệt connection và session.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Python FastAPI + Async Await - Phân biệt Thread - Worker - Pod.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Framework tracing cho p95, p99 - input, output - Langfuse, .... - 20012026.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Untitled.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.14 - Sharing.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/CKP.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/LangChain 1.2 API LangGraph chạy, nhưng langgraph dev thì không. Nguyên nhân do code có những chỗ đứng đợi, còn LangGraph Studio không cho phép điều đó..md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/LangChain 1.3_2CheDoViewRawAndRendered.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/LangChain 1.3_2CheDoViewRawAndRendered.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/LangChain 1.4_Create_a_graph_with_a_messages_key_to_chat_with.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/LangChain 1.4_Create_a_graph_with_a_messages_key_to_chat_with.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.12 - P2 - Đo lường các cách tracing.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Framework tracing cho p95, p99 - input, output - Langfuse, .... - 20012026.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/(Published) Langfuse 1.12 - P1 - Langfuse Production Optimization - P1 Tổng kết danh sách sai lầm khi làm việc với Langfuse.md",
+    "SHARING/Demo 1 - Lên sóng Wecommit100x  17122025.md",
+    "SHARING/Note how to publish to Linkedin.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Note how to publish to Linkedin.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. Hệ thống/Cách mở cho port nó bắn.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. Hệ thống/Lệnh Linux Thường dùng nhất.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/2. Hệ thống/System - server.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/TIME OUT, RETRY, FALLBACK/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Untitled.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.14 - Response time của @observe - vs - Context Manager.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/image/Pasted image 20260206175920.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/image/Pasted image 20260212145214.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/image/Pasted image 20260206175911.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/image/Pasted image 20251215170043.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/image",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/image/Pasted image 20260212145214.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/image/Pasted image 20260206175920.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/image/Pasted image 20260206175911.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/image/Pasted image 20251215170043.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/Langfuse 1.11 - Vấn đề bị tràn 50 GB RAM trên Production - 23122025.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/Langfuse 1.10 - Các cách trace - MECE.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/Langchain 1.8 - Langfuse for Visulize (Fallback, Timeout, Alert - Visulize).md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/Langchain 1.7 - Report langchain langgraph - Langfuse tracing - overhead 1-6ms - dự án robot workflow - 14122025.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/Langchain 1.7 - Bổ sung 2 ngộ nhận về việc overhead về 0ms.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/Langchain 1.6 - Observe - Langfuse.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/LangChain 1.5 - 5 hàm tuần tự trong 1 node hay 5 nodes tuần tự - Response time - Overhead.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/LangChain 1.4_Create_a_graph_with_a_messages_key_to_chat_with.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/LangChain 1.3_2CheDoViewRawAndRendered.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/LangChain 1.2 API LangGraph chạy, nhưng langgraph dev thì không. Nguyên nhân do code có những chỗ đứng đợi, còn LangGraph Studio không cho phép điều đó..md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/LangChain 1.1 Langfuse rồi thì có dùng các tools OpenTelemetry khác nữa không + LangFuse (free) - LangSmith (fee) - LangGraph Studio (free local, log in with LangSmith free Account) ..md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/image",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/CKP.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/06 - tracing/image/Pasted image 20260212145214.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/06 - tracing/image/Pasted image 20260206175920.png",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/06 - tracing/image",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/06 - tracing/CKP/image",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/06 - tracing/CKP",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/06 - tracing",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool/Untitled",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/image/Pasted image 20260212145214.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/image/Pasted image 20260206175920.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/image/Pasted image 20260206175911.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/image/Pasted image 20251215170043.png",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/image",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/image/Pasted image 20260212145214.png",
-    "BUSINESS/0_100M$GlobalMoneyModel/1_Nate Herk",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/image/Pasted image 20260206175920.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/image/Pasted image 20260206175911.png",
-    "BUSINESS/0_CON NGƯỜI - BÀI TOÁN QUAN TRỌNG NHẤT CẦN GIẢI/MENTAL MODELS",
-    "BUSINESS/TÀI CHÍNH/CKP",
-    "BUSINESS/TÀI CHÍNH",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/CKP/image/Pasted image 20260129163500.png",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/CKP/image",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Serving LLMs/CKP",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/image/Pasted image 20260122184651.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/image/README/1769051845334.png",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/CKP/image/README",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.1 RAG/RAG 1/Search/Untitled.canvas",
     "learning/DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG/5.1 RAG/RAG 1/Search/Untitled.canvas"
   ]

@@ -6,11 +6,11 @@
 
 Để hiểu về Agentic AI, chúng ta cần phân biệt nó với hai làn sóng AI trước đó:
 
-| Loại AI | Mô tả | Ví dụ | Vai trò |
-| :--- | :--- | :--- | :--- |
-| **AI Phân tích (Analytical AI)** | Học các mẫu từ dữ liệu lịch sử để đưa ra dự đoán về tương lai. | Mô hình dự đoán giá cổ phiếu, hệ thống gợi ý sản phẩm. | **Nhà phân tích dữ liệu.** |
-| **AI Tạo sinh (Generative AI)** | Tạo ra nội dung mới (văn bản, hình ảnh, âm thanh) dựa trên các mẫu đã học. | ChatGPT, Midjourney, Sora. | **Người sáng tạo nội dung.** |
-| **AI Agentic (Agentic AI)** | Tự chủ hành động trong một môi trường để đạt được mục tiêu. Nó sử dụng AI tạo sinh để suy luận và lập kế hoạch. | Agent tự động đặt vé máy bay, agent quản lý chuỗi cung ứng. | **Người thực thi công việc.** |
+| Loại AI                          | Mô tả                                                                                                           | Ví dụ                                                       | Vai trò                       |
+| :------------------------------- | :-------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------- | :---------------------------- |
+| **AI Phân tích (Analytical AI)** | Học các mẫu từ dữ liệu lịch sử để đưa ra dự đoán về tương lai.                                                  | Mô hình dự đoán giá cổ phiếu, hệ thống gợi ý sản phẩm.      | **Nhà phân tích dữ liệu.**    |
+| **AI Tạo sinh (Generative AI)**  | Tạo ra nội dung mới (văn bản, hình ảnh, âm thanh) dựa trên các mẫu đã học.                                      | ChatGPT, Midjourney, Sora.                                  | **Người sáng tạo nội dung.**  |
+| **AI Agentic (Agentic AI)**      | Tự chủ hành động trong một môi trường để đạt được mục tiêu. Nó sử dụng AI tạo sinh để suy luận và lập kế hoạch. | Agent tự động đặt vé máy bay, agent quản lý chuỗi cung ứng. | **Người thực thi công việc.** |
 
 **Agentic AI** là một hệ thống phần mềm có khả năng **nhận thức (perceive)** môi trường của nó, **lập kế hoạch (plan)** một chuỗi các hành động để đạt được một mục tiêu cụ thể, và **thực thi (execute)** những hành động đó bằng cách sử dụng một tập hợp các công cụ (tools). Nó là sự kết hợp giữa khả năng suy luận của AI tạo sinh và khả năng tương tác với thế giới thực (hoặc thế giới số) thông qua các API và hành động.
 
