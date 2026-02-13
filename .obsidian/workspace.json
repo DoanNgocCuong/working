@@ -311,10 +311,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "36c9c86598fe86d1",
+  "active": "7bbd2100f0471588",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.12.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/1_AIAgents/2_Memory/Checkpoint.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/7 LAYER/2 - Memory - 31122025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.13 - Báo cáo chi tiết về vấn đề GIL khi dùng langfuse.md",
+    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.12.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langchain 1.7 - Bổ sung 2 ngộ nhận về việc overhead về 0ms.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langchain 1.7 - Report langchain langgraph - Langfuse tracing - overhead 1-6ms - dự án robot workflow - 14122025.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langchain 1.8 - Langfuse for Visulize (Fallback, Timeout, Alert - Visulize).md",
@@ -341,8 +343,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/LangChain 1.2 API LangGraph chạy, nhưng langgraph dev thì không. Nguyên nhân do code có những chỗ đứng đợi, còn LangGraph Studio không cho phép điều đó..md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/LangChain 1.1 Langfuse rồi thì có dùng các tools OpenTelemetry khác nữa không + LangFuse (free) - LangSmith (fee) - LangGraph Studio (free local, log in with LangSmith free Account) ..md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/4.. Data Science/1. Database/RabbitMQ 1 - worker.py - Phương Án Kỹ Thuật Chi Tiết Triển Khai RabbitMQ.md",
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Python FastAPI + Async Await - Phân biệt Thread - Worker - Pod.md",
-    "BUSINESS/0_CON NGƯỜI - BÀI TOÁN QUAN TRỌNG NHẤT CẦN GIẢI/MENTAL MODELS/CKP Prompt.md",
     "BUSINESS/0_CON NGƯỜI - BÀI TOÁN QUAN TRỌNG NHẤT CẦN GIẢI/MENTAL MODELS",
     "BUSINESS/TÀI CHÍNH/CKP",
     "BUSINESS/TÀI CHÍNH",
