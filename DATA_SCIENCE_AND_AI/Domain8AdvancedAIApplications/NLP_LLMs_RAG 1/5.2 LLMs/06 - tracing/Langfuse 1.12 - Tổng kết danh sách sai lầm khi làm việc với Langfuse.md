@@ -1,27 +1,10 @@
-Oke, ko cần code, hãy cùng mình phân tích về mặt overhead của best practices.
-
-1. Lúc trước (tầm cuối năm 2025 mình đọc, mình nhớ là langfuse trace tuần tự ko có luồng background, sao giờ lại có nhỉ>)
-2. Mình thấy có 2 cách triển khai phổ biến
-
-Langfuse tự publish một performance test cho SDK:
-
-- Python SDK v2, đo thời gian gọi local functions:
-    - `trace()` trung bình ≈ 0.000266 giây ≈ 0.27 ms
-    - `span()` ≈ 0.16 ms
-    - `generation()` ≈ 0.20 ms
-    - `event()` ≈ 0.24 ms Những con số này là CPU time local, chưa bao gồm network, nhưng network gửi qua SDK đều chạy ở background thread / async queue, không nằm trực tiếp trong critical path request. SDK Python low-level mô tả rõ: “Uses a worker Thread and an internal queue to manage requests to the Langfuse backend asynchronously. Hence, the SDK adds only minimal latency to your application.” => Với config đúng (không `flush()` trong request), overhead thêm vào response time của user thường ở mức sub‑ms đến vài ms, 0–10ms hoàn toàn achievable.
-
-So với cách triển khai siêu đơn giản dùng @observer => Cần bạn giúp mình MECE toàn bộ các cách triển khai, đo đạc response time của các cách đó theo lý thuyết.
-
-1. Mình thấy 1 tài liệu nói về vấn đề: Khi họ trace = cách @observe thì bị overhead là 10ms (0.01-0.02s) ...
-2. 1 nghiên cứu khác chỉ ra rằng: overhead khi gặp tình trạng GIL của luồng backgroup LÀM BLOCK luồng main ??? (trong tài liệu đính kèm nhé)
-
-
-
----
-
+> Dựa trên kinh nghiệm các dự án đã trải qua khi triển khai dự án trên Production. 
+> 1. Có dự án cần response time < 150ms cho 100 CCU. Cách mình dùng langfuse để tracing và đạt hiệu năng overhead ~ 0ms (thông số P99 chỉ khoảng 90ms cho 100CCU)
+>    tuy nhiên khi sử dụng langfuse mình nhận ra 1 số vấn đề, đặc biệt với những bài cần hiệu năng cao, response time siêu ngắn đã giúp mình: 
+>    +, đào sâu hơn cơ chế vận hành của Langfuse 
+>    +, overhead bắt buộc phải <5-10ms , thậm chí phải 0ms 
+>    +, và không được có 1 sự vụt lên nào khi tải cao (ví dụ tranh chấp GIL, ...)   
 # 1. Các sai lầm mình từng mắc phải khi làm việc với Langfuse
-
 
 ## 1.1 SAI LẦM 1: Khởi tạo mới Langfuse mỗi lần dùng => Gây overhead 0.1s  (Khởi tạo trước Langfuse 1 lần các lần sau chỉ việc dùng giúp giảm response time xuống 0.002s - 0.01s)
 
@@ -140,9 +123,9 @@ if __name__ == "__main__":
 
 Link chi tiết: D:\GIT\robot-lesson-workflow\utils\docs\Stage1_OverheadOfLangFuse\log_trace_image\log2_Conclusion_0.01s_0.02s_overhead.md  + D:\GIT\robot-lesson-workflow\utils\docs\Stage1_OverheadOfLangFuse\log_trace_image\log3_Deployv1_OverheadLangfuse_20112025.md
 
-![](image/Pasted%20image%2020260206175911.png)
+![](CKP/image/Pasted%20image%2020260206175911.png)
 
-![](image/Pasted%20image%2020260206175920.png)
+![](CKP/image/Pasted%20image%2020260206175920.png)
 
 ### 1.2.1 Kiểm tra các nấc lồng nhau ta đưa ra kết luận: 
 
@@ -365,7 +348,7 @@ Cách dùng chung: **bọc trong try/except**, kiểm tra client tồn tại (`i
 
 https://langfuse.com/docs/observability/sdk/overview
 
-![](image/Pasted%20image%2020260212145214.png)
+![](CKP/image/Pasted%20image%2020260212145214.png)
 
 **Quản lý instance**
 
@@ -523,23 +506,13 @@ Lý do 3: TRÁNH BẪY "NEW ARGUMENTS ARE IGNORED"
   
   # Với get_client() → không ai bị lừa vì không pass args
 ```
----
 
 
 ---
-
-
-
-
-
 ## SAI LẦM 1.6: VẤN ĐỀ GIL CONTENTION - ĐANG P95, P99 30ms, tự nhiên có những khoảnh khắc bị vụt lên 1.5 s ???  - Cơ chế auto-flush của Langfuse Python SDK v3 (OpenTelemetry BatchSpanProcessor) chạy trong cùng process với FastAPI/vLLM, gây GIL contention giữa background flush thread và asyncio event loop. Dùng `@observe` hay context manager đều đi qua cùng đường SDK này, nên bản chất overhead GIL **vẫn tồn tại**, chỉ khác là mỗi pattern làm tần suất flush và số spans khác nhau.
 
 
-| Câu hỏi                                                   | Trả lời ngắn                                                                                                                                                                                                                                                                                                                                                     |
-| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Overhead 1–1.5s có phải do “Pattern 2.2 context manager”? | Không. Nó do cơ chế auto-flush + GIL trong SDK v3; context manager chỉ là cách bạn tạo span. [docs2.5.4_BugOverheaad_Auto-flush_of_LangfuseSDKv3.md+1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/e115a19f-a65a-4fbc-ad09-aade36323b1d/docs2.5.4_BugOverheaad_Auto-flush_of_LangfuseSDKv3.md)                               |
-| Dùng `@observe` thì có hết GIL overhead không?            | Không, vẫn qua BatchSpanProcessor + background flush thread, nên vẫn có nguy cơ spike. Có thể còn tệ hơn nếu spam decorator khắp nơi. docs2.1_HocTuBaiCu_Langfuse_use_observe_haveOverhead.md​[langfuse](https://langfuse.com/docs/sdk/python/decorators)​                                                                                                       |
-| Context manager có lợi gì?                                | Cho phép bạn kiểm soát số spans, cấu trúc nested spans, và **thời điểm flush** (ví dụ chỉ flush trong middleware), từ đó giảm đáng kể overhead trung bình. [docs2.5.1_Do_Langfuse_Overhead_Nho.md+1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/760047/b08d7825-da6b-4dbe-ad10-04623e8affa8/docs2.5.1_Do_Langfuse_Overhead_Nho.md) |
+
 
 ---
 
