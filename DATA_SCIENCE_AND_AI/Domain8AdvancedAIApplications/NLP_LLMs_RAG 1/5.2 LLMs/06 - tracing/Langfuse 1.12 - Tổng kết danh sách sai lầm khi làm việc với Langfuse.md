@@ -135,7 +135,7 @@ Link chi tiết: D:\GIT\robot-lesson-workflow\utils\docs\Stage1_OverheadOfLangFu
 ```
 
 
-## 1.3 SAI LẦM 3: Để capture_input=True, capture_input=False với JSON quá dài. 
+## 1.3 SAI LẦM 3: Để capture_input=True, capture_output=True với JSON quá dài. 
 
 ```
 1. Là trace ở hàm con được trace mỗi hàm dôi lên 0.002s - 0.01s 
