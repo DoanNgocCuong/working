@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e5416c4ac06fb17c",
+        "id": "c4c67c495b957df2",
         "type": "tabs",
         "children": [
           {
-            "id": "cd035786f705afd3",
+            "id": "79a72e995c9a9aa2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026"
+              "title": "New tab"
             }
           }
         ]
@@ -142,13 +138,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026"
+              "title": "Outline"
             }
           }
         ],
@@ -170,8 +165,9 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "cd035786f705afd3",
+  "active": "79a72e995c9a9aa2",
   "lastOpenFiles": [
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.12 - P2 - Đo lường các cách tracing.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Framework tracing cho p95, p99 - input, output - Langfuse, .... - 20012026.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/(Published) Langfuse 1.12 - P1 - Langfuse Production Optimization - P1 Tổng kết danh sách sai lầm khi làm việc với Langfuse.md",
@@ -185,7 +181,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_Resilience - Fallback - Timeout/Use case - BÁO CÁO TRIỂN KHAI Fallback - Timeout - Alerts Workflow  - T12-2025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Untitled.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.14 - Response time của @observe - vs - Context Manager.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/image/Pasted image 20260206175920.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/image/Pasted image 20260212145214.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/image/Pasted image 20260206175911.png",
