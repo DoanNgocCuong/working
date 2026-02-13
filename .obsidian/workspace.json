@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình CONCURRENCY - PARALLELISM - SPECIALIZED.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CKP - Lập trình CONCURRENCY - PARALLELISM - SPECIALIZED"
+              "title": "1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai)"
             }
           },
           {
@@ -35,7 +35,8 @@
               "title": "3. Dọn dẹp file"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -156,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình CONCURRENCY - PARALLELISM - SPECIALIZED.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/Tool/3. Dọn dẹp file.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CKP - Lập trình CONCURRENCY - PARALLELISM - SPECIALIZED"
+              "title": "Outline of 3. Dọn dẹp file"
             }
           }
         ],
@@ -184,10 +185,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "cd035786f705afd3",
+  "active": "cd5e2568c951b70b",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Use Case - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Không phải lúc nào cũng reuse - Phân biệt connection và session.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.2 PYTHON OPTIMIZATION - case Phoneme Robot (API external - to - tự triển khai).md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1.3 worker - Khi nào nên tăng - worker với IO bound và CPU bound.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/CKP/CKP - Lập trình CONCURRENCY - PARALLELISM - SPECIALIZED.md",
+    "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Use Case - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Không phải lúc nào cũng reuse - Phân biệt connection và session.md",
     "DATA_SCIENCE_AND_AI/Domain 2 Programming & Software Engineering/1.2 Lập trình nói chung/1 - Async - asynchronous vs synchronous - Bất đồng bộ và Đồng bộ - Python FastAPI + Async Await - Phân biệt Thread - Worker - Pod.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.12 - Tổng kết danh sách sai lầm khi làm việc với Langfuse.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/Langfuse 1.14 - Response time của @observe - vs - Context Manager.md",
@@ -216,8 +219,6 @@
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langfuse 1.10 - Các cách trace - MECE.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langchain 1.8 - Langfuse for Visulize (Fallback, Timeout, Alert - Visulize).md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langchain 1.7 - Report langchain langgraph - Langfuse tracing - overhead 1-6ms - dự án robot workflow - 14122025.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langchain 1.7 - Bổ sung 2 ngộ nhận về việc overhead về 0ms.md",
-    "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/Langchain 1.6 - Observe - Langfuse.md",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP",
     "DATA_SCIENCE_AND_AI/Domain8AdvancedAIApplications/NLP_LLMs_RAG 1/5.2 LLMs/06 - tracing/CKP/image/Pasted image 20260212145214.png",
     "BUSINESS/0_100M$GlobalMoneyModel/1_Nate Herk",
