@@ -1,9 +1,13 @@
-> Dựa trên kinh nghiệm các dự án đã trải qua khi triển khai dự án trên Production. 
-> 1. Có dự án cần response time < 150ms cho 100 CCU. Cách mình dùng langfuse để tracing và đạt hiệu năng overhead ~ 0ms (thông số P99 chỉ khoảng 90ms cho 100CCU)
->    tuy nhiên khi sử dụng langfuse mình nhận ra 1 số vấn đề, đặc biệt với những bài cần hiệu năng cao, response time siêu ngắn đã giúp mình: 
->    +, đào sâu hơn cơ chế vận hành của Langfuse 
->    +, overhead bắt buộc phải <5-10ms , thậm chí phải 0ms 
->    +, và không được có 1 sự vụt lên nào khi tải cao (ví dụ tranh chấp GIL, ...)   
+> Bài viết chia sẻ kinh nghiệm sử dụng Langfuse cho việc Tracing services trên Production, nếu có sai sót ở đâu mong được mọi người góp ý để mình có thể điều chỉnh. Mình đã trải qua gần 5 tháng (từ tháng 10, năm 2025 đến hiện tại 14/02/2026 để vừa đủ kiến thức, trải nghiệm để viết bài viết này).
+
+
+Đôi lời giới thiệu:
+
+1. Langfuse hỗ trợ cơ chế tracing cực tốt giúp theo dõi luồng data lồng nhau trên 1 UI rất trực quan, cộng với đo đạc hiệu năng p95, P99 đầy đủ => Đáp ứng đủ tiêu chí về: Log, Đo Đạc
+    
+2. Trong quá trình sử dụng, mình từng mắc phải những sai lầm khiến overhead lên đến 100ms-500ms, mình xin phép chia sẻ trong phần 1 này: "**Các sai lầm mình từng mắc phải khi sử dụng Langfuse"**
+    
+3. Sau này, khi có kinh nghiệm hơn, mình đã triển khai 1 service với response time < 150ms cho 100 CCU và mình dùng Langfuse để tracing. Mình nhận thấy 99% overhead ~ 10ms. Tuy nhiên 1% có những cú vút lên overhead lên đến 1s (so với bình thường chỉ 30ms), điều đó buộc mình đào sâu hơn cơ chế vận hành của Langfuse => Mình xin chia sẻ nó trong phần 2: **Vấn đề tranh chấp khoá và tranh chấp tài nguyên GIL. (Do cơ chế Langfusk SDK v3 hoàn toàn tương tự cách OpenTelemetry hoạt động, đều đẩy xuống 1 thread riêng: BatchSpanProcessor => gây ra vấn đề đề tranh chấp khoá và tranh chấp tài nguyên GIL)**
 # P1. Các sai lầm mình từng mắc phải khi làm việc với Langfuse
 
 ## 1.1 SAI LẦM 1: Khởi tạo mới Langfuse mỗi lần dùng => Gây overhead 0.1s  (Khởi tạo trước Langfuse 1 lần các lần sau chỉ việc dùng giúp giảm response time xuống 0.002s - 0.01s)
@@ -113,7 +117,15 @@ if __name__ == "__main__":
 
 => Nguyên nhân lớn khiến ban đầu chậm là do không khởi tạo langfuse_client trước, để decorator tự lo client mỗi lần.
 
-### 1.1.2 Kiểm chứng thực tế 
+
+### 1.1.2 Các bài test thực tế từ Langfuse
+### 1.1.3 Kiểm chứng thực tế : Mình đã tự kiểm nghiệm thực tế
+
+### 1.1.4 Kết luận: 
+
+```
+Việc khởi tạo langfuse mỗi lần gây ra overhead lên đến 100ms-300ms
+```
 
 ---
 
@@ -127,7 +139,8 @@ Link chi tiết: D:\GIT\robot-lesson-workflow\utils\docs\Stage1_OverheadOfLangFu
 
 ![](CKP/image/Pasted%20image%2020260206175920.png)
 
-### 1.2.1 Kiểm tra các nấc lồng nhau ta đưa ra kết luận: 
+> Nhìn vào 2 ảnh, hãy so sánh step 1, step 3 khi bật @observe và khi không bật => Ta thấy ngay bị overhead từ 3-10ms-300ms
+### KẾT LUẬN: Kiểm tra các nấc lồng nhau ta đưa ra kết luận: 
 
 ```
 1. Là trace ở hàm con được trace mỗi hàm dôi lên 0.002s - 0.01s 
@@ -140,13 +153,15 @@ Link chi tiết: D:\GIT\robot-lesson-workflow\utils\docs\Stage1_OverheadOfLangFu
 ```
 1. Là trace ở hàm con được trace mỗi hàm dôi lên 0.002s - 0.01s 
 2. Là việc trace ở hàm cha sẽ bị dôi 0.02s so với tổng của việc cộng time của các thành phần con (kể cả con được trace hay không được trace) 
-3. Chỉ load data cần thiết bằng việc tắt capture_input hoặc capture_output = False 
-   Hoặc chỉ load data cần thiết bằng cách đặt nó vào metadata
+3. Chỉ load data cần thiết bằng việc set: capture_input hoặc capture_output = False 
+   +, Sau đó chỉ load data cần thiết vào metadata thông qua 
+   @observe + update_current_trace, update_current_span, update_current_generation
+   +, Mẹo: có thể dùng thêm orjson cho việc tối ưu xử lý JSON (đặc biệt hiệu quả với json dài)
    
 ```
 
-Ví dụ: Trong `robot_v2_services.webhook_service`
-- Ở đầu hàm `webhook_service`, ta sẽ đặt capture_input=False, **ghi metadata theo conversation**:
+### 1.3.1 Ví dụ: Trong `robot_v2_services.webhook_service`
+- Ở đầu hàm `webhook_service`, ta sẽ đặt capture_input=False, **ghi metadata theo conversation** => điều này giúp làm giảm kích thước của JSON load vào Queue và sau đó bắn lên Langfuse (nói cách khác: chỉ đính kèm những trường “nhẹ” nhưng đủ để debug (ID + message tóm tắt + thông tin audio), không nhét cả payload to vào trace để tránh overhead & rò rỉ dữ liệu)
 
 ```1242:1251:app/api/services/robot_v2_services.py
 @observe(name="robot-v2.webhook-service", capture_input=False, capture_output=True)
@@ -162,12 +177,7 @@ if langfuse_client:
     langfuse_client.update_current_span(metadata=metadata)
 ```
 
-→ Ý tưởng: chỉ đính kèm những trường “nhẹ” nhưng đủ để debug (ID + message tóm tắt + thông tin audio), không nhét cả payload to vào trace để tránh overhead & rò rỉ dữ liệu.
-
-
-## 1.4 SAI LẦM 4: Sử dụng combo: capture_input, capture_output = False mà ko biết đẩy ra metadata để sử dụng: @observe + update_current_trace, update_current_span, update_current_generation
-
-#### Bảng : update_current_trace, update_current_span, update_current_generation
+### 1.3.2 Sự khác nhau giữa các methods: update_current_trace, update_current_span, update_current_generation
 
 |                | `update_current_trace`                    | `update_current_span`                        | `update_current_generation`              |
 | -------------- | ----------------------------------------- | -------------------------------------------- | ---------------------------------------- |
@@ -182,22 +192,6 @@ if langfuse_client:
 Trace
   └── Span (intent.llm)
         └── Generation (LLM call)  → update_current_generation(...)
-```
-
-### 1.4.0 Case study và ví dụ: 
-
- "[PRODUCTION STAGE: OPTIMIZE LANGFUSE: USE: capture_input=False, capture_output=False, nếu log thì dùng metadata log thay vì log full input hoặc output    
->> REDIS: 0.3-0.7s ?? (giảm xuống 0.01-0.03s) chủ yếu do: Langfuse trace với capture_input=False, capture_output=False. Bên cạnh đó là do dùng orjson + tối ưu: cache riêng scenario và ko cần cache history (do nó dùng CUR_ACTION chứ có dùng History để gen intent llms méo đâu)"
->> +, https://github.com/IsProjectX/robot-lesson-workflow/commit/07741e2eec5e59c6c67bca4dfae2bc04104bcdf6
-
-
----
-```
- "[Small Update]: Thêm bot_id và conversation_id vào metadata của observe trace (trace trên Langfuse dùng metadata)
->> --
->> Chiến lược: thay vì để capture_in và capture_out True và load data nhiều 
->> => Thì chỉ log rất ít vào metadata
-
 ```
 
 #### 1. `update_current_trace` — cập nhật metadata ở mức **trace** (cả request)
@@ -314,19 +308,7 @@ Trước đó code đã build `usage_details` (input/output tokens) và `cost_de
 
 ---
 
-#### Tóm tắt cách dùng trong bài của bạn
-
-| API | Chỗ dùng trong project | Mục đích |
-|-----|-------------------------|----------|
-| **update_current_trace** | Route `webhook` và `init_conversation` | Gắn `conversation_id`, `user_id` (hoặc `bot_id`) cho cả trace (một request). |
-| **update_current_span** | Trong các hàm có `@observe` (webhook, classify_by_phoneme, classify_by_llm) | Gắn metadata cho đúng span (message, next_action, model, provider, messages summary, …). |
-| **update_current_generation** | OpenRouter client sau khi gọi LLM | Gắn model, usage, cost cho generation (LLM call). |
-
-Cách dùng chung: **bọc trong try/except**, kiểm tra client tồn tại (`if langfuse_client:` hoặc `if langfuse:`), và không để lỗi Langfuse làm fail logic chính (như comment “không ảnh hưởng logic chính” trong code của bạn).
-
-
-
-## SAI LẦM 1.5: 12/02/2026 Sử dụng Langfuse() của version cũ mà không chịu update lên version mới sử dụng get_client()
+## SAI LẦM 1.4: 12/02/2026 Sử dụng Langfuse() của version cũ mà không chịu update lên version mới sử dụng get_client()
 > https://langfuse.com/changelog/2025-06-05-python-sdk-v3-generally-available
 
 ### So sánh: `get_client()` vs `Langfuse()`

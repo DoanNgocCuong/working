@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Link.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026"
+              "title": "Link"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
+                "file": "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Link.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026"
+              "title": "Outline of Link"
             }
           }
         ],
@@ -172,9 +172,10 @@
   },
   "active": "79a72e995c9a9aa2",
   "lastOpenFiles": [
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.12 - P2 - Đo lường các cách tracing.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/(Published) Langfuse 1.12 - P1 - Langfuse Production Optimization - P1 Tổng kết danh sách sai lầm khi làm việc với Langfuse.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/(Published) Langfuse 1.12 - P1 - Langfuse Production Optimization - P1 Tổng kết danh sách sai lầm khi làm việc với Langfuse - Hành trình học hỏi, làm và sharing.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Link.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.13 - Vấn đề GIL khi dùng langfuse (GIL với BatchSpanProcessor của OpenTelemetry) với Python 3.12 - 13022026.md",
+    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Langfuse 1.12 - P2 - Đo lường các cách tracing.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/Framework tracing cho p95, p99 - input, output - Langfuse, .... - 20012026.md",
     "SHARING/Demo 1 - Lên sóng Wecommit100x  17122025.md",
     "SHARING/Note how to publish to Linkedin.md",
@@ -207,7 +208,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/LangChain 1.2 API LangGraph chạy, nhưng langgraph dev thì không. Nguyên nhân do code có những chỗ đứng đợi, còn LangGraph Studio không cho phép điều đó..md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/LangChain 1.1 Langfuse rồi thì có dùng các tools OpenTelemetry khác nữa không + LangFuse (free) - LangSmith (fee) - LangGraph Studio (free local, log in with LangSmith free Account) ..md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/image",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/CKP.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/06 - tracing/image/Pasted image 20260212145214.png",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/06 - tracing/image/Pasted image 20260206175920.png",
