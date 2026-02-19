@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BUSINESS/3.2 NỖI SỢ, NIỀM TIN GIỚI HẠN, MINDSET SAI TRONG TÂM TRÍ/3.2.0 Toàn bộ mindset và tâm lý chủ đạo và MENTAL MODELS/10x dễ hơn 2x - Nghịch lý của Sự Tầm Thường - 18022026.md",
+                "file": "BUSINESS/3.2 NỖI SỢ, NIỀM TIN GIỚI HẠN, MINDSET SAI TRONG TÂM TRÍ/3.2.0 Toàn bộ mindset và tâm lý chủ đạo và MENTAL MODELS/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10x dễ hơn 2x - Nghịch lý của Sự Tầm Thường - 18022026"
+              "title": "Untitled"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BUSINESS/3.2 NỖI SỢ, NIỀM TIN GIỚI HẠN, MINDSET SAI TRONG TÂM TRÍ/3.2.0 Toàn bộ mindset và tâm lý chủ đạo và MENTAL MODELS/10x dễ hơn 2x - Nghịch lý của Sự Tầm Thường - 18022026.md",
+                "file": "BUSINESS/3.2 NỖI SỢ, NIỀM TIN GIỚI HẠN, MINDSET SAI TRONG TÂM TRÍ/3.2.0 Toàn bộ mindset và tâm lý chủ đạo và MENTAL MODELS/Untitled.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 10x dễ hơn 2x - Nghịch lý của Sự Tầm Thường - 18022026"
+              "title": "Outline of Untitled"
             }
           }
         ],
@@ -172,8 +172,9 @@
   },
   "active": "79a72e995c9a9aa2",
   "lastOpenFiles": [
-    "BUSINESS/0_100M$GlobalMoneyModel/1_Nate Herk/Các câu hỏi về ông này.md",
     "BUSINESS/3.2 NỖI SỢ, NIỀM TIN GIỚI HẠN, MINDSET SAI TRONG TÂM TRÍ/3.2.0 Toàn bộ mindset và tâm lý chủ đạo và MENTAL MODELS/10x dễ hơn 2x - Nghịch lý của Sự Tầm Thường - 18022026.md",
+    "BUSINESS/3.2 NỖI SỢ, NIỀM TIN GIỚI HẠN, MINDSET SAI TRONG TÂM TRÍ/3.2.0 Toàn bộ mindset và tâm lý chủ đạo và MENTAL MODELS/Untitled.md",
+    "BUSINESS/0_100M$GlobalMoneyModel/1_Nate Herk/Các câu hỏi về ông này.md",
     "BUSINESS/3.2 NỖI SỢ, NIỀM TIN GIỚI HẠN, MINDSET SAI TRONG TÂM TRÍ/3.2.0 Toàn bộ mindset và tâm lý chủ đạo và MENTAL MODELS",
     "BUSINESS/3.2 NỖI SỢ, NIỀM TIN GIỚI HẠN, MINDSET SAI TRONG TÂM TRÍ",
     "BUSINESS/0_100M$GlobalMoneyModel/1_Nate Herk/Chiến lược ngày 15022026.md",
@@ -208,7 +209,6 @@
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/Langchain 1.7 - Report langchain langgraph - Langfuse tracing - overhead 1-6ms - dự án robot workflow - 14122025.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/Langchain 1.7 - Bổ sung 2 ngộ nhận về việc overhead về 0ms.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/Langchain 1.6 - Observe - Langfuse.md",
-    "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/LangChain 1.5 - 5 hàm tuần tự trong 1 node hay 5 nodes tuần tự - Response time - Overhead.md",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP/image",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/CKP",
     "DATA_SCIENCE_AND_AI/Domain 6 Production Systems & MLOps/3_tracing/06 - tracing/image/Pasted image 20260212145214.png",
